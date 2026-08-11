@@ -18,5 +18,4 @@ This checkpoint contains 2,996 measured nodes and 6,189 relationships: 204 archi
 
 The graph is a snapshot of the ARC checkout at generation time. It records the committed HEAD plus the live working-tree overlay, including any concurrent in-progress paths. It is not a claim that the source checkout is clean or that every product capability is already proven.
 
-Additional material is available in the [prototype guide](./INFINITE-CANVAS-PROTOTYPE-README.md), [complete atlas notes](./ARC-CLIDE-COMPLETE-SYSTEM-ATLAS-V2.md), [raw graph data](./arc-clide-infinite-canvas-prototype.data.json), and [next-agent handoff](./NEXT-AGENT-COMPLETE-E2E-HANDOFF-2026-08-11.md).
-
+For a shareable plain-English architecture tour, read the [Complete Architecture Book](./COMPLETE-ARCHITECTURE-BOOK.md). Additional material is available in the [prototype guide](./INFINITE-CANVAS-PROTOTYPE-README.md), [complete atlas notes](./ARC-CLIDE-COMPLETE-SYSTEM-ATLAS-V2.md), [raw graph data](./arc-clide-infinite-canvas-prototype.data.json), and [next-agent handoff](./NEXT-AGENT-COMPLETE-E2E-HANDOFF-2026-08-11.md).
