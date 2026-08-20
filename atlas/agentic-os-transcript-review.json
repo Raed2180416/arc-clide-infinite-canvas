@@ -2,7 +2,7 @@
   "schemaVersion": "arc-atlas-transcript-review-ledger-v1",
   "authority": "reviewed-interpretation-proposal-below-owner-message-and-protected-canon",
   "threadId": "019fef14-4e22-7792-8aba-8f7db80d9fa7",
-  "ownerMessageSetSha256": "df53014b5d2b18be8ab7e1fcdcb612bc5aa979847b2f2a62acc623d1fffa8ae8",
+  "ownerMessageSetSha256": "7bb08188ca9f736444c43d0569d5ca7932999014d79a588dd2dee86df4c71097",
   "reviewer": {
     "identity": "codex:repository-atlas-review",
     "basis": "explicit-message-by-message-review"
@@ -290,7 +290,8 @@
         "cb55a755-0a92-4641-b54a-f2994b86169a",
         "31c009a9-88e7-4aef-bd38-133dc53477c6",
         "661c1dd7-8168-4fa4-ad0b-56cbec071d81",
-        "12b828d9-f457-4f40-a96d-8c7cf49bb41a"
+        "12b828d9-f457-4f40-a96d-8c7cf49bb41a",
+        "4d65c90c-b806-489a-8947-995b3e1a1fec"
       ],
       "adjudication": "matched-to-protected-intent"
     },
@@ -309,7 +310,8 @@
         "31c009a9-88e7-4aef-bd38-133dc53477c6",
         "a59f6382-345b-468f-b0de-914622e6780b",
         "ee6395eb-fc48-4967-a67e-4b636a7249d2",
-        "1f3c0180-3d71-4aca-8932-95192c1d33a8"
+        "1f3c0180-3d71-4aca-8932-95192c1d33a8",
+        "4d65c90c-b806-489a-8947-995b3e1a1fec"
       ],
       "adjudication": "matched-to-protected-intent"
     },
@@ -331,7 +333,8 @@
         "ee6395eb-fc48-4967-a67e-4b636a7249d2",
         "b92323bd-31cd-474b-9051-323b33b30f22",
         "2f464d68-da23-4740-bab5-25ea71e87119",
-        "1f3c0180-3d71-4aca-8932-95192c1d33a8"
+        "1f3c0180-3d71-4aca-8932-95192c1d33a8",
+        "8ee99287-a614-45f5-8507-bb5cc18182a8"
       ],
       "adjudication": "matched-to-protected-intent"
     },
@@ -436,7 +439,11 @@
         "2f464d68-da23-4740-bab5-25ea71e87119",
         "7398407c-079b-45f7-b475-7213236f6673",
         "7bf5e044-637a-4db3-be65-a3becad79904",
-        "1f3c0180-3d71-4aca-8932-95192c1d33a8"
+        "1f3c0180-3d71-4aca-8932-95192c1d33a8",
+        "06565adf-3cce-470c-8984-9a71201f1d67",
+        "8ee99287-a614-45f5-8507-bb5cc18182a8",
+        "15a69247-9f96-49b5-81c7-2152f5ac2f35",
+        "4d65c90c-b806-489a-8947-995b3e1a1fec"
       ],
       "adjudication": "matched-to-protected-intent"
     },
@@ -466,7 +473,9 @@
         "W23"
       ],
       "sourceMessageIds": [
-        "7398407c-079b-45f7-b475-7213236f6673"
+        "7398407c-079b-45f7-b475-7213236f6673",
+        "06565adf-3cce-470c-8984-9a71201f1d67",
+        "8ee99287-a614-45f5-8507-bb5cc18182a8"
       ],
       "adjudication": "matched-to-protected-intent"
     },
@@ -513,7 +522,9 @@
         "b71d98ee-dece-453b-bfea-b659270a319a",
         "e2038946-694c-4ecb-87e9-ea57cfb56b5d",
         "f8a0cd01-3477-4df7-a7d8-77aa973f8a85",
-        "27dbe53f-b1e2-431d-b0fa-eba8a98defa6"
+        "27dbe53f-b1e2-431d-b0fa-eba8a98defa6",
+        "06565adf-3cce-470c-8984-9a71201f1d67",
+        "15a69247-9f96-49b5-81c7-2152f5ac2f35"
       ],
       "adjudication": "review-only-no-canon-effect"
     },
@@ -540,7 +551,8 @@
         "fabd85c9-e6e5-492d-aeba-6e28f138fbc8",
         "f0c6786c-99c1-41bd-9060-bf75253913de",
         "5f6b1091-3523-4f53-9a1d-5f99c99a6c70",
-        "96c81ffd-90ac-494c-b11b-fefd791e3670"
+        "96c81ffd-90ac-494c-b11b-fefd791e3670",
+        "c08e544a-1683-4bb3-8fd5-612573c03b59"
       ],
       "adjudication": "review-only-no-canon-effect"
     }
@@ -2768,6 +2780,101 @@
       "obligations": [
         "Keep every file, callable, relationship, decision, finding, pitfall, evidence limit, and next action in the denominator.",
         "Do not call the atlas complete before the real build, visual journey, agent packet, and cold-reader audit pass."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "06565adf-3cce-470c-8984-9a71201f1d67",
+      "textSha256": "2326c5fb63e6d155f31d6027d6d4d8e0af8072372b2fe6332b131f2168a298fa",
+      "classification": "completion-criterion",
+      "plainLanguage": "Audit whether the claimed complete representation is truly clean, committed, current, and sufficient for the next agent.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:atlas-audit",
+          "review-topic:current-work-status"
+        ],
+        "explanation": "This asks for an evidence-backed release and continuation audit; it does not itself certify the Atlas or mutable product tree."
+      },
+      "obligations": [
+        "Inspect live source, artifact freshness, release state, and remaining gaps before calling the representation complete."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "c08e544a-1683-4bb3-8fd5-612573c03b59",
+      "textSha256": "b6778e21efa5e77f782d392b9a83bdcb5fabda4593105e8cc4b3041cb6c9ac60",
+      "classification": "continuation",
+      "plainLanguage": "Resume the interrupted Atlas and release audit from durable state.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "8ee99287-a614-45f5-8507-bb5cc18182a8",
+      "textSha256": "368a8f9c57a9876fac692f091c54e65855f7099137774a78c820c2b4f8581d9f",
+      "classification": "completion-criterion",
+      "plainLanguage": "Publish the Atlas only after it is genuinely complete and ready, then keep working until that acceptance boundary is reached.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:human-product-journeys",
+          "review-topic:atlas-audit"
+        ],
+        "explanation": "This makes public reachability conditional on the complete Atlas acceptance boundary, rather than treating deployment as completion."
+      },
+      "obligations": [
+        "Verify the release artifact and its current-state limits before publishing.",
+        "Do not replace unresolved map or product proof with a deployment claim."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "15a69247-9f96-49b5-81c7-2152f5ac2f35",
+      "textSha256": "1de002bf0d11f523540e4642fe1ccf83d08c5bcd8dd0a46b35e1426f560cff25",
+      "classification": "clarification",
+      "plainLanguage": "Clarify the difference between a clean Atlas source release and the separate mutable Agentic OS product worktree.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:current-work-status"
+        ],
+        "explanation": "This asks for the release-boundary distinction to be explained, not for either worktree to be silently treated as complete."
+      },
+      "obligations": [
+        "State whether a claim concerns Atlas compiler source, a frozen Atlas artifact, or the live product checkout."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "4d65c90c-b806-489a-8947-995b3e1a1fec",
+      "textSha256": "dfe61437f4671f231a842a06c2694cf33fe997d8d81caa9e790fc4f119f60acd",
+      "classification": "scope-correction",
+      "plainLanguage": "The Atlas must be a current, complete reflection of the latest Agentic OS source and working-tree state so the next agent knows exactly where to resume.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:system-self-model",
+          "review-topic:owner-grounding"
+        ],
+        "explanation": "This corrects a historical-only Atlas interpretation: the continuation artifact must bind the current repository overlay and expose unfinished work, live gates, and the next action."
+      },
+      "obligations": [
+        "Build from an immutable current source and transcript cutoff.",
+        "Keep public historical orientation separate from the private current continuation snapshot.",
+        "Do not hide dirty state, failing gates, or incomplete product proof."
       ],
       "supersedesMessageIds": []
     }

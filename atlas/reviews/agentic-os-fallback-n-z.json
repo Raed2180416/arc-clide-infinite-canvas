@@ -1,15 +1,15 @@
 {
   "schemaVersion": "arc-atlas-component-organ-review-v2",
   "repositoryHead": "feace1460f009e4a676b22f7f8cb0da5fd985d87",
-  "fallbackBasisSha256": "31d5ab3a03a3408b581ff3486cdbe154d6ec9af5f635c6b541be1f516051c625",
+  "fallbackBasisSha256": "34e9d08e2da2b48a873fc3f4b0b7894d7e005b57cf9a41e09aa8a631cb5a44e1",
   "shard": "n-z",
   "reviewer": {
     "identity": "codex-atlas-fallback-n-z",
     "basis": "explicit-file-by-file-review"
   },
   "denominator": {
-    "eligible": 326,
-    "reviewed": 326,
+    "eligible": 336,
+    "reviewed": 336,
     "proposedNewOrgan": 0,
     "unresolved": 0
   },
@@ -60,6 +60,246 @@
         }
       ],
       "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-02-40-054Z.yml",
+      "fileSha256": "45a99541e57fc0283b82459ba5beb77822271e3a946b47d29a167b17e6bb3073",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records the rendered Atlas entry surface at line 1; it is visual product-path evidence, not an authority claim about the mutable product checkout.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-02-40-054Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-03-59-741Z.yml",
+      "fileSha256": "0c37687fe76075a269929902529853bad97f5d473dedd0246390dfa81c527706",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-03-59-741Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-04-18-538Z.yml",
+      "fileSha256": "10850e14ba4618855895f26ac4047c6b2392a386cf393037ef64d04e291292b4",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-04-18-538Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-04-27-434Z.yml",
+      "fileSha256": "10850e14ba4618855895f26ac4047c6b2392a386cf393037ef64d04e291292b4",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-04-27-434Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-07-20-982Z.yml",
+      "fileSha256": "1f6163523c793e8f5e9aa4434e5004fa6bb6fc1fb0d3d949f14e0cfe9e919005",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-07-20-982Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-07-26-175Z.yml",
+      "fileSha256": "5ba4817761cd877350fba87211ed150ac26be69c20b2a758b90e81fd5f73a1be",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-07-26-175Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-07-40-897Z.yml",
+      "fileSha256": "f0b4efc8b0ea1530e7681ba8b0c44c19406c4a3de0d8b4c3c4fd86382903f18e",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-07-40-897Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-10-43-140Z.yml",
+      "fileSha256": "fabe6d589896acd77fc0a071bc074686f629442df86e71684a8e268caf5c29bd",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-10-43-140Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": ".playwright-mcp/page-2026-08-20T06-10-54-487Z.yml",
+      "fileSha256": "fabe6d589896acd77fc0a071bc074686f629442df86e71684a8e268caf5c29bd",
+      "disposition": "existing-organ",
+      "primaryOrganId": "product-experience",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Captures a rendered product-surface accessibility snapshot.",
+      "rationale": "The inspected snapshot records a rendered Atlas product journey at line 1; it is visual product-path evidence, not a claim of product completion.",
+      "sourceRefs": [
+        {
+          "path": ".playwright-mcp/page-2026-08-20T06-10-54-487Z.yml",
+          "line": 1,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 85,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-medium",
+      "unresolvedQuestions": []
+    },
+    {
+      "path": "scripts/classify-outdated-docs.mjs",
+      "fileSha256": "890483d8626ade88c7f1f82a1efa541ebfb12c43dd9c9d4bf73c834954c0860c",
+      "disposition": "existing-organ",
+      "primaryOrganId": "documentation-knowledge",
+      "secondaryOrganIds": [],
+      "proposedNewOrgan": null,
+      "plainLanguagePurpose": "Builds the current versus historical document classification used to keep an agent's default reading path focused.",
+      "rationale": "The inspected source enumerates governed documentation at line 66 and writes a generated current/outdated classification; it belongs to Documentation and knowledge, not to product authority.",
+      "sourceRefs": [
+        {
+          "path": "scripts/classify-outdated-docs.mjs",
+          "line": 66,
+          "role": "component-behavior"
+        },
+        {
+          "path": "CODEX.md",
+          "line": 196,
+          "role": "organ-definition"
+        }
+      ],
+      "confidence": "reviewed-high",
       "unresolvedQuestions": []
     },
     {

@@ -1,15 +1,15 @@
 {
   "schemaVersion": "arc-atlas-component-organ-review-v2",
   "repositoryHead": "feace1460f009e4a676b22f7f8cb0da5fd985d87",
-  "fallbackBasisSha256": "31d5ab3a03a3408b581ff3486cdbe154d6ec9af5f635c6b541be1f516051c625",
+  "fallbackBasisSha256": "34e9d08e2da2b48a873fc3f4b0b7894d7e005b57cf9a41e09aa8a631cb5a44e1",
   "shard": "a-m",
   "reviewer": {
     "identity": "codex:atlas-fallback-a-m",
     "basis": "explicit-file-by-file-review"
   },
   "denominator": {
-    "eligible": 341,
-    "reviewed": 341,
+    "eligible": 340,
+    "reviewed": 340,
     "proposedNewOrgan": 0,
     "unresolved": 0
   },
@@ -56,30 +56,6 @@
         {
           "path": "docs/canon/GRAND-CHALLENGE-PROTOCOL.md",
           "line": 1,
-          "role": "organ-definition"
-        }
-      ],
-      "confidence": "reviewed-medium",
-      "unresolvedQuestions": []
-    },
-    {
-      "path": "dirty-state-inventory.md",
-      "fileSha256": "279bd5f93ecc8ae18212941fbaab71b70c8aeb94c1bd42608b0dd0f0df18edc8",
-      "disposition": "existing-organ",
-      "primaryOrganId": "documentation-knowledge",
-      "secondaryOrganIds": [],
-      "proposedNewOrgan": null,
-      "plainLanguagePurpose": "Records documentation, knowledge, or historical evidence.",
-      "rationale": "The inspected regular source artifact begins at line 1 but has no parsed callable declaration; its content was reviewed against the ontology definition of Documentation and knowledge.",
-      "sourceRefs": [
-        {
-          "path": "dirty-state-inventory.md",
-          "line": 1,
-          "role": "component-behavior"
-        },
-        {
-          "path": "CODEX.md",
-          "line": 196,
           "role": "organ-definition"
         }
       ],
