@@ -3,10 +3,10 @@
   "kind": "historical-static-reference",
   "authority": "read-only-projection-authority-none",
   "generatedFrom": {
-    "sourceCommit": "f657980058f6d0289c37dcf7ca00afbe8bcb67e2",
-    "sourceCommitTime": "2026-08-20T11:35:24+05:30",
+    "sourceCommit": "55dedcb1820317369ab2a7ba7d6557eb18d0df0d",
+    "sourceCommitTime": "2026-08-20T11:38:41+05:30",
     "sourceRepositoryUrl": "https://github.com/Raed2180416/arc-clide-infinite-canvas",
-    "sourceBranch": "codex/atlas-source-release-20260820"
+    "sourceBranch": "main"
   },
   "intentionallyExcluded": [
     "mutable Agentic OS source checkout",
@@ -84,8 +84,8 @@
     },
     {
       "path": "atlas.html",
-      "sha256": "e6817ba63a975b57777f9e1745bb68d47831f4191ca84810467d94c3ec424940",
-      "bytes": 9322
+      "sha256": "e2c45bb296ae14095bc65eaeb68a62e1e2ad2e0616b0d4eb0ce03a137454f401",
+      "bytes": 9229
     },
     {
       "path": "data/component-map.json",
@@ -134,9 +134,9 @@
     },
     {
       "path": "index.html",
-      "sha256": "2f6ae55ca4e46a36c6c7e6f93ee2dbb6abba579f5d5cd553dc9f6b868fdd6e6e",
-      "bytes": 9706
+      "sha256": "c097b447ba952728d5cd624835b9d45fd1ab5cff5b20fc5bb214ec2a8084ad05",
+      "bytes": 9334
     }
   ],
-  "artifactsSha256": "b7293df44b5128009aa648e557529e5903fa93adc2a18b93fca6dceab73fed79"
+  "artifactsSha256": "08a5e28ef2ce0f639af8cd532c294864cdd88bbc0afdb093a0a67e986a7d545a"
 }
