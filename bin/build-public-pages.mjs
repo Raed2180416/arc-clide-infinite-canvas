@@ -44,6 +44,7 @@ const FORBIDDEN_PUBLIC_PATTERNS = [
   /(?:^|[^A-Za-z])C:\\Users\\/i,
   /(?:ghp_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})/,
 ]
+const FAVICON = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%23071018%22/%3E%3Cpath d=%22M15 47 31 13l18 34-18-9z%22 fill=%22%235ce1d2%22/%3E%3C/svg%3E'
 
 function sha256(bytes) {
   return createHash('sha256').update(bytes).digest('hex')
@@ -119,6 +120,7 @@ function publicIndexHtml({ sourceCommit, sourceRepositoryUrl, sourceBranch, docu
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#071018">
   <meta name="description" content="A public, provenance-labeled historical reference for the ARC / CLIDE engineering atlas.">
+  <link rel="icon" href="${FAVICON}">
   <title>ARC / CLIDE Atlas — public reference</title>
   <style>
     :root{--ink:#e9f1fb;--muted:#a5b6c9;--line:#294158;--bg:#071018;--panel:#0d1b29;--panel-2:#11263a;--teal:#5ce1d2;--violet:#ac9bff;--amber:#ffc96b;--red:#ff7783;--max:1120px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(80rem 40rem at 20% -10%,#173a4a 0,transparent 56%),radial-gradient(60rem 30rem at 90% 10%,#251f54 0,transparent 58%),var(--bg);color:var(--ink);font:16px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:#a8eeff;text-decoration-thickness:.08em;text-underline-offset:.18em}a:hover{color:#fff}.shell{max-width:var(--max);margin:auto;padding:24px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:10px 0 42px}.brand{font-weight:800;letter-spacing:.04em}.badge{font-size:.76rem;border:1px solid #9e6f2c;background:#2f2312;color:#ffe1a0;border-radius:999px;padding:.35rem .65rem;white-space:nowrap}.hero{padding:48px 0 58px;max-width:850px}.eyebrow{margin:0 0 14px;color:var(--teal);font-size:.76rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}h1{font-size:clamp(2.5rem,7vw,5.8rem);line-height:.98;letter-spacing:-.055em;margin:0 0 24px;max-width:780px}.lede{font-size:clamp(1.05rem,2.2vw,1.32rem);color:#c7d6e7;max-width:740px}.truth{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:34px 0 0}.truth div{background:linear-gradient(145deg,#132940,#0b1826);border:1px solid var(--line);border-radius:16px;padding:16px}.truth b{display:block;font-size:.8rem;color:var(--teal);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}.truth span{font-size:.92rem;color:#c7d5e5}.section{padding:46px 0;border-top:1px solid var(--line)}h2{font-size:clamp(1.6rem,3vw,2.45rem);letter-spacing:-.035em;margin:0 0 12px}h3{font-size:1.13rem;margin:0 0 8px}.sub{max-width:760px;color:var(--muted);margin:0 0 24px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.card{background:linear-gradient(145deg,rgba(21,44,66,.97),rgba(10,24,38,.97));border:1px solid var(--line);border-radius:18px;padding:22px;min-height:190px;display:flex;flex-direction:column}.card p{color:#bfd0e2;margin:0 0 18px}.card a{margin-top:auto;font-weight:750}.notice{border-left:4px solid var(--amber);background:#221b12;padding:18px 20px;border-radius:0 14px 14px 0;color:#f6dfaf}.notice strong{color:#fff3cf}.stats{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.stat{border:1px solid #30506a;background:#0b1a29;padding:9px 12px;border-radius:10px;font-size:.88rem;color:#c3d8e9}.stat b{color:#fff}.docs{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.docs li{border:1px solid #294158;background:#091827;border-radius:10px;padding:10px 12px;display:flex;flex-direction:column}.docs span{font-size:.78rem;color:#8296ac}.footer{border-top:1px solid var(--line);padding:28px 0 40px;color:#94a9be;font-size:.9rem}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.82em;word-break:break-all}@media(max-width:680px){.shell{padding:16px}.top{padding-bottom:24px}.truth,.grid,.docs{grid-template-columns:1fr}.hero{padding:28px 0 40px}.badge{white-space:normal;text-align:right}}
@@ -146,7 +148,7 @@ function publicAtlasHtml({ sourceRepositoryUrl, sourceBranch }) {
   const template = readSource('COMPLETE-MAP-EXPLORER.html').toString('utf8')
   const sourceLink = documentHref(sourceRepositoryUrl, sourceBranch, 'COMPLETE-ARCHITECTURE-BOOK.md')
   const replaced = template
-    .replace('<title>ARC / CLIDE — Complete Component Map + Deep Digests Explorer</title>', '<title>ARC / CLIDE Atlas — historical component explorer</title>')
+    .replace('<title>ARC / CLIDE — Complete Component Map + Deep Digests Explorer</title>', `<link rel="icon" href="${FAVICON}"><title>ARC / CLIDE Atlas — historical component explorer</title>`)
     .replace('ARC / CLIDE — Complete Component Map + Deep Digests', 'ARC / CLIDE Atlas — Historical Component Reference')
     .replace('Every one of the 204 modules across 13 planes, every mapped file, and every real symbol (functions, classes, methods, signatures) from the gate-clean atlas snapshot.', 'A static historical reference: captured module, relative-path, and compact symbol records. It is not a live snapshot, product proof, or a substitute for the source verifier.')
     .replace('<a href="ARC-CLIDE-TODDLER-NARRATIVE.md" target="_blank">Toddler narrative</a>', `<a href="${documentHref(sourceRepositoryUrl, sourceBranch, 'ARC-CLIDE-TODDLER-NARRATIVE.md')}" target="_blank" rel="noopener">Toddler narrative</a>`)
@@ -161,7 +163,7 @@ function publicAtlasHtml({ sourceRepositoryUrl, sourceBranch }) {
 }
 
 function publicNotFoundHtml() {
-  return '<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Atlas page not found</title><style>body{margin:0;display:grid;min-height:100vh;place-items:center;background:#071018;color:#e9f1fb;font:18px/1.5 system-ui}main{max-width:36rem;padding:2rem}a{color:#a8eeff}</style><main><p>ARC / CLIDE Atlas</p><h1>That page is not in this public edition.</h1><p><a href="index.html">Return to the public guide</a>.</p></main>'
+  return `<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="${FAVICON}"><title>Atlas page not found</title><style>body{margin:0;display:grid;min-height:100vh;place-items:center;background:#071018;color:#e9f1fb;font:18px/1.5 system-ui}main{max-width:36rem;padding:2rem}a{color:#a8eeff}</style><main><p>ARC / CLIDE Atlas</p><h1>That page is not in this public edition.</h1><p><a href="index.html">Return to the public guide</a>.</p></main>`
 }
 
 function cleanDestination(out) {

@@ -30,6 +30,8 @@ test('public Pages build is a bounded historical artifact with no local locators
       assert.doesNotMatch(value, /(?:ghp_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})/)
     }
     assert.match(index, /Historical reference/i)
+    assert.match(index, /rel="icon"/)
+    assert.match(atlas, /rel="icon"/)
     assert.match(atlas, /data\/component-map\.json/)
     assert.match(atlas, /data\/module-digests\.json/)
     assert.doesNotMatch(atlas, /COMPLETE-COMPONENT-MAP\.json/)
