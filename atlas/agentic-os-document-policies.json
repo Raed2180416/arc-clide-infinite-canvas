@@ -164,6 +164,41 @@
       "classification": "test-fixture-text",
       "role": "Provides controlled correct, irrelevant, wrong, or goal text for causal context tests.",
       "authority": "Test fixture only; cannot be used as product or semantic truth outside the fixture."
+    },
+    {
+      "id": "archived-2026-08-16-document-set",
+      "pathPrefix": "docs/archive/2026-08-16",
+      "classification": "archived-historical-document",
+      "role": "Preserves documents deliberately moved out of the active documentation surface so their dated reasoning, handoffs, and inventories remain inspectable without being mistaken for current operating state.",
+      "authority": "Historical context only; protected canon, live source, and current probes supersede any present-state claim in this archive.",
+      "sourceRefs": [
+        {
+          "path": "docs/canon/DOC-CLASSIFICATION.md",
+          "line": 1,
+          "quote": "Classifies every doc file on disk against the canonical registry."
+        }
+      ]
+    },
+    {
+      "id": "agent-current-state-entrypoint",
+      "path": "docs/canon/AGENT-CURRENT-STATE-ENTRYPOINT.md",
+      "classification": "current-agent-continuation-entrypoint",
+      "role": "Provides the ordered, evidence-bound starting point for an agent resuming the live Agentic OS worktree and its private current Atlas snapshot.",
+      "authority": "Orientation and continuation procedure only; it cannot certify a clean worktree, product completion, or stale artifact as current.",
+      "sourceRefs": [
+        {
+          "path": "AGENTS.md",
+          "line": 3,
+          "quote": "Read CODEX.md first."
+        }
+      ]
+    },
+    {
+      "id": "generated-document-classification",
+      "pathPrefix": "docs/canon/DOC-CLASSIFICATION",
+      "classification": "generated-document-classification",
+      "role": "Records a generated classification of documentation by current, historical, or review-needed status.",
+      "authority": "Generated orientation evidence only; registry, protected canon, live source, and owner direction remain the authority for status and scope."
     }
   ]
 }
