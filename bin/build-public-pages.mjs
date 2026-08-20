@@ -78,10 +78,14 @@ function redactLocalLocators(text) {
     .replace(/~\/(?:\.agentic-os|\.agentic-models|\.local\/state\/agentic-os)[^\s"'<]*/g, '[local-path-redacted]')
 }
 
+function publicText(text) {
+  return redactLocalLocators(text).replace(/[ \t]+$/gm, '')
+}
+
 function redactJson(value) {
   if (Array.isArray(value)) return value.map(redactJson)
   if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, child]) => [key, redactJson(child)]))
-  return typeof value === 'string' ? redactLocalLocators(value) : value
+  return typeof value === 'string' ? publicText(value) : value
 }
 
 function assertPublicBytes(relative, bytes) {
@@ -194,7 +198,7 @@ export function buildPublicPages({
     const inputDescriptors = [...DATA_INPUTS, ...DOCUMENT_INPUTS].map(([sourcePath, publishedPath]) => sourceDescriptor({ sourceRoot, sourcePath, publishedPath }))
     write(staging, 'data/component-map.json', `${JSON.stringify(componentMap)}\n`)
     write(staging, 'data/module-digests.json', `${JSON.stringify(moduleDigests)}\n`)
-    for (const [sourcePath, publishedPath] of DOCUMENT_INPUTS) write(staging, publishedPath, redactLocalLocators(readSource(sourcePath, sourceRoot).toString('utf8')))
+    for (const [sourcePath, publishedPath] of DOCUMENT_INPUTS) write(staging, publishedPath, publicText(readSource(sourcePath, sourceRoot).toString('utf8')))
     write(staging, 'index.html', publicIndexHtml({ sourceCommit, sourceRepositoryUrl, sourceBranch, documents: inputDescriptors.filter(item => item.publishedPath.startsWith('documents/')), data }))
     write(staging, 'atlas.html', publicAtlasHtml({ sourceRepositoryUrl, sourceBranch }))
     write(staging, '404.html', publicNotFoundHtml())

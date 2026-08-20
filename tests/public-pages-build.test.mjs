@@ -29,6 +29,9 @@ test('public Pages build is a bounded historical artifact with no local locators
       assert.doesNotMatch(value, /\/home\/raed/i)
       assert.doesNotMatch(value, /(?:ghp_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,})/)
     }
+    for (const artifact of manifest.artifacts) {
+      assert.doesNotMatch(readFileSync(path.join(output, artifact.path), 'utf8'), /[ \t]+\n/)
+    }
     assert.match(index, /Historical reference/i)
     assert.match(index, /rel="icon"/)
     assert.match(atlas, /rel="icon"/)
