@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "arc-atlas-build-profile-v2",
+  "profileId": "agentic-os",
+  "sourceRepository": {
+    "locator": { "root": "absolute", "path": "/home/raed/.agentic-os" },
+    "inventory": "git-ls-files-cached-others-exclude-standard-v1"
+  },
+  "inputs": {
+    "codeGraph": {
+      "database": { "root": "absolute", "path": "/home/raed/.local/state/agentic-os/codebase-memory-mcp/agentic-os.db" },
+      "project": "agentic-os",
+      "snapshot": "sqlite-main-wal-shm-v1"
+    },
+    "ontology": { "root": "atlas-project", "path": "atlas/agentic-os-ontology.json" },
+    "componentReviews": [
+      { "root": "atlas-project", "path": "atlas/reviews/agentic-os-fallback-a-m.json" },
+      { "root": "atlas-project", "path": "atlas/reviews/agentic-os-fallback-n-z.json" }
+    ],
+    "transcript": {
+      "source": { "root": "absolute", "path": "/home/raed/.codex/sessions/2026/08/11/rollout-2026-08-11T09-58-33-019fef14-4e22-7792-8aba-8f7db80d9fa7.jsonl" },
+      "review": { "root": "atlas-project", "path": "atlas/agentic-os-transcript-review.json" },
+      "threadId": "019fef14-4e22-7792-8aba-8f7db80d9fa7"
+    },
+    "scopePolicy": { "root": "atlas-project", "path": "atlas/agentic-os-scope-policies.json" },
+    "documentPolicy": { "root": "atlas-project", "path": "atlas/agentic-os-document-policies.json" },
+    "languageParserPolicy": { "root": "atlas-project", "path": "atlas/agentic-os-language-parsers.json" }
+  }
+}

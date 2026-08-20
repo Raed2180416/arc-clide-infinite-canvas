@@ -1,0 +1,2775 @@
+{
+  "schemaVersion": "arc-atlas-transcript-review-ledger-v1",
+  "authority": "reviewed-interpretation-proposal-below-owner-message-and-protected-canon",
+  "threadId": "019fef14-4e22-7792-8aba-8f7db80d9fa7",
+  "ownerMessageSetSha256": "df53014b5d2b18be8ab7e1fcdcb612bc5aa979847b2f2a62acc623d1fffa8ae8",
+  "reviewer": {
+    "identity": "codex:repository-atlas-review",
+    "basis": "explicit-message-by-message-review"
+  },
+  "targetCatalog": [
+    {
+      "ref": "review-topic:complete-vision",
+      "label": "Complete ARC/CLIDE end-to-end vision",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "ARC",
+        "OUTCOME.EXPERIENCE_PARITY",
+        "OUTCOME.COMPLETE_PRODUCT"
+      ],
+      "sourceMessageIds": [
+        "694f9194-a298-4db9-a50b-f0d0ffe79695",
+        "867afa3b-ca74-4369-bae3-4caecbd29a2c",
+        "ebeb8d25-de55-4066-b8b1-8db669fa2080",
+        "262ad71f-b711-4cdb-9c23-5de866360cff",
+        "46ca1d22-a093-49b5-b3ab-2125b3a34da9",
+        "68427661-08bb-4d6f-8aff-3b934e5f324b",
+        "d74adb7f-ec7a-47f1-bc3c-90fd418e43cc",
+        "c92abcff-b843-4d66-b4da-3b492cedb57c",
+        "eb2c216d-6a68-4d66-87ab-23039b264695",
+        "e2b3fb35-0725-4170-aa1a-daebf87b1d6b",
+        "6096a95c-1260-4893-8fb7-f101082362d6",
+        "d78dd0bd-823c-4e5b-abc7-5e9aa124eae2",
+        "b48fb36d-39bf-4898-a53b-c82d8b068bfa",
+        "87c9d6b3-da53-49cd-865d-7df47bd6dbde",
+        "1f4da05e-7d09-46d0-ab25-86b25157daa8",
+        "9b03a7ba-3f4f-4bfb-954e-10f814cd6153",
+        "9d9b1c86-3417-43d9-b289-871671f1ac1b",
+        "198f5337-a2f0-4e9c-9cb2-003fa5ae4b09",
+        "397ae11c-f614-48e9-9303-46ec46b797fd",
+        "user:5a45702b5ac703723ed999fc4eda11786977a5c64c3d279a6eec2590c4ee8eaa",
+        "57b1a87e-489b-49c6-8dfd-778369123a70",
+        "fcf14c7b-0baf-49f1-8827-af1ddf3b177e",
+        "8e708996-e92e-4a9d-b4cc-7f05fb3b908d",
+        "8f0bd205-575d-419e-a4c5-7366b88a3080",
+        "099c0e13-0a33-4571-9f26-80567560ec4b",
+        "d37ca7d6-1134-4504-b6ea-9343d17737db",
+        "2d0f4a6c-5e8a-4f7d-8beb-1a9814446149",
+        "fdba680f-4f7e-4d11-a330-c120780aaac9",
+        "f57bf5ca-0f1e-4a86-8a8f-c73ba2047e1d",
+        "user:61fd6ddf566518a1397de4322c9abd67429a3611cc034e8d418d15b3200128d4",
+        "3e43dcbd-2722-435e-b6e4-838b6fd62007",
+        "216f417e-d4d2-4517-9056-d52555ff3aca",
+        "619a3b19-21e9-4ed6-9daa-2a8800711c36",
+        "2801a592-a8fd-40de-b962-3d01f58f26ed",
+        "b99052db-3b5c-4eed-b1fd-7b7fa1a4ed1e",
+        "31497110-e308-45dd-95fb-91dfd5102212",
+        "5ebb93a9-2fa3-4fd3-be39-bc4f16464691",
+        "3f9f5e80-2308-4423-ab14-150e1a3771e4",
+        "661c1dd7-8168-4fa4-ad0b-56cbec071d81",
+        "2c987e56-b5f7-47fe-af4a-710182db6a8c",
+        "b71d98ee-dece-453b-bfea-b659270a319a",
+        "2f464d68-da23-4740-bab5-25ea71e87119",
+        "e2038946-694c-4ecb-87e9-ea57cfb56b5d",
+        "f8a0cd01-3477-4df7-a7d8-77aa973f8a85",
+        "27dbe53f-b1e2-431d-b0fa-eba8a98defa6",
+        "1f3c0180-3d71-4aca-8932-95192c1d33a8"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:evidence-and-live-proof",
+      "label": "Live product proof and honest capability claims",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.EVIDENCE",
+        "CONSTRAINT.NO_MOCK_TRUTH",
+        "W13",
+        "W18"
+      ],
+      "sourceMessageIds": [
+        "5579f72a-9ce0-4fd5-bbd8-5f48b1c82c0d",
+        "46ca1d22-a093-49b5-b3ab-2125b3a34da9",
+        "221733f8-7dcd-40ec-b0e8-0c7e9ae08d36",
+        "eebb8038-0838-41b3-adda-c061497de784",
+        "f257bee2-13b2-4072-8975-7f5a4507df4a",
+        "4a12645f-5400-470b-9b3b-0d95c4060d5b",
+        "eb8f1620-f4f1-4f81-aedc-8a63cabdc642",
+        "62bc37c2-abe0-4821-9255-74f7f94a4029"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:externalized-brain",
+      "label": "Externalized adaptive brain around a weak local model",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "ARC",
+        "W7",
+        "W8",
+        "W9",
+        "W11",
+        "W12"
+      ],
+      "sourceMessageIds": [
+        "41a6baef-4a81-4802-8da0-98d44cc4005d",
+        "d74adb7f-ec7a-47f1-bc3c-90fd418e43cc",
+        "ebabf73f-273a-4906-92ad-804776211411",
+        "3a4ee9b8-872c-4728-be9d-7aa65bc64a99",
+        "7ef5895a-fdf9-40a4-bb00-09f915f470ab",
+        "b2c6c1c9-a251-4063-b4a3-a326b31b3cde",
+        "ca9099ff-7863-44b6-a8c7-4ea5c910d71f",
+        "user:4c5ded8851162ca0c2dfe46289252b2dde628e19bcd334f43a1e320332707c1c",
+        "ce5efbfe-d3ed-4e86-bd3d-5ef471e158af",
+        "14b28de2-7dd4-4b5e-8bde-437a2d8c410b",
+        "60df4fc5-79e0-4b47-8729-a1d9c3c9110a",
+        "eb8f1620-f4f1-4f81-aedc-8a63cabdc642",
+        "53522bf0-5251-4304-bdbc-de2e4c5b48e2",
+        "523da6c6-e586-498f-8b5a-dc0a15c4e36f"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:dynamic-task-graph",
+      "label": "Dynamic task and workflow graph",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "W12",
+        "W14",
+        "W16"
+      ],
+      "sourceMessageIds": [
+        "41a6baef-4a81-4802-8da0-98d44cc4005d",
+        "3a4ee9b8-872c-4728-be9d-7aa65bc64a99",
+        "0020756c-65eb-44d8-953c-9ed8462ce7f9",
+        "f257bee2-13b2-4072-8975-7f5a4507df4a",
+        "60df4fc5-79e0-4b47-8729-a1d9c3c9110a",
+        "523da6c6-e586-498f-8b5a-dc0a15c4e36f"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:reasoning-policies",
+      "label": "Evidence-conditioned reasoning policies and traces",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "OUTCOME.ORIGINALITY",
+        "W8",
+        "W9",
+        "W11"
+      ],
+      "sourceMessageIds": [
+        "b2c6c1c9-a251-4063-b4a3-a326b31b3cde",
+        "0da52e17-8de0-4b73-8aab-192fe3683b21",
+        "0020756c-65eb-44d8-953c-9ed8462ce7f9",
+        "46e63b66-b8e0-4da1-a280-98b90cde67ed",
+        "user:4c5ded8851162ca0c2dfe46289252b2dde628e19bcd334f43a1e320332707c1c",
+        "ce5efbfe-d3ed-4e86-bd3d-5ef471e158af",
+        "14b28de2-7dd4-4b5e-8bde-437a2d8c410b",
+        "f257bee2-13b2-4072-8975-7f5a4507df4a",
+        "60df4fc5-79e0-4b47-8729-a1d9c3c9110a",
+        "eb8f1620-f4f1-4f81-aedc-8a63cabdc642",
+        "661c1dd7-8168-4fa4-ad0b-56cbec071d81"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:adaptive-learning",
+      "label": "Outcome-driven plasticity and future strategy learning",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "W7",
+        "W18"
+      ],
+      "sourceMessageIds": [
+        "7ef5895a-fdf9-40a4-bb00-09f915f470ab",
+        "b2c6c1c9-a251-4063-b4a3-a326b31b3cde",
+        "0da52e17-8de0-4b73-8aab-192fe3683b21",
+        "user:4c5ded8851162ca0c2dfe46289252b2dde628e19bcd334f43a1e320332707c1c",
+        "ce5efbfe-d3ed-4e86-bd3d-5ef471e158af"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:context-and-memory",
+      "label": "Loss-aware context, memory, paging, and offloading",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "W7",
+        "W10",
+        "W16"
+      ],
+      "sourceMessageIds": [
+        "212e8ab7-fca0-4bff-bd71-80e45d918a4b",
+        "user:4c5ded8851162ca0c2dfe46289252b2dde628e19bcd334f43a1e320332707c1c",
+        "403fa9d2-55cb-4405-8250-9ac889041294",
+        "2c4105b9-8415-4db9-b0d2-c18708beaa7b",
+        "53522bf0-5251-4304-bdbc-de2e4c5b48e2",
+        "802faee2-49e8-47a2-9a4a-f3336c7b355d"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:blackhole-stress-task",
+      "label": "Blackhole whole-product grand challenge",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "OUTCOME.DOMAIN_GENERALITY",
+        "W18"
+      ],
+      "sourceMessageIds": [
+        "5579f72a-9ce0-4fd5-bbd8-5f48b1c82c0d",
+        "f06bdd01-c9f9-408d-b1e3-c87b7446d8ad",
+        "fb3b8d52-9fcb-42af-9ef5-803b90084ae0",
+        "59049fe6-58be-4248-aff2-45b6873c5300"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:causal-lift-campaign",
+      "label": "Causal naked-9B versus ARC comparison",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.EVIDENCE",
+        "W18"
+      ],
+      "sourceMessageIds": [
+        "5579f72a-9ce0-4fd5-bbd8-5f48b1c82c0d",
+        "46ca1d22-a093-49b5-b3ab-2125b3a34da9",
+        "41a6baef-4a81-4802-8da0-98d44cc4005d",
+        "fb3b8d52-9fcb-42af-9ef5-803b90084ae0",
+        "1d696293-fbff-416f-9b8d-afd3fefb7a29",
+        "4a12645f-5400-470b-9b3b-0d95c4060d5b"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:sota-oss-creativity",
+      "label": "SOTA grounding, OSS reuse, and beyond-SOTA invention",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "OUTCOME.ORIGINALITY",
+        "CONSTRAINT.CRITICAL_PARTNERSHIP",
+        "W19"
+      ],
+      "sourceMessageIds": [
+        "694f9194-a298-4db9-a50b-f0d0ffe79695",
+        "ebeb8d25-de55-4066-b8b1-8db669fa2080",
+        "1d377fcd-0ed0-48ba-a927-37b1da68d0f7",
+        "ca9099ff-7863-44b6-a8c7-4ea5c910d71f",
+        "136a2141-2b85-461f-985c-36bbc403a02b",
+        "6096a95c-1260-4893-8fb7-f101082362d6",
+        "7d97bf07-f307-4b18-9b6e-651647d2b980",
+        "fb3b8d52-9fcb-42af-9ef5-803b90084ae0",
+        "0020756c-65eb-44d8-953c-9ed8462ce7f9",
+        "46e63b66-b8e0-4da1-a280-98b90cde67ed",
+        "ccb27947-0a88-4d20-bde4-b1e960c5ca11",
+        "212e8ab7-fca0-4bff-bd71-80e45d918a4b",
+        "87c9d6b3-da53-49cd-865d-7df47bd6dbde",
+        "9b03a7ba-3f4f-4bfb-954e-10f814cd6153",
+        "397ae11c-f614-48e9-9303-46ec46b797fd",
+        "user:4c5ded8851162ca0c2dfe46289252b2dde628e19bcd334f43a1e320332707c1c",
+        "ce5efbfe-d3ed-4e86-bd3d-5ef471e158af",
+        "54ef7528-66d8-4b83-821d-c81fb7d70d93",
+        "129e7e7f-0d75-4356-9f8b-536e5e4c80e2",
+        "f257bee2-13b2-4072-8975-7f5a4507df4a",
+        "2801a592-a8fd-40de-b962-3d01f58f26ed",
+        "b99052db-3b5c-4eed-b1fd-7b7fa1a4ed1e",
+        "2138e81a-f203-48ae-b69e-3665fe2c2da1",
+        "802faee2-49e8-47a2-9a4a-f3336c7b355d",
+        "5ebb93a9-2fa3-4fd3-be39-bc4f16464691",
+        "c7a2057f-f8d7-4dff-9b29-31e4c46fd92e"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:owner-grounding",
+      "label": "Owner intent, clarification, and anti-drift grounding",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.OWNER_AUTHORITY",
+        "W5",
+        "W14",
+        "W23"
+      ],
+      "sourceMessageIds": [
+        "1d377fcd-0ed0-48ba-a927-37b1da68d0f7",
+        "7d97bf07-f307-4b18-9b6e-651647d2b980",
+        "ccb27947-0a88-4d20-bde4-b1e960c5ca11",
+        "60df4fc5-79e0-4b47-8729-a1d9c3c9110a",
+        "cb55a755-0a92-4641-b54a-f2994b86169a",
+        "31c009a9-88e7-4aef-bd38-133dc53477c6",
+        "661c1dd7-8168-4fa4-ad0b-56cbec071d81",
+        "12b828d9-f457-4f40-a96d-8c7cf49bb41a"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:system-self-model",
+      "label": "Generated current architecture and capability self-model",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "W2",
+        "W17",
+        "W23"
+      ],
+      "sourceMessageIds": [
+        "ebeb8d25-de55-4066-b8b1-8db669fa2080",
+        "ca9099ff-7863-44b6-a8c7-4ea5c910d71f",
+        "31c009a9-88e7-4aef-bd38-133dc53477c6",
+        "a59f6382-345b-468f-b0de-914622e6780b",
+        "ee6395eb-fc48-4967-a67e-4b636a7249d2",
+        "1f3c0180-3d71-4aca-8932-95192c1d33a8"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:human-product-journeys",
+      "label": "Human product journeys and worst-case lived experience",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "OUTCOME.COMPLETE_PRODUCT",
+        "W0",
+        "W4"
+      ],
+      "sourceMessageIds": [
+        "0da52e17-8de0-4b73-8aab-192fe3683b21",
+        "0020756c-65eb-44d8-953c-9ed8462ce7f9",
+        "46e63b66-b8e0-4da1-a280-98b90cde67ed",
+        "a59f6382-345b-468f-b0de-914622e6780b",
+        "edf6948e-9ef3-4307-97e1-e52052783ad7",
+        "ee6395eb-fc48-4967-a67e-4b636a7249d2",
+        "b92323bd-31cd-474b-9051-323b33b30f22",
+        "2f464d68-da23-4740-bab5-25ea71e87119",
+        "1f3c0180-3d71-4aca-8932-95192c1d33a8"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:uncertainty-and-clarification",
+      "label": "Uncertainty-preserving branches and authentic clarification",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.OWNER_AUTHORITY",
+        "W5",
+        "W14"
+      ],
+      "sourceMessageIds": [
+        "0020756c-65eb-44d8-953c-9ed8462ce7f9",
+        "60df4fc5-79e0-4b47-8729-a1d9c3c9110a"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:delegation-and-compute",
+      "label": "Specialist delegation and governed compute allocation",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.LOCAL_HARDWARE",
+        "W15",
+        "W16",
+        "W21",
+        "W22"
+      ],
+      "sourceMessageIds": [
+        "694f9194-a298-4db9-a50b-f0d0ffe79695",
+        "136a2141-2b85-461f-985c-36bbc403a02b",
+        "c45926cd-a382-42a2-b974-49921cbb98e1",
+        "7d97bf07-f307-4b18-9b6e-651647d2b980",
+        "cd85f4a0-1974-4c27-9db3-38b6e2d6b203",
+        "ccb27947-0a88-4d20-bde4-b1e960c5ca11",
+        "2c4105b9-8415-4db9-b0d2-c18708beaa7b",
+        "129e7e7f-0d75-4356-9f8b-536e5e4c80e2",
+        "53522bf0-5251-4304-bdbc-de2e4c5b48e2",
+        "b60eef2a-fb66-405d-92b4-2153d8c5af00",
+        "7398407c-079b-45f7-b475-7213236f6673"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:product-positioning",
+      "label": "Clear and truthful product positioning",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "ARC",
+        "CONSTRAINT.EVIDENCE",
+        "CONSTRAINT.NO_MOCK_TRUTH"
+      ],
+      "sourceMessageIds": [
+        "d74adb7f-ec7a-47f1-bc3c-90fd418e43cc",
+        "e815e386-c08d-4f02-a8e0-66570c2d1453",
+        "39588a07-0774-48f3-b3be-6651755b82f2",
+        "ebabf73f-273a-4906-92ad-804776211411",
+        "07361333-9fa8-40b6-9af2-3a1152e7b3d2",
+        "b7f5d305-3bd8-4012-9f41-9567e04e0157",
+        "221733f8-7dcd-40ec-b0e8-0c7e9ae08d36",
+        "a6a7a464-a200-4705-b2c4-1f94567158fe",
+        "3a4ee9b8-872c-4728-be9d-7aa65bc64a99",
+        "bf6ef3ec-7098-4d68-bd9a-1032d778911f",
+        "42b5e268-de0a-485b-9d16-b56c73998088",
+        "7ef5895a-fdf9-40a4-bb00-09f915f470ab",
+        "b99052db-3b5c-4eed-b1fd-7b7fa1a4ed1e"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:canonical-docs",
+      "label": "Canonical documentation and durable decision memory",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.CANONICAL_SURFACE",
+        "W17",
+        "W23"
+      ],
+      "sourceMessageIds": [
+        "cb55a755-0a92-4641-b54a-f2994b86169a",
+        "31c009a9-88e7-4aef-bd38-133dc53477c6",
+        "62bc37c2-abe0-4821-9255-74f7f94a4029"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:repository-atlas",
+      "label": "Deterministic, complete, human-and-agent repository atlas",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "W2",
+        "W17",
+        "W23"
+      ],
+      "sourceMessageIds": [
+        "a59f6382-345b-468f-b0de-914622e6780b",
+        "edf6948e-9ef3-4307-97e1-e52052783ad7",
+        "ee6395eb-fc48-4967-a67e-4b636a7249d2",
+        "b92323bd-31cd-474b-9051-323b33b30f22",
+        "62bc37c2-abe0-4821-9255-74f7f94a4029",
+        "2f464d68-da23-4740-bab5-25ea71e87119",
+        "7398407c-079b-45f7-b475-7213236f6673",
+        "7bf5e044-637a-4db3-be65-a3becad79904",
+        "1f3c0180-3d71-4aca-8932-95192c1d33a8"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:gpu-resource-boundary",
+      "label": "Current GPU ownership and process boundary",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.LOCAL_HARDWARE",
+        "W21",
+        "W22"
+      ],
+      "sourceMessageIds": [
+        "5d545535-722f-44fe-8c6b-49436c1daf3e",
+        "12b828d9-f457-4f40-a96d-8c7cf49bb41a",
+        "7bf5e044-637a-4db3-be65-a3becad79904"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:atlas-audit",
+      "label": "Independent cold-reader audit of the completed atlas",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [
+        "CONSTRAINT.EVIDENCE",
+        "W17",
+        "W23"
+      ],
+      "sourceMessageIds": [
+        "7398407c-079b-45f7-b475-7213236f6673"
+      ],
+      "adjudication": "matched-to-protected-intent"
+    },
+    {
+      "ref": "review-topic:current-work-status",
+      "label": "Requests for current status and meaning",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [],
+      "sourceMessageIds": [
+        "867afa3b-ca74-4369-bae3-4caecbd29a2c",
+        "262ad71f-b711-4cdb-9c23-5de866360cff",
+        "68427661-08bb-4d6f-8aff-3b934e5f324b",
+        "c92abcff-b843-4d66-b4da-3b492cedb57c",
+        "eb2c216d-6a68-4d66-87ab-23039b264695",
+        "e2b3fb35-0725-4170-aa1a-daebf87b1d6b",
+        "6096a95c-1260-4893-8fb7-f101082362d6",
+        "d78dd0bd-823c-4e5b-abc7-5e9aa124eae2",
+        "b48fb36d-39bf-4898-a53b-c82d8b068bfa",
+        "eebb8038-0838-41b3-adda-c061497de784",
+        "1f4da05e-7d09-46d0-ab25-86b25157daa8",
+        "9d9b1c86-3417-43d9-b289-871671f1ac1b",
+        "198f5337-a2f0-4e9c-9cb2-003fa5ae4b09",
+        "user:5a45702b5ac703723ed999fc4eda11786977a5c64c3d279a6eec2590c4ee8eaa",
+        "1d696293-fbff-416f-9b8d-afd3fefb7a29",
+        "403fa9d2-55cb-4405-8250-9ac889041294",
+        "57b1a87e-489b-49c6-8dfd-778369123a70",
+        "fcf14c7b-0baf-49f1-8827-af1ddf3b177e",
+        "8e708996-e92e-4a9d-b4cc-7f05fb3b908d",
+        "8f0bd205-575d-419e-a4c5-7366b88a3080",
+        "099c0e13-0a33-4571-9f26-80567560ec4b",
+        "d37ca7d6-1134-4504-b6ea-9343d17737db",
+        "54ef7528-66d8-4b83-821d-c81fb7d70d93",
+        "2d0f4a6c-5e8a-4f7d-8beb-1a9814446149",
+        "fdba680f-4f7e-4d11-a330-c120780aaac9",
+        "f57bf5ca-0f1e-4a86-8a8f-c73ba2047e1d",
+        "user:61fd6ddf566518a1397de4322c9abd67429a3611cc034e8d418d15b3200128d4",
+        "3e43dcbd-2722-435e-b6e4-838b6fd62007",
+        "216f417e-d4d2-4517-9056-d52555ff3aca",
+        "619a3b19-21e9-4ed6-9daa-2a8800711c36",
+        "31497110-e308-45dd-95fb-91dfd5102212",
+        "c7a2057f-f8d7-4dff-9b29-31e4c46fd92e",
+        "3f9f5e80-2308-4423-ab14-150e1a3771e4",
+        "2c987e56-b5f7-47fe-af4a-710182db6a8c",
+        "b71d98ee-dece-453b-bfea-b659270a319a",
+        "e2038946-694c-4ecb-87e9-ea57cfb56b5d",
+        "f8a0cd01-3477-4df7-a7d8-77aa973f8a85",
+        "27dbe53f-b1e2-431d-b0fa-eba8a98defa6"
+      ],
+      "adjudication": "review-only-no-canon-effect"
+    },
+    {
+      "ref": "review-topic:continuation-control",
+      "label": "Requests to resume the same interrupted work",
+      "authority": "reviewer-defined-topic-not-canon",
+      "canonicalIntentIds": [],
+      "sourceMessageIds": [
+        "5d545535-722f-44fe-8c6b-49436c1daf3e",
+        "09f1baeb-2025-43d4-acee-fac5b517a66b",
+        "c07705d2-f7bd-4bc5-9dc8-f0e847bdc66e",
+        "6b3b0e3e-f782-4d0a-992f-840360e15416",
+        "f29299aa-55e9-48c4-8e55-f23a95819ccf",
+        "49860f8a-b913-4ec0-addd-b4daf29638ba",
+        "84717862-e383-4bd1-b385-3e8ba555640c",
+        "f9177d55-3862-4464-8be6-e2c726e7e1f3",
+        "4d215dd0-5014-454b-8416-23fd3be646dc",
+        "5bfd9506-0cb7-42e1-a3d5-0fc779b933ad",
+        "dcc57f32-77ac-4eb1-8f5b-3afa1bda2c13",
+        "15ec9149-ae25-45d3-b081-2f2ac29923c6",
+        "18d148d7-90ad-4c87-99c5-2392afbd87fe",
+        "122d1c92-bd53-4c67-9098-fc8e6326b7cf",
+        "fabd85c9-e6e5-492d-aeba-6e28f138fbc8",
+        "f0c6786c-99c1-41bd-9060-bf75253913de",
+        "5f6b1091-3523-4f53-9a1d-5f99c99a6c70",
+        "96c81ffd-90ac-494c-b11b-fefd791e3670"
+      ],
+      "adjudication": "review-only-no-canon-effect"
+    }
+  ],
+  "reviews": [
+    {
+      "messageId": "694f9194-a298-4db9-a50b-f0d0ffe79695",
+      "textSha256": "ed48a81a4a13f6d87973f48c8cfd7ffbea7e239a62cb3ed44a1e89a01fdf97a1",
+      "classification": "operating-principle",
+      "plainLanguage": "For every blocker, use current evidence and SOTA, reuse existing or OSS components, invent beyond them when justified, and repeatedly re-anchor to the complete goal.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:complete-vision",
+          "review-topic:sota-oss-creativity",
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This establishes the operating method and initial resource envelope."
+      },
+      "obligations": [
+        "Treat live repository state as stronger than dated prose.",
+        "Use bounded subagents according to difficulty and policy.",
+        "Do not spend compute or quota without relation to the end-to-end objective."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "867afa3b-ca74-4369-bae3-4caecbd29a2c",
+      "textSha256": "2a06dc371d004eaf5210f2e72a8623676d1a9e34f469487fb8925b49f3ef566b",
+      "classification": "status-request",
+      "plainLanguage": "Continue the legitimate research work and explain status, plan, completed work, and remaining work.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "ebeb8d25-de55-4066-b8b1-8db669fa2080",
+      "textSha256": "0f2cb6313c4586a9cc3ae120a39021dc774cf19c073c0d0bd39e0d84ef612ff3",
+      "classification": "implementation-request",
+      "plainLanguage": "Deeply wire the existing system rather than merely describing it; use the older infinite canvas as a possibly stale architectural aid.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:complete-vision",
+          "review-topic:system-self-model",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This prioritizes interconnection and live product integration over component theater."
+      },
+      "obligations": [
+        "Inspect current components before building replacements.",
+        "Treat the old canvas as context, not current truth."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "262ad71f-b711-4cdb-9c23-5de866360cff",
+      "textSha256": "435536203d22cfcce97811b469c3b56bf8d6bbfc9fea0b3a49b282f9b77c5da6",
+      "classification": "status-request",
+      "plainLanguage": "Explain where every current mechanism fits in the complete ideological and product vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "5579f72a-9ce0-4fd5-bbd8-5f48b1c82c0d",
+      "textSha256": "2b955f43471d8fd9eb9460bbf1f0f3af6f0b8a66851d6a1178bfac1191ce1ad0",
+      "classification": "completion-criterion",
+      "plainLanguage": "Wire the brain into live product execution and use physical runs, including Blackhole, to prove genuine quality gains over the unaided model.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:evidence-and-live-proof",
+          "review-topic:blackhole-stress-task",
+          "review-topic:causal-lift-campaign"
+        ],
+        "explanation": "This makes live, causal product evidence a central completion criterion."
+      },
+      "obligations": [
+        "Do not claim model improvement from fixtures or K=1.",
+        "Use Blackhole to expose whole-system failures."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "46ca1d22-a093-49b5-b3ab-2125b3a34da9",
+      "textSha256": "8a70cd262d20ca4422ef9e5444fba218cd1ec327cc780b22fa208bdb6cdb01ce",
+      "classification": "completion-criterion",
+      "plainLanguage": "Translate authority and transaction machinery into user-facing meaning, then prove that the integrated brain improves the system deterministically.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:complete-vision",
+          "review-topic:evidence-and-live-proof",
+          "review-topic:causal-lift-campaign"
+        ],
+        "explanation": "This rejects internal green components as a substitute for the final user outcome."
+      },
+      "obligations": [
+        "Explain technical state in product language.",
+        "Build a causal comparison with strong controls."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "41a6baef-4a81-4802-8da0-98d44cc4005d",
+      "textSha256": "39321b6d2e0ec30aaecbadbe886ae7f21b104aa1bdd58958eb1ac5b0bd4aa808",
+      "classification": "vision-principle",
+      "plainLanguage": "The dynamic execution graph and the cognition brain must reinforce one another so a weak local model can handle frontier-scale long-horizon tasks without ordinary LLM failure modes.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:dynamic-task-graph",
+          "review-topic:causal-lift-campaign"
+        ],
+        "explanation": "This explicitly joins graph engineering to the externalized-intelligence thesis."
+      },
+      "obligations": [
+        "Prove routing and policy improvements rather than merely adding workflow nodes.",
+        "Measure long-horizon quality, recovery, and cost."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "68427661-08bb-4d6f-8aff-3b934e5f324b",
+      "textSha256": "7dce45edb8ed24d065bd080736cef05ad70b4f2b7761e69fa3075e67213e21bf",
+      "classification": "status-request",
+      "plainLanguage": "Re-audit every existing component before claiming the requested brain or graph machinery is missing.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "d74adb7f-ec7a-47f1-bc3c-90fd418e43cc",
+      "textSha256": "99a3874eb028f12e426197cc06a69d1f4798edfbe7b252ccb0907281bb3c3ddf",
+      "classification": "vision-principle",
+      "plainLanguage": "The product goal is a local replacement for Codex and Claude Code that ultimately becomes substantially more advanced while reaching the same end destination for the user.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:complete-vision",
+          "review-topic:externalized-brain",
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This is the founder-level north star against which work must be evaluated."
+      },
+      "obligations": [
+        "Judge progress by the complete user journey, not subsystem count.",
+        "Keep ambitious direction separate from current proof."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "e815e386-c08d-4f02-a8e0-66570c2d1453",
+      "textSha256": "49afd62aab5680a564c412e95fe12a66a84bbc458a634e499dac4215329b2540",
+      "classification": "implementation-request",
+      "plainLanguage": "Create an investor pitch explaining the ambition, novelty, implications, current progress, and complete goal.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This requests a communication artifact and does not alter system architecture."
+      },
+      "obligations": [
+        "Represent vision boldly while separating built, being built, and unproven."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "39588a07-0774-48f3-b3be-6651755b82f2",
+      "textSha256": "52b8f63fd36869fdbadfe677820f59d91d92af31e426ef6304b1057cd6f3652a",
+      "classification": "clarification",
+      "plainLanguage": "The pitch deck audience is the Antler application.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This narrows the audience of one artifact, not the product intent."
+      },
+      "obligations": [
+        "Tailor language and evidence for an accelerator application."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "ebabf73f-273a-4906-92ad-804776211411",
+      "textSha256": "a7fe53f3dad711769bfd2791a9fefb40aa26f459be21eca62ddc11ac40ecc8e6",
+      "classification": "scope-correction",
+      "plainLanguage": "Position ARC as the system that aims to give a dramatically weaker local 9B frontier-level capability; communicate the living-brain ideas clearly and distinguish connected work from finished product.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:product-positioning",
+          "review-topic:externalized-brain"
+        ],
+        "explanation": "This corrects a technically dense, diminished portrayal of the vision."
+      },
+      "obligations": [
+        "Use plain outcome language.",
+        "Show built organs, current integration, and future thesis separately."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "07361333-9fa8-40b6-9af2-3a1152e7b3d2",
+      "textSha256": "100ae4f8d9174fcbbfed530eb4e5a55b943c2ea29479ddf770a7ccd46f7d4682",
+      "classification": "scope-correction",
+      "plainLanguage": "Explain that the local 9B is dramatically less capable than a frontier model rather than assuming the number 9B communicates the gap.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This makes the core technical bet intelligible to non-experts."
+      },
+      "obligations": [
+        "Explain model weakness in comparative plain language."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "b7f5d305-3bd8-4012-9f41-9567e04e0157",
+      "textSha256": "716b1d0c6e5c603cd1f9f402e0a100355e7e6dceb326b4dc90dbe7080afa2903",
+      "classification": "scope-correction",
+      "plainLanguage": "Replace unexplained numeric or shorthand slide claims with language an unfamiliar audience can understand.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This rejects ambiguity in investor communication."
+      },
+      "obligations": [
+        "Every number or stage label must state what it measures and why it matters."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "221733f8-7dcd-40ec-b0e8-0c7e9ae08d36",
+      "textSha256": "1cc908a6dfaccfee36ee2c039d889730010614fe6abafacd3908ee68f0090aca",
+      "classification": "scope-correction",
+      "plainLanguage": "Describe the system as being built and connected, not already completed.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:product-positioning",
+          "review-topic:evidence-and-live-proof"
+        ],
+        "explanation": "This restores honest present-tense capability boundaries."
+      },
+      "obligations": [
+        "Separate exists, integrated, live-proven, and aspirational claims."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "a6a7a464-a200-4705-b2c4-1f94567158fe",
+      "textSha256": "6582558d107cf904fa7f3b1bc5c94410af99de3427af33b74eb1eba42fa61003",
+      "classification": "scope-correction",
+      "plainLanguage": "Remove a fixed fundraising ask so the application does not impose an arbitrary ceiling.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This is a specific artifact-level fundraising correction."
+      },
+      "obligations": [
+        "Do not state a funding amount unless the founder deliberately approves it."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "3a4ee9b8-872c-4728-be9d-7aa65bc64a99",
+      "textSha256": "4c2d663ada34473978e4fada8354e3e3c69f33b725167b7bdf4cf28ad67ad97e",
+      "classification": "vision-principle",
+      "plainLanguage": "ARC is a living brain of massive interconnected graphs and dynamically created task nodes, fundamentally different from agents that only wrap a larger model.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:dynamic-task-graph",
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This gives the founder-preferred concise ideological framing."
+      },
+      "obligations": [
+        "Describe the differentiation as system intelligence around a weak model, not graph quantity alone."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "c92abcff-b843-4d66-b4da-3b492cedb57c",
+      "textSha256": "e36f2c2e30aca3bf0bd2f14720de683bb102b93ca01225f2aa9b907545f8a6a7",
+      "classification": "status-request",
+      "plainLanguage": "Give a plain-English progress update.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "bf6ef3ec-7098-4d68-bd9a-1032d778911f",
+      "textSha256": "3c855b9809710bedf2a6d41b318434fa43bb2f1acd88cc089e5c4e27bdc63693",
+      "classification": "implementation-request",
+      "plainLanguage": "Create a 60-second founder video script for Y Combinator.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This requests a communication artifact."
+      },
+      "obligations": [
+        "Explain the real problem, the different bet, current evidence, and ambition within one minute."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "42b5e268-de0a-485b-9d16-b56c73998088",
+      "textSha256": "58b1211c054e3fafc7e2951f5fa3ddabf4ed1bbe589a64741047da19fdac3c08",
+      "classification": "scope-correction",
+      "plainLanguage": "Do not sell trivial LLM failure modes that current frontier coding models largely handle; identify a real present-day problem.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This sharpens the market problem to the local weak-model and system-intelligence gap."
+      },
+      "obligations": [
+        "Ground competitive claims in current frontier products."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "7ef5895a-fdf9-40a4-bb00-09f915f470ab",
+      "textSha256": "5c5fcdbd08e34118519f045a932d23945f56a7987523234a886b0dec2a1dd645",
+      "classification": "vision-principle",
+      "plainLanguage": "Use the brain analogy to explain the architecture and explicitly name the open research questions it is trying to answer.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:adaptive-learning",
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This asks for the brain metaphor to carry technical substance rather than marketing decoration."
+      },
+      "obligations": [
+        "Map memory, routing, control, learning, verification, and plasticity to falsifiable questions."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "eb2c216d-6a68-4d66-87ab-23039b264695",
+      "textSha256": "3d10359e011562b3735644d4466988358c6bb76cb7265d43901172537283af54",
+      "classification": "status-request",
+      "plainLanguage": "Audit every idea, graph, and interconnection against the complete brain and end-to-end vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "1d377fcd-0ed0-48ba-a927-37b1da68d0f7",
+      "textSha256": "7f3984420c90036e58723c6348a97648d09d24d27156823328893c2b692a0f96",
+      "classification": "operating-principle",
+      "plainLanguage": "Treat the founder as an active ideological thought partner when a load-bearing blocker or architecture fork would benefit from creative reasoning.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:owner-grounding"
+        ],
+        "explanation": "This defines collaborative reasoning behavior without requiring interruption for minor choices."
+      },
+      "obligations": [
+        "Surface consequential forks with evidence and a grounded recommendation."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "b2c6c1c9-a251-4063-b4a3-a326b31b3cde",
+      "textSha256": "1e1b7da69ae9c5109c8abfbd3b243b89f0743ca97fa23d971680adf39c77739e",
+      "classification": "scope-correction",
+      "plainLanguage": "The model or a specialist model node performs semantic planning; deterministic infrastructure shapes context, options, evidence, tools, and learning but does not pretend to choose meaning.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:reasoning-policies",
+          "review-topic:adaptive-learning"
+        ],
+        "explanation": "This clarifies the division between model judgment and code-owned cognition support."
+      },
+      "obligations": [
+        "Keep semantic choices model-authored or user-authored.",
+        "Use deterministic code for legality, provenance, replay, and bounded option compilation."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "ca9099ff-7863-44b6-a8c7-4ea5c910d71f",
+      "textSha256": "a3a2fe7535bf23b08ec2c999b1e98d2beb5860c96a9d3a2e1b6c051e7cac10cd",
+      "classification": "vision-principle",
+      "plainLanguage": "Give the system an exact self-model of its complete architecture so it can reason about what exists, what is wired, and what is missing.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:system-self-model",
+          "review-topic:externalized-brain",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This introduces architecture awareness as part of the cognitive substrate."
+      },
+      "obligations": [
+        "Generate the self-model from current source and evidence.",
+        "Do not let the self-model become independent authority."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "136a2141-2b85-461f-985c-36bbc403a02b",
+      "textSha256": "fcd6e3a94a7819f2f17e8797d3dc243ac535adef682d45a9bd126f3beb5d057e",
+      "classification": "resource-direction",
+      "plainLanguage": "Use strong subagents for genuinely difficult parallel research across the full system, SOTA, OSS, and missing ideas.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:delegation-and-compute",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This expands the requested research capacity, subject to repository and platform limits."
+      },
+      "obligations": [
+        "Give each subagent a bounded non-overlapping task.",
+        "Parent must integrate and independently verify."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "c45926cd-a382-42a2-b974-49921cbb98e1",
+      "textSha256": "d8f76af1fb93853cc301811ed3e88f4c2aca52dd9373350bbe10d67c2ba6857c",
+      "classification": "resource-direction",
+      "plainLanguage": "Do not conserve quota at the expense of needed difficult research.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This emphasizes outcome over quota, but higher-level safety and concurrency policies still govern."
+      },
+      "obligations": [
+        "Use compute only when a bounded task can materially advance the objective."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "0da52e17-8de0-4b73-8aab-192fe3683b21",
+      "textSha256": "81621352f998202cba2aeb42f1b75e5b0e51d51e36bedf0e5e43027137cd71c3",
+      "classification": "vision-principle",
+      "plainLanguage": "Strengthen cross-graph information pathways based on intent and outcome evidence, and evaluate features through realistic human journeys, worst-case load, friction, and aesthetics.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:adaptive-learning",
+          "review-topic:reasoning-policies",
+          "review-topic:human-product-journeys"
+        ],
+        "explanation": "This joins neuroplastic information routing to user-centered evaluation traces."
+      },
+      "obligations": [
+        "Separate human-journey simulation from product proof.",
+        "Measure whether strengthened pathways improve held-out outcomes."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "5d545535-722f-44fe-8c6b-49436c1daf3e",
+      "textSha256": "73578d6a129237cb1634452f96aa93329c29d81c9e7c28b35ca9e865d02c0c4d",
+      "classification": "clarification",
+      "plainLanguage": "The founder started the local model process and authorizes continuation.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:gpu-resource-boundary",
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This reports transient runtime state; it does not permanently transfer compute authority."
+      },
+      "obligations": [
+        "Re-attest the actual process before using it."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "e2b3fb35-0725-4170-aa1a-daebf87b1d6b",
+      "textSha256": "e39cf199f9c43eae0a0084f93ac957dee8915031fc5d2126d6e57feb7757406e",
+      "classification": "status-request",
+      "plainLanguage": "Pause and verify that the current direction still serves the complete vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "6096a95c-1260-4893-8fb7-f101082362d6",
+      "textSha256": "d8a5bb0a11b4a67368a47dd0aff6ff787edf271af80207a409f28f8e4bb79098",
+      "classification": "operating-principle",
+      "plainLanguage": "Continuously enforce creativity, cross-domain search where useful, maximal current grounding, and explicit explanation of the work now underway.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:complete-vision",
+          "review-topic:sota-oss-creativity",
+          "review-topic:current-work-status"
+        ],
+        "explanation": "This restates the working method and anti-drift requirement."
+      },
+      "obligations": [
+        "State what is being done and why it is the shortest truthful path."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "f06bdd01-c9f9-408d-b1e3-c87b7446d8ad",
+      "textSha256": "f1c6111907136ba60f946cb5d48d3ed17f57396e9ad5bbaf68dde0d302b60d34",
+      "classification": "scope-correction",
+      "plainLanguage": "Blackhole is the brutal whole-product request to build a physically grounded black-hole simulation, not merely a narrow hidden-oracle cognition benchmark.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:blackhole-stress-task"
+        ],
+        "explanation": "This restores Blackhole as an end-to-end system-pressure task."
+      },
+      "obligations": [
+        "Exercise scope, research, planning, code, execution, validation, recovery, UX, and user steering.",
+        "Use hidden oracles as evaluators, not as the definition of the task."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "7d97bf07-f307-4b18-9b6e-651647d2b980",
+      "textSha256": "c5d3e86e153e0356fe28be4dbad8fefed1205eea0e70f2fee3d761fe8c9ab497",
+      "classification": "operating-principle",
+      "plainLanguage": "Re-read every owner message, answer all concerns, use difficult subagents when justified, and keep creativity and current SOTA tied to the complete goal.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:owner-grounding",
+          "review-topic:sota-oss-creativity",
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This strengthens transcript-to-plan coverage."
+      },
+      "obligations": [
+        "Maintain an exact owner-message denominator and visible unresolved obligations."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "fb3b8d52-9fcb-42af-9ef5-803b90084ae0",
+      "textSha256": "bf89caed45e0e287ecdc43c4c325d439ce133512ee049c75ed45548c5ff0b9ba",
+      "classification": "constraint",
+      "plainLanguage": "Blackhole is one extreme stress example; do not overfit, cheat, inject answers, or let it become the only task distribution.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:blackhole-stress-task",
+          "review-topic:causal-lift-campaign",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This protects domain generality and honest measurement."
+      },
+      "obligations": [
+        "Use goal-only held-out tasks and negative controls.",
+        "Invent new progress drivers without weakening authority."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "09f1baeb-2025-43d4-acee-fac5b517a66b",
+      "textSha256": "02cfe0644d21ad2a49bde980f763c4fc4a766fc1c005d96675595cbbbfa52aa9",
+      "classification": "continuation",
+      "plainLanguage": "Resume interrupted work and report status against the complete vision.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "c07705d2-f7bd-4bc5-9dc8-f0e847bdc66e",
+      "textSha256": "4ff861a1cc783ad8800a8a0543c0fb0ec40e3f1ed3b7dffa3066dc54465b4e63",
+      "classification": "continuation",
+      "plainLanguage": "Resume all interrupted subagents.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "0020756c-65eb-44d8-953c-9ed8462ce7f9",
+      "textSha256": "ad77c7ad0f539b08c491504bd511b36a16ebc660822a0bc1cea4286cbef73dd3",
+      "classification": "vision-principle",
+      "plainLanguage": "Model realistic human navigation through software, including unstructured exploration, minor friction, aesthetics, and uncertainty, potentially as visual cognition nodes inside the dynamic graph.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:human-product-journeys",
+          "review-topic:dynamic-task-graph",
+          "review-topic:reasoning-policies",
+          "review-topic:uncertainty-and-clarification",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This broadens reasoning traces from formal procedures to lived human product behavior."
+      },
+      "obligations": [
+        "Research current computer-use and human-behavior systems.",
+        "Keep simulated journeys distinct from authenticated user evidence."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "cd85f4a0-1974-4c27-9db3-38b6e2d6b203",
+      "textSha256": "06f2d29d87697d88f71ecd4851cdf7cc437fcd8f15605d1fb83ac13d616dc1f7",
+      "classification": "resource-direction",
+      "plainLanguage": "Permit more Sol/max subagents for unusually difficult parallel work.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This requests a larger fan-out, still subordinate to live platform and repository concurrency rules."
+      },
+      "obligations": [
+        "Avoid overlapping ownership and unverified aggregation."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "46e63b66-b8e0-4da1-a280-98b90cde67ed",
+      "textSha256": "f171c88a5ae0f42344bd4d25f6a9d8ac9af9c218461b2ce766fecc910ac430a0",
+      "classification": "vision-principle",
+      "plainLanguage": "Creative reasoning traces should include how people really explore products: nonlinear behavior, aesthetics, small inconveniences, and task-specific patterns, with every idea researched rather than self-certified.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:reasoning-policies",
+          "review-topic:human-product-journeys",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This clarifies creativity as an evidence-tested policy repertoire, not unconstrained prose."
+      },
+      "obligations": [
+        "Attach falsifiers to creative operators.",
+        "Represent both structured and unstructured human behavior."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "ccb27947-0a88-4d20-bde4-b1e960c5ca11",
+      "textSha256": "cf0eba118caf0a3240a0cc787858f4c99b2f9f6feff9c3951b501cfb9d0a8c48",
+      "classification": "operating-principle",
+      "plainLanguage": "Re-read the complete conversation, address every concern, and use strong subagents only where needed while preserving creative SOTA grounding.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:owner-grounding",
+          "review-topic:sota-oss-creativity",
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This repeats the anti-drift and completeness requirement."
+      },
+      "obligations": [
+        "Keep a transcript coverage ledger."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "6b3b0e3e-f782-4d0a-992f-840360e15416",
+      "textSha256": "905a14b4e37d4d6eaf844fee2d6cef1fbb14abb1a27d43bbc2535d53ad36122b",
+      "classification": "continuation",
+      "plainLanguage": "Resume all interrupted work and subagents end to end.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "212e8ab7-fca0-4bff-bd71-80e45d918a4b",
+      "textSha256": "f60a359aae0eae1977ce90aee2baace9d49c8abae0b34edd0cfb650175591e6d",
+      "classification": "vision-principle",
+      "plainLanguage": "Re-examine the repository context-limit work and seek a more creative, loss-aware architecture rather than accepting truncation.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:context-and-memory",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This makes context management a first-class brain subsystem."
+      },
+      "obligations": [
+        "Reuse existing paging and provenance work.",
+        "Never silently drop mandatory evidence or owner intent."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "d78dd0bd-823c-4e5b-abc7-5e9aa124eae2",
+      "textSha256": "480d1c5ee34716c1555f73262d2a4600ff7fd671f5676ae5f086798cdbcfce70",
+      "classification": "status-request",
+      "plainLanguage": "Verify direction and explain the work now in progress.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "b48fb36d-39bf-4898-a53b-c82d8b068bfa",
+      "textSha256": "52a5b78772b2f17c9a68a23a0ea2434fbf77ef7e4d6e7d54cd4c9b1e1622c914",
+      "classification": "status-request",
+      "plainLanguage": "Report status against the complete end-to-end plan.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "eebb8038-0838-41b3-adda-c061497de784",
+      "textSha256": "bea6d819f9750833768e7ba9d289450d7237523a0cc9f5e3be6c445b401d34e6",
+      "classification": "question",
+      "plainLanguage": "Assess whether to pause until next week or continue because a meaningful proof boundary is close.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:evidence-and-live-proof"
+        ],
+        "explanation": "This asks for schedule judgment, not an architecture change."
+      },
+      "obligations": [
+        "Give an honest confidence range and name the decisive next proof."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "f29299aa-55e9-48c4-8e55-f23a95819ccf",
+      "textSha256": "f22a68e7fb4e3696130fdcfca350953957457e8c13f99575c82b33900021d23b",
+      "classification": "continuation",
+      "plainLanguage": "Resume work and explain whether progress toward the complete vision is healthy or concerning.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "49860f8a-b913-4ec0-addd-b4daf29638ba",
+      "textSha256": "f22a68e7fb4e3696130fdcfca350953957457e8c13f99575c82b33900021d23b",
+      "classification": "continuation",
+      "plainLanguage": "Resume work and explain whether progress toward the complete vision is healthy or concerning.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "84717862-e383-4bd1-b385-3e8ba555640c",
+      "textSha256": "c4f84afe99a6692978d1ffd2a2c6c5f598b875b1b946ea19603156a42518b8f7",
+      "classification": "continuation",
+      "plainLanguage": "Resume interrupted subagents.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "87c9d6b3-da53-49cd-865d-7df47bd6dbde",
+      "textSha256": "2cbe884b7197f60b0c3af0df7a8cf8139dc92926507fd09a6fb135f19f1de212",
+      "classification": "operating-principle",
+      "plainLanguage": "At every specific blocker, ground in current SOTA and existing components, then creatively go beyond them while retaining the complete vision.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This repeats the required problem-solving discipline."
+      },
+      "obligations": [
+        "Do not bolt on a subsystem before proving the exact missing function."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "1f4da05e-7d09-46d0-ab25-86b25157daa8",
+      "textSha256": "f5d8b20201b16d9ec9943448d825e589860ede4586ad7f911ed162b2b5235315",
+      "classification": "status-request",
+      "plainLanguage": "Explain current work, progress quality, and meaning against the complete vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "9b03a7ba-3f4f-4bfb-954e-10f814cd6153",
+      "textSha256": "2cbe884b7197f60b0c3af0df7a8cf8139dc92926507fd09a6fb135f19f1de212",
+      "classification": "operating-principle",
+      "plainLanguage": "At every specific blocker, ground in current SOTA and existing components, then creatively go beyond them while retaining the complete vision.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This repeats the required problem-solving discipline."
+      },
+      "obligations": [
+        "Do not bolt on a subsystem before proving the exact missing function."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "9d9b1c86-3417-43d9-b289-871671f1ac1b",
+      "textSha256": "635bd8387f0355641de2ddab31071751c597c14766dcaae85335aa3555fff39c",
+      "classification": "status-request",
+      "plainLanguage": "State the current blocker.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "f9177d55-3862-4464-8be6-e2c726e7e1f3",
+      "textSha256": "b35e1696ce259455270c3c642f40b1f98c00da04b9fa5d0b841e72bb9ed2478f",
+      "classification": "continuation",
+      "plainLanguage": "Resume all interrupted work and subagents.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "198f5337-a2f0-4e9c-9cb2-003fa5ae4b09",
+      "textSha256": "9518864a45916931b40322bb3495059081e82d4a5b4aeafe846f9ac56690a6d2",
+      "classification": "status-request",
+      "plainLanguage": "State the current blocker.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "397ae11c-f614-48e9-9303-46ec46b797fd",
+      "textSha256": "2cbe884b7197f60b0c3af0df7a8cf8139dc92926507fd09a6fb135f19f1de212",
+      "classification": "operating-principle",
+      "plainLanguage": "At every specific blocker, ground in current SOTA and existing components, then creatively go beyond them while retaining the complete vision.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This repeats the required problem-solving discipline."
+      },
+      "obligations": [
+        "Do not bolt on a subsystem before proving the exact missing function."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "user:5a45702b5ac703723ed999fc4eda11786977a5c64c3d279a6eec2590c4ee8eaa",
+      "textSha256": "e3ce5ee31b3938541076640363c7139c2e559f68e879cfd45119a05126ab378a",
+      "classification": "status-request",
+      "plainLanguage": "State current status and the exact problem being faced.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "user:4c5ded8851162ca0c2dfe46289252b2dde628e19bcd334f43a1e320332707c1c",
+      "textSha256": "d93a9497faaee68e74c804c8c92ad615051e6ae808b813372792c4d540f74f19",
+      "classification": "vision-principle",
+      "plainLanguage": "Audit the proposed cognitive functions—world modeling, metacognition, strategy, abstraction, search, memory, tools, delegation, verification, uncertainty, learning, and skill creation—against what already exists and what is truly missing.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:reasoning-policies",
+          "review-topic:context-and-memory",
+          "review-topic:adaptive-learning",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This supplies a candidate cognitive denominator while explicitly allowing skeptical revision."
+      },
+      "obligations": [
+        "Map each function to live components, gaps, and falsifiers.",
+        "Do not treat the list as complete or authoritative without audit."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "ce5efbfe-d3ed-4e86-bd3d-5ef471e158af",
+      "textSha256": "09f3251c54715a8948b3cf8734b6cd9568bea516f54d1ae2fd4fd09f141734c3",
+      "classification": "constraint",
+      "plainLanguage": "Treat the proposed four-level cognitive-control architecture skeptically, reuse what exists, and avoid reinventing systems merely because a conceptual diagram sounds compelling.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:reasoning-policies",
+          "review-topic:adaptive-learning",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This emphasizes that the control system and evidence matter more than a list of agent features."
+      },
+      "obligations": [
+        "Inventory existing organs before new design.",
+        "Require causal benefit before promotion."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "1d696293-fbff-416f-9b8d-afd3fefb7a29",
+      "textSha256": "30ebc37e9aa54114d49c2ea11833537c57c8adb1c1d79a6b51e7039d4309bc91",
+      "classification": "question",
+      "plainLanguage": "Estimate how long it will take to prove causal lift.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:causal-lift-campaign",
+          "review-topic:current-work-status"
+        ],
+        "explanation": "This requests a schedule estimate, not a change to the proof standard."
+      },
+      "obligations": [
+        "Base estimates on the shortest missing physical and experimental gates."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "403fa9d2-55cb-4405-8250-9ac889041294",
+      "textSha256": "90cb68bd2f015314e1b77f027ea34d07edda9670bf449ccf4817e6d41621bc4a",
+      "classification": "question",
+      "plainLanguage": "Confirm whether context limits are the active failure class.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:context-and-memory",
+          "review-topic:current-work-status"
+        ],
+        "explanation": "This asks for diagnosis."
+      },
+      "obligations": [
+        "Separate context capacity, output budget, and semantic navigation failures."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "2c4105b9-8415-4db9-b0d2-c18708beaa7b",
+      "textSha256": "d3f949c7d072cd2e12d43425f2e0d51423e2314022a7a4b02800b944ceea615f",
+      "classification": "question",
+      "plainLanguage": "Explain whether and how the system offloads context, work, memory, or cognition.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:context-and-memory",
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This asks for architecture clarification."
+      },
+      "obligations": [
+        "Distinguish durable paging, subagent delegation, and semantic decision authority."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "57b1a87e-489b-49c6-8dfd-778369123a70",
+      "textSha256": "9a081c7e1e3e7c4d785c21ccfad8f7bf6b6329a4cdb8c05a145df1d4cb1e7a78",
+      "classification": "status-request",
+      "plainLanguage": "Pause and perform a deep zoom-out.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "14b28de2-7dd4-4b5e-8bde-437a2d8c410b",
+      "textSha256": "0733426b9e44ea22f524f22b2668eb26f02ab7b2902574c20c15dec5b2ae6f0f",
+      "classification": "question",
+      "plainLanguage": "Recall and evaluate the earlier cognitive-control ideas supplied by another agent.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:reasoning-policies"
+        ],
+        "explanation": "This requests synthesis and skepticism."
+      },
+      "obligations": [
+        "State what was accepted, rejected, or remains unproven."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "fcf14c7b-0baf-49f1-8827-af1ddf3b177e",
+      "textSha256": "087990ec12d917e8a3c0cbb5db240d8735f8527d64bc0da845f56511718f8515",
+      "classification": "status-request",
+      "plainLanguage": "Demonstrate that the work is thorough, ideological, and creatively reasoned.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "8e708996-e92e-4a9d-b4cc-7f05fb3b908d",
+      "textSha256": "159089057f5ee41d9786f09817e1c9ff46ee9387a777bf53dc33655ce0d0fd67",
+      "classification": "status-request",
+      "plainLanguage": "Report status against the complete end-to-end vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "4d215dd0-5014-454b-8416-23fd3be646dc",
+      "textSha256": "07515b71b2f5b911968afed942dffa81f6164aab4163a89953d4d763fa17c193",
+      "classification": "continuation",
+      "plainLanguage": "Resume interrupted work; ambient browser state is not an instruction.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "5bfd9506-0cb7-42e1-a3d5-0fc779b933ad",
+      "textSha256": "3c8765d2d9eac2009f72a765251c25a865a128a9a232f6f96c86389eaf60cbf9",
+      "classification": "continuation",
+      "plainLanguage": "Resume interrupted subagents; ambient browser state is not an instruction.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "dcc57f32-77ac-4eb1-8f5b-3afa1bda2c13",
+      "textSha256": "04131d6e805b2035bd988b3044aa6a0567f8050b49dafd332dbed16e1d20510b",
+      "classification": "continuation",
+      "plainLanguage": "Resume all interrupted work and subagents; ambient browser state is not an instruction.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "8f0bd205-575d-419e-a4c5-7366b88a3080",
+      "textSha256": "d22c875fee596fd3d09d0e8bec00fa3279f26ed32d96a65b6f62c8b35b98563e",
+      "classification": "status-request",
+      "plainLanguage": "Verify that interrupted subagents were actually resumed.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report exact live agent status rather than assuming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "15ec9149-ae25-45d3-b081-2f2ac29923c6",
+      "textSha256": "8fdb7628fa1ae038d33fac7874cbb5ad44d9a3e862627a1952c59cdc9fe340bb",
+      "classification": "continuation",
+      "plainLanguage": "Resume the parent and all interrupted subagents.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "099c0e13-0a33-4571-9f26-80567560ec4b",
+      "textSha256": "d5976a2fc26514ba868602587f81e4eb83a5f8b67aa647bd75cc7fbcdfc9ce44",
+      "classification": "status-request",
+      "plainLanguage": "Zoom out and report status against the complete vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "d37ca7d6-1134-4504-b6ea-9343d17737db",
+      "textSha256": "d074cdd6a17185eff9166454c18e520ed0a63bfbbe4296d355e4aef83a177669",
+      "classification": "status-request",
+      "plainLanguage": "Explain the ideological meaning of the current technical state.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "54ef7528-66d8-4b83-821d-c81fb7d70d93",
+      "textSha256": "77804afa54b17fd177a8f00f598b1c43aae598bc8c77085fd5ad6d9187a56be2",
+      "classification": "question",
+      "plainLanguage": "Compare the current architecture with bleeding-edge SOTA.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:current-work-status"
+        ],
+        "explanation": "This asks for an evidence-backed gap analysis."
+      },
+      "obligations": [
+        "Compare mechanisms and published empirical proof separately."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "129e7e7f-0d75-4356-9f8b-536e5e4c80e2",
+      "textSha256": "4229b2e5d2218da06516b69fe5517f52c2865f47938fcda91121d0aef3abffc9",
+      "classification": "resource-direction",
+      "plainLanguage": "Assign a deep research subagent to enumerate every SOTA gap and the exact research problems being attempted.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:delegation-and-compute",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This requests a bounded independent research audit."
+      },
+      "obligations": [
+        "Use primary sources and separate existence from empirical proof."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "f257bee2-13b2-4072-8975-7f5a4507df4a",
+      "textSha256": "2a8896983a1e0eb6956f99d472a1b58c77fe5127be1d3967a5f1351ca0d9a8cc",
+      "classification": "scope-correction",
+      "plainLanguage": "The two-month architecture effort was intended to build beyond SOTA from existing work; explain why current evidence does not yet demonstrate that and preserve original ideas such as dynamic graphs and reasoning traces.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:dynamic-task-graph",
+          "review-topic:reasoning-policies",
+          "review-topic:evidence-and-live-proof"
+        ],
+        "explanation": "This rejects an interpretation that absence of proof means absence of architecture or ambition."
+      },
+      "obligations": [
+        "Map implemented organs separately from live integration and comparative evidence."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "2d0f4a6c-5e8a-4f7d-8beb-1a9814446149",
+      "textSha256": "a39a3aa87bf428f838d69c668d58e9b737f10b9f4a2f98b928577906534f527d",
+      "classification": "status-request",
+      "plainLanguage": "Pause and reason about the complete ideology before continuing.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "59049fe6-58be-4248-aff2-45b6873c5300",
+      "textSha256": "e3edb1aa528f366cbd472bfd8cb938fd958f56d1f1944cc573f884db5715f660",
+      "classification": "clarification",
+      "plainLanguage": "Confirm that Blackhole uses the ordinary prompt to build a black-hole simulation.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:blackhole-stress-task"
+        ],
+        "explanation": "This checks the exact public task contract."
+      },
+      "obligations": [
+        "Preserve the exact prompt and prohibit hidden answer injection."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "4a12645f-5400-470b-9b3b-0d95c4060d5b",
+      "textSha256": "5ceabdeb877d7abd8eb735052b089bb800a4fba03ebecbf4451c86a070f518aa",
+      "classification": "completion-criterion",
+      "plainLanguage": "Prove performance against a naked 9B baseline, not only internal ARC variants.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:causal-lift-campaign",
+          "review-topic:evidence-and-live-proof"
+        ],
+        "explanation": "This requires a decisive external baseline."
+      },
+      "obligations": [
+        "Run matched budgets and sufficient K.",
+        "Keep strongest static scaffold and frontier reference arms distinct."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "fdba680f-4f7e-4d11-a330-c120780aaac9",
+      "textSha256": "b266c6fcddabd0c7926a72d9df8cc1f114b58c68971f2ca0b949d07d94675e0c",
+      "classification": "status-request",
+      "plainLanguage": "Give a complete plain-English status and state the current work.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "f57bf5ca-0f1e-4a86-8a8f-c73ba2047e1d",
+      "textSha256": "b266c6fcddabd0c7926a72d9df8cc1f114b58c68971f2ca0b949d07d94675e0c",
+      "classification": "status-request",
+      "plainLanguage": "Give a complete plain-English status and state the current work.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "user:61fd6ddf566518a1397de4322c9abd67429a3611cc034e8d418d15b3200128d4",
+      "textSha256": "2efdbb950e6b3f2dcfe9ebc8c9b561301fe1be0c6412e6ba3d2d8ac017d1cfe2",
+      "classification": "status-request",
+      "plainLanguage": "Report current status and estimate time to the complete vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Separate the next bounded proof from the multi-stage research horizon; do not give a false single ETA."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "3e43dcbd-2722-435e-b6e4-838b6fd62007",
+      "textSha256": "3c39c4457d808a6c076c52856a784830d7aa1dc1983fb0567d828348bae24a00",
+      "classification": "status-request",
+      "plainLanguage": "Report current status immediately.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "216f417e-d4d2-4517-9056-d52555ff3aca",
+      "textSha256": "da8584193e1f6cc46ebf09aaa7805bdfe3b6260ef004d6b91c1267f9853dbc50",
+      "classification": "status-request",
+      "plainLanguage": "Zoom out to the complete vision.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "619a3b19-21e9-4ed6-9daa-2a8800711c36",
+      "textSha256": "7bc95f9621a5e342c32d3cafb1c5746b7e7a7f67651d382e70c384e6eeb75bf9",
+      "classification": "status-request",
+      "plainLanguage": "Report immediate status and zoom out.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "2801a592-a8fd-40de-b962-3d01f58f26ed",
+      "textSha256": "03cc09a0350100bc760be7e57306b92c77e1829af2810c0801523e00cf2535dc",
+      "classification": "question",
+      "plainLanguage": "Identify ideological gaps in the complete system.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:complete-vision",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This asks for an adversarial conceptual audit."
+      },
+      "obligations": [
+        "Name missing control loops, product surfaces, and evidence—not vague future work."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "b99052db-3b5c-4eed-b1fd-7b7fa1a4ed1e",
+      "textSha256": "413bb12a6f7f8cdc12dfad8e5e2b2de3197c02aec39de39ab9d60de3398c4dd2",
+      "classification": "vision-principle",
+      "plainLanguage": "Pause implementation to reassess missing ideology, SOTA, product meaning, and the goal of becoming a complete Codex or Claude Code replacement.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:complete-vision",
+          "review-topic:sota-oss-creativity",
+          "review-topic:product-positioning"
+        ],
+        "explanation": "This requests a founder-level design audit before more local optimization."
+      },
+      "obligations": [
+        "Evaluate both system intelligence and familiar user destination."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "60df4fc5-79e0-4b47-8729-a1d9c3c9110a",
+      "textSha256": "d3ac62b941c3dabcf6616c0d74e0bc8e3744787d7b226412c1b4f99c2a6fd318",
+      "classification": "scope-correction",
+      "plainLanguage": "Reasoning traces mean evidence-conditioned problem-solving policies: which path to take next for this domain and state, grounded in original intent and later clarifications; dynamic nodes execute those policies around a weak model.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:reasoning-policies",
+          "review-topic:dynamic-task-graph",
+          "review-topic:owner-grounding",
+          "review-topic:uncertainty-and-clarification",
+          "review-topic:externalized-brain"
+        ],
+        "explanation": "This corrects any reading of traces as graph-shaped chain-of-thought."
+      },
+      "obligations": [
+        "Represent reusable approaches, triggers, counter-triggers, evidence, and outcomes.",
+        "Keep private chain-of-thought out of the authority surface."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "eb8f1620-f4f1-4f81-aedc-8a63cabdc642",
+      "textSha256": "ac115e1b9a8c494890b6c84c12f33afe1a151d089163c021b8a9384a4cd45c2a",
+      "classification": "vision-principle",
+      "plainLanguage": "The foundational bet is to externalize metacognition, abstraction, domain methods, verification, and long-horizon control so a weak local model avoids circularity, hallucination, tunneling, and premature completion.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:externalized-brain",
+          "review-topic:reasoning-policies",
+          "review-topic:evidence-and-live-proof"
+        ],
+        "explanation": "This reasserts the main research thesis and its targeted LLM failure classes."
+      },
+      "obligations": [
+        "Map every pitfall to mechanisms and decisive falsifiers."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "2138e81a-f203-48ae-b69e-3665fe2c2da1",
+      "textSha256": "cbe6b0b58e0f028c6dcb090f743409b4687044e36e4ccf96478eeb595e1f2177",
+      "classification": "operating-principle",
+      "plainLanguage": "For every subsystem, ground in maximal current SOTA, study OSS even when licensing prevents direct reuse, adapt useful mechanisms, and deliberately seek a beyond-SOTA composition.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This specifies the research and reuse method."
+      },
+      "obligations": [
+        "Record source date, license, reuse decision, and local falsifier."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "cb55a755-0a92-4641-b54a-f2994b86169a",
+      "textSha256": "3001beadecbe73af68d71a71882866b6228682836c743d6937d5e3eb29a3c0af",
+      "classification": "operating-principle",
+      "plainLanguage": "Keep the complete plan in mind and update authoritative documentation with validated facts, decisions, and operating principles so future agents do not rediscover them.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:canonical-docs",
+          "review-topic:owner-grounding"
+        ],
+        "explanation": "This makes durable non-drifting knowledge part of completion."
+      },
+      "obligations": [
+        "Record findings through the governed protocol.",
+        "Do not promote unverified chat conclusions to canon."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "31c009a9-88e7-4aef-bd38-133dc53477c6",
+      "textSha256": "e51ee41b87db0908f7ae3b7570839c3edd30b8460dbe98af334b934e011d3b60",
+      "classification": "question",
+      "plainLanguage": "Use canonical documents and suitable memory or graph tools continuously to prevent drift.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:canonical-docs",
+          "review-topic:system-self-model",
+          "review-topic:owner-grounding"
+        ],
+        "explanation": "This asks for a reliable grounding mechanism."
+      },
+      "obligations": [
+        "Start from the canonical gateway, generated probes, and exact transcript coverage."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "53522bf0-5251-4304-bdbc-de2e4c5b48e2",
+      "textSha256": "7b0c0910ca807ccb23642476ce60e5206db33b32eb784ba48db1fc2e46eecb3d",
+      "classification": "vision-principle",
+      "plainLanguage": "Do not solve context pressure through dumb truncation; incorporate prior hierarchical context work, a super-agent loop, and sequential or parallel delegation when hardware and independence permit.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:context-and-memory",
+          "review-topic:delegation-and-compute",
+          "review-topic:externalized-brain"
+        ],
+        "explanation": "This sets the losslessness and orchestration direction for context."
+      },
+      "obligations": [
+        "Preserve omitted evidence in durable addressable storage.",
+        "Make residency and delegation decisions replayable."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "18d148d7-90ad-4c87-99c5-2392afbd87fe",
+      "textSha256": "e657c8d29359f767a4c4bf86b046c2d9a8eb570f0cae57224571253623a43ade",
+      "classification": "continuation",
+      "plainLanguage": "Resume the parent and all interrupted subagents.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "31497110-e308-45dd-95fb-91dfd5102212",
+      "textSha256": "912a42980402d2cebb57d5d2709d503a97ff59029cfa3806464d8d8b6f3c63b8",
+      "classification": "status-request",
+      "plainLanguage": "Pause and reason ideologically at the full-system level.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "802faee2-49e8-47a2-9a4a-f3336c7b355d",
+      "textSha256": "861796181005e90592e22389ce5a9f0f24d01f45791ec19b5d8632e6455f958b",
+      "classification": "operating-principle",
+      "plainLanguage": "Diagnose context failure at its exact mechanism, ground in the newest niche work, and invent a solution that goes beyond generic compaction or RAG.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:context-and-memory",
+          "review-topic:sota-oss-creativity"
+        ],
+        "explanation": "This demands class-level context repair."
+      },
+      "obligations": [
+        "Measure exact prompt constituents and token costs.",
+        "Prove loss-aware paging and recovery."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "523da6c6-e586-498f-8b5a-dc0a15c4e36f",
+      "textSha256": "860271c373ed8af8f9f54c0b7bf017bf9e78fda6952a1d2a809ce741a68dc4a7",
+      "classification": "scope-correction",
+      "plainLanguage": "Dynamic graphs mean runtime-created workflow-agent nodes inspired by n8n or LangGraph but intended to go substantially beyond static orchestration.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:dynamic-task-graph",
+          "review-topic:externalized-brain"
+        ],
+        "explanation": "This clarifies the concrete lineage of the dynamic graph idea."
+      },
+      "obligations": [
+        "Represent node creation, state, evidence, authority, budgets, and learning explicitly.",
+        "Do not confuse visual graph shape with adaptive cognition."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "122d1c92-bd53-4c67-9098-fc8e6326b7cf",
+      "textSha256": "11933e82171a828877848ad8b8a0c8772d3264250a76beacd95aa3db0ed436ca",
+      "classification": "continuation",
+      "plainLanguage": "Resume the parent and all interrupted subagents.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "5ebb93a9-2fa3-4fd3-be39-bc4f16464691",
+      "textSha256": "3df0ec2b038e47e6412c8ae44461eb782f477a3fb348f62bd24cac79dcf61adf",
+      "classification": "operating-principle",
+      "plainLanguage": "When an ideological capability is genuinely missing, add the necessary subsystem only after maximal SOTA and OSS grounding, then creatively exceed existing approaches.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This authorizes scoped subsystem creation, not uncontrolled architecture growth."
+      },
+      "obligations": [
+        "Prove the gap before introducing an organ.",
+        "Define its consumer and falsifier."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "c7a2057f-f8d7-4dff-9b29-31e4c46fd92e",
+      "textSha256": "e9dfb035eb53b3f9519e4277ddab3374a311684a6440969a41e674c5a147da47",
+      "classification": "operating-principle",
+      "plainLanguage": "Apply the SOTA, OSS, creativity, and beyond-SOTA rule specifically to the current blocker.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:sota-oss-creativity",
+          "review-topic:current-work-status"
+        ],
+        "explanation": "This asks for immediate class-level reasoning."
+      },
+      "obligations": [
+        "State the blocker and why the proposed mechanism is the smallest adequate one."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "3f9f5e80-2308-4423-ab14-150e1a3771e4",
+      "textSha256": "31e523ff103521f03206cc23c505bdf38e2163b9dbc245bc340ffd83417f5a7c",
+      "classification": "status-request",
+      "plainLanguage": "Report current end-to-end status and deeply reason about the active blocker under the SOTA and OSS rule.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "661c1dd7-8168-4fa4-ad0b-56cbec071d81",
+      "textSha256": "ffe257637883854648a3ca2dcf3a891b97120e3229457e2d3b8e68beb0a27156",
+      "classification": "vision-principle",
+      "plainLanguage": "Reasoning policies answer which class of action to attempt next from the current epistemic state and why; audit the full chat for any additional missing ideological machinery.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:reasoning-policies",
+          "review-topic:owner-grounding",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This connects the founder reasoning-trace idea directly to adaptive action selection."
+      },
+      "obligations": [
+        "Bind policies to state, evidence, applicability, cost, outcome, and counter-trigger."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "b60eef2a-fb66-405d-92b4-2153d8c5af00",
+      "textSha256": "9e74b96f92cca41236b8c3762c2b5e6e77d770d356e8b0ba240ae133a60b7d12",
+      "classification": "resource-direction",
+      "plainLanguage": "Use up to five strong subagents to attack all remaining work while weekly quota remains.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This requests maximum parallel effort, subject to actual platform concurrency and non-overlap constraints."
+      },
+      "obligations": [
+        "Bound each task, avoid nested fan-out, and verify every handoff."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "fabd85c9-e6e5-492d-aeba-6e28f138fbc8",
+      "textSha256": "7e6099edfffe09c10e35a43d49d4a9271fe63e498aefcdfbdae88e6d4b966478",
+      "classification": "continuation",
+      "plainLanguage": "Resume the parent and all interrupted subagents.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "2c987e56-b5f7-47fe-af4a-710182db6a8c",
+      "textSha256": "583d8b7be18a84d0c00232d898e3f65a5c9ed18a5fd9ae5aecd52d130e937322",
+      "classification": "status-request",
+      "plainLanguage": "Pause and give a zoomed-out status.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "b71d98ee-dece-453b-bfea-b659270a319a",
+      "textSha256": "137a51b89b9c7a85a95acf835f9c27d0dc35859f95277be05e55061ad0d6651e",
+      "classification": "status-request",
+      "plainLanguage": "Read the entire chat and report exact status, ideological gaps, discoveries, unexecuted work, remaining work, and compliance with the operating rules.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "12b828d9-f457-4f40-a96d-8c7cf49bb41a",
+      "textSha256": "19908795706e9377e35642060ff501b99af9176b39a6617ecc58a126e3024be8",
+      "classification": "scope-correction",
+      "plainLanguage": "Stop using the GPU because another process needs it; continue with a complete transcript-grounded zoom-out without touching GPU services.",
+      "canonicalEffect": {
+        "kind": "candidate-supersession",
+        "targetRefs": [
+          "review-topic:gpu-resource-boundary",
+          "review-topic:owner-grounding"
+        ],
+        "explanation": "This supersedes the earlier broad temporary compute authority."
+      },
+      "obligations": [
+        "Do not launch, stop, or consume the GPU until the owner grants fresh authority."
+      ],
+      "supersedesMessageIds": [
+        "694f9194-a298-4db9-a50b-f0d0ffe79695"
+      ]
+    },
+    {
+      "messageId": "a59f6382-345b-468f-b0de-914622e6780b",
+      "textSha256": "2c527bc80d134bf4dc09dbc5c97e9943dd2df64733537f3b2a2aa5348615d1e7",
+      "classification": "implementation-request",
+      "plainLanguage": "Build the most comprehensive visually browsable repository map: every component, callable, purpose, pitfall mitigated, thesis, decision, and relationship for both humans and AI agents.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:system-self-model",
+          "review-topic:human-product-journeys"
+        ],
+        "explanation": "This establishes the current atlas deliverable."
+      },
+      "obligations": [
+        "No file, symbol, document, decision, finding, or unresolved gap may disappear from the denominator.",
+        "Provide exact source and evidence for every claim."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "edf6948e-9ef3-4307-97e1-e52052783ad7",
+      "textSha256": "450a6d969114d8d5dd6d2254f560de2e3df24db46a0e6c3325f5f7516ce58c3d",
+      "classification": "vision-principle",
+      "plainLanguage": "Use 3D if it improves end-to-end orientation, but reason about whether it actually improves understanding.",
+      "canonicalEffect": {
+        "kind": "candidate-expansion",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:human-product-journeys"
+        ],
+        "explanation": "This proposes 3D as an orientation surface rather than automatic truth."
+      },
+      "obligations": [
+        "Keep exact 2D, source, list, and evidence views available.",
+        "Do not let occlusion imply false relationships."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "ee6395eb-fc48-4967-a67e-4b636a7249d2",
+      "textSha256": "dbe77f2502f2d7f594c83bb2e332cd3daf82ee6fb02b24e04960aa448e9243cf",
+      "classification": "completion-criterion",
+      "plainLanguage": "The atlas must let an inexperienced engineer gain exact end-to-end understanding without ambiguity and give another AI enough grounded context to continue work safely.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:system-self-model",
+          "review-topic:human-product-journeys"
+        ],
+        "explanation": "This defines the two principal audiences and handoff outcome."
+      },
+      "obligations": [
+        "Provide progressive explanation and machine-readable packets from the same corpus."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "b92323bd-31cd-474b-9051-323b33b30f22",
+      "textSha256": "d53b0b5f07e465685599e03f47aeae33bf59d1b94d93614883129aab86e00d17",
+      "classification": "completion-criterion",
+      "plainLanguage": "The atlas must be visually polished, clean, easy, and intuitive.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:human-product-journeys"
+        ],
+        "explanation": "This makes usability and visual quality acceptance criteria."
+      },
+      "obligations": [
+        "Support keyboard, responsive, reduced-motion, and non-WebGL paths.",
+        "Use progressive disclosure instead of overwhelming the user."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "f0c6786c-99c1-41bd-9060-bf75253913de",
+      "textSha256": "f41b322bb1d8d4ec488b91878e8eba6041d5b2702ab5db634432a381d31686bc",
+      "classification": "continuation",
+      "plainLanguage": "Resume the interrupted atlas work.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "62bc37c2-abe0-4821-9255-74f7f94a4029",
+      "textSha256": "c81051f56e43f3c2cc8802384766872c8194e2bff2b00138e5c474c72867f64f",
+      "classification": "scope-correction",
+      "plainLanguage": "Nothing in the atlas may be presented as unknown inference: every structural fact must be deterministically extracted, every semantic explanation explicitly reviewed and source-linked, and every unproved claim visibly unavailable.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:evidence-and-live-proof",
+          "review-topic:canonical-docs"
+        ],
+        "explanation": "This tightens the atlas from broad coverage to deterministic epistemic clarity."
+      },
+      "obligations": [
+        "Never relabel heuristic inference as understanding.",
+        "Represent all chat decisions, docs, findings, contradictions, and unresolved work."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "2f464d68-da23-4740-bab5-25ea71e87119",
+      "textSha256": "f1730742eaca71e5d9c6124fb04df731036b40cbf3746a71a1720c8638101fae",
+      "classification": "completion-criterion",
+      "plainLanguage": "Every aspect must be ideologically and structurally explainable through a toddler-simple progressive layer tied to the complete vision.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:human-product-journeys",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This sets the beginner comprehension standard."
+      },
+      "obligations": [
+        "Use simple explanations without replacing exact source or evidence.",
+        "Explain what it is, why it exists, what it protects, what comes next, and where proof lives."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "7398407c-079b-45f7-b475-7213236f6673",
+      "textSha256": "4b3777f2950d81d80c77fc99d7b005dbccff365efa32294e96330a54d27afe90",
+      "classification": "completion-criterion",
+      "plainLanguage": "After the first complete map is built, a fresh Sol/max agent must cold-read it and identify every unclear, ambiguous, contradictory, or missing element.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:atlas-audit",
+          "review-topic:repository-atlas",
+          "review-topic:delegation-and-compute"
+        ],
+        "explanation": "This adds an independent comprehension audit as a mandatory final gate."
+      },
+      "obligations": [
+        "Do not brief the auditor with hidden context.",
+        "Repair every substantive finding before calling the atlas complete."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "e2038946-694c-4ecb-87e9-ea57cfb56b5d",
+      "textSha256": "5811ce53627c590a37d54d3af338f4fa7a2f6d00aa49cc756b4f67dd95db2cc3",
+      "classification": "status-request",
+      "plainLanguage": "Explain the exact atlas work currently in progress.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "f8a0cd01-3477-4df7-a7d8-77aa973f8a85",
+      "textSha256": "65dbec1b0c5a03e13a29aaeb351adee1aea29650384f4ff2d7c6fa611cb0d36c",
+      "classification": "status-request",
+      "plainLanguage": "State honestly whether the complete atlas is finished.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "5f6b1091-3523-4f53-9a1d-5f99c99a6c70",
+      "textSha256": "9c0a14c409b337188014cd9a29585e9adb6a3ca373bc20a238d1bda7ed03d370",
+      "classification": "continuation",
+      "plainLanguage": "Continue every remaining atlas slice through the full acceptance boundary.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "7bf5e044-637a-4db3-be65-a3becad79904",
+      "textSha256": "cffaa27a5ab3d529eb607f6520c31d5e3ddeabce185bf835039c5cca84fd863c",
+      "classification": "resource-direction",
+      "plainLanguage": "GPU use is conditionally authorized if the atlas genuinely requires it.",
+      "canonicalEffect": {
+        "kind": "candidate-correction",
+        "targetRefs": [
+          "review-topic:gpu-resource-boundary",
+          "review-topic:repository-atlas"
+        ],
+        "explanation": "This is bounded permission, not a requirement; deterministic repository extraction and browser rendering do not currently need GPU model inference."
+      },
+      "obligations": [
+        "Do not consume GPU merely because permission exists.",
+        "Re-attest hardware and process ownership if a later atlas gate truly requires GPU."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "27dbe53f-b1e2-431d-b0fa-eba8a98defa6",
+      "textSha256": "4ea6de9ae04addbee3475f719f583a5308e8bdeaa8c98bdc01a687bd10262ffa",
+      "classification": "status-request",
+      "plainLanguage": "Report the current atlas status without mistaking component progress for completion.",
+      "canonicalEffect": {
+        "kind": "question-only",
+        "targetRefs": [
+          "review-topic:current-work-status",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This asks for an evidence-backed zoom-out and does not itself change protected intent."
+      },
+      "obligations": [
+        "Report current implementation, missing product proof, present blocker, and next shortest path in plain English."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "96c81ffd-90ac-494c-b11b-fefd791e3670",
+      "textSha256": "3d3b3ee517c26c9cbe63b5e33941319430b6f31f2d7ca69ee48c1dd153e8e9c3",
+      "classification": "continuation",
+      "plainLanguage": "Continue all remaining atlas work.",
+      "canonicalEffect": {
+        "kind": "no-canon-delta",
+        "targetRefs": [
+          "review-topic:continuation-control"
+        ],
+        "explanation": "This resumes interrupted work without authorizing a different objective."
+      },
+      "obligations": [
+        "Resume from durable state, preserve existing work, and re-establish exact subagent status before claiming continuity."
+      ],
+      "supersedesMessageIds": []
+    },
+    {
+      "messageId": "1f3c0180-3d71-4aca-8932-95192c1d33a8",
+      "textSha256": "3026bea1e9e788cf9c7c4f060e1e2d31fcfeb17656688a373243480e93d98306",
+      "classification": "completion-criterion",
+      "plainLanguage": "Do not stop until one richly browsable representation gives a beginner and another AI exact end-to-end engineering understanding with no ambiguous handoff.",
+      "canonicalEffect": {
+        "kind": "candidate-reinforcement",
+        "targetRefs": [
+          "review-topic:repository-atlas",
+          "review-topic:system-self-model",
+          "review-topic:human-product-journeys",
+          "review-topic:complete-vision"
+        ],
+        "explanation": "This restates the terminal atlas acceptance criterion and persistence requirement."
+      },
+      "obligations": [
+        "Keep every file, callable, relationship, decision, finding, pitfall, evidence limit, and next action in the denominator.",
+        "Do not call the atlas complete before the real build, visual journey, agent packet, and cold-reader audit pass."
+      ],
+      "supersedesMessageIds": []
+    }
+  ]
+}

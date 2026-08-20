@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "arc-atlas-document-policy-ledger-v1",
+  "authority": "atlas-maintainer-reviewed-document-governance-classification",
+  "principle": "Classification says how a document may be used. It does not promote operational, historical, test, or research prose into owner intent or live implementation proof.",
+  "policies": [
+    {
+      "id": "canonical-agent-skill-manuals",
+      "pathPrefix": ".agents/skills",
+      "classification": "registered-operational-skill-manual",
+      "role": "Defines bounded reasoning, workflow, safety, review, or tool procedures available to agents.",
+      "authority": "Procedural guidance only; cannot override protected intent, physical evidence, or current owner direction.",
+      "sourceRefs": [{ "path": "AGENTS.md", "line": 73, "quote": ".agents/skills/ is canonical" }]
+    },
+    {
+      "id": "claude-agent-profiles",
+      "pathPrefix": ".claude/agents",
+      "classification": "compatibility-agent-profile",
+      "role": "Defines bounded specialist profiles for the Claude compatibility surface.",
+      "authority": "Compatibility procedure; no independent intent or truth authority."
+    },
+    {
+      "id": "claude-command-projections",
+      "pathPrefix": ".claude/commands",
+      "classification": "compatibility-command-projection",
+      "role": "Provides compatibility commands that route into the current operating surface.",
+      "authority": "Compatibility entrypoint only."
+    },
+    {
+      "id": "claude-operating-rules",
+      "pathPrefix": ".claude/rules",
+      "classification": "compatibility-operating-rule",
+      "role": "Supplies scoped operational constraints for compatibility agents.",
+      "authority": "Scoped operating guidance below CODEX.md and current owner direction."
+    },
+    {
+      "id": "grok-compatibility-readme",
+      "pathPrefix": ".grok",
+      "classification": "compatibility-surface-documentation",
+      "role": "Documents the Grok compatibility surface.",
+      "authority": "Compatibility documentation only."
+    },
+    {
+      "id": "agent-operating-entrypoint",
+      "path": "AGENTS.md",
+      "classification": "registered-operating-entrypoint",
+      "role": "Directs agents to canonical grounding, probes, safety, and skills.",
+      "authority": "Operating contract below CODEX.md; not implementation evidence."
+    },
+    {
+      "id": "repository-readme",
+      "path": "README.md",
+      "classification": "repository-orientation-document",
+      "role": "Introduces the repository for general readers.",
+      "authority": "Orientation only; current status must be reverified."
+    },
+    {
+      "id": "legacy-complete-handoff",
+      "path": "COMPLETE_HANDOFF.md",
+      "classification": "historical-handoff-document",
+      "role": "Preserves an earlier continuation checkpoint.",
+      "authority": "Historical context only; current canon and live probes supersede status claims."
+    },
+    {
+      "id": "historical-teardown",
+      "path": "CONTRARE_ARC_DEEP_TEARDOWN_AND_SOTA_AUDIT_2026-07-07.md",
+      "classification": "historical-research-audit",
+      "role": "Preserves a dated architecture and SOTA teardown.",
+      "authority": "Historical research evidence for its exact date and sources only."
+    },
+    {
+      "id": "dirty-state-inventory",
+      "path": "dirty-state-inventory.md",
+      "classification": "generated-worktree-inventory",
+      "role": "Records a bounded dirty-state observation.",
+      "authority": "Snapshot evidence only; never current after source drift."
+    },
+    {
+      "id": "prompt-battery",
+      "path": "prompt-battery-comprehensive.md",
+      "classification": "test-corpus-document",
+      "role": "Defines or records prompt cases used for testing.",
+      "authority": "Test input, not product proof or owner intent."
+    },
+    {
+      "id": "application-package-readmes",
+      "pathPrefix": "apps",
+      "classification": "application-package-documentation",
+      "role": "Explains one application package, its build, or its packaging boundary.",
+      "authority": "Package-local guidance; current code and probes establish behavior."
+    },
+    {
+      "id": "benchmark-readmes",
+      "pathPrefix": "benchmarks",
+      "classification": "benchmark-protocol-documentation",
+      "role": "Explains a benchmark corpus, harness, or evaluation protocol.",
+      "authority": "Protocol guidance only; receipts and negative controls establish results."
+    },
+    {
+      "id": "research-notes",
+      "pathPrefix": "research",
+      "classification": "dated-research-analysis",
+      "role": "Records research reasoning, alternatives, and proposed designs.",
+      "authority": "Research input or hypothesis; not protected intent or implementation proof."
+    },
+    {
+      "id": "generated-doc-inventory",
+      "path": "docs/INVENTORY.json",
+      "classification": "generated-document-inventory",
+      "role": "Enumerates a documentation snapshot.",
+      "authority": "Generated snapshot only; the live governance corpus owns the current denominator."
+    },
+    {
+      "id": "canonical-document-registry-control",
+      "path": "docs/canon/CANONICAL-DOCS.json",
+      "classification": "canon-control-document",
+      "role": "Lists which documents are canonical, which evidence collections are registered, and which older documents are demoted.",
+      "authority": "Canon registry metadata; it classifies documents but does not prove live implementation behavior."
+    },
+    {
+      "id": "historical-docs-handoff",
+      "path": "docs/HANDOFF.md",
+      "classification": "registered-demoted-or-historical-document",
+      "role": "Preserves an older continuation handoff whose status was replaced by the registered 2026-08-11 launch handoff.",
+      "authority": "Historical context only; the registered replacement and current probes govern present status."
+    },
+    {
+      "id": "historical-generated-system-map",
+      "path": "docs/SYSTEM-MAP.md",
+      "classification": "registered-demoted-or-historical-document",
+      "role": "Preserves a generated historical system map while the live reconstruction self-model supplies current structural observations.",
+      "authority": "Historical generated snapshot only; never current implementation proof after source drift."
+    },
+    {
+      "id": "cot-prompt-templates",
+      "path": "scripts/cot-prompt-templates.md",
+      "classification": "implementation-adjacent-prompt-document",
+      "role": "Documents prompt templates used or studied by implementation scripts.",
+      "authority": "Implementation-adjacent guidance; live callers and receipts establish use."
+    },
+    {
+      "id": "domain-pack-manuals",
+      "pathPrefix": "scripts/domain-packs",
+      "classification": "domain-pack-procedure-or-reference",
+      "role": "Defines domain-specific bounded reasoning procedures, cases, and glossaries.",
+      "authority": "Domain guidance only; evaluators and physical evidence establish correctness."
+    },
+    {
+      "id": "controlled-context-v1-fixtures",
+      "pathPrefix": "scripts/tests/fixtures/controlled-context-v1",
+      "classification": "test-fixture-text",
+      "role": "Provides controlled correct, irrelevant, wrong, or goal text for causal context tests.",
+      "authority": "Test fixture only; cannot be used as product or semantic truth outside the fixture."
+    },
+    {
+      "id": "controlled-context-v2-fixtures",
+      "pathPrefix": "scripts/tests/fixtures/controlled-context-v2",
+      "classification": "test-fixture-text",
+      "role": "Provides controlled correct, irrelevant, wrong, or goal text for causal context tests.",
+      "authority": "Test fixture only; cannot be used as product or semantic truth outside the fixture."
+    },
+    {
+      "id": "controlled-context-v3-fixtures",
+      "pathPrefix": "scripts/tests/fixtures/controlled-context-v3",
+      "classification": "test-fixture-text",
+      "role": "Provides controlled correct, irrelevant, wrong, or goal text for causal context tests.",
+      "authority": "Test fixture only; cannot be used as product or semantic truth outside the fixture."
+    }
+  ]
+}

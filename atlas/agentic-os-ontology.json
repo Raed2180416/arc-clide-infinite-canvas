@@ -1,0 +1,442 @@
+{
+  "schemaVersion": "arc-atlas-ontology-source-v1",
+  "title": "ARC / CLIDE Engineering Organism",
+  "northStar": "Turn a user's evolving intent into a verified, safely applied, recoverable software outcome while using a weak local model only as a bounded proposal engine inside an evidence-conditioned adaptive system.",
+  "constitutionalKernels": [
+    {
+      "id": "normative",
+      "name": "Normative kernel",
+      "summary": "Preserves protected intent, user clarifications, obligations, and the no-loss completion rule.",
+      "sourceRefs": [{ "path": "CODEX.md", "line": 52 }]
+    },
+    {
+      "id": "temporal-effect",
+      "name": "Temporal and effect kernel",
+      "summary": "Owns durable event order, idempotency, recovery, action permission, and effect settlement.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 377 }]
+    },
+    {
+      "id": "epistemic",
+      "name": "Epistemic kernel",
+      "summary": "Separates observations, claims, uncertainty, evidence, refutation, and truth authority.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 140 }]
+    },
+    {
+      "id": "deliberation",
+      "name": "Deliberation kernel",
+      "summary": "Compiles the current epistemic state into bounded next-action choices without letting the model author mechanics or authority.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 160 }]
+    },
+    {
+      "id": "verification",
+      "name": "Verification kernel",
+      "summary": "Demands fresh independent evidence before any success, effect, or completion claim.",
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 325 }]
+    },
+    {
+      "id": "product",
+      "name": "Product kernel",
+      "summary": "Projects governed internals into the familiar end-to-end CLIDE journey and refuses component theater as product completion.",
+      "sourceRefs": [{ "path": "CODEX.md", "line": 85 }]
+    }
+  ],
+  "graphFacets": [
+    { "id": "intent", "name": "Intent graph", "summary": "Goals, constraints, obligations, clarifications, and protected outcomes.", "sourceRefs": [{ "path": "CODEX.md", "line": 10 }] },
+    { "id": "epistemic", "name": "Epistemic graph", "summary": "Facts, hypotheses, unknowns, contradictions, evidence, and confidence.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 140 }] },
+    { "id": "control", "name": "Control graph", "summary": "Dynamic tasks, branches, executable options, dependencies, and liveness.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 218 }] },
+    { "id": "causal", "name": "Causal graph", "summary": "Interventions, counterfactual twins, outcomes, credit, and policy promotion.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }] },
+    { "id": "context", "name": "Context graph", "summary": "Pages, facets, provenance, resident sets, omissions, checkpoints, and exposure history.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 93 }] },
+    { "id": "authority", "name": "Authority graph", "summary": "Who may propose, select, write, evaluate, promote, or complete.", "sourceRefs": [{ "path": "CODEX.md", "line": 52 }] },
+    { "id": "effect", "name": "Effect graph", "summary": "Intended actions, permissions, reservations, observations, settlement, and rollback.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 325 }] },
+    { "id": "artifact", "name": "Artifact graph", "summary": "Content-addressed files, candidates, receipts, manifests, commits, and lineage.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 103 }] },
+    { "id": "verification", "name": "Verification graph", "summary": "Obligations, evaluators, probes, negative controls, falsifiers, and verdicts.", "sourceRefs": [{ "path": "docs/canon/GRAND-CHALLENGE-PROTOCOL.md", "line": 1 }] },
+    { "id": "resource", "name": "Resource graph", "summary": "Tokens, time, calls, CPU, GPU, memory, latency, and opportunity cost.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 243 }] },
+    { "id": "competence", "name": "Competence graph", "summary": "Skills, policies, specialists, domain packs, calibrated limits, and transfer evidence.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 244 }] },
+    { "id": "memory", "name": "Memory graph", "summary": "Episodes, durable observations, governed lessons, invalidation, and future-epoch adoption.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 428 }] },
+    { "id": "human-product", "name": "Human and product graph", "summary": "Questions, decisions, review, user-visible progress, outcomes, and trust.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "representation", "name": "Representation bridge", "summary": "Typed projections connecting the graph organism, local model, tools, TUI, and human interface.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 191 }] }
+  ],
+  "membranes": [
+    { "id": "authority-security", "name": "Authority and security membrane", "summary": "Capabilities, permissions, taint, privacy, sandbox, and role identity bound every consequential transition.", "sourceRefs": [{ "path": "CODEX.md", "line": 52 }] },
+    { "id": "epoch", "name": "Epoch membrane", "summary": "Current work may learn, but learned policy can affect only a future admitted epoch.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }] },
+    { "id": "resource", "name": "Resource membrane", "summary": "Every action competes under explicit token, latency, call, compute, and risk budgets.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 330 }] },
+    { "id": "evaluation-information", "name": "Evaluation and information-flow membrane", "summary": "Private evaluators and held-out answers cannot leak into generation; causal promotion requires independent evidence.", "sourceRefs": [{ "path": "docs/canon/GRAND-CHALLENGE-PROTOCOL.md", "line": 1 }] }
+  ],
+  "proofLadder": ["exists", "reachable", "default-live", "observed", "causal", "product-proven"],
+  "lenses": [
+    { "id": "north-star", "name": "North star", "summary": "The complete user outcome and shortest missing path.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "journey", "name": "Journey", "summary": "A guided beginner-readable path from request through completion and recovery.", "sourceRefs": [{ "path": "CODEX.md", "line": 160 }] },
+    { "id": "organism", "name": "Organism", "summary": "The whole system as interacting organs and membranes.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 428 }] },
+    { "id": "code", "name": "Code", "summary": "Exact files, symbols, calls, usages, source spans, tests, and change impact.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 167 }] },
+    { "id": "authority", "name": "Authority", "summary": "Proposal, selection, write, truth, effect, promotion, and completion ceilings.", "sourceRefs": [{ "path": "CODEX.md", "line": 52 }] },
+    { "id": "proof", "name": "Proof", "summary": "Evidence level, negative controls, receipts, blockers, falsifiers, and contradictions.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 325 }] },
+    { "id": "context", "name": "Context", "summary": "What the model saw, what remained durable, what was omitted, and why.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 93 }] },
+    { "id": "learning", "name": "Learning", "summary": "Causal trials, policy candidates, transfer, adoption, rollback, and future epochs.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }] },
+    { "id": "agent-handoff", "name": "Agent handoff", "summary": "A bounded source-addressed packet containing exactly what another agent needs next.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 91 }] }
+  ],
+  "organs": [
+    {
+      "id": "protected-intent",
+      "name": "Protected intent and scope",
+      "summary": "Maintains the original ask, clarifications, TaskSpec, GoalCapsule, obligations, and normative authority without allowing derived artifacts to rewrite them.",
+      "thesis": "A long-horizon agent stays aligned only when evolving intent is a durable first-class object rather than prompt residue.",
+      "match": { "include": ["CODEX.md", "docs/canon/**", "scripts/*canon*", "scripts/*intent*", "scripts/*scope*", "scripts/task-spec*", "scripts/goal-*", "scripts/*clarification*", "scripts/*obligation*"] },
+      "sourceRefs": [{ "path": "CODEX.md", "line": 52 }],
+      "mitigates": ["intent-drift", "scope-collapse", "clarification-overwrite", "authority-widening"]
+    },
+    {
+      "id": "product-experience",
+      "name": "CLIDE product experience",
+      "summary": "Owns daemon, chat, TUI, public projections, operator questions, and the familiar user journey.",
+      "thesis": "The destination must feel as simple as Codex or Claude Code even when the machinery underneath is radically more formal.",
+      "match": { "include": ["apps/**", "scripts/arc-daemon*", "scripts/chat-*", "scripts/clide-*", "scripts/arc-operator*", "scripts/product-*", "scripts/public-*", "scripts/*turn-runner*"] },
+      "sourceRefs": [{ "path": "CODEX.md", "line": 85 }],
+      "mitigates": ["component-theater", "hidden-bureaucracy", "false-progress"]
+    },
+    {
+      "id": "tests-benchmarks",
+      "name": "Tests, benchmarks, and wind tunnels",
+      "summary": "Holds unit, integration, public-path, adversarial, causal, grand-challenge, and calibration evidence without promoting it beyond its proof class.",
+      "thesis": "A test is a falsifier or mechanism proof, not automatically a live product result.",
+      "match": { "include": ["scripts/tests/**", "scripts/verify/**", "benchmarks/**", "research/**", "dual-benchmark-reports/**", "scripts/*benchmark*", "scripts/*assay*", "scripts/*experiment*"] },
+      "sourceRefs": [{ "path": "docs/canon/GRAND-CHALLENGE-PROTOCOL.md", "line": 1 }],
+      "mitigates": ["component-theater", "fixture-laundering", "correlation-as-causation", "private-evaluator-leakage"]
+    },
+    {
+      "id": "event-runtime",
+      "name": "EventKernel and TaskRuntime spine",
+      "summary": "Owns append-only task history, schemas, reducers, authority events, version activation, replay, idempotency, and restart-safe task state.",
+      "thesis": "Durable execution is part of epistemology: after a crash the system must know what happened before deciding what to do next.",
+      "match": { "include": ["scripts/event-kernel*", "scripts/task-runtime*", "scripts/contracts*", "scripts/task-delta*", "scripts/*event-spine*", "scripts/*journal*", "scripts/*replay*", "scripts/*idempot*"] },
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 377 }],
+      "mitigates": ["duplicate-action", "in-doubt-effect", "restart-amnesia", "stale-action"]
+    },
+    {
+      "id": "dynamic-graph",
+      "name": "Dynamic graph executive",
+      "summary": "Creates and evolves task, question, evidence, branch, dependency, and executable-option nodes as the problem changes.",
+      "thesis": "This is a runtime-owned workflow organism inspired by graph workflow systems but extending them with evidence, intent, authority, recovery, and causal learning—not graph-shaped chain of thought.",
+      "match": { "include": ["scripts/*graph-control*", "scripts/*plan-graph*", "scripts/*dynamic-branch*", "scripts/*epistemic*", "scripts/*frontier*", "scripts/*navigation*", "scripts/proof-carrying-navigation*", "scripts/*relation-target*"] },
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 218 }],
+      "mitigates": ["fixed-pipeline", "tunneling", "circular-reasoning", "premature-stop", "decorative-plan"]
+    },
+    {
+      "id": "context-memory",
+      "name": "Proof-carrying context and memory",
+      "summary": "Builds source universes, context facets, page tables, resident sets, omission proofs, episode journals, checkpoints, and governed memory.",
+      "thesis": "The local model receives a minimal action-sufficient projection while the complete evidence universe remains durable, addressable, replayable, and non-authoritative until verified.",
+      "match": { "include": ["scripts/*context*", "scripts/*memory*", "scripts/*source-universe*", "scripts/*repo-brain*", "scripts/*proof-carrying*", "scripts/*cognition*", "scripts/*facet*", "scripts/*page*"] },
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 93 }],
+      "mitigates": ["context-overload", "context-amnesia", "lossy-compaction", "retrieval-miss", "retrieval-poisoning"]
+    },
+    {
+      "id": "local-model-runtime",
+      "name": "Runtime-attested local model",
+      "summary": "Binds exact model, runtime, launch, tokenizer, prompts, schemas, token budgets, invocation delivery, receipts, and cold observation adoption.",
+      "thesis": "The weak model is a physically measured proposer, never an invisible oracle and never the author of runtime bookkeeping or authority.",
+      "match": { "include": ["scripts/runtime-attested*", "scripts/*local-model*", "scripts/*llama*", "scripts/*model-runtime*", "scripts/*token*", "scripts/*completion*", "scripts/*product-brain-runtime*"] },
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 23 }],
+      "mitigates": ["model-identity-drift", "schema-failure", "token-truncation", "retry-confounding", "model-authored-mechanics"]
+    },
+    {
+      "id": "agents-skills",
+      "name": "Agents, skills, and specialists",
+      "summary": "Defines bounded agent roles, domain approaches, specialist nomination, skill policies, delegation, and handoff conventions.",
+      "thesis": "A skill is a closed-loop option with applicability, policy, evidence, and outcomes—not remembered prose; a specialist is earned by outcomes, not persona.",
+      "match": { "include": [".agents/**", ".claude/**", "scripts/*agent*", "scripts/*skill*", "scripts/*specialist*", "scripts/*delegate*", "scripts/*orchestrat*", "scripts/*crew*"] },
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 244 }],
+      "mitigates": ["weak-strategy-priors", "persona-expertise", "homogeneous-agents", "duplicate-agents", "skill-as-prompt"]
+    },
+    {
+      "id": "tools-research",
+      "name": "Tools, MCP, and grounded research",
+      "summary": "Brokers code intelligence, search, external sources, tools, protocol permissions, and research evidence into typed non-authoritative observations.",
+      "thesis": "Tools expand perception and action only through phase-aware, evidence-bound interfaces that cannot silently become project authority.",
+      "match": { "include": ["scripts/*mcp*", "scripts/*tool*", "scripts/*research*", "scripts/*serena*", "scripts/*lsp*", "scripts/*scip*", "scripts/*codebase*", ".mcp.json", "opencode.jsonc"] },
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 155 }],
+      "mitigates": ["tool-output-trust", "prompt-injection", "stale-research", "authority-widening"]
+    },
+    {
+      "id": "candidate-authoring",
+      "name": "Candidate selection and authoring",
+      "summary": "Selects exact targets, compiles author context, produces sealed patches, binds attempts, and creates detached candidate transactions.",
+      "thesis": "Generation is permitted only after intent, evidence, source universe, target capability, role policy, and attempt authority agree exactly.",
+      "match": { "include": ["scripts/*candidate*", "scripts/*patch-author*", "scripts/*target-selector*", "scripts/*target-sealed*", "scripts/*evaluator-profile*", "scripts/*transaction*"] },
+      "sourceRefs": [{ "path": "CODEX.md", "line": 118 }],
+      "mitigates": ["wrong-target", "unbounded-edit", "duplicate-attempt", "stale-source", "detached-called-applied"]
+    },
+    {
+      "id": "effects-recovery",
+      "name": "Effects, promotion, and recovery",
+      "summary": "Controls detached workspaces, filesystem and Git effects, reservations, settlement, verification, rollback, and any future primary-checkout promotion.",
+      "thesis": "A candidate, a verified detached artifact, an applied effect, and a completed user task are distinct states with distinct authority.",
+      "match": { "include": ["scripts/*effect*", "scripts/*workspace*", "scripts/*promotion*", "scripts/*apply*", "scripts/*rollback*", "scripts/*recover*", "scripts/*git-*", "scripts/*commit*"] },
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 325 }],
+      "mitigates": ["detached-called-applied", "in-doubt-effect", "unsafe-effect", "false-completion"]
+    },
+    {
+      "id": "verification-evaluation",
+      "name": "Verification and evaluation",
+      "summary": "Compiles obligations, evaluator plans, critics, oracles, evidence packets, negative controls, and fresh verdicts.",
+      "thesis": "The generator is never the sole judge; evidence and completion authority stay independent of model fluency and self-confidence.",
+      "match": { "include": ["scripts/*verif*", "scripts/*evaluat*", "scripts/*critic*", "scripts/*oracle*", "scripts/*proof*", "scripts/*receipt*", "scripts/*evidence*", "scripts/*falsif*"] },
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 325 }],
+      "mitigates": ["hallucination", "false-success", "self-certification", "correlated-self-review", "reward-gaming"]
+    },
+    {
+      "id": "causal-learning",
+      "name": "Causal learning and future-epoch policy",
+      "summary": "Runs matched interventions, attributes outcomes, updates competence estimates, proposes policy deltas, and promotes only transferable future-epoch improvements.",
+      "thesis": "Successful-looking histories do not teach; only controlled interventions with negative controls and held-out transfer can earn policy authority.",
+      "match": { "include": ["scripts/*causal*", "scripts/*adaptive*", "scripts/*plastic*", "scripts/*policy*", "scripts/*value-of-information*", "scripts/*voi*", "scripts/*reasoning-trace*", "scripts/*domain-pack*", "scripts/*competence*"] },
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }],
+      "mitigates": ["correlation-as-causation", "same-episode-self-promotion", "negative-transfer", "policy-drift", "skill-as-prompt"]
+    },
+    {
+      "id": "resource-security",
+      "name": "Resources, budgets, and security",
+      "summary": "Accounts for tokens, calls, latency, compute, CPU/GPU memory, permissions, taint, sandbox, privacy, and risk.",
+      "thesis": "System intelligence is useful outcome quality under real local hardware, time, information, and safety constraints.",
+      "match": { "include": ["scripts/*budget*", "scripts/*resource*", "scripts/*permission*", "scripts/*sandbox*", "scripts/*taint*", "scripts/*privacy*", "scripts/*security*", "scripts/*gpu*", "scripts/*hardware*"] },
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 330 }],
+      "mitigates": ["resource-monotonicity", "context-overload", "unsafe-effect", "private-evaluator-leakage"]
+    },
+    {
+      "id": "observability-evidence",
+      "name": "Observability and evidence",
+      "summary": "Projects traces, health, receipts, current state, proof ladders, diagnostics, and operator-visible blockers without becoming truth authority.",
+      "thesis": "Every claim must expose where it came from, how fresh it is, what it proves, and what it cannot prove.",
+      "match": { "include": ["observability/**", "scripts/*observ*", "scripts/*trace*", "scripts/*health*", "scripts/truth*", "scripts/*status*", "scripts/*diagnostic*", "scripts/*telemetry*"] },
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 8 }],
+      "mitigates": ["false-progress", "stale-evidence", "confidence-as-evidence", "docs-drift"]
+    },
+    {
+      "id": "documentation-knowledge",
+      "name": "Documentation and knowledge",
+      "summary": "Holds architecture, decisions, findings, research, handoffs, guides, and historical evidence with explicit authority and freshness.",
+      "thesis": "Documents orient and preserve decisions, but dated prose never outranks current source and measured product evidence.",
+      "match": { "include": ["docs/**", "README.md", "COMPLETE_HANDOFF.md", "CONTRARE_ARC_DEEP_TEARDOWN_AND_SOTA_AUDIT_2026-07-07.md", "prompt-battery-comprehensive.md", "*.pdf"] },
+      "sourceRefs": [{ "path": "CODEX.md", "line": 196 }],
+      "mitigates": ["docs-drift", "rediscovery", "context-amnesia", "component-theater"]
+    },
+    {
+      "id": "repository-infrastructure",
+      "name": "Repository infrastructure",
+      "summary": "Builds, configures, packages, launches, governs dependencies, installs hooks, defines environments, and keeps the worktree recoverable.",
+      "thesis": "The organism must remain reproducible and safe to change; generated state and uncertain cleanup cannot corrupt source authority.",
+      "match": { "include": ["config/**", "configs/**", "environments/**", "grammars/**", ".github/**", ".githooks/**", ".codex/**", ".serena/**", ".grok/**", "package.json", "package-lock.json", "Makefile", "AGENTS.md", "CLAUDE.md", "AGENTIC_OS.sh", "skills-lock.json", ".gitignore", ".cbmignore", "docker-compose.observability.yml", "knip.json", "nightwatch-config.json"] },
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 239 }],
+      "mitigates": ["dirty-work-loss", "dependency-drift", "hardware-collapse", "unreproducible-state"]
+    },
+    {
+      "id": "repository-surface",
+      "name": "Repository surface and unresolved substrate",
+      "fallback": true,
+      "summary": "Keeps every visible file browseable even when no more specific semantic organ has yet been source-addressed.",
+      "thesis": "Nothing disappears from the map: incomplete semantic classification is shown as an explicit gap, never silently dropped or guessed.",
+      "match": { "include": ["**"] },
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 103 }],
+      "mitigates": ["unknown-collapse", "beautiful-lie", "atlas-omission"]
+    }
+  ],
+  "pitfalls": [
+    { "id": "hallucination", "name": "Hallucination", "failure": "Plausible model text is mistaken for a fact about code, tools, users, or the world.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 140 }] },
+    { "id": "false-success", "name": "False success", "failure": "A proposal, test, fixture, receipt, or detached artifact is reported as a completed user outcome.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "confidence-as-evidence", "name": "Confidence as evidence", "failure": "Model certainty substitutes for an observation or independent verifier.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 140 }] },
+    { "id": "self-certification", "name": "Self-certification", "failure": "The same generator defines the interpretation and judges its own answer.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 140 }] },
+    { "id": "correlated-self-review", "name": "Correlated self-review", "failure": "A nominal critic shares the same blind spots, prompt ancestry, or model identity as the proposal.", "sourceRefs": [{ "path": "docs/canon/GRAND-CHALLENGE-PROTOCOL.md", "line": 1 }] },
+    { "id": "unknown-collapse", "name": "Unknown collapse", "failure": "Unmeasured or contradictory states are flattened into a confident binary decision.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 63 }] },
+    { "id": "reward-gaming", "name": "Reward gaming", "failure": "The system optimizes visible evaluator cues instead of the underlying user outcome.", "sourceRefs": [{ "path": "docs/canon/GRAND-CHALLENGE-PROTOCOL.md", "line": 1 }] },
+    { "id": "stale-evidence", "name": "Stale evidence", "failure": "A once-valid source, receipt, graph, or result is reused after its bound state changed.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "intent-drift", "name": "Long-horizon intent drift", "failure": "The agent gradually optimizes a convenient local proxy instead of the original and clarified ask.", "sourceRefs": [{ "path": "CODEX.md", "line": 10 }] },
+    { "id": "scope-collapse", "name": "Scope collapse", "failure": "Multiple objectives or consequential forks are silently reduced to one interpretation.", "sourceRefs": [{ "path": "CODEX.md", "line": 118 }] },
+    { "id": "clarification-overwrite", "name": "Clarification overwrite", "failure": "A later user message erases rather than refines the protected intent history.", "sourceRefs": [{ "path": "CODEX.md", "line": 52 }] },
+    { "id": "authority-widening", "name": "Authority widening", "failure": "A data projection, role, tool, or model response gains permission it never possessed.", "sourceRefs": [{ "path": "CODEX.md", "line": 52 }] },
+    { "id": "prompt-injection", "name": "Prompt and quoted-instruction injection", "failure": "Untrusted content is interpreted as an instruction or authority transfer.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 155 }] },
+    { "id": "context-overload", "name": "Context overload", "failure": "The complete history is serialized monotonically until useful reasoning no longer fits.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 93 }] },
+    { "id": "context-amnesia", "name": "Context amnesia", "failure": "Critical earlier intent, evidence, or decisions vanish from the active view without a loss certificate.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 156 }] },
+    { "id": "lossy-compaction", "name": "Lossy compaction", "failure": "A summary becomes the sole authoritative copy and silently drops obligations or provenance.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 173 }] },
+    { "id": "retrieval-miss", "name": "Retrieval miss", "failure": "Relevant evidence exists but the model never sees or requests it.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 141 }] },
+    { "id": "retrieval-poisoning", "name": "Retrieval poisoning", "failure": "Irrelevant or adversarial context is surfaced without provenance and dominates action selection.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 156 }] },
+    { "id": "schema-failure", "name": "Schema and representation failure", "failure": "The weak model cannot reliably emit a large mechanically redundant contract even when it understands the choice.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 93 }] },
+    { "id": "token-truncation", "name": "Token truncation", "failure": "Generation stops inside a structurally or semantically incomplete response.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 173 }] },
+    { "id": "circular-reasoning", "name": "Circular reasoning", "failure": "The model revisits the same unsupported path without new evidence or state change.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 121 }] },
+    { "id": "tunneling", "name": "Tunneling", "failure": "The agent overcommits to one hypothesis, file, or implementation path and ignores competing explanations.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 160 }] },
+    { "id": "premature-stop", "name": "Premature stopping", "failure": "The model terminates while safe evidence-gathering actions and budget remain.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 188 }] },
+    { "id": "decorative-plan", "name": "Decorative planning", "failure": "A plan describes work but is not connected to executable options, evidence, or runtime state.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 218 }] },
+    { "id": "fixed-pipeline", "name": "Fixed pipeline rigidity", "failure": "A static workflow cannot create, revise, backtrack, or reprioritize nodes as evidence changes.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 218 }] },
+    { "id": "weak-strategy-priors", "name": "Weak strategy priors", "failure": "A small model does not know which problem-solving approach is appropriate for the current epistemic state.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 107 }] },
+    { "id": "skill-as-prompt", "name": "Skill as prompt", "failure": "Remembered advice is called a skill despite lacking applicability, actions, feedback, and outcome evidence.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 244 }] },
+    { "id": "persona-expertise", "name": "Persona as expertise", "failure": "A role label is treated as competence without outcome-conditioned evidence.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 289 }] },
+    { "id": "homogeneous-agents", "name": "Homogeneous agents", "failure": "Parallel agents repeat the same reasoning because they share roles, context, priors, and evidence.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 243 }] },
+    { "id": "duplicate-agents", "name": "Duplicate and conflicting agents", "failure": "Uncoordinated branches redo work, overwrite shared state, or produce incompatible truths.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 212 }] },
+    { "id": "wrong-target", "name": "Wrong target", "failure": "The model edits a plausible file that is not authorized by the exact task and source universe.", "sourceRefs": [{ "path": "CODEX.md", "line": 118 }] },
+    { "id": "unbounded-edit", "name": "Unbounded edit", "failure": "A patch escapes its admitted target, operation, budget, or permission envelope.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 325 }] },
+    { "id": "duplicate-attempt", "name": "Duplicate attempt", "failure": "A crash or replay causes the same logical action to execute twice or a stale attempt to be reused.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 377 }] },
+    { "id": "stale-action", "name": "Stale action", "failure": "A choice compiled against an earlier graph, budget, source, or policy is executed in a changed state.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 160 }] },
+    { "id": "model-authored-mechanics", "name": "Model-authored mechanics", "failure": "The weak model invents IDs, residency, receipts, transitions, or authority instead of selecting a bounded semantic option.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 131 }] },
+    { "id": "model-identity-drift", "name": "Model and runtime identity drift", "failure": "Evidence from one model, runtime, tokenizer, or launch is attributed to another.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 23 }] },
+    { "id": "retry-confounding", "name": "Retry confounding", "failure": "A second generation is treated as recovery evidence even though it changes the intervention and model randomness.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }] },
+    { "id": "tool-output-trust", "name": "Tool output trusted as truth", "failure": "A tool result is accepted without source identity, freshness, schema, or independent verification.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 155 }] },
+    { "id": "stale-research", "name": "Stale research", "failure": "Outdated library, market, standard, or architecture knowledge drives a current decision.", "sourceRefs": [{ "path": "CODEX.md", "line": 145 }] },
+    { "id": "detached-called-applied", "name": "Detached candidate called applied", "failure": "A review-ready detached commit is reported as a primary-checkout effect.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "unsafe-effect", "name": "Unsafe effect", "failure": "A write, command, deletion, or external action occurs without exact current permission and target resolution.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 262 }] },
+    { "id": "in-doubt-effect", "name": "In-doubt effect", "failure": "A process crashes after an external action starts but before a durable observation proves the outcome.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 377 }] },
+    { "id": "false-completion", "name": "False completion", "failure": "TaskCompleted is emitted without a fresh verified applied outcome satisfying the protected intent.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "correlation-as-causation", "name": "Correlation called causal", "failure": "A better-looking outcome is credited to a policy without matched interventions and negative controls.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }] },
+    { "id": "same-episode-self-promotion", "name": "Same-episode self-promotion", "failure": "A strategy updates its own authority within the episode whose evidence it generated.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }] },
+    { "id": "negative-transfer", "name": "Negative transfer", "failure": "A learned rule improves one task family while degrading another.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 687 }] },
+    { "id": "policy-drift", "name": "Policy drift", "failure": "Accumulated adaptation moves the system away from protected outcomes or calibrated constraints.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 687 }] },
+    { "id": "memory-pollution", "name": "Memory pollution", "failure": "Unverified episode content becomes reusable governed knowledge.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 244 }] },
+    { "id": "resource-monotonicity", "name": "Resource monotonicity", "failure": "The system assumes more tokens, agents, tools, or compute always improve outcomes.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 330 }] },
+    { "id": "hardware-collapse", "name": "Hardware collapse", "failure": "The architecture works only with unavailable GPU, memory, latency, or parallelism.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 243 }] },
+    { "id": "private-evaluator-leakage", "name": "Private evaluator leakage", "failure": "Hidden answers, oracle source, mutants, or rubric cues enter model-visible generation context.", "sourceRefs": [{ "path": "docs/canon/GRAND-CHALLENGE-PROTOCOL.md", "line": 1 }] },
+    { "id": "fixture-laundering", "name": "Fixture laundering", "failure": "A deterministic supplied answer is relabeled as measured model or product capability.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "component-theater", "name": "Component theater", "failure": "Many sophisticated organs exist but the ordinary user path cannot traverse them end to end.", "sourceRefs": [{ "path": "CODEX.md", "line": 85 }] },
+    { "id": "false-progress", "name": "False progress", "failure": "Counts, plans, tests, and documents obscure the shortest missing path to a user-visible outcome.", "sourceRefs": [{ "path": "CODEX.md", "line": 160 }] },
+    { "id": "hidden-bureaucracy", "name": "Constitutional bureaucracy", "failure": "Externalized reasoning creates latency and friction greater than the decision quality it adds.", "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 330 }] },
+    { "id": "dirty-work-loss", "name": "Dirty work loss", "failure": "Uncommitted or sibling work is reset, cleaned, overwritten, or misclassified.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 239 }] },
+    { "id": "dependency-drift", "name": "Dependency drift", "failure": "Generated artifacts or runtime behavior change without a pinned toolchain and cohort.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 103 }] },
+    { "id": "unreproducible-state", "name": "Unreproducible state", "failure": "A claim cannot be rebuilt from content-addressed source, configuration, and durable events.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 103 }] },
+    { "id": "docs-drift", "name": "Documentation drift", "failure": "Dated prose is read as current implementation truth after code and default paths changed.", "sourceRefs": [{ "path": "CODEX.md", "line": 196 }] },
+    { "id": "rediscovery", "name": "Repeated rediscovery", "failure": "Agents repeatedly relearn decisions, boundaries, and failures because they are not source-addressed and queryable.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 91 }] },
+    { "id": "beautiful-lie", "name": "Beautiful visualization lie", "failure": "A polished graph hides stale, missing, inferred, or disputed data behind one authoritative-looking surface.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 86 }] },
+    { "id": "atlas-omission", "name": "Atlas omission", "failure": "Files, symbols, tests, events, or uncertainty disappear because a parser or visualization cannot represent them.", "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 103 }] }
+  ],
+  "journeys": [
+    {
+      "id": "ordinary-user-task",
+      "name": "Ordinary user task to verified completion",
+      "summary": "The complete familiar product journey from raw request through clarification, reasoning, candidate work, effect, verification, completion, and cold recovery.",
+      "sourceRefs": [{ "path": "CODEX.md", "line": 85 }],
+      "steps": [
+        { "id": "capture", "name": "Capture exact request", "organIds": ["product-experience", "protected-intent"] },
+        { "id": "clarify", "name": "Resolve consequential ambiguity", "organIds": ["protected-intent", "product-experience"] },
+        { "id": "freeze", "name": "Freeze TaskSpec and GoalCapsule", "organIds": ["protected-intent", "event-runtime"] },
+        { "id": "navigate", "name": "Gather evidence and choose a reasoning approach", "organIds": ["dynamic-graph", "context-memory", "tools-research"] },
+        { "id": "authorize", "name": "Authorize exact candidate attempt", "organIds": ["candidate-authoring", "event-runtime"] },
+        { "id": "author", "name": "Produce sealed detached candidate", "organIds": ["candidate-authoring", "local-model-runtime"] },
+        { "id": "evaluate", "name": "Evaluate against complete obligations", "organIds": ["verification-evaluation", "tests-benchmarks"] },
+        { "id": "apply", "name": "Authorize and settle effect", "organIds": ["effects-recovery", "event-runtime"] },
+        { "id": "verify", "name": "Freshly verify applied outcome", "organIds": ["verification-evaluation"] },
+        { "id": "complete", "name": "Project truthful completion", "organIds": ["product-experience", "event-runtime"] },
+        { "id": "recover", "name": "Cold-open without duplicate work", "organIds": ["event-runtime", "effects-recovery"] }
+      ]
+    },
+    {
+      "id": "clarification-evolution",
+      "name": "Intent evolution through clarification",
+      "summary": "Shows how future user messages refine the protected goal without erasing earlier objectives, evidence, or decisions.",
+      "sourceRefs": [{ "path": "CODEX.md", "line": 52 }],
+      "steps": [
+        { "id": "raw", "name": "Preserve raw objective bytes", "organIds": ["protected-intent"] },
+        { "id": "forks", "name": "Expose consequential forks neutrally", "organIds": ["protected-intent", "product-experience"] },
+        { "id": "commit", "name": "Record user-authoritative choice", "organIds": ["protected-intent", "event-runtime"] },
+        { "id": "successor", "name": "Activate successor intent pair", "organIds": ["protected-intent", "event-runtime"] },
+        { "id": "invalidate", "name": "Invalidate stale downstream choices", "organIds": ["dynamic-graph", "candidate-authoring"] }
+      ]
+    },
+    {
+      "id": "dynamic-reasoning",
+      "name": "Dynamic reasoning and workflow evolution",
+      "summary": "The n8n/LangGraph-inspired but evidence-, authority-, context-, and recovery-aware runtime where nodes spawn, branch, backtrack, delegate, verify, and close as the epistemic state changes.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/PROOF-CARRYING-EPISTEMIC-NAVIGATION-AND-ABSTENTION-2026-08-14.md", "line": 218 }],
+      "steps": [
+        { "id": "state", "name": "Compile current epistemic state", "organIds": ["dynamic-graph", "context-memory"] },
+        { "id": "options", "name": "Derive legal executable action classes", "organIds": ["dynamic-graph"] },
+        { "id": "select", "name": "Let model choose semantic option", "organIds": ["local-model-runtime", "dynamic-graph"] },
+        { "id": "execute", "name": "Runtime executes mechanics and records observation", "organIds": ["event-runtime", "tools-research"] },
+        { "id": "revise", "name": "Revise beliefs, dependencies, and frontier", "organIds": ["dynamic-graph", "context-memory"] },
+        { "id": "fork", "name": "Spawn independent branch or specialist", "organIds": ["agents-skills", "dynamic-graph"] },
+        { "id": "close", "name": "Close obligation with evidence or certificate", "organIds": ["verification-evaluation", "dynamic-graph"] }
+      ]
+    },
+    {
+      "id": "context-virtual-memory",
+      "name": "Lossless context virtual memory",
+      "summary": "Navigates a durable source universe under a bounded resident prompt, with exact omissions, page faults, checkpoints, and zero-call cold replay.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 93 }],
+      "steps": [
+        { "id": "seal", "name": "Seal source universe and provenance", "organIds": ["context-memory"] },
+        { "id": "plan", "name": "Compile action-sufficient resident projection", "organIds": ["context-memory", "resource-security"] },
+        { "id": "measure", "name": "Measure exact physical tokens", "organIds": ["local-model-runtime", "resource-security"] },
+        { "id": "fault", "name": "Fault bounded evidence page", "organIds": ["context-memory", "dynamic-graph"] },
+        { "id": "backtrack", "name": "Backtrack and evict without deleting evidence", "organIds": ["context-memory", "dynamic-graph"] },
+        { "id": "prepare", "name": "Prepare evidence-bound semantic handoff", "organIds": ["context-memory", "verification-evaluation"] },
+        { "id": "reopen", "name": "Cold-replay with zero model or source calls", "organIds": ["event-runtime", "context-memory"] }
+      ]
+    },
+    {
+      "id": "candidate-transaction",
+      "name": "Authorized detached candidate transaction",
+      "summary": "Binds exact cognition, targets, roles, source, evaluator profile, attempt, candidate artifacts, and detached settlement without claiming application.",
+      "sourceRefs": [{ "path": "CODEX.md", "line": 118 }],
+      "steps": [
+        { "id": "eligibility", "name": "Compile exact multi-target eligibility", "organIds": ["dynamic-graph", "candidate-authoring"] },
+        { "id": "prepared", "name": "Open verified prepared cognition", "organIds": ["context-memory", "verification-evaluation"] },
+        { "id": "attempt", "name": "Mint one attempt authority", "organIds": ["event-runtime", "candidate-authoring"] },
+        { "id": "select", "name": "Select exact target set", "organIds": ["candidate-authoring", "local-model-runtime"] },
+        { "id": "patch", "name": "Author target-sealed patch", "organIds": ["candidate-authoring", "local-model-runtime"] },
+        { "id": "evaluate", "name": "Run candidate evaluation", "organIds": ["verification-evaluation"] },
+        { "id": "settle", "name": "Settle review-ready detached candidate", "organIds": ["effects-recovery", "event-runtime"] }
+      ]
+    },
+    {
+      "id": "causal-learning",
+      "name": "Causal learning to future epoch",
+      "summary": "Turns repeated task evidence into a transferable skill or policy only after matched intervention, falsification, and held-out confirmation.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 189 }],
+      "steps": [
+        { "id": "preregister", "name": "Preregister arms, budgets, metrics, and falsifiers", "organIds": ["causal-learning", "tests-benchmarks"] },
+        { "id": "intervene", "name": "Run matched interventions and negative controls", "organIds": ["causal-learning", "tests-benchmarks"] },
+        { "id": "attribute", "name": "Attribute outcome to the changed mechanism", "organIds": ["causal-learning", "verification-evaluation"] },
+        { "id": "transfer", "name": "Test sealed structurally different transfer", "organIds": ["tests-benchmarks", "verification-evaluation"] },
+        { "id": "propose", "name": "Propose bounded policy delta", "organIds": ["causal-learning", "agents-skills"] },
+        { "id": "promote", "name": "Promote only into a future epoch", "organIds": ["event-runtime", "causal-learning"] },
+        { "id": "monitor", "name": "Monitor regression and rollback", "organIds": ["observability-evidence", "causal-learning"] }
+      ]
+    },
+    {
+      "id": "parallel-agents",
+      "name": "Sequential and parallel agent collaboration",
+      "summary": "Chooses whether to work locally, delegate, fork, or serialize based on dependency, diversity, hardware, risk, and verification cost.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/WEAK-9B-CONTEXT-ABI-AND-ADAPTIVE-EXECUTIVE-SOTA-2026-08-14.md", "line": 243 }],
+      "steps": [
+        { "id": "decompose", "name": "Derive bounded independent work", "organIds": ["dynamic-graph", "agents-skills"] },
+        { "id": "allocate", "name": "Allocate roles, context, hardware, and file ownership", "organIds": ["agents-skills", "resource-security"] },
+        { "id": "execute", "name": "Execute without overlapping mutation", "organIds": ["agents-skills", "repository-infrastructure"] },
+        { "id": "challenge", "name": "Adversarially challenge load-bearing claims", "organIds": ["verification-evaluation", "agents-skills"] },
+        { "id": "integrate", "name": "Parent integrates against original intent", "organIds": ["protected-intent", "agents-skills"] },
+        { "id": "verify", "name": "Run shared proof and integrity gates", "organIds": ["tests-benchmarks", "repository-infrastructure"] }
+      ]
+    },
+    {
+      "id": "repository-understanding",
+      "name": "Repository understanding and continuation",
+      "summary": "Lets a novice or another agent move from the north star to organs, journeys, files, symbols, evidence, exact source, and the next safe action without losing uncertainty.",
+      "sourceRefs": [{ "path": "docs/PROJECT_OPERATING_CONTRACT.md", "line": 91 }],
+      "steps": [
+        { "id": "orient", "name": "Read north star and honest boundary", "organIds": ["documentation-knowledge", "protected-intent"] },
+        { "id": "journey", "name": "Follow one end-to-end journey", "organIds": ["product-experience", "event-runtime"] },
+        { "id": "organ", "name": "Inspect responsible organs and membranes", "organIds": ["repository-surface"] },
+        { "id": "source", "name": "Drill into exact files and symbols", "organIds": ["repository-surface", "tools-research"] },
+        { "id": "proof", "name": "Inspect proof level, blockers, and contradictions", "organIds": ["verification-evaluation", "observability-evidence"] },
+        { "id": "packet", "name": "Export bounded continuation packet", "organIds": ["documentation-knowledge", "agents-skills"] }
+      ]
+    },
+    {
+      "id": "crash-recovery",
+      "name": "Crash and cold recovery",
+      "summary": "Distinguishes not-started, started, observed, finalized, in-doubt, replayable, and safely resumable work across process death.",
+      "sourceRefs": [{ "path": "docs/bridge-program/2026-08-14/CAUSAL-ADAPTIVE-BRAIN-IDEOLOGICAL-FOUNDATIONS-AND-BUILD-ORDER.md", "line": 377 }],
+      "steps": [
+        { "id": "reserve", "name": "Durably reserve action", "organIds": ["event-runtime"] },
+        { "id": "start", "name": "Record physical start", "organIds": ["event-runtime", "local-model-runtime"] },
+        { "id": "observe", "name": "Persist exact observation", "organIds": ["observability-evidence", "event-runtime"] },
+        { "id": "settle", "name": "Settle or mark in-doubt", "organIds": ["effects-recovery", "event-runtime"] },
+        { "id": "reopen", "name": "Cold-open and verify lineage", "organIds": ["event-runtime", "verification-evaluation"] },
+        { "id": "resume", "name": "Resume without duplicate external calls", "organIds": ["effects-recovery", "local-model-runtime"] }
+      ]
+    }
+  ]
+}

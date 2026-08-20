@@ -1,5 +1,10 @@
 # ARC / CLIDE: The Complete End-to-End Brain
 
+> **Historical architecture book.** This is a 2026-08-11 explanatory capture,
+> valuable for orientation but not a substitute for current source, a current
+> Atlas basis, or product proof. See
+> [`ATLAS-RELEASE-READINESS-2026-08-20.md`](./ATLAS-RELEASE-READINESS-2026-08-20.md).
+
 ## A plain-English architecture book for people joining the project
 
 **Snapshot:** 2026-08-11 · repository HEAD `00b9a49d` plus a measured live working-tree overlay  
@@ -692,4 +697,3 @@ complete.” It is:
 > refuses unearned authority, and can prove exactly what happened.
 
 That is the standard the launch must meet.
-

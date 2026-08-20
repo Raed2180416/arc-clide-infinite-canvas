@@ -1,5 +1,9 @@
 # ARC / CLIDE next-agent complete E2E handoff
 
+> **Historical checkpoint only.** The source state and cleanliness claim below
+> are from 2026-08-11. For the current Atlas release boundary, start with
+> [`ATLAS-RELEASE-READINESS-2026-08-20.md`](./ATLAS-RELEASE-READINESS-2026-08-20.md).
+
 Checkpoint: committed repository `00b9a49d679c31b169ee1962d68880aaa0357154` on branch
 `codex/semantic-v2-product-splice-20260811`, measured 2026-08-11. The repository was visibly clean
 when this packet was generated. Re-run every gate below; this paragraph is a checkpoint, not live

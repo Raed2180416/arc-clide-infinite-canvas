@@ -1,0 +1,18 @@
+# Reproducible local dependencies and browser build output.
+node_modules/
+web/node_modules/
+dist/
+
+# Atlas snapshots are generated, content-addressed artifacts. They can be hundreds
+# of megabytes (including a SQLite navigation index) and belong in an artifact store,
+# never in the source branch by accident.
+snapshots/
+.atlas-output/
+.atlas-tmp/
+
+# Test/runtime residue.
+coverage/
+*.log
+.DS_Store
+__pycache__/
+*.py[cod]

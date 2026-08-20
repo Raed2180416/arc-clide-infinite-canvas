@@ -1,14 +1,19 @@
 # ARC / CLIDE complete end-to-end system atlas
 
+> **Historical architecture capture.** Generated on 2026-08-11; use it to
+> understand the intended system and its then-observed overlay, not as current
+> implementation truth. The current serving and handoff boundary is
+> [`ATLAS-RELEASE-READINESS-2026-08-20.md`](./ATLAS-RELEASE-READINESS-2026-08-20.md).
+
 Generated from repository HEAD `00b9a49d679c31b169ee1962d68880aaa0357154` on 2026-08-11 with source state `committed-head-plus-live-working-tree-overlay` and 10 visible dirty path(s). This is a component-complete atlas for the current canonical architecture plus the measured live working-tree overlay and a generated file-level module appendix. It does not claim that every future task-specific adapter or operator can be enumerated in advance.
 
 **Provenance warning:** this generation includes concurrent uncommitted work. Those files are visible measured substrate, not committed baseline truth and not safe to delete or overwrite.
 
-![Complete ARC CLIDE system atlas](/home/raed/.codex/visualizations/2026/08/09/019fe5dd-07df-7132-bdae-222b2a2457cf/arc-clide-complete-system-atlas-v2.svg)
+![Complete ARC CLIDE system atlas](./arc-clide-complete-system-atlas-v2.svg)
 
-Interactive surface: [open the scrollable infinite-canvas prototype](/home/raed/.codex/visualizations/2026/08/09/019fe5dd-07df-7132-bdae-222b2a2457cf/arc-clide-infinite-canvas-prototype.html?variant=A) (variants A/B/C).
+Interactive surface: [open the bounded visual explorer](./index.html).
 
-Execution continuation: [next-agent complete E2E handoff](/home/raed/.codex/visualizations/2026/08/09/019fe5dd-07df-7132-bdae-222b2a2457cf/NEXT-AGENT-COMPLETE-E2E-HANDOFF-2026-08-11.md).
+Execution continuation: [historical next-agent E2E handoff](./NEXT-AGENT-COMPLETE-E2E-HANDOFF-2026-08-11.md).
 
 ## Status legend
 
@@ -1471,4 +1476,3 @@ services: 9B DOWN:8095 · demo-daemon DOWN:8791
 This atlas is complete at four explicit levels: (1) all canonical product planes; (2) every current deep module/interface needed to traverse ingress through completion; (3) every TaskEvent V9 type and every measured memory/model/domain state law; and (4) every statically live script module in the generated appendix. It deliberately does not flatten 1,124 tests and 189 verifier drivers into the main image, because those are proof surfaces rather than runtime organs. Their denominators are recorded above. It also does not invent future task-specific operators; GraphProgram must compile those behind typed interfaces when needed.
 
 The decisive open red path is still candidate-author receipt -> runtime-owned semantic oracle batch -> candidate-bound tri-state evaluation -> effect reservation/apply/observation/reconciliation -> post-effect verification -> exact TaskCompleted. Blue/dark modules cannot be treated as live merely because they appear in this atlas.
-
