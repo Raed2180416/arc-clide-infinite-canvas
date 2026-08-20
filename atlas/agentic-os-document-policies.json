@@ -194,8 +194,15 @@
       ]
     },
     {
-      "id": "generated-document-classification",
-      "pathPrefix": "docs/canon/DOC-CLASSIFICATION",
+      "id": "generated-document-classification-markdown",
+      "path": "docs/canon/DOC-CLASSIFICATION.md",
+      "classification": "generated-document-classification",
+      "role": "Records a generated classification of documentation by current, historical, or review-needed status.",
+      "authority": "Generated orientation evidence only; registry, protected canon, live source, and owner direction remain the authority for status and scope."
+    },
+    {
+      "id": "generated-document-classification-json",
+      "path": "docs/canon/DOC-CLASSIFICATION.json",
       "classification": "generated-document-classification",
       "role": "Records a generated classification of documentation by current, historical, or review-needed status.",
       "authority": "Generated orientation evidence only; registry, protected canon, live source, and owner direction remain the authority for status and scope."
