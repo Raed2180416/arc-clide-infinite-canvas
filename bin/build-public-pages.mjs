@@ -182,7 +182,7 @@ export function buildPublicPages({
   sourceRoot = projectRoot,
   out = DEFAULT_OUTPUT,
   sourceRepositoryUrl = 'https://github.com/Raed2180416/arc-clide-infinite-canvas',
-  sourceBranch = 'codex/atlas-source-release-20260820',
+  sourceBranch = 'main',
 } = {}) {
   const sourceCommit = git(sourceRoot, ['rev-parse', 'HEAD'])
   const sourceCommitTime = git(sourceRoot, ['show', '-s', '--format=%cI', 'HEAD'])

@@ -37,6 +37,7 @@ test('public Pages build is a bounded historical artifact with no local locators
     assert.match(atlas, /rel="icon"/)
     assert.match(atlas, /data\/component-map\.json/)
     assert.match(atlas, /data\/module-digests\.json/)
+    assert.match(index, /\/blob\/main\/ARC-CLIDE-TODDLER-NARRATIVE\.md/)
     assert.doesNotMatch(atlas, /COMPLETE-COMPONENT-MAP\.json/)
     assert.doesNotMatch(atlas, /MODULE-DIGESTS\.json/)
   } finally {
