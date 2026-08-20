@@ -1,0 +1,142 @@
+{
+  "schemaVersion": "arc-clide-public-atlas-pages-v1",
+  "kind": "historical-static-reference",
+  "authority": "read-only-projection-authority-none",
+  "generatedFrom": {
+    "sourceCommit": "f657980058f6d0289c37dcf7ca00afbe8bcb67e2",
+    "sourceCommitTime": "2026-08-20T11:35:24+05:30",
+    "sourceRepositoryUrl": "https://github.com/Raed2180416/arc-clide-infinite-canvas",
+    "sourceBranch": "codex/atlas-source-release-20260820"
+  },
+  "intentionallyExcluded": [
+    "mutable Agentic OS source checkout",
+    "local Atlas snapshot blobs and SQLite navigation index",
+    "transcript pages and private runtime state",
+    "machine-local filesystem locators",
+    "product/effect/completion proof"
+  ],
+  "sourceInputs": [
+    {
+      "sourcePath": "COMPLETE-COMPONENT-MAP.json",
+      "publishedPath": "data/component-map.json",
+      "sourceSha256": "1770a40e739fe32ef758d31b6aba332e2e89155983a9c776534553086b4ba577",
+      "sourceBytes": 589540
+    },
+    {
+      "sourcePath": "MODULE-DIGESTS.json",
+      "publishedPath": "data/module-digests.json",
+      "sourceSha256": "f8979f56892ca552c9b5e82e3b8b1818fd8fc556e7141c14af761ba1eb223e9a",
+      "sourceBytes": 24107731
+    },
+    {
+      "sourcePath": "README.md",
+      "publishedPath": "documents/README.md",
+      "sourceSha256": "165b79f3a77c22994ff469c1dfb2164c433857e03b43f4ceb9ed3a400abb951e",
+      "sourceBytes": 5739
+    },
+    {
+      "sourcePath": "ARC-CLIDE-TODDLER-NARRATIVE.md",
+      "publishedPath": "documents/TODDLER-NARRATIVE.md",
+      "sourceSha256": "9c316451cd2d8f3738d76f1e2073a6fbfc3be7253140ccee4b55a5e45cef82cb",
+      "sourceBytes": 29096
+    },
+    {
+      "sourcePath": "COMPLETE-ARCHITECTURE-BOOK.md",
+      "publishedPath": "documents/ARCHITECTURE-BOOK.md",
+      "sourceSha256": "1dea10371026e03212e0a197faffb590b9161025f4ce1edcaa50123a3f6d5139",
+      "sourceBytes": 32387
+    },
+    {
+      "sourcePath": "COMPLETE-COMPONENT-MAP.md",
+      "publishedPath": "documents/COMPONENT-MAP.md",
+      "sourceSha256": "94bb09ec5f840aedb96b5e8fe90197dd14c97dda2ed9a1be6437478f390c2e5d",
+      "sourceBytes": 270652
+    },
+    {
+      "sourcePath": "MODULE-DIGESTS.md",
+      "publishedPath": "documents/MODULE-DIGESTS.md",
+      "sourceSha256": "b559c389038dca28247bc8c8da5f50d8958793361c7dc966bb86a1f8af86e151",
+      "sourceBytes": 853845
+    },
+    {
+      "sourcePath": "ATLAS-RELEASE-READINESS-2026-08-20.md",
+      "publishedPath": "documents/RELEASE-READINESS.md",
+      "sourceSha256": "4f25525d3707084aa6f6a31f62e6f00e15843ccba603d4d62194b776a96e95e7",
+      "sourceBytes": 9490
+    },
+    {
+      "sourcePath": "NEXT-AGENT-ATLAS-HANDOFF-2026-08-16.md",
+      "publishedPath": "documents/NEXT-AGENT-HANDOFF.md",
+      "sourceSha256": "e2f6a836f1ab9ee081971ba0e4fd48206278156d3cabe918c35441d039ed9075",
+      "sourceBytes": 9477
+    }
+  ],
+  "artifacts": [
+    {
+      "path": ".nojekyll",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "404.html",
+      "sha256": "221d1053c541484ab77fc5acf5be82adba93cde818409f85df5b81ec6e7f7645",
+      "bytes": 735
+    },
+    {
+      "path": "atlas.html",
+      "sha256": "e6817ba63a975b57777f9e1745bb68d47831f4191ca84810467d94c3ec424940",
+      "bytes": 9322
+    },
+    {
+      "path": "data/component-map.json",
+      "sha256": "9e4e683599da0e2c546cabe1b4865fd4b92c4beb06ba3327354f19c25a8067fc",
+      "bytes": 506730
+    },
+    {
+      "path": "data/module-digests.json",
+      "sha256": "7d3efc55ea5006b32d4a282f1d0cc040ec6581375748abe195da6ccc74676a93",
+      "bytes": 11867368
+    },
+    {
+      "path": "documents/ARCHITECTURE-BOOK.md",
+      "sha256": "aa6fff38f76ce5b233ca5447d0ae7388deb551aca5d928b37f29303000830afd",
+      "bytes": 32383
+    },
+    {
+      "path": "documents/COMPONENT-MAP.md",
+      "sha256": "94bb09ec5f840aedb96b5e8fe90197dd14c97dda2ed9a1be6437478f390c2e5d",
+      "bytes": 270652
+    },
+    {
+      "path": "documents/MODULE-DIGESTS.md",
+      "sha256": "2ee3cc28efc75113632df7426b0b5e1c65a7c9d04aee8ec473ed36c74b3a9768",
+      "bytes": 853837
+    },
+    {
+      "path": "documents/NEXT-AGENT-HANDOFF.md",
+      "sha256": "9b958de8f7247d021c21b5b227ca0bca4c85b847296f84ab21bfeef41763b386",
+      "bytes": 9435
+    },
+    {
+      "path": "documents/README.md",
+      "sha256": "a74d619adfb5ab64c8f55efedecf3c65b31cb4a46b7ece5ddc345d03f3b7de5f",
+      "bytes": 5664
+    },
+    {
+      "path": "documents/RELEASE-READINESS.md",
+      "sha256": "4f25525d3707084aa6f6a31f62e6f00e15843ccba603d4d62194b776a96e95e7",
+      "bytes": 9490
+    },
+    {
+      "path": "documents/TODDLER-NARRATIVE.md",
+      "sha256": "9c316451cd2d8f3738d76f1e2073a6fbfc3be7253140ccee4b55a5e45cef82cb",
+      "bytes": 29096
+    },
+    {
+      "path": "index.html",
+      "sha256": "2f6ae55ca4e46a36c6c7e6f93ee2dbb6abba579f5d5cd553dc9f6b868fdd6e6e",
+      "bytes": 9706
+    }
+  ],
+  "artifactsSha256": "b7293df44b5128009aa648e557529e5903fa93adc2a18b93fca6dceab73fed79"
+}

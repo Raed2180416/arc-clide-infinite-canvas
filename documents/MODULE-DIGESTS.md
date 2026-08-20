@@ -1,0 +1,11092 @@
+# ARC / CLIDE — Per-Module Deep Digests (what every component actually does)
+
+> Machine-generated from the gate-clean atlas snapshot symbol corpus. For every module,
+> this lists the real functions, classes, methods, and signatures its files contain —
+> the source-derived explanation of what each component DOES, not just what it is.
+
+**Generated:** 2026-08-16T17:28:41.527Z
+**Snapshot SHA-256:** c886697181c2f578f4950dd58b129942b906e86c03dfcd86166aca1df2e47066
+**Totals:** 204 modules · 269 files with symbols · 68656 symbols · 20770 callable · 1422 with source-authored purpose
+
+## 00 · HUMAN, PRODUCT, AND MODALITY SURFACES
+
+### Owner intent, values, constraints — SOLE AUTHORITY / CONSTITUTION
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### CLIDE Rust TUI — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 34 · **Callable:** 10 · **Authored purpose:** 0
+- `apps/arc-tui/src/main.rs` (10 symbols)
+  - function `has_binary` — `fn has_binary(bin: &str) -> bool`
+  - function `terminal_candidates` — `fn terminal_candidates() -> Vec<Vec<&'static str>>`
+  - function `spawn_popup_terminal` — `fn spawn_popup_terminal(force_onboard: bool) -> bool`
+  - function `parse_theme_id` — `fn parse_theme_id(s: &str) -> ThemeId`
+  - function `theme_id_to_string` — `fn theme_id_to_string(id: ThemeId) -> String`
+  - function `persist_step` — `fn persist_step(`
+  - function `advance_allowed` — `fn advance_allowed(`
+  - function `main` — `fn main() -> std::io::Result<()>`
+  - function `advance_step` — `fn advance_step(`
+  - function `render_progress_dots` — `fn render_progress_dots(`
+- `apps/arc-tui/src/workspace/mod.rs` (24 symbols)
+  - module `anim` — `pub mod anim;`
+  - module `arc_engine` — `pub mod arc_engine;`
+  - module `brand_mark` — `pub mod brand_mark;`
+  - module `cognitive_comparison_receipt` — `pub mod cognitive_comparison_receipt;`
+  - module `cognitive_projection` — `pub mod cognitive_projection;`
+  - module `commands` — `pub mod commands;`
+  - module `daemon` — `pub mod daemon;`
+  - module `diff` — `pub mod diff;`
+  - module `fx` — `pub mod fx;`
+  - module `greeting` — `pub mod greeting;`
+  - module `highlight` — `pub mod highlight;`
+  - module `impact` — `pub mod impact;`
+  - module `input` — `pub mod input;`
+  - module `layout` — `pub mod layout;`
+  - module `markdown` — `pub mod markdown;`
+  - module `panes` — `pub mod panes;`
+  - module `popout` — `pub mod popout;`
+  - module `protocol` — `pub mod protocol;`
+  - module `render` — `pub mod render;`
+  - module `run` — `pub mod run;`
+  - module `selection` — `pub mod selection;`
+  - module `settings` — `pub mod settings;`
+  - module `state` — `pub mod state;`
+  - module `web` — `pub mod web;`
+
+### Agentic OS CLI / one-shot — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 177 · **Callable:** 74 · **Authored purpose:** 0
+- `apps/arc-tui/src/oneshot.rs` (31 symbols)
+  - type `Socket` — `type Socket = WebSocket<MaybeTlsStream<TcpStream>>;`
+  - struct `PatchInfo` — `pub struct PatchInfo`
+  - struct `OneShotOutcome` — `pub struct OneShotOutcome`
+  - function `json_payload` — `pub fn json_payload(prompt: &str, outcome: &OneShotOutcome) -> serde_json::Value`
+  - function `run` — `pub fn run(prompt: &str, mode: &str, permission: &str) -> OneShotOutcome`
+  - function `run_with_port` — `pub fn run_with_port(prompt: &str, port: u16, mode: &str, permission: &str) -> OneShotOutcome`
+  - function `offline_outcome` — `fn offline_outcome(port: u16) -> OneShotOutcome`
+  - function `describe_patch_verification` — `fn describe_patch_verification(patch: &PatchInfo) -> String`
+  - function `compose_message` — `fn compose_message(answer: Option<String>, patch: Option<&PatchInfo>) -> String`
+  - function `drive_turn` — `fn drive_turn(socket: &mut Socket, prompt: &str, mode: &str, permission: &str) -> OneShotOutcome`
+  - function `handle_frame` — `fn handle_frame(`
+  - function `latest_chat_id` — `fn latest_chat_id(payload: &[ChatSummary]) -> Option<String>`
+  - function `send_frame` — `fn send_frame(socket: &mut Socket, frame: &ClientFrame) -> bool`
+  - function `set_read_timeout` — `fn set_read_timeout(ws: &Socket)`
+  - module `tests` — `mod tests`
+  - function `honest_failure_when_daemon_not_running` — `fn honest_failure_when_daemon_not_running()`
+  - function `offline_outcome_is_never_a_disguised_success` — `fn offline_outcome_is_never_a_disguised_success()`
+  - function `exit_codes_are_distinct` — `fn exit_codes_are_distinct()`
+  - function `exit_codes_never_collide_with_claps_reserved_range` — `fn exit_codes_never_collide_with_claps_reserved_range()`
+  - function `spawn_stub_daemon` — `fn spawn_stub_daemon<F>(script: F) -> u16`
+  - function `skip_one` — `fn skip_one(ws: &mut WebSocket<TcpStream>)`
+  - function `send` — `fn send(ws: &mut WebSocket<TcpStream>, frame: &ServerFrame)`
+  - function `mode_flag_controls_the_wire_verbatim` — `fn mode_flag_controls_the_wire_verbatim()`
+  - function `chat_send_wire_is_byte_identical_minimal_shape` — `fn chat_send_wire_is_byte_identical_minimal_shape()`
+  - function `every_assistant_event_survives_not_just_the_last` — `fn every_assistant_event_survives_not_just_the_last()`
+  - function `happy_path_answer_only_no_patch` — `fn happy_path_answer_only_no_patch()`
+  - function `oracle_verified_patch_reads_as_verified` — `fn oracle_verified_patch_reads_as_verified()`
+  - function `unverified_patch_never_reads_as_verified` — `fn unverified_patch_never_reads_as_verified()`
+  - function `patch_with_no_tier_defaults_to_unverified_disclosure` — `fn patch_with_no_tier_defaults_to_unverified_disclosure()`
+  - function `daemon_error_frame_is_reported_honestly` — `fn daemon_error_frame_is_reported_honestly()`
+  - function `quiet_daemon_yields_honest_no_answer_not_a_hang` — `fn quiet_daemon_yields_honest_no_answer_not_a_hang()`
+- `scripts/agentic-os.mjs` (146 symbols)
+  - variable `LOCAL_URL` — `LOCAL_URL = process.env.LOCAL_URL || 'http://127.0.0.1:8080/v1/chat/completions'`
+  - variable `AGENTIC_OS_ROOT` — `AGENTIC_OS_ROOT = AGENTIC_OS_SOURCE_ROOT`
+  - variable `SCRIPTS_DIR` — `SCRIPTS_DIR = path.join(AGENTIC_OS_ROOT, 'scripts')`
+  - function `checkServer` — `async function checkServer()`
+  - variable `controller` — `controller = new AbortController()`
+  - variable `timeout` — `timeout = setTimeout(() => controller.abort(), 3000)`
+  - arrow-function `<anonymous@1941>` — `() => controller.abort()`
+  - variable `response` — `response = await fetch('http://127.0.0.1:8080/health',`
+  - function `startServer` — `function startServer(model = '9b')`
+  - variable `swapScript` — `swapScript = path.join(SCRIPTS_DIR, 'swap-model.sh')`
+  - function `importModule` — `async function importModule(name)`
+  - function `runScript` — `function runScript(scriptName, args = [])`
+  - arrow-function `<anonymous@3030>` — `(resolve, reject) =>`
+  - variable `child` — `child = spawn(process.execPath, [path.join(SCRIPTS_DIR, scriptName), ...args],`
+  - arrow-function `<anonymous@3251>` — `(code, signal) =>`
+  - function `runDeterministicVerification` — `export async function runDeterministicVerification(opts =`
+  - variable `taskId` — `taskId = opts.taskId`
+  - variable `runtime` — `runtime = new TaskRuntime(`
+  - variable `VerifierClass` — `VerifierClass = opts.VerifierClass`
+  - variable `heartbeatError` — `heartbeatError = null`
+  - variable `heartbeat` — `heartbeat = new TaskHeartbeat(`
+  - arrow-function `statusProvider` — `() => (`
+  - arrow-function `onError` — `error =>`
+  - variable `verifier` — `verifier = new VerifierClass(taskId,`
+  - variable `report` — `report`
+  - variable `error` — `error`
+  - variable `snapshot` — `snapshot = runtime.snapshot()`
+  - variable `lease` — `lease = snapshot.taskLease`
+  - variable `ownsActiveLease` — `ownsActiveLease = lease?.ownerId === runtime.ownerId`
+  - variable `COMMANDS` — `COMMANDS =`
+  - method `verify` — `async verify()`
+  - method `ttc` — `async ttc(args)`
+  - variable `task` — `task = args.join(' ') || 'Write a hello world function'`
+  - variable `serverOk` — `serverOk = await checkServer()`
+  - variable `retries` — `retries = 10`
+  - arrow-function `<anonymous@6464>` — `r => setTimeout(r, 1000)`
+  - variable `<anonymous@6639>`
+  - variable `engine` — `engine = new TTCInferenceEngine(`
+  - arrow-function `<anonymous@6837>` — `() =>`
+  - method `swarm` — `async swarm(args)`
+  - … and 106 more symbols
+
+### Public WebSocket ingress — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 986 · **Callable:** 337 · **Authored purpose:** 72
+- `scripts/arc-daemon.mjs` (986 symbols)
+  - variable `BROWSER_FRAME_MIN_INTERVAL_MS` — `BROWSER_FRAME_MIN_INTERVAL_MS = 80`
+  - function `pendingProductScopeDecision` — `function pendingProductScopeDecision(taskSpec)`
+  - variable `decision` — `decision = (Array.isArray(taskSpec?.decisions) ? taskSpec.decisions : [])`
+  - arrow-function `<anonymous@6921>` — `item => item?.category === 'product' && item?.resolution === 'ask-human'`
+  - variable `question` — `question = (Array.isArray(taskSpec?.pendingOperatorQuestions)`
+  - arrow-function `<anonymous@7149>` — `item => (`
+  - function `pendingTaskSpecWithScopeQuestion` — `function pendingTaskSpecWithScopeQuestion(taskSpec, scopeQuestion)`
+  - variable `pending` — `pending = structuredClone(taskSpec)`
+  - variable `original` — `original = Array.isArray(pending.pendingOperatorQuestions)`
+  - arrow-function `<anonymous@7689>` — `question => question.questionId !== scopeQuestion.questionId`
+  - function `scopeIntentInvariantObservation` — `function scopeIntentInvariantObservation(taskSpec)`
+  - variable `taskFacts` — `taskFacts = Array.isArray(taskSpec?.facts) ? taskSpec.facts : []`
+  - variable `explicitObjectives` — `explicitObjectives = taskFacts`
+  - arrow-function `<anonymous@8130>` — `fact => (`
+  - arrow-function `<anonymous@8383>` — `fact => fact.statement`
+  - variable `requiredDeliverableKinds` — `requiredDeliverableKinds = (Array.isArray(taskSpec?.semanticContract?.deliverables)`
+  - arrow-function `<anonymous@8566>` — `deliverable => (`
+  - arrow-function `<anonymous@8728>` — `deliverable => deliverable.kind`
+  - variable `requiredConstraintStatements` — `requiredConstraintStatements = taskFacts`
+  - arrow-function `<anonymous@8822>` — `fact => (`
+  - arrow-function `<anonymous@9023>` — `fact => fact.statement`
+  - variable `prohibitedActions` — `prohibitedActions = Array.isArray(taskSpec?.intentFields?.forbiddenActions?.value)`
+  - arrow-function `<anonymous@9203>` — `statement => typeof statement === 'string' && statement.trim()`
+  - variable `authoritativeObjectives` — `authoritativeObjectives = [...new Set([`
+  - arrow-function `<anonymous@9853>` — `statement => typeof statement === 'string' && statement.trim()`
+  - variable `sourceTaskDraftBinding` — `sourceTaskDraftBinding = JSON.stringify(`
+  - variable `projection` — `projection =`
+  - variable `statement` — `statement = JSON.stringify(projection)`
+  - function `scopeDecisionDescriptor` — `function scopeDecisionDescriptor(pendingDecision)`
+  - variable `decision` — `decision = pendingDecision?.decision ||`
+  - variable `rawAxisId` — `rawAxisId = typeof decision.auditCheckId === 'string' && decision.auditCheckId.trim()`
+  - variable `axisId` — `axisId = String(rawAxisId || 'scope')`
+  - variable `affectedByAxis` — `affectedByAxis =`
+  - variable `whyLoadBearingByAxis` — `whyLoadBearingByAxis =`
+  - function `invokeRuntimeAttestedScopeSpecialist` — `async function invokeRuntimeAttestedScopeSpecialist(`
+  - variable `decisionDescriptor` — `decisionDescriptor = scopeDecisionDescriptor(pendingDecision)`
+  - variable `axisId` — `axisId = decisionDescriptor.axisId`
+  - variable `intentInvariantObservation` — `intentInvariantObservation = scopeIntentInvariantObservation(taskSpec)`
+  - variable `mergedObservations` — `mergedObservations = [`
+  - arrow-function `<anonymous@13621>` — `observation => (`
+  - … and 946 more symbols
+
+### Mode, permission and route selection — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 604 · **Callable:** 137 · **Authored purpose:** 27
+- `scripts/chat-turn-runner.mjs` (551 symbols)
+  - variable `CHAT_TURN_RUNNER_VERSION` — `CHAT_TURN_RUNNER_VERSION = '1.1.0'`
+  - variable `CHAT_TURN_MODES` — `CHAT_TURN_MODES = Object.freeze(['basic', 'auto', 'deep-research'])`
+  - function `trustedCapsuleSafetySignals` — `function trustedCapsuleSafetySignals(taskSpec)`
+  - variable `trustedInstruction` — `trustedInstruction = taskSpecInstructionPrompt(taskSpec)`
+  - variable `hasConcreteTarget` — `hasConcreteTarget = (taskSpec?.facts || []).some(fact => (`
+  - arrow-function `<anonymous@6392>` — `fact => (`
+  - function `scopeBoundGoalCapsuleInput` — `function scopeBoundGoalCapsuleInput(taskSpec)`
+  - variable `selectedScope` — `selectedScope = taskSpec?.scopeCommitment?.selectedScope`
+  - variable `selectedScopeJson` — `selectedScopeJson = JSON.stringify(selectedScope)`
+  - variable `selectedScopeSourceRefId` — `selectedScopeSourceRefId = 'user-committed-selected-scope'`
+  - function `isNonInteractiveProceed` — `export function isNonInteractiveProceed(permission)` — *B8 #5 (class "advisory clarification must auto-resolve under ANY non-interactive autonomy"). The daemon's valid permission set is ['plan','ask','accept-edits','auto','bypass'] (arc-daemon.mjs ~:629). *
+  - function `buildTurnRepoContext` — `export function buildTurnRepoContext(repoRoot,` — *M18 (reconciliation): the INWARD half of research/intent grounding. Every TUI turn previously ran with repoContext={} — the research repo-scout scouted an EMPTY repo and the intent compiler's resolver*
+  - variable `out` — `out = spawnSync('git', ['ls-files'],`
+  - variable `all` — `all = out.stdout.trim().split('\n').filter(Boolean)`
+  - variable `roots` — `roots = all.slice(0, maxRoots)`
+  - variable `DEFAULT_LOCAL_ENDPOINT_LABEL` — `DEFAULT_LOCAL_ENDPOINT_LABEL = '127.0.0.1:8095'`
+  - arrow-function `envMs` — `(name, def) => Number(process.env[name]) || def`
+  - variable `DEFAULT_MODEL_TIMEOUT_MS` — `DEFAULT_MODEL_TIMEOUT_MS = envMs('ARC_MODEL_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_COMPILE_TIMEOUT_MS` — `DEFAULT_COMPILE_TIMEOUT_MS = envMs('ARC_COMPILE_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_DAILY_DRIVER_TIMEOUT_MS` — `DEFAULT_DAILY_DRIVER_TIMEOUT_MS = envMs('ARC_DAILY_DRIVER_TIMEOUT_MS', 180_000)`
+  - variable `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS` — `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS = envMs('ARC_COORDINATOR_DRIVER_TIMEOUT_MS', 900_000)`
+  - function `withTimeout` — `export function withTimeout(promise, ms, signal = null)` — *Race a promise against a wall-clock deadline and an optional AbortSignal. The underlying promise is not cancelled (model adapters carry their own AbortSignal timeouts); this only guarantees the caller*
+  - arrow-function `<anonymous@12316>` — `(resolve, reject) =>`
+  - variable `settled` — `settled = false`
+  - arrow-function `finish` — `(fn, value) =>`
+  - arrow-function `onAbort` — `() => finish(reject, new Error('aborted'))`
+  - variable `timer` — `timer = setTimeout(() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@12649>` — `() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@13173>` — `value => finish(resolve, value)`
+  - arrow-function `<anonymous@13212>` — `error => finish(reject, error)`
+  - function `guardedModelInvoke` — `async function guardedModelInvoke(invokeLocal, args,` — *Bounded, never-throwing single model call.*
+  - variable `result` — `result = await withTimeout(Promise.resolve(invokeLocal(args)), timeoutMs, signal)`
+  - variable `error` — `error`
+  - function `makeGuardedInvoke9B` — `function makeGuardedInvoke9B(invokeLocal,` — *Wrap an invokeLocal into a guarded invoke9B (the intent compiler contract). On any model failure it returns { content: '' } so decomposedExtraction degrades to rule-only facts instead of rejecting the*
+  - arrow-function `<anonymous@14172>` — `async args =>`
+  - variable `result` — `result = await guardedModelInvoke(invokeLocal, args,`
+  - function `buildOfflineMessage` — `function buildOfflineMessage(goal, endpointLabel, reason = null)`
+  - variable `timeoutMatch` — `timeoutMatch = typeof reason === 'string' ? reason.match(/^timeout after (\d+)ms$/) : null`
+  - variable `head` — `head = timeoutMatch`
+  - variable `detail` — `detail = reason ? ` [$`
+  - … and 511 more symbols
+- `scripts/deep-research/task-mode-router.mjs` (53 symbols)
+  - variable `TASK_MODE_ROUTER_VERSION` — `TASK_MODE_ROUTER_VERSION = '0.1.0'`
+  - variable `TASK_MODES` — `TASK_MODES = Object.freeze(`
+  - variable `REPO_RE` — `REPO_RE = /\b(repo|repository|codebase|existing code|current code|existing implementation|file|files?|visual bug|screenshot|stack trace|failing test|regression|refactor|migrate|blast radius|impact|aff`
+  - variable `OUTWARD_RE` — `OUTWARD_RE = /\b(latest|current|today|202\d|sota|state of the art|paper|papers|arxiv|literature|survey|benchmark|models?|library|framework|api|docs?|documentation|standard|regulation|news|advisory|com`
+  - variable `RESEARCH_INTENT_RE` — `RESEARCH_INTENT_RE = /\b(research|investigate|find out|look up|lookup|survey|compare|evaluate|assess|recommend|recommendation|what\s+(?:is|are|'?s)|which|latest|current|state of the art|sota|best prac`
+  - variable `COMPARISON_TWO_SIDED_RE` — `COMPARISON_TWO_SIDED_RE = /\b(vs\.?|versus|difference between|tradeoffs?)\b/i`
+  - variable `COMPARATIVE_RE` — `COMPARATIVE_RE = /\b(better|best|faster|fastest|slower|cheaper|superior|preferable|preferred|recommended)\b/i`
+  - variable `CHOICE_ALT_RE` — `CHOICE_ALT_RE = /\b(?:or|vs\.?|versus)\b/i`
+  - function `isComparisonResearchQuestion` — `function isComparisonResearchQuestion(text)`
+  - variable `t` — `t = String(text || '')`
+  - variable `PLAN_RE` — `PLAN_RE = /\b(plan|implementation plan|architecture|design|roadmap|phase|phases|build sequence|refactor plan|decomposition|spec)\b/i`
+  - variable `IMPLEMENT_RE` — `IMPLEMENT_RE = /\b(write|add|build|create|make|ship|implement|develop|refactor|re-architecture|reconcile|unify)\b/i`
+  - variable `GREENFIELD_RE` — `GREENFIELD_RE = /\b(build|create|make|ship|implement|develop)\b.*\b(app|game|dashboard|site|tool|saas|frontend|backend|mvp|prototype)\b/i`
+  - variable `MAX_SOTA_RE` — `MAX_SOTA_RE = /\b(max(?:imum)?|absolute|exhaustive|forensic|deep(?:ly)?|thorough|comprehensive|frontier|sota as of today|as of today|take as long as needed)\b/i`
+  - variable `VISUAL_BUG_RE` — `VISUAL_BUG_RE = /\b(visual bug|screenshot|mobile overlap|overlaps?|broken layout|ui bug|css bug|regression|stack trace|failing test|fix the bug|debug)\b/i`
+  - variable `AMBIGUITY_RE` — `AMBIGUITY_RE = /\b(maybe|not sure|whatever|figure it out|where to start|idk|something like|etc)\b/i`
+  - function `words` — `function words(text)`
+  - function `collectText` — `function collectText(taskSpec =`
+  - variable `parts` — `parts = [`
+  - arrow-function `<anonymous@4370>` — `f => f?.statement`
+  - arrow-function `<anonymous@4467>` — `o => o?.description || o?.id`
+  - arrow-function `<anonymous@4579>` — `r => r?.query || r?.goal || r?.description`
+  - function `proofStandardFor` — `function proofStandardFor(taskMode, hybridOrder = null)`
+  - function `hybridOrderFor` — `function hybridOrderFor(`
+  - function `buildTaskModePlan` — `export function buildTaskModePlan(taskSpec =`
+  - variable `resolvedExplorationPlan` — `resolvedExplorationPlan = explorationPlan || buildExplorationPlan(taskSpec)`
+  - variable `resolvedDepthPlan` — `resolvedDepthPlan = researchDepthPlan || buildResearchDepthPlan(taskSpec,`
+  - variable `text` — `text = collectText(taskSpec)`
+  - variable `wordCount` — `wordCount = words(taskSpec.rawPrompt || taskSpec.goal || text).length`
+  - variable `researchTrigger` — `researchTrigger = taskSpec.researchTrigger ||`
+  - variable `domains` — `domains = Array.isArray(researchTrigger.domains) ? researchTrigger.domains.map(d => String(d).toLowerCase()) : []`
+  - arrow-function `<anonymous@8805>` — `d => String(d).toLowerCase()`
+  - variable `externalDomains` — `externalDomains = domains.filter(d => d && d !== 'pattern' && d !== 'general')`
+  - arrow-function `<anonymous@8881>` — `d => d && d !== 'pattern' && d !== 'general'`
+  - variable `explorationDecision` — `explorationDecision = resolvedExplorationPlan.classification?.decision || null`
+  - variable `textualRepoCue` — `textualRepoCue = REPO_RE.test(text) || Boolean(taskSpec.featureIntent?.relatedPaths?.length)`
+  - variable `hasRepoCue` — `hasRepoCue = textualRepoCue`
+  - variable `hasExternalCue` — `hasExternalCue = (OUTWARD_RE.test(text) && RESEARCH_INTENT_RE.test(text))`
+  - variable `modelArchitecture` — `modelArchitecture = /\b(?:transformer|model|neural|network|llm)\s+architecture\b/i.test(text)`
+  - variable `wantsPlan` — `wantsPlan = PLAN_RE.test(text) && !modelArchitecture`
+  - … and 13 more symbols
+
+### Attachments and multimodal ingress — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 238 · **Callable:** 47 · **Authored purpose:** 3
+- `scripts/document-ingest-router.mjs` (201 symbols)
+  - variable `DOCUMENT_INGEST_ROUTER_VERSION` — `DOCUMENT_INGEST_ROUTER_VERSION = '1.3.0'`
+  - variable `MAX_BLOCK_CHARS` — `MAX_BLOCK_CHARS = 8_000`
+  - variable `MAX_BLOCKS_PER_URL` — `MAX_BLOCKS_PER_URL = 4`
+  - variable `CRAWL_FETCH_MAX_CHARS` — `CRAWL_FETCH_MAX_CHARS = 64_000`
+  - function `runWithConcurrency` — `async function runWithConcurrency(items, concurrency, worker)`
+  - variable `results` — `results = new Array(items.length)`
+  - variable `nextIndex` — `nextIndex = 0`
+  - function `runWorker` — `async function runWorker()`
+  - variable `current` — `current = nextIndex`
+  - arrow-function `<anonymous@1275>` — `() => runWorker()`
+  - function `chunkMarkdownBlocks` — `export function chunkMarkdownBlocks(markdown = '',`
+  - variable `text` — `text = String(markdown || '')`
+  - variable `blocks` — `blocks = []`
+  - variable `start` — `start = 0`
+  - variable `execFileAsync` — `execFileAsync = promisify(execFile)`
+  - function `extensionFromHints` — `function extensionFromHints(mime = '', hints =`
+  - variable `url` — `url = String(hints.url || '')`
+  - variable `local` — `local = String(hints.localPath || '')`
+  - variable `source` — `source = url || local`
+  - variable `match` — `match = source.match(/\.([a-z0-9]`
+  - function `selectParser` — `export function selectParser(mime = '', hints =`
+  - variable `normalized` — `normalized = String(mime || '').toLowerCase()`
+  - variable `url` — `url = String(hints.url || '')`
+  - variable `ext` — `ext = extensionFromHints(normalized, hints)`
+  - variable `isLocal` — `isLocal = hints.localPath || url.startsWith('file://')`
+  - variable `pathForCheck` — `pathForCheck = hints.localPath || (url.startsWith('file://') ? fileURLToPath(url) : '')`
+  - function `sha256Text` — `function sha256Text(value)`
+  - function `normalizeIngestBlocks` — `export function normalizeIngestBlocks(`
+  - variable `expanded` — `expanded = []`
+  - variable `block` — `block`
+  - variable `raw` — `raw = String(block.markdown || block.content || '')`
+  - variable `pieces` — `pieces = chunk && raw.length > MAX_BLOCK_CHARS`
+  - variable `piece` — `piece`
+  - arrow-function `<anonymous@5073>` — `(block, index) => (`
+  - arrow-function `<anonymous@5466>` — `block => block.markdown.trim().length > 0`
+  - function `invokeWhisper` — `export async function invokeWhisper(filePath,`
+  - variable `resolved` — `resolved = path.resolve(filePath)`
+  - variable `<anonymous@5782>`
+  - variable `markdown` — `markdown = String(stdout || '').trim().slice(0, MAX_BLOCK_CHARS)`
+  - variable `error` — `error`
+  - … and 161 more symbols
+- `scripts/specialist-consult.mjs` (37 symbols)
+  - variable `SPECIALIST_CONSULT_VERSION` — `SPECIALIST_CONSULT_VERSION = '1.0.0'`
+  - variable `DEFAULT_OLLAMA_CHAT_URL` — `DEFAULT_OLLAMA_CHAT_URL = 'http://127.0.0.1:11434/api/chat'`
+  - variable `MAX_IMAGE_BYTES` — `MAX_IMAGE_BYTES = 8 * 1024 * 1024`
+  - function `runSpecialistConsult` — `export async function runSpecialistConsult(` — *Invoke a verified specialist via its ollama ref and return an advisory evidence packet. Never throws for a normal specialist error — returns a packet with ok:false so the caller degrades to the main 9*
+  - variable `contractArmed` — `contractArmed = env?.ARC_SPECIALIST_CONTRACT === '1'`
+  - variable `queueArmed` — `queueArmed = env?.ARC_SPECIALIST_SERIAL_QUEUE === '1'`
+  - variable `routed` — `routed = decision || selectSpecialist(taskText, contractArmed ?`
+  - variable `ollamaModel` — `ollamaModel = routed.endpoint.slice('ollama:'.length)`
+  - variable `prompt` — `prompt = String(consultPrompt || taskText).trim()`
+  - variable `wantsVision` — `wantsVision = routed.requiresVision === true`
+  - variable `sanitizedImages` — `sanitizedImages = wantsVision`
+  - arrow-function `<anonymous@5127>` — `b64 => typeof b64 === 'string' && b64.length > 0`
+  - arrow-function `<anonymous@5191>` — `(b64) =>`
+  - variable `contractVerdict` — `contractVerdict = null`
+  - variable `entry` — `entry = getSpecialist(routed.modelId)`
+  - variable `snapshot` — `snapshot = capabilitySnapshot`
+  - variable `queue` — `queue = dispatchQueue || getSharedDispatchQueue()`
+  - arrow-function `<anonymous@7606>` — `slot => performConsult(`
+  - arrow-function `<anonymous@7882>` — `refusal => (`
+  - function `performConsult` — `async function performConsult(` — *The actual ollama call. Extracted verbatim from runSpecialistConsult so the serial queue can wrap it without duplicating it; the body below is unchanged apart from the additive `contract`/`queue` rece*
+  - variable `extra` — `extra =`
+  - arrow-function `buildMessage` — `() => (wantsVision`
+  - arrow-function `callOnce` — `async (options) => fetchImpl(ollamaUrl,`
+  - variable `NUM_PREDICT` — `NUM_PREDICT = 2048`
+  - variable `residency` — `residency = 'gpu'`
+  - variable `response` — `response = await callOnce(`
+  - variable `body` — `body = await response.json()`
+  - variable `primary` — `primary = String(body?.message?.content || '').trim()`
+  - variable `thinking` — `thinking = String(body?.message?.thinking || '').trim()`
+  - variable `raw` — `raw = primary || thinking`
+  - variable `contentChannel` — `contentChannel = primary ? 'content' : (thinking ? 'thinking-fallback' : 'none')`
+  - variable `MAX_ADVISORY_CHARS` — `MAX_ADVISORY_CHARS = 100_000`
+  - variable `truncated` — `truncated = raw.length > MAX_ADVISORY_CHARS`
+  - variable `content` — `content = raw`
+  - variable `marker` — `marker = `\n…[truncated $`
+  - variable `emptyReason` — `emptyReason = wantsVision ? 'vision-empty-output' : 'empty-specialist-output'`
+  - variable `error` — `error`
+
+### Questions, approvals, cancellation, steering — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 188 · **Callable:** 74 · **Authored purpose:** 3
+- `scripts/interactive-approval-transport.mjs` (100 symbols)
+  - variable `APPROVAL_TRANSPORT_VERSION` — `APPROVAL_TRANSPORT_VERSION = '1.0.0'`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 5 * 60_000`
+  - variable `DEFAULT_MAX_DISPLAY_BYTES` — `DEFAULT_MAX_DISPLAY_BYTES = 128 * 1024`
+  - variable `DEFAULT_MAX_RESPONSE_BYTES` — `DEFAULT_MAX_RESPONSE_BYTES = 256`
+  - variable `CONTROL_CHARACTERS` — `CONTROL_CHARACTERS = /[\u0000-\u0008\u000b-\u001f\u007f-\u009f\u202a-\u202e\u2066-\u2069]/g`
+  - class `ApprovalTransportError` — `export class ApprovalTransportError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'approvalTransport', cause = undefined)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `boundedInteger` — `function boundedInteger(value, pathName, min, max)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `text` — `text = nonEmptyString(value, pathName).trim()`
+  - function `hexDigest` — `function hexDigest(value, pathName, lengths)`
+  - variable `text` — `text = nonEmptyString(value, pathName).trim().toLowerCase()`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) =>`
+  - arrow-function `<anonymous@2949>` — `(item, index) =>`
+  - function `canonicalTargetPath` — `function canonicalTargetPath(value, pathName)`
+  - variable `candidate` — `candidate = nonEmptyString(value, pathName).trim()`
+  - variable `normalized` — `normalized = path.posix.normalize(candidate)`
+  - function `targetArray` — `function targetArray(value, pathName)`
+  - variable `values` — `values = stringArray(value, pathName,`
+  - arrow-function `<anonymous@4081>` — `(item, index) => canonicalTargetPath(item, `$`
+  - function `actor` — `function actor(value, pathName)`
+  - function `nowIso` — `function nowIso(clock)`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `terminalSafeText` — `function terminalSafeText(value)`
+  - arrow-function `<anonymous@5072>` — `character =>`
+  - variable `code` — `code = character.codePointAt(0)`
+  - function `terminalSafeInline` — `function terminalSafeInline(value)`
+  - function `defaultReadLine` — `function defaultReadLine(input, output)`
+  - arrow-function `<anonymous@5441>` — `(prompt,`
+  - arrow-function `<anonymous@5478>` — `(resolve, reject) =>`
+  - … and 60 more symbols
+- `scripts/operator-question-bus.mjs` (79 symbols)
+  - variable `OPERATOR_QUESTION_BUS_VERSION` — `OPERATOR_QUESTION_BUS_VERSION = '1.0.0'`
+  - variable `ROOT_NODE_IDS` — `ROOT_NODE_IDS = Object.freeze(['root', 'default'])`
+  - variable `STATUSES` — `STATUSES = new Set(['open', 'answered', 'cancelled'])`
+  - variable `PRIORITIES` — `PRIORITIES = new Set(['low', 'medium', 'high', 'critical'])`
+  - variable `ACTOR_TYPES` — `ACTOR_TYPES = new Set(['user', 'system', 'agent'])`
+  - variable `NODE_ID_PATTERN` — `NODE_ID_PATTERN = /^[A-Za-z0-9_.:-]+$/`
+  - class `OperatorQuestionBusError` — `export class OperatorQuestionBusError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'operatorQuestionBus')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName,`
+  - function `optionalString` — `function optionalString(value, pathName, options =`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => string(item, `$`
+  - arrow-function `<anonymous@2810>` — `(item, index) => string(item, `$`
+  - function `nodeId` — `function nodeId(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `actor` — `function actor(value, pathName)`
+  - variable `type` — `type = oneOf(value.type, ACTOR_TYPES, `$`
+  - function `visibleNodeIdsForQuestion` — `export function visibleNodeIdsForQuestion(originNodeId)`
+  - variable `origin` — `origin = nodeId(originNodeId, 'operatorQuestionBus.originNodeId')`
+  - variable `visible` — `visible = [...ROOT_NODE_IDS]`
+  - variable `segments` — `segments = origin.split('.')`
+  - variable `index` — `index = 0`
+  - variable `ancestor` — `ancestor = segments.slice(0, index + 1).join('.')`
+  - function `validateOptions` — `function validateOptions(options,`
+  - variable `recommendedCount` — `recommendedCount = 0`
+  - variable `normalized` — `normalized = options.map((option, index) =>`
+  - arrow-function `<anonymous@4301>` — `(option, index) =>`
+  - variable `pathName` — `pathName = `operatorQuestionBus.options[$`
+  - variable `result` — `result =`
+  - arrow-function `<anonymous@5564>` — `option => option.optionId`
+  - … and 39 more symbols
+- `scripts/operator-question-classifier.mjs` (9 symbols)
+  - variable `CONFIRM_GATE_CATEGORIES` — `CONFIRM_GATE_CATEGORIES = new Set(['risk', 'approach', 'target'])`
+  - variable `COMPOSABLE_CATEGORIES` — `COMPOSABLE_CATEGORIES = new Set(['product', 'scope', 'mvp-scope'])`
+  - function `hasExclusiveOption` — `function hasExclusiveOption(options)` — *True iff any option declares a non-empty `exclusiveWith` array. Pure helper, tolerant of a missing/non-array `options` and of malformed option entries.*
+  - arrow-function `<anonymous@2593>` — `o => Array.isArray(o?.exclusiveWith) && o.exclusiveWith.length > 0`
+  - function `isComposable` — `export function isComposable(` — *§1.1 composable() predicate — the single source of truth for callers. A question is composable iff its category is in COMPOSABLE_CATEGORIES AND no option carries an exclusiveWith constraint (§1.1:147)*
+  - function `classifySelectMode` — `export function classifySelectMode(` — *Classify a parked operator question into a UI select mode.*
+  - variable `catComposable` — `catComposable = COMPOSABLE_CATEGORIES.has(category)`
+  - variable `anyExclusive` — `anyExclusive = hasExclusiveOption(options)`
+  - variable `effComposable` — `effComposable = (composable === undefined ? catComposable : !!composable) && !anyExclusive`
+
+### Diff, candidate, evidence and receipt views — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 194 · **Callable:** 44 · **Authored purpose:** 0
+- `apps/arc-tui/src/workspace/cognitive_projection.rs` (179 symbols)
+  - struct `ClideTaskRuntimeProjectionV1` — `pub struct ClideTaskRuntimeProjectionV1`
+  - function `verify_projection_sha256` — `pub fn verify_projection_sha256(&self) -> Result<(), ProjectionVerificationError>`
+  - function `verify_clide_task_runtime_projection_wire_v1` — `pub fn verify_clide_task_runtime_projection_wire_v1(`
+  - enum `ProjectionVerificationError` — `pub enum ProjectionVerificationError`
+  - function `fmt` — `fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result`
+  - struct `UncheckedEnvelope` — `struct UncheckedEnvelope`
+  - type `Error` — `type Error = String;`
+  - function `try_from` — `fn try_from(value: UncheckedEnvelope) -> Result<Self, Self::Error>`
+  - struct `UnsignedEnvelope` — `struct UnsignedEnvelope<'a>`
+  - struct `Projection` — `pub struct Projection`
+  - struct `BrainProjection` — `pub struct BrainProjection`
+  - struct `GoalCapsuleProjection` — `pub struct GoalCapsuleProjection`
+  - enum `GoalCapsuleDecision` — `pub enum GoalCapsuleDecision`
+  - struct `GoalRefinementProjection` — `pub struct GoalRefinementProjection`
+  - struct `CandidateProjection` — `pub struct CandidateProjection`
+  - enum `CandidateVerificationState` — `pub enum CandidateVerificationState`
+  - struct `OracleEvaluationProjection` — `pub struct OracleEvaluationProjection`
+  - enum `OracleEvaluationState` — `pub enum OracleEvaluationState`
+  - enum `OracleCoverageState` — `pub enum OracleCoverageState`
+  - struct `CandidateEffectProjection` — `pub struct CandidateEffectProjection`
+  - enum `CandidateEffectState` — `pub enum CandidateEffectState`
+  - struct `ReasoningEpisodeProjection` — `pub struct ReasoningEpisodeProjection`
+  - struct `ReasoningSourcePrefix` — `pub struct ReasoningSourcePrefix`
+  - struct `ReasoningArm` — `pub struct ReasoningArm`
+  - enum `ReasoningArmMode` — `pub enum ReasoningArmMode`
+  - struct `ReasoningOperator` — `pub struct ReasoningOperator`
+  - enum `CognitiveOutputStatus` — `pub enum CognitiveOutputStatus`
+  - enum `ModelIdentityState` — `pub enum ModelIdentityState`
+  - enum `ReasoningEventKind` — `pub enum ReasoningEventKind`
+  - struct `ReasoningTerminal` — `pub struct ReasoningTerminal`
+  - enum `ReasoningTerminalStatus` — `pub enum ReasoningTerminalStatus`
+  - enum `ReasoningSelectionEffect` — `pub enum ReasoningSelectionEffect`
+  - struct `ReasoningProductDigests` — `pub struct ReasoningProductDigests`
+  - enum `CotPolicy` — `pub enum CotPolicy`
+  - struct `AdaptivePlanProposalProjection` — `pub struct AdaptivePlanProposalProjection`
+  - struct `ObligationDenominator` — `pub struct ObligationDenominator`
+  - struct `AdaptiveBranch` — `pub struct AdaptiveBranch`
+  - enum `AdaptiveTriggerKind` — `pub enum AdaptiveTriggerKind`
+  - enum `AdaptiveDecisionOperation` — `pub enum AdaptiveDecisionOperation`
+  - enum `AdaptiveRuntimeMethod` — `pub enum AdaptiveRuntimeMethod`
+  - … and 139 more symbols
+- `apps/arc-tui/src/workspace/diff.rs` (15 symbols)
+  - struct `Hunk` — `pub struct Hunk`
+  - struct `DiffFile` — `pub struct DiffFile`
+  - struct `ParsedDiff` — `pub struct ParsedDiff`
+  - function `hunk_count` — `pub fn hunk_count(&self) -> usize`
+  - function `file_path_from_header` — `fn file_path_from_header(header: &[String]) -> String`
+  - function `parse` — `pub fn parse(diff: &str) -> ParsedDiff`
+  - function `reconstruct` — `pub fn reconstruct(parsed: &ParsedDiff, accepted: &[bool]) -> String`
+  - enum `DiffRow` — `pub enum DiffRow`
+  - struct `DiffRowIndex` — `pub struct DiffRowIndex`
+  - function `build` — `pub fn build(parsed: &ParsedDiff) -> DiffRowIndex`
+  - module `tests` — `mod tests`
+  - function `parses_files_and_hunks_with_counts` — `fn parses_files_and_hunks_with_counts()`
+  - function `reconstruct_keeps_only_accepted_hunks_and_drops_empty_files` — `fn reconstruct_keeps_only_accepted_hunks_and_drops_empty_files()`
+  - function `reconstruct_drops_a_file_with_no_accepted_hunks` — `fn reconstruct_drops_a_file_with_no_accepted_hunks()`
+  - function `row_index_flattens_in_render_order_with_o1_cursor_lookup` — `fn row_index_flattens_in_render_order_with_o1_cursor_lookup()`
+
+### Automations, long-horizon and heartbeat entry — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 233 · **Callable:** 52 · **Authored purpose:** 9
+- `scripts/autonomous-loop-runner.mjs` (38 symbols)
+  - variable `AUTONOMOUS_LOOP_RUNNER_VERSION` — `AUTONOMOUS_LOOP_RUNNER_VERSION = '0.1.0'`
+  - arrow-function `sha256` — `(s) => createHash('sha256').update(String(s ?? ''), 'utf8').digest('hex')`
+  - function `git` — `function git(cwd, args)`
+  - function `gitQuiet` — `function gitQuiet(cwd, args)`
+  - function `writeJsonAtomic` — `function writeJsonAtomic(file, obj)`
+  - variable `tmp` — `tmp = `$`
+  - function `patchTouchesTestPath` — `function patchTouchesTestPath(diff)` — *True iff the diff creates/edits a TEST file — used to mark the loop as having authored its own test, which disqualifies a subsequent differential solve from provenance-cleanliness (FIX-A).*
+  - variable `s` — `s = String(diff || '')`
+  - function `runAutonomousLoop` — `export async function runAutonomousLoop(` — *Run the autonomous multi-turn loop.*
+  - variable `loopDir` — `loopDir = path.join(outputDir, 'autonomous-loop')`
+  - variable `statePath` — `statePath = path.join(loopDir, 'state.json')`
+  - variable `loopWtBase` — `loopWtBase = path.join(loopDir, 'loop-wt')`
+  - variable `loopWt` — `loopWt`
+  - variable `loopBaseCommit` — `loopBaseCommit`
+  - variable `bestCommit` — `bestCommit`
+  - variable `deadlineAt` — `deadlineAt`
+  - variable `stepsUsed` — `stepsUsed`
+  - variable `bestWasAccepted` — `bestWasAccepted`
+  - variable `plateau` — `plateau`
+  - variable `loopAuthoredTests` — `loopAuthoredTests`
+  - variable `bestUnverifiedTurn` — `bestUnverifiedTurn = null`
+  - variable `coherenceArmed` — `coherenceArmed = process.env.ARC_COHERENCE_ESCALATION === '1'`
+  - variable `coherenceLedger` — `coherenceLedger = null`
+  - arrow-function `persist` — `() => writeJsonAtomic(statePath,`
+  - arrow-function `emit` — `() =>`
+  - variable `cumulative` — `cumulative = ''`
+  - variable `st` — `st = JSON.parse(readFileSync(statePath, 'utf8'))`
+  - variable `created` — `created = createIsolatedWorktree(codeRepoRoot, loopWtBase)`
+  - variable `iterDir` — `iterDir = path.join(loopDir, `iter-$`
+  - variable `iterSignal` — `iterSignal = loopBudgetSignal(controllerSignal, deadlineAt - now())`
+  - variable `turn` — `turn = await runLoopTurn(`
+  - variable `provenanceCleanAcceptance` — `provenanceCleanAcceptance = turnReportsVerifiedSolve(turn) && turn?.acceptedByGate === true && (`
+  - variable `decision` — `decision = decideNextStep(`
+  - variable `diff` — `diff = typeof turn?.patchDiff === 'string' ? turn.patchDiff : null`
+  - variable `canAdvance` — `canAdvance = Boolean(diff && diff.trim() && turn?.solvedGate?.noNewRed !== false)`
+  - variable `patchFile` — `patchFile = path.join(iterDir, 'iter.patch')`
+  - variable `coherence` — `coherence = evaluateCoherence(`
+  - variable `escalation` — `escalation = coherenceEscalationDirective(coherence,`
+- `scripts/multihour-loop-runner.mjs` (117 symbols)
+  - variable `MULTIHOUR_LOOP_RUNNER_VERSION` — `MULTIHOUR_LOOP_RUNNER_VERSION = '0.1.0'`
+  - arrow-function `sha256` — `(s) => createHash('sha256').update(String(s ?? ''), 'utf8').digest('hex')`
+  - function `git` — `function git(cwd, args)`
+  - function `gitQuiet` — `function gitQuiet(cwd, args)`
+  - function `multiHourLoopSelected` — `export function multiHourLoopSelected(env = process.env, mode = null, aborted = false)` — *multiHourLoopSelected — the DAEMON's selection predicate (the OFF gate). PURE (no side effects, no throw): the daemon evaluates this to decide whether to construct/invoke runMultiHourLoopRunner at all*
+  - function `goalPhaseGateSelected` — `export function goalPhaseGateSelected(env = process.env)` — *goalPhaseGateSelected — the /goal PHASE-GATING WIRE's OFF gate (design 2026-07-24). PURE (no side effects, no throw). Mirrors multiHourLoopSelected: when ARC_GOAL_PHASE_GATE is unset it returns false *
+  - variable `PHASE_FOCUS_MARKER` — `PHASE_FOCUS_MARKER = '[Multi-hour phase — focus on this sub-task now]:'`
+  - variable `STEERING_MARKER` — `STEERING_MARKER = '[User steering — mid-run correction, apply this now]:'`
+  - function `steeringNoteFromContext` — `export function steeringNoteFromContext(ctx)` — *steeringNoteFromContext — PURE: collapse the loop-merged `ctx.steering` messages into a single note string the coordinator prompt appends, or null when there is nothing to steer with. Total on any ctx*
+  - variable `msgs` — `msgs = ctx && Array.isArray(ctx.steering) ? ctx.steering : null`
+  - variable `parts` — `parts = []`
+  - variable `m` — `m`
+  - variable `text` — `text = typeof m === 'string' ? m : (m && typeof m.text === 'string' ? m.text : '')`
+  - function `phaseSteeredTurnArgs` — `export function phaseSteeredTurnArgs(baseTurnArgs,` — *phaseSteeredTurnArgs — GAP-A per-phase STEERING for the multi-hour loop. Returns turn-args whose `rawPrompt` is ANNOTATED with THIS phase's sub-task focus and whose `deps.focusPlan` is REFRESHED to th*
+  - variable `target` — `target = typeof phaseTarget === 'string' ? phaseTarget.trim() : ''`
+  - variable `focus` — `focus = Array.isArray(focusPlanOverride)`
+  - arrow-function `<anonymous@11733>` — `(t) => t && typeof t.text === 'string' && t.text.trim()`
+  - arrow-function `<anonymous@11801>` — `(t) => (`
+  - variable `steer` — `steer = typeof steeringNote === 'string' ? steeringNote.trim() : ''`
+  - variable `base` — `base = baseTurnArgs && typeof baseTurnArgs === 'object' ? baseTurnArgs :`
+  - variable `rawPrompt` — `rawPrompt = target`
+  - variable `basePrompt` — `basePrompt = typeof rawPrompt === 'string' ? rawPrompt : (typeof base.rawPrompt === 'string' ? base.rawPrompt : '')`
+  - variable `deps` — `deps = (focus && focus.length > 0 && base.deps && typeof base.deps === 'object')`
+  - function `livePlanFocus` — `function livePlanFocus(plan)` — *livePlanFocus — the loop's live plan → a focusPlan array ({ text, done }) for the coordinator's Focus-Chain. Reads ONLY the step leaves (the todo-derived phases) in plan order; `done` reflects the loo*
+  - variable `focus` — `focus = []`
+  - variable `n` — `n`
+  - variable `text` — `text = typeof n.text === 'string' ? n.text.trim() : ''`
+  - function `targetsFromTodos` — `function targetsFromTodos(todos)` — *Build the ordered, unique, not-yet-done target list from the chat's todos. Order-preserving dedupe on trimmed text; done + empty todos dropped. planFromOrderedTargets requires unique targets (a collis*
+  - variable `seen` — `seen = new Set()`
+  - variable `targets` — `targets = []`
+  - variable `t` — `t`
+  - variable `text` — `text = t && typeof t.text === 'string' ? t.text.trim() : ''`
+  - function `runMultiHourLoopRunner` — `export async function runMultiHourLoopRunner(` — *Run the phase-driven autonomous multi-hour loop, or degrade to the single base turn.*
+  - variable `disclose` — `disclose = multihourDegradeDisclosureEnabled(process.env)`
+  - variable `sessionLog` — `sessionLog = null`
+  - arrow-function `degradeTo` — `async (code, detail = null) =>`
+  - variable `out` — `out = await runBaseTurn()`
+  - variable `disclosed` — `disclosed = disclose ? withDegradeDisclosure(out, code, detail) : out`
+  - variable `out` — `out = await runBaseTurn?.()`
+  - variable `targets` — `targets = targetsFromTodos(todos)`
+  - … and 77 more symbols
+- `scripts/task-heartbeat.mjs` (78 symbols)
+  - variable `DEFAULT_CHECK_INTERVAL_SEC` — `DEFAULT_CHECK_INTERVAL_SEC = 30`
+  - variable `DEFAULT_STALL_THRESHOLD_SEC` — `DEFAULT_STALL_THRESHOLD_SEC = 120`
+  - variable `DEFAULT_MAX_RUNTIME_SEC` — `DEFAULT_MAX_RUNTIME_SEC = 3600`
+  - function `safeTaskId` — `function safeTaskId(taskId)`
+  - variable `value` — `value = String(taskId || '').trim()`
+  - function `heartbeatDir` — `function heartbeatDir(projectSlug)`
+  - variable `<anonymous@807>`
+  - variable `dir` — `dir = path.join(paths.audit, 'heartbeats')`
+  - function `stateFile` — `function stateFile(taskId, projectSlug)`
+  - function `loadState` — `function loadState(taskId, projectSlug)`
+  - variable `file` — `file = stateFile(taskId, projectSlug)`
+  - function `saveState` — `function saveState(taskId, projectSlug, state)`
+  - variable `file` — `file = stateFile(taskId, projectSlug)`
+  - variable `temporary` — `temporary = `$`
+  - function `pidExists` — `function pidExists(pid)`
+  - function `processStats` — `function processStats(pid)`
+  - variable `output` — `output = execFileSync(`
+  - variable `<anonymous@1870>` — `[cpu, _memoryPercent, rss, elapsed] = output.split(/\s+/)`
+  - function `readTail` — `function readTail(file, maxBytes = 2_000)`
+  - variable `content` — `content = readFileSync(file)`
+  - function `newestFileMtime` — `function newestFileMtime(directory)`
+  - variable `newest` — `newest = null`
+  - variable `name` — `name`
+  - variable `file` — `file = path.join(directory, name)`
+  - variable `stats` — `stats`
+  - variable `PROGRESS_PATTERNS` — `PROGRESS_PATTERNS = [`
+  - function `checkProcessProgress` — `export function checkProcessProgress(`
+  - variable `nowDate` — `nowDate = now instanceof Date ? now : new Date(now)`
+  - variable `nowMs` — `nowMs = nowDate.getTime()`
+  - variable `previous` — `previous = loadState(taskId, projectSlug)`
+  - variable `state` — `state = previous ||`
+  - variable `check` — `check =`
+  - variable `stats` — `stats = statSync(logFile)`
+  - variable `tail` — `tail = readTail(logFile)`
+  - arrow-function `<anonymous@4715>` — `pattern => pattern.test(tail)`
+  - variable `newest` — `newest = newestFileMtime(outputDir)`
+  - variable `hasProgress` — `hasProgress = check.progressDetected || check.outputChanged || check.cpuPercent > 1`
+  - variable `lastProgressMs` — `lastProgressMs = state.lastProgressAt`
+  - variable `timeSinceProgress` — `timeSinceProgress = (nowMs - lastProgressMs) / 1000`
+  - variable `runtime` — `runtime = (nowMs - Date.parse(state.startedAt)) / 1000`
+  - … and 38 more symbols
+
+### User-visible answer, artifact, effect or unresolved result — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 618 · **Callable:** 178 · **Authored purpose:** 27
+- `apps/arc-tui/src/workspace/protocol.rs` (67 symbols)
+  - struct `ChatSummary` — `pub struct ChatSummary`
+  - enum `Role` — `pub enum Role`
+  - struct `ChatEvent` — `pub struct ChatEvent`
+  - struct `ChatSearchHit` — `pub struct ChatSearchHit`
+  - struct `Note` — `pub struct Note`
+  - struct `SymbolHit` — `pub struct SymbolHit`
+  - struct `CheckpointInfo` — `pub struct CheckpointInfo`
+  - struct `Todo` — `pub struct Todo`
+  - struct `QuestionOption` — `pub struct QuestionOption`
+  - struct `OperatorQuestion` — `pub struct OperatorQuestion`
+  - struct `QuestionAnswer` — `pub struct QuestionAnswer`
+  - struct `RunTimelineEntry` — `pub struct RunTimelineEntry`
+  - enum `ServerFrame` — `pub enum ServerFrame`
+  - enum `ClientFrame` — `pub enum ClientFrame`
+  - function `subscribe_all` — `pub fn subscribe_all() -> Self`
+  - module `tests` — `mod tests`
+  - function `hello_frame_deserializes` — `fn hello_frame_deserializes()`
+  - function `hello_frame_with_repo_path_deserializes` — `fn hello_frame_with_repo_path_deserializes()`
+  - function `hello_frame_negotiates_operator_authority_per_connection` — `fn hello_frame_negotiates_operator_authority_per_connection()`
+  - function `status_frame_keeps_raw_payload` — `fn status_frame_keeps_raw_payload()`
+  - function `chats_frame_deserializes` — `fn chats_frame_deserializes()`
+  - function `chat_event_frame_deserializes` — `fn chat_event_frame_deserializes()`
+  - function `chat_event_roles_cover_contract` — `fn chat_event_roles_cover_contract()`
+  - function `notes_frame_deserializes` — `fn notes_frame_deserializes()`
+  - function `todos_frame_deserializes` — `fn todos_frame_deserializes()`
+  - function `usage_frame_deserializes` — `fn usage_frame_deserializes()`
+  - function `error_frame_deserializes` — `fn error_frame_deserializes()`
+  - function `assert_serializes_to` — `fn assert_serializes_to(frame: &ClientFrame, expected: &str)`
+  - function `subscribe_serializes_to_contract_json` — `fn subscribe_serializes_to_contract_json()`
+  - function `chat_create_serializes_to_contract_json` — `fn chat_create_serializes_to_contract_json()`
+  - function `chat_send_serializes_to_contract_json` — `fn chat_send_serializes_to_contract_json()`
+  - function `chat_send_with_mode_serializes_to_contract_json` — `fn chat_send_with_mode_serializes_to_contract_json()`
+  - function `chat_send_submission_id_is_additive_and_camel_case` — `fn chat_send_submission_id_is_additive_and_camel_case()`
+  - function `chat_send_with_attachments_serializes_to_contract_json` — `fn chat_send_with_attachments_serializes_to_contract_json()`
+  - function `chat_send_requester_acceptance_omitted_when_none_is_byte_identical` — `fn chat_send_requester_acceptance_omitted_when_none_is_byte_identical()`
+  - function `chat_send_with_requester_acceptance_serializes_the_field` — `fn chat_send_with_requester_acceptance_serializes_the_field()`
+  - function `chat_send_goal_full_auto_omitted_when_none_is_byte_identical` — `fn chat_send_goal_full_auto_omitted_when_none_is_byte_identical()`
+  - function `chat_send_with_goal_full_auto_serializes_the_field` — `fn chat_send_with_goal_full_auto_serializes_the_field()`
+  - function `operator_question_frame_deserializes` — `fn operator_question_frame_deserializes()`
+  - function `operator_question_with_timeout_deserializes` — `fn operator_question_with_timeout_deserializes()`
+  - … and 27 more symbols
+- `scripts/chat-turn-runner.mjs` (551 symbols)
+  - variable `CHAT_TURN_RUNNER_VERSION` — `CHAT_TURN_RUNNER_VERSION = '1.1.0'`
+  - variable `CHAT_TURN_MODES` — `CHAT_TURN_MODES = Object.freeze(['basic', 'auto', 'deep-research'])`
+  - function `trustedCapsuleSafetySignals` — `function trustedCapsuleSafetySignals(taskSpec)`
+  - variable `trustedInstruction` — `trustedInstruction = taskSpecInstructionPrompt(taskSpec)`
+  - variable `hasConcreteTarget` — `hasConcreteTarget = (taskSpec?.facts || []).some(fact => (`
+  - arrow-function `<anonymous@6392>` — `fact => (`
+  - function `scopeBoundGoalCapsuleInput` — `function scopeBoundGoalCapsuleInput(taskSpec)`
+  - variable `selectedScope` — `selectedScope = taskSpec?.scopeCommitment?.selectedScope`
+  - variable `selectedScopeJson` — `selectedScopeJson = JSON.stringify(selectedScope)`
+  - variable `selectedScopeSourceRefId` — `selectedScopeSourceRefId = 'user-committed-selected-scope'`
+  - function `isNonInteractiveProceed` — `export function isNonInteractiveProceed(permission)` — *B8 #5 (class "advisory clarification must auto-resolve under ANY non-interactive autonomy"). The daemon's valid permission set is ['plan','ask','accept-edits','auto','bypass'] (arc-daemon.mjs ~:629). *
+  - function `buildTurnRepoContext` — `export function buildTurnRepoContext(repoRoot,` — *M18 (reconciliation): the INWARD half of research/intent grounding. Every TUI turn previously ran with repoContext={} — the research repo-scout scouted an EMPTY repo and the intent compiler's resolver*
+  - variable `out` — `out = spawnSync('git', ['ls-files'],`
+  - variable `all` — `all = out.stdout.trim().split('\n').filter(Boolean)`
+  - variable `roots` — `roots = all.slice(0, maxRoots)`
+  - variable `DEFAULT_LOCAL_ENDPOINT_LABEL` — `DEFAULT_LOCAL_ENDPOINT_LABEL = '127.0.0.1:8095'`
+  - arrow-function `envMs` — `(name, def) => Number(process.env[name]) || def`
+  - variable `DEFAULT_MODEL_TIMEOUT_MS` — `DEFAULT_MODEL_TIMEOUT_MS = envMs('ARC_MODEL_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_COMPILE_TIMEOUT_MS` — `DEFAULT_COMPILE_TIMEOUT_MS = envMs('ARC_COMPILE_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_DAILY_DRIVER_TIMEOUT_MS` — `DEFAULT_DAILY_DRIVER_TIMEOUT_MS = envMs('ARC_DAILY_DRIVER_TIMEOUT_MS', 180_000)`
+  - variable `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS` — `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS = envMs('ARC_COORDINATOR_DRIVER_TIMEOUT_MS', 900_000)`
+  - function `withTimeout` — `export function withTimeout(promise, ms, signal = null)` — *Race a promise against a wall-clock deadline and an optional AbortSignal. The underlying promise is not cancelled (model adapters carry their own AbortSignal timeouts); this only guarantees the caller*
+  - arrow-function `<anonymous@12316>` — `(resolve, reject) =>`
+  - variable `settled` — `settled = false`
+  - arrow-function `finish` — `(fn, value) =>`
+  - arrow-function `onAbort` — `() => finish(reject, new Error('aborted'))`
+  - variable `timer` — `timer = setTimeout(() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@12649>` — `() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@13173>` — `value => finish(resolve, value)`
+  - arrow-function `<anonymous@13212>` — `error => finish(reject, error)`
+  - function `guardedModelInvoke` — `async function guardedModelInvoke(invokeLocal, args,` — *Bounded, never-throwing single model call.*
+  - variable `result` — `result = await withTimeout(Promise.resolve(invokeLocal(args)), timeoutMs, signal)`
+  - variable `error` — `error`
+  - function `makeGuardedInvoke9B` — `function makeGuardedInvoke9B(invokeLocal,` — *Wrap an invokeLocal into a guarded invoke9B (the intent compiler contract). On any model failure it returns { content: '' } so decomposedExtraction degrades to rule-only facts instead of rejecting the*
+  - arrow-function `<anonymous@14172>` — `async args =>`
+  - variable `result` — `result = await guardedModelInvoke(invokeLocal, args,`
+  - function `buildOfflineMessage` — `function buildOfflineMessage(goal, endpointLabel, reason = null)`
+  - variable `timeoutMatch` — `timeoutMatch = typeof reason === 'string' ? reason.match(/^timeout after (\d+)ms$/) : null`
+  - variable `head` — `head = timeoutMatch`
+  - variable `detail` — `detail = reason ? ` [$`
+  - … and 511 more symbols
+
+## 01 · NORMATIVE, LANGUAGE, INTENT, AND ACCEPTANCE PLANE
+
+### Protected hierarchical intent map — SOLE AUTHORITY / CONSTITUTION
+- **Files:** 1 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Exact prompt and conversation prefix — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 551 · **Callable:** 126 · **Authored purpose:** 27
+- `scripts/chat-turn-runner.mjs` (551 symbols)
+  - variable `CHAT_TURN_RUNNER_VERSION` — `CHAT_TURN_RUNNER_VERSION = '1.1.0'`
+  - variable `CHAT_TURN_MODES` — `CHAT_TURN_MODES = Object.freeze(['basic', 'auto', 'deep-research'])`
+  - function `trustedCapsuleSafetySignals` — `function trustedCapsuleSafetySignals(taskSpec)`
+  - variable `trustedInstruction` — `trustedInstruction = taskSpecInstructionPrompt(taskSpec)`
+  - variable `hasConcreteTarget` — `hasConcreteTarget = (taskSpec?.facts || []).some(fact => (`
+  - arrow-function `<anonymous@6392>` — `fact => (`
+  - function `scopeBoundGoalCapsuleInput` — `function scopeBoundGoalCapsuleInput(taskSpec)`
+  - variable `selectedScope` — `selectedScope = taskSpec?.scopeCommitment?.selectedScope`
+  - variable `selectedScopeJson` — `selectedScopeJson = JSON.stringify(selectedScope)`
+  - variable `selectedScopeSourceRefId` — `selectedScopeSourceRefId = 'user-committed-selected-scope'`
+  - function `isNonInteractiveProceed` — `export function isNonInteractiveProceed(permission)` — *B8 #5 (class "advisory clarification must auto-resolve under ANY non-interactive autonomy"). The daemon's valid permission set is ['plan','ask','accept-edits','auto','bypass'] (arc-daemon.mjs ~:629). *
+  - function `buildTurnRepoContext` — `export function buildTurnRepoContext(repoRoot,` — *M18 (reconciliation): the INWARD half of research/intent grounding. Every TUI turn previously ran with repoContext={} — the research repo-scout scouted an EMPTY repo and the intent compiler's resolver*
+  - variable `out` — `out = spawnSync('git', ['ls-files'],`
+  - variable `all` — `all = out.stdout.trim().split('\n').filter(Boolean)`
+  - variable `roots` — `roots = all.slice(0, maxRoots)`
+  - variable `DEFAULT_LOCAL_ENDPOINT_LABEL` — `DEFAULT_LOCAL_ENDPOINT_LABEL = '127.0.0.1:8095'`
+  - arrow-function `envMs` — `(name, def) => Number(process.env[name]) || def`
+  - variable `DEFAULT_MODEL_TIMEOUT_MS` — `DEFAULT_MODEL_TIMEOUT_MS = envMs('ARC_MODEL_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_COMPILE_TIMEOUT_MS` — `DEFAULT_COMPILE_TIMEOUT_MS = envMs('ARC_COMPILE_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_DAILY_DRIVER_TIMEOUT_MS` — `DEFAULT_DAILY_DRIVER_TIMEOUT_MS = envMs('ARC_DAILY_DRIVER_TIMEOUT_MS', 180_000)`
+  - variable `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS` — `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS = envMs('ARC_COORDINATOR_DRIVER_TIMEOUT_MS', 900_000)`
+  - function `withTimeout` — `export function withTimeout(promise, ms, signal = null)` — *Race a promise against a wall-clock deadline and an optional AbortSignal. The underlying promise is not cancelled (model adapters carry their own AbortSignal timeouts); this only guarantees the caller*
+  - arrow-function `<anonymous@12316>` — `(resolve, reject) =>`
+  - variable `settled` — `settled = false`
+  - arrow-function `finish` — `(fn, value) =>`
+  - arrow-function `onAbort` — `() => finish(reject, new Error('aborted'))`
+  - variable `timer` — `timer = setTimeout(() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@12649>` — `() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@13173>` — `value => finish(resolve, value)`
+  - arrow-function `<anonymous@13212>` — `error => finish(reject, error)`
+  - function `guardedModelInvoke` — `async function guardedModelInvoke(invokeLocal, args,` — *Bounded, never-throwing single model call.*
+  - variable `result` — `result = await withTimeout(Promise.resolve(invokeLocal(args)), timeoutMs, signal)`
+  - variable `error` — `error`
+  - function `makeGuardedInvoke9B` — `function makeGuardedInvoke9B(invokeLocal,` — *Wrap an invokeLocal into a guarded invoke9B (the intent compiler contract). On any model failure it returns { content: '' } so decomposedExtraction degrades to rule-only facts instead of rejecting the*
+  - arrow-function `<anonymous@14172>` — `async args =>`
+  - variable `result` — `result = await guardedModelInvoke(invokeLocal, args,`
+  - function `buildOfflineMessage` — `function buildOfflineMessage(goal, endpointLabel, reason = null)`
+  - variable `timeoutMatch` — `timeoutMatch = typeof reason === 'string' ? reason.match(/^timeout after (\d+)ms$/) : null`
+  - variable `head` — `head = timeoutMatch`
+  - variable `detail` — `detail = reason ? ` [$`
+  - … and 511 more symbols
+
+### Prompt sanitiser and instruction/data fence — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 158 · **Callable:** 41 · **Authored purpose:** 19
+- `scripts/injection-defense.mjs` (37 symbols)
+  - variable `SPOTLIGHT_PREAMBLE` — `SPOTLIGHT_PREAMBLE =`
+  - variable `OPEN` — `OPEN = '⟦UNTRUSTED⟧'`
+  - variable `CLOSE` — `CLOSE = '⟦/UNTRUSTED⟧'`
+  - function `datamark` — `export function datamark(text,` — *Datamark one untrusted span: fence it and interleave a per-span marker on each line so a mid-span "ignore previous instructions" cannot visually escape the fence. Deterministic (marker derived from a *
+  - variable `body` — `body = String(text ?? '')`
+  - variable `tag` — `tag = `⁣$`
+  - variable `marked` — `marked = body.split('\n').map((line) => `$`
+  - arrow-function `<anonymous@2318>` — `(line) => `$`
+  - function `wrapUntrustedSpans` — `export function wrapUntrustedSpans(spans = [],` — *Wrap a set of untrusted spans for inclusion in a prompt. Returns { preamble, block }. spans: [{ source: 'repo-file'|'memory'|'web', label, text }]*
+  - variable `parts` — `parts = []`
+  - variable `s` — `s`
+  - variable `EXFIL_SINKS` — `EXFIL_SINKS = new Set(['network', 'http', 'fetch', 'shell', 'exec', 'file-write', 'email', 'webhook', 'browser-navigate'])`
+  - variable `KNOWN_BENIGN_KINDS` — `KNOWN_BENIGN_KINDS = new Set(['file-write-workspace', 'read', 'file-read', 'noop', 'log', 'test-runner'])`
+  - variable `KNOWN_BENIGN_EXECS` — `KNOWN_BENIGN_EXECS = new Set([`
+  - variable `EXFIL_NAME_RE` — `EXFIL_NAME_RE = /(fetch|curl|wget|http|post|upload|exec|spawn|shell|bash|writefile|sendmail|email|webhook|navigate)/`
+  - function `classifyToolSink` — `export function classifyToolSink(toolCall =`
+  - variable `kind` — `kind = String(toolCall.kind || '').toLowerCase()`
+  - variable `name` — `name = String(toolCall.name || toolCall.tool || toolCall.command || '').toLowerCase()`
+  - variable `argsText` — `argsText = Array.isArray(toolCall.args)`
+  - variable `base` — `base = name.split(/[\\/]/).pop().replace(/\.(exe|bat|cmd|sh)$/, '')`
+  - function `gateToolCall` — `export function gateToolCall(toolCall =` — *Gate a tool call. If the turn has consumed tainted (untrusted) input AND the call is an exfil sink, require explicit confirmation. Benign calls, or exfil calls on an untainted turn, pass. Returns { al*
+  - variable `sink` — `sink = classifyToolSink(toolCall,`
+  - variable `INJECTION_CASES` — `INJECTION_CASES = [`
+  - function `runInjectionASR` — `export function runInjectionASR(builder, cases = INJECTION_CASES)` — *Measure attack-success-rate for a defended prompt builder. builder(spans) → string (the outbound prompt). An attack is NEUTRALISED if the directive, where present, sits INSIDE the untrusted fence AND *
+  - variable `results` — `results = cases.map((c) =>`
+  - arrow-function `<anonymous@9129>` — `(c) =>`
+  - variable `out` — `out = String(builder([`
+  - variable `hasPreamble` — `hasPreamble = out.includes('DATA') && /untrusted/i.test(out)`
+  - variable `fenceOpen` — `fenceOpen = out.indexOf(OPEN)`
+  - variable `fenceClose` — `fenceClose = out.indexOf(CLOSE)`
+  - variable `m` — `m = out.match(c.directive)`
+  - variable `inside` — `inside = m ? (out.indexOf(m[0]) > fenceOpen && (fenceClose === -1 || out.indexOf(m[0]) < fenceClose)) : true`
+  - variable `neutralised` — `neutralised = hasPreamble && fenceOpen !== -1 && inside`
+  - variable `succeeded` — `succeeded = results.filter((r) => !r.neutralised).length`
+  - arrow-function `<anonymous@9679>` — `(r) => !r.neutralised`
+  - function `defendedPromptBuilder` — `export function defendedPromptBuilder(spans)` — *The reference defended builder: preamble + datamarked spans. Used as the ASR baseline.*
+  - variable `<anonymous@9948>`
+- `scripts/prompt-sanitizer.mjs` (121 symbols)
+  - variable `SECRET_RUN_MAX` — `SECRET_RUN_MAX = 8192`
+  - variable `PEM_MAX` — `PEM_MAX = 16384`
+  - variable `SECRET_RULES` — `SECRET_RULES = [`
+  - arrow-function `validate` — `(m) => (/[/+]/.test(m) || (/[0-9]/.test(m) && /[a-z]/.test(m) && /[A-Z]/.test(m))) && !/^[0-9a-f]`
+  - arrow-function `validate` — `(_whole, groups) =>`
+  - variable `v` — `v = String((groups && groups[1]) || '')`
+  - variable `HASH_HEX_LENGTHS` — `HASH_HEX_LENGTHS = new Set([32, 40, 56, 64, 96, 128])`
+  - function `shannonEntropy` — `function shannonEntropy(s)` — *Shannon entropy in bits/char over the string's own symbol distribution. Deterministic, weak-model-safe.*
+  - variable `str` — `str = String(s || '')`
+  - variable `freq` — `freq = new Map()`
+  - variable `ch` — `ch`
+  - variable `h` — `h = 0`
+  - variable `c` — `c`
+  - variable `p` — `p = c / str.length`
+  - function `alphabetClasses` — `function alphabetClasses(s)` — *How many distinct alphabet classes (lower/upper/digit/symbol) a token spans — a mixed-alphabet proxy.*
+  - variable `n` — `n = 0`
+  - variable `MAX_SECRET_TOKEN_LEN` — `MAX_SECRET_TOKEN_LEN = 512`
+  - variable `CONSERVATIVE_SECRET_RULES` — `CONSERVATIVE_SECRET_RULES = [`
+  - arrow-function `validate` — `(m) => !HASH_HEX_LENGTHS.has(m.length) && shannonEntropy(m) >= 3.5`
+  - arrow-function `validate` — `(m) => alphabetClasses(m) >= 3 && shannonEntropy(m) >= 4.0 && !HASH_HEX_LENGTHS.has(m.length)`
+  - function `assertBoundedSecretRules` — `function assertBoundedSecretRules(rules, label)`
+  - variable `rule` — `rule`
+  - variable `src` — `src = rule?.re?.source || ''`
+  - variable `m` — `m = src.match(/\`
+  - arrow-function `DEFAULT_REPLACE` — `(type) => `[REDACTED:$`
+  - variable `B64_MIN_RUN` — `B64_MIN_RUN = 24`
+  - variable `DECODE_BUDGET` — `DECODE_BUDGET = 64 * 1024`
+  - variable `MAX_RUNS` — `MAX_RUNS = 4096`
+  - variable `MAX_RUN_LEN` — `MAX_RUN_LEN = 4096`
+  - function `plaintextHasSecret` — `function plaintextHasSecret(plaintext)` — *True iff running the plain SECRET_RULES over `plaintext` fires at least one rule. Non-recursive: scans the DECODED plaintext with the base rules only (never re-invokes the encoded pass), so it cannot *
+  - variable `s` — `s = String(plaintext || '')`
+  - variable `rule` — `rule`
+  - variable `m` — `m`
+  - function `redactEncodedSecrets` — `function redactEncodedSecrets(text)` — *Scan `text` for base64 (>=24 chars) and percent-encoded runs; for each run that DECODES cleanly and, once decoded, matches any base secret rule, redact the WHOLE run as [REDACTED:encoded-secret]. Boun*
+  - variable `out` — `out = String(text || '')`
+  - variable `count` — `count = 0`
+  - variable `budget` — `budget = DECODE_BUDGET`
+  - variable `runs` — `runs = 0`
+  - variable `B64_RE` — `B64_RE = new RegExp(`[A-Za-z0-9+/]`
+  - arrow-function `<anonymous@17550>` — `(run) =>`
+  - … and 81 more symbols
+
+### Semantic Source Atoms V1 — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 224 · **Callable:** 73 · **Authored purpose:** 0
+- `scripts/semantic-source-atoms-v1.mjs` (224 symbols)
+  - variable `SEMANTIC_SOURCE_ATOMS_ARTIFACT_V1` — `SEMANTIC_SOURCE_ATOMS_ARTIFACT_V1 = 'semantic-source-atoms-artifact-v1'`
+  - variable `SEMANTIC_SOURCE_ATOMS_GRAPH_V1` — `SEMANTIC_SOURCE_ATOMS_GRAPH_V1 = 'semantic-source-atoms-graph-v1'`
+  - variable `SEMANTIC_SOURCE_ATOMS_RECEIPT_V1` — `SEMANTIC_SOURCE_ATOMS_RECEIPT_V1 = 'semantic-source-atoms-receipt-v1'`
+  - variable `DISPOSITIONS` — `DISPOSITIONS = new Set([`
+  - variable `GENERAL_CATEGORIES` — `GENERAL_CATEGORIES = Object.freeze([`
+  - variable `SCRIPT_NAMES` — `SCRIPT_NAMES = Object.freeze([`
+  - variable `CATEGORY_TESTS` — `CATEGORY_TESTS = GENERAL_CATEGORIES.map(category => [`
+  - arrow-function `<anonymous@3422>` — `category => [`
+  - variable `SCRIPT_CLASSIFICATION_ORDER` — `SCRIPT_CLASSIFICATION_ORDER = Object.freeze([`
+  - arrow-function `<anonymous@3659>` — `script => ![`
+  - variable `SCRIPT_TESTS` — `SCRIPT_TESTS = SCRIPT_CLASSIFICATION_ORDER.map(script => [`
+  - arrow-function `<anonymous@3826>` — `script => [`
+  - variable `WHITE_SPACE_RE` — `WHITE_SPACE_RE = /^\p`
+  - variable `PUNCTUATION_RE` — `PUNCTUATION_RE = /^\p`
+  - variable `EXTENDED_PICTOGRAPHIC_RE` — `EXTENDED_PICTOGRAPHIC_RE = /\p`
+  - variable `DIGEST_RE` — `DIGEST_RE = /^[a-f0-9]`
+  - variable `BIDI_CONTROL_RE` — `BIDI_CONTROL_RE = /[\u061c\u200e\u200f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `JOIN_CONTROL_RE` — `JOIN_CONTROL_RE = /[\u200c\u200d]/u`
+  - variable `VARIATION_SELECTOR_RE` — `VARIATION_SELECTOR_RE = /[\ufe00-\ufe0f\u`
+  - variable `LITERAL_PRIORITIES` — `LITERAL_PRIORITIES = Object.freeze(`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - function `sha256Bytes` — `function sha256Bytes(value)`
+  - variable `MODULE_SOURCE_SHA256` — `MODULE_SOURCE_SHA256 = sha256Bytes(readFileSync(new URL(import.meta.url)))`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'value')`
+  - arrow-function `<anonymous@5212>` — `(entry, index) => canonicalize(entry, `$`
+  - arrow-function `<anonymous@5389>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256Canonical` — `function sha256Canonical(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `assertPlainDataTree` — `function assertPlainDataTree(root, pathName)`
+  - variable `active` — `active = new WeakSet()`
+  - variable `complete` — `complete = new WeakSet()`
+  - variable `stack` — `stack = [`
+  - variable `frame` — `frame = stack.pop()`
+  - variable `<anonymous@6504>`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `index` — `index = keys.length - 1`
+  - variable `key` — `key = keys[index]`
+  - … and 184 more symbols
+
+### Physical UD counterparser — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 269 · **Callable:** 85 · **Authored purpose:** 0
+- `scripts/semantic-ud-counterparser-v1.mjs` (254 symbols)
+  - variable `SEMANTIC_UD_COUNTERPARSER_OBSERVATION_V1` — `SEMANTIC_UD_COUNTERPARSER_OBSERVATION_V1 =`
+  - variable `SEMANTIC_UD_COUNTERPARSER_REFUSAL_V1` — `SEMANTIC_UD_COUNTERPARSER_REFUSAL_V1 =`
+  - variable `SEMANTIC_UD_COUNTERPARSER_SUBPROCESS_RESPONSE_V1` — `SEMANTIC_UD_COUNTERPARSER_SUBPROCESS_RESPONSE_V1 =`
+  - variable `REQUEST_SCHEMA` — `REQUEST_SCHEMA = 'semantic-ud-counterparser-request-v1'`
+  - variable `PINNED_STANZA_VERSION` — `PINNED_STANZA_VERSION = '1.11.1'`
+  - variable `PINNED_STANZA_TREE_SHA256` — `PINNED_STANZA_TREE_SHA256 =`
+  - variable `PINNED_STANZA_RECORD_SHA256` — `PINNED_STANZA_RECORD_SHA256 =`
+  - variable `PINNED_PARSER_SCRIPT_SHA256` — `PINNED_PARSER_SCRIPT_SHA256 =`
+  - variable `PINNED_PYTHON_EXECUTABLE_SHA256` — `PINNED_PYTHON_EXECUTABLE_SHA256 =`
+  - variable `PINNED_TORCH_VERSION` — `PINNED_TORCH_VERSION = '2.13.0+cpu'`
+  - variable `PINNED_TORCH_RECORD_SHA256` — `PINNED_TORCH_RECORD_SHA256 =`
+  - variable `PINNED_TORCH_INIT_SHA256` — `PINNED_TORCH_INIT_SHA256 =`
+  - variable `PINNED_TORCH_EXTENSION_SHA256` — `PINNED_TORCH_EXTENSION_SHA256 =`
+  - variable `PINNED_RESOURCE_MANIFEST_SHA256` — `PINNED_RESOURCE_MANIFEST_SHA256 =`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 30_000`
+  - variable `MAX_TIMEOUT_MS` — `MAX_TIMEOUT_MS = 120_000`
+  - variable `MAX_STREAM_BYTES` — `MAX_STREAM_BYTES = 8 * 1024 * 1024`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `BASE64_RE` — `BASE64_RE = /^(?:[A-Za-z0-9+/]`
+  - variable `MODULE_PATH` — `MODULE_PATH = fileURLToPath(import.meta.url)`
+  - variable `PARSER_SCRIPT_PATH` — `PARSER_SCRIPT_PATH = fileURLToPath(new URL('./semantic-ud-counterparser-v1.py', import.meta.url))`
+  - variable `MODULE_SOURCE_SHA256` — `MODULE_SOURCE_SHA256 = sha256Bytes(readFileSync(MODULE_PATH))`
+  - variable `PINNED_RESOURCES` — `PINNED_RESOURCES = Object.freeze([`
+  - variable `PROCESSOR_PACKAGES` — `PROCESSOR_PACKAGES = Object.freeze(`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - variable `CUE_LEXICON` — `CUE_LEXICON = Object.freeze(`
+  - class `SemanticUdCounterparserV1Error` — `export class SemanticUdCounterparserV1Error extends Error`
+  - constructor `constructor` — `constructor(message, code = 'SEMANTIC_UD_COUNTERPARSER_V1_INVALID', options =`
+  - function `fail` — `function fail(message, code, options =`
+  - function `sha256Bytes` — `function sha256Bytes(value)`
+  - function `utf8Compare` — `function utf8Compare(left, right)`
+  - function `canonicalize` — `function canonicalize(value, label = 'value')`
+  - arrow-function `<anonymous@5456>` — `(entry, index) => canonicalize(entry, `$`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - arrow-function `<anonymous@5789>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256Canonical` — `function sha256Canonical(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `descriptor` — `descriptor`
+  - function `assertPlainDataTree` — `function assertPlainDataTree(root, label)`
+  - … and 214 more symbols
+- `scripts/semantic-ud-counterparser-v1.py` (15 symbols)
+  - class `Refusal` — `class Refusal(Exception):`
+  - method `__init__` — `def __init__(self, code: str, detail: str):`
+  - function `sha256_bytes` — `def sha256_bytes(data: bytes) -> str:`
+  - function `sha256_file` — `def sha256_file(path: Path) -> tuple[int, str]:`
+  - function `canonical_json` — `def canonical_json(value: Any) -> bytes:`
+  - function `exact_object` — `def exact_object(value: Any, keys: set[str], label: str) -> dict[str, Any]:`
+  - function `read_request` — `def read_request() -> dict[str, Any]:`
+  - function `tree_manifest` — `def tree_manifest(root: Path) -> tuple[int, int, str]:`
+  - function `resource_manifest` — `def resource_manifest(resources: Path) -> tuple[list[dict[str, Any]], str]:`
+  - function `runtime_identity` — `def runtime_identity(resources: Path) -> dict[str, Any]:`
+  - function `language_observations` — `def language_observations(pipeline: Any, text: str) -> tuple[str, list[dict[str, Any]]]:`
+  - function `word_record` — `def word_record(word: Any) -> dict[str, Any]:`
+  - function `parse_document` — `def parse_document(stanza: Any, resources: Path, masked_text: str) -> tuple[list[dict[str, Any]], dict[str, Any]]:`
+  - function `response_base` — `def response_base(request: dict[str, Any] | None) -> dict[str, Any]:`
+  - function `run` — `def run() -> tuple[dict[str, Any], int]:`
+
+### Intent compiler / objective analyser — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 1391 · **Callable:** 394 · **Authored purpose:** 20
+- `scripts/intent-compiler.mjs` (1363 symbols)
+  - variable `INTENT_COMPILER_VERSION` — `INTENT_COMPILER_VERSION = '1.0.0'`
+  - variable `INTENT_COMPILER_V2_VERSION` — `INTENT_COMPILER_V2_VERSION = '2.0.0'`
+  - variable `TASK_SPEC_V1_VERSION` — `TASK_SPEC_V1_VERSION = 1`
+  - variable `TASK_SPEC_V1_DIGEST_ALGORITHM` — `TASK_SPEC_V1_DIGEST_ALGORITHM = 'sha256-canonical-json-v1'`
+  - variable `SOURCE_TRUST_POLICY_VERSION` — `SOURCE_TRUST_POLICY_VERSION = '1.1.0'`
+  - variable `TASK_SEMANTIC_CONTRACT_VERSION` — `TASK_SEMANTIC_CONTRACT_VERSION = '1.0.0'`
+  - variable `LEGACY_TASK_SPEC_DERIVATION_POLICY_VERSION` — `LEGACY_TASK_SPEC_DERIVATION_POLICY_VERSION = '1.0.0'`
+  - variable `TASK_SPEC_DERIVATION_POLICY_VERSION` — `TASK_SPEC_DERIVATION_POLICY_VERSION = '1.1.0'`
+  - variable `OPERATOR_ANSWER_RECEIPT_VERSION` — `OPERATOR_ANSWER_RECEIPT_VERSION = '1.0.0'`
+  - variable `PROACTIVE_AUDIT_VERSION` — `PROACTIVE_AUDIT_VERSION = '1.0.0'`
+  - variable `OPERATOR_QUESTION_CAP` — `OPERATOR_QUESTION_CAP = 3`
+  - variable `INTENT_SEGMENT_MAX_CHARS` — `INTENT_SEGMENT_MAX_CHARS = 4_096`
+  - variable `INTENT_COMPILER_MAX_RAW_CHARS` — `INTENT_COMPILER_MAX_RAW_CHARS = 256_000`
+  - variable `INTENT_COMPILED_GOAL_MAX_CHARS` — `INTENT_COMPILED_GOAL_MAX_CHARS = 12_000`
+  - variable `INTENT_MAX_MODEL_FACTS_PER_BATCH` — `INTENT_MAX_MODEL_FACTS_PER_BATCH = 64`
+  - variable `INTENT_MAX_MODEL_FACTS` — `INTENT_MAX_MODEL_FACTS = 500`
+  - variable `TASK_SPEC_V1_REQUIRED_FIELDS` — `TASK_SPEC_V1_REQUIRED_FIELDS = Object.freeze([`
+  - variable `SEGMENT_KINDS` — `SEGMENT_KINDS = new Set(['paragraph', 'heading', 'list', 'code', 'acceptance', 'constraint'])`
+  - variable `EMBEDDED_DATA_KINDS` — `EMBEDDED_DATA_KINDS = new Set(['fenced-code', 'inline-code', 'quoted-string', 'blockquote'])`
+  - variable `EMBEDDED_DATA_DISPOSITIONS` — `EMBEDDED_DATA_DISPOSITIONS = new Set(['data', 'promoted-specification'])`
+  - variable `FACT_CATEGORIES` — `FACT_CATEGORIES = new Set(['objective', 'acceptance', 'constraint', 'assumption', 'target', 'risk', 'approach'])`
+  - variable `SEMANTIC_ORIGINS` — `SEMANTIC_ORIGINS = new Set([`
+  - variable `SEMANTIC_POLARITIES` — `SEMANTIC_POLARITIES = new Set(['desired', 'required', 'requested', 'prohibited', 'unknown', 'assumed', 'bounded'])`
+  - variable `SEMANTIC_SCOPES` — `SEMANTIC_SCOPES = new Set(['task', 'target', 'artifact', 'operation', 'external', 'unknown'])`
+  - variable `FACT_EXTRACTION_METHOD` — `FACT_EXTRACTION_METHOD =`
+  - function `sourceAuthoritativeFacts` — `function sourceAuthoritativeFacts(facts = [])`
+  - variable `values` — `values = Array.isArray(facts) ? facts : []`
+  - arrow-function `<anonymous@6007>` — `fact => fact?.extractionMethod !== undefined`
+  - arrow-function `<anonymous@6091>` — `fact => (`
+  - variable `INTENT_DECOMPOSED_FACTS_SCHEMA` — `INTENT_DECOMPOSED_FACTS_SCHEMA =`
+  - function `constrainedIntentEnabled` — `function constrainedIntentEnabled()`
+  - function `intentStrictParseEnabled` — `function intentStrictParseEnabled()`
+  - function `intentDeterministicFactsEnabled` — `function intentDeterministicFactsEnabled()`
+  - function `intentConstraintSafetyNetEnabled` — `function intentConstraintSafetyNetEnabled()`
+  - function `structuralClarifierEnabled` — `function structuralClarifierEnabled()`
+  - function `requestShapeGateEnabled` — `function requestShapeGateEnabled()`
+  - function `evidencePolarityEnabled` — `function evidencePolarityEnabled()`
+  - function `buildTaskSpecDerivationPolicy` — `function buildTaskSpecDerivationPolicy(input =`
+  - function `openOntologyEnabled` — `function openOntologyEnabled()`
+  - variable `GAP_KINDS` — `GAP_KINDS = new Set(['missing-scope', 'missing-acceptance', 'missing-target', 'ambiguous-outcome'])`
+  - … and 1323 more symbols
+- `scripts/objective-analyser.mjs` (28 symbols)
+  - variable `OBJECTIVE_ANALYSER_VERSION` — `OBJECTIVE_ANALYSER_VERSION = '1.0.0'`
+  - variable `MAX_OBJECTIVE_ANALYSER_INVOCATIONS` — `MAX_OBJECTIVE_ANALYSER_INVOCATIONS = 3`
+  - variable `DIAGNOSTIC_EXPLORE_MAX_STEPS` — `DIAGNOSTIC_EXPLORE_MAX_STEPS = 15`
+  - variable `DIAGNOSTIC_EXPLORE_MAX_WALL_MS` — `DIAGNOSTIC_EXPLORE_MAX_WALL_MS = 600_000`
+  - variable `READ_ONLY_TOOLS` — `READ_ONLY_TOOLS = new Set([`
+  - class `ObjectiveAnalyserError` — `export class ObjectiveAnalyserError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'objectiveAnalyser')`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `validateObjectiveAnalyserInput` — `export function validateObjectiveAnalyserInput(input =`
+  - function `canInvokeObjectiveAnalyser` — `export function canInvokeObjectiveAnalyser(`
+  - function `validateDiagnosticExploreCommand` — `export function validateDiagnosticExploreCommand(command =`
+  - variable `tool` — `tool = command.tool || command.kind || command.name`
+  - function `buildObjectiveAnalyserPrompt` — `export function buildObjectiveAnalyserPrompt(`
+  - variable `latestSpec` — `latestSpec = taskSpecChain.at(-1)`
+  - function `parseObjectiveAnalysisResponse` — `export function parseObjectiveAnalysisResponse(content)`
+  - variable `text` — `text = String(content || '')`
+  - variable `start` — `start = text.indexOf('`
+  - variable `end` — `end = text.lastIndexOf('}')`
+  - function `runObjectiveAnalyser` — `export async function runObjectiveAnalyser(input, deps =`
+  - variable `validated` — `validated = validateObjectiveAnalyserInput(input)`
+  - variable `gate` — `gate = canInvokeObjectiveAnalyser(`
+  - variable `invoke35B` — `invoke35B = deps.invoke35B`
+  - variable `prompt` — `prompt = buildObjectiveAnalyserPrompt(validated)`
+  - variable `response` — `response = await invoke35B(`
+  - variable `parsed` — `parsed = deps.parseResponse || parseObjectiveAnalysisResponse`
+  - variable `body` — `body = parsed(response.content || response)`
+  - variable `analysis` — `analysis =`
+  - function `resetPlateauWindowAfterHandoff` — `export function resetPlateauWindowAfterHandoff(ledger)`
+
+### IntentProgram V1 compatibility IR — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 242 · **Callable:** 93 · **Authored purpose:** 0
+- `scripts/intent-program-v1.mjs` (242 symbols)
+  - variable `INTENT_PROGRAM_V1` — `INTENT_PROGRAM_V1 = 'intent-program-v1'`
+  - variable `AUTHORITATIVE_SOURCE_DISPOSITIONS` — `AUTHORITATIVE_SOURCE_DISPOSITIONS = new Set(['instruction', 'promoted-specification'])`
+  - variable `ALTERNATIVE_RE` — `ALTERNATIVE_RE = /\b(?:or|either|alternatively|versus|vs\.?)\b/iu`
+  - variable `CONDITIONAL_RE` — `CONDITIONAL_RE = /\b(?:if|unless|otherwise|else|provided\s+that|as\s+long\s+as|in\s+case|when)\b/iu`
+  - variable `EXCEPTION_RE` — `EXCEPTION_RE = /\b(?:except|excluding|other\s+than)\b/iu`
+  - variable `RULE_REVISION_RE` — `RULE_REVISION_RE = /\b(?:actually|instead|rather\s+than|no\s+longer|from\s+now\s+on|switch\s+to|ignore\s+(?:the\s+)?previous)\b/iu`
+  - variable `UNRESOLVED_REFERENCE_RE` — `UNRESOLVED_REFERENCE_RE = /\b(?:analy[sz]e|build|construct|debug|derive|design|explain|implement|investigate|model|patch|plan|research|simulate|test|verify)\s+(?:it|them|this|that|those|one)\b|\bprove`
+  - variable `ORDERING_RE` — `ORDERING_RE = /\b(?:then|followed\s+by|before|after|once|subsequently)\b|(?:→|->)/iu`
+  - variable `REVERSE_ORDER_RE` — `REVERSE_ORDER_RE = /\bafter\b/iu`
+  - variable `WORK_CONJUNCTION_RE` — `WORK_CONJUNCTION_RE = /\b(?:and|also|plus)\s+(?=(?:please\s+|kindly\s+)?(?:analy[sz]e|build|construct|debug|derive|design|explain|implement|investigate|model|patch|plan|prove|research|simulate|test|ve`
+  - variable `CODE_MIXED_CONNECTIVE_RE` — `CODE_MIXED_CONNECTIVE_RE = /\b(?:y\s+(?=(?:analiza|construye|demuestra|implementa|investiga|prueba|simula)\b)|luego\s+(?=(?:analiza|construye|demuestra|implementa|investiga|prueba|simula)\b)|(?:pero|e`
+  - variable `NEGATIVE_ALTERNATIVE_RE` — `NEGATIVE_ALTERNATIVE_RE = /\bwithout\b[^.!?\n]`
+  - variable `AMBIGUOUS_NEGATIVE_RE` — `AMBIGUOUS_NEGATIVE_RE = /\bwithout\s+(?:loss\s+of\s+generality|a\s+doubt|question|fail|further\s+ado)\b/iu`
+  - variable `AUTHORITATIVE_GUARD_MARKER_RE` — `AUTHORITATIVE_GUARD_MARKER_RE = /(?<marker>\b(?:while\s+(?:avoid(?:ing)?|preserv(?:e|ing))|avoid(?:ing)?|neither|nor|without|do\s+not|don'?t|must\s+not)\b)/dgiu`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `MAX_WORK_ITEMS` — `MAX_WORK_ITEMS = 16`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3513>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `spaces` — `function spaces(length)`
+  - function `maskInertText` — `function maskInertText(value)`
+  - variable `text` — `text = String(value || '')`
+  - arrow-function `<anonymous@4447>` — `match => spaces(match.length)`
+  - arrow-function `<anonymous@4521>` — `match => spaces(match.length)`
+  - arrow-function `<anonymous@4617>` — `match => spaces(match.length)`
+  - arrow-function `<anonymous@4704>` — `match => spaces(match.length)`
+  - function `normalizeStatement` — `function normalizeStatement(value)`
+  - function `byteSlice` — `function byteSlice(text, startOffset, endOffset)`
+  - function `authoritativeSourceUnits` — `function authoritativeSourceUnits(taskSpec)`
+  - arrow-function `<anonymous@5186>` — `unit => AUTHORITATIVE_SOURCE_DISPOSITIONS.has(unit.sourceDisposition)`
+  - function `authoritativeText` — `function authoritativeText(taskSpec)`
+  - arrow-function `<anonymous@5352>` — `unit => byteSlice(taskSpec.rawPrompt, unit.startOffset, unit.endOffset)`
+  - function `absoluteByteOffset` — `function absoluteByteOffset(unit, text, charOffset)`
+  - function `sourceSpan` — `function sourceSpan(taskSpec, unit, text, startChar, endChar)`
+  - variable `startOffset` — `startOffset = absoluteByteOffset(unit, text, startChar)`
+  - … and 202 more symbols
+
+### Semantic Intent IR V2 — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 174 · **Callable:** 68 · **Authored purpose:** 0
+- `scripts/semantic-intent-ir-v2.mjs` (174 symbols)
+  - variable `SEMANTIC_INTENT_IR_V2` — `SEMANTIC_INTENT_IR_V2 = 'semantic-intent-ir-v2'`
+  - variable `AUTHORITATIVE_DISPOSITIONS` — `AUTHORITATIVE_DISPOSITIONS = new Set(['instruction', 'promoted-specification'])`
+  - variable `ACTION_MODALITIES` — `ACTION_MODALITIES = new Set(['required', 'permitted', 'optional', 'hypothetical'])`
+  - variable `POLARITIES` — `POLARITIES = new Set(['positive', 'negative'])`
+  - variable `OPERATOR_KINDS` — `OPERATOR_KINDS = new Set(['sequence', 'alternative', 'conditional'])`
+  - variable `SEMANTIC_LEVELS` — `SEMANTIC_LEVELS = new Set(['task', 'proposition'])`
+  - variable `INVARIANT_KINDS` — `INVARIANT_KINDS = new Set(['prohibition', 'preservation', 'constraint'])`
+  - variable `REFERENCE_KINDS` — `REFERENCE_KINDS = new Set(['ordinal', 'anaphoric', 'demonstrative'])`
+  - variable `TOKEN_ROLES` — `TOKEN_ROLES = new Set([`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@1961>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256Value` — `function sha256Value(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, name)`
+  - variable `actual` — `actual = Object.keys(value)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `identifier` — `function identifier(value, name)`
+  - function `languageTag` — `function languageTag(value, name)`
+  - function `sourceText` — `function sourceText(taskSpec, span, name)`
+  - variable `rawPrompt` — `rawPrompt = Buffer.from(taskSpec.rawPrompt, 'utf8')`
+  - variable `offset` — `offset`
+  - variable `sourceBytes` — `sourceBytes = rawPrompt.subarray(span.startOffset, span.endOffset)`
+  - variable `source` — `source = sourceBytes.toString('utf8')`
+  - function `tokenKind` — `function tokenKind(codePoint)`
+  - function `sourceTokens` — `function sourceTokens(taskSpec)`
+  - variable `bytes` — `bytes = Buffer.from(taskSpec.rawPrompt, 'utf8')`
+  - variable `tokens` — `tokens = []`
+  - variable `unit` — `unit`
+  - variable `text` — `text = bytes.subarray(unit.startOffset, unit.endOffset).toString('utf8')`
+  - variable `charIndex` — `charIndex = 0`
+  - variable `byteIndex` — `byteIndex = unit.startOffset`
+  - variable `codePoint` — `codePoint = String.fromCodePoint(text.codePointAt(charIndex))`
+  - variable `codeUnits` — `codeUnits = codePoint.length`
+  - … and 134 more symbols
+
+### Semantic Intent V2 projection — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 178 · **Callable:** 79 · **Authored purpose:** 0
+- `scripts/semantic-intent-v2-projection-v1.mjs` (178 symbols)
+  - variable `SEMANTIC_INTENT_V2_PROJECTION_V1` — `SEMANTIC_INTENT_V2_PROJECTION_V1 = 'semantic-intent-v2-projection-v1'`
+  - variable `MODULE_SOURCE_SHA256` — `MODULE_SOURCE_SHA256 = createHash('sha256')`
+  - variable `AUTHORITATIVE_SOURCE_ZONES` — `AUTHORITATIVE_SOURCE_ZONES = new Set(['instruction', 'promoted-specification'])`
+  - variable `AUTHORITATIVE_SOURCE_DISPOSITIONS` — `AUTHORITATIVE_SOURCE_DISPOSITIONS = new Set(['instruction', 'promoted-specification'])`
+  - variable `CONDITIONAL_RE` — `CONDITIONAL_RE = /\b(?:if|unless|otherwise|else|provided\s+that|as\s+long\s+as|in\s+case|when)\b/giu`
+  - variable `NEGATION_RE` — `NEGATION_RE = /\b(?:not|never|no|without|neither|nor|avoid|avoiding|do\s+not|don'?t|must\s+not)\b/giu`
+  - variable `REFERENCE_RE` — `REFERENCE_RE = /\b(?:it|them|this|that|those|one|latter|former|first|second|third|same)\b/giu`
+  - variable `LATIN_CODE_MIX_RE` — `LATIN_CODE_MIX_RE = /\b(?:luego|prueba|pruebe|implementa|implementad|construye|demuestra|analiza|investiga|puis|ensuite|und|oder|aber)\b/giu`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `assertPlainDataTree` — `function assertPlainDataTree(root, name)`
+  - variable `active` — `active = new WeakSet()`
+  - variable `complete` — `complete = new WeakSet()`
+  - arrow-function `visit` — `(value, pathName) =>`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - variable `descriptor` — `descriptor = Object.getOwnPropertyDescriptor(value, key)`
+  - variable `index` — `index = 0`
+  - variable `extras` — `extras = Object.keys(value).filter(key => !/^\d+$/u.test(key))`
+  - arrow-function `<anonymous@4030>` — `key => !/^\d+$/u.test(key)`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, name)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@4818>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `verifiedInput` — `function verifiedInput(input)`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(input.taskSpec)`
+  - function `byteSlice` — `function byteSlice(text, startOffset, endOffset)`
+  - function `span` — `function span(taskSpec, startOffset, endOffset)`
+  - variable `text` — `text = byteSlice(taskSpec.rawPrompt, startOffset, endOffset)`
+  - function `overlaps` — `function overlaps(left, right)`
+  - function `contains` — `function contains(container, child)`
+  - function `sourceTokens` — `function sourceTokens(taskSpec)`
+  - variable `bytes` — `bytes = Buffer.from(taskSpec.rawPrompt, 'utf8')`
+  - … and 138 more symbols
+
+### Semantic Intent Certificate V2 — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 91 · **Callable:** 38 · **Authored purpose:** 0
+- `scripts/semantic-intent-certificate-v2.mjs` (91 symbols)
+  - variable `SEMANTIC_INTENT_CERTIFICATE_V2` — `SEMANTIC_INTENT_CERTIFICATE_V2 = 'semantic-intent-certificate-v2'`
+  - variable `MODULE_SOURCE_SHA256` — `MODULE_SOURCE_SHA256 = createHash('sha256')`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `assertPlainDataTree` — `function assertPlainDataTree(root, name)`
+  - variable `active` — `active = new WeakSet()`
+  - variable `complete` — `complete = new WeakSet()`
+  - arrow-function `visit` — `(value, pathName) =>`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `key` — `key`
+  - variable `descriptor` — `descriptor = Object.getOwnPropertyDescriptor(value, key)`
+  - variable `index` — `index = 0`
+  - variable `extras` — `extras = Object.keys(value).filter(key => !/^\d+$/u.test(key))`
+  - arrow-function `<anonymous@3245>` — `key => !/^\d+$/u.test(key)`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, name)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@4032>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `verifiedInput` — `function verifiedInput(input)`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(input.taskSpec)`
+  - variable `projection` — `projection = verifySemanticIntentV2ProjectionV1(input.projection,`
+  - variable `sourceAtomsArtifact` — `sourceAtomsArtifact = verifySemanticSourceAtomsV1(projection.sourceAtomsArtifact,`
+  - function `candidateFromIR` — `function candidateFromIR(ir)`
+  - function `overlaps` — `function overlaps(left, right)`
+  - function `controlDescriptor` — `function controlDescriptor(family, candidate)`
+  - variable `candidateSha256` — `candidateSha256 = sha256(candidate)`
+  - function `generateControls` — `function generateControls(`
+  - variable `ir` — `ir = projection.semanticIntentIR`
+  - variable `controls` — `controls = []`
+  - variable `action` — `action = ir.nodes.find(node => node.nodeType === 'action')`
+  - arrow-function `<anonymous@6677>` — `node => node.nodeType === 'action'`
+  - variable `dropped` — `dropped = candidateFromIR(ir)`
+  - arrow-function `<anonymous@6810>` — `node => node.nodeId !== action.nodeId`
+  - arrow-function `<anonymous@6890>` — `nodeId => nodeId !== action.nodeId`
+  - … and 51 more symbols
+
+### GraphControl semantic admission — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 47 · **Callable:** 15 · **Authored purpose:** 0
+- `scripts/semantic-intent-graph-control-admission-v1.mjs` (47 symbols)
+  - variable `SEMANTIC_INTENT_GRAPH_CONTROL_ADMISSION_V1` — `SEMANTIC_INTENT_GRAPH_CONTROL_ADMISSION_V1 =`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `assertPlainDataTree` — `function assertPlainDataTree(root, name)`
+  - variable `active` — `active = new WeakSet()`
+  - variable `complete` — `complete = new WeakSet()`
+  - arrow-function `visit` — `(value, pathName) =>`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `key` — `key`
+  - variable `descriptor` — `descriptor = Object.getOwnPropertyDescriptor(value, key)`
+  - variable `index` — `index = 0`
+  - variable `extras` — `extras = Object.keys(value).filter(key => !/^\d+$/u.test(key))`
+  - arrow-function `<anonymous@3344>` — `key => !/^\d+$/u.test(key)`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, name)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@4141>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `assertEqual` — `function assertEqual(actual, expected, name)`
+  - function `independentlyVerify` — `function independentlyVerify(input, options)`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(input.taskSpec)`
+  - variable `rawPrompt` — `rawPrompt = input.rawPrompt`
+  - variable `projection` — `projection = verifySemanticIntentV2ProjectionV1(input.projection,`
+  - variable `certificate` — `certificate = verifySemanticIntentCertificateV2(input.certificate,`
+  - variable `sourceAtomsArtifact` — `sourceAtomsArtifact = verifySemanticSourceAtomsV1(projection.sourceAtomsArtifact,`
+  - variable `intentProgramV1` — `intentProgramV1 = verifyIntentProgramV1(projection.intentProgramV1,`
+  - variable `counterparserArtifact` — `counterparserArtifact = verifySemanticUdCounterparserV1(`
+  - variable `semanticIntentIR` — `semanticIntentIR = null`
+  - variable `compatibilityProjection` — `compatibilityProjection = null`
+  - function `refusalReasons` — `function refusalReasons(verified)`
+  - variable `reasons` — `reasons = new Set()`
+  - variable `<anonymous@8802>`
+  - variable `reason` — `reason`
+  - variable `reason` — `reason`
+  - variable `reason` — `reason`
+  - … and 7 more symbols
+
+### Frozen TaskSpec V1 — LIVE / DEFAULT
+- **Files:** 2 (2 with symbols) · **Symbols:** 1384 · **Callable:** 392 · **Authored purpose:** 20
+- `scripts/intent-compiler.mjs` (1363 symbols)
+  - variable `INTENT_COMPILER_VERSION` — `INTENT_COMPILER_VERSION = '1.0.0'`
+  - variable `INTENT_COMPILER_V2_VERSION` — `INTENT_COMPILER_V2_VERSION = '2.0.0'`
+  - variable `TASK_SPEC_V1_VERSION` — `TASK_SPEC_V1_VERSION = 1`
+  - variable `TASK_SPEC_V1_DIGEST_ALGORITHM` — `TASK_SPEC_V1_DIGEST_ALGORITHM = 'sha256-canonical-json-v1'`
+  - variable `SOURCE_TRUST_POLICY_VERSION` — `SOURCE_TRUST_POLICY_VERSION = '1.1.0'`
+  - variable `TASK_SEMANTIC_CONTRACT_VERSION` — `TASK_SEMANTIC_CONTRACT_VERSION = '1.0.0'`
+  - variable `LEGACY_TASK_SPEC_DERIVATION_POLICY_VERSION` — `LEGACY_TASK_SPEC_DERIVATION_POLICY_VERSION = '1.0.0'`
+  - variable `TASK_SPEC_DERIVATION_POLICY_VERSION` — `TASK_SPEC_DERIVATION_POLICY_VERSION = '1.1.0'`
+  - variable `OPERATOR_ANSWER_RECEIPT_VERSION` — `OPERATOR_ANSWER_RECEIPT_VERSION = '1.0.0'`
+  - variable `PROACTIVE_AUDIT_VERSION` — `PROACTIVE_AUDIT_VERSION = '1.0.0'`
+  - variable `OPERATOR_QUESTION_CAP` — `OPERATOR_QUESTION_CAP = 3`
+  - variable `INTENT_SEGMENT_MAX_CHARS` — `INTENT_SEGMENT_MAX_CHARS = 4_096`
+  - variable `INTENT_COMPILER_MAX_RAW_CHARS` — `INTENT_COMPILER_MAX_RAW_CHARS = 256_000`
+  - variable `INTENT_COMPILED_GOAL_MAX_CHARS` — `INTENT_COMPILED_GOAL_MAX_CHARS = 12_000`
+  - variable `INTENT_MAX_MODEL_FACTS_PER_BATCH` — `INTENT_MAX_MODEL_FACTS_PER_BATCH = 64`
+  - variable `INTENT_MAX_MODEL_FACTS` — `INTENT_MAX_MODEL_FACTS = 500`
+  - variable `TASK_SPEC_V1_REQUIRED_FIELDS` — `TASK_SPEC_V1_REQUIRED_FIELDS = Object.freeze([`
+  - variable `SEGMENT_KINDS` — `SEGMENT_KINDS = new Set(['paragraph', 'heading', 'list', 'code', 'acceptance', 'constraint'])`
+  - variable `EMBEDDED_DATA_KINDS` — `EMBEDDED_DATA_KINDS = new Set(['fenced-code', 'inline-code', 'quoted-string', 'blockquote'])`
+  - variable `EMBEDDED_DATA_DISPOSITIONS` — `EMBEDDED_DATA_DISPOSITIONS = new Set(['data', 'promoted-specification'])`
+  - variable `FACT_CATEGORIES` — `FACT_CATEGORIES = new Set(['objective', 'acceptance', 'constraint', 'assumption', 'target', 'risk', 'approach'])`
+  - variable `SEMANTIC_ORIGINS` — `SEMANTIC_ORIGINS = new Set([`
+  - variable `SEMANTIC_POLARITIES` — `SEMANTIC_POLARITIES = new Set(['desired', 'required', 'requested', 'prohibited', 'unknown', 'assumed', 'bounded'])`
+  - variable `SEMANTIC_SCOPES` — `SEMANTIC_SCOPES = new Set(['task', 'target', 'artifact', 'operation', 'external', 'unknown'])`
+  - variable `FACT_EXTRACTION_METHOD` — `FACT_EXTRACTION_METHOD =`
+  - function `sourceAuthoritativeFacts` — `function sourceAuthoritativeFacts(facts = [])`
+  - variable `values` — `values = Array.isArray(facts) ? facts : []`
+  - arrow-function `<anonymous@6007>` — `fact => fact?.extractionMethod !== undefined`
+  - arrow-function `<anonymous@6091>` — `fact => (`
+  - variable `INTENT_DECOMPOSED_FACTS_SCHEMA` — `INTENT_DECOMPOSED_FACTS_SCHEMA =`
+  - function `constrainedIntentEnabled` — `function constrainedIntentEnabled()`
+  - function `intentStrictParseEnabled` — `function intentStrictParseEnabled()`
+  - function `intentDeterministicFactsEnabled` — `function intentDeterministicFactsEnabled()`
+  - function `intentConstraintSafetyNetEnabled` — `function intentConstraintSafetyNetEnabled()`
+  - function `structuralClarifierEnabled` — `function structuralClarifierEnabled()`
+  - function `requestShapeGateEnabled` — `function requestShapeGateEnabled()`
+  - function `evidencePolarityEnabled` — `function evidencePolarityEnabled()`
+  - function `buildTaskSpecDerivationPolicy` — `function buildTaskSpecDerivationPolicy(input =`
+  - function `openOntologyEnabled` — `function openOntologyEnabled()`
+  - variable `GAP_KINDS` — `GAP_KINDS = new Set(['missing-scope', 'missing-acceptance', 'missing-target', 'ambiguous-outcome'])`
+  - … and 1323 more symbols
+- `scripts/task-spec-artifact-store.mjs` (21 symbols)
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `canonicalBytes` — `function canonicalBytes(taskSpec)`
+  - function `fsyncDirectory` — `function fsyncDirectory(dir)`
+  - variable `fd` — `fd = openSync(dir, 'r')`
+  - class `TaskSpecArtifactStore` — `export class TaskSpecArtifactStore`
+  - constructor `constructor` — `constructor(`
+  - method `describe` — `describe(taskSpec)`
+  - variable `verified` — `verified = verifyTaskSpecV1(taskSpec)`
+  - variable `taskSpecSha256` — `taskSpecSha256 = verified.taskSpecSha256`
+  - method `persist` — `persist(taskSpec,`
+  - variable `descriptor` — `descriptor = this.describe(taskSpec)`
+  - variable `temp` — `temp = `$`
+  - variable `fd` — `fd = openSync(temp, 'wx', 0o600)`
+  - variable `fileReady` — `fileReady = false`
+  - variable `error` — `error`
+  - method `load` — `load(artifactId,`
+  - variable `digest` — `digest = taskSpecDigestFromArtifactId(artifactId)`
+  - variable `artifactPath` — `artifactPath = path.join(this.dir, `$`
+  - variable `parsed` — `parsed`
+  - variable `error` — `error`
+  - variable `descriptor` — `descriptor = this.describe(parsed)`
+
+### GoalCapsule / proof-carrying intent — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 250 · **Callable:** 95 · **Authored purpose:** 2
+- `scripts/proof-carrying-intent.mjs` (250 symbols)
+  - variable `GOAL_CAPSULE_V1` — `GOAL_CAPSULE_V1 = 'goal-capsule-v1'`
+  - variable `GOAL_CAPSULE_MAX_TEXT` — `GOAL_CAPSULE_MAX_TEXT = 32 * 1024`
+  - variable `SHA256` — `SHA256 = /^[a-f0-9]`
+  - variable `ID` — `ID = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `FACET` — `FACET = /^[A-Za-z][A-Za-z0-9._:-]`
+  - variable `STATUSES` — `STATUSES = new Set(['provisional', 'admitted', 'blocked', 'refused', 'promoted'])`
+  - variable `HYPOTHESIS_STATUSES` — `HYPOTHESIS_STATUSES = new Set(['escrowed', 'selected', 'rejected', 'unresolved'])`
+  - variable `INVARIANT_STATUSES` — `INVARIANT_STATUSES = new Set(['required', 'unknown', 'verified', 'refuted'])`
+  - variable `OBLIGATION_STATUSES` — `OBLIGATION_STATUSES = new Set(['required', 'unknown', 'verified', 'failed', 'waived'])`
+  - variable `ACTION_KINDS` — `ACTION_KINDS = new Set(['research', 'specify', 'prototype', 'diagnose'])`
+  - variable `INTERACTION_CLASSES` — `INTERACTION_CLASSES = new Set(['artifact', 'answer', 'document', 'unknown'])`
+  - variable `SOURCE_KINDS` — `SOURCE_KINDS = new Set([`
+  - variable `SOURCE_AUTHORITIES` — `SOURCE_AUTHORITIES = new Set(['authoritative', 'candidate'])`
+  - variable `EVIDENCE_TYPES` — `EVIDENCE_TYPES = new Set([`
+  - variable `SAFETY_KEYS` — `SAFETY_KEYS = new Set(['referential', 'destructive', 'conflicting'])`
+  - variable `NON_ARTIFACT_ROUTES` — `NON_ARTIFACT_ROUTES = new Set(['answer', 'document'])`
+  - class `GoalCapsuleV1Error` — `export class GoalCapsuleV1Error extends Error`
+  - constructor `constructor` — `constructor(code, path, message)`
+  - function `fail` — `function fail(code, path, message)`
+  - function `plain` — `function plain(value, path)`
+  - variable `key` — `key`
+  - variable `descriptor` — `descriptor = Object.getOwnPropertyDescriptor(value, key)`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, path)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `boundedText` — `function boundedText(value, path,`
+  - function `nonEmptyText` — `function nonEmptyText(value, path, options =`
+  - variable `text` — `text = boundedText(value, path,`
+  - function `identifier` — `function identifier(value, path)`
+  - function `sha256Digest` — `function sha256Digest(value, path)`
+  - function `digestText` — `function digestText(value)`
+  - function `finiteNumber` — `function finiteNumber(value, path,`
+  - function `canonicalize` — `function canonicalize(value, path = 'value', ancestors = new WeakSet())`
+  - arrow-function `<anonymous@5117>` — `(item, index) => canonicalize(item, `$`
+  - variable `output` — `output =`
+  - variable `key` — `key`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `sortedUniqueIds` — `function sortedUniqueIds(values, path,`
+  - … and 210 more symbols
+
+### Append-only GoalRefinement — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 204 · **Callable:** 82 · **Authored purpose:** 0
+- `scripts/goal-refinement-artifact-store-v1.mjs` (52 symbols)
+  - variable `GOAL_REFINEMENT_ARTIFACT_STORE_V1` — `GOAL_REFINEMENT_ARTIFACT_STORE_V1 = 'goal-refinement-artifact-store-v1'`
+  - variable `GOAL_REFINEMENT_ARTIFACT_DIRECTORY_V1` — `GOAL_REFINEMENT_ARTIFACT_DIRECTORY_V1 = 'goal-refinements-v1'`
+  - variable `GOAL_REFINEMENT_ARTIFACT_MAX_BYTES_V1` — `GOAL_REFINEMENT_ARTIFACT_MAX_BYTES_V1 = 2 * 1024 * 1024`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - class `GoalRefinementArtifactStoreV1Error` — `export class GoalRefinementArtifactStoreV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'GOAL_REFINEMENT_ARTIFACT_STORE_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `baseDirectory` — `function baseDirectory(value)`
+  - function `ensureRealDirectory` — `function ensureRealDirectory(directory, pathName)`
+  - variable `entry` — `entry`
+  - variable `error` — `error`
+  - function `fsyncDirectory` — `function fsyncDirectory(directory, pathName)`
+  - variable `descriptor` — `descriptor`
+  - variable `error` — `error`
+  - function `ensureDirectory` — `function ensureDirectory(directory, pathName)`
+  - variable `error` — `error`
+  - function `readRegularNoFollow` — `function readRegularNoFollow(filePath, pathName)`
+  - variable `descriptor` — `descriptor`
+  - variable `entry` — `entry = lstatSync(filePath)`
+  - variable `opened` — `opened = fstatSync(descriptor)`
+  - variable `bytes` — `bytes = readFileSync(descriptor)`
+  - variable `after` — `after = fstatSync(descriptor)`
+  - variable `error` — `error`
+  - function `canonicalBytes` — `function canonicalBytes(refinement)`
+  - function `publishOnce` — `function publishOnce(directory, artifactPath, bytes)`
+  - variable `existing` — `existing = readRegularNoFollow(artifactPath, 'GoalRefinementArtifactStoreV1.artifact')`
+  - variable `error` — `error`
+  - variable `temporaryPath` — `temporaryPath = `$`
+  - variable `descriptor` — `descriptor`
+  - variable `ready` — `ready = false`
+  - variable `error` — `error`
+  - variable `error` — `error`
+  - variable `raced` — `raced = readRegularNoFollow(artifactPath, 'GoalRefinementArtifactStoreV1.artifact')`
+  - class `GoalRefinementArtifactStoreV1` — `export class GoalRefinementArtifactStoreV1`
+  - constructor `constructor` — `constructor(`
+  - method `describe` — `describe(refinement, options =`
+  - variable `verified` — `verified`
+  - variable `error` — `error`
+  - … and 12 more symbols
+- `scripts/goal-refinement-v1.mjs` (152 symbols)
+  - variable `GOAL_REFINEMENT_V1` — `GOAL_REFINEMENT_V1 = 'goal-refinement-v1'`
+  - variable `GOAL_REFINEMENT_ARTIFACT_PREFIX_V1` — `GOAL_REFINEMENT_ARTIFACT_PREFIX_V1 = 'artifact-goal-refinement-v1-'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `RESEARCH_KINDS` — `RESEARCH_KINDS = new Set([`
+  - variable `HYPOTHESIS_DISPOSITIONS` — `HYPOTHESIS_DISPOSITIONS = new Set(['selected', 'rejected', 'deferred'])`
+  - variable `ASSUMPTION_STATUSES` — `ASSUMPTION_STATUSES = new Set(['supported', 'unverified'])`
+  - variable `EVIDENCE_CLASSES` — `EVIDENCE_CLASSES = new Set([`
+  - variable `FORBIDDEN_STRUCTURAL_KEYS` — `FORBIDDEN_STRUCTURAL_KEYS = /^(?:args|authority|capability|code|command|expectedAnswer|expectedOutput|hiddenCases|permission|predicate|script|testCases|verdict)$/iu`
+  - class `GoalRefinementV1Error` — `export class GoalRefinementV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'GOAL_REFINEMENT_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `key` — `key`
+  - variable `descriptor` — `descriptor = Object.getOwnPropertyDescriptor(value, key)`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `assertDeclarative` — `function assertDeclarative(value, pathName = 'GoalRefinementV1')`
+  - arrow-function `<anonymous@2854>` — `(item, index) => assertDeclarative(item, `$`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName,`
+  - variable `normalized` — `normalized = value.trim()`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `boundedInt` — `function boundedInt(value, pathName,`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'value')`
+  - arrow-function `<anonymous@4445>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@4590>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `sortedIds` — `function sortedIds(value, pathName,`
+  - variable `normalized` — `normalized = value.map((item, index) => id(item, `$`
+  - arrow-function `<anonymous@5366>` — `(item, index) => id(item, `$`
+  - variable `ref` — `ref`
+  - function `sortedText` — `function sortedText(value, pathName,`
+  - variable `normalized` — `normalized = value.map((item, index) => text(item, `$`
+  - arrow-function `<anonymous@5906>` — `(item, index) => text(item, `$`
+  - … and 112 more symbols
+
+### Obligation and acceptance graph — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 206 · **Callable:** 73 · **Authored purpose:** 20
+- `scripts/intent-as-tests.mjs` (147 symbols)
+  - variable `GIT_ENV` — `GIT_ENV =`
+  - variable `RUNNERS` — `RUNNERS =`
+  - function `electOracleRunnerFromIntent` — `export function electOracleRunnerFromIntent(goalText, opts =` — *ELECT a runner from the REQUEST when the repo has no shape to detect. `detectOracleRunner` below asks "what IS this repo?". For a greenfield request the answer is "nothing yet — what SHOULD it be?", s*
+  - function `electOracleRunnerDecision` — `export function electOracleRunnerDecision(goalText, opts =` — *★ THE UNIVERSAL INVARIANT ENFORCED HERE ★ AN ACCEPTANCE ORACLE MUST EXECUTE THE ARTIFACT IN THE ARTIFACT'S OWN LANGUAGE. Inspecting source text is never acceptance. If no executable runner exists for *
+  - variable `decision` — `decision = decideOracleRunner(goalText, opts)`
+  - variable `ev` — `ev = requestLanguageEvidence(String(goalText || ''))`
+  - variable `electedId` — `electedId = decision.elected.languageId`
+  - variable `violated` — `violated = ev.artifact.length > 0`
+  - variable `govern` — `govern = ev.artifact.length > 0 ? ev.artifact : ev.spoken`
+  - function `decideOracleRunner` — `function decideOracleRunner(goalText,`
+  - variable `text` — `text = String(goalText || '')`
+  - variable `candidates` — `candidates = standaloneAcceptanceRunners(`
+  - variable `servable` — `servable = new Map(candidates.map((c) => [c.languageId, c]))`
+  - arrow-function `<anonymous@11486>` — `(c) => [c.languageId, c]`
+  - variable `present` — `present = makeRunnerPresenceProbe(`
+  - variable `ev` — `ev = requestLanguageEvidence(text)`
+  - arrow-function `serve` — `(languageId, evidence) => serveOrRefuse(`
+  - arrow-function `<anonymous@13218>` — `(m) => `'$`
+  - variable `languageId` — `languageId = ev.artifact[0]`
+  - variable `tokens` — `tokens = ev.artifactMentions.filter((m) => m.languageId === languageId).map((m) => `'$`
+  - arrow-function `<anonymous@13869>` — `(m) => m.languageId === languageId`
+  - arrow-function `<anonymous@13909>` — `(m) => `'$`
+  - variable `overridden` — `overridden = ev.spoken.filter((s) => s !== languageId)`
+  - arrow-function `<anonymous@13983>` — `(s) => s !== languageId`
+  - arrow-function `<anonymous@14249>` — `(o) => `'$`
+  - arrow-function `<anonymous@15427>` — `(u) => `'$`
+  - arrow-function `<anonymous@15518>` — `(u) => `'$`
+  - arrow-function `<anonymous@15806>` — `(u) => u.ext`
+  - variable `languageId` — `languageId = ev.spoken[0]`
+  - variable `tokens` — `tokens = ev.spokenTokens.filter((t) => t.languageId === languageId).map((t) => `'$`
+  - arrow-function `<anonymous@16820>` — `(t) => t.languageId === languageId`
+  - arrow-function `<anonymous@16860>` — `(t) => `'$`
+  - variable `c` — `c`
+  - function `legacyElectOracleRunnerFromIntent` — `function legacyElectOracleRunnerFromIntent(goalText,` — *The exact pre-ARC_LANGUAGE_HONEST_ELECTION body, kept verbatim so OFF is byte-identical.*
+  - variable `text` — `text = String(goalText || '')`
+  - variable `candidates` — `candidates = standaloneAcceptanceRunners()`
+  - variable `c` — `c`
+  - variable `alts` — `alts = [c.languageId, ...c.extensions.map(e => e.replace(/^\./, ''))]`
+  - arrow-function `<anonymous@18613>` — `e => e.replace(/^\./, '')`
+  - arrow-function `<anonymous@18652>` — `a => a.replace(/[.*+?^$`
+  - … and 107 more symbols
+- `scripts/obligation-compiler.mjs` (37 symbols)
+  - variable `OBLIGATION_COMPILER_VERSION` — `OBLIGATION_COMPILER_VERSION = '1.0.0'`
+  - variable `DETECTOR_KINDS` — `DETECTOR_KINDS = new Set(['regex', 'ast', 'semantic-probe'])`
+  - class `ObligationCompilerError` — `export class ObligationCompilerError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'obligationCompiler')`
+  - function `sha256Json` — `function sha256Json(value)`
+  - variable `LANGUAGE_OBLIGATION_TEMPLATES` — `LANGUAGE_OBLIGATION_TEMPLATES =`
+  - function `compileObligationsFromTaskSpec` — `export function compileObligationsFromTaskSpec(`
+  - variable `languageId` — `languageId = projectContext.language`
+  - variable `templates` — `templates = [`
+  - variable `obligations` — `obligations = []`
+  - variable `index` — `index = 0`
+  - variable `fact` — `fact`
+  - variable `statement` — `statement = String(fact.statement || '')`
+  - variable `tmpl` — `tmpl`
+  - variable `obligation` — `obligation`
+  - variable `deduped` — `deduped = dedupeObligations(obligations)`
+  - variable `body` — `body =`
+  - arrow-function `<anonymous@5603>` — `(`
+  - function `dedupeObligations` — `function dedupeObligations(rows)`
+  - variable `seen` — `seen = new Set()`
+  - arrow-function `<anonymous@5772>` — `row =>`
+  - variable `key` — `key = `$`
+  - function `inferLanguageFromFiles` — `function inferLanguageFromFiles(files = [])`
+  - variable `counts` — `counts = new Map()`
+  - variable `fp` — `fp`
+  - variable `lang` — `lang = languageForFilePath(fp)`
+  - variable `top` — `top = [...counts.entries()].sort((a, b) => b[1] - a[1])[0]`
+  - arrow-function `<anonymous@6252>` — `(a, b) => b[1] - a[1]`
+  - function `inferLanguageFromFacts` — `function inferLanguageFromFacts(facts = [])`
+  - variable `text` — `text = facts.map(f => f.statement || '').join(' ').toLowerCase()`
+  - arrow-function `<anonymous@6378>` — `f => f.statement || ''`
+  - variable `<anonymous@6438>` — `[id, lang]`
+  - arrow-function `<anonymous@6515>` — `h => text.includes(h)`
+  - function `mergeCompiledWithLegacy` — `export function mergeCompiledWithLegacy(compiled, legacyChecklist = [])`
+  - variable `merged` — `merged = [...compiled.obligations]`
+  - variable `item` — `item`
+  - arrow-function `<anonymous@7563>` — `(`
+- `scripts/obligation-coverage.mjs` (22 symbols)
+  - function `readWorktreeFile` — `function readWorktreeFile(worktreePath, relative)` — *Best-effort read of a changed file from the patched worktree (missing → '').*
+  - function `measureObligationCoverage` — `export function measureObligationCoverage(` — *measureObligationCoverage — pure, deterministic obligation-satisfaction measurement.*
+  - variable `fileContents` — `fileContents =`
+  - variable `rel` — `rel`
+  - variable `haystack` — `haystack = `$`
+  - variable `met` — `met = []`
+  - variable `unmet` — `unmet = []`
+  - variable `unmeasurable` — `unmeasurable = []`
+  - variable `proxied` — `proxied = []`
+  - variable `o` — `o`
+  - variable `src` — `src = typeof o?.acceptancePattern === 'string' && o.acceptancePattern`
+  - variable `re` — `re`
+  - variable `total` — `total = met.length + unmet.length`
+  - function `measureDeliverableCoverage` — `export function measureDeliverableCoverage(` — *measureDeliverableCoverage — thin, PURE convenience over measureObligationCoverage that takes a SELECTED patch's diff bytes directly and returns the same summary plus a `measurable` flag. The caller (*
+  - variable `positiveDiffLines` — `positiveDiffLines = extractPatchPositiveLines(patchContent)`
+  - variable `coverage` — `coverage = measureObligationCoverage(`
+  - function `enrichGoalWithObligations` — `export function enrichGoalWithObligations(goal, obligations)` — *enrichGoalWithObligations — deterministic GOAL LEVER (adopted, orthogonal to selection). Appends the task's acceptance-obligation descriptions to the effective goal so the weak 9B GENERATES coverage-s*
+  - variable `seen` — `seen = new Set()`
+  - variable `lines` — `lines = []`
+  - variable `o` — `o`
+  - variable `desc` — `desc = typeof o?.description === 'string' ? o.description.trim() : ''`
+  - variable `block` — `block = lines.join('\n').slice(0, 4000)`
+
+### Repository grounding requirement — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 38 · **Callable:** 16 · **Authored purpose:** 0
+- `scripts/repository-grounding-requirement-v1.mjs` (38 symbols)
+  - variable `REPOSITORY_GROUNDING_REQUIREMENT_V1` — `REPOSITORY_GROUNDING_REQUIREMENT_V1 =`
+  - variable `AUTHORITY_NONE` — `AUTHORITY_NONE = Object.freeze(`
+  - variable `DEICTIC_REPOSITORY_REFERENCE_RE` — `DEICTIC_REPOSITORY_REFERENCE_RE = /\b(?:this|that|current|existing|our|your)\s+(?:[A-Za-z0-9_$.-]+\s+)`
+  - variable `DEFINITE_PROJECT_REFERENCE_RE` — `DEFINITE_PROJECT_REFERENCE_RE = /\bthe\s+(?:current\s+|existing\s+)?(?:repository|repo|project|codebase|workspace)\b/iu`
+  - variable `NAMED_CODE_ENTITY_RE` — `NAMED_CODE_ENTITY_RE = /\b(?:explain|describe|summari[sz]e|review|inspect|analy[sz]e|what|how|why)\b[^.!?\n]`
+  - variable `SYMBOL_REFERENCE_RE` — `SYMBOL_REFERENCE_RE = /\b[a-z_$][A-Za-z0-9_$]*[a-z0-9_$][A-Z][A-Za-z0-9_$]*\b/u`
+  - variable `EXPLANATION_OR_INSPECTION_RE` — `EXPLANATION_OR_INSPECTION_RE = /\b(?:explain|describe|summari[sz]e|review|inspect|analy[sz]e|what\s+does|how\s+does|why\s+does)\b/iu`
+  - class `RepositoryGroundingRequirementV1Error` — `export class RepositoryGroundingRequirementV1Error extends Error`
+  - constructor `constructor` — `constructor(message)`
+  - function `fail` — `function fail(message)`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `<anonymous@2391>` — `[key, descriptor]`
+  - function `exact` — `function exact(value, fields, name)`
+  - variable `actual` — `actual = Object.keys(value).sort()`
+  - variable `expected` — `expected = [...fields].sort()`
+  - arrow-function `<anonymous@2866>` — `(key, index) => key !== expected[index]`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3247>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `deriveReasonCodes` — `function deriveReasonCodes(taskSpec, instructionPrompt)`
+  - variable `reasons` — `reasons = []`
+  - arrow-function `<anonymous@4066>` — `fact => fact?.category === 'target'`
+  - function `verifiedSourceProjection` — `function verifiedSourceProjection(taskSpec)`
+  - variable `projected` — `projected = applyAutonomousShapingDefaults(taskSpec)`
+  - function `compileRepositoryGroundingRequirementV1` — `export function compileRepositoryGroundingRequirementV1(input)`
+  - variable `taskSpec` — `taskSpec = verifiedSourceProjection(input.taskSpec)`
+  - variable `instructionPrompt` — `instructionPrompt = taskSpecInstructionPrompt(taskSpec)`
+  - variable `reasonCodes` — `reasonCodes = deriveReasonCodes(taskSpec, instructionPrompt)`
+  - variable `disposition` — `disposition = reasonCodes.length ? 'required' : 'optional'`
+  - variable `projectOverviewOnly` — `projectOverviewOnly = disposition === 'required'`
+  - arrow-function `<anonymous@5526>` — `reason => reason === 'deictic-repository-reference'`
+  - variable `body` — `body =`
+  - function `verifyRepositoryGroundingRequirementV1` — `export function verifyRepositoryGroundingRequirementV1(value, input)`
+  - variable `expected` — `expected = compileRepositoryGroundingRequirementV1(input)`
+
+### Typed ambiguity / clarification transaction — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 79 · **Callable:** 32 · **Authored purpose:** 0
+- `scripts/operator-question-bus.mjs` (79 symbols)
+  - variable `OPERATOR_QUESTION_BUS_VERSION` — `OPERATOR_QUESTION_BUS_VERSION = '1.0.0'`
+  - variable `ROOT_NODE_IDS` — `ROOT_NODE_IDS = Object.freeze(['root', 'default'])`
+  - variable `STATUSES` — `STATUSES = new Set(['open', 'answered', 'cancelled'])`
+  - variable `PRIORITIES` — `PRIORITIES = new Set(['low', 'medium', 'high', 'critical'])`
+  - variable `ACTOR_TYPES` — `ACTOR_TYPES = new Set(['user', 'system', 'agent'])`
+  - variable `NODE_ID_PATTERN` — `NODE_ID_PATTERN = /^[A-Za-z0-9_.:-]+$/`
+  - class `OperatorQuestionBusError` — `export class OperatorQuestionBusError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'operatorQuestionBus')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName,`
+  - function `optionalString` — `function optionalString(value, pathName, options =`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => string(item, `$`
+  - arrow-function `<anonymous@2810>` — `(item, index) => string(item, `$`
+  - function `nodeId` — `function nodeId(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `actor` — `function actor(value, pathName)`
+  - variable `type` — `type = oneOf(value.type, ACTOR_TYPES, `$`
+  - function `visibleNodeIdsForQuestion` — `export function visibleNodeIdsForQuestion(originNodeId)`
+  - variable `origin` — `origin = nodeId(originNodeId, 'operatorQuestionBus.originNodeId')`
+  - variable `visible` — `visible = [...ROOT_NODE_IDS]`
+  - variable `segments` — `segments = origin.split('.')`
+  - variable `index` — `index = 0`
+  - variable `ancestor` — `ancestor = segments.slice(0, index + 1).join('.')`
+  - function `validateOptions` — `function validateOptions(options,`
+  - variable `recommendedCount` — `recommendedCount = 0`
+  - variable `normalized` — `normalized = options.map((option, index) =>`
+  - arrow-function `<anonymous@4301>` — `(option, index) =>`
+  - variable `pathName` — `pathName = `operatorQuestionBus.options[$`
+  - variable `result` — `result =`
+  - arrow-function `<anonymous@5564>` — `option => option.optionId`
+  - … and 39 more symbols
+
+### Universal epistemic compiler — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+## 02 · AUTHORITY, IDENTITY, EVENT, ARTIFACT, AND RECOVERY PLANE
+
+### Contracts V9 — SOLE AUTHORITY / CONSTITUTION
+- **Files:** 1 (1 with symbols) · **Symbols:** 406 · **Callable:** 176 · **Authored purpose:** 2
+- `scripts/contracts.mjs` (406 symbols)
+  - variable `CURRENT_VERSION` — `CURRENT_VERSION = '1.0.0'`
+  - variable `DATA_CLASSIFICATIONS` — `DATA_CLASSIFICATIONS = Object.freeze([`
+  - variable `TASK_STATES` — `TASK_STATES = Object.freeze([`
+  - variable `TERMINAL_TASK_STATES` — `TERMINAL_TASK_STATES = new Set(['succeeded', 'failed', 'cancelled'])`
+  - variable `TASK_TRANSITIONS` — `TASK_TRANSITIONS = Object.freeze(`
+  - variable `LEGACY_TASK_EVENT_VERSION` — `LEGACY_TASK_EVENT_VERSION = '2.0.0'`
+  - variable `TASK_EVENT_V3_VERSION` — `TASK_EVENT_V3_VERSION = '3.0.0'`
+  - variable `TASK_EVENT_V4_VERSION` — `TASK_EVENT_V4_VERSION = '4.0.0'`
+  - variable `TASK_EVENT_V5_VERSION` — `TASK_EVENT_V5_VERSION = '5.0.0'`
+  - variable `TASK_EVENT_V6_VERSION` — `TASK_EVENT_V6_VERSION = '6.0.0'`
+  - variable `TASK_EVENT_V7_VERSION` — `TASK_EVENT_V7_VERSION = '7.0.0'`
+  - variable `TASK_EVENT_V8_VERSION` — `TASK_EVENT_V8_VERSION = '8.0.0'`
+  - variable `TASK_EVENT_V9_VERSION` — `TASK_EVENT_V9_VERSION = '9.0.0'`
+  - variable `TASK_EVENT_V10_VERSION` — `TASK_EVENT_V10_VERSION = '10.0.0'`
+  - variable `TASK_EVENT_V11_VERSION` — `TASK_EVENT_V11_VERSION = '11.0.0'`
+  - variable `TASK_EVENT_V12_VERSION` — `TASK_EVENT_V12_VERSION = '12.0.0'`
+  - variable `LEGACY_TASK_EVENT_TYPES` — `LEGACY_TASK_EVENT_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V3_TYPES` — `TASK_EVENT_V3_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V4_TYPES` — `TASK_EVENT_V4_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V5_TYPES` — `TASK_EVENT_V5_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V6_TYPES` — `TASK_EVENT_V6_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V7_TYPES` — `TASK_EVENT_V7_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V8_TYPES` — `TASK_EVENT_V8_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V9_TYPES` — `TASK_EVENT_V9_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V10_TYPES` — `TASK_EVENT_V10_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V11_TYPES` — `TASK_EVENT_V11_TYPES = Object.freeze([`
+  - variable `TASK_EVENT_V12_TYPES` — `TASK_EVENT_V12_TYPES = Object.freeze([`
+  - variable `EVENT_TYPES` — `EVENT_TYPES = Object.freeze(TASK_EVENT_V12_TYPES)`
+  - variable `CONTRACT_VERSIONS` — `CONTRACT_VERSIONS = Object.freeze(`
+  - variable `COMPATIBILITY_POLICY` — `COMPATIBILITY_POLICY = Object.freeze(`
+  - variable `FIELD_CLASSIFICATIONS` — `FIELD_CLASSIFICATIONS = Object.freeze(`
+  - variable `CONTRACT_TYPES` — `CONTRACT_TYPES = new Set(Object.keys(CONTRACT_VERSIONS))`
+  - variable `EVENT_TYPE_SET` — `EVENT_TYPE_SET = new Set(EVENT_TYPES)`
+  - variable `LEGACY_TASK_EVENT_TYPE_SET` — `LEGACY_TASK_EVENT_TYPE_SET = new Set(LEGACY_TASK_EVENT_TYPES)`
+  - variable `TASK_EVENT_V3_TYPE_SET` — `TASK_EVENT_V3_TYPE_SET = new Set(TASK_EVENT_V3_TYPES)`
+  - variable `TASK_EVENT_V4_TYPE_SET` — `TASK_EVENT_V4_TYPE_SET = new Set(TASK_EVENT_V4_TYPES)`
+  - variable `TASK_EVENT_V5_TYPE_SET` — `TASK_EVENT_V5_TYPE_SET = new Set(TASK_EVENT_V5_TYPES)`
+  - variable `TASK_EVENT_V6_TYPE_SET` — `TASK_EVENT_V6_TYPE_SET = new Set(TASK_EVENT_V6_TYPES)`
+  - variable `TASK_EVENT_V7_TYPE_SET` — `TASK_EVENT_V7_TYPE_SET = new Set(TASK_EVENT_V7_TYPES)`
+  - variable `TASK_EVENT_V8_TYPE_SET` — `TASK_EVENT_V8_TYPE_SET = new Set(TASK_EVENT_V8_TYPES)`
+  - … and 366 more symbols
+
+### EventKernel — SOLE AUTHORITY / CONSTITUTION
+- **Files:** 1 (1 with symbols) · **Symbols:** 1971 · **Callable:** 586 · **Authored purpose:** 2
+- `scripts/event-kernel.mjs` (1971 symbols)
+  - variable `LOCK_STALE_MS` — `LOCK_STALE_MS = 30_000`
+  - variable `LOCK_RETRY_BASE_MS` — `LOCK_RETRY_BASE_MS = 5`
+  - variable `LOCK_RETRY_MAX_MS` — `LOCK_RETRY_MAX_MS = 25`
+  - function `graphControlCycleRoleSpecs` — `function graphControlCycleRoleSpecs()`
+  - variable `APPEND_CACHES` — `APPEND_CACHES = new Map()`
+  - variable `VERIFIED_TASK_REPLAYS` — `VERIFIED_TASK_REPLAYS = new WeakMap()`
+  - variable `VERIFIED_TASK_REPLAY_CACHES` — `VERIFIED_TASK_REPLAY_CACHES = new WeakMap()`
+  - variable `LOCALLY_VALIDATED_APPEND_HASHES` — `LOCALLY_VALIDATED_APPEND_HASHES = new WeakMap()`
+  - variable `FRESH_TASK_RUNTIME_REPLAY_HEADS` — `FRESH_TASK_RUNTIME_REPLAY_HEADS = new WeakMap()`
+  - variable `EVENT_KERNEL_CANDIDATE_WORKSPACE_STATES` — `EVENT_KERNEL_CANDIDATE_WORKSPACE_STATES = new WeakMap()`
+  - variable `SEMANTIC_ADMISSION_EVENT_VERIFICATIONS` — `SEMANTIC_ADMISSION_EVENT_VERIFICATIONS = new WeakMap()`
+  - variable `EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES` — `EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES = new WeakMap()`
+  - variable `MAX_SEMANTIC_ADMISSION_EVENT_VERIFICATIONS` — `MAX_SEMANTIC_ADMISSION_EVENT_VERIFICATIONS = 256`
+  - variable `CAUSAL_COGNITION_SITUATION_SOURCE_V1` — `CAUSAL_COGNITION_SITUATION_SOURCE_V1 = 'task-runtime-causal-cognition-situation-source-v1'`
+  - variable `CAUSAL_COGNITION_SITUATION_SOURCE_V2` — `CAUSAL_COGNITION_SITUATION_SOURCE_V2 = 'task-runtime-causal-cognition-situation-source-v2'`
+  - variable `CAUSAL_COGNITION_OPENED_KIND_V1` — `CAUSAL_COGNITION_OPENED_KIND_V1 = 'causal-cognition-deliberation-opened'`
+  - variable `CAUSAL_COGNITION_PREPARED_V1` — `CAUSAL_COGNITION_PREPARED_V1 = 'causal-cognition-prepared-deliberation-v1'`
+  - variable `CAUSAL_COGNITION_PREPARED_V2` — `CAUSAL_COGNITION_PREPARED_V2 = 'causal-cognition-prepared-deliberation-v2'`
+  - variable `CAUSAL_COGNITION_PREPARED_KIND_V1` — `CAUSAL_COGNITION_PREPARED_KIND_V1 = 'causal-cognition-deliberation-prepared'`
+  - function `eventKernelTaskEpochArtifactStore` — `function eventKernelTaskEpochArtifactStore(kernel)`
+  - variable `store` — `store = EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES.get(kernel)`
+  - function `emptyAppendCacheState` — `function emptyAppendCacheState()`
+  - function `replayIntegrityRoots` — `function replayIntegrityRoots(kernel)`
+  - variable `roots` — `roots = [`
+  - arrow-function `<anonymous@18141>` — `root => path.resolve(root)`
+  - function `captureReplayIntegrityManifest` — `function captureReplayIntegrityManifest(kernel)`
+  - variable `entries` — `entries = []`
+  - arrow-function `visit` — `target =>`
+  - variable `stat` — `stat = lstatSync(target)`
+  - variable `relative` — `relative = path.relative(kernel.artifactBaseDir, target)`
+  - variable `name` — `name`
+  - variable `root` — `root`
+  - function `replayIntegrityManifestMatches` — `function replayIntegrityManifestMatches(manifest)`
+  - variable `entry` — `entry`
+  - variable `stat` — `stat = lstatSync(entry.path)`
+  - variable `kind` — `kind = stat.isSymbolicLink()`
+  - variable `childNames` — `childNames = readdirSync(entry.path).sort()`
+  - variable `digest` — `digest = createHash('sha256').update(readFileSync(entry.path)).digest('hex')`
+  - function `verifiedTaskReplayCache` — `function verifiedTaskReplayCache(kernel)`
+  - variable `cache` — `cache = VERIFIED_TASK_REPLAY_CACHES.get(kernel)`
+  - … and 1931 more symbols
+
+### TaskRuntime — SOLE AUTHORITY / CONSTITUTION
+- **Files:** 1 (1 with symbols) · **Symbols:** 2326 · **Callable:** 655 · **Authored purpose:** 27
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### Cross-graph binding compiler — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### TaskDelta V2 — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 61 · **Callable:** 26 · **Authored purpose:** 0
+- `scripts/task-delta-v2.mjs` (61 symbols)
+  - variable `TASK_DELTA_V2_VERSION` — `TASK_DELTA_V2_VERSION = '2.0.0'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `LANES` — `LANES = new Set(['primary', 'shadow'])`
+  - variable `PROVENANCE_ORIGINS` — `PROVENANCE_ORIGINS = new Set(['user', 'observation', 'inference', 'default'])`
+  - variable `EFFECT_EVIDENCE_KINDS` — `EFFECT_EVIDENCE_KINDS = new Set(['artifact-produced', 'verification', 'finish'])`
+  - variable `KIND_SPECS` — `KIND_SPECS = Object.freeze(`
+  - variable `TASK_DELTA_V2_PROJECTION_CONTRACTS` — `TASK_DELTA_V2_PROJECTION_CONTRACTS = Object.freeze(`
+  - variable `registeredKinds` — `registeredKinds = Object.keys(KIND_SPECS).sort()`
+  - variable `projectionKinds` — `projectionKinds = Object.keys(TASK_DELTA_V2_PROJECTION_CONTRACTS).sort()`
+  - variable `kind` — `kind`
+  - variable `spec` — `spec = KIND_SPECS[kind]`
+  - variable `projection` — `projection = TASK_DELTA_V2_PROJECTION_CONTRACTS[kind]`
+  - class `TaskDeltaV2ValidationError` — `export class TaskDeltaV2ValidationError extends Error`
+  - constructor `constructor` — `constructor(path, message)`
+  - function `fail` — `function fail(path, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `object` — `function object(value, path)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, path)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, path)`
+  - function `sha256String` — `function sha256String(value, path)`
+  - function `stringArray` — `function stringArray(value, path)`
+  - arrow-function `<anonymous@14127>` — `(item, index) => nonEmptyString(item, `$`
+  - function `validateProvenance` — `function validateProvenance(value, path)`
+  - function `validatePayload` — `function validatePayload(payload, spec, path)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - variable `<anonymous@15090>` — `[key, allowed]`
+  - function `validateTaskDeltaV2` — `export function validateTaskDeltaV2(value, path = 'TaskDeltaV2')`
+  - variable `spec` — `spec = KIND_SPECS[value.kind]`
+  - function `canonicalize` — `function canonicalize(value, path = 'TaskDeltaV2')`
+  - arrow-function `<anonymous@16872>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@17019>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - … and 21 more symbols
+
+### Task, worktree, model and authoring leases — LIVE / DEFAULT
+- **Files:** 2 (2 with symbols) · **Symbols:** 2404 · **Callable:** 678 · **Authored purpose:** 27
+- `scripts/task-heartbeat.mjs` (78 symbols)
+  - variable `DEFAULT_CHECK_INTERVAL_SEC` — `DEFAULT_CHECK_INTERVAL_SEC = 30`
+  - variable `DEFAULT_STALL_THRESHOLD_SEC` — `DEFAULT_STALL_THRESHOLD_SEC = 120`
+  - variable `DEFAULT_MAX_RUNTIME_SEC` — `DEFAULT_MAX_RUNTIME_SEC = 3600`
+  - function `safeTaskId` — `function safeTaskId(taskId)`
+  - variable `value` — `value = String(taskId || '').trim()`
+  - function `heartbeatDir` — `function heartbeatDir(projectSlug)`
+  - variable `<anonymous@807>`
+  - variable `dir` — `dir = path.join(paths.audit, 'heartbeats')`
+  - function `stateFile` — `function stateFile(taskId, projectSlug)`
+  - function `loadState` — `function loadState(taskId, projectSlug)`
+  - variable `file` — `file = stateFile(taskId, projectSlug)`
+  - function `saveState` — `function saveState(taskId, projectSlug, state)`
+  - variable `file` — `file = stateFile(taskId, projectSlug)`
+  - variable `temporary` — `temporary = `$`
+  - function `pidExists` — `function pidExists(pid)`
+  - function `processStats` — `function processStats(pid)`
+  - variable `output` — `output = execFileSync(`
+  - variable `<anonymous@1870>` — `[cpu, _memoryPercent, rss, elapsed] = output.split(/\s+/)`
+  - function `readTail` — `function readTail(file, maxBytes = 2_000)`
+  - variable `content` — `content = readFileSync(file)`
+  - function `newestFileMtime` — `function newestFileMtime(directory)`
+  - variable `newest` — `newest = null`
+  - variable `name` — `name`
+  - variable `file` — `file = path.join(directory, name)`
+  - variable `stats` — `stats`
+  - variable `PROGRESS_PATTERNS` — `PROGRESS_PATTERNS = [`
+  - function `checkProcessProgress` — `export function checkProcessProgress(`
+  - variable `nowDate` — `nowDate = now instanceof Date ? now : new Date(now)`
+  - variable `nowMs` — `nowMs = nowDate.getTime()`
+  - variable `previous` — `previous = loadState(taskId, projectSlug)`
+  - variable `state` — `state = previous ||`
+  - variable `check` — `check =`
+  - variable `stats` — `stats = statSync(logFile)`
+  - variable `tail` — `tail = readTail(logFile)`
+  - arrow-function `<anonymous@4715>` — `pattern => pattern.test(tail)`
+  - variable `newest` — `newest = newestFileMtime(outputDir)`
+  - variable `hasProgress` — `hasProgress = check.progressDetected || check.outputChanged || check.cpuPercent > 1`
+  - variable `lastProgressMs` — `lastProgressMs = state.lastProgressAt`
+  - variable `timeSinceProgress` — `timeSinceProgress = (nowMs - lastProgressMs) / 1000`
+  - variable `runtime` — `runtime = (nowMs - Date.parse(state.startedAt)) / 1000`
+  - … and 38 more symbols
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### Durable checkpoints and handoffs — LIVE / DEFAULT
+- **Files:** 3 (3 with symbols) · **Symbols:** 179 · **Callable:** 68 · **Authored purpose:** 13
+- `scripts/arc-checkpoints.mjs` (45 symbols)
+  - variable `CHECKPOINT_EXCLUDES` — `CHECKPOINT_EXCLUDES = [`
+  - variable `IDENTITY` — `IDENTITY = ['-c', 'user.email=clide@local', '-c', 'user.name=CLIDE Checkpoints', '-c', 'commit.gpgsign=false']`
+  - function `checkpointLabel` — `export function checkpointLabel(text, fallback = 'checkpoint')` — *Short, single-line label for a checkpoint (never breaks the commit message).*
+  - variable `oneLine` — `oneLine = String(text ?? '').replace(/\s+/g, ' ').trim()`
+  - class `CheckpointStore` — `export class CheckpointStore`
+  - constructor `constructor` — `constructor(`
+  - arrow-function `<anonymous@3034>` — `() => new Date().toISOString()`
+  - arrow-function `<anonymous@3145>` — `(args, gitOpts =`
+  - method `gitDir` — `gitDir(chatId)`
+  - method `metaPath` — `metaPath(chatId)`
+  - method `_git` — `_git(chatId, args, gitOpts)` — *Run a git subcommand inside this chat's shadow repo against the work tree.*
+  - method `_realHead` — `_realHead()` — *The REAL repo's current HEAD (the project's own `.git`, NOT the shadow repo). Runs `git rev-parse HEAD` with the store's default cwd (projectDir), bypassing the shadow `--git-dir`/`--work-tree` prefix*
+  - method `ensure` — `ensure(chatId)` — *Lazily create the shadow repo + excludes on first use. Idempotent.*
+  - variable `gitDir` — `gitDir = this.gitDir(chatId)`
+  - variable `excludePath` — `excludePath = path.join(gitDir, 'info', 'exclude')`
+  - method `_readMeta` — `_readMeta(chatId)`
+  - variable `p` — `p = this.metaPath(chatId)`
+  - variable `parsed` — `parsed = JSON.parse(readFileSync(p, 'utf8'))`
+  - method `_writeMeta` — `_writeMeta(chatId, list)`
+  - method `snapshot` — `snapshot(chatId,` — *Snapshot the current work tree for a chat.*
+  - variable `id` — `id = this._git(chatId, ['rev-parse', 'HEAD']).trim()`
+  - variable `entry` — `entry =`
+  - variable `realHead` — `realHead = this._realHead()`
+  - variable `list` — `list = this._readMeta(chatId)`
+  - method `list` — `list(chatId)` — *All checkpoints for a chat, oldest first.*
+  - method `find` — `find(chatId, id)` — *Look up one checkpoint's metadata by commit id.*
+  - arrow-function `<anonymous@6976>` — `(c) => c.id === id`
+  - method `restoreCode` — `restoreCode(chatId, id)` — *Restore the work tree to a checkpoint: tracked files are reset and files created afterwards are removed (excludes are preserved). The user's real git is untouched. Returns the restored checkpoint's me*
+  - variable `entry` — `entry = this.find(chatId, id)`
+  - method `redoPath` — `redoPath(chatId)`
+  - method `_readRedo` — `_readRedo(chatId)`
+  - variable `p` — `p = this.redoPath(chatId)`
+  - variable `parsed` — `parsed = JSON.parse(readFileSync(p, 'utf8'))`
+  - method `_writeRedo` — `_writeRedo(chatId, list)`
+  - variable `p` — `p = this.redoPath(chatId)`
+  - method `stashRedo` — `stashRedo(chatId,` — *Stash a dropped tail of chat events before a destructive truncate. `sourceCheckpointId` is the checkpoint the rewind restored TO (informational — what a redo will move past again). No-op (returns null*
+  - variable `entry` — `entry =`
+  - variable `list` — `list = this._readRedo(chatId)`
+  - method `popRedo` — `popRedo(chatId)` — *Pop the most recently stashed redo entry (LIFO — undo the LAST rewind first). Null if empty.*
+  - variable `list` — `list = this._readRedo(chatId)`
+  - … and 5 more symbols
+- `scripts/durable-checkpoint.mjs` (91 symbols)
+  - variable `LOG_VERSION` — `LOG_VERSION = '2.2'`
+  - variable `LOCK_STALE_MS` — `LOCK_STALE_MS = 30_000`
+  - function `safeTaskId` — `function safeTaskId(taskId)`
+  - variable `value` — `value = String(taskId || '').trim()`
+  - function `checkpointHash` — `function checkpointHash(checkpoint)`
+  - variable `<anonymous@1073>`
+  - function `sleepSync` — `function sleepSync(milliseconds)`
+  - function `validateCheckpointWindow` — `function validateCheckpointWindow(taskId, rawLines, lineBase, startSequence, startHash)`
+  - variable `entries` — `entries = []`
+  - variable `errors` — `errors = []`
+  - variable `previousSequence` — `previousSequence = startSequence`
+  - variable `previousHash` — `previousHash = startHash`
+  - variable `index` — `index = 0`
+  - variable `line` — `line = rawLines[index].trim()`
+  - variable `checkpoint` — `checkpoint`
+  - class `DurableCheckpoint` — `export class DurableCheckpoint`
+  - constructor `constructor` — `constructor(taskId, opts =`
+  - variable `baseDir` — `baseDir = opts.baseDir || ensureProject(this.projectSlug).paths.checkpoints`
+  - variable `latest` — `latest = this._readLog().entries.at(-1)`
+  - method `_readLog` — `_readLog()`
+  - variable `raw` — `raw = readFileSync(this.logFile, 'utf8')`
+  - variable `lines` — `lines = raw.split('\n')`
+  - variable `endsWithNewline` — `endsWithNewline = raw.endsWith('\n')`
+  - variable `tornTailSafe` — `tornTailSafe = memoryTornTailSafe()`
+  - variable `entries` — `entries = []`
+  - variable `errors` — `errors = []`
+  - variable `skipped` — `skipped = []`
+  - variable `previousSequence` — `previousSequence = 0`
+  - variable `previousHash` — `previousHash = null`
+  - variable `index` — `index = 0`
+  - variable `line` — `line = lines[index].trim()`
+  - variable `checkpoint` — `checkpoint`
+  - method `_repairTornTailUnderLock` — `_repairTornTailUnderLock()`
+  - variable `repairDir` — `repairDir = path.join(this.dir, 'tail-recovery')`
+  - variable `reconciled` — `reconciled = reconcileJsonlTailRepairs(`
+  - variable `repaired` — `repaired = this._readLog()`
+  - variable `first` — `first = repaired.errors[0]`
+  - variable `raw` — `raw = readFileSync(this.logFile)`
+  - variable `lastNewline` — `lastNewline = raw.lastIndexOf(0x0a)`
+  - variable `completeBytes` — `completeBytes = lastNewline === -1 ? 0 : lastNewline + 1`
+  - … and 51 more symbols
+- `scripts/model-handoff.mjs` (43 symbols)
+  - function `safeHandoffId` — `function safeHandoffId(handoffId)`
+  - variable `value` — `value = String(handoffId || '').trim()`
+  - function `resolveHandoffDir` — `function resolveHandoffDir(opts, projectSlug)`
+  - variable `dir` — `dir = path.resolve(opts.handoffDir)`
+  - variable `<anonymous@1016>`
+  - function `writeDurableJson` — `function writeDurableJson(file, value)`
+  - variable `fd` — `fd = openSync(file, 'wx', 0o600)`
+  - function `createHandoff` — `export async function createHandoff(sessionId, opts =`
+  - variable `projectSlug` — `projectSlug = opts.projectSlug || detectProject().slug`
+  - variable `handoffDir` — `handoffDir = resolveHandoffDir(opts, projectSlug)`
+  - variable `handoffId` — `handoffId = safeHandoffId(opts.handoffId || `handoff-$`
+  - variable `pkg` — `pkg =`
+  - arrow-function `<anonymous@1977>` — `s => (`
+  - arrow-function `<anonymous@2302>` — `s => !(opts.completedSteps || []).find(c => c.id === s.id)`
+  - arrow-function `<anonymous@2341>` — `c => c.id === s.id`
+  - arrow-function `<anonymous@2435>` — `f => (`
+  - arrow-function `<anonymous@2544>` — `f => (`
+  - arrow-function `<anonymous@2703>` — `f => f.type === 'preference'`
+  - arrow-function `<anonymous@2737>` — `f => f.finding?.slice?.(0, 200)`
+  - arrow-function `<anonymous@2836>` — `s => s.decision`
+  - arrow-function `<anonymous@2857>` — `s => s.decision`
+  - arrow-function `<anonymous@2955>` — `s => s.status === 'abandoned'`
+  - arrow-function `<anonymous@2990>` — `s => (`
+  - arrow-function `<anonymous@3147>` — `a => (`
+  - variable `file` — `file = path.join(handoffDir, `$`
+  - variable `hash` — `hash = createHash('sha256').update(readFileSync(file)).digest('hex')`
+  - function `resumeWithModel` — `export async function resumeWithModel(handoffId, newModel, opts =`
+  - variable `projectSlug` — `projectSlug = opts.projectSlug || detectProject().slug`
+  - variable `handoffDir` — `handoffDir = resolveHandoffDir(opts, projectSlug)`
+  - variable `file` — `file = path.join(handoffDir, `$`
+  - variable `pkg` — `pkg = JSON.parse(readFileSync(file, 'utf8'))`
+  - variable `<anonymous@4048>`
+  - variable `lines` — `lines = [`# TASK RESUMPTION HANDOFF`, ``, `**Previous model:** $`
+  - arrow-function `<anonymous@4665>` — `d => lines.push(`- $`
+  - arrow-function `<anonymous@4843>` — `p => lines.push(`- $`
+  - arrow-function `<anonymous@5022>` — `d => lines.push(`- **$`
+  - arrow-function `<anonymous@5222>` — `f => lines.push(`- \`$`
+  - arrow-function `<anonymous@5359>` — `s => lines.push(`- [x] $`
+  - arrow-function `<anonymous@5491>` — `a => lines.push(`- [ ] **$`
+  - variable `prompt` — `prompt = lines.join('\n')`
+  - … and 3 more symbols
+
+### Effect request/commit/in-doubt ledger — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 2732 · **Callable:** 775 · **Authored purpose:** 40
+- `scripts/governed-action-loop.mjs` (406 symbols)
+  - variable `GOVERNED_ACTION_LOOP_VERSION` — `GOVERNED_ACTION_LOOP_VERSION = '1.0.0'`
+  - variable `ACTION_TYPES` — `ACTION_TYPES = new Set([`
+  - variable `COMMAND_ACTION_TYPES` — `COMMAND_ACTION_TYPES = new Set(['run-command', 'dependency-install'])`
+  - variable `WRITE_ACTION_TYPES` — `WRITE_ACTION_TYPES = new Set(['write-file', 'edit-file'])`
+  - variable `EXECUTION_CLASSES` — `EXECUTION_CLASSES = new Set(['container', 'gvisor', 'vm', 'bwrap'])`
+  - function `commandTargetFiles` — `function commandTargetFiles(command)`
+  - variable `args` — `args = Array.isArray(command?.args) ? command.args : []`
+  - arrow-function `<anonymous@2877>` — `a => typeof a === 'string' && !a.startsWith('-') && !a.includes('=')`
+  - arrow-function `<anonymous@3044>` — `a => a.replace(/^\.\//, '')`
+  - function `fileExists` — `function fileExists(worktreePath, rel, writtenPaths)`
+  - variable `norm` — `norm = String(rel).replace(/^\.\//, '')`
+  - variable `abs` — `abs = path.resolve(worktreePath, norm)`
+  - function `coordinationTargets` — `function coordinationTargets(grant, env = process.env)`
+  - variable `fromGrant` — `fromGrant = Array.isArray(grant?.coordinationTargets) ? grant.coordinationTargets : []`
+  - variable `fromEnv` — `fromEnv = typeof env.ARC_MULTIFILE_COORDINATION_TARGETS === 'string' && env.ARC_MULTIFILE_COORDINATION_TARGETS.trim()`
+  - arrow-function `<anonymous@5012>` — `a => typeof a === 'string' && a.trim()`
+  - arrow-function `<anonymous@5063>` — `a => a.trim().replace(/^\.\//, '')`
+  - function `writtenThisRun` — `function writtenThisRun(writtenPaths, rel)`
+  - variable `norm` — `norm = String(rel).replace(/^\.\//, '')`
+  - variable `NETWORK_POLICIES` — `NETWORK_POLICIES = new Set(['none', 'allowlist'])`
+  - function `effectiveActionTypes` — `export function effectiveActionTypes(env = process.env)` — *The action types admissible into a compiled scope's `tools`, given the environment. UNSET (default) ⇒ returns the SAME `ACTION_TYPES` object — write-file/edit-file can never be admitted, so every OFF *
+  - class `GovernedActionLoopError` — `export class GovernedActionLoopError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'governedActionLoop')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => nonEmptyString(item, `$`
+  - arrow-function `<anonymous@7312>` — `(item, index) => nonEmptyString(item, `$`
+  - variable `item` — `item`
+  - function `boundedInteger` — `function boundedInteger(value, pathName, min, max)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = nonEmptyString(value, pathName)`
+  - function `canonicalValue` — `function canonicalValue(value)`
+  - arrow-function `<anonymous@8243>` — `key => [key, canonicalValue(value[key])]`
+  - function `sha256Of` — `function sha256Of(value,`
+  - … and 366 more symbols
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### Capability and authority policy — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 154 · **Callable:** 69 · **Authored purpose:** 0
+- `scripts/capability-policy.mjs` (34 symbols)
+  - variable `CAPABILITY_DECISION_VERSION` — `CAPABILITY_DECISION_VERSION = '1.0.0'`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `actorMatches` — `function actorMatches(actual, expected)`
+  - function `actionMatches` — `function actionMatches(actions, action)`
+  - function `mcpResourceMatches` — `function mcpResourceMatches(granted, requested)`
+  - function `canonicalExistingPath` — `function canonicalExistingPath(value, name)`
+  - function `pathResourceMatches` — `function pathResourceMatches(granted, requested)`
+  - variable `grantRoot` — `grantRoot = canonicalExistingPath(granted, 'granted resource')`
+  - variable `requestedPath` — `requestedPath = canonicalExistingPath(requested, 'requested resource')`
+  - function `resourceMatches` — `function resourceMatches(kind, granted, requested)`
+  - function `nowFromClock` — `function nowFromClock(clock)`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `cloneActor` — `function cloneActor(actor)`
+  - function `normalizeRequest` — `function normalizeRequest(`
+  - variable `request` — `request =`
+  - function `decisionBase` — `function decisionBase(policy, request, decidedAt)`
+  - function `validateDecision` — `function validateDecision(decision)`
+  - class `CapabilityPolicy` — `export class CapabilityPolicy`
+  - constructor `constructor` — `constructor(opts =`
+  - arrow-function `<anonymous@3875>` — `() => new Date()`
+  - arrow-function `<anonymous@3935>` — `grant =>`
+  - method `evaluate` — `evaluate(input =`
+  - variable `request` — `request = normalizeRequest(input)`
+  - variable `now` — `now = nowFromClock(this.clock)`
+  - variable `nowMs` — `nowMs = now.getTime()`
+  - variable `grant` — `grant`
+  - variable `capability` — `capability`
+  - method `authorize` — `authorize(input =`
+  - variable `decision` — `decision = this.evaluate(input)`
+  - method `assertApproval` — `assertApproval(decision,`
+  - function `recordCapabilityDecisionEvidence` — `export function recordCapabilityDecisionEvidence(compiler, decision, options =`
+  - variable `artifact` — `artifact = compiler.addJsonArtifact('other',`
+  - variable `assertion` — `assertion = compiler.addAssertion(`
+- `scripts/operator-surface-governance.mjs` (120 symbols)
+  - variable `OPERATOR_SURFACE_VERSION` — `OPERATOR_SURFACE_VERSION = '1.0.0'`
+  - variable `PROTECTED_SELF_IMPROVEMENT_SURFACES` — `PROTECTED_SELF_IMPROVEMENT_SURFACES = Object.freeze([`
+  - variable `ALL_SELF_IMPROVEMENT_SURFACES` — `ALL_SELF_IMPROVEMENT_SURFACES = new Set([`
+  - variable `ACTOR_TYPES` — `ACTOR_TYPES = new Set(['user', 'system', 'agent', 'tool', 'verifier'])`
+  - variable `DATA_CLASSIFICATIONS` — `DATA_CLASSIFICATIONS = new Set(['public', 'internal', 'confidential', 'restricted'])`
+  - variable `COST_CATEGORIES` — `COST_CATEGORIES = new Set(['model-call', 'tool-call', 'provider-bill', 'cache'])`
+  - variable `PROMOTION_MODES` — `PROMOTION_MODES = new Set(['experiment-only', 'human-promoted', 'autonomous-production'])`
+  - variable `EVALUATION_VERDICTS` — `EVALUATION_VERDICTS = new Set(['passed', 'failed', 'error'])`
+  - class `OperatorSurfaceError` — `export class OperatorSurfaceError extends Error`
+  - constructor `constructor` — `constructor(message, path = 'operatorSurface')`
+  - function `fail` — `function fail(path, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, path)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, path)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, path)`
+  - function `optionalString` — `function optionalString(value, path)`
+  - function `boolean` — `function boolean(value, path)`
+  - function `finiteNumber` — `function finiteNumber(value, path,`
+  - function `timestamp` — `function timestamp(value, path)`
+  - function `oneOf` — `function oneOf(value, choices, path)`
+  - function `stringArray` — `function stringArray(value, path,`
+  - arrow-function `<anonymous@3189>` — `(item, index) => nonEmptyString(item, `$`
+  - function `semver` — `function semver(value, path)`
+  - function `actor` — `function actor(value, path)`
+  - function `dataClassification` — `function dataClassification(value, path)`
+  - function `normalizeEvents` — `function normalizeEvents(events)`
+  - variable `validated` — `validated = events.map((event, index) =>`
+  - arrow-function `<anonymous@4044>` — `(event, index) =>`
+  - variable `error` — `error`
+  - variable `taskId` — `taskId = null`
+  - variable `correlationId` — `correlationId = null`
+  - variable `previousSequence` — `previousSequence = 0`
+  - variable `<anonymous@4306>` — `[index, event]`
+  - function `validateSideRecords` — `function validateSideRecords(value =`
+  - variable `eventIds` — `eventIds = new Set(events.map(event => event.eventId))`
+  - arrow-function `<anonymous@5158>` — `event => event.eventId`
+  - variable `taskId` — `taskId = events[0].taskId`
+  - … and 80 more symbols
+
+### Taint, privacy, egress and secret policy — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 302 · **Callable:** 89 · **Authored purpose:** 18
+- `scripts/data-retention-policy.mjs` (71 symbols)
+  - variable `DATA_RETENTION_POLICY_VERSION` — `DATA_RETENTION_POLICY_VERSION = '1.0.0'`
+  - variable `DISPOSITIONS` — `DISPOSITIONS = new Set(['keep', 'summarize', 'redact', 'archive', 'delete', 'export', 'purge'])`
+  - variable `CLASSIFICATIONS` — `CLASSIFICATIONS = new Set(['public', 'internal', 'confidential', 'restricted'])`
+  - variable `DATA_CATEGORIES` — `DATA_CATEGORIES = new Set([`
+  - variable `TRANSIENT_CATEGORIES` — `TRANSIENT_CATEGORIES = new Set(['runtime-cache', 'checkpoint', 'handoff', 'trace', 'generated-index'])`
+  - variable `SECRET_CATEGORIES` — `SECRET_CATEGORIES = new Set(['secret-local'])`
+  - variable `AUDIT_CATEGORIES` — `AUDIT_CATEGORIES = new Set(['audit-evidence'])`
+  - variable `LOCAL_PRESERVE_CATEGORIES` — `LOCAL_PRESERVE_CATEGORIES = new Set(['local-model-artifact', 'benchmark-artifact'])`
+  - variable `REQUESTER_TYPES` — `REQUESTER_TYPES = new Set(['user', 'operator', 'system'])`
+  - class `DataRetentionPolicyError` — `export class DataRetentionPolicyError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'dataRetentionPolicy')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName)`
+  - function `optionalString` — `function optionalString(value, pathName)`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `integerOrNull` — `function integerOrNull(value, pathName,`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => string(item, `$`
+  - arrow-function `<anonymous@3072>` — `(item, index) => string(item, `$`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `validateRetentionRule` — `function validateRetentionRule(rule, index, reasons)`
+  - variable `pathName` — `pathName = `dataRetentionPolicy.retentionRules[$`
+  - variable `category` — `category = oneOf(rule.category, DATA_CATEGORIES, `$`
+  - variable `disposition` — `disposition = oneOf(rule.disposition, DISPOSITIONS, `$`
+  - variable `retentionDays` — `retentionDays = integerOrNull(rule.retentionDays, `$`
+  - variable `evidenceRequired` — `evidenceRequired = boolean(rule.evidenceRequired, `$`
+  - variable `secretRevocable` — `secretRevocable = boolean(rule.secretRevocable, `$`
+  - variable `separatelyManagedSecret` — `separatelyManagedSecret = boolean(rule.separatelyManagedSecret, `$`
+  - function `validateExportFlow` — `function validateExportFlow(flow, index, ruleByCategory, reasons)`
+  - variable `pathName` — `pathName = `dataRetentionPolicy.exportFlows[$`
+  - variable `categories` — `categories = stringArray(flow.categories, `$`
+  - variable `category` — `category`
+  - variable `rule` — `rule = ruleByCategory.get(category)`
+  - … and 31 more symbols
+- `scripts/egress-gateway.mjs` (110 symbols)
+  - variable `EGRESS_GATEWAY_VERSION` — `EGRESS_GATEWAY_VERSION = '1.0.0'`
+  - variable `HOST_RULE_SCHEMA` — `HOST_RULE_SCHEMA = Object.freeze(`
+  - variable `ALLOWED_SCHEMES` — `ALLOWED_SCHEMES = new Set(['https', 'http', 'file'])`
+  - variable `MAX_HOST_LENGTH` — `MAX_HOST_LENGTH = 253`
+  - variable `MAX_PATH_LENGTH` — `MAX_PATH_LENGTH = 1024`
+  - variable `HOSTNAME_PATTERN` — `HOSTNAME_PATTERN = /^(?=.`
+  - class `EgressGatewayError` — `export class EgressGatewayError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'egressGateway')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `integerIn` — `function integerIn(value, pathName, min, max)`
+  - function `finiteIn` — `function finiteIn(value, pathName, min, max)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `stringArray` — `function stringArray(value, pathName)`
+  - variable `result` — `result = value.map((item, index) => nonEmptyString(item, `$`
+  - arrow-function `<anonymous@3485>` — `(item, index) => nonEmptyString(item, `$`
+  - function `validateHostRule` — `function validateHostRule(rule, index, pathName)`
+  - variable `host` — `host = nonEmptyString(rule.host, `$`
+  - variable `port` — `port = integerIn(rule.port, `$`
+  - variable `schemes` — `schemes = rule.schemes`
+  - variable `scheme` — `scheme`
+  - variable `paths` — `paths = rule.paths`
+  - variable `item` — `item`
+  - function `validateBudgets` — `function validateBudgets(value)`
+  - function `canonicalValue` — `function canonicalValue(value)`
+  - arrow-function `<anonymous@6208>` — `key => [key, canonicalValue(value[key])]`
+  - function `sha256Of` — `function sha256Of(value)`
+  - function `compileEgressPolicy` — `export function compileEgressPolicy(input)` — *Compile a deterministic egress policy from approved host rules and budgets. The returned artifact is content-addressed so a later drift check can reject a rule that the executor did not attest.*
+  - variable `policyId` — `policyId = nonEmptyString(input.policyId, 'egressPolicy.policyId')`
+  - variable `createdAt` — `createdAt = nonEmptyString(input.createdAt, 'egressPolicy.createdAt')`
+  - variable `taskId` — `taskId = nonEmptyString(input.taskId, 'egressPolicy.taskId')`
+  - variable `correlationId` — `correlationId = nonEmptyString(input.correlationId, 'egressPolicy.correlationId')`
+  - variable `hostRules` — `hostRules = input.hostRules.map((rule, index) => validateHostRule(rule, index, 'egressPolicy.hostRules'))`
+  - arrow-function `<anonymous@7625>` — `(rule, index) => validateHostRule(rule, index, 'egressPolicy.hostRules')`
+  - variable `seenHostPort` — `seenHostPort = new Set(hostRules.map(rule => `$`
+  - arrow-function `<anonymous@7744>` — `rule => `$`
+  - … and 70 more symbols
+- `scripts/prompt-sanitizer.mjs` (121 symbols)
+  - variable `SECRET_RUN_MAX` — `SECRET_RUN_MAX = 8192`
+  - variable `PEM_MAX` — `PEM_MAX = 16384`
+  - variable `SECRET_RULES` — `SECRET_RULES = [`
+  - arrow-function `validate` — `(m) => (/[/+]/.test(m) || (/[0-9]/.test(m) && /[a-z]/.test(m) && /[A-Z]/.test(m))) && !/^[0-9a-f]`
+  - arrow-function `validate` — `(_whole, groups) =>`
+  - variable `v` — `v = String((groups && groups[1]) || '')`
+  - variable `HASH_HEX_LENGTHS` — `HASH_HEX_LENGTHS = new Set([32, 40, 56, 64, 96, 128])`
+  - function `shannonEntropy` — `function shannonEntropy(s)` — *Shannon entropy in bits/char over the string's own symbol distribution. Deterministic, weak-model-safe.*
+  - variable `str` — `str = String(s || '')`
+  - variable `freq` — `freq = new Map()`
+  - variable `ch` — `ch`
+  - variable `h` — `h = 0`
+  - variable `c` — `c`
+  - variable `p` — `p = c / str.length`
+  - function `alphabetClasses` — `function alphabetClasses(s)` — *How many distinct alphabet classes (lower/upper/digit/symbol) a token spans — a mixed-alphabet proxy.*
+  - variable `n` — `n = 0`
+  - variable `MAX_SECRET_TOKEN_LEN` — `MAX_SECRET_TOKEN_LEN = 512`
+  - variable `CONSERVATIVE_SECRET_RULES` — `CONSERVATIVE_SECRET_RULES = [`
+  - arrow-function `validate` — `(m) => !HASH_HEX_LENGTHS.has(m.length) && shannonEntropy(m) >= 3.5`
+  - arrow-function `validate` — `(m) => alphabetClasses(m) >= 3 && shannonEntropy(m) >= 4.0 && !HASH_HEX_LENGTHS.has(m.length)`
+  - function `assertBoundedSecretRules` — `function assertBoundedSecretRules(rules, label)`
+  - variable `rule` — `rule`
+  - variable `src` — `src = rule?.re?.source || ''`
+  - variable `m` — `m = src.match(/\`
+  - arrow-function `DEFAULT_REPLACE` — `(type) => `[REDACTED:$`
+  - variable `B64_MIN_RUN` — `B64_MIN_RUN = 24`
+  - variable `DECODE_BUDGET` — `DECODE_BUDGET = 64 * 1024`
+  - variable `MAX_RUNS` — `MAX_RUNS = 4096`
+  - variable `MAX_RUN_LEN` — `MAX_RUN_LEN = 4096`
+  - function `plaintextHasSecret` — `function plaintextHasSecret(plaintext)` — *True iff running the plain SECRET_RULES over `plaintext` fires at least one rule. Non-recursive: scans the DECODED plaintext with the base rules only (never re-invokes the encoded pass), so it cannot *
+  - variable `s` — `s = String(plaintext || '')`
+  - variable `rule` — `rule`
+  - variable `m` — `m`
+  - function `redactEncodedSecrets` — `function redactEncodedSecrets(text)` — *Scan `text` for base64 (>=24 chars) and percent-encoded runs; for each run that DECODES cleanly and, once decoded, matches any base secret rule, redact the WHOLE run as [REDACTED:encoded-secret]. Boun*
+  - variable `out` — `out = String(text || '')`
+  - variable `count` — `count = 0`
+  - variable `budget` — `budget = DECODE_BUDGET`
+  - variable `runs` — `runs = 0`
+  - variable `B64_RE` — `B64_RE = new RegExp(`[A-Za-z0-9+/]`
+  - arrow-function `<anonymous@17550>` — `(run) =>`
+  - … and 81 more symbols
+
+### TaskSpec and epoch artifact stores — LIVE / DEFAULT
+- **Files:** 2 (2 with symbols) · **Symbols:** 58 · **Callable:** 21 · **Authored purpose:** 0
+- `scripts/task-epoch-artifact-store-v1.mjs` (37 symbols)
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-task-epoch-v1-([a-f0-9]`
+  - function `requiredString` — `function requiredString(value, label)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `canonicalize` — `function canonicalize(value, label = 'TaskEpochArtifactV1', ancestors = new WeakSet())`
+  - arrow-function `<anonymous@1777>` — `(item, index) => canonicalize(item, `$`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - arrow-function `<anonymous@2194>` — `key =>`
+  - variable `descriptor` — `descriptor = descriptors[key]`
+  - function `canonicalBytes` — `function canonicalBytes(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `fsyncDirectory` — `function fsyncDirectory(dir)`
+  - variable `fd` — `fd = openSync(dir, 'r')`
+  - function `ensureDirectory` — `function ensureDirectory(baseDir, dir)`
+  - function `publishOnce` — `function publishOnce(`
+  - variable `tempPath` — `tempPath = `$`
+  - variable `fd` — `fd = openSync(tempPath, 'wx', 0o600)`
+  - variable `ready` — `ready = false`
+  - variable `error` — `error`
+  - class `TaskEpochArtifactStoreV1` — `export class TaskEpochArtifactStoreV1`
+  - constructor `constructor` — `constructor(`
+  - method `describe` — `describe(`
+  - variable `envelope` — `envelope = canonicalize(`
+  - variable `bytes` — `bytes = canonicalBytes(envelope)`
+  - variable `digest` — `digest = sha256(bytes)`
+  - method `persist` — `persist(input)`
+  - variable `descriptor` — `descriptor = this.describe(input)`
+  - method `load` — `load(artifactId, expected =`
+  - variable `match` — `match = ARTIFACT_RE.exec(requiredString(artifactId, 'TaskEpochArtifactV1.artifactId'))`
+  - variable `digest` — `digest = match[1]`
+  - variable `artifactPath` — `artifactPath = path.join(this.dir, `$`
+  - variable `bytes` — `bytes`
+  - variable `parsed` — `parsed`
+  - variable `descriptor` — `descriptor`
+  - variable `error` — `error`
+  - variable `key` — `key`
+- `scripts/task-spec-artifact-store.mjs` (21 symbols)
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `canonicalBytes` — `function canonicalBytes(taskSpec)`
+  - function `fsyncDirectory` — `function fsyncDirectory(dir)`
+  - variable `fd` — `fd = openSync(dir, 'r')`
+  - class `TaskSpecArtifactStore` — `export class TaskSpecArtifactStore`
+  - constructor `constructor` — `constructor(`
+  - method `describe` — `describe(taskSpec)`
+  - variable `verified` — `verified = verifyTaskSpecV1(taskSpec)`
+  - variable `taskSpecSha256` — `taskSpecSha256 = verified.taskSpecSha256`
+  - method `persist` — `persist(taskSpec,`
+  - variable `descriptor` — `descriptor = this.describe(taskSpec)`
+  - variable `temp` — `temp = `$`
+  - variable `fd` — `fd = openSync(temp, 'wx', 0o600)`
+  - variable `fileReady` — `fileReady = false`
+  - variable `error` — `error`
+  - method `load` — `load(artifactId,`
+  - variable `digest` — `digest = taskSpecDigestFromArtifactId(artifactId)`
+  - variable `artifactPath` — `artifactPath = path.join(this.dir, `$`
+  - variable `parsed` — `parsed`
+  - variable `error` — `error`
+  - variable `descriptor` — `descriptor = this.describe(parsed)`
+
+### TaskGraph artifact store — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 78 · **Callable:** 26 · **Authored purpose:** 0
+- `scripts/task-graph-artifact-store.mjs` (78 symbols)
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `GRAPH_ARTIFACT_RE` — `GRAPH_ARTIFACT_RE = /^artifact-plan-graph-([a-f0-9]`
+  - variable `NODE_ARTIFACT_RE` — `NODE_ARTIFACT_RE = /^artifact-plan-node-([a-f0-9]`
+  - variable `INSERTION_ARTIFACT_RE` — `INSERTION_ARTIFACT_RE = /^artifact-plan-graph-insertion-([a-f0-9]`
+  - variable `MAX_VALIDATED_NODE_CACHE_ENTRIES` — `MAX_VALIDATED_NODE_CACHE_ENTRIES = 256`
+  - variable `MAX_VALIDATED_NODE_CACHE_BYTES` — `MAX_VALIDATED_NODE_CACHE_BYTES = 16 * 1024 * 1024`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `descriptor` — `descriptor`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'taskGraphArtifact')`
+  - arrow-function `<anonymous@2083>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@2309>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalBytes` — `function canonicalBytes(value)`
+  - function `sha256` — `function sha256(bytes)`
+  - function `fsyncDirectory` — `function fsyncDirectory(dir)`
+  - variable `fd` — `fd = openSync(dir, 'r')`
+  - function `ensureDurableDirectory` — `function ensureDurableDirectory(baseDir, dir)`
+  - function `persistOnce` — `function persistOnce(`
+  - variable `temp` — `temp = `$`
+  - variable `fd` — `fd = openSync(temp, 'wx', 0o600)`
+  - variable `fileReady` — `fileReady = false`
+  - variable `error` — `error`
+  - function `digestFromArtifactId` — `function digestFromArtifactId(value, pattern, label)`
+  - variable `artifactId` — `artifactId = requiredString(value, `$`
+  - variable `match` — `match = pattern.exec(artifactId)`
+  - class `TaskGraphArtifactStore` — `export class TaskGraphArtifactStore`
+  - constructor `constructor` — `constructor(`
+  - method `_rememberValidatedNode` — `_rememberValidatedNode(digest, descriptor)`
+  - variable `frozen` — `frozen = deepFreeze(descriptor)`
+  - variable `byteLength` — `byteLength = Buffer.byteLength(frozen.bytes, 'utf8')`
+  - variable `previous` — `previous = this.validatedNodeCache.get(digest)`
+  - variable `oldestDigest` — `oldestDigest = this.validatedNodeCache.keys().next().value`
+  - variable `oldest` — `oldest = this.validatedNodeCache.get(oldestDigest)`
+  - method `_loadValidatedNodeFromCache` — `_loadValidatedNodeFromCache(digest, artifactPath)`
+  - variable `cached` — `cached = this.validatedNodeCache.get(digest)`
+  - variable `bytes` — `bytes`
+  - variable `error` — `error`
+  - … and 38 more symbols
+
+### Candidate artifact store — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 122 · **Callable:** 37 · **Authored purpose:** 0
+- `scripts/candidate-artifact-v1.mjs` (122 symbols)
+  - variable `CANDIDATE_ARTIFACT_V1_VERSION` — `CANDIDATE_ARTIFACT_V1_VERSION = '1.0.0'`
+  - variable `CANDIDATE_ARTIFACT_ID_PREFIX` — `CANDIDATE_ARTIFACT_ID_PREFIX = 'artifact-candidate-v1-'`
+  - variable `CANDIDATE_BYTES_MAX_BYTES` — `CANDIDATE_BYTES_MAX_BYTES = 4 * 1024 * 1024`
+  - variable `CANDIDATE_ARTIFACT_MAX_BYTES` — `CANDIDATE_ARTIFACT_MAX_BYTES = 8 * 1024 * 1024`
+  - variable `CANDIDATE_TARGET_FILE_MAX_COUNT` — `CANDIDATE_TARGET_FILE_MAX_COUNT = 256`
+  - variable `CANDIDATE_TARGET_FILE_MAX_CHARS` — `CANDIDATE_TARGET_FILE_MAX_CHARS = 512`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_ID_RE` — `ARTIFACT_ID_RE = new RegExp(`^$`
+  - variable `TARGET_CONTROL_RE` — `TARGET_CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `CANDIDATE_TEXT_CONTROL_RE` — `CANDIDATE_TEXT_CONTROL_RE = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `CANDIDATE_ID_RE` — `CANDIDATE_ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `INPUT_KEYS` — `INPUT_KEYS = Object.freeze([`
+  - variable `REQUIRED_INPUT_KEYS` — `REQUIRED_INPUT_KEYS = Object.freeze([`
+  - class `CandidateArtifactV1Error` — `export class CandidateArtifactV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'CANDIDATE_ARTIFACT_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@3181>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@3271>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@3612>` — `key => key !== 'length'`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `keys` — `keys = ownDataKeys(value, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'CandidateArtifactV1', depth = 0)`
+  - arrow-function `<anonymous@5087>` — `(_, index) => canonicalize(value[index], `$`
+  - variable `keys` — `keys = ownDataKeys(value, pathName).sort()`
+  - variable `result` — `result =`
+  - variable `key` — `key`
+  - … and 82 more symbols
+
+### Verifier/oracle artifact stores — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 4 (4 with symbols) · **Symbols:** 335 · **Callable:** 86 · **Authored purpose:** 1
+- `scripts/oracle-construction-commitment-store-v1.mjs` (56 symbols)
+  - variable `COMMITMENT_ARTIFACT_RE` — `COMMITMENT_ARTIFACT_RE = /^artifact-oracle-construction-commitment-([a-f0-9]`
+  - variable `OPENING_HANDLE_RE` — `OPENING_HANDLE_RE = /^oracle-construction-opening-([a-f0-9]`
+  - variable `REVEAL_HANDLE_RE` — `REVEAL_HANDLE_RE = /^oracle-construction-reveal-([a-f0-9]`
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@1194>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalBytes` — `function canonicalBytes(value)`
+  - function `fsyncDirectory` — `function fsyncDirectory(dir)`
+  - variable `fd` — `fd = openSync(dir, 'r')`
+  - function `secureDirectory` — `function secureDirectory(dir)`
+  - function `persistOnce` — `function persistOnce(dir, targetPath, bytes)`
+  - variable `temporary` — `temporary = `$`
+  - variable `fd` — `fd = openSync(temporary, 'wx', 0o600)`
+  - variable `error` — `error`
+  - function `loadCanonical` — `function loadCanonical(targetPath, label)`
+  - variable `bytes` — `bytes = readFileSync(targetPath, 'utf8')`
+  - variable `value` — `value`
+  - class `OracleConstructionCommitmentStoreV1` — `export class OracleConstructionCommitmentStoreV1`
+  - constructor `constructor` — `constructor(`
+  - method `commit` — `commit(manifest,`
+  - variable `pair` — `pair = createOracleConstructionCommitmentV1(`
+  - variable `commitmentArtifactId` — `commitmentArtifactId = `artifact-oracle-construction-commitment-$`
+  - variable `openingHandle` — `openingHandle = `oracle-construction-opening-$`
+  - variable `commitmentPath` — `commitmentPath = path.join(this.commitmentDir, `$`
+  - variable `openingPath` — `openingPath = path.join(this.openingDir, `$`
+  - variable `commitmentBytes` — `commitmentBytes = canonicalBytes(pair.commitment)`
+  - variable `openingBytes` — `openingBytes = canonicalBytes(pair.opening)`
+  - method `loadCommitment` — `loadCommitment(commitmentArtifactId)`
+  - variable `match` — `match = COMMITMENT_ARTIFACT_RE.exec(commitmentArtifactId)`
+  - variable `targetPath` — `targetPath = path.join(this.commitmentDir, `$`
+  - variable `loaded` — `loaded = loadCanonical(targetPath, 'Oracle construction commitment')`
+  - variable `commitment` — `commitment = verifyOracleConstructionCommitmentV1(loaded.value)`
+  - method `matchesManifest` — `matchesManifest(commitmentArtifactId, manifestInput)`
+  - variable `loadedCommitment` — `loadedCommitment = this.loadCommitment(commitmentArtifactId)`
+  - variable `manifest` — `manifest = compileOracleConstructionManifestV1(manifestInput)`
+  - variable `openingPath` — `openingPath = path.join(this.openingDir, `$`
+  - variable `opening` — `opening = loadCanonical(openingPath, 'Oracle construction opening').value`
+  - method `reveal` — `reveal(`
+  - variable `loadedCommitment` — `loadedCommitment = this.loadCommitment(commitmentArtifactId)`
+  - variable `match` — `match = OPENING_HANDLE_RE.exec(openingHandle)`
+  - … and 16 more symbols
+- `scripts/verifier-capsule-artifact-store.mjs` (98 symbols)
+  - variable `VERIFIER_CAPSULE_ARTIFACT_STORE_V1` — `VERIFIER_CAPSULE_ARTIFACT_STORE_V1 = 'verifier-capsule-artifact-store-v1'`
+  - variable `VERIFIER_CAPSULE_ARTIFACT_MAX_BYTES` — `VERIFIER_CAPSULE_ARTIFACT_MAX_BYTES = 2 * 1024 * 1024`
+  - variable `VERIFIER_CAPSULE_ARTIFACT_DIRECTORY` — `VERIFIER_CAPSULE_ARTIFACT_DIRECTORY = 'verifier-capsules-v1'`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - class `VerifierCapsuleArtifactStoreError` — `export class VerifierCapsuleArtifactStoreError extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_CAPSULE_ARTIFACT_STORE_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `canonicalBytes` — `function canonicalBytes(capsule)`
+  - function `ensureRealDirectory` — `function ensureRealDirectory(directory, pathName)`
+  - variable `entry` — `entry`
+  - variable `error` — `error`
+  - variable `error` — `error`
+  - function `fsyncDirectory` — `function fsyncDirectory(directory, pathName = 'VerifierCapsuleArtifactStore.directory')`
+  - variable `descriptor` — `descriptor`
+  - variable `error` — `error`
+  - function `ensureDirectory` — `function ensureDirectory(directory, pathName)`
+  - variable `error` — `error`
+  - function `readRegularNoFollow` — `function readRegularNoFollow(filePath, pathName)`
+  - variable `descriptor` — `descriptor`
+  - variable `entry` — `entry = lstatSync(filePath)`
+  - variable `opened` — `opened = fstatSync(descriptor)`
+  - variable `bytes` — `bytes = readFileSync(descriptor)`
+  - variable `error` — `error`
+  - function `publishOnce` — `function publishOnce(directory, filePath, bytes)`
+  - variable `existing` — `existing = readRegularNoFollow(filePath, 'VerifierCapsuleArtifactStore.artifact')`
+  - variable `temporaryPath` — `temporaryPath = `$`
+  - variable `descriptor` — `descriptor`
+  - variable `ready` — `ready = false`
+  - variable `error` — `error`
+  - variable `error` — `error`
+  - variable `existing` — `existing = readRegularNoFollow(filePath, 'VerifierCapsuleArtifactStore.artifact')`
+  - function `isObject` — `function isObject(value)`
+  - function `firstPresent` — `function firstPresent(options, keys)`
+  - arrow-function `<anonymous@7257>` — `key => options[key]`
+  - arrow-function `<anonymous@7283>` — `value => value !== undefined && value !== null`
+  - function `nestedDigest` — `function nestedDigest(value, keys, pathName)`
+  - variable `key` — `key`
+  - … and 58 more symbols
+- `scripts/verifier-experiment-artifact-store-v1.mjs` (54 symbols)
+  - variable `VERIFIER_EXPERIMENT_ARTIFACT_STORE_V1` — `VERIFIER_EXPERIMENT_ARTIFACT_STORE_V1 = 'verifier-experiment-artifact-store-v1'`
+  - variable `VERIFIER_EXPERIMENT_ARTIFACT_DIRECTORY_V1` — `VERIFIER_EXPERIMENT_ARTIFACT_DIRECTORY_V1 = 'verifier-experiments-v1'`
+  - variable `VERIFIER_EXPERIMENT_ARTIFACT_MAX_BYTES_V1` — `VERIFIER_EXPERIMENT_ARTIFACT_MAX_BYTES_V1 = 2 * 1024 * 1024`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - class `VerifierExperimentArtifactStoreV1Error` — `export class VerifierExperimentArtifactStoreV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_EXPERIMENT_ARTIFACT_STORE_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `canonicalBytes` — `function canonicalBytes(experiment)`
+  - function `ensureRealDirectory` — `function ensureRealDirectory(directory, pathName)`
+  - variable `entry` — `entry`
+  - variable `error` — `error`
+  - function `fsyncDirectory` — `function fsyncDirectory(directory, pathName)`
+  - variable `descriptor` — `descriptor`
+  - variable `error` — `error`
+  - function `ensureDirectory` — `function ensureDirectory(directory, pathName)`
+  - variable `error` — `error`
+  - function `readRegularNoFollow` — `function readRegularNoFollow(filePath, pathName)`
+  - variable `descriptor` — `descriptor`
+  - variable `entry` — `entry = lstatSync(filePath)`
+  - variable `opened` — `opened = fstatSync(descriptor)`
+  - variable `bytes` — `bytes = readFileSync(descriptor)`
+  - variable `error` — `error`
+  - function `publishOnce` — `function publishOnce(directory, filePath, bytes)`
+  - variable `existing` — `existing = readRegularNoFollow(filePath, 'VerifierExperimentArtifactStoreV1.artifact')`
+  - variable `error` — `error`
+  - variable `temporaryPath` — `temporaryPath = `$`
+  - variable `descriptor` — `descriptor`
+  - variable `ready` — `ready = false`
+  - variable `error` — `error`
+  - variable `created` — `created = false`
+  - variable `error` — `error`
+  - variable `raced` — `raced = readRegularNoFollow(filePath, 'VerifierExperimentArtifactStoreV1.artifact')`
+  - class `VerifierExperimentArtifactStoreV1` — `export class VerifierExperimentArtifactStoreV1`
+  - constructor `constructor` — `constructor(`
+  - method `describe` — `describe(experiment, options =`
+  - variable `compiled` — `compiled`
+  - variable `error` — `error`
+  - … and 14 more symbols
+- `scripts/verifier-result-artifact-store.mjs` (127 symbols)
+  - variable `VERIFIER_RESULT_ARTIFACT_STORE_V1` — `VERIFIER_RESULT_ARTIFACT_STORE_V1 = 'verifier-result-artifact-store-v1'`
+  - variable `VERIFIER_RESULT_ARTIFACT_DIRECTORY` — `VERIFIER_RESULT_ARTIFACT_DIRECTORY = 'verifier-results-v1'`
+  - variable `VERIFICATION_EVIDENCE_ARTIFACT_DIRECTORY` — `VERIFICATION_EVIDENCE_ARTIFACT_DIRECTORY = 'verification-evidence-v1'`
+  - variable `VERIFICATION_EVIDENCE_ARTIFACT_MAX_BYTES` — `VERIFICATION_EVIDENCE_ARTIFACT_MAX_BYTES = 64 * 1024 * 1024`
+  - variable `VERIFIER_RESULT_ARTIFACT_MAX_BYTES` — `VERIFIER_RESULT_ARTIFACT_MAX_BYTES = 64 * 1024 * 1024`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - class `VerifierResultArtifactStoreError` — `export class VerifierResultArtifactStoreError extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_RESULT_ARTIFACT_STORE_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isObject` — `function isObject(value)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `sha256Bytes` — `function sha256Bytes(value)`
+  - function `bytesValue` — `function bytesValue(value, pathName)`
+  - function `expectedDigestOption` — `function expectedDigestOption(options, explicitKeys, objectKeys, digestKeys, pathName)`
+  - variable `values` — `values = []`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nestedDigest` — `function nestedDigest(value, digestKeys, pathName)`
+  - variable `nestedKey` — `nestedKey`
+  - variable `key` — `key`
+  - function `expectedIdOption` — `function expectedIdOption(options, explicitKeys, pathName)`
+  - variable `values` — `values = []`
+  - variable `key` — `key`
+  - function `normalizeTargetFiles` — `function normalizeTargetFiles(value, pathName)`
+  - variable `result` — `result = [...value]`
+  - arrow-function `<anonymous@4631>` — `item => typeof item !== 'string' || !item.trim()`
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `normalizeExpectedBindings` — `function normalizeExpectedBindings(options =`
+  - variable `expectedVerifierCapsuleSha256` — `expectedVerifierCapsuleSha256 = expectedDigestOption(`
+  - variable `expectedCandidateWorkspaceManifestSha256` — `expectedCandidateWorkspaceManifestSha256 = expectedDigestOption(`
+  - variable `expectedTaskSpecSha256` — `expectedTaskSpecSha256 = expectedDigestOption(`
+  - variable `expectedGoalCapsuleSha256` — `expectedGoalCapsuleSha256 = expectedDigestOption(`
+  - variable `expectedGoalVerifierContractSha256` — `expectedGoalVerifierContractSha256 = expectedDigestOption(`
+  - variable `expectedCandidateArtifactSha256` — `expectedCandidateArtifactSha256 = expectedDigestOption(`
+  - variable `expectedCandidateSha256` — `expectedCandidateSha256 = expectedDigestOption(`
+  - variable `expectedVerifierCapsuleId` — `expectedVerifierCapsuleId = expectedIdOption(`
+  - variable `expectedCandidateWorkspaceId` — `expectedCandidateWorkspaceId = expectedIdOption(`
+  - variable `expectedTargetFiles` — `expectedTargetFiles = null`
+  - variable `targetValues` — `targetValues = ['expectedTargetFiles', 'targetFiles', 'expectedTargets', 'targets']`
+  - … and 87 more symbols
+
+### RuntimeInvocationReceipt store — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 173 · **Callable:** 55 · **Authored purpose:** 2
+- `scripts/runtime-invocation-receipt-v1.mjs` (173 symbols)
+  - variable `RUNTIME_INVOCATION_RECEIPT_V1` — `RUNTIME_INVOCATION_RECEIPT_V1 = 'runtime-invocation-receipt-v1'`
+  - variable `RUNTIME_INVOCATION_RECEIPT_REFERENCE_V1` — `RUNTIME_INVOCATION_RECEIPT_REFERENCE_V1 = 'runtime-invocation-receipt-reference-v1'`
+  - variable `RUNTIME_INVOCATION_RECEIPT_ARTIFACT_PREFIX` — `RUNTIME_INVOCATION_RECEIPT_ARTIFACT_PREFIX = 'artifact-runtime-invocation-v1-'`
+  - variable `RUNTIME_INVOCATION_PROOF_V1` — `RUNTIME_INVOCATION_PROOF_V1 = 'runtime-invocation-proof-v1'`
+  - variable `RUNTIME_INVOCATION_PROOF_ARTIFACT_PREFIX` — `RUNTIME_INVOCATION_PROOF_ARTIFACT_PREFIX = 'artifact-runtime-proof-v1-'`
+  - variable `AUTHORITY_SCHEMA` — `AUTHORITY_SCHEMA = 'runtime-invocation-authority-v1'`
+  - variable `SIGNING_DOMAIN` — `SIGNING_DOMAIN = 'agentic-os:runtime-invocation-receipt:v1\0'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `SAFE_ID_RE` — `SAFE_ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `SUBJECT_KINDS` — `SUBJECT_KINDS = new Set(['model', 'executor', 'deterministic-adapter'])`
+  - variable `TRANSPORT_CLASSES` — `TRANSPORT_CLASSES = new Set([`
+  - variable `OUTCOMES` — `OUTCOMES = new Set(['completed', 'failed', 'unknown', 'in-doubt', 'replayed'])`
+  - variable `PROOF_KINDS` — `PROOF_KINDS = new Set(['model-server-binding', 'executor-binding'])`
+  - variable `MAX_RECEIPT_BYTES` — `MAX_RECEIPT_BYTES = 64 * 1024`
+  - variable `MAX_PROOF_BYTES` — `MAX_PROOF_BYTES = 1024 * 1024`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `ISSUE_KEYS` — `ISSUE_KEYS = Object.freeze([`
+  - variable `SIGNED_KEYS` — `SIGNED_KEYS = Object.freeze([`
+  - variable `RECEIPT_KEYS` — `RECEIPT_KEYS = Object.freeze([`
+  - class `RuntimeInvocationReceiptV1Error` — `export class RuntimeInvocationReceiptV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'RUNTIME_INVOCATION_RECEIPT_V1_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, keys, pathName)`
+  - variable `actual` — `actual = ownDataKeys(value, pathName)`
+  - arrow-function `<anonymous@4474>` — `key => !keys.includes(key)`
+  - arrow-function `<anonymous@4515>` — `key => !actual.includes(key)`
+  - function `canonical` — `function canonical(value, pathName = 'canonical', depth = 0)`
+  - arrow-function `<anonymous@5137>` — `(item, index) => canonical(item, `$`
+  - variable `keys` — `keys = ownDataKeys(value, pathName).sort((left, right) => Buffer.compare(Buffer.from(left), Buffer.from(right)))`
+  - arrow-function `<anonymous@5273>` — `(left, right) => Buffer.compare(Buffer.from(left), Buffer.from(right))`
+  - arrow-function `<anonymous@5367>` — `key => `$`
+  - function `sha256` — `function sha256(value)`
+  - function `runtimeInvocationPayloadSha256V1` — `export function runtimeInvocationPayloadSha256V1(value)` — *Hash a strict JSON payload with the receipt's canonicalization rules.*
+  - … and 133 more symbols
+
+### External mutable state root — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 75 · **Callable:** 26 · **Authored purpose:** 0
+- `scripts/path-resolver.mjs` (75 symbols)
+  - variable `MODULE_SOURCE_ROOT` — `MODULE_SOURCE_ROOT = realpathSync(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'))`
+  - function `resolvedRoot` — `function resolvedRoot(value)`
+  - variable `absolute` — `absolute = path.resolve(value)`
+  - variable `missing` — `missing = []`
+  - variable `ancestor` — `ancestor = absolute`
+  - variable `parent` — `parent = path.dirname(ancestor)`
+  - function `isWithin` — `function isWithin(parent, candidate)`
+  - variable `relative` — `relative = path.relative(parent, candidate)`
+  - function `looksLikeSourceCheckout` — `function looksLikeSourceCheckout(candidate)`
+  - variable `LEGACY_ROOT` — `LEGACY_ROOT = resolvedRoot(process.env.AGENTIC_OS_ROOT)`
+  - variable `EXPLICIT_SOURCE_ROOT` — `EXPLICIT_SOURCE_ROOT = resolvedRoot(process.env.AGENTIC_OS_SOURCE_ROOT)`
+  - variable `EXPLICIT_STATE_ROOT` — `EXPLICIT_STATE_ROOT = resolvedRoot(process.env.AGENTIC_OS_STATE_ROOT)`
+  - variable `EXPLICIT_MODELS_ROOT` — `EXPLICIT_MODELS_ROOT = resolvedRoot(process.env.AGENTIC_OS_MODELS_ROOT)`
+  - variable `LEGACY_ISOLATED_ROOT` — `LEGACY_ISOLATED_ROOT = Boolean(`
+  - variable `AGENTIC_OS_SOURCE_ROOT` — `AGENTIC_OS_SOURCE_ROOT = EXPLICIT_SOURCE_ROOT || MODULE_SOURCE_ROOT`
+  - variable `XDG_STATE_HOME` — `XDG_STATE_HOME = resolvedRoot(process.env.XDG_STATE_HOME) || path.join(homedir(), '.local', 'state')`
+  - variable `AGENTIC_OS_STATE_ROOT` — `AGENTIC_OS_STATE_ROOT = EXPLICIT_STATE_ROOT`
+  - variable `AGENTIC_OS_MODELS_ROOT` — `AGENTIC_OS_MODELS_ROOT = EXPLICIT_MODELS_ROOT`
+  - variable `AGENTIC_OS_ROOT` — `AGENTIC_OS_ROOT = LEGACY_ISOLATED_ROOT ? LEGACY_ROOT : AGENTIC_OS_SOURCE_ROOT`
+  - variable `GLOBAL_DIR` — `GLOBAL_DIR = path.join(AGENTIC_OS_STATE_ROOT, 'global')`
+  - variable `PROJECTS_DIR` — `PROJECTS_DIR = path.join(AGENTIC_OS_STATE_ROOT, 'projects')`
+  - variable `LOCAL_DIR` — `LOCAL_DIR = path.join(AGENTIC_OS_STATE_ROOT, 'local')`
+  - variable `DOCS_DIR` — `DOCS_DIR = path.join(AGENTIC_OS_SOURCE_ROOT, 'docs')`
+  - variable `SCRIPTS_DIR` — `SCRIPTS_DIR = path.join(AGENTIC_OS_SOURCE_ROOT, 'scripts')`
+  - variable `STATE_SUBDIRS` — `STATE_SUBDIRS = ['audit', 'checkpoints', 'handoffs', 'cache', 'memory', 'traces', 'rag-index', 'evidence', 'routing']`
+  - function `slugify` — `function slugify(name)`
+  - function `readJson` — `function readJson(filePath, fallback = null)`
+  - function `writeJson` — `function writeJson(filePath, value)`
+  - function `findPackageRoot` — `function findPackageRoot(startDir)`
+  - variable `cursor` — `cursor = path.resolve(startDir)`
+  - variable `parent` — `parent = path.dirname(cursor)`
+  - function `detectProject` — `export function detectProject(startDir = process.cwd(),`
+  - variable `cwd` — `cwd = path.resolve(startDir)`
+  - variable `name` — `name = path.basename(cwd)`
+  - variable `gitRoot` — `gitRoot = execSync('git rev-parse --show-toplevel',`
+  - variable `name` — `name = path.basename(gitRoot)`
+  - variable `packageRoot` — `packageRoot = findPackageRoot(cwd)`
+  - variable `name` — `name = path.basename(packageRoot)`
+  - variable `name` — `name = path.basename(cwd)`
+  - function `getProjectDir` — `export function getProjectDir(projectSlug)`
+  - … and 35 more symbols
+
+### Recovery baseline and rescue ref — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 107 · **Callable:** 29 · **Authored purpose:** 0
+- `scripts/recovery-baseline-v1.mjs` (107 symbols)
+  - variable `RECOVERY_BASELINE_V1` — `RECOVERY_BASELINE_V1 = 'recovery-baseline-v1'`
+  - variable `HERE` — `HERE = path.dirname(fileURLToPath(import.meta.url))`
+  - variable `DEFAULT_REPO_ROOT` — `DEFAULT_REPO_ROOT = path.resolve(HERE, '..')`
+  - variable `SHA1_RE` — `SHA1_RE = /^[a-f0-9]`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `BASELINE_ID_RE` — `BASELINE_ID_RE = /^\d`
+  - class `RecoveryBaselineV1Error` — `export class RecoveryBaselineV1Error extends Error`
+  - constructor `constructor` — `constructor(message, cause = undefined)`
+  - function `fail` — `function fail(message, cause)`
+  - function `sha256` — `function sha256(value)`
+  - function `run` — `function run(command, args,`
+  - variable `result` — `result = spawnSync(command, args,`
+  - function `git` — `function git(repoRoot, args, options =`
+  - function `pathInside` — `function pathInside(parent, candidate)`
+  - variable `relative` — `relative = path.relative(parent, candidate)`
+  - function `canonicalExistingOrParent` — `function canonicalExistingOrParent(value)`
+  - variable `absolute` — `absolute = path.resolve(value)`
+  - variable `missing` — `missing = []`
+  - variable `cursor` — `cursor = absolute`
+  - variable `parent` — `parent = path.dirname(cursor)`
+  - function `privateMode` — `function privateMode(target, expected, label)`
+  - variable `observed` — `observed = statSync(target).mode & 0o777`
+  - function `pathRecord` — `function pathRecord(repoRoot, entry)`
+  - variable `absolute` — `absolute = path.join(repoRoot, entry.path)`
+  - variable `content` — `content`
+  - variable `stat` — `stat = lstatSync(absolute)`
+  - variable `target` — `target = Buffer.from(readlinkSync(absolute))`
+  - variable `bytes` — `bytes = readFileSync(absolute)`
+  - variable `error` — `error`
+  - function `visibleState` — `function visibleState(repoRoot)`
+  - variable `statusBytes` — `statusBytes = git(`
+  - variable `entries` — `entries = parsePorcelainV1Z(statusBytes)`
+  - arrow-function `<anonymous@4190>` — `entry => pathRecord(repoRoot, entry)`
+  - arrow-function `<anonymous@4238>` — `(left, right) => (`
+  - function `ignoredWorkingTree` — `function ignoredWorkingTree(repoRoot)`
+  - variable `bytes` — `bytes = git(`
+  - variable `paths` — `paths = parsePorcelainV1Z(bytes)`
+  - arrow-function `<anonymous@4729>` — `entry => entry.code === '!!'`
+  - arrow-function `<anonymous@4768>` — `entry => entry.path`
+  - function `worktrees` — `function worktrees(repoRoot)`
+  - … and 67 more symbols
+
+### Worktree hygiene and Holt — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 157 · **Callable:** 55 · **Authored purpose:** 0
+- `scripts/worktree-hygiene-v1.mjs` (157 symbols)
+  - variable `WORKTREE_HYGIENE_V1` — `WORKTREE_HYGIENE_V1 = 'worktree-hygiene-v1'`
+  - variable `TEST_LANES_V1` — `TEST_LANES_V1 = 'test-lanes-v1'`
+  - variable `HERE` — `HERE = path.dirname(fileURLToPath(import.meta.url))`
+  - variable `DEFAULT_ROOT` — `DEFAULT_ROOT = realpathSync(path.resolve(process.env.ARC_HYGIENE_ROOT || path.join(HERE, '..')))`
+  - variable `TEST_LANES_PATH` — `TEST_LANES_PATH = 'config/test-lanes-v1.json'`
+  - variable `PROTECTED_BRANCHES` — `PROTECTED_BRANCHES = new Set(['main', 'master'])`
+  - variable `TEST_LANES` — `TEST_LANES = new Set(['deterministic', 'integration', 'recovery', 'gpu', 'manual'])`
+  - variable `GENERATED_STAGE_RULES` — `GENERATED_STAGE_RULES = [`
+  - variable `IGNORED_CHECKOUT_POLICY` — `IGNORED_CHECKOUT_POLICY = Object.freeze([`
+  - function `sha256` — `function sha256(value)`
+  - function `runGit` — `function runGit(root, args,`
+  - variable `result` — `result = spawnSync('git', ['-C', root, ...args],`
+  - function `safeBranch` — `function safeBranch(root)`
+  - variable `result` — `result = runGit(root, ['symbolic-ref', '--quiet', '--short', 'HEAD'],`
+  - function `parsePorcelainV1Z` — `export function parsePorcelainV1Z(value)`
+  - variable `fields` — `fields = Buffer.isBuffer(value) ? value.toString('utf8').split('\0') : String(value).split('\0')`
+  - variable `entries` — `entries = []`
+  - variable `index` — `index = 0`
+  - variable `field` — `field = fields[index]`
+  - variable `code` — `code = field.slice(0, 2)`
+  - variable `currentPath` — `currentPath = field.slice(3)`
+  - variable `sourcePath` — `sourcePath = null`
+  - function `pathFingerprint` — `function pathFingerprint(root, relativePath)`
+  - variable `absolute` — `absolute = path.join(root, relativePath)`
+  - variable `stat` — `stat`
+  - variable `error` — `error`
+  - function `statusFingerprint` — `function statusFingerprint(root, entries)`
+  - variable `records` — `records = entries`
+  - arrow-function `<anonymous@6139>` — `(entry) => (`
+  - arrow-function `<anonymous@6325>` — `(left, right) => `$`
+  - function `worktreePaths` — `function worktreePaths(root)`
+  - variable `output` — `output = runGit(root, ['worktree', 'list', '--porcelain']).stdout`
+  - arrow-function `<anonymous@6657>` — `(line) => line.startsWith('worktree ')`
+  - arrow-function `<anonymous@6706>` — `(line) => realpathSync(line.slice('worktree '.length))`
+  - function `quarantineCount` — `function quarantineCount(root)`
+  - variable `result` — `result = spawnSync('holt', ['quarantines', '--json'],`
+  - variable `parsed` — `parsed = JSON.parse(result.stdout)`
+  - variable `error` — `error`
+  - function `envFileState` — `function envFileState(root)`
+  - variable `envPath` — `envPath = path.join(root, '.env')`
+  - … and 117 more symbols
+
+### Canon registry, findings and authority events — SOLE AUTHORITY / CONSTITUTION
+- **Files:** 3 (1 with symbols) · **Symbols:** 349 · **Callable:** 98 · **Authored purpose:** 0
+- `scripts/canon-governance.mjs` (349 symbols)
+  - variable `HERE` — `HERE = dirname(fileURLToPath(import.meta.url))`
+  - variable `DEFAULT_ROOT` — `DEFAULT_ROOT = resolve(HERE, '..')`
+  - variable `DEFAULT_STATE_ROOT` — `DEFAULT_STATE_ROOT = resolve(`
+  - variable `STATE_EVIDENCE_PREFIXES` — `STATE_EVIDENCE_PREFIXES = Object.freeze(['global/', 'local/', 'projects/'])`
+  - variable `CANON_SCHEMA_VERSION` — `CANON_SCHEMA_VERSION = '1.0.0'`
+  - variable `FINDING_STATES` — `FINDING_STATES = Object.freeze([`
+  - variable `PLAN_DELTA_STATES` — `PLAN_DELTA_STATES = Object.freeze([`
+  - arrow-function `sha256` — `(value) => createHash('sha256').update(String(value)).digest('hex')`
+  - arrow-function `escapeRegExp` — `(value) => String(value).replace(/[.*+?^$`
+  - function `readJson` — `function readJson(path)`
+  - function `normalizedRepoPath` — `function normalizedRepoPath(root, path)`
+  - variable `absolute` — `absolute = resolve(root, path)`
+  - variable `rel` — `rel = relative(root, absolute).replaceAll('\\', '/')`
+  - function `listJsonFiles` — `function listJsonFiles(dir, out = [])`
+  - variable `entry` — `entry`
+  - variable `path` — `path = join(dir, entry.name)`
+  - function `validateIntentMap` — `export function validateIntentMap(intentMap)`
+  - variable `errors` — `errors = []`
+  - variable `nodes` — `nodes = Array.isArray(intentMap?.nodes) ? intentMap.nodes : []`
+  - variable `ids` — `ids = new Set()`
+  - variable `node` — `node`
+  - variable `root` — `root = nodes.find((node) => node.id === intentMap.rootId)`
+  - arrow-function `<anonymous@3314>` — `(node) => node.id === intentMap.rootId`
+  - variable `node` — `node`
+  - variable `dependency` — `dependency`
+  - variable `index` — `index = 0`
+  - function `validateLocalMarkdownLinks` — `export function validateLocalMarkdownLinks(text,`
+  - variable `errors` — `errors = []`
+  - variable `source` — `source = join(root, filePath)`
+  - variable `linkPattern` — `linkPattern = /\[[^\]]*\]\(([^)]+)\)/g`
+  - variable `match` — `match`
+  - variable `target` — `target = match[1].trim()`
+  - variable `absolute` — `absolute = resolve(dirname(source), target)`
+  - variable `rel` — `rel = relative(root, absolute).replaceAll('\\', '/')`
+  - function `validateManifest` — `export function validateManifest(manifest, root = DEFAULT_ROOT)`
+  - variable `errors` — `errors = []`
+  - variable `requiredMetadata` — `requiredMetadata = manifest?.documentGovernance?.requiredMetadata`
+  - variable `stagedPolicy` — `stagedPolicy = manifest?.documentGovernance?.prospectiveStagedAdditionPolicy`
+  - variable `ids` — `ids = new Set()`
+  - variable `paths` — `paths = new Set()`
+  - … and 309 more symbols
+
+## 03 · BELIEF, EVIDENCE, EXPERIMENT, AND DYNAMIC CONTROL PLANE
+
+### TaskDecisionState V1 — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 237 · **Callable:** 90 · **Authored purpose:** 1
+- `scripts/task-decision-state-v1.mjs` (237 symbols)
+  - variable `TASK_DECISION_REQUEST_V1` — `TASK_DECISION_REQUEST_V1 = 'task-decision-request-v1'`
+  - variable `TASK_DECISION_RESOLVER_OBSERVATION_V1` — `TASK_DECISION_RESOLVER_OBSERVATION_V1 =`
+  - variable `TASK_DECISION_STATE_V1` — `TASK_DECISION_STATE_V1 = 'task-decision-state-v1'`
+  - variable `TASK_DECISION_STATE_V1_LIMITS` — `TASK_DECISION_STATE_V1_LIMITS = Object.freeze(`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `REF_RE` — `REF_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f]/u`
+  - variable `ACTION_KINDS` — `ACTION_KINDS = new Set(['analysis', 'effect', 'ask', 'stop'])`
+  - variable `PREMISE_ROLES` — `PREMISE_ROLES = new Set(['required', 'assumption'])`
+  - variable `ORIGINS` — `ORIGINS = new Set([`
+  - variable `POLARITIES` — `POLARITIES = new Set(['support', 'refute', 'absence', 'irrelevant', 'forbid'])`
+  - variable `WORLDS` — `WORLDS = new Set(['open', 'closed'])`
+  - variable `RESOLVER_ORIGINS` — `RESOLVER_ORIGINS = new Map([`
+  - variable `BELIEF_KEYS` — `BELIEF_KEYS = Object.freeze([`
+  - class `TaskDecisionStateV1Error` — `export class TaskDecisionStateV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName,`
+  - function `ref` — `function ref(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - function `enumeration` — `function enumeration(value, choices, pathName)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `parsed` — `parsed = new Date(value)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'value', ancestors = new Set())`
+  - variable `result` — `result`
+  - arrow-function `<anonymous@5362>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@5535>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - … and 197 more symbols
+
+### Epistemic claim/evidence graph — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 238 · **Callable:** 88 · **Authored purpose:** 0
+- `scripts/epistemic-graph-v1.mjs` (238 symbols)
+  - variable `EPISTEMIC_GRAPH_V1` — `EPISTEMIC_GRAPH_V1 = 'epistemic-graph-v1'`
+  - variable `EPISTEMIC_GRAPH_AUDIT_V1` — `EPISTEMIC_GRAPH_AUDIT_V1 = 'epistemic-graph-audit-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `CLAIM_KINDS` — `CLAIM_KINDS = new Set([`
+  - variable `CLAIMED_STATES` — `CLAIMED_STATES = new Set(['open', 'supported', 'refuted'])`
+  - variable `EVIDENCE_AUTHORITIES` — `EVIDENCE_AUTHORITIES = new Set([`
+  - variable `EVIDENCE_POLARITIES` — `EVIDENCE_POLARITIES = new Set(['support', 'refute'])`
+  - variable `EVIDENCE_VERDICTS` — `EVIDENCE_VERDICTS = new Set(['supports', 'refutes', 'inconclusive'])`
+  - variable `MAX_TEXT` — `MAX_TEXT = 32 * 1024`
+  - variable `MAX_REPAIR_SETS` — `MAX_REPAIR_SETS = 128`
+  - class `EpistemicGraphV1Error` — `export class EpistemicGraphV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName,`
+  - function `id` — `function id(value, pathName)`
+  - variable `result` — `result = text(value, pathName,`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - variable `result` — `result = text(value, pathName,`
+  - function `enumeration` — `function enumeration(value, choices, pathName)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'value')`
+  - arrow-function `<anonymous@3620>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@3774>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `uniqueIds` — `function uniqueIds(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => id(item, `$`
+  - arrow-function `<anonymous@4579>` — `(item, index) => id(item, `$`
+  - variable `item` — `item`
+  - function `intentClaimCatalog` — `function intentClaimCatalog(goal, refinement)`
+  - … and 198 more symbols
+
+### Absence, inhibition and invalidation graph — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 237 · **Callable:** 90 · **Authored purpose:** 1
+- `scripts/task-decision-state-v1.mjs` (237 symbols)
+  - variable `TASK_DECISION_REQUEST_V1` — `TASK_DECISION_REQUEST_V1 = 'task-decision-request-v1'`
+  - variable `TASK_DECISION_RESOLVER_OBSERVATION_V1` — `TASK_DECISION_RESOLVER_OBSERVATION_V1 =`
+  - variable `TASK_DECISION_STATE_V1` — `TASK_DECISION_STATE_V1 = 'task-decision-state-v1'`
+  - variable `TASK_DECISION_STATE_V1_LIMITS` — `TASK_DECISION_STATE_V1_LIMITS = Object.freeze(`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `REF_RE` — `REF_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f]/u`
+  - variable `ACTION_KINDS` — `ACTION_KINDS = new Set(['analysis', 'effect', 'ask', 'stop'])`
+  - variable `PREMISE_ROLES` — `PREMISE_ROLES = new Set(['required', 'assumption'])`
+  - variable `ORIGINS` — `ORIGINS = new Set([`
+  - variable `POLARITIES` — `POLARITIES = new Set(['support', 'refute', 'absence', 'irrelevant', 'forbid'])`
+  - variable `WORLDS` — `WORLDS = new Set(['open', 'closed'])`
+  - variable `RESOLVER_ORIGINS` — `RESOLVER_ORIGINS = new Map([`
+  - variable `BELIEF_KEYS` — `BELIEF_KEYS = Object.freeze([`
+  - class `TaskDecisionStateV1Error` — `export class TaskDecisionStateV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName,`
+  - function `ref` — `function ref(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - function `enumeration` — `function enumeration(value, choices, pathName)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `parsed` — `parsed = new Date(value)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'value', ancestors = new Set())`
+  - variable `result` — `result`
+  - arrow-function `<anonymous@5362>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@5535>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - … and 197 more symbols
+
+### Semantic bootstrap PlanGraph — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 25 · **Callable:** 8 · **Authored purpose:** 0
+- `scripts/task-bootstrap-plan-v1.mjs` (25 symbols)
+  - variable `TASK_BOOTSTRAP_PLAN_V1` — `TASK_BOOTSTRAP_PLAN_V1 = 'task-bootstrap-plan-v1'`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@1052>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `text` — `function text(value, label,`
+  - variable `POLICY` — `POLICY = Object.freeze(`
+  - variable `TASK_BOOTSTRAP_PLAN_POLICY_SHA256_V1` — `TASK_BOOTSTRAP_PLAN_POLICY_SHA256_V1 = sha256(POLICY)`
+  - function `normalizedInputs` — `function normalizedInputs(`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(taskSpecInput)`
+  - variable `goalCapsule` — `goalCapsule = validateGoalCapsuleV1(goalCapsuleInput,`
+  - variable `taskArtifact` — `taskArtifact = text(taskSpecArtifactId, 'taskSpecArtifactId')`
+  - variable `capsuleArtifact` — `capsuleArtifact = text(goalCapsuleArtifactId, 'goalCapsuleArtifactId')`
+  - variable `workspace` — `workspace = path.resolve(text(resource, 'resource',`
+  - function `compileTaskBootstrapPlanV1` — `export function compileTaskBootstrapPlanV1(input =`
+  - variable `<anonymous@3151>`
+  - variable `intentProgram` — `intentProgram = compileIntentProgramV1(`
+  - variable `workspaceSha256` — `workspaceSha256 = sha256(workspace)`
+  - variable `graphIdentitySha256` — `graphIdentitySha256 = sha256(`
+  - variable `nodeId` — `nodeId = 'semantic-bootstrap'`
+  - variable `contextManifestId` — `contextManifestId = 'context-semantic-bootstrap'`
+  - variable `rawGraph` — `rawGraph =`
+  - function `verifyTaskBootstrapPlanV1` — `export function verifyTaskBootstrapPlanV1(value, input =`
+  - variable `expected` — `expected = compileTaskBootstrapPlanV1(input)`
+
+### Task-conditioned workflow profile — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 110 · **Callable:** 46 · **Authored purpose:** 0
+- `scripts/task-conditioned-workflow-v1.mjs` (110 symbols)
+  - variable `TASK_CONDITIONED_WORKFLOW_V1` — `TASK_CONDITIONED_WORKFLOW_V1 = 'task-conditioned-workflow-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `MAX_STAGES` — `MAX_STAGES = 16`
+  - variable `MAX_NODES` — `MAX_NODES = 256`
+  - variable `MAX_EDGES` — `MAX_EDGES = 512`
+  - variable `MAX_READY_BRANCHES` — `MAX_READY_BRANCHES = 2`
+  - variable `ROLE_PRIORITY` — `ROLE_PRIORITY = Object.freeze(`
+  - variable `REQUIRED_ACHIEVEMENTS` — `REQUIRED_ACHIEVEMENTS = Object.freeze(`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@4655>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `freezeDeep` — `function freezeDeep(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `text` — `function text(value, name,`
+  - function `digest` — `function digest(value, name)`
+  - function `safePart` — `function safePart(value)`
+  - function `compileVerified` — `function compileVerified(taskSpecInput, goalCapsuleInput, adequacyInput)`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(taskSpecInput)`
+  - variable `intentProgram` — `intentProgram = compileIntentProgramV1(`
+  - variable `goalCapsule` — `goalCapsule = validateGoalCapsuleV1(goalCapsuleInput,`
+  - variable `semanticAdequacyAudit` — `semanticAdequacyAudit = verifySemanticAdequacyAuditV1(adequacyInput,`
+  - function `roleRank` — `function roleRank(workKind, role)`
+  - variable `order` — `order = ROLE_PRIORITY[workKind] || ['frame', 'construct', 'hypothesize', 'falsify', 'verify']`
+  - variable `index` — `index = order.indexOf(role)`
+  - function `scoreOperator` — `function scoreOperator(operator, workKind, blockingIds)`
+  - variable `applicability` — `applicability = operator.applicability`
+  - variable `overlap` — `overlap = applicability.targetDimensionIds.filter(id => blockingIds.has(id)).length`
+  - arrow-function `<anonymous@7293>` — `id => blockingIds.has(id)`
+  - function `operatorCandidates` — `function operatorCandidates(workKind, blockingIds)`
+  - arrow-function `<anonymous@7611>` — `operator => (`
+  - arrow-function `<anonymous@7754>` — `operator => (`
+  - arrow-function `<anonymous@7864>` — `(left, right) => (`
+  - function `evidenceKindsFor` — `function evidenceKindsFor(workKind, role)`
+  - function `branchFor` — `function branchFor(`
+  - variable `applicability` — `applicability = operator.applicability`
+  - variable `role` — `role = applicability.workflowRole`
+  - … and 70 more symbols
+
+### Control hypergraph — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 110 · **Callable:** 46 · **Authored purpose:** 0
+- `scripts/task-conditioned-workflow-v1.mjs` (110 symbols)
+  - variable `TASK_CONDITIONED_WORKFLOW_V1` — `TASK_CONDITIONED_WORKFLOW_V1 = 'task-conditioned-workflow-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `MAX_STAGES` — `MAX_STAGES = 16`
+  - variable `MAX_NODES` — `MAX_NODES = 256`
+  - variable `MAX_EDGES` — `MAX_EDGES = 512`
+  - variable `MAX_READY_BRANCHES` — `MAX_READY_BRANCHES = 2`
+  - variable `ROLE_PRIORITY` — `ROLE_PRIORITY = Object.freeze(`
+  - variable `REQUIRED_ACHIEVEMENTS` — `REQUIRED_ACHIEVEMENTS = Object.freeze(`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@4655>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `freezeDeep` — `function freezeDeep(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `text` — `function text(value, name,`
+  - function `digest` — `function digest(value, name)`
+  - function `safePart` — `function safePart(value)`
+  - function `compileVerified` — `function compileVerified(taskSpecInput, goalCapsuleInput, adequacyInput)`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(taskSpecInput)`
+  - variable `intentProgram` — `intentProgram = compileIntentProgramV1(`
+  - variable `goalCapsule` — `goalCapsule = validateGoalCapsuleV1(goalCapsuleInput,`
+  - variable `semanticAdequacyAudit` — `semanticAdequacyAudit = verifySemanticAdequacyAuditV1(adequacyInput,`
+  - function `roleRank` — `function roleRank(workKind, role)`
+  - variable `order` — `order = ROLE_PRIORITY[workKind] || ['frame', 'construct', 'hypothesize', 'falsify', 'verify']`
+  - variable `index` — `index = order.indexOf(role)`
+  - function `scoreOperator` — `function scoreOperator(operator, workKind, blockingIds)`
+  - variable `applicability` — `applicability = operator.applicability`
+  - variable `overlap` — `overlap = applicability.targetDimensionIds.filter(id => blockingIds.has(id)).length`
+  - arrow-function `<anonymous@7293>` — `id => blockingIds.has(id)`
+  - function `operatorCandidates` — `function operatorCandidates(workKind, blockingIds)`
+  - arrow-function `<anonymous@7611>` — `operator => (`
+  - arrow-function `<anonymous@7754>` — `operator => (`
+  - arrow-function `<anonymous@7864>` — `(left, right) => (`
+  - function `evidenceKindsFor` — `function evidenceKindsFor(workKind, role)`
+  - function `branchFor` — `function branchFor(`
+  - variable `applicability` — `applicability = operator.applicability`
+  - variable `role` — `role = applicability.workflowRole`
+  - … and 70 more symbols
+
+### Decision frontier plan — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 139 · **Callable:** 51 · **Authored purpose:** 0
+- `scripts/decision-frontier-v1.mjs` (139 symbols)
+  - variable `DECISION_FRONTIER_PLAN_V1` — `DECISION_FRONTIER_PLAN_V1 = 'decision-frontier-plan-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `ACTION_KINDS` — `ACTION_KINDS = new Set([`
+  - variable `RUNNER_KINDS` — `RUNNER_KINDS = new Set(['model-proposer', 'deterministic-checker', 'tool-runner', 'operator'])`
+  - variable `AVAILABILITY` — `AVAILABILITY = new Set(['available', 'unavailable'])`
+  - variable `INDEPENDENCE` — `INDEPENDENCE = new Set(['external', 'same-model', 'none'])`
+  - variable `IDENTITY_AUTHORITIES` — `IDENTITY_AUTHORITIES = new Set(['runtime-attested', 'code-owned', 'operator-declared'])`
+  - variable `VALUE_BASIS_KINDS` — `VALUE_BASIS_KINDS = new Set(['structural-policy', 'measured-replay', 'model-estimate'])`
+  - variable `RESOLUTION_EFFECTS` — `RESOLUTION_EFFECTS = new Set(['candidate-only', 'evidence-producing', 'none'])`
+  - variable `PPM` — `PPM = 1_000_000`
+  - variable `DIMENSION_CONTRACTS` — `DIMENSION_CONTRACTS = Object.freeze(`
+  - variable `ACTION_POLICY_BODIES` — `ACTION_POLICY_BODIES = Object.freeze(`
+  - class `DecisionFrontierV1Error` — `export class DecisionFrontierV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `ordinaryArray` — `function ordinaryArray(value, pathName)`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName, max = 4_096)`
+  - function `identifier` — `function identifier(value, pathName)`
+  - variable `result` — `result = text(value, pathName, 256)`
+  - function `enumeration` — `function enumeration(value, choices, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'DecisionFrontierPlanV1')`
+  - arrow-function `<anonymous@11223>` — `(entry, index) => canonicalize(entry, `$`
+  - arrow-function `<anonymous@11379>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `actionPolicy` — `function actionPolicy(policyId, pathName)`
+  - … and 99 more symbols
+
+### GraphControl Kernel V2 — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 124 · **Callable:** 47 · **Authored purpose:** 2
+- `scripts/graph-control-kernel-v2.mjs` (124 symbols)
+  - variable `GRAPH_CONTROL_DECISION_V2` — `GRAPH_CONTROL_DECISION_V2 = 'graph-control-decision-v2'`
+  - variable `GRAPH_CONTROL_OUTCOME_V2` — `GRAPH_CONTROL_OUTCOME_V2 = 'graph-control-outcome-v2'`
+  - variable `GRAPH_CONTROL_CYCLE_V2` — `GRAPH_CONTROL_CYCLE_V2 = 'graph-control-cycle-v2'`
+  - variable `GRAPH_CONTROL_CYCLE_REQUEST_KIND_V2` — `GRAPH_CONTROL_CYCLE_REQUEST_KIND_V2 = 'graph-control-cycle-request'`
+  - variable `GRAPH_CONTROL_CYCLE_OUTCOME_KIND_V2` — `GRAPH_CONTROL_CYCLE_OUTCOME_KIND_V2 = 'graph-control-cycle-outcome'`
+  - variable `SEMANTIC_INTENT_GRAPH_CONTROL_ADMISSION_KIND_V1` — `SEMANTIC_INTENT_GRAPH_CONTROL_ADMISSION_KIND_V1 =`
+  - variable `TASK_CONDITIONED_BRANCH_EXPANSION_V1` — `TASK_CONDITIONED_BRANCH_EXPANSION_V1 =`
+  - variable `TASK_CONDITIONED_CONTROL_HYPERGRAPH_V1` — `TASK_CONDITIONED_CONTROL_HYPERGRAPH_V1 =`
+  - variable `TASK_CONDITIONED_OPERATION` — `TASK_CONDITIONED_OPERATION = 'task-conditioned-shadow-workflow'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `FIRST_SLICE_STATES` — `FIRST_SLICE_STATES = new Set([`
+  - variable `CONTROL_POLICY` — `CONTROL_POLICY = Object.freeze(`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3244>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `text` — `function text(value, name,`
+  - function `digest` — `function digest(value, name)`
+  - function `uniqueStrings` — `function uniqueStrings(value, name,`
+  - variable `normalized` — `normalized = value.map((item, index) => text(item, `$`
+  - arrow-function `<anonymous@4400>` — `(item, index) => text(item, `$`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, name)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowedSet.has(key))`
+  - arrow-function `<anonymous@4770>` — `key => !allowedSet.has(key)`
+  - variable `missing` — `missing = required.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@4833>` — `key => !Object.hasOwn(value, key)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `semanticIntentAdmissionBinding` — `function semanticIntentAdmissionBinding(admission, intentProgram)`
+  - variable `authority` — `authority =`
+  - function `assertWorkflowIntentBinding` — `function assertWorkflowIntentBinding(workflow, intentProgram)`
+  - variable `admittedStages` — `admittedStages = intentProgram.program.workItems.map(item => (`
+  - arrow-function `<anonymous@6748>` — `item => (`
+  - variable `workflowStages` — `workflowStages = workflow.stages.map(stage => (`
+  - arrow-function `<anonymous@6872>` — `stage => (`
+  - arrow-function `<anonymous@7267>` — `item => item.workItemId`
+  - … and 84 more symbols
+
+### Evidence-conditioned GraphControl cycle — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 25 · **Callable:** 12 · **Authored purpose:** 0
+- `scripts/graph-control-evidence-cycle-v1.mjs` (25 symbols)
+  - variable `GRAPH_CONTROL_EVIDENCE_CYCLE_V1` — `GRAPH_CONTROL_EVIDENCE_CYCLE_V1 = 'graph-control-evidence-cycle-v1'`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `<anonymous@1164>` — `[key, descriptor]`
+  - function `exact` — `function exact(value, fields, name)`
+  - variable `actual` — `actual = Object.keys(value).sort()`
+  - variable `expected` — `expected = [...fields].sort()`
+  - arrow-function `<anonymous@1650>` — `(key, index) => key !== expected[index]`
+  - function `text` — `function text(value, name)`
+  - function `canonicalize` — `function canonicalize(value, ancestors = new WeakSet())`
+  - variable `output` — `output`
+  - arrow-function `<anonymous@2564>` — `item => canonicalize(item, ancestors)`
+  - arrow-function `<anonymous@2740>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `freeze` — `function freeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `compileGraphControlEvidenceCycleV1` — `export function compileGraphControlEvidenceCycleV1(input =`
+  - variable `condition` — `condition = verifyGraphControlEvidenceConditionV1(input.evidenceCondition)`
+  - variable `baseCycle` — `baseCycle = compileGraphControlCycleV2(input.graphControlCycleInput)`
+  - variable `evidenceConditionArtifactId` — `evidenceConditionArtifactId = text(`
+  - variable `<anonymous@4303>`
+  - variable `body` — `body = canonicalize(`
+  - function `verifyGraphControlEvidenceCycleV1` — `export function verifyGraphControlEvidenceCycleV1(value, input =`
+  - variable `expected` — `expected = compileGraphControlEvidenceCycleV1(input)`
+
+### Epistemic repository probe — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 148 · **Callable:** 47 · **Authored purpose:** 0
+- `scripts/epistemic-repository-probe-v1.mjs` (148 symbols)
+  - variable `EPISTEMIC_REPOSITORY_PROBE_PLAN_V1` — `EPISTEMIC_REPOSITORY_PROBE_PLAN_V1 =`
+  - variable `EPISTEMIC_REPOSITORY_OBSERVATION_V1` — `EPISTEMIC_REPOSITORY_OBSERVATION_V1 =`
+  - variable `EPISTEMIC_REPOSITORY_CONTEXT_V1` — `EPISTEMIC_REPOSITORY_CONTEXT_V1 =`
+  - variable `EPISTEMIC_REPOSITORY_PROBE_REQUEST_KIND_V1` — `EPISTEMIC_REPOSITORY_PROBE_REQUEST_KIND_V1 =`
+  - variable `EPISTEMIC_REPOSITORY_OBSERVATION_KIND_V1` — `EPISTEMIC_REPOSITORY_OBSERVATION_KIND_V1 =`
+  - variable `DIGEST_RE` — `DIGEST_RE = /^[a-f0-9]`
+  - variable `GIT_OID_RE` — `GIT_OID_RE = /^[a-f0-9]`
+  - variable `SAFE_RELATIVE_PATH_RE` — `SAFE_RELATIVE_PATH_RE = /^(?!\/)(?!.*(?:^|\/)\.\.?\/)(?!.*\\)(?!.*\0)[A-Za-z0-9._@+/-]`
+  - variable `MAX_TARGETS` — `MAX_TARGETS = 32`
+  - variable `MAX_TARGET_BYTES` — `MAX_TARGET_BYTES = 512 * 1024`
+  - variable `MAX_PACKAGE_BYTES` — `MAX_PACKAGE_BYTES = 256 * 1024`
+  - variable `MAX_GIT_OUTPUT_BYTES` — `MAX_GIT_OUTPUT_BYTES = 2 * 1024 * 1024`
+  - variable `GIT` — `GIT = '/usr/bin/git'`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - class `EpistemicRepositoryProbeV1Error` — `export class EpistemicRepositoryProbeV1Error extends Error`
+  - constructor `constructor` — `constructor(message)`
+  - function `fail` — `function fail(message)`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `<anonymous@2248>` — `[key, descriptor]`
+  - function `exact` — `function exact(value, fields, name)`
+  - variable `actual` — `actual = Object.keys(value).sort()`
+  - variable `expected` — `expected = [...fields].sort()`
+  - arrow-function `<anonymous@2723>` — `(key, index) => key !== expected[index]`
+  - function `boundedString` — `function boundedString(value, name, max = 512)`
+  - function `digest` — `function digest(value, name)`
+  - function `canonicalize` — `function canonicalize(value, name = 'canonical value')`
+  - arrow-function `<anonymous@3326>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@3511>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - variable `bytes` — `bytes = Buffer.isBuffer(value) ? value : Buffer.from(canonicalJson(value), 'utf8')`
+  - function `freeze` — `function freeze(value, seen = new WeakSet())`
+  - variable `descriptor` — `descriptor`
+  - function `sameJson` — `function sameJson(left, right)`
+  - function `canonicalTargetPath` — `function canonicalTargetPath(value, name)`
+  - variable `candidate` — `candidate = boundedString(value, name)`
+  - variable `normalized` — `normalized = path.posix.normalize(candidate)`
+  - arrow-function `<anonymous@4758>` — `part => !part || part === '.' || part === '..'`
+  - … and 108 more symbols
+
+### GraphControl evidence condition — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 51 · **Callable:** 23 · **Authored purpose:** 0
+- `scripts/graph-control-evidence-condition-v1.mjs` (51 symbols)
+  - variable `GRAPH_CONTROL_EVIDENCE_CONDITION_V1` — `GRAPH_CONTROL_EVIDENCE_CONDITION_V1 =`
+  - variable `DIGEST_RE` — `DIGEST_RE = /^[a-f0-9]`
+  - variable `DISPOSITIONS` — `DISPOSITIONS = new Set(['render', 'bind-only'])`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - class `GraphControlEvidenceConditionV1Error` — `export class GraphControlEvidenceConditionV1Error extends Error`
+  - constructor `constructor` — `constructor(message)`
+  - function `fail` — `function fail(message)`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `<anonymous@1781>` — `[key, descriptor]`
+  - function `exact` — `function exact(value, fields, name)`
+  - variable `actual` — `actual = Object.keys(value).sort()`
+  - variable `expected` — `expected = [...fields].sort()`
+  - arrow-function `<anonymous@2256>` — `(key, index) => key !== expected[index]`
+  - function `text` — `function text(value, name)`
+  - function `digest` — `function digest(value, name)`
+  - function `canonicalize` — `function canonicalize(value, name = GRAPH_CONTROL_EVIDENCE_CONDITION_V1, ancestors = new WeakSet())`
+  - variable `output` — `output`
+  - arrow-function `<anonymous@3284>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@3449>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `freeze` — `function freeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `baselineInput` — `function baselineInput(value)`
+  - function `repositoryInput` — `function repositoryInput(value, taskSpec)`
+  - variable `plan` — `plan = verifyEpistemicRepositoryProbePlanV1(value.plan,`
+  - variable `observation` — `observation = verifyEpistemicRepositoryObservationV1(`
+  - variable `context` — `context = verifyEpistemicRepositoryContextV1(`
+  - function `relevantRepositoryProjection` — `function relevantRepositoryProjection(context)`
+  - arrow-function `<anonymous@6161>` — `item => (`
+  - function `hasRelevantEvidence` — `function hasRelevantEvidence(projection)`
+  - function `compileGraphControlEvidenceConditionV1` — `export function compileGraphControlEvidenceConditionV1(input =`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(input.taskSpec)`
+  - variable `baseline` — `baseline = baselineInput(input.baseline)`
+  - variable `repository` — `repository = repositoryInput(input.repositoryEvidence, taskSpec)`
+  - variable `relevantProjection` — `relevantProjection = relevantRepositoryProjection(repository.context)`
+  - variable `priorRelevantEvidenceSetSha256` — `priorRelevantEvidenceSetSha256 = sha256(`
+  - variable `currentRelevantEvidenceSetSha256` — `currentRelevantEvidenceSetSha256 = sha256(`
+  - variable `relevantEvidenceChanged` — `relevantEvidenceChanged = (`
+  - … and 11 more symbols
+
+### Candidate eligibility law — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 81 · **Callable:** 34 · **Authored purpose:** 0
+- `scripts/graph-control-candidate-eligibility-v1.mjs` (81 symbols)
+  - variable `GRAPH_CONTROL_CANDIDATE_ELIGIBILITY_V1` — `GRAPH_CONTROL_CANDIDATE_ELIGIBILITY_V1 =`
+  - variable `GRAPH_CONTROL_CANDIDATE_ELIGIBILITY_KIND_V1` — `GRAPH_CONTROL_CANDIDATE_ELIGIBILITY_KIND_V1 =`
+  - variable `GRAPH_CONTROL_CANDIDATE_ELIGIBILITY_PREDICTED_USE_V1` — `GRAPH_CONTROL_CANDIDATE_ELIGIBILITY_PREDICTED_USE_V1 =`
+  - variable `SAFE_RELATIVE_PATH_RE` — `SAFE_RELATIVE_PATH_RE = /^(?!\/)(?!.*(?:^|\/)\.\.(?:\/|$))(?!.*\\)(?!.*[\0\r\n])[A-Za-z0-9._@+\/-]+$/u`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `GRAPH_CONTROL_CANDIDATE_LANGUAGE_RUNTIME_PROFILES_V1` — `GRAPH_CONTROL_CANDIDATE_LANGUAGE_RUNTIME_PROFILES_V1 = Object.freeze([`
+  - variable `GRAPH_CONTROL_CANDIDATE_LANGUAGE_RUNTIME_PROFILES` — `GRAPH_CONTROL_CANDIDATE_LANGUAGE_RUNTIME_PROFILES =`
+  - variable `TEST_BUILD_SEGMENT_RE` — `TEST_BUILD_SEGMENT_RE = /^(?:test|tests|testing|build|dist|coverage|__tests__|__pycache__|\.pytest_cache)$/iu`
+  - variable `TEST_BUILD_FILE_RE` — `TEST_BUILD_FILE_RE = /^(?:test|tests|test[_-].*|.*[_-]test|build|build[_-].*|.*[_-]build)\.[A-Za-z0-9]+$/iu`
+  - variable `AUTHORITY` — `AUTHORITY = Object.freeze(`
+  - class `GraphControlCandidateEligibilityV1Error` — `export class GraphControlCandidateEligibilityV1Error extends Error`
+  - constructor `constructor` — `constructor(message)`
+  - function `fail` — `function fail(message)`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `<anonymous@3160>` — `[key, descriptor]`
+  - function `exact` — `function exact(value, fields, name)`
+  - variable `actual` — `actual = Object.keys(value).sort()`
+  - variable `expected` — `expected = [...fields].sort()`
+  - arrow-function `<anonymous@3635>` — `(key, index) => key !== expected[index]`
+  - function `digest` — `function digest(value, name)`
+  - function `text` — `function text(value, name)`
+  - function `canonicalize` — `function canonicalize(value, ancestors = new WeakSet())`
+  - variable `output` — `output`
+  - arrow-function `<anonymous@4629>` — `item => canonicalize(item, ancestors)`
+  - arrow-function `<anonymous@4789>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `freeze` — `function freeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `canonicalTarget` — `function canonicalTarget(value)`
+  - arrow-function `<anonymous@5634>` — `segment => !segment || segment === '.' || segment === '..'`
+  - function `candidateTargetIsTestOrBuildArtifact` — `function candidateTargetIsTestOrBuildArtifact(targetPath)`
+  - variable `segments` — `segments = targetPath.split('/')`
+  - variable `basename` — `basename = segments.at(-1) || ''`
+  - arrow-function `<anonymous@5926>` — `segment => TEST_BUILD_SEGMENT_RE.test(segment)`
+  - function `languageRuntimeProfileForTarget` — `function languageRuntimeProfileForTarget(targetPath)`
+  - variable `extension` — `extension = path.posix.extname(targetPath).toLowerCase()`
+  - arrow-function `<anonymous@6205>` — `profile => (`
+  - function `languageRuntimeProfileForId` — `function languageRuntimeProfileForId(profileId)`
+  - … and 41 more symbols
+
+### Adaptive plan proposal and schedule — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 206 · **Callable:** 89 · **Authored purpose:** 0
+- `scripts/adaptive-plan-governor-v1.mjs` (107 symbols)
+  - variable `ADAPTIVE_PLAN_TRIGGER_V1` — `ADAPTIVE_PLAN_TRIGGER_V1 = 'adaptive-plan-trigger-v1'`
+  - variable `ADAPTIVE_PLAN_PROPOSAL_V1` — `ADAPTIVE_PLAN_PROPOSAL_V1 = 'adaptive-plan-proposal-v1'`
+  - variable `ADAPTIVE_PLAN_DECISION_V1` — `ADAPTIVE_PLAN_DECISION_V1 = 'adaptive-plan-decision-v1'`
+  - variable `ADAPTIVE_PLAN_COUNTERFACTUAL_V1` — `ADAPTIVE_PLAN_COUNTERFACTUAL_V1 = 'adaptive-plan-counterfactual-v1'`
+  - variable `ADAPTIVE_PLAN_PREDICTED_USE_V1` — `ADAPTIVE_PLAN_PREDICTED_USE_V1 =`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_REF_RE` — `ARTIFACT_REF_RE = /[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `MAX_TEXT` — `MAX_TEXT = 4_096`
+  - variable `TRIGGER_KINDS` — `TRIGGER_KINDS = new Set([`
+  - variable `NODE_STATES` — `NODE_STATES = new Set(['proposed', 'ready', 'running', 'suspended', 'passed', 'failed', 'killed'])`
+  - variable `CONTEXT_STATES` — `CONTEXT_STATES = new Set(['fresh', 'stale', 'unknown'])`
+  - variable `AUTHORITY_STATES` — `AUTHORITY_STATES = new Set(['available', 'denied', 'unknown'])`
+  - variable `BUDGET_STATES` — `BUDGET_STATES = new Set(['available', 'exhausted', 'unknown'])`
+  - variable `TERMINAL_STATES` — `TERMINAL_STATES = new Set(['active', 'all-passed', 'unknown'])`
+  - variable `PROGRESS_STATES` — `PROGRESS_STATES = new Set(['advanced', 'stalled', 'unknown'])`
+  - variable `EVIDENCE_KINDS` — `EVIDENCE_KINDS = new Set([`
+  - variable `CHANGED_DIMENSIONS` — `CHANGED_DIMENSIONS = new Set(PLAN_NODE_CHANGED_DIMENSIONS)`
+  - variable `OPERATOR_IDS` — `OPERATOR_IDS = new Set(COGNITIVE_OPERATOR_REGISTRY_V1.operators.map(item => item.operatorId))`
+  - arrow-function `<anonymous@2410>` — `item => item.operatorId`
+  - class `AdaptivePlanGovernorV1Error` — `export class AdaptivePlanGovernorV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName,`
+  - function `id` — `function id(value, pathName)`
+  - variable `normalized` — `normalized = text(value, pathName,`
+  - function `digest` — `function digest(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `enumeration` — `function enumeration(value, choices, pathName)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'AdaptivePlanGovernorV1')`
+  - … and 67 more symbols
+- `scripts/dynamic-branch-schedule-v1.mjs` (99 symbols)
+  - variable `DYNAMIC_BRANCH_SCHEDULE_V1` — `DYNAMIC_BRANCH_SCHEDULE_V1 = 'dynamic-branch-schedule-v1'`
+  - variable `DYNAMIC_BRANCH_RESULT_V1` — `DYNAMIC_BRANCH_RESULT_V1 = 'dynamic-branch-result-v1'`
+  - variable `DYNAMIC_BRANCH_JOIN_V1` — `DYNAMIC_BRANCH_JOIN_V1 = 'dynamic-branch-join-v1'`
+  - variable `DYNAMIC_BRANCH_SCHEDULE_PREDICTED_USE_V1` — `DYNAMIC_BRANCH_SCHEDULE_PREDICTED_USE_V1 =`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `OPERATOR_RE` — `OPERATOR_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `EVIDENCE_KINDS` — `EVIDENCE_KINDS = new Set([`
+  - variable `RESULT_STATUSES` — `RESULT_STATUSES = new Set(['proposed', 'refused'])`
+  - variable `HYPOTHESIS_OUTCOMES` — `HYPOTHESIS_OUTCOMES = new Set(['supported', 'falsified', 'inconclusive'])`
+  - variable `MAX_BRANCHES` — `MAX_BRANCHES = 3`
+  - variable `MAX_TOTAL_MODEL_CALLS` — `MAX_TOTAL_MODEL_CALLS = 4`
+  - variable `MAX_GENERATED_TOKENS_PER_CALL` — `MAX_GENERATED_TOKENS_PER_CALL = 2_048`
+  - variable `MAX_WALL_MS_PER_BRANCH` — `MAX_WALL_MS_PER_BRANCH = 180_000`
+  - variable `OPERATOR_IDS` — `OPERATOR_IDS = new Set(`
+  - arrow-function `<anonymous@1839>` — `item => item.operatorId`
+  - class `DynamicBranchScheduleV1Error` — `export class DynamicBranchScheduleV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `ordinaryArray` — `function ordinaryArray(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expectedKeys` — `expectedKeys = new Set([`
+  - arrow-function `<anonymous@3193>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@3329>` — `key => typeof key !== 'string' || !expectedKeys.has(key)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName, max = 4_096)`
+  - function `id` — `function id(value, pathName)`
+  - variable `result` — `result = text(value, pathName, 256)`
+  - function `digest` — `function digest(value, pathName)`
+  - … and 59 more symbols
+
+### Dynamic branch invocation — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 123 · **Callable:** 55 · **Authored purpose:** 0
+- `scripts/dynamic-branch-execution-ledger-v1.mjs` (105 symbols)
+  - variable `DYNAMIC_BRANCH_EXECUTION_REQUEST_V1` — `DYNAMIC_BRANCH_EXECUTION_REQUEST_V1 =`
+  - variable `DYNAMIC_BRANCH_EXECUTION_START_V1` — `DYNAMIC_BRANCH_EXECUTION_START_V1 =`
+  - variable `DYNAMIC_BRANCH_EXECUTION_RESULT_V1` — `DYNAMIC_BRANCH_EXECUTION_RESULT_V1 =`
+  - variable `DYNAMIC_BRANCH_EXECUTION_JOIN_V1` — `DYNAMIC_BRANCH_EXECUTION_JOIN_V1 =`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `RECONCILIATION_MODES` — `RECONCILIATION_MODES = new Set(['none', 'manual', 'probe'])`
+  - variable `TRANSPORT_CLASSES` — `TRANSPORT_CLASSES = new Set([`
+  - variable `INVOCATION_EVIDENCE_KINDS` — `INVOCATION_EVIDENCE_KINDS = new Set([`
+  - class `DynamicBranchExecutionLedgerV1Error` — `export class DynamicBranchExecutionLedgerV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `array` — `function array(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set([`
+  - arrow-function `<anonymous@2797>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@2929>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - arrow-function `<anonymous@3000>` — `key => !Object.hasOwn(descriptors[key], 'value')`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName, max = 512)`
+  - function `id` — `function id(value, pathName)`
+  - variable `result` — `result = text(value, pathName, 256)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - variable `result` — `result = text(value, pathName)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'DynamicBranchExecutionLedgerV1')`
+  - arrow-function `<anonymous@4785>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@4939>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - … and 65 more symbols
+- `scripts/dynamic-branch-invocation-v1.mjs` (18 symbols)
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifactRefs` — `function artifactRefs(value)`
+  - variable `refs` — `refs = value.map((item, index) =>`
+  - arrow-function `<anonymous@1171>` — `(item, index) =>`
+  - function `seed` — `function seed(scheduleSha256, branchId)`
+  - function `compileDynamicBranchInvocationsV1` — `export function compileDynamicBranchInvocationsV1(`
+  - variable `verifiedSchedule` — `verifiedSchedule = verifyDynamicBranchScheduleV1(schedule)`
+  - variable `routePolicy` — `routePolicy = COGNITIVE_ROUTE_POLICY_REGISTRY_V1.policies.find(item => (`
+  - arrow-function `<anonymous@2186>` — `item => (`
+  - variable `contextManifestSha256` — `contextManifestSha256 = cognitiveContextManifestSha256V1(contextManifest)`
+  - variable `refs` — `refs = artifactRefs(inputArtifactRefs)`
+  - variable `baseDigest` — `baseDigest = digest(basePlanGraphSha256, 'DynamicBranchInvocationV1.basePlanGraphSha256')`
+  - variable `taskDigest` — `taskDigest = digest(taskSpecSha256, 'DynamicBranchInvocationV1.taskSpecSha256')`
+  - variable `capsuleDigest` — `capsuleDigest = digest(goalCapsuleSha256, 'DynamicBranchInvocationV1.goalCapsuleSha256')`
+  - arrow-function `<anonymous@3580>` — `branch =>`
+  - variable `operator` — `operator = COGNITIVE_OPERATOR_REGISTRY_V1.operators.find(item => (`
+  - arrow-function `<anonymous@3659>` — `item => (`
+
+### Typed branch model output — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 97 · **Callable:** 44 · **Authored purpose:** 0
+- `scripts/dynamic-branch-model-output-rejection-v1.mjs` (33 symbols)
+  - variable `DYNAMIC_BRANCH_MODEL_OUTPUT_REJECTION_V1` — `DYNAMIC_BRANCH_MODEL_OUTPUT_REJECTION_V1 =`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[A-Za-z0-9._:-]+-[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - class `DynamicBranchModelOutputRejectionV1Error` — `export class DynamicBranchModelOutputRejectionV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `exact` — `function exact(value, fields, pathName)`
+  - variable `expected` — `expected = new Set(fields)`
+  - variable `actual` — `actual = Object.keys(value)`
+  - arrow-function `<anonymous@1959>` — `key => !expected.has(key)`
+  - arrow-function `<anonymous@2005>` — `key => !Object.hasOwn(value, key)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - function `text` — `function text(value, pathName, max = 4_096)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'DynamicBranchModelOutputRejectionV1')`
+  - arrow-function `<anonymous@3232>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@3386>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - variable `FIELDS` — `FIELDS = Object.freeze([`
+  - function `exactParserRejection` — `function exactParserRejection(rawResponseUtf8, binding)`
+  - variable `error` — `error`
+  - function `compileDynamicBranchModelOutputRejectionV1` — `export function compileDynamicBranchModelOutputRejectionV1(`
+  - variable `normalizedBinding` — `normalizedBinding = normalizeDynamicBranchModelOutputBindingV1(binding)`
+  - variable `parserError` — `parserError = exactParserRejection(rawResponseUtf8, normalizedBinding)`
+  - variable `body` — `body = canonicalize(`
+  - function `verifyDynamicBranchModelOutputRejectionV1` — `export function verifyDynamicBranchModelOutputRejectionV1(`
+  - variable `compiled` — `compiled = compileDynamicBranchModelOutputRejectionV1(`
+- `scripts/dynamic-branch-model-output-v1.mjs` (64 symbols)
+  - variable `DYNAMIC_BRANCH_MODEL_OUTPUT_V1` — `DYNAMIC_BRANCH_MODEL_OUTPUT_V1 = 'dynamic-branch-model-output-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[A-Za-z0-9._:-]+-[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `MAX_RAW_BYTES` — `MAX_RAW_BYTES = 512 * 1024`
+  - variable `MAX_LIST_ITEMS` — `MAX_LIST_ITEMS = 64`
+  - class `DynamicBranchModelOutputV1Error` — `export class DynamicBranchModelOutputV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'DYNAMIC_BRANCH_MODEL_OUTPUT_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `array` — `function array(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set([`
+  - arrow-function `<anonymous@2183>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@2315>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - arrow-function `<anonymous@2386>` — `key => !Object.hasOwn(descriptors[key], 'value')`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName, max = 4_096)`
+  - function `id` — `function id(value, pathName)`
+  - variable `result` — `result = text(value, pathName, 256)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - variable `result` — `result = text(value, pathName, 512)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'DynamicBranchModelOutputV1')`
+  - arrow-function `<anonymous@4166>` — `(item, index) => canonicalize(item, `$`
+  - arrow-function `<anonymous@4320>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `strings` — `function strings(value, pathName,`
+  - variable `normalized` — `normalized = value.map((item, index) => (`
+  - … and 24 more symbols
+
+### Epistemic evaluation frontier — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 160 · **Callable:** 71 · **Authored purpose:** 0
+- `scripts/epistemic-evaluation-frontier-v1.mjs` (160 symbols)
+  - variable `EPISTEMIC_EVALUATION_FRONTIER_V1` — `EPISTEMIC_EVALUATION_FRONTIER_V1 =`
+  - variable `EXACT_EVIDENCE_BINDING_OBSERVATION_V1` — `EXACT_EVIDENCE_BINDING_OBSERVATION_V1 =`
+  - variable `EPISTEMIC_EVALUATION_FEEDBACK_V1` — `EPISTEMIC_EVALUATION_FEEDBACK_V1 =`
+  - variable `EXACT_EVIDENCE_BINDING_ACTION_ID_V1` — `EXACT_EVIDENCE_BINDING_ACTION_ID_V1 =`
+  - variable `EXACT_EVIDENCE_BINDING_RUNNER_ID_V1` — `EXACT_EVIDENCE_BINDING_RUNNER_ID_V1 =`
+  - variable `EPISTEMIC_EVALUATION_PREDICTED_USE_V1` — `EPISTEMIC_EVALUATION_PREDICTED_USE_V1 =`
+  - variable `SOURCE_PATH` — `SOURCE_PATH = fileURLToPath(import.meta.url)`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `MAX_COLLECTION` — `MAX_COLLECTION = 512`
+  - variable `MAX_LEAF_STRINGS` — `MAX_LEAF_STRINGS = 16_384`
+  - variable `MAX_MATCH_LOCATIONS` — `MAX_MATCH_LOCATIONS = 128`
+  - class `EpistemicEvaluationFrontierV1Error` — `export class EpistemicEvaluationFrontierV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `ordinaryArray` — `function ordinaryArray(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set([`
+  - arrow-function `<anonymous@3373>` — `(_, index) => String(index)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName, max = 8_192)`
+  - function `id` — `function id(value, pathName)`
+  - variable `normalized` — `normalized = text(value, pathName, 256)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `canonicalize` — `function canonicalize(value, pathName = EPISTEMIC_EVALUATION_FRONTIER_V1, depth = 0)`
+  - arrow-function `<anonymous@5651>` — `(entry, index) => canonicalize(entry, `$`
+  - arrow-function `<anonymous@5893>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - … and 120 more symbols
+
+### AuthorAction admission — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 93 · **Callable:** 35 · **Authored purpose:** 1
+- `scripts/author-action-admission-v1.mjs` (93 symbols)
+  - variable `AUTHOR_ACTION_ENVELOPE_V1` — `AUTHOR_ACTION_ENVELOPE_V1 = 'author-action-envelope-v1'`
+  - variable `AUTHOR_ACTION_RESPONSE_V1` — `AUTHOR_ACTION_RESPONSE_V1 = 'author-action-response-v1'`
+  - variable `AUTHOR_ACTION_PROPOSAL_V1` — `AUTHOR_ACTION_PROPOSAL_V1 = 'author-action-proposal-v1'`
+  - variable `GRAPH_CONTROL_EVIDENCE_AUTHOR_LINEAGE_V1` — `GRAPH_CONTROL_EVIDENCE_AUTHOR_LINEAGE_V1 =`
+  - variable `AUTHOR_ACTION_MODEL_POLICY_V1` — `AUTHOR_ACTION_MODEL_POLICY_V1 = 'author-action-model-policy-v1'`
+  - variable `EPISTEMIC_AUTHOR_ACTION_SELECTED_KIND_V1` — `EPISTEMIC_AUTHOR_ACTION_SELECTED_KIND_V1 = 'epistemic-author-action-selected'`
+  - variable `EPISTEMIC_AUTHOR_ACTION_PREDICTED_USE_V1` — `EPISTEMIC_AUTHOR_ACTION_PREDICTED_USE_V1 =`
+  - variable `DIGEST_RE` — `DIGEST_RE = /^[a-f0-9]`
+  - variable `MODES` — `MODES = new Set(['basic', 'auto', 'deep-research'])`
+  - variable `PERMISSIONS` — `PERMISSIONS = new Set(['ask', 'plan', 'accept-edits', 'auto', 'bypass'])`
+  - variable `LEGAL_DIRECT_RESPONSE_KINDS` — `LEGAL_DIRECT_RESPONSE_KINDS = Object.freeze([`
+  - variable `AUTHORITY_NONE` — `AUTHORITY_NONE = Object.freeze(`
+  - class `AuthorActionAdmissionV1Error` — `export class AuthorActionAdmissionV1Error extends Error`
+  - constructor `constructor` — `constructor(message)`
+  - function `fail` — `function fail(message)`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `<anonymous@2357>` — `[key, descriptor]`
+  - function `exact` — `function exact(value, fields, name)`
+  - variable `actual` — `actual = Object.keys(value).sort()`
+  - variable `expected` — `expected = [...fields].sort()`
+  - arrow-function `<anonymous@2832>` — `(key, index) => key !== expected[index]`
+  - function `text` — `function text(value, name,`
+  - function `digest` — `function digest(value, name)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3698>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `freeze` — `function freeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `normalizeQuestions` — `function normalizeQuestions(value)`
+  - variable `questions` — `questions = value.map((item, index) => text(`
+  - arrow-function `<anonymous@4575>` — `(item, index) => text(`
+  - function `normalizeEvidenceRequest` — `function normalizeEvidenceRequest(value)`
+  - function `normalizeRepositoryProbe` — `function normalizeRepositoryProbe(value,`
+  - variable `plan` — `plan = verifyEpistemicRepositoryProbePlanV1(value.plan,`
+  - variable `observation` — `observation = verifyEpistemicRepositoryObservationV1(`
+  - variable `repositoryContext` — `repositoryContext = verifyEpistemicRepositoryContextV1(`
+  - variable `requestEventId` — `requestEventId = text(`
+  - variable `observationEventId` — `observationEventId = text(`
+  - … and 53 more symbols
+
+### Active experiment/counterexample designer — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 172 · **Callable:** 53 · **Authored purpose:** 17
+- `scripts/mutation-oracle.mjs` (60 symbols)
+  - variable `COMMENT_LINE_RE` — `COMMENT_LINE_RE = /^\s*(\/\/|#|\*|--|;|%|<!--)/`
+  - function `codeRegionLength` — `function codeRegionLength(line)`
+  - variable `cands` — `cands = [line.indexOf(' //'), line.indexOf(' #'), line.indexOf(' --')].filter((i) => i >= 0)`
+  - arrow-function `<anonymous@2032>` — `(i) => i >= 0`
+  - variable `OPERATORS` — `OPERATORS = [`
+  - arrow-function `to` — `(m) => String(Number(m) + 1)`
+  - variable `VALUE_OPERATORS` — `VALUE_OPERATORS = [`
+  - arrow-function `to` — `(m) => `"$`
+  - arrow-function `to` — `(m) => `'$`
+  - function `generateMutants` — `export function generateMutants(fileContent, changedLines,` — *Generate single-point mutants of `fileContent`, mutating only lines in `changedLines` (1-indexed). Returns [{ content, label, line, snippet }]. Deterministic; capped at maxMutants (round-robin across *
+  - variable `operators` — `operators = valueMutants ? [...OPERATORS, ...VALUE_OPERATORS] : OPERATORS`
+  - variable `lines` — `lines = String(fileContent).split('\n')`
+  - variable `changed` — `changed = new Set((changedLines || []).filter((n) => n >= 1 && n <= lines.length))`
+  - arrow-function `<anonymous@10435>` — `(n) => n >= 1 && n <= lines.length`
+  - variable `perLine` — `perLine = new Map()`
+  - variable `lineNo` — `lineNo`
+  - arrow-function `<anonymous@10778>` — `(a, b) => a - b`
+  - variable `idx` — `idx = lineNo - 1`
+  - variable `original` — `original = lines[idx]`
+  - variable `codeLen` — `codeLen = commentTrim ? codeRegionLength(original) : original.length`
+  - variable `bucket` — `bucket = []`
+  - variable `op` — `op`
+  - variable `matches` — `matches = [...original.matchAll(op.find)]`
+  - variable `occ` — `occ = 0`
+  - variable `seen` — `seen = -1`
+  - variable `mutatedLine` — `mutatedLine = original.replace(op.find, (m) =>`
+  - arrow-function `<anonymous@11403>` — `(m) =>`
+  - variable `mutatedLines` — `mutatedLines = lines.slice()`
+  - variable `out` — `out = []`
+  - variable `seenContent` — `seenContent = new Set()`
+  - variable `added` — `added = true`
+  - variable `round` — `round = 0`
+  - variable `bucket` — `bucket`
+  - variable `m` — `m = bucket[round]`
+  - function `computeMutationScore` — `export async function computeMutationScore(fileContent, changedLines, runTestOnContent, opts =` — *Compute the mutation score for a passed candidate.*
+  - variable `mutants` — `mutants = generateMutants(fileContent, changedLines, opts)`
+  - variable `killed` — `killed = 0`
+  - variable `scorable` — `scorable = 0`
+  - variable `abstained` — `abstained = 0`
+  - variable `survivors` — `survivors = []`
+  - … and 20 more symbols
+- `scripts/research-entropy-trigger.mjs` (112 symbols)
+  - variable `RESEARCH_ENTROPY_TRIGGER_VERSION` — `RESEARCH_ENTROPY_TRIGGER_VERSION = '1.0.0'`
+  - variable `ENTROPY_TRIGGER_DEFAULTS` — `ENTROPY_TRIGGER_DEFAULTS = Object.freeze(`
+  - variable `AXIS_SOURCES` — `AXIS_SOURCES = Object.freeze(['gap', 'assumption', 'inferred-fact', 'research-goal'])`
+  - class `ResearchEntropyTriggerError` — `export class ResearchEntropyTriggerError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'researchEntropyTrigger')`
+  - function `arr` — `function arr(value)`
+  - function `textOf` — `function textOf(value)`
+  - arrow-function `<anonymous@8471>` — `part => typeof part === 'string' && part.trim()`
+  - function `shannonEntropy` — `export function shannonEntropy(pi)` — *Shannon entropy in NATS over a probability vector. H(pi) = -sum pi_i ln pi_i [HypoAgents, arXiv:2508.01746] Zero-mass entries contribute 0 (the limit of p ln p as p -> 0), so this never returns NaN. C*
+  - variable `h` — `h = 0`
+  - variable `p` — `p`
+  - function `normalizedEntropy` — `export function normalizedEntropy(pi)` — *Entropy normalized onto [0,1] by its own maximum, ln(n). WHY NORMALIZED, and why this is the class fix rather than a tuning choice: raw H grows with the number of hypotheses, so ANY absolute threshold*
+  - variable `n` — `n = Array.isArray(pi) ? pi.length : 0`
+  - function `normalize` — `export function normalize(weights)` — *L1-normalize a non-negative weight vector to a probability simplex.*
+  - variable `safe` — `safe = arr(weights).map(w => (Number.isFinite(w) && w > 0 ? w : 0))`
+  - arrow-function `<anonymous@10026>` — `w => (Number.isFinite(w) && w > 0 ? w : 0)`
+  - variable `total` — `total = safe.reduce((s, w) => s + w, 0)`
+  - arrow-function `<anonymous@10098>` — `(s, w) => s + w`
+  - arrow-function `<anonymous@10467>` — `w => w / total`
+  - function `bayesUpdate` — `export function bayesUpdate(prior, likelihoods)` — *Bayes update: posterior_i proportional to prior_i * L_i, renormalized. [HypoAgents, arXiv:2508.01746 — "updating the posterior probabilities of hypotheses using Bayes' theorem"] Because the result is *
+  - variable `p` — `p = arr(prior)`
+  - variable `l` — `l = arr(likelihoods)`
+  - arrow-function `<anonymous@11034>` — `(prob, i) => prob * (Number.isFinite(l[i]) && l[i] > 0 ? l[i] : 0)`
+  - function `informationGain` — `export function informationGain(prior, posterior)` — *Information gain in nats: the entropy DROP across an update. IG = H(prior) - H(posterior) [HypoAgents, arXiv:2508.01746] Positive = uncertainty reduced. Can be negative when evidence CONFLICTS (belief*
+  - function `expectedInformationGain` — `export function expectedInformationGain(pi, coverage)` — *Expected information gain of a candidate probe (its DIAGNOSTICITY): EIG(q) = H(pi) - sum_o p(o|q) H(pi | q, o) = I(Theta; O | q) [Lindley 1956, Ann. Math. Statist. 27(4) 986-1005; Houlsby et al. 2011,*
+  - variable `p` — `p = arr(pi)`
+  - variable `c` — `c = arr(coverage)`
+  - variable `cov` — `cov = c.map(v => (Number.isFinite(v) ? Math.min(1, Math.max(0, v)) : 0))`
+  - arrow-function `<anonymous@12542>` — `v => (Number.isFinite(v) ? Math.min(1, Math.max(0, v)) : 0)`
+  - variable `pHit` — `pHit = p.reduce((s, prob, i) => s + prob * cov[i], 0)`
+  - arrow-function `<anonymous@12627>` — `(s, prob, i) => s + prob * cov[i]`
+  - variable `postHit` — `postHit = normalize(p.map((prob, i) => prob * cov[i]))`
+  - arrow-function `<anonymous@12740>` — `(prob, i) => prob * cov[i]`
+  - variable `postMiss` — `postMiss = normalize(p.map((prob, i) => prob * (1 - cov[i])))`
+  - arrow-function `<anonymous@12804>` — `(prob, i) => prob * (1 - cov[i])`
+  - variable `expected` — `expected = pHit * shannonEntropy(postHit) + (1 - pHit) * shannonEntropy(postMiss)`
+  - variable `eig` — `eig = shannonEntropy(p) - expected`
+  - function `buildIntentDifferential` — `export function buildIntentDifferential(taskSpec =` — *Build the intent differential from a compiled taskSpec. Returns { hypotheses, settledEvidenceCount, sourceCounts, expressible }. `expressible` is the FALSIFIER FLAG and it is the point of this functio*
+  - variable `spec` — `spec = taskSpec && typeof taskSpec === 'object' ? taskSpec :`
+  - variable `facts` — `facts = arr(spec.facts)`
+  - … and 72 more symbols
+
+### Computational homeostat — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Universal GraphProgram compiler — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+## 04 · CONTEXT, REPOSITORY, RETRIEVAL, EXPOSURE, AND COMPACTION PLANE
+
+### Universal ContextProgram — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### ContextCompiler — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 654 · **Callable:** 147 · **Authored purpose:** 28
+- `scripts/context-compiler.mjs` (654 symbols)
+  - variable `CONTEXT_COMPILER_VERSION` — `CONTEXT_COMPILER_VERSION = '1.0.0'`
+  - variable `CANDIDATE_KINDS` — `CANDIDATE_KINDS = new Set(['file', 'symbol', 'span', 'test'])`
+  - variable `DEFAULT_MAX_CANDIDATE_BYTES` — `DEFAULT_MAX_CANDIDATE_BYTES = 1024 * 1024`
+  - variable `AMBIENT_MIN_TOKEN_LEN` — `AMBIENT_MIN_TOKEN_LEN = 3`
+  - function `ambientTokenList` — `export function ambientTokenList(text)`
+  - variable `out` — `out = []`
+  - variable `raw` — `raw`
+  - function `ambientMeaningfulTokens` — `export function ambientMeaningfulTokens(text)`
+  - variable `AMBIENT_BM25_K1` — `AMBIENT_BM25_K1 = 1.5`
+  - variable `AMBIENT_BM25_B` — `AMBIENT_BM25_B = 0.75`
+  - variable `AMBIENT_SKILL_DESCRIPTION_MAX_CHARS` — `AMBIENT_SKILL_DESCRIPTION_MAX_CHARS = 1024`
+  - variable `AMBIENT_SKILL_BODY_MAX_TOKENS` — `AMBIENT_SKILL_BODY_MAX_TOKENS = 5000`
+  - variable `RERANK_LEXICAL_WEIGHT` — `RERANK_LEXICAL_WEIGHT = 0.5`
+  - variable `RERANK_SCORE_WEIGHT` — `RERANK_SCORE_WEIGHT = 0.5`
+  - variable `DEFAULT_RERANK_TOP_K` — `DEFAULT_RERANK_TOP_K = 32`
+  - variable `DEFAULT_RERANK_TIMEOUT_MS` — `DEFAULT_RERANK_TIMEOUT_MS = 15_000`
+  - variable `RERANK_PROBE_TIMEOUT_MS` — `RERANK_PROBE_TIMEOUT_MS = 2_000`
+  - variable `DEFAULT_HYBRID_DENSE_TIMEOUT_MS` — `DEFAULT_HYBRID_DENSE_TIMEOUT_MS = 30_000`
+  - variable `HYBRID_PROBE_TIMEOUT_MS` — `HYBRID_PROBE_TIMEOUT_MS = 2_000`
+  - variable `hybridSearchFacadePromise` — `hybridSearchFacadePromise = null`
+  - function `loadHybridSearchFacade` — `function loadHybridSearchFacade()`
+  - variable `embeddingModulePromise` — `embeddingModulePromise = null`
+  - function `loadEmbeddingModule` — `function loadEmbeddingModule()`
+  - variable `docVectorModulePromise` — `docVectorModulePromise = null`
+  - function `loadDocVectorModule` — `function loadDocVectorModule()`
+  - variable `pathResolverModulePromise` — `pathResolverModulePromise = null`
+  - function `loadPathResolverModule` — `function loadPathResolverModule()`
+  - function `withTimeout` — `function withTimeout(promise, timeoutMs, label)`
+  - variable `timer` — `timer = null`
+  - variable `timeout` — `timeout = new Promise((_, reject) =>`
+  - arrow-function `<anonymous@5538>` — `(_, reject) =>`
+  - arrow-function `<anonymous@5578>` — `() => reject(new Error(`$`
+  - arrow-function `<anonymous@5713>` — `() => clearTimeout(timer)`
+  - function `docVectorDenseScores` — `export function docVectorDenseScores(index, queryVector, candidates)` — *Per-candidate dense scores from the prebuilt doc-vector cache (M7 consumption seam, scripts/doc-vector-index.mjs). Pure math over the loaded index — no network, no disk. CHUNK→CANDIDATE ROLL-UP: a can*
+  - variable `list` — `list = Array.isArray(candidates) ? candidates : []`
+  - variable `dim` — `dim = Number(index?.dim)`
+  - variable `count` — `count = Number(index?.count)`
+  - arrow-function `<anonymous@8374>` — `() => Number.NaN`
+  - variable `rowsByFile` — `rowsByFile = new Map()`
+  - variable `rowSpans` — `rowSpans = new Array(count)`
+  - … and 614 more symbols
+
+### Repository index readiness — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 78 · **Callable:** 25 · **Authored purpose:** 9
+- `scripts/ensure-repo-index.mjs` (78 symbols)
+  - function `castIndexEnabled` — `function castIndexEnabled()`
+  - function `docVectorIndexEnabled` — `function docVectorIndexEnabled()`
+  - function `readinessBarrierEnabled` — `function readinessBarrierEnabled()`
+  - function `mergedGraphEnabled` — `function mergedGraphEnabled()`
+  - function `getRepoIndexReadyPath` — `export function getRepoIndexReadyPath(projectSlug)` — *Absolute path of the awaitable "index-ready" receipt for a project slug: `<projectDir>/context/repo-index-ready.json`. Keyed by slug (the same slug every reader resolves via detectProject(codeRepoRoot*
+  - variable `<anonymous@4648>`
+  - function `writeReadinessReceipt` — `function writeReadinessReceipt(projectSlug, receipt)`
+  - variable `readyPath` — `readyPath = getRepoIndexReadyPath(projectSlug)`
+  - function `finalizeReadiness` — `async function finalizeReadiness(` — *Merged-graph build-once + stamp the "ready" receipt. Called on BOTH the cached (HEAD-unchanged) and fresh-build paths so the merged receipt lands even when the barrier/merged flag was flipped on after*
+  - variable `merged` — `merged =`
+  - variable `receiptPath` — `receiptPath = null`
+  - variable `<anonymous@6091>`
+  - variable `error` — `error`
+  - variable `readyPath` — `readyPath = writeReadinessReceipt(slug,`
+  - function `gitHead` — `function gitHead(repoRoot)`
+  - function `gitDiffNames` — `function gitDiffNames(repoRoot, fromHead, toHead)` — *The changed-file set between two commits (name-only). Empty array on any git failure (fail-open: an unknowable delta is treated as "no reusable delta" by the caller, which then does a full rebuild — n*
+  - variable `out` — `out = execFileSync('git', ['-C', repoRoot, 'diff', '--name-only', `$`
+  - arrow-function `<anonymous@7675>` — `s => s.trim()`
+  - function `reindexOnEditEnabled` — `export function reindexOnEditEnabled()` — *ARC_REINDEX_ON_EDIT (default OFF ⇒ byte-identical): the persistent index cache is keyed ONLY on `git rev-parse HEAD`, so a multi-hour agent that edits the WORKING TREE without committing keeps hitting*
+  - function `workingTreeFingerprint` — `export function workingTreeFingerprint(repoRoot)` — *A compact fingerprint of the uncommitted working-tree state, or null on any git error (fail-open). Beyond the porcelain (which captures WHICH files changed, incl. untracked non-ignored), each changed *
+  - variable `porcelain` — `porcelain = execFileSync('git', ['-C', repoRoot, 'status', '--porcelain'],`
+  - variable `h` — `h = createHash('sha256').update(porcelain)`
+  - variable `line` — `line`
+  - variable `rel` — `rel = line.slice(3)`
+  - variable `st` — `st = statSync(path.join(repoRoot, rel))`
+  - variable `INDEX_NEUTRAL_EXTENSIONS` — `INDEX_NEUTRAL_EXTENSIONS = new Set([`
+  - function `changedFileForcesRebuild` — `function changedFileForcesRebuild(rel)`
+  - variable `ext` — `ext = path.extname(rel).toLowerCase()`
+  - function `isRepoIndexReadyForHead` — `export function isRepoIndexReadyForHead(` — *SYNCHRONOUS, cheap "is the deterministic index ready for the repo's current HEAD?" predicate — the persistent on-disk cache-hit check (fix-item #3). Ready iff the core artifact (symbol-call-graph.json*
+  - variable `slug` — `slug = projectSlug || detectProject(repoRoot).slug`
+  - variable `contextDir` — `contextDir = null`
+  - variable `scgPath` — `scgPath = path.join(contextDir, 'symbol-call-graph.json')`
+  - variable `head` — `head = gitHead(repoRoot)`
+  - variable `stampPath` — `stampPath = path.join(contextDir, 'repo-index.head')`
+  - variable `stamped` — `stamped = ''`
+  - variable `error` — `error`
+  - function `spawnRepoIndexBuild` — `export function spawnRepoIndexBuild(` — *Fire-and-forget, cross-process-DEDUPED off-loop index build (fix-item #1, W2-DAEMON class). The deterministic builders are SYNCHRONOUS whole-repo work (readFileSync per source file, spawnSync python/g*
+  - variable `slug` — `slug = projectSlug || detectProject(repoRoot).slug`
+  - variable `contextDir` — `contextDir = null`
+  - variable `lockPath` — `lockPath = contextDir ? path.join(contextDir, 'repo-index.building.lock') : null`
+  - … and 38 more symbols
+
+### Symbol/call/reference graph — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 677 · **Callable:** 137 · **Authored purpose:** 37
+- `scripts/graph-query.mjs` (436 symbols)
+  - variable `GRAPH_QUERY_VERSION` — `GRAPH_QUERY_VERSION = '0.1.0'`
+  - variable `RECEIPT_FILE_NAME` — `RECEIPT_FILE_NAME = 'symbol-call-graph.json'`
+  - function `boundedInteger` — `function boundedInteger(value, fallback, field, min, max)`
+  - variable `candidate` — `candidate = value ?? fallback`
+  - function `compareStrings` — `function compareStrings(left, right)`
+  - function `edgeKey` — `function edgeKey(edge)`
+  - function `publicEdge` — `function publicEdge(edge)`
+  - function `compareEdges` — `function compareEdges(left, right)`
+  - function `emptyGraph` — `function emptyGraph(receiptPath, error)`
+  - variable `FIRST_CLASS_RECEIPT_ARRAYS` — `FIRST_CLASS_RECEIPT_ARRAYS = new Set(['definitions', 'callEdges'])`
+  - variable `RELATION_FAMILY_RECORD_CAP` — `RELATION_FAMILY_RECORD_CAP = 200_000`
+  - function `emptyRelations` — `function emptyRelations(reason)`
+  - function `looksLikeSymbolId` — `function looksLikeSymbolId(value)` — *True when `value` is a symbolId of the receipt's own `<file>#<symbol>` shape.*
+  - variable `hash` — `hash = value.indexOf('#')`
+  - function `endpointKeysFor` — `function endpointKeysFor(value, knownSymbolIds, knownFiles)` — *The lookup keys a single string field value contributes, given what the graph already knows. The receipt uses THREE endpoint conventions — a bare repo path (`testLinks.sourceFile`), a symbol id (`<fil*
+  - variable `keys` — `keys = []`
+  - variable `hash` — `hash = value.indexOf('#')`
+  - variable `file` — `file = value.slice(0, hash)`
+  - variable `anchor` — `anchor = value.match(/^(.*[^:]):(\d+)$/)`
+  - function `buildRelationFamilies` — `function buildRelationFamilies(receipt, knownSymbolIds, knownFiles)` — *Index every non-first-class array-of-records key in the receipt by the symbol ids and file paths its records mention. `knownSymbolIds` / `knownFiles` come from the receipt's own definitions, so a fiel*
+  - variable `families` — `families = new Map()`
+  - variable `index` — `index = new Map()`
+  - variable `unreadable` — `unreadable = []`
+  - arrow-function `addKey` — `(key, entry) =>`
+  - variable `bucket` — `bucket = index.get(key)`
+  - variable `familyName` — `familyName`
+  - variable `value` — `value = receipt[familyName]`
+  - variable `records` — `records = value.filter(record => record && typeof record === 'object' && !Array.isArray(record))`
+  - arrow-function `<anonymous@8118>` — `record => record && typeof record === 'object' && !Array.isArray(record)`
+  - variable `kept` — `kept = records.slice(0, RELATION_FAMILY_RECORD_CAP)`
+  - variable `fields` — `fields = new Set()`
+  - variable `indexedRecordCount` — `indexedRecordCount = 0`
+  - arrow-function `<anonymous@8417>` — `(record, position) =>`
+  - variable `indexedThisRecord` — `indexedThisRecord = false`
+  - variable `field` — `field`
+  - variable `fieldValue` — `fieldValue = record[field]`
+  - variable `keys` — `keys = endpointKeysFor(fieldValue, knownSymbolIds, knownFiles)`
+  - variable `entry` — `entry =`
+  - variable `key` — `key`
+  - function `buildIndexedGraph` — `function buildIndexedGraph(` — *Index a { definitions[], callEdges[] } pair into the queryable graph object every consumer (PPR / neighborhood / repo-map / addFromCallGraphNeighborhood) expects. Extracted so `loadSymbolGraph` (symbo*
+  - … and 396 more symbols
+- `scripts/repo-graph/build-repo-graph.mjs` (241 symbols)
+  - variable `PAGERANK_ITERATIONS` — `PAGERANK_ITERATIONS = 20`
+  - variable `PAGERANK_DAMPING` — `PAGERANK_DAMPING = 0.85`
+  - variable `GIT_LOG_COMMITS` — `GIT_LOG_COMMITS = COCHANGE_DEFAULT_PARAMS.logCommits`
+  - variable `MAX_COCHANGE_FILES_PER_COMMIT` — `MAX_COCHANGE_FILES_PER_COMMIT = COCHANGE_DEFAULT_PARAMS.maxFilesPerCommit`
+  - variable `MIN_COCHANGE_COUNT` — `MIN_COCHANGE_COUNT = COCHANGE_DEFAULT_PARAMS.minPairCount`
+  - function `normalizeRel` — `function normalizeRel(value = '')`
+  - function `defaultRepoGraphPath` — `export function defaultRepoGraphPath(repoRoot)` — *Resolve the default output path for a repoRoot with no explicit --output. FAIL CLOSED ON AN UNTRUSTWORTHY PROJECT RESOLUTION (CLAUDE.md law 5/5b — "for every gate input, ask what happens when it is AB*
+  - variable `root` — `root = path.resolve(repoRoot)`
+  - variable `detected` — `detected = detectProject(root)`
+  - variable `detectedRoot` — `detectedRoot = detected.root ? path.resolve(detected.root) : null`
+  - variable `trustworthy` — `trustworthy = detected.source === 'git' && detectedRoot &&`
+  - function `gitHeadSha` — `async function gitHeadSha(repoRoot)`
+  - arrow-function `<anonymous@12869>` — `(resolve, reject) =>`
+  - arrow-function `<anonymous@12989>` — `(err, stdout) => (err ? reject(err) : resolve(stdout.trim()))`
+  - function `computePageRankVector` — `export function computePageRankVector(n, edges, isCode,`
+  - variable `outWeight` — `outWeight = new Array(n).fill(0)`
+  - variable `<anonymous@13809>`
+  - variable `codeCount` — `codeCount = 0`
+  - variable `i` — `i = 0`
+  - variable `uniform` — `uniform = codeCount > 0 ? 1 / codeCount : 1 / n`
+  - variable `pv` — `pv = new Float64Array(n)`
+  - variable `i` — `i = 0`
+  - variable `rank` — `rank = new Float64Array(n)`
+  - variable `i` — `i = 0`
+  - variable `next` — `next = new Float64Array(n)`
+  - variable `iter` — `iter = 0`
+  - variable `j` — `j = 0`
+  - variable `danglingSum` — `danglingSum = 0`
+  - variable `i` — `i = 0`
+  - variable `j` — `j = 0`
+  - variable `<anonymous@14647>`
+  - variable `delta` — `delta = 0`
+  - variable `i` — `i = 0`
+  - function `intentFactRowsFromRecordTags` — `export function intentFactRowsFromRecordTags(record)` — *intent_facts rows for ONE record's write-time anchor tags (memory-intent-anchor.mjs's `anchor:<tier>:<value>` strings, see anchorTagsForFacets/anchorTag). Every named file gets its OWN `symbol` self-t*
+  - variable `tags` — `tags = Array.isArray(record?.tags) ? record.tags : []`
+  - variable `parsed` — `parsed = tags.map(parseAnchorTag).filter(p => p && ANCHOR_TIERS.includes(p.tier))`
+  - arrow-function `<anonymous@16422>` — `p => p && ANCHOR_TIERS.includes(p.tier)`
+  - variable `symbolPaths` — `symbolPaths = [...new Set(parsed.filter(p => p.tier === 'symbol').map(p => p.value))]`
+  - arrow-function `<anonymous@16511>` — `p => p.tier === 'symbol'`
+  - arrow-function `<anonymous@16541>` — `p => p.value`
+  - … and 201 more symbols
+
+### SCIP index lane — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 137 · **Callable:** 30 · **Authored purpose:** 0
+- `scripts/scip-context-discovery.mjs` (74 symbols)
+  - variable `SCIP_CONTEXT_DISCOVERY_VERSION` — `SCIP_CONTEXT_DISCOVERY_VERSION = '1.1.0'`
+  - variable `REPO_BRAIN_PAGERANK_WEIGHT` — `REPO_BRAIN_PAGERANK_WEIGHT = 6`
+  - variable `REPO_BRAIN_MAX_FILES` — `REPO_BRAIN_MAX_FILES = 500`
+  - variable `DEFAULT_DISCOVERY_EXCLUDED_PATH_RE` — `DEFAULT_DISCOVERY_EXCLUDED_PATH_RE = /(^|\/)(?:\.ctxo|\.git|\.next|\.turbo|\.venv|__pycache__|_archived|archive|benchmarks|build|coverage|deprecated|dist|dual-benchmark-reports|global|local|matrix-res`
+  - variable `MAX_IGNORED_RECEIPT_FILES` — `MAX_IGNORED_RECEIPT_FILES = 40`
+  - function `tokenizeQuery` — `function tokenizeQuery(query)`
+  - arrow-function `<anonymous@1395>` — `token => token.length >= 2`
+  - function `loadScipIndex` — `export function loadScipIndex(repoRoot, indexPath = null)`
+  - variable `candidates` — `candidates = [`
+  - variable `candidate` — `candidate`
+  - function `discoverFilesFromScip` — `export function discoverFilesFromScip(`
+  - variable `index` — `index = loadScipIndex(repoRoot, indexPath)`
+  - variable `tokens` — `tokens = tokenizeQuery(query)`
+  - variable `scores` — `scores = new Map()`
+  - variable `DEEP_RESEARCH_QUERY_RE` — `DEEP_RESEARCH_QUERY_RE = /deep-research|dependency-graph|gap-resolver|research-v2-pipeline|repo-scout/i`
+  - variable `enableDeepResearchBias` — `enableDeepResearchBias = biasProfile === 'deep-research'`
+  - variable `explicitPaths` — `explicitPaths = new Set([...searchFiles, ...readFiles, ...obligationPaths]`
+  - arrow-function `<anonymous@3188>` — `file => String(file || '').replace(/^\.\//, '')`
+  - variable `ragIndexLoaded` — `ragIndexLoaded = false`
+  - variable `ragDocCount` — `ragDocCount = 0`
+  - arrow-function `shouldIgnorePath` — `file =>`
+  - variable `normalized` — `normalized = String(file || '').replace(/^\.\//, '')`
+  - arrow-function `bump` — `(file, weight, reason) =>`
+  - variable `current` — `current = scores.get(file) ||`
+  - variable `file` — `file`
+  - variable `normalized` — `normalized = String(file || '').replace(/^\.\//, '')`
+  - variable `file` — `file`
+  - variable `normalized` — `normalized = String(file || '').replace(/^\.\//, '')`
+  - variable `doc` — `doc`
+  - variable `file` — `file = doc.path`
+  - variable `<anonymous@4722>` — `[symbolKey, symbol]`
+  - variable `file` — `file = symbol.file`
+  - variable `haystack` — `haystack = [`
+  - variable `overlap` — `overlap = 0`
+  - variable `token` — `token`
+  - variable `doc` — `doc`
+  - variable `file` — `file = doc.path`
+  - variable `base` — `base = path.basename(file).toLowerCase()`
+  - variable `token` — `token`
+  - variable `repoBrainLoaded` — `repoBrainLoaded = false`
+  - … and 34 more symbols
+- `scripts/scip-indexer.mjs` (63 symbols)
+  - variable `execFileAsync` — `execFileAsync = promisify(execFile)`
+  - variable `SOURCE_EXTENSIONS` — `SOURCE_EXTENSIONS = new Set(ALL_SOURCE_EXTENSIONS)`
+  - variable `FALLBACK_IGNORED_DIRECTORIES` — `FALLBACK_IGNORED_DIRECTORIES = new Set([`
+  - variable `GENERATED_SOURCE_PREFIXES` — `GENERATED_SOURCE_PREFIXES = Object.freeze([`
+  - variable `STRUCTURED_DATA_EXTENSIONS` — `STRUCTURED_DATA_EXTENSIONS = new Set(['.json', '.jsonc', '.yaml', '.yml', '.toml', '.md', '.markdown', '.mdx'])`
+  - variable `MAX_STRUCTURED_DATA_BYTES` — `MAX_STRUCTURED_DATA_BYTES = 512 * 1024`
+  - function `normalizeRelativePath` — `function normalizeRelativePath(root, filePath)`
+  - function `shouldIndexSourceFile` — `function shouldIndexSourceFile(filePath, root)`
+  - variable `relativePath` — `relativePath = normalizeRelativePath(root, filePath)`
+  - arrow-function `<anonymous@1989>` — `prefix => relativePath === prefix.slice(0, -1) || relativePath.startsWith(prefix)`
+  - variable `extension` — `extension = path.extname(filePath).toLowerCase()`
+  - variable `stat` — `stat = statSync(filePath)`
+  - function `isSourceFile` — `function isSourceFile(filePath)`
+  - function `isWithin` — `function isWithin(root, candidate)`
+  - variable `relative` — `relative = path.relative(root, candidate)`
+  - class `ScipIndexer` — `export class ScipIndexer`
+  - constructor `constructor` — `constructor(workspaceRoot, options =`
+  - method `listGitVisibleSourceFiles` — `async listGitVisibleSourceFiles()`
+  - variable `<anonymous@3208>`
+  - variable `gitRoot` — `gitRoot = path.resolve(gitRootOutput.trim())`
+  - variable `<anonymous@3465>`
+  - variable `candidates` — `candidates = stdout`
+  - arrow-function `<anonymous@3773>` — `relativePath => path.resolve(gitRoot, relativePath)`
+  - arrow-function `<anonymous@3840>` — `filePath => isWithin(this.workspaceRoot, filePath) && shouldIndexSourceFile(filePath, this.workspaceRoot)`
+  - arrow-function `<anonymous@3959>` — `(left, right) => left.localeCompare(right, 'en')`
+  - variable `files` — `files = []`
+  - variable `filePath` — `filePath`
+  - variable `fileStat` — `fileStat = null`
+  - method `listFallbackSourceFiles` — `async listFallbackSourceFiles()`
+  - arrow-function `walk` — `async (dir) =>`
+  - variable `results` — `results = []`
+  - variable `entries` — `entries = await fs.readdir(dir,`
+  - arrow-function `<anonymous@4621>` — `(left, right) => left.name.localeCompare(right.name, 'en')`
+  - variable `entry` — `entry`
+  - variable `filePath` — `filePath = path.join(dir, entry.name)`
+  - method `listSourceFiles` — `async listSourceFiles()`
+  - variable `error` — `error`
+  - variable `stderr` — `stderr = Buffer.isBuffer(error.stderr)`
+  - method `runIndexer` — `async runIndexer()`
+  - variable `index` — `index =`
+  - … and 23 more symbols
+
+### LSP semantic lane — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 262 · **Callable:** 89 · **Authored purpose:** 6
+- `scripts/lsp-diagnostics.mjs` (69 symbols)
+  - variable `LSP_DIAGNOSTICS_VERSION` — `LSP_DIAGNOSTICS_VERSION = '0.1.0'`
+  - variable `LSP_DIAGNOSTIC_SERVERS` — `LSP_DIAGNOSTIC_SERVERS = Object.freeze(`
+  - variable `SEVERITY_LABEL` — `SEVERITY_LABEL =`
+  - function `encodeMessage` — `function encodeMessage(payload)`
+  - variable `body` — `body = JSON.stringify(payload)`
+  - function `readFramedMessages` — `export function readFramedMessages(buffer)` — *Split a stream buffer into complete Content-Length framed messages.*
+  - variable `messages` — `messages = []`
+  - variable `offset` — `offset = 0`
+  - variable `headerEnd` — `headerEnd = buffer.indexOf('\r\n\r\n', offset)`
+  - variable `header` — `header = buffer.slice(offset, headerEnd).toString('utf8')`
+  - variable `lengthMatch` — `lengthMatch = header.match(/Content-Length:\s*(\d+)/i)`
+  - variable `length` — `length = Number(lengthMatch[1])`
+  - variable `bodyStart` — `bodyStart = headerEnd + 4`
+  - variable `bodyEnd` — `bodyEnd = bodyStart + length`
+  - function `hasBinaryOnPath` — `export function hasBinaryOnPath(command)` — *Is `command` runnable on this machine? (cheap PATH probe).*
+  - function `serverForFile` — `export function serverForFile(file,` — *Resolve a language server for a file by extension (binary must exist).*
+  - variable `ext` — `ext = path.extname(String(file || '')).toLowerCase()`
+  - variable `<anonymous@3777>` — `[language, spec]`
+  - function `relForUri` — `function relForUri(repoRoot, uri = '')`
+  - function `collectDiagnostics` — `export async function collectDiagnostics(` — *Run a one-shot LSP session and collect diagnostics for `file`.*
+  - variable `abs` — `abs = path.isAbsolute(file) ? file : path.join(repoRoot, file)`
+  - variable `content` — `content = typeof text === 'string' ? text : (existsSync(abs) ? readFileSync(abs, 'utf8') : '')`
+  - variable `uri` — `uri = pathToFileURL(abs).href`
+  - arrow-function `<anonymous@4863>` — `(resolve) =>`
+  - variable `child` — `child`
+  - variable `buffer` — `buffer = Buffer.alloc(0)`
+  - variable `nextId` — `nextId = 1`
+  - variable `initCallbacks` — `initCallbacks = new Map()`
+  - variable `diagnosticsByUri` — `diagnosticsByUri = new Map()`
+  - variable `settleTimer` — `settleTimer = null`
+  - variable `done` — `done = false`
+  - arrow-function `flatten` — `() => [...diagnosticsByUri.values()].flat()`
+  - arrow-function `finish` — `(reason) =>`
+  - variable `hardTimer` — `hardTimer = setTimeout(() => finish('timeout'), timeoutMs)`
+  - arrow-function `<anonymous@5718>` — `() => finish('timeout')`
+  - arrow-function `scheduleSettle` — `() =>`
+  - arrow-function `<anonymous@5852>` — `() => finish('settled')`
+  - arrow-function `send` — `(payload) =>`
+  - arrow-function `request` — `(method, params, cb) =>`
+  - variable `id` — `id = nextId++`
+  - … and 29 more symbols
+- `scripts/lsp-semantic-index.mjs` (193 symbols)
+  - variable `LSP_SEMANTIC_INDEX_VERSION` — `LSP_SEMANTIC_INDEX_VERSION = '0.1.1'`
+  - variable `BACKEND_TARGET_LANGUAGES` — `BACKEND_TARGET_LANGUAGES = Object.freeze(`
+  - variable `LSP_SYMBOL_KINDS` — `LSP_SYMBOL_KINDS = Object.freeze(`
+  - variable `TARGET_LANGUAGE_BY_ID` — `TARGET_LANGUAGE_BY_ID = new Map(TOP_100_DETERMINISTIC_LANGUAGE_TARGETS.map(target => [target.languageId, target]))`
+  - arrow-function `<anonymous@2224>` — `target => [target.languageId, target]`
+  - function `sha256` — `function sha256(value = '')`
+  - function `normalizeRel` — `function normalizeRel(value = '')`
+  - function `uniqueSorted` — `function uniqueSorted(values = [])`
+  - arrow-function `<anonymous@2561>` — `(left, right) => left.localeCompare(right)`
+  - function `trimOutput` — `function trimOutput(value = '', limit = 1200)`
+  - variable `text` — `text = String(value || '').replace(/\x1B\[[0-?]*[ -/]*[@-~]/g, '').trim()`
+  - function `safeReadJson` — `function safeReadJson(filePath)`
+  - function `languageServerEnvironment` — `function languageServerEnvironment()`
+  - variable `env` — `env =`
+  - variable `key` — `key`
+  - function `encodeMessage` — `function encodeMessage(payload)`
+  - variable `body` — `body = JSON.stringify(payload)`
+  - function `readFramedMessages` — `function readFramedMessages(buffer)`
+  - variable `messages` — `messages = []`
+  - variable `offset` — `offset = 0`
+  - variable `headerEnd` — `headerEnd = buffer.indexOf('\r\n\r\n', offset)`
+  - variable `header` — `header = buffer.slice(offset, headerEnd).toString('utf8')`
+  - variable `lengthMatch` — `lengthMatch = header.match(/Content-Length:\s*(\d+)/i)`
+  - variable `length` — `length = Number(lengthMatch[1])`
+  - variable `bodyStart` — `bodyStart = headerEnd + 4`
+  - variable `bodyEnd` — `bodyEnd = bodyStart + length`
+  - variable `body` — `body = buffer.slice(bodyStart, bodyEnd).toString('utf8')`
+  - function `uriForFile` — `function uriForFile(root, relativePath)`
+  - function `fileForUri` — `function fileForUri(root, uri = '')`
+  - function `backendTargetLanguages` — `function backendTargetLanguages(backend =`
+  - function `preferredSamplesForLanguage` — `function preferredSamplesForLanguage(languageId, row =`
+  - variable `target` — `target = TARGET_LANGUAGE_BY_ID.get(languageId)`
+  - variable `samples` — `samples = row?.samples || []`
+  - variable `extensionMatches` — `extensionMatches = samples.filter(sample => target.extensions.includes(path.extname(sample).toLowerCase()))`
+  - arrow-function `<anonymous@5080>` — `sample => target.extensions.includes(path.extname(sample).toLowerCase())`
+  - function `planLanguageRows` — `function planLanguageRows(plan =`
+  - arrow-function `<anonymous@5321>` — `row => Number(row.fileCount || 0) > 0`
+  - arrow-function `<anonymous@5369>` — `row => [row.languageId, row]`
+  - function `lspSemanticInputDigest` — `function lspSemanticInputDigest(`
+  - arrow-function `<anonymous@5639>` — `backend => [backend.language, backend.path]`
+  - … and 153 more symbols
+
+### AST/CFG/call-graph lanes — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 1225 · **Callable:** 261 · **Authored purpose:** 3
+- `scripts/ast-extractor.mjs` (61 symbols)
+  - variable `Parser` — `Parser = null`
+  - variable `Language` — `Language = null`
+  - variable `treeSitterAvailable` — `treeSitterAvailable = false`
+  - variable `parserInstances` — `parserInstances = new Map()`
+  - variable `GRAMMAR_DIR` — `GRAMMAR_DIR = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'grammars')`
+  - variable `GRAMMARS` — `GRAMMARS =`
+  - function `initTreeSitter` — `async function initTreeSitter()`
+  - variable `mod` — `mod = await import('web-tree-sitter')`
+  - variable `e` — `e`
+  - function `getParserForExt` — `async function getParserForExt(ext)`
+  - variable `wasmPath` — `wasmPath = GRAMMARS[ext]`
+  - variable `lang` — `lang = await Language.load(wasmPath)`
+  - variable `parser` — `parser = new Parser()`
+  - variable `e` — `e`
+  - function `extractSymbolsFromTree` — `function extractSymbolsFromTree(tree, sourceCode)`
+  - variable `nodes` — `nodes = []`
+  - variable `edges` — `edges = []`
+  - variable `cursor` — `cursor = tree.walk()`
+  - function `visitNode` — `function visitNode()`
+  - variable `nodeType` — `nodeType = cursor.currentNode.type`
+  - variable `nodeText` — `nodeText = cursor.currentNode.text`
+  - variable `sourceNode` — `sourceNode = cursor.currentNode.children.find(n => n.type === 'string' || n.type === 'string_fragment')`
+  - arrow-function `<anonymous@2170>` — `n => n.type === 'string' || n.type === 'string_fragment'`
+  - variable `moduleName` — `moduleName = sourceNode.text.replace(/['"]/g, '')`
+  - variable `nameNode` — `nameNode = cursor.currentNode.children.find(n => n.type === 'identifier')`
+  - arrow-function `<anonymous@2640>` — `n => n.type === 'identifier'`
+  - variable `nameNode` — `nameNode = cursor.currentNode.children.find(n => n.type === 'identifier')`
+  - arrow-function `<anonymous@2967>` — `n => n.type === 'identifier'`
+  - variable `funcNode` — `funcNode = cursor.currentNode.childForFieldName('function')`
+  - variable `funcName` — `funcName = funcNode.type === 'identifier' ? funcNode.text : funcNode.childForFieldName('property')?.text`
+  - class `MockTreeSitterParser` — `export class MockTreeSitterParser`
+  - method `parse` — `parse(sourceCode)`
+  - variable `nodes` — `nodes = []`
+  - variable `edges` — `edges = []`
+  - variable `importRegex` — `importRegex = /import\s+.*?from\s+['"](.*?)['"]/g`
+  - variable `match` — `match`
+  - variable `funcRegex` — `funcRegex = /(?:export\s+)?(?:async\s+)?function\s+([a-zA-Z_]\w*)/g`
+  - variable `callRegex` — `callRegex = /([a-zA-Z_]\w*)\s*\(/g`
+  - class `ASTExtractor` — `export class ASTExtractor`
+  - constructor `constructor` — `constructor()`
+  - … and 21 more symbols
+- `scripts/symbol-call-graph.mjs` (1164 symbols)
+  - variable `SYMBOL_CALL_GRAPH_VERSION` — `SYMBOL_CALL_GRAPH_VERSION = '0.3.5'`
+  - variable `JS_LIKE_EXTENSIONS` — `JS_LIKE_EXTENSIONS = new Set(['.js', '.jsx', '.mjs', '.cjs', '.ts', '.tsx'])`
+  - variable `PYTHON_EXTENSIONS` — `PYTHON_EXTENSIONS = new Set(['.py'])`
+  - variable `GO_EXTENSIONS` — `GO_EXTENSIONS = new Set(['.go'])`
+  - variable `KOTLIN_EXTENSIONS` — `KOTLIN_EXTENSIONS = new Set(['.kt', '.kts'])`
+  - variable `RUST_EXTENSIONS` — `RUST_EXTENSIONS = new Set(['.rs'])`
+  - variable `SHELL_EXTENSIONS` — `SHELL_EXTENSIONS = new Set(['.sh', '.bash', '.zsh'])`
+  - variable `STATIC_STRUCTURE_LANGUAGES` — `STATIC_STRUCTURE_LANGUAGES = new Set(['json', 'yaml', 'toml', 'markdown', 'make'])`
+  - variable `MODULE_DIR` — `MODULE_DIR = path.dirname(fileURLToPath(import.meta.url))`
+  - variable `KNOWN_CALL_KEYWORDS` — `KNOWN_CALL_KEYWORDS = new Set([`
+  - function `sha256` — `function sha256(value)`
+  - function `normalizeRel` — `function normalizeRel(value = '')`
+  - function `uniqueSorted` — `function uniqueSorted(values = [])`
+  - arrow-function `<anonymous@2540>` — `(left, right) => left.localeCompare(right)`
+  - function `safeReadUtf8` — `function safeReadUtf8(filePath)`
+  - function `fileSha256` — `function fileSha256(filePath)`
+  - function `safeStat` — `function safeStat(filePath)`
+  - function `languageForFile` — `export function languageForFile(relativePath = '')`
+  - variable `ext` — `ext = path.extname(relativePath).toLowerCase()`
+  - variable `base` — `base = path.basename(relativePath)`
+  - function `trimOutput` — `function trimOutput(value = '', limit = 4000)`
+  - variable `text` — `text = String(value || '')`
+  - function `executableExists` — `function executableExists(filePath)`
+  - function `resolvePython3Command` — `function resolvePython3Command()`
+  - variable `candidate` — `candidate`
+  - function `resolveGoCommand` — `function resolveGoCommand()`
+  - variable `candidate` — `candidate`
+  - function `resolvePythonImportsForFacts` — `function resolvePythonImportsForFacts(facts, relativePath, trackedFiles)`
+  - variable `record` — `record`
+  - function `readProtoVarint` — `function readProtoVarint(buffer, state)`
+  - variable `shift` — `shift = 0`
+  - variable `value` — `value = 0`
+  - variable `byte` — `byte = buffer[state.offset]`
+  - function `skipProtoField` — `function skipProtoField(buffer, state, wireType)`
+  - variable `length` — `length = readProtoVarint(buffer, state)`
+  - function `readLengthDelimited` — `function readLengthDelimited(buffer, state)`
+  - variable `length` — `length = readProtoVarint(buffer, state)`
+  - variable `start` — `start = state.offset`
+  - variable `end` — `end = start + length`
+  - function `decodeScipOccurrence` — `function decodeScipOccurrence(buffer)`
+  - … and 1124 more symbols
+
+### Lexical/codebase RAG lane — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 150 · **Callable:** 45 · **Authored purpose:** 0
+- `scripts/codebase-rag.mjs` (150 symbols)
+  - variable `CODEBASE_RAG_VERSION` — `CODEBASE_RAG_VERSION = 'compat-lexical-1.0.0'`
+  - variable `DEFAULT_CODE_EXTS` — `DEFAULT_CODE_EXTS = new Set([...ALL_SOURCE_EXTENSIONS, '.md'])`
+  - variable `DEFAULT_EXCLUDES` — `DEFAULT_EXCLUDES = new Set([`
+  - variable `DEFAULT_MAX_FILE_BYTES` — `DEFAULT_MAX_FILE_BYTES = 512 * 1024`
+  - variable `DEFAULT_CHUNK_LINES` — `DEFAULT_CHUNK_LINES = 80`
+  - variable `DEFAULT_MAX_INDEX_BYTES` — `DEFAULT_MAX_INDEX_BYTES = 128 * 1024 * 1024`
+  - function `sha256` — `function sha256(value)`
+  - function `asSet` — `function asSet(value, fallback)`
+  - function `tokenize` — `function tokenize(value)`
+  - arrow-function `<anonymous@2018>` — `token => token.length > 1`
+  - function `unique` — `function unique(value)`
+  - function `relativeTo` — `function relativeTo(root, filePath)`
+  - function `normalizePrefix` — `function normalizePrefix(value)`
+  - function `matchesIncludePrefix` — `function matchesIncludePrefix(relativePath, prefixes = [])`
+  - variable `normalized` — `normalized = normalizePrefix(relativePath)`
+  - arrow-function `<anonymous@2515>` — `prefix => normalized === prefix || normalized.startsWith(`$`
+  - function `normalizeConstructorInput` — `function normalizeConstructorInput(repoRoot, projectSlug)`
+  - function `symbolFromLine` — `function symbolFromLine(line)`
+  - variable `patterns` — `patterns = [`
+  - variable `pattern` — `pattern`
+  - variable `match` — `match = line.match(pattern.regex)`
+  - variable `symbol` — `symbol = match[pattern.nameIndex] || 'anonymous'`
+  - variable `symbolType` — `symbolType = pattern.type || match[pattern.typeIndex] || 'symbol'`
+  - function `buildDoc` — `function buildDoc(`
+  - variable `lineStart` — `lineStart = startIndex + 1`
+  - variable `lineEnd` — `lineEnd = endIndex + 1`
+  - variable `content` — `content = lines.slice(startIndex, endIndex + 1).join('\n')`
+  - variable `relativePath` — `relativePath = relativeTo(repoRoot, filePath)`
+  - variable `id` — `id = `$`
+  - function `windowedChunks` — `function windowedChunks(`
+  - variable `chunks` — `chunks = []`
+  - variable `part` — `part = 0`
+  - variable `cursor` — `cursor = startIndex`
+  - function `computeCorpusStats` — `function computeCorpusStats(docs)`
+  - variable `N` — `N = docs.length`
+  - variable `avgdl` — `avgdl = N > 0 ? docs.reduce((sum, doc) => sum + doc.tokens.length, 0) / N : 1`
+  - arrow-function `<anonymous@5585>` — `(sum, doc) => sum + doc.tokens.length`
+  - variable `corpusDf` — `corpusDf = Object.create(null)`
+  - variable `doc` — `doc`
+  - variable `token` — `token`
+  - … and 110 more symbols
+
+### Hybrid retrieval and RRF — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 120 · **Callable:** 39 · **Authored purpose:** 10
+- `scripts/hybrid-code-retrieval.mjs` (82 symbols)
+  - variable `DEFAULT_RRF_K` — `DEFAULT_RRF_K = 60`
+  - variable `DEFAULT_RERANK_TOP_K` — `DEFAULT_RERANK_TOP_K = 32`
+  - arrow-function `isFn` — `(f) => typeof f === 'function'`
+  - arrow-function `isFiniteNum` — `(n) => typeof n === 'number' && Number.isFinite(n)`
+  - function `ranksFromScores` — `export function ranksFromScores(scores)` — *Rank an array of scores into 1-based ranks with a DETERMINISTIC tiebreak. Higher score => better (smaller) rank. Ties break by original index (stable). Non-finite scores (NaN/undefined/Infinity) sort *
+  - variable `order` — `order = scores.map((score, index) => (`
+  - arrow-function `<anonymous@6960>` — `(score, index) => (`
+  - arrow-function `<anonymous@7011>` — `(a, b) =>`
+  - variable `av` — `av = isFiniteNum(a.score)`
+  - variable `bv` — `bv = isFiniteNum(b.score)`
+  - variable `ranks` — `ranks = new Array(scores.length)`
+  - arrow-function `<anonymous@7446>` — `(entry, position) =>`
+  - function `cosineSimilarity` — `export function cosineSimilarity(a, b)` — *Cosine similarity of two equal-length numeric vectors; 0 on degenerate input.*
+  - variable `dot` — `dot = 0`
+  - variable `na` — `na = 0`
+  - variable `nb` — `nb = 0`
+  - variable `i` — `i = 0`
+  - variable `x` — `x = a[i]`
+  - variable `y` — `y = b[i]`
+  - function `reciprocalRankFusion` — `export function reciprocalRankFusion(stages, k = DEFAULT_RRF_K, candidateCount = 0)` — *Fuse multiple ranked stages into one score via Reciprocal-Rank Fusion.*
+  - variable `fused` — `fused = new Array(candidateCount).fill(0)`
+  - variable `stage` — `stage`
+  - variable `weight` — `weight = isFiniteNum(stage.weight) ? stage.weight : 1`
+  - variable `i` — `i = 0`
+  - variable `rank` — `rank = stage.ranks[i]`
+  - function `normalizeCandidate` — `function normalizeCandidate(candidate, index)` — *Normalize a caller-supplied candidate into { id, text, raw }. Accepts a plain string, or an object with any of {id, text, content, snippet, path}.*
+  - variable `text` — `text =`
+  - variable `id` — `id = candidate.id ?? candidate.path ?? String(index)`
+  - function `hybridRetrieve` — `export function hybridRetrieve(opts =` — *hybridRetrieve — union a dense stage with a sparse stage via RRF, then rerank. All model access is injected; nothing here downloads or calls a model directly.*
+  - variable `<anonymous@12152>`
+  - variable `norm` — `norm = Array.isArray(candidates) ? candidates.map(normalizeCandidate) : []`
+  - variable `n` — `n = norm.length`
+  - variable `stages` — `stages =`
+  - variable `texts` — `texts = norm.map((c) => c.text)`
+  - arrow-function `<anonymous@13374>` — `(c) => c.text`
+  - variable `denseScores` — `denseScores = null`
+  - variable `scores` — `scores = injectedDenseScores.map((s) => (isFiniteNum(s) ? s : NaN))`
+  - arrow-function `<anonymous@14514>` — `(s) => (isFiniteNum(s) ? s : NaN)`
+  - arrow-function `<anonymous@14572>` — `(s) => !isFiniteNum(s)`
+  - variable `docVecs` — `docVecs = denseEmbed(query, texts)`
+  - … and 42 more symbols
+- `scripts/listwise-rerank.mjs` (38 symbols)
+  - variable `LISTWISE_RERANK_VERSION` — `LISTWISE_RERANK_VERSION = '1.0.0'`
+  - variable `LISTWISE_RERANK_TOP_K` — `LISTWISE_RERANK_TOP_K = 20`
+  - variable `LISTWISE_RERANK_TIMEOUT_MS` — `LISTWISE_RERANK_TIMEOUT_MS = 90_000`
+  - variable `LISTWISE_RERANK_MAX_TOKENS` — `LISTWISE_RERANK_MAX_TOKENS = 512`
+  - variable `LISTWISE_RERANK_MODEL` — `LISTWISE_RERANK_MODEL = 'qwen3.5-9b'`
+  - variable `LISTWISE_RERANK_MAX_QUERY_CHARS` — `LISTWISE_RERANK_MAX_QUERY_CHARS = 8_000`
+  - variable `LISTWISE_RERANK_MAX_EVIDENCE_CHARS` — `LISTWISE_RERANK_MAX_EVIDENCE_CHARS = 200`
+  - function `isListwiseRerankArmed` — `export function isListwiseRerankArmed(env = process.env)` — *Arming gate (§B.3): ARC_LISTWISE_RERANK === '1' AND the model transport is not a cassette. Cassette transports are deterministic record/replay runs (chat-loop-coordinator precedent for ARC_SPINE_SUBAG*
+  - function `evidenceFor` — `function evidenceFor(evidenceByFile, file)` — *Resolve one file's evidence string from the evidence map. Accepts a Map or plain object whose values are either strings or `{ label, snippet }` records (label = the path-augmented symbol breadcrumb fr*
+  - variable `raw` — `raw = evidenceByFile instanceof Map`
+  - variable `text` — `text = typeof raw === 'string'`
+  - variable `bounded` — `bounded = String(text).replace(/\s+/g, ' ').trim().slice(0, LISTWISE_RERANK_MAX_EVIDENCE_CHARS)`
+  - function `buildListwisePrompt` — `export function buildListwisePrompt(` — *Build the numbered closed-set prompt: `[id:N] path — breadcrumb — head snippet` per candidate, instruction "output ids most-likely-to-need-editing first" (§B.3). Pure and deterministic.*
+  - variable `lines` — `lines = files.map((file, i) => `[id:$`
+  - arrow-function `<anonymous@5349>` — `(file, i) => `[id:$`
+  - function `parseListwiseOrder` — `export function parseListwiseOrder(rawText, presentedCount)` — *Closed-set order parse: extract a ranked list of PRESENTED ids (1-based, 1..presentedCount) from raw model output. Dedupe keeps the FIRST mention; out-of-set ids and everything else are ignored (garba*
+  - variable `text` — `text = String(rawText || '')`
+  - variable `count` — `count = Number(presentedCount) || 0`
+  - arrow-function `acceptClosedSet` — `(nums) =>`
+  - variable `out` — `out = []`
+  - variable `seen` — `seen = new Set()`
+  - variable `n` — `n`
+  - variable `idMentions` — `idMentions = [...text.matchAll(/\bid\s*:\s*(\d`
+  - arrow-function `<anonymous@7357>` — `m => Number(m[1])`
+  - variable `ids` — `ids = acceptClosedSet(idMentions)`
+  - variable `arrayMatch` — `arrayMatch = text.match(/\[\s*\d[\d,\s]*\]/)`
+  - arrow-function `<anonymous@7829>` — `m => Number(m[1])`
+  - function `listwiseRerankFiles` — `export async function listwiseRerankFiles(` — *ONE bounded listwise rerank call (§B.3 frozen signature). Health-probes the endpoint (2s, is9bEndpointHealthy), then makes a SINGLE invoke9bSubagent call (reasoning off, maxTokens LISTWISE_RERANK_MAX_*
+  - variable `startedAt` — `startedAt = Date.now()`
+  - variable `receipt` — `receipt =`
+  - variable `presented` — `presented = []`
+  - variable `seen` — `seen = new Set()`
+  - variable `file` — `file`
+  - variable `prompt` — `prompt = buildListwisePrompt(`
+  - variable `result` — `result = await invoke(`
+  - variable `ids` — `ids = parseListwiseOrder(result?.content ?? '', presented.length)`
+  - arrow-function `<anonymous@11349>` — `id => presented[id - 1]`
+  - variable `error` — `error`
+
+### Embedding/vector lane — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 57 · **Callable:** 21 · **Authored purpose:** 15
+- `scripts/lib/embeddings.mjs` (57 symbols)
+  - variable `OLLAMA_URL` — `OLLAMA_URL = process.env.OLLAMA_URL || 'http://localhost:11434/api/embeddings'`
+  - variable `EMBED_MODEL_OVERRIDE` — `EMBED_MODEL_OVERRIDE = process.env.EMBED_MODEL || null`
+  - variable `EMBED_DIM_OVERRIDE` — `EMBED_DIM_OVERRIDE = process.env.EMBED_DIM ? parseInt(process.env.EMBED_DIM, 10) : null`
+  - variable `EMBED_TIMEOUT_MS` — `EMBED_TIMEOUT_MS = parseInt(process.env.EMBED_TIMEOUT_MS || '10000', 10)`
+  - function `tagsUrl` — `function tagsUrl()` — *Derived from OLLAMA_URL's own origin, not a second independent default — the two must never point at different servers, and pointing OLLAMA_URL at a fake host must ALSO break discovery (this is what k*
+  - variable `discoveredModel` — `discoveredModel = null`
+  - variable `modelDiscoveryTried` — `modelDiscoveryTried = false`
+  - variable `discoveredDim` — `discoveredDim = null`
+  - function `discoverEmbedModel` — `async function discoverEmbedModel()` — *Ask Ollama which of its installed models can embed, rather than guessing a name.*
+  - variable `controller` — `controller = new AbortController()`
+  - variable `timeout` — `timeout = setTimeout(() => controller.abort(), EMBED_TIMEOUT_MS)`
+  - arrow-function `<anonymous@5391>` — `() => controller.abort()`
+  - variable `response` — `response = await fetch(tagsUrl(),`
+  - variable `data` — `data = await response.json()`
+  - variable `models` — `models = Array.isArray(data?.models) ? data.models : []`
+  - variable `byCapability` — `byCapability = models.find(m => Array.isArray(m.capabilities) && m.capabilities.includes('embedding'))`
+  - arrow-function `<anonymous@5718>` — `m => Array.isArray(m.capabilities) && m.capabilities.includes('embedding')`
+  - variable `byName` — `byName = models.find(m => /embed/i.test(m.name || ''))`
+  - arrow-function `<anonymous@5826>` — `m => /embed/i.test(m.name || '')`
+  - function `zeroVectorDim` — `function zeroVectorDim()` — *The dimension to use for the empty-input zero vector: an explicit override, else whatever a real embed call in THIS process actually returned, else a last-resort constant for the case where embed('') *
+  - function `ollamaEmbed` — `async function ollamaEmbed(text)` — *Get embedding from Ollama.*
+  - variable `model` — `model = await discoverEmbedModel()`
+  - variable `controller` — `controller = new AbortController()`
+  - variable `timeout` — `timeout = setTimeout(() => controller.abort(), EMBED_TIMEOUT_MS)`
+  - arrow-function `<anonymous@6690>` — `() => controller.abort()`
+  - variable `response` — `response = await fetch(OLLAMA_URL,`
+  - variable `data` — `data = await response.json()`
+  - variable `e` — `e`
+  - class `EmbeddingUnavailableError` — `export class EmbeddingUnavailableError extends Error` — *Thrown when no real embedder is reachable. Carries the per-tier reasons so the failure names ITSELF instead of arriving as a bare "cannot read property length".*
+  - constructor `constructor` — `constructor(reasons)`
+  - arrow-function `<anonymous@7823>` — `r => `$`
+  - variable `ollamaAvailable` — `ollamaAvailable = true`
+  - variable `onnxEmbedFn` — `onnxEmbedFn = null`
+  - function `embed` — `export async function embed(text)` — *Get embedding vector for text. Tries Ollama, then ONNX. If neither answers, THROWS EmbeddingUnavailableError — it never invents a vector (see the module header for the measurement that killed the old *
+  - variable `reasons` — `reasons = []`
+  - variable `e` — `e`
+  - variable `e` — `e`
+  - function `embeddingsAvailable` — `export async function embeddingsAvailable()` — *Non-throwing probe: true iff a real embedder answers right now. For callers that want to plan an honest degradation BEFORE they start scoring, rather than catching mid-loop.*
+  - function `setONNXEmbedFn` — `export function setONNXEmbedFn(fn)` — *Set a custom ONNX embedding function.*
+  - function `resetOllama` — `export function resetOllama()` — *Reset Ollama availability check (e.g., after server restart). Also re-runs model discovery — a restarted server may have a different model set, and the whole point of discovery is that the caller neve*
+  - … and 17 more symbols
+
+### Structural target context — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 54 · **Callable:** 11 · **Authored purpose:** 0
+- `scripts/structural-context-facts.mjs` (54 symbols)
+  - function `structContextEnabled` — `export function structContextEnabled()`
+  - variable `STRUCT_CONTEXT_MAX_ITEMS` — `STRUCT_CONTEXT_MAX_ITEMS = 12`
+  - arrow-function `_normRel` — `p => String(p || '').replace(/^\.\//, '')`
+  - function `resolveSymbolCallGraphPath` — `export function resolveSymbolCallGraphPath(repoRoot)`
+  - variable `slug` — `slug = detectProject(repoRoot).slug`
+  - variable `scgPath` — `scgPath = path.join(ensureProject(slug).paths.root, 'context', 'symbol-call-graph.json')`
+  - function `loadSymbolCallGraph` — `export function loadSymbolCallGraph(repoRoot)`
+  - variable `scgPath` — `scgPath = resolveSymbolCallGraphPath(repoRoot)`
+  - variable `graph` — `graph = JSON.parse(readFileSync(scgPath, 'utf8'))`
+  - function `buildStructuralContextForTargets` — `export function buildStructuralContextForTargets(targets, repoRoot)`
+  - variable `graph` — `graph = loadSymbolCallGraph(repoRoot)`
+  - function `buildStructuralFactsFromGraph` — `export function buildStructuralFactsFromGraph(graph, targets)`
+  - variable `out` — `out = new Map()`
+  - variable `defById` — `defById = new Map()`
+  - variable `defsByFile` — `defsByFile = new Map()`
+  - variable `def` — `def`
+  - variable `f` — `f = _normRel(def.file)`
+  - variable `incoming` — `incoming = (graph.incomingCallCounts && typeof graph.incomingCallCounts === 'object') ? graph.incomingCallCounts :`
+  - variable `callEdges` — `callEdges = Array.isArray(graph.callEdges) ? graph.callEdges : []`
+  - variable `extendsEdges` — `extendsEdges = Array.isArray(graph.classExtendsEdges) ? graph.classExtendsEdges : []`
+  - variable `implementsEdges` — `implementsEdges = Array.isArray(graph.implementsEdges) ? graph.implementsEdges : []`
+  - variable `testLinks` — `testLinks = Array.isArray(graph.testLinks) ? graph.testLinks : []`
+  - arrow-function `sigOf` — `def =>`
+  - variable `label` — `label = def.exportName && def.exportName !== def.name ? `$`
+  - arrow-function `refOf` — `def => (`
+  - variable `filePath` — `filePath`
+  - variable `rel` — `rel = _normRel(filePath)`
+  - variable `targetDefs` — `targetDefs = defsByFile.get(rel)`
+  - variable `targetIds` — `targetIds = new Set(targetDefs.map(d => d.symbolId))`
+  - arrow-function `<anonymous@5016>` — `d => d.symbolId`
+  - variable `callerBy` — `callerBy = new Map()`
+  - variable `edge` — `edge`
+  - variable `callerDef` — `callerDef = defById.get(edge.from)`
+  - variable `weight` — `weight = incoming[edge.to] || 0`
+  - variable `prev` — `prev = callerBy.get(callerDef.symbolId)`
+  - variable `callers` — `callers = [...callerBy.values()]`
+  - arrow-function `<anonymous@5694>` — `(a, b) => b.weight - a.weight`
+  - arrow-function `<anonymous@5778>` — `entry => refOf(entry.def)`
+  - variable `calleeBy` — `calleeBy = new Map()`
+  - variable `edge` — `edge`
+  - … and 14 more symbols
+
+### Repo-graph memory join — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 21 · **Callable:** 4 · **Authored purpose:** 3
+- `scripts/repo-graph/repo-graph-memory-join.mjs` (21 symbols)
+  - function `repoGraphMemoryJoinEnabled` — `export function repoGraphMemoryJoinEnabled(env = process.env)`
+  - function `resolveRepoGraphMemoryBaseDir` — `export function resolveRepoGraphMemoryBaseDir(repoRoot)` — *The SAME baseDir convention GovernedMemoryStore's own constructor falls back to when no explicit `baseDir` is given (`governed-memory.mjs`: `baseDir || path.join(ensureProject(projectSlug).paths.memor*
+  - variable `slug` — `slug = detectProject(repoRoot).slug`
+  - variable `memoryBaseDir` — `memoryBaseDir = path.join(ensureProject(slug).paths.memory, 'governed')`
+  - function `refreshRepoGraphIndex` — `export async function refreshRepoGraphIndex(repoRoot, opts =` — *WRITE side. Rebuilds repo-graph.sqlite (files/symbols/edges/pagerank/cochange PLUS the P2.1 intent_facts/memory_facts/execution_facts tables and P2.3's bitemporal valid_to) from the ALREADY-WRITTEN sy*
+  - variable `<anonymous@5278>`
+  - variable `slug` — `slug = projectSlugOverride || detectProject(repoRoot).slug`
+  - variable `projectRoot` — `projectRoot = ensureProject(slug).paths.root`
+  - variable `memoryBaseDir` — `memoryBaseDir = memoryBaseDirOverride !== undefined`
+  - variable `memoryProjectSlug` — `memoryProjectSlug = memoryProjectSlugOverride || slug`
+  - variable `resolvedGraph` — `resolvedGraph = graph`
+  - variable `scgPath` — `scgPath = path.join(projectRoot, 'context', 'symbol-call-graph.json')`
+  - variable `resolvedOutputPath` — `resolvedOutputPath = outputPath || path.join(projectRoot, 'context', 'repo-graph.sqlite')`
+  - variable `error` — `error`
+  - function `memoryFactsForTargets` — `export function memoryFactsForTargets(targets, repoRoot, opts =` — *READ side. For each target FILE path, opens the EXISTING repo-graph.sqlite (read-only — this function never builds; see refreshRepoGraphIndex for that) at its default per-project location and joins me*
+  - variable `<anonymous@7617>`
+  - variable `out` — `out = new Map()`
+  - variable `dbPath` — `dbPath = null`
+  - variable `db` — `db = null`
+  - variable `filePath` — `filePath`
+  - variable `result` — `result = memoryFactsForFailingFile(db, filePath,`
+
+### Reference facts grounding — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 43 · **Callable:** 20 · **Authored purpose:** 5
+- `scripts/reference-facts-grounding.mjs` (43 symbols)
+  - variable `REFERENCE_FACTS_VERSION` — `REFERENCE_FACTS_VERSION = '1.0.0'`
+  - variable `GENERALIZATION_PRIME` — `GENERALIZATION_PRIME =`
+  - variable `REFERENCE_KB` — `REFERENCE_KB = [`
+  - function `buildReferenceFactsHints` — `export function buildReferenceFactsHints(text)` — *Build reference-facts prompt hints for a problem statement.*
+  - variable `s` — `s = String(text || '')`
+  - variable `matched` — `matched = REFERENCE_KB.filter((e) => e.symbols.some((rx) => rx.test(s)))`
+  - arrow-function `<anonymous@5520>` — `(e) => e.symbols.some((rx) => rx.test(s))`
+  - arrow-function `<anonymous@5542>` — `(rx) => rx.test(s)`
+  - variable `hints` — `hints = [`
+  - variable `e` — `e`
+  - function `matchedReferenceSources` — `export function matchedReferenceSources(text)` — *Which reference entries a statement matches (for receipts / observability).*
+  - variable `s` — `s = String(text || '')`
+  - arrow-function `<anonymous@6082>` — `(e) => e.symbols.some((rx) => rx.test(s))`
+  - arrow-function `<anonymous@6104>` — `(rx) => rx.test(s)`
+  - arrow-function `<anonymous@6129>` — `(e) => (`
+  - arrow-function `_stripWs` — `(s) => String(s).replace(/\s+/g, '')`
+  - function `referenceFactsCoverage` — `export function referenceFactsCoverage(problemText, patchText)` — *Coverage gate for the "incomplete enumeration of a supplied multi-item requirement" class: the model is GIVEN the full reference family but transcribes only some branches (empirically, the 9B emitted *
+  - variable `s` — `s = String(problemText || '')`
+  - variable `hay` — `hay = _stripWs(patchText || '')`
+  - variable `matched` — `matched = REFERENCE_KB.filter((e) => e.symbols.some((rx) => rx.test(s)))`
+  - arrow-function `<anonymous@7386>` — `(e) => e.symbols.some((rx) => rx.test(s))`
+  - arrow-function `<anonymous@7408>` — `(rx) => rx.test(s)`
+  - variable `covered` — `covered = []`
+  - variable `missing` — `missing = []`
+  - variable `e` — `e`
+  - variable `covRx` — `covRx = e.coverageSymbols || e.symbols`
+  - arrow-function `<anonymous@7765>` — `(rx) => rx.test(s)`
+  - variable `form` — `form`
+  - arrow-function `<anonymous@7967>` — `(e) => e.id`
+  - function `buildReferenceCoverageHints` — `export function buildReferenceCoverageHints(problemText, patchText)` — *A targeted refinement hint naming EXACTLY the documented closed forms the current patch is missing, so the re-prompt asks only for the omitted branches (not a blind regeneration). Returns [] when noth*
+  - variable `<anonymous@8353>`
+  - arrow-function `<anonymous@8705>` — `(m) => m.form`
+  - function `coverageReselect` — `export function coverageReselect(goal, passedCandidates, selectedCandidateId)` — *GATE-1 (deterministic coverage-aware re-selection). The execution-first beam tournament (verifier-guided-beam-search) already picked a TEST-PASSING winner. This prefers, AMONG the equally test-passing*
+  - variable `scored` — `scored = passedCandidates`
+  - arrow-function `<anonymous@10875>` — `(c) => c && typeof c.candidateId === 'string' && c.candidateId`
+  - arrow-function `<anonymous@10948>` — `(c) =>`
+  - variable `cov` — `cov = referenceFactsCoverage(goal, c.patchContent || '')`
+  - arrow-function `<anonymous@11277>` — `(s) => s.matched > 0`
+  - variable `current` — `current = scored.find((s) => s.id === selectedCandidateId)`
+  - arrow-function `<anonymous@11529>` — `(s) => s.id === selectedCandidateId`
+  - … and 3 more symbols
+
+### Installed dependency context — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 156 · **Callable:** 27 · **Authored purpose:** 13
+- `scripts/installed-dep-context.mjs` (156 symbols)
+  - variable `INSTALLED_DEP_CONTEXT_VERSION` — `INSTALLED_DEP_CONTEXT_VERSION = '0.1.0'`
+  - function `installedDepContextEnabled` — `export function installedDepContextEnabled()` — *The single arming gate. Default-OFF; the context compiler consults this before any walk/inject.*
+  - variable `DEFAULT_MAX_DEPS` — `DEFAULT_MAX_DEPS = 256`
+  - variable `DEFAULT_MAX_SIGNATURES_PER_DEP` — `DEFAULT_MAX_SIGNATURES_PER_DEP = 400`
+  - variable `DEFAULT_MAX_FILE_BYTES` — `DEFAULT_MAX_FILE_BYTES = 512 * 1024`
+  - variable `DEFAULT_MAX_DTS_FILES_PER_DEP` — `DEFAULT_MAX_DTS_FILES_PER_DEP = 8`
+  - variable `DEFAULT_MAX_PY_FILES` — `DEFAULT_MAX_PY_FILES = 400`
+  - variable `DECL_CONTINUATION_LINES` — `DECL_CONTINUATION_LINES = 8`
+  - variable `BM25_K1` — `BM25_K1 = 1.5`
+  - variable `BM25_B` — `BM25_B = 0.75`
+  - function `bm25Idf` — `function bm25Idf(N, df)`
+  - function `contentTokens` — `function contentTokens(value)` — *Lowercased content tokens WITH camelCase/snake_case subword splitting (mirrors the compiler tokenizer so "readFile" in a query matches a "read_file"-shaped signature). Repeats kept — BM25 needs TF.*
+  - variable `out` — `out = []`
+  - variable `raw` — `raw`
+  - variable `whole` — `whole = raw.toLowerCase()`
+  - variable `subs` — `subs = raw`
+  - arrow-function `<anonymous@4612>` — `s => s.toLowerCase()`
+  - arrow-function `<anonymous@4648>` — `s => s.length >= 2`
+  - variable `sub` — `sub`
+  - function `referencedIdentifiers` — `export function referencedIdentifiers(text)` — *Verbatim identifiers referenced by a text (case-sensitive, de-duplicated, insertion-ordered). This is the L2 reference detector: an exported symbol is "referenced" iff its exact name appears as an ide*
+  - variable `out` — `out = []`
+  - variable `seen` — `seen = new Set()`
+  - variable `raw` — `raw`
+  - variable `LOCAL_DEF_MATCHERS` — `LOCAL_DEF_MATCHERS = [`
+  - function `collectDefinedSymbols` — `export function collectDefinedSymbols(sources = [])` — *Collect the symbol NAMES a set of local source texts DEFINES (deterministic, model-free, linear). Feeds the L2 local-shadow guard: a name the surrounding repo context already defines is NOT the instal*
+  - variable `names` — `names = new Set()`
+  - variable `list` — `list = Array.isArray(sources) ? sources : [sources]`
+  - variable `src` — `src`
+  - variable `text` — `text = String(src || '')`
+  - variable `re` — `re`
+  - variable `m` — `m`
+  - variable `DTS_DECL_MATCHERS` — `DTS_DECL_MATCHERS = [`
+  - variable `PY_DECL_MATCHERS` — `PY_DECL_MATCHERS = [`
+  - function `captureDeclaration` — `function captureDeclaration(lines, startIdx, stops)` — *Join a declaration that may wrap across lines into ONE normalized single-line signature. Tracks only paren/bracket depth (NOT braces — a `{` opens a block/type-literal that ENDS the header we want). R*
+  - variable `<anonymous@8785>`
+  - variable `parts` — `parts = []`
+  - variable `depth` — `depth = 0`
+  - variable `i` — `i = startIdx`
+  - variable `line` — `line = lines[i]`
+  - variable `sawBrace` — `sawBrace = false`
+  - … and 116 more symbols
+
+### Skills and practice-pack context — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 101 · **Callable:** 27 · **Authored purpose:** 5
+- `scripts/practice-packs.mjs` (26 symbols)
+  - variable `PRACTICE_PACKS_VERSION` — `PRACTICE_PACKS_VERSION = '1.0.0'`
+  - function `sig` — `function sig(pattern, weight)`
+  - variable `PRACTICE_PACKS` — `PRACTICE_PACKS = Object.freeze([`
+  - variable `DOMAIN_CACHE_TTL_MS` — `DOMAIN_CACHE_TTL_MS = 300_000`
+  - variable `domainCache` — `domainCache = new Map()`
+  - function `resolveRepoDomainCached` — `export function resolveRepoDomainCached(repoRoot,` — *Memoized `detectDomain`, TTL-bounded. Byte-identical to calling `detectDomain` directly for the first call and any call after the TTL elapses; a call within the TTL of a prior call for the same (repoR*
+  - variable `key` — `key = `$`
+  - variable `nowMs` — `nowMs = now()`
+  - variable `hit` — `hit = domainCache.get(key)`
+  - variable `resolved` — `resolved = detectDomain(repoRoot,`
+  - function `clearPracticePackDomainCache` — `export function clearPracticePackDomainCache()` — *Test/session-boundary helper: clears the TTL-bounded memoization cache immediately.*
+  - function `scorePracticePacks` — `export function scorePracticePacks(` — *Score every pack in `packs` against the task's own text. Same score-then-threshold shape as `scoreDomainPacks` (`if (score <= 0) continue`): a pack is a candidate iff score(p) > 0 AFTER homonym demoti*
+  - variable `blob` — `blob = [`
+  - arrow-function `<anonymous@15029>` — `o => String(o?.description || o?.label || '')`
+  - function `isPracticePacksArmed` — `export function isPracticePacksArmed(env = process.env)` — *Pure gate predicate — mirrors the repo's `eq1` armed-config convention.*
+  - function `resolvePracticePacks` — `export function resolvePracticePacks(` — *resolvePracticePacks — the ONE two-signal resolver entry point. Default-OFF / byte-identical-OFF: when ARC_PRACTICE_PACKS is unset (or not exactly '1'), returns { enabled:false, resolved:false, packs:*
+  - variable `repoDomain` — `repoDomain = null`
+  - variable `repoAdmitted` — `repoAdmitted = new Set()`
+  - variable `pack` — `pack`
+  - variable `taskRanked` — `taskRanked = []`
+  - variable `taskScoreById` — `taskScoreById = new Map(taskRanked.map(r => [r.pack.id, r.score]))`
+  - arrow-function `<anonymous@17721>` — `r => [r.pack.id, r.score]`
+  - variable `admittedIds` — `admittedIds = new Set([...repoAdmitted, ...taskScoreById.keys()])`
+  - variable `admitted` — `admitted = packs`
+  - arrow-function `<anonymous@17861>` — `p => admittedIds.has(p.id)`
+  - arrow-function `<anonymous@17898>` — `p => (`
+- `scripts/skills-registry.mjs` (75 symbols)
+  - function `getProjectConfig` — `function getProjectConfig()`
+  - variable `project` — `project = detectProject()`
+  - variable `<anonymous@1454>`
+  - variable `globalConfig` — `globalConfig = loadGlobalConfig(`
+  - function `getSkillDiscoveryPaths` — `function getSkillDiscoveryPaths()`
+  - variable `<anonymous@1644>`
+  - variable `SKILL_BODY_DISCOVERY_MAX_CHARS` — `SKILL_BODY_DISCOVERY_MAX_CHARS = 5000 * 4`
+  - function `parseSkillMetadata` — `function parseSkillMetadata(skillDir)`
+  - variable `skillMdPath` — `skillMdPath = path.join(skillDir, 'SKILL.md')`
+  - variable `content` — `content = readFileSync(skillMdPath, 'utf8')`
+  - variable `frontmatterMatch` — `frontmatterMatch = content.match(/^---\n([\s\S]*?)\n---\n/)`
+  - variable `frontmatter` — `frontmatter = frontmatterMatch[1]`
+  - variable `metadata` — `metadata =`
+  - variable `line` — `line`
+  - variable `match` — `match = line.match(/^(\w+):\s*(.+)/)`
+  - variable `body` — `body = content.slice(frontmatterMatch[0].length)`
+  - variable `supportingFiles` — `supportingFiles = []`
+  - variable `entries` — `entries = readdirSync(skillDir)`
+  - variable `entry` — `entry`
+  - variable `entryPath` — `entryPath = path.join(skillDir, entry)`
+  - variable `stat` — `stat = statSync(entryPath)`
+  - arrow-function `<anonymous@4069>` — `t => t.trim()`
+  - function `discoverSkills` — `function discoverSkills()`
+  - variable `skills` — `skills = []`
+  - variable `basePath` — `basePath`
+  - variable `entries` — `entries = readdirSync(basePath)`
+  - variable `entry` — `entry`
+  - variable `skillDir` — `skillDir = path.join(basePath, entry)`
+  - variable `stat` — `stat = statSync(skillDir)`
+  - variable `skill` — `skill = parseSkillMetadata(skillDir)`
+  - variable `err` — `err`
+  - function `generateSkillIndex` — `function generateSkillIndex(skills)`
+  - variable `lines` — `lines = [`
+  - variable `byTag` — `byTag =`
+  - variable `untagged` — `untagged = []`
+  - variable `skill` — `skill`
+  - variable `tag` — `tag`
+  - variable `<anonymous@5772>` — `[tag, tagSkills]`
+  - variable `skill` — `skill`
+  - variable `skill` — `skill`
+  - … and 35 more symbols
+
+### Dynamic branch working set — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 174 · **Callable:** 69 · **Authored purpose:** 2
+- `scripts/dynamic-branch-working-set-v1.mjs` (174 symbols)
+  - variable `DYNAMIC_BRANCH_WORKING_SET_V1` — `DYNAMIC_BRANCH_WORKING_SET_V1 = 'dynamic-branch-working-set-v1'`
+  - variable `DYNAMIC_BRANCH_MODEL_RESPONSE_FORMAT_V1` — `DYNAMIC_BRANCH_MODEL_RESPONSE_FORMAT_V1 =`
+  - variable `DYNAMIC_BRANCH_MODEL_OUTPUT_PROTOCOL_V1` — `DYNAMIC_BRANCH_MODEL_OUTPUT_PROTOCOL_V1 = Object.freeze(`
+  - variable `TASK_SPEC_PREFIX` — `TASK_SPEC_PREFIX = 'artifact-task-spec-'`
+  - variable `GOAL_CAPSULE_PREFIX` — `GOAL_CAPSULE_PREFIX = 'artifact-goal-capsule-'`
+  - variable `GOAL_REFINEMENT_PREFIX` — `GOAL_REFINEMENT_PREFIX = 'artifact-goal-refinement-v1-'`
+  - variable `PLAN_NODE_PREFIX` — `PLAN_NODE_PREFIX = 'artifact-plan-node-'`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[A-Za-z0-9._:-]+-[a-f0-9]`
+  - variable `MAX_MESSAGE_BYTES` — `MAX_MESSAGE_BYTES = 512 * 1024`
+  - variable `MODEL_CONTEXT_KIND_POLICIES_V1` — `MODEL_CONTEXT_KIND_POLICIES_V1 = Object.freeze(`
+  - class `DynamicBranchWorkingSetV1Error` — `export class DynamicBranchWorkingSetV1Error extends Error`
+  - constructor `constructor` — `constructor(message, code = 'DYNAMIC_BRANCH_WORKING_SET_V1_INVALID', options =`
+  - function `fail` — `function fail(message, code, options =`
+  - function `canonicalize` — `function canonicalize(value, pathName = DYNAMIC_BRANCH_WORKING_SET_V1, ancestors = new WeakSet())`
+  - variable `output` — `output`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@6315>` — `(_, index) => String(index)`
+  - arrow-function `<anonymous@6448>` — `key => (`
+  - arrow-function `<anonymous@6733>` — `(item, index) => canonicalize(item, `$`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@7388>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `freezeDeep` — `function freezeDeep(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `artifactId` — `function artifactId(value, label)`
+  - function `sameStrings` — `function sameStrings(left, right)`
+  - variable `a` — `a = [...left].sort()`
+  - variable `b` — `b = [...right].sort()`
+  - arrow-function `<anonymous@8337>` — `(item, index) => item === b[index]`
+  - function `compileDynamicBranchModelResponseFormatV1` — `export function compileDynamicBranchModelResponseFormatV1(`
+  - variable `refs` — `refs = [...new Set(allowedEvidenceRefs.map(ref => artifactId(`
+  - arrow-function `<anonymous@8692>` — `ref => artifactId(`
+  - variable `boundedString` — `boundedString =`
+  - variable `boundedStrings` — `boundedStrings =`
+  - function `verifyDynamicBranchModelResponseFormatV1` — `export function verifyDynamicBranchModelResponseFormatV1(value)`
+  - variable `normalized` — `normalized = canonicalize(value, DYNAMIC_BRANCH_MODEL_RESPONSE_FORMAT_V1)`
+  - … and 134 more symbols
+
+### Context and exposure manifest — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 181 · **Callable:** 77 · **Authored purpose:** 1
+- `scripts/candidate-exposure-manifest-v1.mjs` (84 symbols)
+  - variable `CANDIDATE_EXPOSURE_MANIFEST_V1` — `CANDIDATE_EXPOSURE_MANIFEST_V1 = 'candidate-exposure-manifest-v1'`
+  - variable `CANDIDATE_EXPOSURE_ATTESTATION_V1` — `CANDIDATE_EXPOSURE_ATTESTATION_V1 = 'candidate-exposure-attestation-v1'`
+  - variable `CANDIDATE_EXPOSURE_REQUIRED_DENIALS_V1` — `CANDIDATE_EXPOSURE_REQUIRED_DENIALS_V1 = Object.freeze([`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `COMMITMENT_ARTIFACT_RE` — `COMMITMENT_ARTIFACT_RE = /^artifact-oracle-construction-commitment-([a-f0-9]`
+  - variable `RESOURCE_KINDS` — `RESOURCE_KINDS = new Set([`
+  - variable `PRIVATE_RESOURCE_KINDS` — `PRIVATE_RESOURCE_KINDS = new Set(CANDIDATE_EXPOSURE_REQUIRED_DENIALS_V1)`
+  - variable `ACCESS` — `ACCESS = new Set(['read-only', 'read-write', 'execute'])`
+  - variable `NETWORK_POLICIES` — `NETWORK_POLICIES = new Set(['none', 'brokered'])`
+  - variable `TOOL_MODES` — `TOOL_MODES = new Set(['none', 'brokered'])`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `enumeration` — `function enumeration(value, values, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3791>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `freezeDeep` — `function freezeDeep(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `normalizeAuthorInvocation` — `function normalizeAuthorInvocation(value)`
+  - variable `at` — `at = 'CandidateExposureManifestV1.authorInvocation'`
+  - variable `invocationSha256` — `invocationSha256 = digest(value.invocationSha256, `$`
+  - function `normalizeResources` — `function normalizeResources(value)`
+  - variable `resources` — `resources = value.map((resource, index) =>`
+  - arrow-function `<anonymous@6499>` — `(resource, index) =>`
+  - variable `at` — `at = `CandidateExposureManifestV1.resources[$`
+  - arrow-function `<anonymous@7154>` — `(left, right) => left.resourceId.localeCompare(right.resourceId)`
+  - arrow-function `<anonymous@7248>` — `resource => resource.resourceId`
+  - … and 44 more symbols
+- `scripts/dynamic-branch-context-manifest-v1.mjs` (97 symbols)
+  - variable `DYNAMIC_BRANCH_CONTEXT_MANIFEST_V1` — `DYNAMIC_BRANCH_CONTEXT_MANIFEST_V1 = 'dynamic-branch-context-manifest-v1'`
+  - variable `DYNAMIC_BRANCH_CONTEXT_POLICY_V1` — `DYNAMIC_BRANCH_CONTEXT_POLICY_V1 = Object.freeze(`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[a-z0-9-]+-[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:/-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `ORIGINS` — `ORIGINS = new Set(['user', 'repository', 'external', 'model', 'tool', 'system'])`
+  - variable `TAINTS` — `TAINTS = new Set(['trusted', 'user', 'repository', 'external', 'model', 'tool', 'derived', 'untrusted'])`
+  - variable `ADMISSION_CLASSES` — `ADMISSION_CLASSES = new Set(['governor-control', 'trigger-evidence'])`
+  - class `DynamicBranchContextManifestV1Error` — `export class DynamicBranchContextManifestV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `ordinaryArray` — `function ordinaryArray(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@3283>` — `(_, index) => String(index)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, keys, pathName)`
+  - variable `expected` — `expected = new Set(keys)`
+  - variable `actual` — `actual = Object.keys(value)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `text` — `function text(value, pathName, max = 4_096)`
+  - function `id` — `function id(value, pathName)`
+  - variable `output` — `output = text(value, pathName, 256)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `artifact` — `function artifact(value, pathName)`
+  - variable `output` — `output = text(value, pathName, 512)`
+  - function `integer` — `function integer(value, pathName, min, max)`
+  - function `canonicalize` — `function canonicalize(value, pathName = DYNAMIC_BRANCH_CONTEXT_MANIFEST_V1, ancestors = new WeakSet())`
+  - variable `output` — `output`
+  - arrow-function `<anonymous@5736>` — `(_, index) => (`
+  - arrow-function `<anonymous@5929>` — `key => [`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - variable `DYNAMIC_BRANCH_CONTEXT_POLICY_SHA256_V1` — `DYNAMIC_BRANCH_CONTEXT_POLICY_SHA256_V1 = sha256(`
+  - … and 57 more symbols
+
+### Token and prompt budget authority — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 413 · **Callable:** 74 · **Authored purpose:** 28
+- `scripts/prompt-budget-authority.mjs` (30 symbols)
+  - variable `PROMPT_BUDGET_AUTHORITY_VERSION` — `PROMPT_BUDGET_AUTHORITY_VERSION = '1.0.0'`
+  - function `budgetAuthorityEnabled` — `export function budgetAuthorityEnabled(env = process.env)` — *The ONE flag gate. Consumers gate on THIS so the OFF path stays byte-identical everywhere (armed-config.mjs ARMED_LEVER_REGISTRY entry: ARC_BUDGET_AUTHORITY, gate 'eq1').*
+  - function `resolveUnifiedPromptBudget` — `export function resolveUnifiedPromptBudget(` — *THE one prompt-token budget, resolved with EXACTLY the generator ladder's precedence (frontier-coding-runner.mjs maxPromptTokens): explicit — Number(ARC_MAX_PROMPT_TOKENS) when truthy (the `||` semant*
+  - variable `explicit` — `explicit = Number(env.ARC_MAX_PROMPT_TOKENS)`
+  - variable `ctx` — `ctx = Number(env.AGENTIC_9B_CTX) || 16384`
+  - variable `parallel` — `parallel = Math.max(1, Number(env.AGENTIC_9B_PARALLEL) || 3)`
+  - variable `RETRIEVAL_CONTENT_FRACTION` — `RETRIEVAL_CONTENT_FRACTION = 0.6`
+  - variable `HISTORICAL_KNAPSACK_BUDGET` — `HISTORICAL_KNAPSACK_BUDGET = 16000`
+  - function `retrievalKnapsackBudgetTokens` — `export function retrievalKnapsackBudgetTokens(env = process.env)`
+  - function `retrievalBudgetBelowHistorical` — `export function retrievalBudgetBelowHistorical(env = process.env)`
+  - function `calleeSignatureReservePerTarget` — `export function calleeSignatureReservePerTarget(env = process.env)` — *The EXACT per-target token cap injectCalleeSignatures will re-append on the next envelope rebuild — reproduced from callee-signatures.mjs (buildCalleeSignaturesBlock budget cap): the ladder threads bu*
+  - variable `ctx` — `ctx = Number(env.AGENTIC_9B_CTX) || 16384`
+  - variable `parallel` — `parallel = Math.max(1, Number(env.AGENTIC_9B_PARALLEL) || 3)`
+  - variable `perSlotBase` — `perSlotBase = Math.floor(ctx / parallel)`
+  - function `sumContextContentTokens` — `export function sumContextContentTokens(contextRecords)` — *Sum the countable CONTENT tokens of a request's context records — the same heuristic estimator (ceil(bytes / CHARS_PER_TOKEN_CODE)) the narrow/concentrate rungs already use for per-record decisions, a*
+  - variable `total` — `total = 0`
+  - variable `record` — `record`
+  - function `envelopeAwareTargetBudget` — `export function envelopeAwareTargetBudget(` — *Envelope-aware per-target CONTENT budget for the span-narrow rung (passes 3/4). The OLD math — max(300, floor(budget·0.6 / nTargets / (pass≥4 ? 2 : 1))) — budgets CONTENT ONLY. The rebuild then re-add*
+  - variable `budget` — `budget = Number.isFinite(maxPromptTokens) && maxPromptTokens > 0 ? maxPromptTokens : 4096`
+  - variable `overhead` — `overhead = Math.max(0, (Number(envelopeTokens) || 0) - (Number(contentTokens) || 0))`
+  - variable `n` — `n = Math.max(1, Number(nTargets) || 1)`
+  - variable `reserve` — `reserve = Math.max(0, Number(calleeReservePerTarget) || 0)`
+  - variable `perTargetAvailable` — `perTargetAvailable = (budget - overhead) / n - reserve`
+  - function `envelopeAwareConcentrateBudgets` — `export function envelopeAwareConcentrateBudgets(` — *Envelope-aware budgets for the CONCENTRATE rung (recalled fix-targets / augmented context). The OLD math split budget·0.6 across recalled and budget·0.15 across augmented — 0.75 of the WHOLE budget ha*
+  - variable `budget` — `budget = Number.isFinite(maxPromptTokens) && maxPromptTokens > 0 ? maxPromptTokens : 4096`
+  - variable `overhead` — `overhead = Math.max(0, (Number(envelopeTokens) || 0) - (Number(contentTokens) || 0))`
+  - variable `usable` — `usable = Math.max(0, budget - overhead)`
+  - variable `reserve` — `reserve = Math.max(0, Number(calleeReservePerTarget) || 0)`
+  - variable `nR` — `nR = Math.max(1, Number(nRecalled) || 1)`
+  - variable `nA` — `nA = Math.max(1, Number(nAugmented) || 1)`
+- `scripts/symbol-span-narrowing.mjs` (326 symbols)
+  - variable `SYMBOL_SPAN_NARROWING_VERSION` — `SYMBOL_SPAN_NARROWING_VERSION = '1.0.0'`
+  - variable `WHOLE_FILE_FIT` — `WHOLE_FILE_FIT =`
+  - function `perSlotTokenBudget` — `export function perSlotTokenBudget()` — *Same perSlotTokens math as reliable-coding-loop.mjs's wholeFileFitGuard.*
+  - variable `ctx` — `ctx = Number(process.env[WHOLE_FILE_FIT.ctxEnv]) || WHOLE_FILE_FIT.defaultCtx`
+  - variable `parallel` — `parallel = Math.max(1, Number(process.env[WHOLE_FILE_FIT.parallelEnv]) || WHOLE_FILE_FIT.defaultParallel)`
+  - function `estimateWholeFileTokens` — `export function estimateWholeFileTokens(bytes)` — *Same estWholeFileTokens math as reliable-coding-loop.mjs's wholeFileFitGuard, for ONE file's bytes.*
+  - function `exceedsWholeFileBudget` — `export function exceedsWholeFileBudget(bytes)` — *True when a single file of this byte size would NOT fit the whole-file budget (the guard's own test).*
+  - variable `perSlot` — `perSlot = perSlotTokenBudget()`
+  - function `keywordOverlapScore` — `function keywordOverlapScore(name, problemTokens)`
+  - variable `lower` — `lower = String(name).toLowerCase()`
+  - variable `parts` — `parts = new Set(lower.split(/[_.]+/).filter(Boolean))`
+  - variable `score` — `score = 0`
+  - variable `tok` — `tok`
+  - variable `BODY_SCAN_LINES` — `BODY_SCAN_LINES = 400`
+  - function `bodyOverlapScore` — `function bodyOverlapScore(def, lines, problemTokens)`
+  - variable `start` — `start = def.lineStart`
+  - variable `end` — `end = Math.max(start, Math.min(lines.length, def.lineEnd || def.lineStart))`
+  - variable `body` — `body = lines.slice(start - 1, Math.min(end, start - 1 + BODY_SCAN_LINES)).join('\n').toLowerCase()`
+  - variable `bodyTokens` — `bodyTokens = new Set(body.match(/[a-z_][a-z0-9_]`
+  - variable `hits` — `hits = 0`
+  - variable `tok` — `tok`
+  - variable `KIND_WEIGHT` — `KIND_WEIGHT =`
+  - function `extractProblemTokens` — `function extractProblemTokens(problemStatement)`
+  - variable `toks` — `toks = String(problemStatement || '').toLowerCase().match(/[a-z_][a-z0-9_]`
+  - function `highestSignalLine` — `export function highestSignalLine(lines, problemTokens)` — *Deterministic anchor for the bounded-window fallback (used when the symbol graph yields NO usable span — an unavailable/failed AST subprocess, unsupported language, parse timeout, or genuinely symbol-*
+  - variable `bestLine` — `bestLine = 1`
+  - variable `bestScore` — `bestScore = 0`
+  - variable `i` — `i = 0`
+  - variable `lineTokens` — `lineTokens = new Set(String(lines[i]).toLowerCase().match(/[a-z_][a-z0-9_]`
+  - variable `score` — `score = 0`
+  - variable `t` — `t`
+  - function `rankDefinitions` — `export function rankDefinitions(graph,` — *Rank a single-file graph's definitions for a given problem statement + optional traceback-derived symbol name and optional file `lines` (for body-token overlap). Deterministic composite: an exact trac*
+  - variable `tokens` — `tokens = extractProblemTokens(problemStatement)`
+  - variable `exactMatches` — `exactMatches = []`
+  - variable `exactIds` — `exactIds = new Set(exactMatches.map((d) => d.symbolId))`
+  - arrow-function `<anonymous@8264>` — `(d) => d.symbolId`
+  - variable `scored` — `scored = graph.definitions`
+  - arrow-function `<anonymous@8331>` — `(d) => Number.isInteger(d.lineStart) && d.lineStart >= 1`
+  - arrow-function `<anonymous@8398>` — `(d) =>`
+  - variable `nameScore` — `nameScore = keywordOverlapScore(d.name, tokens)`
+  - … and 286 more symbols
+- `scripts/token-count.mjs` (57 symbols)
+  - variable `TOKEN_COUNT_VERSION` — `TOKEN_COUNT_VERSION = '1.0.0'`
+  - variable `CHARS_PER_TOKEN_CODE` — `CHARS_PER_TOKEN_CODE = 3.2`
+  - variable `CHARS_PER_TOKEN_PROSE` — `CHARS_PER_TOKEN_PROSE = 3.8`
+  - variable `PROBE_TIMEOUT_MS` — `PROBE_TIMEOUT_MS = Number(process.env.ARC_TOKENIZE_PROBE_TIMEOUT_MS) || 2_000`
+  - variable `PROBE_TTL_MS` — `PROBE_TTL_MS = 30_000`
+  - variable `TOKENIZE_TIMEOUT_MS` — `TOKENIZE_TIMEOUT_MS = Number(process.env.ARC_TOKENIZE_TIMEOUT_MS) || 10_000`
+  - variable `CALIBRATION_MIN_CHARS` — `CALIBRATION_MIN_CHARS = 200`
+  - variable `CALIBRATION_RATIO_MIN` — `CALIBRATION_RATIO_MIN = 2.0`
+  - variable `CALIBRATION_RATIO_MAX` — `CALIBRATION_RATIO_MAX = 6.0`
+  - variable `probeCache` — `probeCache = new Map()`
+  - variable `calibrationByModel` — `calibrationByModel = new Map()`
+  - variable `registryModulePromise` — `registryModulePromise = null`
+  - function `loadRegistry` — `function loadRegistry()`
+  - function `resetTokenCountCaches` — `export function resetTokenCountCaches()` — *Test seam: clear probe and calibration caches.*
+  - variable `CODE_LINE_SIGNALS` — `CODE_LINE_SIGNALS = /[`
+  - function `looksCodeDense` — `export function looksCodeDense(text)` — *Rough code-density test: a text is code-dense when at least 30% of its non-empty lines carry code punctuation/keyword signals.*
+  - variable `value` — `value = String(text ?? '')`
+  - variable `lines` — `lines = value.split('\n').filter(line => line.trim().length > 0)`
+  - arrow-function `<anonymous@3210>` — `line => line.trim().length > 0`
+  - variable `codeLines` — `codeLines = 0`
+  - variable `line` — `line`
+  - function `calibratedRatio` — `function calibratedRatio(modelId, baseRatio)`
+  - variable `record` — `record = modelId ? calibrationByModel.get(modelId) : null`
+  - variable `blended` — `blended = (record.charsPerToken + baseRatio) / 2`
+  - function `recordCalibration` — `function recordCalibration(modelId, text, tokens)`
+  - variable `chars` — `chars = String(text ?? '').length`
+  - variable `observed` — `observed = chars / tokens`
+  - variable `prior` — `prior = calibrationByModel.get(modelId)`
+  - variable `alpha` — `alpha = 1 / Math.min(prior.samples + 1, 16)`
+  - function `countTokensSync` — `export function countTokensSync(text,` — *Pure heuristic count. Never touches the network. Exported for sync call sites (e.g. context-compiler's estimator seam).*
+  - variable `value` — `value = typeof text === 'string' ? text : String(text ?? '')`
+  - variable `codeDense` — `codeDense = looksCodeDense(value)`
+  - variable `base` — `base = codeDense ? CHARS_PER_TOKEN_CODE : CHARS_PER_TOKEN_PROSE`
+  - variable `ratio` — `ratio = calibratedRatio(modelId, base)`
+  - variable `tokens` — `tokens = value.length === 0 ? 0 : Math.max(1, Math.ceil(value.length / ratio))`
+  - function `resolveEndpoint` — `async function resolveEndpoint(modelId)`
+  - variable `registry` — `registry = await loadRegistry()`
+  - function `postTokenize` — `async function postTokenize(endpoint, content, timeoutMs, fetchImpl)`
+  - variable `doFetch` — `doFetch = fetchImpl || fetch`
+  - variable `response` — `response = await doFetch(`$`
+  - … and 17 more symbols
+
+### Semantic no-loss compaction — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 94 · **Callable:** 31 · **Authored purpose:** 0
+- `scripts/phase-compaction.mjs` (19 symbols)
+  - variable `PHASE_COMPACTION_VERSION` — `PHASE_COMPACTION_VERSION = '1.0.0'`
+  - function `compactText` — `export function compactText(value,`
+  - variable `text` — `text = String(value || '').trim()`
+  - variable `head` — `head = Math.floor(maxChars * 0.35)`
+  - variable `tail` — `tail = maxChars - head - 80`
+  - function `compactPhaseHandoff` — `export function compactPhaseHandoff(`
+  - variable `sections` — `sections = []`
+  - function `compactConversationMessages` — `export function compactConversationMessages(messages,`
+  - variable `headCount` — `headCount = 2`
+  - variable `tailCount` — `tailCount = maxMessages - 3`
+  - variable `head` — `head = messages.slice(0, headCount)`
+  - variable `tail` — `tail = messages.slice(-tailCount)`
+  - variable `middleEnd` — `middleEnd = Math.max(headCount, messages.length - tailCount)`
+  - variable `middle` — `middle = messages.slice(headCount, middleEnd)`
+  - variable `summary` — `summary = buildStructuredThreadSummary(messages)`
+  - variable `<anonymous@3717>`
+  - variable `maxRetained` — `maxRetained = Math.max(1, Math.floor(maxMessages / 4))`
+  - variable `retained` — `retained = middle.filter((message) => hasHighRetentionSignal(message)).slice(0, maxRetained)`
+  - arrow-function `<anonymous@4162>` — `(message) => hasHighRetentionSignal(message)`
+- `scripts/prompt-compressor.mjs` (75 symbols)
+  - variable `DEFAULT_RATIO` — `DEFAULT_RATIO = 0.4`
+  - variable `HEADROOM_DEFAULT_BASE_URL` — `HEADROOM_DEFAULT_BASE_URL = 'http://127.0.0.1:8787'`
+  - variable `PROMPT_COMPRESSOR_VERSION` — `PROMPT_COMPRESSOR_VERSION = '1.1.0'`
+  - function `headroomCompressionEnabled` — `export function headroomCompressionEnabled()`
+  - variable `flag` — `flag = process.env.AGENTIC_USE_HEADROOM`
+  - function `classifyContent` — `export function classifyContent(text)`
+  - variable `codeLines` — `codeLines = text.split('\n').filter(line =>`
+  - arrow-function `<anonymous@1170>` — `line =>`
+  - function `compressCodeContext` — `export function compressCodeContext(text)`
+  - variable `tmpFile` — `tmpFile = path.join(tmpdir(), `compress-target-$`
+  - variable `result` — `result = execFileSync(`
+  - function `scoreSentence` — `export function scoreSentence(sentence)`
+  - variable `score` — `score = 1`
+  - variable `lower` — `lower = sentence.toLowerCase()`
+  - function `compressProseContext` — `export function compressProseContext(text, ratio = DEFAULT_RATIO)`
+  - variable `sentences` — `sentences = text.match(/[^.!?]+[.!?]+/g) || [text]`
+  - variable `scored` — `scored = sentences.map(sentence => (`
+  - arrow-function `<anonymous@2752>` — `sentence => (`
+  - arrow-function `<anonymous@2838>` — `(a, b) => b.score - a.score`
+  - variable `keepCount` — `keepCount = Math.max(1, Math.floor(sentences.length * ratio))`
+  - variable `kept` — `kept = scored.slice(0, keepCount)`
+  - arrow-function `<anonymous@2991>` — `(a, b) => sentences.indexOf(a.sentence) - sentences.indexOf(b.sentence)`
+  - arrow-function `<anonymous@3083>` — `item => item.sentence`
+  - function `estimateTokenBudget` — `function estimateTokenBudget(text, ratio = DEFAULT_RATIO)`
+  - variable `approxTokens` — `approxTokens = Math.max(1, Math.floor(String(text).split(/\s+/).length))`
+  - function `compressWithHeadroom` — `export async function compressWithHeadroom(text, options =`
+  - variable `baseUrl` — `baseUrl = (options.baseUrl || process.env.HEADROOM_BASE_URL || HEADROOM_DEFAULT_BASE_URL).replace(/\/+$/, '')`
+  - variable `model` — `model = options.model || process.env.HEADROOM_COMPRESS_MODEL || 'gpt-4o'`
+  - variable `ratio` — `ratio = options.ratio ?? DEFAULT_RATIO`
+  - variable `tokenBudget` — `tokenBudget = options.tokenBudget ?? estimateTokenBudget(text, ratio)`
+  - variable `timeoutMs` — `timeoutMs = options.timeoutMs ?? 15_000`
+  - variable `headers` — `headers =`
+  - variable `response` — `response = await fetch(`$`
+  - variable `data` — `data = await response.json()`
+  - variable `compressed` — `compressed = data.messages?.[0]?.content`
+  - function `compressText` — `export function compressText(text, options =`
+  - variable `ratio` — `ratio = options.ratio ?? DEFAULT_RATIO`
+  - variable `type` — `type = options.type ?? classifyContent(text)`
+  - function `compressTextAsync` — `export async function compressTextAsync(text, options =`
+  - variable `PRESERVE_FULL_CONTEXT_MAX_BYTES` — `PRESERVE_FULL_CONTEXT_MAX_BYTES = 32_768`
+  - … and 35 more symbols
+
+### Context freshness controller/watchdog — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 122 · **Callable:** 29 · **Authored purpose:** 10
+- `scripts/context-watchdog.mjs` (31 symbols)
+  - class `ContextWatchdog` — `export class ContextWatchdog` — *ContextWatchdog — Context overflow protection with sibling agent handoff. Uses real LettaKernel (SQLite) and AgentMemory (JSON+embeddings) instead of fictional APIs.*
+  - constructor `constructor` — `constructor(lettaKernel, agentMemory, contextLimit = 24000, projectSlug = 'default')`
+  - method `init` — `async init()`
+  - method `checkAndHandoff` — `async checkAndHandoff(agentState, currentTokens)` — *Checks if context is near limit. If so, archives parent and spawns sibling.*
+  - variable `tokenRatio` — `tokenRatio = currentTokens / this.contextLimit`
+  - method `spawnSiblingAndArchive` — `async spawnSiblingAndArchive(parentAgent, currentTokens)`
+  - variable `parentId` — `parentId = parentAgent.id || 'parent'`
+  - variable `history` — `history = parentAgent.conversationHistory || []`
+  - variable `historyText` — `historyText = history.map(m => `$`
+  - arrow-function `<anonymous@1756>` — `m => `$`
+  - variable `summary` — `summary = historyText.slice(-4000)`
+  - variable `memoryPointers` — `memoryPointers = []`
+  - variable `recentMemories` — `recentMemories = this.memory.memories.slice(-20)`
+  - variable `mem` — `mem`
+  - variable `childAgents` — `childAgents = parentAgent.childAgents || []`
+  - variable `childAgentSnapshot` — `childAgentSnapshot = childAgents.map(child => (`
+  - arrow-function `<anonymous@2578>` — `child => (`
+  - variable `checkpointId` — `checkpointId = `checkpoint-$`
+  - variable `checkpoint` — `checkpoint =`
+  - arrow-function `<anonymous@3100>` — `c => c.id`
+  - variable `siblingId` — `siblingId = `sibling-$`
+  - variable `siblingState` — `siblingState =`
+  - method `resumeSibling` — `async resumeSibling(siblingId)` — *Resume a sibling agent from its checkpoint.*
+  - variable `siblingData` — `siblingData = await this.letta.page_in(siblingId)`
+  - variable `siblingState` — `siblingState = JSON.parse(siblingData)`
+  - variable `memId` — `memId`
+  - variable `mem` — `mem = this.memory.memories.find(m => m.id === memId)`
+  - arrow-function `<anonymous@4572>` — `m => m.id === memId`
+  - method `bootstrap` — `async bootstrap(agentId)` — *Session bootstrap: load previous state on startup.*
+  - variable `stateData` — `stateData = await this.letta.page_in(agentId)`
+  - variable `state` — `state = JSON.parse(stateData)`
+- `scripts/freshness-controller.mjs` (91 symbols)
+  - variable `FRESHNESS_CONTROLLER_VERSION` — `FRESHNESS_CONTROLLER_VERSION = '0.2.0'`
+  - variable `DEFAULT_DEPTH` — `DEFAULT_DEPTH = 3`
+  - variable `ADAPTER_STALENESS_TTL` — `ADAPTER_STALENESS_TTL = Object.freeze(`
+  - variable `CONTEXT_ARTIFACTS` — `CONTEXT_ARTIFACTS = Object.freeze(`
+  - function `readJsonSafe` — `function readJsonSafe(filePath, fallback = null)`
+  - function `toPosix` — `function toPosix(filePath)`
+  - function `normalizeRel` — `function normalizeRel(filePath, repoRoot)`
+  - variable `p` — `p = String(filePath)`
+  - variable `abs` — `abs = path.resolve(repoRoot, p)`
+  - variable `root` — `root = path.resolve(repoRoot)`
+  - function `isExecutable` — `function isExecutable(filePath)`
+  - function `probeWatchman` — `export function probeWatchman(watchmanPath = null)` — *Probe for a usable Watchman binary via PATH lookup. An explicit `watchmanPath` (when provided) is checked first; there is no hardcoded machine-specific default.*
+  - variable `result` — `result = spawnSync('watchman', ['--version'],`
+  - function `buildReverseImportGraph` — `export function buildReverseImportGraph(symbolGraphReceipt)` — *Build a reverse import graph from a SymbolCallGraphReceipt's `imports` field. Each import entry has `file` (the importer) and `resolvedFile` (the imported module, or null for external/unresolved). The*
+  - variable `reverse` — `reverse = new Map()`
+  - variable `files` — `files = new Set()`
+  - variable `edgeCount` — `edgeCount = 0`
+  - variable `imports` — `imports = Array.isArray(symbolGraphReceipt?.imports) ? symbolGraphReceipt.imports : []`
+  - variable `entry` — `entry`
+  - variable `importer` — `importer = toPosix(entry?.file)`
+  - variable `imported` — `imported = toPosix(entry?.resolvedFile)`
+  - function `computeDirtyFiles` — `export function computeDirtyFiles(changedFiles, reverseImportGraph, depth = DEFAULT_DEPTH)` — *Depth-limited BFS over the reverse import graph from a set of changed files. A changed file is dirty immediately. Any file that imports a dirty file is also dirty, up to `depth` hops. `dirtyByImport` *
+  - variable `reverse` — `reverse = reverseImportGraph instanceof Map`
+  - variable `maxDepth` — `maxDepth = Number.isFinite(depth) && depth >= 0 ? depth : DEFAULT_DEPTH`
+  - variable `dirty` — `dirty = new Set()`
+  - variable `dirtyByImport` — `dirtyByImport = new Map()`
+  - variable `queue` — `queue = []`
+  - variable `raw` — `raw`
+  - variable `file` — `file = toPosix(raw)`
+  - variable `<anonymous@8533>`
+  - variable `importers` — `importers = reverse.get(file)`
+  - variable `importer` — `importer`
+  - arrow-function `<anonymous@9116>` — `([key, values]) => [key, [...values]]`
+  - function `isArtifactStale` — `export function isArtifactStale(artifactId, lastRefreshedMs, adapterTtl)` — *Check whether an adapter/artifact is stale given its last-refreshed epoch ms and the TTL table. `artifactId` is a key into `adapterTtl` (an adapter name or artifact id whose TTL is being tested). Retu*
+  - variable `ttl` — `ttl = adapterTtl && adapterTtl[artifactId]`
+  - variable `staleAfterMs` — `staleAfterMs = lastRefreshedMs + ttl`
+  - function `resolveArtifactLastRefreshedMs` — `function resolveArtifactLastRefreshedMs(artifactId, contextRefreshStatus, contextDir)`
+  - variable `spec` — `spec = CONTEXT_ARTIFACTS[artifactId]`
+  - variable `receipt` — `receipt = readJsonSafe(path.join(contextDir, spec.receiptFile))`
+  - variable `ms` — `ms = Date.parse(receipt.generatedAt)`
+  - … and 51 more symbols
+
+## 05 · MODEL, SPECIALIST, SUBAGENT, TOOL, SANDBOX, AND EFFECT ROUTING
+
+### Competence/independence-aware route policy — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Model router and escalation — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 189 · **Callable:** 71 · **Authored purpose:** 11
+- `scripts/calibrated-routing.mjs` (101 symbols)
+  - variable `CALIBRATED_ROUTING_VERSION` — `CALIBRATED_ROUTING_VERSION = '1.0.0'`
+  - variable `TASK_TIERS` — `TASK_TIERS = new Set(['T0', 'T1', 'T2', 'T3', 'T4'])`
+  - variable `CATALOG_SOURCES` — `CATALOG_SOURCES = new Set(['official-api', 'provider-config', 'local-probe', 'manual-audit'])`
+  - variable `CIRCUIT_STATES` — `CIRCUIT_STATES = new Set(['closed', 'half-open', 'open'])`
+  - variable `OUTCOME_STATUSES` — `OUTCOME_STATUSES = new Set(['succeeded', 'failed', 'cancelled'])`
+  - variable `DEFAULT_MAX_CATALOG_AGE_DAYS` — `DEFAULT_MAX_CATALOG_AGE_DAYS = 30`
+  - variable `DEFAULT_MIN_SAMPLES` — `DEFAULT_MIN_SAMPLES = 3`
+  - variable `BANDIT_MIN_CANDIDATES` — `BANDIT_MIN_CANDIDATES = 2`
+  - variable `BANDIT_MIN_SAMPLES` — `BANDIT_MIN_SAMPLES = 30`
+  - class `CalibratedRoutingError` — `export class CalibratedRoutingError extends Error`
+  - constructor `constructor` — `constructor(message, path = 'routing')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `optionalString` — `function optionalString(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - arrow-function `<anonymous@2432>` — `(item, index) => nonEmptyString(item, `$`
+  - function `taskTierArray` — `function taskTierArray(value, pathName,`
+  - arrow-function `<anonymous@2710>` — `(item, index) =>`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `finiteNumber` — `function finiteNumber(value, pathName,`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `parsed` — `parsed = Date.parse(value)`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `maxAgeDays` — `function maxAgeDays(verifiedAt, now, maxDays, pathName)`
+  - variable `ageMs` — `ageMs = Date.parse(now.toISOString()) - Date.parse(verifiedAt)`
+  - variable `ageDays` — `ageDays = ageMs / 86_400_000`
+  - function `validateRoutingRequest` — `export function validateRoutingRequest(request, pathName = 'request')`
+  - function `validateCatalogEntry` — `export function validateCatalogEntry(entry, options =`
+  - variable `<anonymous@5244>`
+  - function `validatePricing` — `function validatePricing(pricing, pathName)`
+  - function `validateTelemetry` — `export function validateTelemetry(telemetry, pathName = 'telemetry')`
+  - function `validateCircuit` — `export function validateCircuit(circuit, pathName = 'circuit')`
+  - function `validateRouteCandidate` — `export function validateRouteCandidate(candidate, options =`
+  - … and 61 more symbols
+- `scripts/model-escalation-policy.mjs` (27 symbols)
+  - variable `DEEP_RESEARCH_LOCAL_MODEL` — `DEEP_RESEARCH_LOCAL_MODEL = 'qwen3.6-35b-moe-a3b'`
+  - variable `DEEP_RESEARCH_LOCAL_PORT` — `DEEP_RESEARCH_LOCAL_PORT = 8081`
+  - variable `DEFAULT_LOCAL_MODEL` — `DEFAULT_LOCAL_MODEL = 'qwen3.5-9b'`
+  - variable `LOCAL_THIRTY_FIVE_B` — `LOCAL_THIRTY_FIVE_B = Object.freeze(`
+  - variable `MODEL_ESCALATION_POLICY_VERSION` — `MODEL_ESCALATION_POLICY_VERSION = '1.2.0'`
+  - variable `THIRTY_FIVE_B_ALLOWED_USES` — `THIRTY_FIVE_B_ALLOWED_USES = Object.freeze([`
+  - variable `RESEARCH_TRIGGER_MODES` — `RESEARCH_TRIGGER_MODES = Object.freeze([`
+  - variable `DEFAULT_RESEARCH_TRIGGER` — `DEFAULT_RESEARCH_TRIGGER = Object.freeze(`
+  - variable `NINE_B_EXHAUSTION_ESCALATION_MIN_ATTEMPTS` — `NINE_B_EXHAUSTION_ESCALATION_MIN_ATTEMPTS = 3`
+  - variable `EXHAUSTION_PROGRESS_STATES` — `EXHAUSTION_PROGRESS_STATES = new Set(['spiral', 'plateau'])`
+  - variable `STUCK_PATCH_STATUSES` — `STUCK_PATCH_STATUSES = new Set([`
+  - function `isThirtyFiveBAllowedForUse` — `export function isThirtyFiveBAllowedForUse(use)`
+  - function `normalizeResearchTrigger` — `export function normalizeResearchTrigger(trigger)`
+  - variable `mode` — `mode = RESEARCH_TRIGGER_MODES.includes(trigger.mode)`
+  - function `shouldRunUpfrontDeepResearch` — `export function shouldRunUpfrontDeepResearch(researchTrigger)` — *User chose to start with governed deep research on 35B before patch loop.*
+  - function `shouldRunUpfrontNineBCapabilityResearch` — `export function shouldRunUpfrontNineBCapabilityResearch(researchTrigger)` — *C12 v5 parity: upfront 9B+SearXNG specialist research before patch loop.*
+  - function `isNineBPrimaryModel` — `export function isNineBPrimaryModel(modelName = DEFAULT_LOCAL_MODEL)`
+  - function `countStuckPatchAttempts` — `export function countStuckPatchAttempts(patchAttempts = [])`
+  - arrow-function `<anonymous@3091>` — `record => record?.status && STUCK_PATCH_STATUSES.has(record.status)`
+  - function `shouldRunBreakGlassDeepResearch` — `export function shouldRunBreakGlassDeepResearch(` — *Break-glass deep research: 9B plateau after several stuck attempts. Coherence guard maps plateau → break-glass-research.*
+  - function `shouldEscalateNineBToThirtyFiveB` — `export function shouldEscalateNineBToThirtyFiveB(` — *9B exhaustion — spiral or plateau after min attempts. Spiral → objective-analyser (35B plan-only, not wired yet). Plateau → break-glass-research (deep research on 35B).*
+  - function `shouldInvokeObjectiveAnalyser` — `export function shouldInvokeObjectiveAnalyser(opts =`
+  - variable `<anonymous@4965>`
+  - function `resolveDeepResearchSpecialistRoute` — `export function resolveDeepResearchSpecialistRoute(researchTrigger)`
+  - function `resolveBreakGlassDeepResearchRoute` — `export function resolveBreakGlassDeepResearchRoute(opts =`
+  - function `resolveThirtyFiveBExhaustionRoute` — `export function resolveThirtyFiveBExhaustionRoute(opts =`
+  - variable `use` — `use = shouldInvokeObjectiveAnalyser(opts)`
+- `scripts/model-router.mjs` (61 symbols)
+  - variable `COMPLEXITY_SIGNALS` — `COMPLEXITY_SIGNALS =`
+  - function `classifyTask` — `export function classifyTask(description, context =` — *Classify task complexity.*
+  - variable `desc` — `desc = (description || '').toLowerCase()`
+  - variable `fileCount` — `fileCount = context.files?.length || 0`
+  - variable `loc` — `loc = context.linesOfCode || 0`
+  - variable `<anonymous@3186>` — `[tier, signals]`
+  - variable `keywordMatch` — `keywordMatch = signals.keywords.test(desc)`
+  - variable `fileMatch` — `fileMatch = fileCount >= signals.fileCount`
+  - variable `locMatch` — `locMatch = loc >= signals.linesOfCode`
+  - variable `TIER_MODEL_POOLS` — `TIER_MODEL_POOLS =`
+  - function `selectModel` — `export function selectModel(description, opts =` — *Select the best model for a given task.*
+  - variable `classification` — `classification = classifyTask(description, opts.context ||`
+  - variable `pool` — `pool = TIER_MODEL_POOLS[classification.tier] || TIER_MODEL_POOLS.T1`
+  - variable `enabledProviders` — `enabledProviders = new Set(opts.enabledProviders || [])`
+  - variable `excludeModels` — `excludeModels = new Set(opts.excludeModels || [])`
+  - variable `modelName` — `modelName`
+  - variable `spec` — `spec = getModelSpec(modelName)`
+  - variable `minQuality` — `minQuality = opts.minQuality || (TASK_TIERS[classification.tier]?.label === 'deep' ? 0.90 : 0.75)`
+  - variable `fallback` — `fallback = cheapestModelForQuality(minQuality,`
+  - function `isLocalModelHealthy` — `export async function isLocalModelHealthy(target = 'http://127.0.0.1:8095/v1')` — *Check if local llama-server is healthy. Health-probe a local OpenAI-compatible server. ACCEPTS EITHER a port (number or numeric string) OR a base URL — because the de-facto contract was already the po*
+  - variable `base` — `base = normalizeLocalModelBase(target)`
+  - variable `res` — `res = await fetch(`$`
+  - variable `e` — `e`
+  - function `normalizeLocalModelBase` — `export function normalizeLocalModelBase(target)` — *port|numeric-string → `http://127.0.0.1:<port>/v1`; URL string → itself (trailing slash trimmed). Anything else (null/undefined/NaN/empty) → null, so the probe REFUSES rather than building a nonsense *
+  - variable `s` — `s = String(target ?? '').trim()`
+  - function `getEnabledProviders` — `export function getEnabledProviders()` — *Get enabled providers from global config.*
+  - variable `config` — `config = loadGlobalConfig()`
+  - variable `providers` — `providers = config.providers ||`
+  - variable `enabled` — `enabled = []`
+  - variable `<anonymous@9795>` — `[name, provider]`
+  - variable `defaultAccount` — `defaultAccount = provider.accounts?.[provider.defaultAccount]`
+  - function `logRouting` — `export function logRouting(projectSlug, decision)` — *Log a routing decision for analysis.*
+  - variable `<anonymous@10382>`
+  - variable `logFile` — `logFile = path.join(paths.audit, 'routing-decisions.jsonl')`
+  - variable `entry` — `entry =`
+  - function `routeWithFallback` — `export async function routeWithFallback(description, callFn, opts =` — *Try models in order until one succeeds.*
+  - variable `enabledProviders` — `enabledProviders = getEnabledProviders()`
+  - variable `triedModels` — `triedModels = new Set()`
+  - variable `attempts` — `attempts = 0`
+  - variable `selection` — `selection = selectModel(description,`
+  - … and 21 more symbols
+
+### Specialist registry — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 35 · **Callable:** 12 · **Authored purpose:** 3
+- `scripts/specialist-registry.mjs` (35 symbols)
+  - variable `SPECIALIST_REGISTRY_VERSION` — `SPECIALIST_REGISTRY_VERSION = '1.0.0'`
+  - variable `CAPABILITY_TAGS` — `CAPABILITY_TAGS = Object.freeze([`
+  - variable `MODELS_DIR` — `MODELS_DIR = '[local-path-redacted]'`
+  - function `buildSpecialistRegistry` — `export function buildSpecialistRegistry()`
+  - variable `SPECIALISTS` — `SPECIALISTS = buildSpecialistRegistry()`
+  - variable `VLM_DISPATCH_CAPABILITY_TAGS` — `VLM_DISPATCH_CAPABILITY_TAGS = Object.freeze(['vision-reasoning', 'gui-grounding'])`
+  - variable `byId` — `byId = new Map(SPECIALISTS.map(s => [s.modelId.toLowerCase(), s]))`
+  - arrow-function `<anonymous@20272>` — `s => [s.modelId.toLowerCase(), s]`
+  - function `getSpecialist` — `export function getSpecialist(modelId)`
+  - variable `CODE_FRAME_RE` — `CODE_FRAME_RE = /\b(fix|patch|refactor|implement|bug|crash|debug|add\s+a\s+test|unit\s+test|function|module|codebase|\brepo\b|stack\s*trace|traceback|syntax\s+error)\b|\.(mjs|js|jsx|ts|tsx|py|rs|go|ja`
+  - function `classifyTaskCapability` — `export function classifyTaskCapability(text = '')` — *Deterministic task→capability classification. Deny-by-default: everything that is not a confident specialist match returns 'general' (→ main 9B). Order matters: more specific patterns first.*
+  - variable `t` — `t = String(text || '').toLowerCase()`
+  - function `selectSpecialist` — `export function selectSpecialist(taskText,` — *The guard-first selector. Returns a dispatch ONLY when a VERIFIED specialist handles the classified capability and is not forbidden from it. Every other path returns dispatch:false with a named reason*
+  - variable `tag` — `tag = capability || classifyTaskCapability(taskText)`
+  - variable `candidates` — `candidates = registry.filter(s =>`
+  - arrow-function `<anonymous@26237>` — `s =>`
+  - variable `contractArmed` — `contractArmed = env?.ARC_SPECIALIST_CONTRACT === '1'`
+  - variable `widenedTags` — `widenedTags = contractArmed ? modalityGatedCapabilityTags(registry) : VLM_DISPATCH_CAPABILITY_TAGS`
+  - variable `vlmDispatchWidened` — `vlmDispatchWidened = env?.ARC_VLM_DISPATCH === '1' && widenedTags.includes(tag)`
+  - variable `admitted` — `admitted = candidates.filter((s) =>`
+  - arrow-function `<anonymous@27758>` — `(s) =>`
+  - variable `rejected` — `rejected = []`
+  - variable `dispatchable` — `dispatchable = !contractArmed ? admitted : admitted.filter((s) =>`
+  - arrow-function `<anonymous@28353>` — `(s) =>`
+  - variable `verdict` — `verdict = resolveSpecialistTransport(s,`
+  - variable `usable` — `usable = capabilitySnapshot ? verdict.verified : verdict.executable`
+  - variable `statuses` — `statuses = [...new Set(candidates.map(s => s.verificationStatus))].join(',')`
+  - arrow-function `<anonymous@29198>` — `s => s.verificationStatus`
+  - variable `rank` — `rank =`
+  - arrow-function `<anonymous@29645>` — `(a, b) => (rank[a.residency] - rank[b.residency]) || (a.paramsB - b.paramsB)`
+  - variable `chosen` — `chosen = dispatchable[0]`
+  - variable `viaVlmDispatch` — `viaVlmDispatch = vlmDispatchWidened && chosen.verificationStatus !== 'verified'`
+  - function `summarizeSpecialists` — `export function summarizeSpecialists(registry = SPECIALISTS)` — *Summary table for humans / CLI.*
+  - arrow-function `<anonymous@30375>` — `s => (`
+  - variable `arg` — `arg = process.argv[2]`
+
+### Local llama-server transport — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 1184 · **Callable:** 247 · **Authored purpose:** 7
+- `scripts/local-llama-server-transport.mjs` (185 symbols)
+  - variable `LOCAL_LLAMA_SERVER_TRANSPORT_VERSION` — `LOCAL_LLAMA_SERVER_TRANSPORT_VERSION = '1.0.0'`
+  - variable `PROOF_KIND` — `PROOF_KIND = 'local-llama-server-structured-transport-probe'`
+  - variable `AUTHORITY_BOUNDARY` — `AUTHORITY_BOUNDARY = 'Structured llama-server transport and host-level VRAM probe only; not Phase 24 authorization, release/regression evidence, full coding capability, or frontier-performance proof.'`
+  - variable `GPU_SAMPLE_STATUSES` — `GPU_SAMPLE_STATUSES = new Set(['nvidia-smi-query', 'nvidia-smi-empty', 'nvidia-smi-unavailable'])`
+  - class `LocalLlamaServerTransportError` — `export class LocalLlamaServerTransportError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'localLlamaServerTransport')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName,`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `finiteNumber` — `function finiteNumber(value, pathName,`
+  - function `resolveMinP` — `export function resolveMinP(explicit)` — *ARC_MIN_P (default UNSET) — llama.cpp server min-p sampling threshold. min-p keeps only tokens whose probability is >= p * (max token probability), which yields COHERENT diversity at high temperature *
+  - variable `raw` — `raw = explicit !== undefined ? explicit : process.env.ARC_MIN_P`
+  - variable `n` — `n = Number(raw)`
+  - variable `SELF_CERTAINTY_NPROBS_DEFAULT` — `SELF_CERTAINTY_NPROBS_DEFAULT = 20`
+  - function `resolveSelfCertaintyProbs` — `export function resolveSelfCertaintyProbs(explicit)` — *ARC_SELF_CERTAINTY (default UNSET) — SOTA A4: Self-Certainty best-of-N selection (arXiv:2502.18581, Kang et al. 2025, "Scalable Best-of-N Selection for Large Language Models via Self-Certainty"). When*
+  - variable `n` — `n = Number(explicit)`
+  - variable `k` — `k = Number(process.env.ARC_SELF_CERTAINTY_NPROBS)`
+  - function `resolveLocalInvokeTokenFloor` — `export function resolveLocalInvokeTokenFloor(env = process.env)` — *The local invoker's EXISTING default response budget (env ARC_MAX_TOKENS, default 4096) — the exact MAX_TOKENS_FLOOR expression the frontier transport seam has always applied when a request carries no*
+  - function `sha256` — `function sha256(value, pathName)`
+  - function `nullableString` — `function nullableString(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - arrow-function `<anonymous@7540>` — `(item, index) => string(String(item), `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - arrow-function `<anonymous@7819>` — `key => `$`
+  - function `hashBytes` — `function hashBytes(value)`
+  - function `hashJson` — `function hashJson(value)`
+  - function `composeAbortSignals` — `function composeAbortSignals(signals)`
+  - variable `activeSignals` — `activeSignals = signals.filter(Boolean)`
+  - arrow-function `cleanup` — `() =>`
+  - arrow-function `cleanup` — `() =>`
+  - arrow-function `cleanup` — `() =>`
+  - variable `controller` — `controller = new AbortController()`
+  - … and 145 more symbols
+- `scripts/runtime-attested-local-model-v1.mjs` (999 symbols)
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_SESSION_V1` — `RUNTIME_ATTESTED_LOCAL_MODEL_SESSION_V1 =`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_SESSIONS` — `RUNTIME_ATTESTED_LOCAL_MODEL_SESSIONS = new WeakSet()`
+  - function `isRuntimeAttestedLocalModelSessionV1` — `export function isRuntimeAttestedLocalModelSessionV1(value)`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_RESULT_V1` — `RUNTIME_ATTESTED_LOCAL_MODEL_RESULT_V1 =`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_SETTLEMENT_V1` — `RUNTIME_ATTESTED_LOCAL_MODEL_SETTLEMENT_V1 =`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_PHYSICAL_INVOCATION_REFERENCE_V1` — `RUNTIME_ATTESTED_LOCAL_MODEL_PHYSICAL_INVOCATION_REFERENCE_V1 =`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_PREFLIGHT_V1` — `RUNTIME_ATTESTED_LOCAL_MODEL_PREFLIGHT_V1 =`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_SERVER_BINDING_V1` — `RUNTIME_ATTESTED_LOCAL_MODEL_SERVER_BINDING_V1 =`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_SERVER_BINDING_V2` — `RUNTIME_ATTESTED_LOCAL_MODEL_SERVER_BINDING_V2 =`
+  - variable `RUNTIME_ATTESTED_LOCAL_MODEL_SERVER_BINDING_V3` — `RUNTIME_ATTESTED_LOCAL_MODEL_SERVER_BINDING_V3 =`
+  - variable `RUNTIME_ATTESTED_CANDIDATE_AUTHOR_SERVER_BINDING_V1` — `RUNTIME_ATTESTED_CANDIDATE_AUTHOR_SERVER_BINDING_V1 =`
+  - variable `RUNTIME_ATTESTED_SCOPE_SPECIALIST_SERVER_BINDING_V1` — `RUNTIME_ATTESTED_SCOPE_SPECIALIST_SERVER_BINDING_V1 =`
+  - variable `RUNTIME_ATTESTED_SCOPE_SPECIALIST_PREFLIGHT_V1` — `RUNTIME_ATTESTED_SCOPE_SPECIALIST_PREFLIGHT_V1 =`
+  - variable `RUNTIME_ATTESTED_SCOPE_PRESERVATION_CRITIC_SERVER_BINDING_V1` — `RUNTIME_ATTESTED_SCOPE_PRESERVATION_CRITIC_SERVER_BINDING_V1 =`
+  - variable `RUNTIME_ATTESTED_SCOPE_PRESERVATION_CRITIC_PREFLIGHT_V1` — `RUNTIME_ATTESTED_SCOPE_PRESERVATION_CRITIC_PREFLIGHT_V1 =`
+  - variable `RUNTIME_ATTESTED_CAUSAL_COGNITION_SERVER_BINDING_V1` — `RUNTIME_ATTESTED_CAUSAL_COGNITION_SERVER_BINDING_V1 =`
+  - variable `RUNTIME_ATTESTED_CAUSAL_COGNITION_PREFLIGHT_V1` — `RUNTIME_ATTESTED_CAUSAL_COGNITION_PREFLIGHT_V1 =`
+  - variable `RUNTIME_ATTESTED_CAUSAL_COGNITION_ATTRIBUTION_V1` — `RUNTIME_ATTESTED_CAUSAL_COGNITION_ATTRIBUTION_V1 =`
+  - variable `RUNTIME_ATTESTED_CANDIDATE_TARGET_SELECTOR_SERVER_BINDING_V1` — `RUNTIME_ATTESTED_CANDIDATE_TARGET_SELECTOR_SERVER_BINDING_V1 =`
+  - variable `RUNTIME_ATTESTED_CANDIDATE_TARGET_SELECTOR_RESULT_V1` — `RUNTIME_ATTESTED_CANDIDATE_TARGET_SELECTOR_RESULT_V1 =`
+  - variable `RUNTIME_ATTESTED_TARGET_SEALED_PATCH_AUTHOR_SERVER_BINDING_V1` — `RUNTIME_ATTESTED_TARGET_SEALED_PATCH_AUTHOR_SERVER_BINDING_V1 =`
+  - variable `RUNTIME_ATTESTED_TARGET_SEALED_PATCH_AUTHOR_RESULT_V1` — `RUNTIME_ATTESTED_TARGET_SEALED_PATCH_AUTHOR_RESULT_V1 =`
+  - variable `CAUSAL_COGNITION_ROLE` — `CAUSAL_COGNITION_ROLE = 'causal-cognition-semantic-proposer'`
+  - variable `CAUSAL_COGNITION_PHASE` — `CAUSAL_COGNITION_PHASE = 'causal-cognition-deliberation'`
+  - variable `CANDIDATE_TARGET_SELECTOR_ROLE` — `CANDIDATE_TARGET_SELECTOR_ROLE = 'candidate-target-selector'`
+  - variable `CANDIDATE_TARGET_SELECTOR_PHASE` — `CANDIDATE_TARGET_SELECTOR_PHASE = 'candidate-target-selection'`
+  - variable `TARGET_SEALED_PATCH_AUTHOR_ROLE` — `TARGET_SEALED_PATCH_AUTHOR_ROLE = 'target-sealed-patch-author'`
+  - variable `TARGET_SEALED_PATCH_AUTHOR_PHASE` — `TARGET_SEALED_PATCH_AUTHOR_PHASE = 'target-sealed-patch-authoring'`
+  - variable `RUNTIME_ATTESTED_CONTRACT_ROLE_INVOCATIONS` — `RUNTIME_ATTESTED_CONTRACT_ROLE_INVOCATIONS = new WeakSet()`
+  - variable `DURABLY_RESERVED_MODEL_OPERATOR_IDS` — `DURABLY_RESERVED_MODEL_OPERATOR_IDS = new Set([`
+  - variable `CANDIDATE_TARGET_SELECTOR_REQUEST_BODY_KEYS` — `CANDIDATE_TARGET_SELECTOR_REQUEST_BODY_KEYS = Object.freeze([`
+  - variable `TARGET_SEALED_PATCH_AUTHOR_REQUEST_BODY_KEYS` — `TARGET_SEALED_PATCH_AUTHOR_REQUEST_BODY_KEYS = Object.freeze([`
+  - variable `CANDIDATE_TARGET_SELECTOR_PROFILE` — `CANDIDATE_TARGET_SELECTOR_PROFILE = Object.freeze(`
+  - variable `TARGET_SEALED_PATCH_AUTHOR_PROFILE` — `TARGET_SEALED_PATCH_AUTHOR_PROFILE = Object.freeze(`
+  - function `causalCognitionProvenanceClass` — `function causalCognitionProvenanceClass(serverProfile)`
+  - function `causalCognitionAuthorType` — `function causalCognitionAuthorType(serverProfile)`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `SAFE_ID_RE` — `SAFE_ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `LOOPBACK_COMPLETIONS_RE` — `LOOPBACK_COMPLETIONS_RE =`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - … and 959 more symbols
+
+### Qwen3.5 9B local model — LIVE / PARTIAL
+- **Files:** 1 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Ollama compatibility runtime — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 119 · **Callable:** 37 · **Authored purpose:** 0
+- `scripts/local-models.mjs` (119 symbols)
+  - variable `localPaths` — `localPaths = getGlobalPaths()`
+  - variable `binDir` — `binDir = path.join(localPaths.local, 'bin')`
+  - variable `modelsDir` — `modelsDir = localPaths.models`
+  - variable `llamaServer` — `llamaServer = path.join(binDir, 'llama-server')`
+  - variable `llamaCli` — `llamaCli = path.join(binDir, 'llama-cli')`
+  - variable `MODEL_DEFAULTS` — `MODEL_DEFAULTS =`
+  - variable `DRAFT_MODEL` — `DRAFT_MODEL =`
+  - function `env` — `function env()`
+  - function `localModelRuntimeEnv` — `export function localModelRuntimeEnv()`
+  - function `humanSize` — `function humanSize(bytes)`
+  - variable `units` — `units = ['B', 'KiB', 'MiB', 'GiB', 'TiB']`
+  - variable `size` — `size = bytes`
+  - variable `index` — `index = 0`
+  - function `fileSha256` — `function fileSha256(filePath)`
+  - function `inspectLocalPath` — `export function inspectLocalPath(filePath,`
+  - variable `result` — `result =`
+  - variable `linkStat` — `linkStat`
+  - variable `error` — `error`
+  - variable `error` — `error`
+  - variable `targetStat` — `targetStat = statSync(result.resolvedPath)`
+  - variable `descriptor` — `descriptor = openSync(result.resolvedPath, 'r')`
+  - variable `magic` — `magic = Buffer.alloc(4)`
+  - variable `bytesRead` — `bytesRead = readSync(descriptor, magic, 0, magic.length, 0)`
+  - function `discoverGgufFiles` — `function discoverGgufFiles(directory)`
+  - variable `discovered` — `discovered = []`
+  - arrow-function `walk` — `current =>`
+  - variable `entries` — `entries = readdirSync(current,`
+  - arrow-function `<anonymous@4981>` — `(left, right) => left.name.localeCompare(right.name, 'en')`
+  - variable `entry` — `entry`
+  - variable `candidate` — `candidate = path.join(current, entry.name)`
+  - function `modelStatus` — `function modelStatus()`
+  - variable `registeredFiles` — `registeredFiles = new Set(Object.values(MODEL_DEFAULTS).map(model => model.file))`
+  - arrow-function `<anonymous@5487>` — `model => model.file`
+  - variable `registered` — `registered = Object.entries(MODEL_DEFAULTS).map(([name, model]) =>`
+  - arrow-function `<anonymous@5565>` — `([name, model]) =>`
+  - variable `inspection` — `inspection = inspectLocalPath(model.file,`
+  - variable `unregistered` — `unregistered = discoverGgufFiles(modelsDir)`
+  - arrow-function `<anonymous@6057>` — `file => !registeredFiles.has(file)`
+  - arrow-function `<anonymous@6102>` — `file =>`
+  - variable `inspection` — `inspection = inspectLocalPath(file,`
+  - … and 79 more symbols
+
+### Cloud provider transports — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 4 (4 with symbols) · **Symbols:** 432 · **Callable:** 144 · **Authored purpose:** 0
+- `scripts/governed-cerebras-transport.mjs` (107 symbols)
+  - variable `GOVERNED_CEREBRAS_TRANSPORT_VERSION` — `GOVERNED_CEREBRAS_TRANSPORT_VERSION = '1.0.0'`
+  - variable `CEREBRAS_BASE_URL` — `CEREBRAS_BASE_URL = 'https://api.cerebras.ai/v1'`
+  - variable `DEFAULT_MAX_REQUEST_BYTES` — `DEFAULT_MAX_REQUEST_BYTES = 1024 * 1024`
+  - variable `DEFAULT_MAX_RESPONSE_BYTES` — `DEFAULT_MAX_RESPONSE_BYTES = 2 * 1024 * 1024`
+  - variable `DEFAULT_MAX_OUTPUT_TOKENS` — `DEFAULT_MAX_OUTPUT_TOKENS = 4_096`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 120_000`
+  - variable `DEFAULT_CATALOG_MAX_AGE_MS` — `DEFAULT_CATALOG_MAX_AGE_MS = 5 * 60_000`
+  - variable `SAFE_ERROR_TOKEN` — `SAFE_ERROR_TOKEN = /^[a-zA-Z0-9._:-]`
+  - class `GovernedCerebrasTransportError` — `export class GovernedCerebrasTransportError extends Error`
+  - constructor `constructor` — `constructor(`
+  - function `fail` — `function fail(pathName, message, cause = undefined, details = undefined)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName,`
+  - function `boundedInteger` — `function boundedInteger(value, pathName,`
+  - function `finiteNonNegativeInteger` — `function finiteNonNegativeInteger(value, pathName)`
+  - function `timestamp` — `function timestamp(clock, pathName)`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `stableValue` — `function stableValue(value)`
+  - arrow-function `<anonymous@2847>` — `item => stableValue(item)`
+  - arrow-function `<anonymous@2989>` — `key => [key, stableValue(value[key])]`
+  - function `stableJson` — `function stableJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `canonicalBaseUrl` — `function canonicalBaseUrl(value, pathName)`
+  - variable `candidate` — `candidate = nonEmptyString(value, pathName)`
+  - variable `parsed` — `parsed`
+  - function `validateCredential` — `function validateCredential(value)`
+  - variable `credential` — `credential = nonEmptyString(value, 'governedCerebrasTransport.credential')`
+  - function `safeToken` — `function safeToken(value)`
+  - variable `candidate` — `candidate = value.trim()`
+  - function `retryAfterSeconds` — `function retryAfterSeconds(value)`
+  - variable `seconds` — `seconds = Number(value)`
+  - variable `dateMs` — `dateMs = Date.parse(value)`
+  - function `readJsonBody` — `async function readJsonBody(response, pathName, maxBytes)`
+  - variable `contentType` — `contentType = response.headers.get('content-type') || ''`
+  - variable `reader` — `reader = response.body.getReader()`
+  - variable `chunks` — `chunks = []`
+  - variable `totalBytes` — `totalBytes = 0`
+  - variable `<anonymous@4984>`
+  - … and 67 more symbols
+- `scripts/governed-deepseek-transport.mjs` (121 symbols)
+  - variable `GOVERNED_DEEPSEEK_TRANSPORT_VERSION` — `GOVERNED_DEEPSEEK_TRANSPORT_VERSION = '1.0.0'`
+  - variable `DEEPSEEK_BASE_URL` — `DEEPSEEK_BASE_URL = 'https://api.deepseek.com/v1'`
+  - variable `DEEPSEEK_BALANCE_URL` — `DEEPSEEK_BALANCE_URL = 'https://api.deepseek.com/user/balance'`
+  - variable `DEFAULT_MAX_REQUEST_BYTES` — `DEFAULT_MAX_REQUEST_BYTES = 1024 * 1024`
+  - variable `DEFAULT_MAX_RESPONSE_BYTES` — `DEFAULT_MAX_RESPONSE_BYTES = 2 * 1024 * 1024`
+  - variable `DEFAULT_MAX_OUTPUT_TOKENS` — `DEFAULT_MAX_OUTPUT_TOKENS = 8_192`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 120_000`
+  - variable `DEFAULT_CATALOG_MAX_AGE_MS` — `DEFAULT_CATALOG_MAX_AGE_MS = 5 * 60_000`
+  - variable `SAFE_ERROR_TOKEN` — `SAFE_ERROR_TOKEN = /^[a-zA-Z0-9._:-]`
+  - variable `DECIMAL_AMOUNT` — `DECIMAL_AMOUNT = /^(?:0|[1-9]\d*)(?:\.\d+)?$/`
+  - class `GovernedDeepSeekTransportError` — `export class GovernedDeepSeekTransportError extends Error`
+  - constructor `constructor` — `constructor(`
+  - function `fail` — `function fail(pathName, message, cause = undefined, details = undefined)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName,`
+  - function `boundedInteger` — `function boundedInteger(value, pathName,`
+  - function `finiteNonNegativeInteger` — `function finiteNonNegativeInteger(value, pathName)`
+  - function `timestamp` — `function timestamp(clock, pathName)`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `stableValue` — `function stableValue(value)`
+  - arrow-function `<anonymous@2974>` — `item => stableValue(item)`
+  - arrow-function `<anonymous@3116>` — `key => [key, stableValue(value[key])]`
+  - function `stableJson` — `function stableJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `canonicalBaseUrl` — `function canonicalBaseUrl(value, pathName)`
+  - variable `candidate` — `candidate = nonEmptyString(value, pathName)`
+  - variable `parsed` — `parsed`
+  - function `validateCredential` — `function validateCredential(value)`
+  - variable `credential` — `credential = nonEmptyString(value, 'governedDeepSeekTransport.credential')`
+  - function `safeToken` — `function safeToken(value)`
+  - variable `candidate` — `candidate = value.trim()`
+  - function `retryAfterSeconds` — `function retryAfterSeconds(value)`
+  - variable `seconds` — `seconds = Number(value)`
+  - variable `dateMs` — `dateMs = Date.parse(value)`
+  - function `providerErrorDetails` — `function providerErrorDetails(response, body)`
+  - variable `providerError` — `providerError = isPlainObject(body?.error) ? body.error :`
+  - function `readJsonBody` — `async function readJsonBody(response, pathName, maxBytes)`
+  - variable `contentType` — `contentType = response.headers.get('content-type') || ''`
+  - … and 81 more symbols
+- `scripts/governed-openrouter-transport.mjs` (171 symbols)
+  - variable `GOVERNED_OPENROUTER_TRANSPORT_VERSION` — `GOVERNED_OPENROUTER_TRANSPORT_VERSION = '1.0.0'`
+  - variable `OPENROUTER_BASE_URL` — `OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1'`
+  - variable `OPENROUTER_KEY_URL` — `OPENROUTER_KEY_URL = `$`
+  - variable `OPENROUTER_MODELS_URL` — `OPENROUTER_MODELS_URL = `$`
+  - variable `OPENROUTER_CHAT_URL` — `OPENROUTER_CHAT_URL = `$`
+  - variable `DEFAULT_MAX_REQUEST_BYTES` — `DEFAULT_MAX_REQUEST_BYTES = 1024 * 1024`
+  - variable `DEFAULT_MAX_RESPONSE_BYTES` — `DEFAULT_MAX_RESPONSE_BYTES = 2 * 1024 * 1024`
+  - variable `DEFAULT_MAX_OUTPUT_TOKENS` — `DEFAULT_MAX_OUTPUT_TOKENS = 16_384`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 120_000`
+  - variable `DEFAULT_CATALOG_MAX_AGE_MS` — `DEFAULT_CATALOG_MAX_AGE_MS = 5 * 60_000`
+  - variable `MAX_ERROR_CODE_LENGTH` — `MAX_ERROR_CODE_LENGTH = 128`
+  - class `GovernedOpenRouterTransportError` — `export class GovernedOpenRouterTransportError extends Error`
+  - constructor `constructor` — `constructor(`
+  - function `fail` — `function fail(pathName, message, cause = undefined, details = undefined)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `nonEmptyContent` — `function nonEmptyContent(value, pathName)`
+  - function `boundedInteger` — `function boundedInteger(value, pathName,`
+  - function `timestamp` — `function timestamp(clock, pathName)`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `stableValue` — `function stableValue(value)`
+  - arrow-function `<anonymous@3148>` — `item => stableValue(item)`
+  - arrow-function `<anonymous@3290>` — `key => [key, stableValue(value[key])]`
+  - function `stableJson` — `function stableJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `canonicalBaseUrl` — `function canonicalBaseUrl(value, pathName)`
+  - variable `candidate` — `candidate = nonEmptyString(value, pathName)`
+  - variable `parsed` — `parsed`
+  - variable `normalizedPath` — `normalizedPath = parsed.pathname.replace(/\/+$/, '')`
+  - function `validateCredential` — `function validateCredential(value, pathName)`
+  - variable `credential` — `credential = nonEmptyString(value, pathName)`
+  - function `validateMessages` — `function validateMessages(value, pathName)`
+  - arrow-function `<anonymous@4463>` — `(message, index) =>`
+  - variable `itemPath` — `itemPath = `$`
+  - variable `keys` — `keys = Object.keys(message).sort()`
+  - variable `role` — `role = nonEmptyString(message.role, `$`
+  - function `validateResponseSchema` — `function validateResponseSchema(value, pathName)`
+  - variable `required` — `required = value.required.map((item, index) =>`
+  - … and 131 more symbols
+- `scripts/provider-gateway.mjs` (33 symbols)
+  - variable `MODEL_PREFIX` — `MODEL_PREFIX =`
+  - function `liteLLMModelName` — `function liteLLMModelName(providerName, model)`
+  - variable `prefix` — `prefix = MODEL_PREFIX[providerName] || providerName`
+  - function `buildLiteLLMConfig` — `function buildLiteLLMConfig(config)`
+  - variable `lines` — `lines = [`
+  - variable `<anonymous@906>` — `[providerName, provider]`
+  - variable `<anonymous@991>` — `[accountName, account]`
+  - variable `model` — `model`
+  - variable `standardModelName` — `standardModelName = liteLLMModelName(providerName, model)`
+  - function `writeLiteLLMConfig` — `export function writeLiteLLMConfig()`
+  - variable `config` — `config = loadGlobalConfig(`
+  - variable `outDir` — `outDir = path.join(getGlobalPaths().local, 'litellm')`
+  - variable `outFile` — `outFile = path.join(outDir, 'config.yaml')`
+  - function `providerStatus` — `export function providerStatus()`
+  - variable `config` — `config = loadGlobalConfig(`
+  - variable `rows` — `rows = []`
+  - variable `<anonymous@2512>` — `[providerName, provider]`
+  - variable `<anonymous@2597>` — `[accountName, account]`
+  - function `printStatus` — `function printStatus(asJson = false)`
+  - variable `rows` — `rows = providerStatus()`
+  - variable `row` — `row`
+  - variable `keyState` — `keyState = row.apiKeyEnv ? (row.envSet ? 'env set' : 'env missing') : 'no env'`
+  - function `printUsage` — `function printUsage()`
+  - class `ProviderGateway` — `export class ProviderGateway`
+  - constructor `constructor` — `constructor()`
+  - method `status` — `status()`
+  - method `writeConfig` — `writeConfig()`
+  - method `resolve` — `resolve(providerName, model)`
+  - variable `config` — `config = loadGlobalConfig(`
+  - variable `provider` — `provider = config.providers?.[providerName]`
+  - variable `account` — `account = Object.values(provider.accounts ||`
+  - arrow-function `<anonymous@4376>` — `a => (a.models || []).includes(model)`
+  - variable `action` — `action = process.argv[2]`
+
+### Bounded multi-agent orchestration — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 296 · **Callable:** 124 · **Authored purpose:** 5
+- `scripts/multi-agent-orchestration.mjs` (187 symbols)
+  - variable `MULTI_AGENT_ORCHESTRATION_VERSION` — `MULTI_AGENT_ORCHESTRATION_VERSION = '1.0.0'`
+  - variable `TOPOLOGIES` — `TOPOLOGIES = new Set(['sequential', 'parallel', 'hierarchical', 'debate'])`
+  - variable `ROLES` — `ROLES = new Set([`
+  - variable `PRODUCTIVE_ROLES` — `PRODUCTIVE_ROLES = new Set(['navigator', 'implementer', 'tester', 'debater'])`
+  - variable `REVIEW_ROLES` — `REVIEW_ROLES = new Set(['reviewer', 'judge'])`
+  - variable `COORDINATION_ROLES` — `COORDINATION_ROLES = new Set(['planner', 'reviewer', 'judge', 'synthesizer'])`
+  - variable `CONSENSUS_METHODS` — `CONSENSUS_METHODS = new Set(['unanimous', 'supermajority'])`
+  - variable `RESULT_STATUSES` — `RESULT_STATUSES = new Set(['completed', 'failed', 'timed-out', 'cancelled'])`
+  - class `MultiAgentOrchestrationError` — `export class MultiAgentOrchestrationError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'multiAgentOrchestration')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName)`
+  - function `nullableString` — `function nullableString(value, pathName)`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `finiteNumber` — `function finiteNumber(value, pathName,`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `sha256` — `function sha256(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => string(item, `$`
+  - arrow-function `<anonymous@3703>` — `(item, index) => string(item, `$`
+  - function `validateAgent` — `function validateAgent(agent, index)`
+  - variable `pathName` — `pathName = `multiAgentPlan.agents[$`
+  - function `dependencyGraph` — `function dependencyGraph(agents)`
+  - variable `byId` — `byId = new Map(agents.map(agent => [agent.agentId, agent]))`
+  - arrow-function `<anonymous@5708>` — `agent => [agent.agentId, agent]`
+  - variable `agent` — `agent`
+  - variable `dependency` — `dependency`
+  - variable `visiting` — `visiting = new Set()`
+  - variable `visited` — `visited = new Set()`
+  - function `visit` — `function visit(agentId)`
+  - variable `dependency` — `dependency`
+  - variable `agentId` — `agentId`
+  - … and 147 more symbols
+- `scripts/sequential-subagent-coordinator.mjs` (40 symbols)
+  - variable `SEQUENTIAL_SUBAGENT_COORDINATOR_VERSION` — `SEQUENTIAL_SUBAGENT_COORDINATOR_VERSION = '1.0.0'`
+  - variable `DEFAULT_SEQUENTIAL_ROLES` — `DEFAULT_SEQUENTIAL_ROLES = Object.freeze([`
+  - class `SequentialSubagentCoordinatorError` — `export class SequentialSubagentCoordinatorError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'sequentialSubagentCoordinator')`
+  - function `buildSequentialHandoff` — `function buildSequentialHandoff(assists, maxChars = 4_000)`
+  - variable `sections` — `sections = assists`
+  - arrow-function `<anonymous@1066>` — `entry => String(entry.content || '').trim()`
+  - arrow-function `<anonymous@1120>` — `entry => `[$`
+  - function `orderSequentialTasks` — `export function orderSequentialTasks(tasks = [], preferredRoles = DEFAULT_SEQUENTIAL_ROLES)`
+  - variable `roleOrder` — `roleOrder = new Map(preferredRoles.map((role, index) => [role, index]))`
+  - arrow-function `<anonymous@1406>` — `(role, index) => [role, index]`
+  - arrow-function `<anonymous@1464>` — `(left, right) =>`
+  - variable `leftIndex` — `leftIndex = roleOrder.has(left.role) ? roleOrder.get(left.role) : preferredRoles.length`
+  - variable `rightIndex` — `rightIndex = roleOrder.has(right.role) ? roleOrder.get(right.role) : preferredRoles.length`
+  - function `runSequentialSubagentPipeline` — `export async function runSequentialSubagentPipeline(`
+  - variable `ordered` — `ordered = orderSequentialTasks(tasks, preferredRoles)`
+  - variable `healthy` — `healthy = endpoint ? await is9bEndpointHealthy(endpoint) : true`
+  - variable `invoke` — `invoke = invokeSubagent || (task => invoke9bSubagent(`
+  - arrow-function `<anonymous@2715>` — `task => invoke9bSubagent(`
+  - variable `assists` — `assists = []`
+  - variable `failedRoles` — `failedRoles = []`
+  - variable `rollingContext` — `rollingContext = ''`
+  - variable `task` — `task`
+  - variable `prompt` — `prompt = rollingContext`
+  - variable `assist` — `assist = await invoke(`
+  - variable `handoff` — `handoff = buildSequentialHandoff(assists, maxCharsPerHandoff)`
+  - variable `error` — `error`
+  - variable `compacted` — `compacted = buildSequentialHandoff(assists, maxCharsPerHandoff)`
+  - variable `hints` — `hints = assists`
+  - arrow-function `<anonymous@4174>` — `entry => entry.content`
+  - arrow-function `<anonymous@4207>` — `entry => `[$`
+  - arrow-function `<anonymous@4512>` — `entry => entry.role`
+  - function `buildSequentialSubagentTasks` — `export function buildSequentialSubagentTasks(input =`
+  - variable `firstAttempt` — `firstAttempt = input.attempt <= 1`
+  - function `collectSequentialSubagentHints` — `export async function collectSequentialSubagentHints(input =`
+  - variable `orchestratedAssist` — `orchestratedAssist = typeof input.runAssistWindow === 'function'`
+  - variable `firstAttempt` — `firstAttempt = input.attempt <= 1`
+  - variable `tasks` — `tasks = buildSequentialSubagentTasks(input)`
+  - arrow-function `runPipeline` — `() => runSequentialSubagentPipeline(`
+  - variable `result` — `result = input.runAssistWindow && typeof input.runAssistWindow === 'function'`
+- `scripts/subagent-orchestrator.mjs` (69 symbols)
+  - variable `auditDir` — `auditDir = null`
+  - function `getAuditDir` — `function getAuditDir()`
+  - variable `<anonymous@879>`
+  - variable `BUDGETS` — `BUDGETS =`
+  - variable `MAX_SUBAGENTS` — `MAX_SUBAGENTS = 4`
+  - variable `PERSONAS` — `PERSONAS =`
+  - function `classifyTask` — `function classifyTask(task)` — *Classify task complexity to determine tier and decomposition strategy*
+  - variable `<anonymous@2788>`
+  - variable `text` — `text = (description || '').toLowerCase()`
+  - variable `fileCount` — `fileCount = files?.length || 0`
+  - variable `loc` — `loc = linesOfCode || 0`
+  - function `decompose` — `function decompose(task, classification)` — *Decompose a task into subtasks based on file boundaries*
+  - variable `subtasks` — `subtasks = []`
+  - variable `<anonymous@3817>`
+  - variable `workUnits` — `workUnits = chunkFiles(files, classification.estimatedSubagents)`
+  - variable `i` — `i = 0`
+  - variable `unit` — `unit = workUnits[i]`
+  - arrow-function `<anonymous@5110>` — `(_, i) => `implement-$`
+  - function `chunkFiles` — `function chunkFiles(files, count)`
+  - variable `chunks` — `chunks = []`
+  - variable `perChunk` — `perChunk = Math.ceil(files.length / count)`
+  - variable `i` — `i = 0`
+  - function `checkBudget` — `function checkBudget(taskId, tier, spentSoFar)` — *Circuit breaker: Check if we've exceeded budget*
+  - variable `budget` — `budget = BUDGETS[tier]`
+  - variable `usage` — `usage = spentSoFar / budget`
+  - function `buildDAG` — `function buildDAG(subtasks)` — *Build the execution DAG from subtasks*
+  - variable `nodeMap` — `nodeMap = new Map(subtasks.map(s => [s.id,`
+  - arrow-function `<anonymous@6196>` — `s => [s.id,`
+  - variable `node` — `node`
+  - variable `depId` — `depId`
+  - variable `dep` — `dep = nodeMap.get(depId)`
+  - function `executeDAG` — `async function executeDAG(dag, taskId, tier)` — *Execute DAG with parallel scheduling*
+  - variable `results` — `results = new Map()`
+  - variable `spentTokens` — `spentTokens = 0`
+  - variable `startTime` — `startTime = Date.now()`
+  - variable `log` — `log = []`
+  - function `readyNodes` — `function readyNodes()`
+  - arrow-function `<anonymous@6749>` — `n =>`
+  - arrow-function `<anonymous@6813>` — `d => results.has(d)`
+  - variable `ready` — `ready = readyNodes()`
+  - … and 29 more symbols
+
+### Capability/tool registry — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 42 · **Callable:** 24 · **Authored purpose:** 0
+- `scripts/capability-policy.mjs` (34 symbols)
+  - variable `CAPABILITY_DECISION_VERSION` — `CAPABILITY_DECISION_VERSION = '1.0.0'`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `actorMatches` — `function actorMatches(actual, expected)`
+  - function `actionMatches` — `function actionMatches(actions, action)`
+  - function `mcpResourceMatches` — `function mcpResourceMatches(granted, requested)`
+  - function `canonicalExistingPath` — `function canonicalExistingPath(value, name)`
+  - function `pathResourceMatches` — `function pathResourceMatches(granted, requested)`
+  - variable `grantRoot` — `grantRoot = canonicalExistingPath(granted, 'granted resource')`
+  - variable `requestedPath` — `requestedPath = canonicalExistingPath(requested, 'requested resource')`
+  - function `resourceMatches` — `function resourceMatches(kind, granted, requested)`
+  - function `nowFromClock` — `function nowFromClock(clock)`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `cloneActor` — `function cloneActor(actor)`
+  - function `normalizeRequest` — `function normalizeRequest(`
+  - variable `request` — `request =`
+  - function `decisionBase` — `function decisionBase(policy, request, decidedAt)`
+  - function `validateDecision` — `function validateDecision(decision)`
+  - class `CapabilityPolicy` — `export class CapabilityPolicy`
+  - constructor `constructor` — `constructor(opts =`
+  - arrow-function `<anonymous@3875>` — `() => new Date()`
+  - arrow-function `<anonymous@3935>` — `grant =>`
+  - method `evaluate` — `evaluate(input =`
+  - variable `request` — `request = normalizeRequest(input)`
+  - variable `now` — `now = nowFromClock(this.clock)`
+  - variable `nowMs` — `nowMs = now.getTime()`
+  - variable `grant` — `grant`
+  - variable `capability` — `capability`
+  - method `authorize` — `authorize(input =`
+  - variable `decision` — `decision = this.evaluate(input)`
+  - method `assertApproval` — `assertApproval(decision,`
+  - function `recordCapabilityDecisionEvidence` — `export function recordCapabilityDecisionEvidence(compiler, decision, options =`
+  - variable `artifact` — `artifact = compiler.addJsonArtifact('other',`
+  - variable `assertion` — `assertion = compiler.addAssertion(`
+- `scripts/mcp-federation-manifest.mjs` (8 symbols)
+  - variable `MCP_FEDERATION_MANIFEST_VERSION` — `MCP_FEDERATION_MANIFEST_VERSION = '1.1.0'`
+  - variable `MCP_FEDERATION_MANIFEST` — `MCP_FEDERATION_MANIFEST = Object.freeze(`
+  - function `getManifestServer` — `export function getManifestServer(serverId)`
+  - arrow-function `<anonymous@2322>` — `s => s.id === serverId`
+  - function `routeServersForTask` — `export function routeServersForTask(text = '')`
+  - variable `normalized` — `normalized = String(text || '').toLowerCase()`
+  - arrow-function `<anonymous@2508>` — `server =>`
+  - arrow-function `<anonymous@2556>` — `kw => normalized.includes(kw.toLowerCase())`
+
+### Governed terminal/file operations — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 435 · **Callable:** 131 · **Authored purpose:** 13
+- `scripts/bash-action-transport.mjs` (29 symbols)
+  - variable `BASH_ACTION_TRANSPORT_VERSION` — `BASH_ACTION_TRANSPORT_VERSION = '1.0.0'`
+  - variable `BASH_EXPLORE_ALLOWLIST` — `BASH_EXPLORE_ALLOWLIST = Object.freeze([`
+  - variable `GIT_EXPLORE_SUBCOMMANDS` — `GIT_EXPLORE_SUBCOMMANDS = new Set(['status', 'log', 'diff'])`
+  - variable `EXPLORE_BUDGETS` — `EXPLORE_BUDGETS = Object.freeze(`
+  - variable `DEFAULT_TASK_CLASS` — `DEFAULT_TASK_CLASS = 'unfamiliar-localization'`
+  - class `BashActionTransportError` — `export class BashActionTransportError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'bashActionTransport')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `exploreBudgetForTaskClass` — `export function exploreBudgetForTaskClass(taskClass)`
+  - variable `key` — `key = typeof taskClass === 'string' && taskClass.trim()`
+  - variable `budget` — `budget = EXPLORE_BUDGETS[key]`
+  - function `validateExploreCommand` — `export function validateExploreCommand(executable, args = [])`
+  - variable `exe` — `exe = typeof executable === 'string' ? executable.trim() : ''`
+  - variable `normalizedArgs` — `normalizedArgs = Array.isArray(args) ? args.map(String) : []`
+  - variable `subcommand` — `subcommand = normalizedArgs[0]`
+  - function `lineCount` — `function lineCount(text)`
+  - arrow-function `<anonymous@3085>` — `line => line.length > 0`
+  - function `contextSpansFromExploreResult` — `export function contextSpansFromExploreResult(result)`
+  - variable `observations` — `observations = result?.observations || result?.result?.observations || []`
+  - arrow-function `<anonymous@3292>` — `observation => observation?.action?.type === 'read-file'`
+  - arrow-function `<anonymous@3359>` — `observation =>`
+  - variable `endLine` — `endLine = Math.max(1, lineCount(observation.stdout))`
+  - function `runBashExploreTransport` — `export async function runBashExploreTransport(`
+  - arrow-function `<anonymous@3950>` — `() => new Date()`
+  - variable `resolvedExecutor` — `resolvedExecutor = executor || new SandboxEngineActionExecutor(`
+  - variable `loop` — `loop = new GovernedActionLoop(`
+  - variable `result` — `result = await loop.run(`
+  - variable `discoveredFiles` — `discoveredFiles = [...new Set(result.discoveredFiles || [])]`
+  - variable `contextSpans` — `contextSpans = contextSpansFromExploreResult(result)`
+- `scripts/governed-action-loop.mjs` (406 symbols)
+  - variable `GOVERNED_ACTION_LOOP_VERSION` — `GOVERNED_ACTION_LOOP_VERSION = '1.0.0'`
+  - variable `ACTION_TYPES` — `ACTION_TYPES = new Set([`
+  - variable `COMMAND_ACTION_TYPES` — `COMMAND_ACTION_TYPES = new Set(['run-command', 'dependency-install'])`
+  - variable `WRITE_ACTION_TYPES` — `WRITE_ACTION_TYPES = new Set(['write-file', 'edit-file'])`
+  - variable `EXECUTION_CLASSES` — `EXECUTION_CLASSES = new Set(['container', 'gvisor', 'vm', 'bwrap'])`
+  - function `commandTargetFiles` — `function commandTargetFiles(command)`
+  - variable `args` — `args = Array.isArray(command?.args) ? command.args : []`
+  - arrow-function `<anonymous@2877>` — `a => typeof a === 'string' && !a.startsWith('-') && !a.includes('=')`
+  - arrow-function `<anonymous@3044>` — `a => a.replace(/^\.\//, '')`
+  - function `fileExists` — `function fileExists(worktreePath, rel, writtenPaths)`
+  - variable `norm` — `norm = String(rel).replace(/^\.\//, '')`
+  - variable `abs` — `abs = path.resolve(worktreePath, norm)`
+  - function `coordinationTargets` — `function coordinationTargets(grant, env = process.env)`
+  - variable `fromGrant` — `fromGrant = Array.isArray(grant?.coordinationTargets) ? grant.coordinationTargets : []`
+  - variable `fromEnv` — `fromEnv = typeof env.ARC_MULTIFILE_COORDINATION_TARGETS === 'string' && env.ARC_MULTIFILE_COORDINATION_TARGETS.trim()`
+  - arrow-function `<anonymous@5012>` — `a => typeof a === 'string' && a.trim()`
+  - arrow-function `<anonymous@5063>` — `a => a.trim().replace(/^\.\//, '')`
+  - function `writtenThisRun` — `function writtenThisRun(writtenPaths, rel)`
+  - variable `norm` — `norm = String(rel).replace(/^\.\//, '')`
+  - variable `NETWORK_POLICIES` — `NETWORK_POLICIES = new Set(['none', 'allowlist'])`
+  - function `effectiveActionTypes` — `export function effectiveActionTypes(env = process.env)` — *The action types admissible into a compiled scope's `tools`, given the environment. UNSET (default) ⇒ returns the SAME `ACTION_TYPES` object — write-file/edit-file can never be admitted, so every OFF *
+  - class `GovernedActionLoopError` — `export class GovernedActionLoopError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'governedActionLoop')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => nonEmptyString(item, `$`
+  - arrow-function `<anonymous@7312>` — `(item, index) => nonEmptyString(item, `$`
+  - variable `item` — `item`
+  - function `boundedInteger` — `function boundedInteger(value, pathName, min, max)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = nonEmptyString(value, pathName)`
+  - function `canonicalValue` — `function canonicalValue(value)`
+  - arrow-function `<anonymous@8243>` — `key => [key, canonicalValue(value[key])]`
+  - function `sha256Of` — `function sha256Of(value,`
+  - … and 366 more symbols
+
+### Browser and web adapters — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 243 · **Callable:** 84 · **Authored purpose:** 17
+- `scripts/arc-browser.mjs` (74 symbols)
+  - variable `ARC_BROWSER_VERSION` — `ARC_BROWSER_VERSION = '0.3.0'`
+  - function `resolveChromiumExecutable` — `export function resolveChromiumExecutable(` — *Resolve a working Chromium executable. Playwright sometimes has a full `chromium-<build>` installed while its default points at a missing `chrome-headless-shell`; prefer the newest installed full buil*
+  - variable `builds` — `builds = readdir(cacheDir)`
+  - arrow-function `<anonymous@2031>` — `(d) => /^chromium-\d+$/.test(d)`
+  - arrow-function `<anonymous@2076>` — `(a, b) => Number(b.split('-')[1]) - Number(a.split('-')[1])`
+  - variable `build` — `build`
+  - variable `rel` — `rel`
+  - variable `exe` — `exe = path.join(cacheDir, build, ...rel)`
+  - variable `candidate` — `candidate`
+  - function `normalizeUrl` — `export function normalizeUrl(input)` — *Normalize user-typed input into a navigable URL (localhost, bare host, etc.).*
+  - variable `url` — `url = String(input ?? '').trim()`
+  - variable `BROWSER_CONTROLLERS` — `BROWSER_CONTROLLERS = Object.freeze(['none', 'user', 'agent'])`
+  - class `ArcBrowserFailure` — `export class ArcBrowserFailure extends Error`
+  - constructor `constructor` — `constructor(`
+  - method `toJSON` — `toJSON()`
+  - class `BrowserSession` — `export class BrowserSession`
+  - property `#controlCapability` — `#controlCapability = null`
+  - constructor `constructor` — `constructor(`
+  - method `isOpen` — `get isOpen()`
+  - method `launch` — `async launch()`
+  - variable `launcher` — `launcher = this.launcher || (await import('playwright')).chromium`
+  - variable `<anonymous@5546>`
+  - arrow-function `<anonymous@6355>` — `() =>`
+  - method `goto` — `async goto(input,`
+  - arrow-function `<anonymous@6624>` — `() => (`
+  - method `back` — `async back(`
+  - arrow-function `<anonymous@6829>` — `() => (`
+  - method `forward` — `async forward(`
+  - arrow-function `<anonymous@6990>` — `() => (`
+  - method `reload` — `async reload(`
+  - arrow-function `<anonymous@7152>` — `() => (`
+  - method `state` — `async state()` — *Current navigation state for the UI (url, title, who's driving).*
+  - arrow-function `<anonymous@7433>` — `() => ''`
+  - method `screenshot` — `async screenshot(` — *A JPEG/PNG screenshot buffer (pixels for vision / a one-shot preview).*
+  - variable `error` — `error`
+  - method `snapshot` — `async snapshot(` — *Readable perception for the agent: page text + interactive elements with stable refs (so a text model can decide what to click without vision).*
+  - variable `data` — `data = await this.page.evaluate((limit) =>`
+  - arrow-function `<anonymous@9026>` — `(limit) =>`
+  - arrow-function `clip` — `(s, n) => (s || '').replace(/\s+/g, ' ').trim().slice(0, n)`
+  - variable `els` — `els = []`
+  - … and 34 more symbols
+- `scripts/searxng-web-search.mjs` (169 symbols)
+  - variable `SEARXNG_PROVIDER_VERSION` — `SEARXNG_PROVIDER_VERSION = '1.6.0'`
+  - function `parseEngineList` — `function parseEngineList(value = '')`
+  - arrow-function `<anonymous@1487>` — `engine => engine.trim()`
+  - variable `SEARXNG_PREFERRED_ENGINES` — `SEARXNG_PREFERRED_ENGINES = Object.freeze(`
+  - variable `SEARXNG_FALLBACK_ENGINES` — `SEARXNG_FALLBACK_ENGINES = Object.freeze(`
+  - function `getDefaultSearxngUrl` — `export function getDefaultSearxngUrl()`
+  - variable `DEFAULT_CRAWL4AI_URL` — `DEFAULT_CRAWL4AI_URL = process.env.CRAWL4AI_URL || 'http://127.0.0.1:11235'`
+  - variable `toolchainEnvLoaded` — `toolchainEnvLoaded = false`
+  - function `resolveCrawl4aiToken` — `export function resolveCrawl4aiToken()` — *Read at call time — never use module-level defaults for apiToken (frozen at import).*
+  - variable `token` — `token = process.env.CRAWL4AI_API_TOKEN`
+  - variable `DEFAULT_CRAWL4AI_TOKEN` — `DEFAULT_CRAWL4AI_TOKEN = ''`
+  - class `SearXNGProviderError` — `export class SearXNGProviderError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'searxngProvider')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `redactText` — `function redactText(value)`
+  - function `canonicalizeUrl` — `export function canonicalizeUrl(url = '')` — *Canonical URL for dedup — https scheme, no trailing slash (path root kept).*
+  - variable `raw` — `raw = String(url || '').trim()`
+  - variable `hasScheme` — `hasScheme = /^https?:\/\//i.test(raw)`
+  - variable `parsed` — `parsed = new URL(hasScheme ? raw : `https://$`
+  - variable `path` — `path = parsed.pathname || '/'`
+  - function `buildSearxngSearchUrl` — `function buildSearxngSearchUrl(` — *Search the web via a local SearXNG instance.*
+  - variable `url` — `url = new URL('/search', searxngUrl)`
+  - function `fetchSearxngJson` — `async function fetchSearxngJson(searchUrl,`
+  - variable `response` — `response`
+  - variable `controller` — `controller = new AbortController()`
+  - variable `timeout` — `timeout = setTimeout(() => controller.abort(), timeoutMs)`
+  - arrow-function `<anonymous@5947>` — `() => controller.abort()`
+  - variable `parseError` — `parseError`
+  - function `mapSearxngResults` — `function mapSearxngResults(rawResults = [], maxResults = 10)`
+  - arrow-function `<anonymous@6591>` — `(item, index) => (`
+  - function `searxngSearch` — `export async function searxngSearch(`
+  - variable `startedAt` — `startedAt = new Date().toISOString()`
+  - variable `startedMs` — `startedMs = Date.now()`
+  - variable `attempts` — `attempts = []`
+  - variable `callerSpecifiedEngines` — `callerSpecifiedEngines = engines.length > 0`
+  - variable `resolvedCategories` — `resolvedCategories = Array.isArray(categories)`
+  - variable `engine` — `engine`
+  - variable `lastData` — `lastData =`
+  - variable `usedAttempt` — `usedAttempt = attempts[0]`
+  - … and 129 more symbols
+
+### Research/MCP connectors — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 133 · **Callable:** 40 · **Authored purpose:** 0
+- `scripts/mcp-federation-policy.mjs` (50 symbols)
+  - variable `MCP_FEDERATION_POLICY_VERSION` — `MCP_FEDERATION_POLICY_VERSION = '1.0.0'`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 30_000`
+  - variable `DEFAULT_MAX_OUTPUT_BYTES` — `DEFAULT_MAX_OUTPUT_BYTES = 1_048_576`
+  - variable `DEFAULT_MAX_ARGUMENT_BYTES` — `DEFAULT_MAX_ARGUMENT_BYTES = 131_072`
+  - variable `DEFAULT_MAX_SCHEMA_BYTES` — `DEFAULT_MAX_SCHEMA_BYTES = 262_144`
+  - variable `DEFAULT_MAX_TOOLS` — `DEFAULT_MAX_TOOLS = 128`
+  - variable `REMOTE_TRANSPORTS` — `REMOTE_TRANSPORTS = new Set(['http', 'sse'])`
+  - variable `TOOL_DESCRIPTION_MODES` — `TOOL_DESCRIPTION_MODES = new Set(['trusted-registry-only', 'disabled'])`
+  - class `MCPFederationPolicyError` — `export class MCPFederationPolicyError extends Error`
+  - constructor `constructor` — `constructor(message, path = 'mcpFederation')`
+  - function `fail` — `function fail(path, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, path)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, path)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, path)`
+  - function `boolean` — `function boolean(value, path)`
+  - function `boundedInteger` — `function boundedInteger(value, fallback, path, min, max)`
+  - variable `candidate` — `candidate = value ?? fallback`
+  - function `stringArray` — `function stringArray(value, path,`
+  - variable `result` — `result = value.map((item, index) => nonEmptyString(item, `$`
+  - arrow-function `<anonymous@2578>` — `(item, index) => nonEmptyString(item, `$`
+  - function `httpsUrl` — `function httpsUrl(value, path)`
+  - variable `raw` — `raw = nonEmptyString(value, path)`
+  - variable `url` — `url`
+  - function `oneOf` — `function oneOf(value, choices, path)`
+  - function `normalizePromptInjectionPolicy` — `function normalizePromptInjectionPolicy(value =`
+  - variable `mode` — `mode = value.toolDescriptionMode || 'trusted-registry-only'`
+  - function `normalizeRemoteMcpServerConfig` — `function normalizeRemoteMcpServerConfig(id, config)`
+  - variable `serverId` — `serverId = nonEmptyString(config.id || id, `mcpFederation.servers.$`
+  - variable `endpoint` — `endpoint = httpsUrl(config.endpoint, `mcpFederation.servers.$`
+  - variable `issuer` — `issuer = httpsUrl(config.oauth.issuer, `mcpFederation.servers.$`
+  - variable `audience` — `audience = nonEmptyString(config.oauth.audience, `mcpFederation.servers.$`
+  - variable `resourceIndicator` — `resourceIndicator = httpsUrl(`
+  - variable `normalized` — `normalized =`
+  - function `normalizeServer` — `function normalizeServer(id, config)`
+  - variable `trust` — `trust = config?.trust || 'local'`
+  - function `validateMcpFederationManifest` — `export function validateMcpFederationManifest(manifest)`
+  - … and 10 more symbols
+- `scripts/research-crawler.mjs` (83 symbols)
+  - variable `deepResearchModule` — `deepResearchModule = null`
+  - function `getDeepResearchScrape` — `async function getDeepResearchScrape()`
+  - variable `e` — `e`
+  - variable `LOCAL_URL` — `LOCAL_URL = process.env.LOCAL_URL || 'http://localhost:8080/v1/chat/completions'`
+  - variable `MODEL` — `MODEL = process.env.MODEL || 'qwen3.5-9b'`
+  - variable `MAX_QUERIES` — `MAX_QUERIES = parseInt(process.env.MAX_QUERIES || '5', 10)`
+  - variable `MAX_URLS` — `MAX_URLS = parseInt(process.env.MAX_URLS || '3', 10)`
+  - variable `MAX_DEPTH` — `MAX_DEPTH = parseInt(process.env.MAX_DEPTH || '5', 10)`
+  - variable `OUTPUT_DIR` — `OUTPUT_DIR = process.env.OUTPUT_DIR || path.join(AGENTIC_OS_STATE_ROOT, 'research')`
+  - variable `FETCH_TIMEOUT_MS` — `FETCH_TIMEOUT_MS = parseInt(process.env.FETCH_TIMEOUT_MS || '30000', 10)`
+  - function `safeFetch` — `async function safeFetch(body, opts =`
+  - variable `controller` — `controller = new AbortController()`
+  - variable `timeout` — `timeout = setTimeout(() => controller.abort(), opts.timeoutMs || FETCH_TIMEOUT_MS)`
+  - arrow-function `<anonymous@2574>` — `() => controller.abort()`
+  - variable `response` — `response = await fetch(LOCAL_URL,`
+  - variable `data` — `data = await response.json()`
+  - variable `content` — `content = data?.choices?.[0]?.message?.content ?? ''`
+  - variable `e` — `e`
+  - function `extractJSON` — `function extractJSON(content)`
+  - variable `blockMatch` — `blockMatch = content.match(/```(?:json)?\n?([\s\S]*?)```/)`
+  - variable `braceMatch` — `braceMatch = content.match(/\`
+  - function `generateQueries` — `async function generateQueries(topic)`
+  - variable `prompt` — `prompt = `You are a research assistant. Given the topic below, generate $`
+  - variable `result` — `result = await safeFetch(`
+  - variable `raw` — `raw = result.content`
+  - variable `parsed` — `parsed = extractJSON(raw)`
+  - variable `queries` — `queries = Array.isArray(parsed) ? parsed : parsed.queries || parsed.search_queries || []`
+  - arrow-function `<anonymous@4657>` — `q => typeof q === 'string'`
+  - arrow-function `<anonymous@4759>` — `l => l.replace(/^\d+\.\s*/, '').trim()`
+  - function `discoverUrls` — `async function discoverUrls(query)`
+  - variable `apiKey` — `apiKey = process.env.BRAVE_API_KEY || process.env.SEARCH_API_KEY`
+  - variable `res` — `res = await fetch(`https://api.search.brave.com/res/v1/web/search?q=$`
+  - variable `data` — `data = await res.json()`
+  - variable `urls` — `urls = data.web?.results?.map(r => r.url) || []`
+  - arrow-function `<anonymous@5507>` — `r => r.url`
+  - variable `e` — `e`
+  - variable `prompt` — `prompt = `Given the search query "$`
+  - variable `result` — `result = await safeFetch(`
+  - variable `parsed` — `parsed = extractJSON(result.content)`
+  - variable `urls` — `urls = Array.isArray(parsed) ? parsed : parsed.urls || parsed.sources || []`
+  - … and 43 more symbols
+
+### Compilers, tests, SMT/CAS and simulation — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 451 · **Callable:** 169 · **Authored purpose:** 17
+- `scripts/deterministic-verifier.mjs` (166 symbols)
+  - class `DeterministicVerifier` — `export class DeterministicVerifier`
+  - constructor `constructor` — `constructor(runId, opts =`
+  - method `_check` — `_check(name, testFn, description)`
+  - variable `start` — `start = performance.now()`
+  - variable `result` — `result = testFn()`
+  - variable `passed` — `passed = result === true || (typeof result === 'object' && result.passed === true)`
+  - variable `check` — `check =`
+  - variable `e` — `e`
+  - variable `check` — `check =`
+  - method `_checkAsync` — `async _checkAsync(name, testFn, description)`
+  - variable `start` — `start = performance.now()`
+  - variable `result` — `result = await testFn()`
+  - variable `passed` — `passed = result === true || (typeof result === 'object' && result.passed === true)`
+  - variable `check` — `check =`
+  - variable `e` — `e`
+  - variable `check` — `check =`
+  - method `verifyModelRouting` — `verifyModelRouting()`
+  - variable `testCases` — `testCases = [`
+  - variable `tc` — `tc`
+  - arrow-function `<anonymous@6077>` — `() =>`
+  - variable `result` — `result = classifyTask(tc.task)`
+  - variable `passed` — `passed = result.tier === tc.expected`
+  - method `verifySubagentDeployment` — `async verifySubagentDeployment()`
+  - arrow-function `<anonymous@6708>` — `async () =>`
+  - variable `letta` — `letta = new LettaKernel()`
+  - variable `watchdog` — `watchdog = new ContextWatchdog(letta, null, 1000, 'verify-test')`
+  - variable `result` — `result = await watchdog.checkAndHandoff(`
+  - variable `passed` — `passed = result !== null && result.status === 'resuming'`
+  - arrow-function `<anonymous@7462>` — `async () =>`
+  - variable `letta` — `letta = new LettaKernel()`
+  - variable `watchdog` — `watchdog = new ContextWatchdog(letta, null, 1000, 'verify-test')`
+  - variable `result` — `result = await watchdog.checkAndHandoff(`
+  - variable `passed` — `passed = result === null`
+  - arrow-function `<anonymous@8131>` — `async () =>`
+  - variable `letta` — `letta = new LettaKernel()`
+  - variable `mem` — `mem = new AgentMemory(`
+  - variable `watchdog` — `watchdog = new ContextWatchdog(letta, mem, 1000, 'verify-test')`
+  - variable `result` — `result = await watchdog.checkAndHandoff(`
+  - variable `passed` — `passed = result !== null &&`
+  - method `verifyTokenBudget` — `verifyTokenBudget()`
+  - … and 126 more symbols
+- `scripts/environment-provisioner.mjs` (285 symbols)
+  - variable `ENVIRONMENT_PROVISIONER_VERSION` — `ENVIRONMENT_PROVISIONER_VERSION = '1.1.0'`
+  - variable `DETECT_GLOB_TIMEOUT_MS` — `DETECT_GLOB_TIMEOUT_MS = 30_000`
+  - variable `ECOSYSTEMS` — `ECOSYSTEMS = [`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'package.json'))`
+  - arrow-function `install` — `r => existsSync(path.join(r, 'pnpm-lock.yaml')) ? [['pnpm', 'install', '--frozen-lockfile']]`
+  - arrow-function `toolchain` — `r => existsSync(path.join(r, 'pnpm-lock.yaml')) ? 'pnpm' : existsSync(path.join(r, 'yarn.lock')) ? 'yarn' : 'npm'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'pyproject.toml')) || existsSync(path.join(r, 'requirements.txt')) || existsSync(path.join(r, 'setup.py'))`
+  - arrow-function `install` — `r => existsSync(path.join(r, 'poetry.lock')) ? [['poetry', 'install']]`
+  - arrow-function `toolchain` — `r => existsSync(path.join(r, 'poetry.lock')) ? 'poetry' : existsSync(path.join(r, 'uv.lock')) ? 'uv' : 'pip'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'Cargo.toml'))`
+  - arrow-function `install` — `() => [['cargo', 'fetch']]`
+  - arrow-function `toolchain` — `() => 'cargo'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'go.mod'))`
+  - arrow-function `install` — `() => [['go', 'mod', 'download']]`
+  - arrow-function `toolchain` — `() => 'go'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'pom.xml'))`
+  - arrow-function `install` — `() => [['mvn', '-q', 'dependency:resolve']]`
+  - arrow-function `toolchain` — `() => 'mvn'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'build.gradle')) || existsSync(path.join(r, 'build.gradle.kts'))`
+  - arrow-function `install` — `r => existsSync(path.join(r, 'gradlew')) ? [['./gradlew', 'dependencies', '--quiet']] : [['gradle', 'dependencies', '--quiet']]`
+  - arrow-function `toolchain` — `r => existsSync(path.join(r, 'gradlew')) ? './gradlew' : 'gradle'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'Gemfile'))`
+  - arrow-function `install` — `() => [['bundle', 'install']]`
+  - arrow-function `toolchain` — `() => 'bundle'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'composer.json'))`
+  - arrow-function `install` — `() => [['composer', 'install', '--no-interaction']]`
+  - arrow-function `toolchain` — `() => 'composer'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'global.json')) || detectByGlob(r, /\.(csproj|sln|fsproj)$/)`
+  - arrow-function `install` — `() => [['dotnet', 'restore']]`
+  - arrow-function `toolchain` — `() => 'dotnet'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'CMakeLists.txt'))`
+  - arrow-function `install` — `() => [['cmake', '-S', '.', '-B', 'build']]`
+  - arrow-function `toolchain` — `() => 'cmake'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'mix.exs'))`
+  - arrow-function `install` — `() => [['mix', 'deps.get']]`
+  - arrow-function `toolchain` — `() => 'mix'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'stack.yaml')) || detectByGlob(r, /\.cabal$/)`
+  - arrow-function `install` — `r => existsSync(path.join(r, 'stack.yaml')) ? [['stack', 'build', '--only-dependencies']] : [['cabal', 'build', '--only-dependencies']]`
+  - arrow-function `toolchain` — `r => existsSync(path.join(r, 'stack.yaml')) ? 'stack' : 'cabal'`
+  - arrow-function `detect` — `r => existsSync(path.join(r, 'Package.swift'))`
+  - … and 245 more symbols
+
+### Sandbox and containment — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 550 · **Callable:** 173 · **Authored purpose:** 24
+- `scripts/arc-os-sandbox.mjs` (135 symbols)
+  - variable `ARC_OS_SANDBOX_VERSION` — `ARC_OS_SANDBOX_VERSION = '0.1.0'`
+  - variable `FROZEN_ENV_TURN_PERMISSION` — `FROZEN_ENV_TURN_PERMISSION = process.env.ARC_TURN_PERMISSION`
+  - variable `VALID_TURN_PERMISSIONS` — `VALID_TURN_PERMISSIONS = new Set(['plan', 'ask', 'accept-edits', 'auto', 'bypass'])`
+  - function `resolveTurnPermission` — `export function resolveTurnPermission(explicit,` — *Resolve the authoritative per-turn permission mode WITHOUT a racing live-env read (B1 STEP 0, ARC_TURN_PERM_STRICT). STRICT (flag on): the explicit per-turn value if valid → else the IMPORT-FROZEN lau*
+  - arrow-function `valid` — `(v) => typeof v === 'string' && VALID_TURN_PERMISSIONS.has(v)`
+  - variable `resolved` — `resolved`
+  - variable `envPerm` — `envPerm = process.env.ARC_TURN_PERMISSION`
+  - variable `raced` — `raced = strict && valid(process.env.ARC_TURN_PERMISSION) && process.env.ARC_TURN_PERMISSION !== resolved && !valid(explicit)`
+  - variable `BYPASS_MONOTONE_FLAG` — `BYPASS_MONOTONE_FLAG = 'ARC_SANDBOX_BYPASS_TRACKED'`
+  - function `bypassMonotoneArmed` — `function bypassMonotoneArmed(env = process.env)`
+  - function `bypassProfile` — `function bypassProfile(cwd)` — *The tracked bypass profile: non-null, explicitly labeled `bypass:true`/`contained:false`, and read IDENTICALLY by every consumer as "the user authorized unrestricted host execution" — never conflated *
+  - variable `CONTAINMENT_LADDER` — `CONTAINMENT_LADDER = Object.freeze(['plan', 'ask', 'accept-edits', 'auto', 'bypass'])`
+  - function `defaultProbe` — `function defaultProbe(binary)`
+  - function `bwrapAvailable` — `export function bwrapAvailable(probe = defaultProbe)` — *Is `bwrap` runnable on this machine?*
+  - variable `HARDENED_ENV_ALLOWLIST` — `HARDENED_ENV_ALLOWLIST = [`
+  - variable `SECRET_HOME_DIRS` — `SECRET_HOME_DIRS = ['.ssh', '.aws', '.gnupg', '.gpg', '.agentic-models', '.claude', '.docker', '.kube', '.azure', '.config/gcloud', '.config/gh']`
+  - variable `SECRET_HOME_FILES` — `SECRET_HOME_FILES = ['.netrc', '.git-credentials', '.npmrc', '.pypirc', '.claude.json', '.cargo/credentials.toml', '.cargo/credentials']`
+  - variable `ALLOWLIST_ROOT_HARD` — `ALLOWLIST_ROOT_HARD = ['/usr']`
+  - variable `ALLOWLIST_ROOT_TRY` — `ALLOWLIST_ROOT_TRY = [`
+  - variable `ALLOWLIST_ROOT_HOME_DEPS` — `ALLOWLIST_ROOT_HOME_DEPS = ['.local/lib', '.local/bin', 'go/pkg/mod', 'go/bin', '.rustup', '.cargo']`
+  - variable `ALLOWLIST_ROOT_TRY_NET` — `ALLOWLIST_ROOT_TRY_NET = ['/etc/resolv.conf', '/etc/hosts']`
+  - variable `ALLOWLIST_ROOT_BROAD_EXTRA` — `ALLOWLIST_ROOT_BROAD_EXTRA = new Set(['/home', '/etc', '/root', '/var'])`
+  - function `hardenedSandboxEnv` — `export function hardenedSandboxEnv(env = process.env)` — *D1 — the secret-free env the hardened sandbox re-adds after `--clearenv`. Allowlist (default-deny) so a NEW secret var name is dropped by default; TMPDIR is pinned to the in-sandbox tmpfs.*
+  - variable `allow` — `allow = new Set(HARDENED_ENV_ALLOWLIST)`
+  - variable `k` — `k`
+  - arrow-function `<anonymous@13584>` — `s => s.trim()`
+  - variable `out` — `out =`
+  - variable `k` — `k`
+  - function `secretMaskArgs` — `function secretMaskArgs(env = process.env)` — *D2 — bwrap args that shadow the $HOME credential trees. Masks ONLY paths that actually EXIST on the host: a non-existent credential dir has no secret to hide, and forcing bwrap to mkdir a mount point *
+  - variable `home` — `home = env.HOME`
+  - variable `args` — `args = []`
+  - variable `d` — `d`
+  - variable `abs` — `abs = pathJoin(home, d)`
+  - variable `f` — `f`
+  - variable `abs` — `abs = pathJoin(home, f)`
+  - function `isUnderSecretHome` — `function isUnderSecretHome(candidate, env = process.env)` — *D2 guard — true if `candidate` (absolute path) equals or is nested under any SECRET_HOME_DIRS/ SECRET_HOME_FILES entry under `env.HOME`. Used to stop caller-supplied readablePaths from re-exposing a m*
+  - variable `home` — `home = env.HOME`
+  - variable `resolved` — `resolved = pathResolve(candidate)`
+  - variable `resolvedHome` — `resolvedHome = pathResolve(home)`
+  - variable `entry` — `entry`
+  - … and 95 more symbols
+- `scripts/sandbox-engine.mjs` (101 symbols)
+  - class `SandboxEngine` — `export class SandboxEngine`
+  - constructor `constructor` — `constructor(options =`
+  - method `_dockerCmd` — `_dockerCmd(baseArgs)`
+  - method `_spawnDocker` — `_spawnDocker(baseArgs, opts =`
+  - variable `<anonymous@1508>`
+  - method `_copyWorkspace` — `_copyWorkspace(cwd, sandboxId)`
+  - arrow-function `<anonymous@1648>` — `(resolve, reject) =>`
+  - variable `archive` — `archive = spawn('tar', ['-C', cwd, '-cf', '-', '.'],`
+  - variable `extract` — `extract = this._spawnDocker(`
+  - variable `archiveError` — `archiveError = ''`
+  - variable `extractError` — `extractError = ''`
+  - variable `archiveCode` — `archiveCode`
+  - variable `extractCode` — `extractCode`
+  - variable `archiveClosed` — `archiveClosed = false`
+  - variable `extractClosed` — `extractClosed = false`
+  - variable `settled` — `settled = false`
+  - arrow-function `<anonymous@2337>` — `data =>`
+  - arrow-function `<anonymous@2414>` — `data =>`
+  - arrow-function `finish` — `() =>`
+  - arrow-function `<anonymous@2943>` — `code =>`
+  - arrow-function `<anonymous@3061>` — `code =>`
+  - arrow-function `<anonymous@3179>` — `error =>`
+  - arrow-function `<anonymous@3330>` — `error =>`
+  - method `_detectBestRuntime` — `_detectBestRuntime()` — *Auto-detect best available container runtime. Prefers gVisor runsc > Kata > standard Docker.*
+  - arrow-function `hasRunsc` — `(useSudo) =>`
+  - variable `command` — `command = useSudo ? 'sudo' : 'docker'`
+  - variable `args` — `args = useSudo`
+  - variable `output` — `output = execFileSync(command, args,`
+  - variable `runtimes` — `runtimes = JSON.parse(output)`
+  - method `init` — `async init(cwd = process.cwd())`
+  - variable `dockerArgs` — `dockerArgs = buildDockerRunArgs(this.profile,`
+  - arrow-function `<anonymous@4959>` — `(resolve, reject) =>`
+  - arrow-function `tryInit` — `(useSudo) =>`
+  - variable `stderr` — `stderr = ''`
+  - variable `child` — `child = this._spawnDocker(dockerArgs)`
+  - arrow-function `<anonymous@5170>` — `(data) =>`
+  - arrow-function `<anonymous@5239>` — `(code) =>`
+  - variable `initializedId` — `initializedId = this.sandboxId`
+  - arrow-function `<anonymous@5401>` — `() => resolve(initializedId)`
+  - arrow-function `<anonymous@5452>` — `copyError =>`
+  - … and 61 more symbols
+- `scripts/verifier-executor-v1.mjs` (314 symbols)
+  - variable `VERIFIER_EXECUTOR_V1` — `VERIFIER_EXECUTOR_V1 = 'verifier-executor-v1'`
+  - variable `VERIFIER_EXECUTOR_VERSION` — `VERIFIER_EXECUTOR_VERSION = '1.0.0'`
+  - variable `VERIFIER_EVIDENCE_PAYLOAD_V1` — `VERIFIER_EVIDENCE_PAYLOAD_V1 = 'verification-observation-evidence-v1'`
+  - variable `EXECUTOR_MAX_WALL_MS` — `EXECUTOR_MAX_WALL_MS = 120_000`
+  - variable `EXECUTOR_MAX_OUTPUT_BYTES` — `EXECUTOR_MAX_OUTPUT_BYTES = 32 * 1024`
+  - variable `EXECUTOR_MAX_CHECKS` — `EXECUTOR_MAX_CHECKS = 64`
+  - variable `EXECUTOR_MAX_EVIDENCE_PER_CHECK` — `EXECUTOR_MAX_EVIDENCE_PER_CHECK = 8`
+  - variable `EXECUTOR_MAX_TOTAL_EVIDENCE_BYTES` — `EXECUTOR_MAX_TOTAL_EVIDENCE_BYTES = 8 * 1024 * 1024`
+  - variable `EXECUTOR_MAX_PROCESSES` — `EXECUTOR_MAX_PROCESSES = 64`
+  - variable `EXECUTOR_MAX_CONCURRENT_PROCESSES` — `EXECUTOR_MAX_CONCURRENT_PROCESSES = 1`
+  - variable `EXECUTOR_KILL_GRACE_MS` — `EXECUTOR_KILL_GRACE_MS = 50`
+  - variable `VERIFIER_SANDBOX_ENV` — `VERIFIER_SANDBOX_ENV = Object.freeze(`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `SHELL_SYNTAX_RE` — `SHELL_SYNTAX_RE = /[;&|><$`()`
+  - variable `FORBIDDEN_INTERPRETER_ARG_RE` — `FORBIDDEN_INTERPRETER_ARG_RE = /^(?:-e|--eval(?:=.*)?|-p|--print(?:=.*)?|-r|--require(?:=.*)?|--loader(?:=.*)?|--import(?:=.*)?|-c|--command(?:=.*)?)$/u`
+  - variable `DENIED_EXECUTABLE_NAMES` — `DENIED_EXECUTABLE_NAMES = new Set([`
+  - variable `EMPTY_SHA256` — `EMPTY_SHA256 = createHash('sha256').update(Buffer.alloc(0)).digest('hex')`
+  - class `VerifierExecutorV1Error` — `export class VerifierExecutorV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_EXECUTOR_V1_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@4514>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@4637>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@4931>` — `key => key !== 'length'`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'VerifierExecutorV1', depth = 0, ancestors = new WeakSet())`
+  - arrow-function `<anonymous@6342>` — `(_, index) => canonicalize(value[index], `$`
+  - variable `result` — `result =`
+  - variable `key` — `key`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - … and 274 more symbols
+
+### Egress gateway — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 110 · **Callable:** 33 · **Authored purpose:** 4
+- `scripts/egress-gateway.mjs` (110 symbols)
+  - variable `EGRESS_GATEWAY_VERSION` — `EGRESS_GATEWAY_VERSION = '1.0.0'`
+  - variable `HOST_RULE_SCHEMA` — `HOST_RULE_SCHEMA = Object.freeze(`
+  - variable `ALLOWED_SCHEMES` — `ALLOWED_SCHEMES = new Set(['https', 'http', 'file'])`
+  - variable `MAX_HOST_LENGTH` — `MAX_HOST_LENGTH = 253`
+  - variable `MAX_PATH_LENGTH` — `MAX_PATH_LENGTH = 1024`
+  - variable `HOSTNAME_PATTERN` — `HOSTNAME_PATTERN = /^(?=.`
+  - class `EgressGatewayError` — `export class EgressGatewayError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'egressGateway')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `integerIn` — `function integerIn(value, pathName, min, max)`
+  - function `finiteIn` — `function finiteIn(value, pathName, min, max)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `stringArray` — `function stringArray(value, pathName)`
+  - variable `result` — `result = value.map((item, index) => nonEmptyString(item, `$`
+  - arrow-function `<anonymous@3485>` — `(item, index) => nonEmptyString(item, `$`
+  - function `validateHostRule` — `function validateHostRule(rule, index, pathName)`
+  - variable `host` — `host = nonEmptyString(rule.host, `$`
+  - variable `port` — `port = integerIn(rule.port, `$`
+  - variable `schemes` — `schemes = rule.schemes`
+  - variable `scheme` — `scheme`
+  - variable `paths` — `paths = rule.paths`
+  - variable `item` — `item`
+  - function `validateBudgets` — `function validateBudgets(value)`
+  - function `canonicalValue` — `function canonicalValue(value)`
+  - arrow-function `<anonymous@6208>` — `key => [key, canonicalValue(value[key])]`
+  - function `sha256Of` — `function sha256Of(value)`
+  - function `compileEgressPolicy` — `export function compileEgressPolicy(input)` — *Compile a deterministic egress policy from approved host rules and budgets. The returned artifact is content-addressed so a later drift check can reject a rule that the executor did not attest.*
+  - variable `policyId` — `policyId = nonEmptyString(input.policyId, 'egressPolicy.policyId')`
+  - variable `createdAt` — `createdAt = nonEmptyString(input.createdAt, 'egressPolicy.createdAt')`
+  - variable `taskId` — `taskId = nonEmptyString(input.taskId, 'egressPolicy.taskId')`
+  - variable `correlationId` — `correlationId = nonEmptyString(input.correlationId, 'egressPolicy.correlationId')`
+  - variable `hostRules` — `hostRules = input.hostRules.map((rule, index) => validateHostRule(rule, index, 'egressPolicy.hostRules'))`
+  - arrow-function `<anonymous@7625>` — `(rule, index) => validateHostRule(rule, index, 'egressPolicy.hostRules')`
+  - variable `seenHostPort` — `seenHostPort = new Set(hostRules.map(rule => `$`
+  - arrow-function `<anonymous@7744>` — `rule => `$`
+  - … and 70 more symbols
+
+### Host commit broker — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 223 · **Callable:** 61 · **Authored purpose:** 0
+- `scripts/host-commit-broker.mjs` (223 symbols)
+  - variable `DEFAULT_MAX_PATCH_BYTES` — `DEFAULT_MAX_PATCH_BYTES = 1_048_576`
+  - variable `DEFAULT_MAX_TARGET_FILES` — `DEFAULT_MAX_TARGET_FILES = 32`
+  - variable `DEFAULT_MAX_CHANGED_LINES` — `DEFAULT_MAX_CHANGED_LINES = 2_000`
+  - variable `DEFAULT_MAX_COMMIT_MESSAGE_BYTES` — `DEFAULT_MAX_COMMIT_MESSAGE_BYTES = 16 * 1024`
+  - variable `RECOVERY_RECORD_VERSION` — `RECOVERY_RECORD_VERSION = '1.0.0'`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `requiredText` — `function requiredText(value, name)`
+  - function `requiredDigest` — `function requiredDigest(value, name, lengths = [40, 64])`
+  - variable `digest` — `digest = requiredString(value, name).toLowerCase()`
+  - function `normalizedCommitMessage` — `function normalizedCommitMessage(value)`
+  - variable `message` — `message = requiredText(value, 'commitMessage').trim()`
+  - function `normalizedIdentity` — `function normalizedIdentity(value, name)`
+  - variable `keys` — `keys = Object.keys(value)`
+  - variable `identityName` — `identityName = requiredString(value.name, `$`
+  - variable `email` — `email = requiredString(value.email, `$`
+  - function `requiredTimestamp` — `function requiredTimestamp(value, name)`
+  - variable `timestamp` — `timestamp = requiredString(value, name)`
+  - function `sha256` — `function sha256(value)`
+  - function `nowIso` — `function nowIso(clock = () => new Date())`
+  - arrow-function `<anonymous@3648>` — `() => new Date()`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `gitEnvironment` — `function gitEnvironment(overrides =`
+  - function `runGit` — `function runGit(repoRoot, args, opts =`
+  - function `canonicalRelativePath` — `function canonicalRelativePath(value)`
+  - variable `candidate` — `candidate = requiredString(value, 'target file')`
+  - variable `normalized` — `normalized = path.posix.normalize(candidate)`
+  - function `inspectPatch` — `function inspectPatch(patchContent)`
+  - variable `targets` — `targets = []`
+  - variable `line` — `line`
+  - variable `match` — `match = /^diff --git a\/([^\s"]+) b\/([^\s"]+)$/.exec(line)`
+  - variable `from` — `from = canonicalRelativePath(match[1])`
+  - variable `to` — `to = canonicalRelativePath(match[2])`
+  - function `summarizePatch` — `function summarizePatch(patchContent, targets, patchHash)`
+  - variable `files` — `files = new Map(targets.map(target => [target,`
+  - arrow-function `<anonymous@7542>` — `target => [target,`
+  - variable `current` — `current = null`
+  - variable `sectionIndex` — `sectionIndex = -1`
+  - variable `rawLine` — `rawLine`
+  - variable `line` — `line = rawLine.endsWith('\r') ? rawLine.slice(0, -1) : rawLine`
+  - … and 183 more symbols
+
+### Measured competence graph — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Mechanism independence graph — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+## 06 · CODING, RESEARCH, REASONING, REPRESENTATION, AND DOMAIN WORK
+
+### Chat turn runner — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 551 · **Callable:** 126 · **Authored purpose:** 27
+- `scripts/chat-turn-runner.mjs` (551 symbols)
+  - variable `CHAT_TURN_RUNNER_VERSION` — `CHAT_TURN_RUNNER_VERSION = '1.1.0'`
+  - variable `CHAT_TURN_MODES` — `CHAT_TURN_MODES = Object.freeze(['basic', 'auto', 'deep-research'])`
+  - function `trustedCapsuleSafetySignals` — `function trustedCapsuleSafetySignals(taskSpec)`
+  - variable `trustedInstruction` — `trustedInstruction = taskSpecInstructionPrompt(taskSpec)`
+  - variable `hasConcreteTarget` — `hasConcreteTarget = (taskSpec?.facts || []).some(fact => (`
+  - arrow-function `<anonymous@6392>` — `fact => (`
+  - function `scopeBoundGoalCapsuleInput` — `function scopeBoundGoalCapsuleInput(taskSpec)`
+  - variable `selectedScope` — `selectedScope = taskSpec?.scopeCommitment?.selectedScope`
+  - variable `selectedScopeJson` — `selectedScopeJson = JSON.stringify(selectedScope)`
+  - variable `selectedScopeSourceRefId` — `selectedScopeSourceRefId = 'user-committed-selected-scope'`
+  - function `isNonInteractiveProceed` — `export function isNonInteractiveProceed(permission)` — *B8 #5 (class "advisory clarification must auto-resolve under ANY non-interactive autonomy"). The daemon's valid permission set is ['plan','ask','accept-edits','auto','bypass'] (arc-daemon.mjs ~:629). *
+  - function `buildTurnRepoContext` — `export function buildTurnRepoContext(repoRoot,` — *M18 (reconciliation): the INWARD half of research/intent grounding. Every TUI turn previously ran with repoContext={} — the research repo-scout scouted an EMPTY repo and the intent compiler's resolver*
+  - variable `out` — `out = spawnSync('git', ['ls-files'],`
+  - variable `all` — `all = out.stdout.trim().split('\n').filter(Boolean)`
+  - variable `roots` — `roots = all.slice(0, maxRoots)`
+  - variable `DEFAULT_LOCAL_ENDPOINT_LABEL` — `DEFAULT_LOCAL_ENDPOINT_LABEL = '127.0.0.1:8095'`
+  - arrow-function `envMs` — `(name, def) => Number(process.env[name]) || def`
+  - variable `DEFAULT_MODEL_TIMEOUT_MS` — `DEFAULT_MODEL_TIMEOUT_MS = envMs('ARC_MODEL_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_COMPILE_TIMEOUT_MS` — `DEFAULT_COMPILE_TIMEOUT_MS = envMs('ARC_COMPILE_TIMEOUT_MS', 120_000)`
+  - variable `DEFAULT_DAILY_DRIVER_TIMEOUT_MS` — `DEFAULT_DAILY_DRIVER_TIMEOUT_MS = envMs('ARC_DAILY_DRIVER_TIMEOUT_MS', 180_000)`
+  - variable `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS` — `DEFAULT_COORDINATOR_DRIVER_TIMEOUT_MS = envMs('ARC_COORDINATOR_DRIVER_TIMEOUT_MS', 900_000)`
+  - function `withTimeout` — `export function withTimeout(promise, ms, signal = null)` — *Race a promise against a wall-clock deadline and an optional AbortSignal. The underlying promise is not cancelled (model adapters carry their own AbortSignal timeouts); this only guarantees the caller*
+  - arrow-function `<anonymous@12316>` — `(resolve, reject) =>`
+  - variable `settled` — `settled = false`
+  - arrow-function `finish` — `(fn, value) =>`
+  - arrow-function `onAbort` — `() => finish(reject, new Error('aborted'))`
+  - variable `timer` — `timer = setTimeout(() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@12649>` — `() => finish(reject, new Error(`timeout after $`
+  - arrow-function `<anonymous@13173>` — `value => finish(resolve, value)`
+  - arrow-function `<anonymous@13212>` — `error => finish(reject, error)`
+  - function `guardedModelInvoke` — `async function guardedModelInvoke(invokeLocal, args,` — *Bounded, never-throwing single model call.*
+  - variable `result` — `result = await withTimeout(Promise.resolve(invokeLocal(args)), timeoutMs, signal)`
+  - variable `error` — `error`
+  - function `makeGuardedInvoke9B` — `function makeGuardedInvoke9B(invokeLocal,` — *Wrap an invokeLocal into a guarded invoke9B (the intent compiler contract). On any model failure it returns { content: '' } so decomposedExtraction degrades to rule-only facts instead of rejecting the*
+  - arrow-function `<anonymous@14172>` — `async args =>`
+  - variable `result` — `result = await guardedModelInvoke(invokeLocal, args,`
+  - function `buildOfflineMessage` — `function buildOfflineMessage(goal, endpointLabel, reason = null)`
+  - variable `timeoutMatch` — `timeoutMatch = typeof reason === 'string' ? reason.match(/^timeout after (\d+)ms$/) : null`
+  - variable `head` — `head = timeoutMatch`
+  - variable `detail` — `detail = reason ? ` [$`
+  - … and 511 more symbols
+
+### Chat loop coordinator — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 312 · **Callable:** 68 · **Authored purpose:** 25
+- `scripts/chat-loop-coordinator.mjs` (312 symbols)
+  - variable `CHAT_LOOP_COORDINATOR_VERSION` — `CHAT_LOOP_COORDINATOR_VERSION = '1.0.0'`
+  - variable `CHAT_COORDINATOR_SPEC_KIND` — `CHAT_COORDINATOR_SPEC_KIND = 'chat-loop/v1'`
+  - variable `DEFAULT_CHAT_PATCH_MODEL` — `DEFAULT_CHAT_PATCH_MODEL = 'qwen3.5-9b'`
+  - variable `RECIPE_EXFIL_RE` — `RECIPE_EXFIL_RE = /\b(curl|wget|nc|ncat|netcat|socat|ssh|scp|rsync|ftp|tftp|sendmail|mail)\b|https?:\/\/|>\s*\/(?!dev\/null|tmp\b)|\bpython[0-9.]*\s+-c\b|\bnode\s+-e\b|\bbase64\b\s+-`
+  - function `scanRecipeForExfil` — `function scanRecipeForExfil(recipe)`
+  - variable `PYTEST_FILE_RE` — `PYTEST_FILE_RE = /^test_.*\.py$|_test\.py$|^conftest\.py$/`
+  - variable `PYTEST_SCAN_SKIP_DIRS` — `PYTEST_SCAN_SKIP_DIRS = new Set([`
+  - function `hasPytestCollectibleTests` — `function hasPytestCollectibleTests(repoRoot, maxDepth = 4)`
+  - variable `pyproject` — `pyproject = readFileSync(path.join(repoRoot, 'pyproject.toml'), 'utf8')`
+  - variable `stack` — `stack = [`
+  - variable `<anonymous@6619>`
+  - variable `entries` — `entries`
+  - variable `ent` — `ent`
+  - variable `ent` — `ent`
+  - function `detectRepoTestCommands` — `export function detectRepoTestCommands(repoRoot)` — *Detect executable repo test commands from every ecosystem manifest present (a polyglot repo gets one verifier per toolchain, manifest order below). Each command carries an ecosystem-honest timeoutMs —*
+  - variable `commands` — `commands = []`
+  - variable `packageJsonPath` — `packageJsonPath = path.join(repoRoot, 'package.json')`
+  - variable `manifest` — `manifest = JSON.parse(readFileSync(packageJsonPath, 'utf8'))`
+  - variable `testScript` — `testScript = manifest?.scripts?.test`
+  - variable `exfilSuspect` — `exfilSuspect = scanRecipeForExfil(testScript)`
+  - variable `makefilePath` — `makefilePath = path.join(repoRoot, 'Makefile')`
+  - variable `makefile` — `makefile = readFileSync(makefilePath, 'utf8')`
+  - variable `testBlock` — `testBlock = makefile.slice(makefile.search(/^test[ \t]*:/m)).split(/\n(?=\S)/)[0] || ''`
+  - variable `exfilSuspect` — `exfilSuspect = scanRecipeForExfil(testBlock)`
+  - variable `files` — `files = execFileSync('git', ['-C', repoRoot, 'ls-files'],`
+  - variable `lang` — `lang`
+  - variable `manifests` — `manifests = lang.packageManifests || []`
+  - variable `present` — `present = manifests.length`
+  - arrow-function `<anonymous@11251>` — `m => m.includes('*')`
+  - arrow-function `<anonymous@11297>` — `f => f.endsWith(m.replace(/^\*/, ''))`
+  - arrow-function `<anonymous@11409>` — `f => (lang.extensions || []).some(e => f.endsWith(e))`
+  - arrow-function `<anonymous@11443>` — `e => f.endsWith(e)`
+  - variable `runner` — `runner = resolveTestRunner(lang.languageId,`
+  - arrow-function `<anonymous@11604>` — `c => c.command === runner.executable`
+  - function `detectRepoBuildCommands` — `export function detectRepoBuildCommands(repoRoot)` — *Detect executable repo BUILD commands — the compile/bundle step, distinct from the test commands detectRepoTestCommands (above) finds. Sibling function: identical manifest-scan order (package.json, Ca*
+  - variable `commands` — `commands = []`
+  - variable `packageJsonPath` — `packageJsonPath = path.join(repoRoot, 'package.json')`
+  - variable `manifest` — `manifest = JSON.parse(readFileSync(packageJsonPath, 'utf8'))`
+  - variable `buildScript` — `buildScript = manifest?.scripts?.build`
+  - variable `exfilSuspect` — `exfilSuspect = scanRecipeForExfil(buildScript)`
+  - … and 272 more symbols
+
+### Multi-target decomposition — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 195 · **Callable:** 55 · **Authored purpose:** 12
+- `scripts/chat-loop-decomposition.mjs` (195 symbols)
+  - variable `CHAT_LOOP_DECOMPOSITION_VERSION` — `CHAT_LOOP_DECOMPOSITION_VERSION = '1.0.0'`
+  - function `git` — `function git(cwd, args,`
+  - variable `result` — `result = spawnSync('git', args,`
+  - function `orderTargetsByImportGraph` — `export function orderTargetsByImportGraph(targetFiles, repoRoot,` — *M14 (reconciliation): TOPOLOGICAL ordering over the repo's REAL import edges. The symbol-call-graph receipt records resolved imports ({file, resolvedFile}) — a provider (imported file) is patched befo*
+  - variable `parsed` — `parsed = receipt`
+  - variable `receiptPath` — `receiptPath = path.join(`
+  - variable `targets` — `targets = new Set(targetFiles)`
+  - variable `consumersOf` — `consumersOf = new Map(targetFiles.map(f => [f, new Set()]))`
+  - arrow-function `<anonymous@3900>` — `f => [f, new Set()]`
+  - variable `indegree` — `indegree = new Map(targetFiles.map(f => [f, 0]))`
+  - arrow-function `<anonymous@3965>` — `f => [f, 0]`
+  - variable `edges` — `edges = 0`
+  - variable `entry` — `entry`
+  - variable `consumer` — `consumer = entry?.file`
+  - variable `provider` — `provider = entry?.resolvedFile`
+  - variable `ready` — `ready = targetFiles.filter(f => indegree.get(f) === 0).sort()`
+  - arrow-function `<anonymous@4494>` — `f => indegree.get(f) === 0`
+  - variable `ordered` — `ordered = []`
+  - variable `file` — `file = ready.shift()`
+  - variable `consumer` — `consumer`
+  - function `orderTargetsInterfaceFirst` — `export function orderTargetsInterfaceFirst(targetFiles, repoRoot)` — *Interface-first deterministic ordering: REAL import-graph topological order when the repo receipt has resolved edges among the targets (M14); otherwise the lexical module-name heuristic below (a targe*
+  - variable `topological` — `topological = orderTargetsByImportGraph(targetFiles, repoRoot)`
+  - variable `contents` — `contents = new Map()`
+  - variable `file` — `file`
+  - variable `score` — `score = new Map(targetFiles.map(file => [file, 0]))`
+  - arrow-function `<anonymous@5738>` — `file => [file, 0]`
+  - variable `provider` — `provider`
+  - variable `moduleName` — `moduleName = path.basename(provider).replace(/\.[^.]+$/, '')`
+  - variable `referencePattern` — `referencePattern = new RegExp(`
+  - variable `consumer` — `consumer`
+  - arrow-function `<anonymous@6305>` — `(a, b) => score.get(b) - score.get(a)`
+  - function `parenBalance` — `function parenBalance(str)` — *#11 (C-INTERFACE) — LIVING INTERFACE CONTRACT extraction. Class fix: the only cross-file signal a later subtask received was the raw accumulated diff truncated to 8 000 chars (:149 baseline). Past 2-3*
+  - variable `depth` — `depth = 0`
+  - variable `ch` — `ch`
+  - function `captureHeader` — `function captureHeader(lines, index,` — *Join a declaration that spills across lines (multiline params) until the parens balance.*
+  - variable `buffer` — `buffer = lines[index]`
+  - variable `depth` — `depth = parenBalance(lines[index])`
+  - variable `taken` — `taken = 1`
+  - function `normalizeSignature` — `function normalizeSignature(header)` — *Trim a captured header down to just the signature (drop the body/RHS), collapse ws, cap length.*
+  - function `extractExportedSignatures` — `export function extractExportedSignatures(fileContent, relPath)`
+  - … and 155 more symbols
+
+### Frontier coding runner — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 1208 · **Callable:** 314 · **Authored purpose:** 56
+- `scripts/frontier-coding-runner.mjs` (1208 symbols)
+  - variable `__dirname` — `__dirname = path.dirname(fileURLToPath(import.meta.url))`
+  - variable `warnedRetrievalBudgetBelowHistorical` — `warnedRetrievalBudgetBelowHistorical = false`
+  - variable `FRONTIER_CODING_RUNNER_VERSION` — `FRONTIER_CODING_RUNNER_VERSION = '1.0.0'`
+  - function `boundedEnvInt` — `function boundedEnvInt(name, fallback, min, max)` — *Bounded integer from an env var (co-edit expansion tuning knobs); out-of-range/absent → fallback.*
+  - variable `raw` — `raw = Number(process.env[name])`
+  - function `boundedEnvNumber` — `function boundedEnvNumber(name, fallback, min, max)` — *The fractional sibling of boundedEnvInt — for ratio-valued tuning levers (admission floors, RRF axis weights). Unset / unparseable / out-of-range ⇒ the fallback, so a typo can never silently loosen a *
+  - variable `raw` — `raw = Number(process.env[name])`
+  - function `beamCandidateTemperature` — `export function beamCandidateTemperature(rank, width)` — *Per-candidate beam sampling temperature, spread across [0.7, ~1.3] over the beam WIDTH. INVARIANT: the result is always in the valid [0, 2] range that patchGeneration enforces (governed-patch-generato*
+  - variable `w` — `w = Math.max(1, Number(width) || 1)`
+  - variable `boundedRank` — `boundedRank = Math.min(Math.max(1, Number(rank) || 1), w)`
+  - variable `temp` — `temp = 0.7 + 0.6 * (boundedRank - 1) / Math.max(1, w - 1)`
+  - variable `REFINE_TEMPERATURE_CAP` — `REFINE_TEMPERATURE_CAP = 1.0`
+  - function `resolveRefineTemperatureCap` — `export function resolveRefineTemperatureCap()`
+  - variable `override` — `override = Number(process.env.ARC_REFINE_TEMP_CAP)`
+  - function `canonicalCommandSignature` — `export function canonicalCommandSignature(spec)` — *F1a — Canonical, byte-exact signature of an operator-supplied verifier command. Provenance, NOT pattern: a command whose {command, args} is byte-identical to one frozen in the operator spec (spec.test*
+  - variable `args` — `args = Array.isArray(spec.args) ? spec.args.map(String) : []`
+  - function `operatorCommandSignatureSet` — `export function operatorCommandSignatureSet(...commandArrays)` — *Build the byte-exact allow-set of operator-supplied command signatures from frozen spec arrays.*
+  - variable `set` — `set = new Set()`
+  - variable `arr` — `arr`
+  - variable `spec` — `spec`
+  - variable `sig` — `sig = canonicalCommandSignature(spec)`
+  - function `resolveBeamBudgetMs` — `export function resolveBeamBudgetMs(` — *Resolve the beam time-budget (ms) for the retry-on-no-patch latency guard. Levers-regression fix (2026-07-06): this must NEVER return 0/off when a retry is actually enabled, or an unset ARC_BEAM_TIME_*
+  - function `shouldSkipNoPatchRetry` — `export function shouldSkipNoPatchRetry(` — *Decide whether to SKIP the next no-patch retry because completing another full beam would risk blowing the per-attempt wall. MEASURED, not heuristic: predictedRetryMs is the real duration of the most *
+  - function `computeWorkProductInjection` — `export function computeWorkProductInjection(workProductDiff, width)` — *ARC_TURN_BUDGET (E4): resolve the diff bytes of the beam's best-so-far candidate (ranked by the beam via compareCandidates, verifier-passed first). Prefers the named candidate; falls back to ANY compl*
+  - variable `hasDiff` — `hasDiff = typeof workProductDiff === 'string' && workProductDiff.trim().length > 0`
+  - variable `inject` — `inject = hasDiff && width >= 2`
+  - function `computeAcceptedByGate` — `export function computeAcceptedByGate(solvedGate)` — *B2 (autonomous-loop) edit-1: the SINGLE acceptance verdict, extracted PURE so the autonomous-loop driver reads the EXACT same gate the enforced report path uses. goldFreeGate ⇒ crown iff obligation OR*
+  - variable `goldFreeGate` — `goldFreeGate = solvedGate.obligationGoldFree === true || solvedGate.operationalGoldFree === true`
+  - variable `acceptedByGate` — `acceptedByGate = goldFreeGate`
+  - variable `acceptanceLeg` — `acceptanceLeg = !acceptedByGate`
+  - function `deriveVerificationTier` — `export function deriveVerificationTier(` — *ARC_VERIFICATION_TIER (registry-only, default OFF, NOT in PRODUCT_ARMED_DEFAULTS): a PURE relabeling projection over already-computed fields (this file's computeAcceptedByGate acceptanceLeg, chat-turn*
+  - function `resolveBudgetBestSoFarDiff` — `export function resolveBudgetBestSoFarDiff(beamReport, bestSoFarCandidateId)`
+  - variable `candidates` — `candidates = Array.isArray(beamReport?.candidates) ? beamReport.candidates : []`
+  - arrow-function `readDiff` — `(candidate) =>`
+  - variable `fromPacket` — `fromPacket = readPatchArtifactFromPacket(candidate.packetPath)`
+  - variable `preferred` — `preferred = candidates.find(c => c.candidateId === bestSoFarCandidateId)`
+  - arrow-function `<anonymous@25225>` — `c => c.candidateId === bestSoFarCandidateId`
+  - variable `preferredDiff` — `preferredDiff = readDiff(preferred)`
+  - variable `candidate` — `candidate`
+  - variable `diff` — `diff = readDiff(candidate)`
+  - … and 1168 more symbols
+
+### Verifier-guided beam search — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 413 · **Callable:** 111 · **Authored purpose:** 8
+- `scripts/verifier-guided-beam-search.mjs` (413 symbols)
+  - variable `VERIFIER_GUIDED_BEAM_SEARCH_VERSION` — `VERIFIER_GUIDED_BEAM_SEARCH_VERSION = '1.0.0'`
+  - variable `AUTHORITY_BOUNDARY` — `AUTHORITY_BOUNDARY = 'Bounded sequential candidate search and verifier-backed selection only; it does not apply a patch to the host, prove benchmark generalization, or authorize model routing.'`
+  - variable `CANDIDATE_KEYS` — `CANDIDATE_KEYS = new Set([`
+  - class `VerifierGuidedBeamSearchError` — `export class VerifierGuidedBeamSearchError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'verifierGuidedBeamSearch')`
+  - class `VerifierGuidedBeamSearchAbortError` — `export class VerifierGuidedBeamSearchAbortError extends VerifierGuidedBeamSearchError` — *Abort preemption (Appendix E #6 / §1.3): a chat-stop / interjection aborts the turn's AbortController. When that signal is threaded in (from the decomposition coordinator), the beam must STOP promptly*
+  - constructor `constructor` — `constructor(phase)`
+  - function `throwIfAborted` — `function throwIfAborted(signal, phase)`
+  - function `beamDeadlineWouldExceed` — `export function beamDeadlineWouldExceed(` — *ARC_TURN_BUDGET (E4): would starting one more ~`predictedNextMs`-long candidate overrun the turn's SOFT deadline? Pure + exported so the cutoff is unit-testable in isolation. `turnDeadlineAt` is the a*
+  - variable `deadline` — `deadline = Number(turnDeadlineAt)`
+  - variable `now` — `now = Number(nowMs)`
+  - variable `pred` — `pred = Number(predictedNextMs)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `requiredString` — `function requiredString(value, pathName)`
+  - function `safeId` — `function safeId(value, pathName)`
+  - variable `result` — `result = requiredString(value, pathName)`
+  - function `sha256` — `function sha256(value)`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - arrow-function `<anonymous@4846>` — `key => `$`
+  - function `hashJson` — `function hashJson(value)`
+  - function `sha` — `function sha(value, pathName)`
+  - function `commandList` — `function commandList(value, pathName)`
+  - function `normalizeCandidate` — `function normalizeCandidate(candidate, pathName, knownIds)`
+  - variable `key` — `key`
+  - variable `candidateId` — `candidateId = safeId(candidate.candidateId, `$`
+  - variable `hasPatch` — `hasPatch = typeof candidate.patchContent === 'string' && candidate.patchContent.length > 0`
+  - variable `hasGeneration` — `hasGeneration = candidate.patchGeneration !== undefined`
+  - function `truncateOutput` — `function truncateOutput(text, maxChars = 4000)`
+  - variable `half` — `half = Math.floor((maxChars - 40) / 2)`
+  - function `extractTestFailureOutput` — `function extractTestFailureOutput(commandRecords)`
+  - variable `failedRecords` — `failedRecords = commandRecords.filter(`
+  - arrow-function `<anonymous@7488>` — `record => ['test', 'held-out', 'typecheck', 'dep-check'].includes(record?.phase)`
+  - variable `parts` — `parts = []`
+  - variable `record` — `record`
+  - variable `stdout` — `stdout = record?.evidence?.stdoutText || record?.stdout || ''`
+  - variable `stderr` — `stderr = record?.evidence?.stderrText || record?.stderr || ''`
+  - variable `name` — `name = record?.commandSpec?.name || record?.name || 'unknown'`
+  - variable `exitCode` — `exitCode = record?.evidence?.exitCode ?? record?.exitCode ?? '?'`
+  - function `behaviorSignatureKey` — `function behaviorSignatureKey(outcome)`
+  - variable `survivors` — `survivors = Array.isArray(outcome.mutationSurvivors) ? [...outcome.mutationSurvivors].sort() : []`
+  - … and 373 more symbols
+
+### ReliableCodingLoop legacy executor — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 1184 · **Callable:** 260 · **Authored purpose:** 14
+- `scripts/reliable-coding-loop.mjs` (1184 symbols)
+  - variable `COMMAND_LEASE_PADDING_MS` — `COMMAND_LEASE_PADDING_MS = 30_000`
+  - variable `GIT_APPLY_CHECK_TIMEOUT_MS` — `GIT_APPLY_CHECK_TIMEOUT_MS = 30_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `requiredText` — `function requiredText(value, name)`
+  - function `sha256` — `function sha256(value)`
+  - function `stableValue` — `function stableValue(value)`
+  - arrow-function `<anonymous@5504>` — `item => stableValue(item)`
+  - arrow-function `<anonymous@5713>` — `key => [key, stableValue(value[key])]`
+  - function `stableJson` — `function stableJson(value)`
+  - function `comparisonInputAdmissionError` — `function comparisonInputAdmissionError(message)`
+  - function `canonicalComparisonJson` — `function canonicalComparisonJson(value)`
+  - function `freezeComparisonValue` — `function freezeComparisonValue(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `admitComparisonInputEarly` — `function admitComparisonInputEarly(options, goal)`
+  - variable `comparisonInput` — `comparisonInput`
+  - variable `error` — `error`
+  - variable `actualFlags` — `actualFlags =`
+  - variable `<anonymous@7275>` — `[key, actual]`
+  - function `admitComparisonInputActual` — `function admitComparisonInputActual(comparisonInput,`
+  - variable `specs` — `specs = cognitiveGraphConfig`
+  - arrow-function `<anonymous@8297>` — `spec => normalizeCommandSpec(spec, 'setup')`
+  - arrow-function `<anonymous@8390>` — `spec => normalizeCommandSpec(spec, 'reproduce')`
+  - arrow-function `<anonymous@8482>` — `spec => normalizeCommandSpec(spec, 'test')`
+  - arrow-function `<anonymous@8572>` — `spec => normalizeCommandSpec(spec, 'held-out')`
+  - variable `matching` — `matching = specs.filter(spec => sha256(canonicalComparisonJson(spec))`
+  - arrow-function `<anonymous@8659>` — `spec => sha256(canonicalComparisonJson(spec))`
+  - variable `command` — `command = [matching[0].command, ...matching[0].args].join(' ')`
+  - function `nowIso` — `function nowIso(clock)`
+  - variable `value` — `value = clock()`
+  - variable `date` — `date = value instanceof Date ? value : new Date(value)`
+  - function `gitEnv` — `function gitEnv()`
+  - variable `VERIFICATION_ENV_ALLOWLIST` — `VERIFICATION_ENV_ALLOWLIST = Object.freeze([`
+  - variable `VERIFICATION_ENV_NEUTRALIZERS` — `VERIFICATION_ENV_NEUTRALIZERS = Object.freeze(`
+  - variable `WHOLE_FILE_PROMPT_OVERHEAD_TOKENS` — `WHOLE_FILE_PROMPT_OVERHEAD_TOKENS = 1400`
+  - variable `DECODE_RATE_TOK_PER_S` — `DECODE_RATE_TOK_PER_S = 38`
+  - function `deriveDecodeBudgetTokens` — `export function deriveDecodeBudgetTokens(invokeTimeoutMs, rateTokPerSec = DECODE_RATE_TOK_PER_S)` — *Decode-time budget in TOKENS for a per-invoke wall-clock (ms). Reuses the derived-timeout rate. Fail-safe: a non-finite/non-positive ms or rate → 0 (treated as "unarmed" by resolveWholeFileSizing → to*
+  - variable `ms` — `ms = Number(invokeTimeoutMs)`
+  - variable `rate` — `rate = Number(rateTokPerSec)`
+  - function `resolveWholeFileSizing` — `export function resolveWholeFileSizing(`
+  - variable `perSlotTokens` — `perSlotTokens = Math.floor((Number(ctx) || 16384) / Math.max(1, Number(parallel) || 3))`
+  - … and 1144 more symbols
+
+### Governed patch generator — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 926 · **Callable:** 200 · **Authored purpose:** 33
+- `scripts/governed-patch-generator.mjs` (926 symbols)
+  - variable `PATCH_GENERATION_VERSION` — `PATCH_GENERATION_VERSION = '1.0.0'`
+  - variable `DEFAULT_MAX_PROMPT_BYTES` — `DEFAULT_MAX_PROMPT_BYTES = 512 * 1024`
+  - variable `DEFAULT_MAX_OUTPUT_BYTES` — `DEFAULT_MAX_OUTPUT_BYTES = 1024 * 1024`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 60_000`
+  - variable `MCP_TOOL_CONTEXT_TIMEOUT_MS` — `MCP_TOOL_CONTEXT_TIMEOUT_MS = Math.floor(DEFAULT_TIMEOUT_MS / 4)`
+  - variable `MAX_SUMMARY_LENGTH` — `MAX_SUMMARY_LENGTH = 4_000`
+  - variable `COMMAND_OUTPUT_HEAD_LINES` — `COMMAND_OUTPUT_HEAD_LINES = 100`
+  - variable `COMMAND_OUTPUT_TAIL_LINES` — `COMMAND_OUTPUT_TAIL_LINES = 200`
+  - variable `MAX_CONTINUATIONS` — `MAX_CONTINUATIONS = 5`
+  - variable `LADDER_AGGREGATE_BUDGET_MULTIPLE` — `LADDER_AGGREGATE_BUDGET_MULTIPLE = 2`
+  - function `resolveUdiffLActive` — `export function resolveUdiffLActive(` — *FIX 1 — single source of truth for whether the udiff-l control-marker medium is ACTIVE for a diff-mode generation. The udiff-l wiring is threaded through FOUR sites (the prompt builder, the incomplete*
+  - function `udiffLActiveFromEnv` — `function udiffLActiveFromEnv(`
+  - function `resolveEditMedium` — `export function resolveEditMedium(` — *ARC_EDIT_DECISION_DERIVED (default OFF → byte-identical) — the ONE derived edit-medium decision that subsumes the three independently-computed "which output medium?" booleans the generation path scatt*
+  - variable `base` — `base = editMode === 'whole-file' ? 'whole-file' : 'diff'`
+  - variable `legacyFenced` — `legacyFenced = env.ARC_WHOLE_FILE_FENCED === '1'`
+  - variable `legacySearchReplace` — `legacySearchReplace = base === 'diff' && env.ARC_SEARCH_REPLACE === '1'`
+  - variable `legacyUdiffL` — `legacyUdiffL = udiffLActiveFromEnv(`
+  - variable `medium` — `medium = base === 'whole-file'`
+  - variable `udiffExplicitOn` — `udiffExplicitOn = env.ARC_UDIFF_L === '1'`
+  - variable `udiffExplicitOff` — `udiffExplicitOff = env.ARC_UDIFF_L === '0'`
+  - variable `srExplicit` — `srExplicit = env.ARC_SEARCH_REPLACE === '1'`
+  - variable `udiffImplicit` — `udiffImplicit = !udiffExplicitOff && provider === 'local' && hasOriginalContents === true`
+  - variable `medium` — `medium = udiffExplicitOn ? 'diff-udiffl'`
+  - variable `WORKED_EXAMPLE_PATCH_LEGACY` — `WORKED_EXAMPLE_PATCH_LEGACY = Object.freeze(`
+  - variable `WORKED_EXAMPLE_PATCH_ANTIECHO` — `WORKED_EXAMPLE_PATCH_ANTIECHO = Object.freeze(`
+  - function `workedExamplePatch` — `function workedExamplePatch(env = process.env)` — *Select the worked-example illustration for the current env. Gated so OFF (ARC_ANTI_ECHO_RETRY unset) is the legacy exemplar byte-for-byte AND the guard keys on the legacy sentinels — strict OFF-identi*
+  - function `renderWorkedExampleShapeLine` — `function renderWorkedExampleShapeLine(wep)` — *Render the diff-mode "Exact output shape:" instruction line from a worked-example constant (no drift).*
+  - function `isWorkedExampleEcho` — `function isWorkedExampleEcho(envelope)` — *FIX 3 — deterministic echo-guard. TRUE when the parsed envelope is the worked-example illustration being echoed back rather than a real answer: either its hunk body carries the sentinel context/-old/+*
+  - variable `wep` — `wep = workedExamplePatch()`
+  - variable `summaryEcho` — `summaryEcho = typeof envelope.summary === 'string'`
+  - variable `targets` — `targets = Array.isArray(envelope.targetFiles) ? envelope.targetFiles : []`
+  - variable `targetEcho` — `targetEcho = targets.length === 1 && targets[0] === wep.targetFile`
+  - variable `patch` — `patch = typeof envelope.patchContent === 'string' ? envelope.patchContent : ''`
+  - variable `lines` — `lines = patch.replace(/\r\n/g, '\n').split('\n')`
+  - variable `ctxLine` — `ctxLine = ` $`
+  - variable `delLine` — `delLine = `-$`
+  - variable `addLine` — `addLine = `+$`
+  - variable `i` — `i = 0`
+  - variable `OVERFLOW_REPRO_HEAD_LINES` — `OVERFLOW_REPRO_HEAD_LINES = 20`
+  - variable `OVERFLOW_REPRO_TAIL_LINES` — `OVERFLOW_REPRO_TAIL_LINES = 40`
+  - … and 886 more symbols
+
+### Patch parse/reanchor/salvage ladder — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 524 · **Callable:** 116 · **Authored purpose:** 14
+- `scripts/deterministic-diff-reanchor.mjs` (230 symbols)
+  - variable `HUNK_HEADER` — `HUNK_HEADER = /^@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@(?: .*)?$/`
+  - function `classifyBodyLine` — `function classifyBodyLine(line)`
+  - variable `prefix` — `prefix = line[0]`
+  - variable `content` — `content = line.slice(1)`
+  - function `isBoundary` — `function isBoundary(lines, index)`
+  - variable `line` — `line = lines[index] || ''`
+  - function `parseUnifiedDiff` — `export function parseUnifiedDiff(patchContent)`
+  - variable `lines` — `lines = String(patchContent ?? '').split('\n')`
+  - variable `files` — `files = []`
+  - variable `current` — `current = null`
+  - variable `i` — `i = 0`
+  - variable `line` — `line = lines[i]`
+  - variable `fromRaw` — `fromRaw = line.slice(4).trim()`
+  - variable `toRaw` — `toRaw = lines[i + 1].slice(4).trim()`
+  - variable `creation` — `creation = fromRaw === '/dev/null'`
+  - variable `deletion` — `deletion = toRaw === '/dev/null'`
+  - variable `targetPath` — `targetPath = stripAB(deletion ? fromRaw : toRaw)`
+  - variable `header` — `header = line.match(HUNK_HEADER)`
+  - variable `end` — `end = i + 1`
+  - variable `body` — `body = lines.slice(i + 1, end).map(classifyBodyLine)`
+  - function `stripAB` — `function stripAB(p)`
+  - function `contiguousMatches` — `function contiguousMatches(hay, needle, from = 0)`
+  - variable `out` — `out = []`
+  - variable `i` — `i = Math.max(0, from)`
+  - variable `ok` — `ok = true`
+  - variable `j` — `j = 0`
+  - function `uniqueContiguousMatch` — `function uniqueContiguousMatch(hay, needle, from = 0)`
+  - variable `m` — `m = contiguousMatches(hay, needle, from)`
+  - function `nearest` — `function nearest(matches, hint)`
+  - variable `best` — `best = matches[0]`
+  - variable `bestDist` — `bestDist = Math.abs(matches[0] - hint)`
+  - variable `m` — `m`
+  - variable `d` — `d = Math.abs(m - hint)`
+  - function `lcsMatchedA` — `function lcsMatchedA(a, b)`
+  - variable `n` — `n = a.length`
+  - variable `m` — `m = b.length`
+  - variable `matched` — `matched = new Array(n).fill(false)`
+  - variable `dp` — `dp = Array.from(`
+  - arrow-function `<anonymous@6820>` — `() => new Uint32Array(m + 1)`
+  - variable `i` — `i = n - 1`
+  - … and 190 more symbols
+- `scripts/fabrication-salvage.mjs` (118 symbols)
+  - variable `SALVAGE_LANG_BY_EXT` — `SALVAGE_LANG_BY_EXT =`
+  - function `langFromPath` — `function langFromPath(file = '')`
+  - variable `match` — `match = /\.[^./]+$/.exec(String(file || ''))`
+  - variable `LAZY_ELISION_MARKER` — `LAZY_ELISION_MARKER = '// ... existing code ...'`
+  - function `tokenizeUdiffLLenient` — `export function tokenizeUdiffLLenient(rawOutput, declaredTargetFiles = [])` — *Re-scan a raw udiff-l completion into per-file hunks (ordered arrays of {kind:'con'|'del'|'add', text}), mirroring governed-patch-generator.mjs's parseUdiffLBlocks TAG GRAMMAR exactly (shared regex co*
+  - variable `src` — `src = stripStructuralInvisibleChars(String(rawOutput || '')).replace(/\r\n/g, '\n')`
+  - variable `lines` — `lines = src.split('\n')`
+  - variable `declaredSingle` — `declaredSingle = Array.isArray(declaredTargetFiles) && declaredTargetFiles.length === 1`
+  - variable `order` — `order = []`
+  - variable `byFile` — `byFile = new Map()`
+  - variable `stickyFile` — `stickyFile = null`
+  - variable `currentFile` — `currentFile = null`
+  - variable `currentHunk` — `currentHunk = []`
+  - variable `inHunk` — `inHunk = false`
+  - arrow-function `flushHunk` — `() =>`
+  - variable `line` — `line`
+  - variable `tag` — `tag = UDIFF_L_TAG.exec(line)`
+  - variable `kind` — `kind = tag[1] === 'CON' ? 'con' : tag[1] === 'DEL' ? 'del' : 'add'`
+  - variable `text` — `text = tag[2] === undefined ? '' : tag[2]`
+  - variable `fh` — `fh = UDIFF_L_FILE_HEADER.exec(line)`
+  - function `renderLazyEdit` — `function renderLazyEdit(hunks, originalLineSet)` — *Render one file's collected hunks as a FastApply lazy-edit snippet: CON lines are kept as context, DEL lines are dropped (they are being removed — FastApply's <update> shows the NEW state of the chang*
+  - variable `parts` — `parts = []`
+  - variable `hunk` — `hunk`
+  - variable `bodyLines` — `bodyLines = []`
+  - variable `op` — `op`
+  - variable `MAX_CHAIN_CANDIDATES` — `MAX_CHAIN_CANDIDATES = 4000`
+  - variable `SALVAGE_AGGREGATE_DEADLINE_MS` — `SALVAGE_AGGREGATE_DEADLINE_MS = Number(process.env.FASTAPPLY_TIMEOUT_MS) || 60_000`
+  - function `strictLineProvenance` — `function strictLineProvenance(original, edit, mergedText)` — *STRICT (byte-exact) line provenance — the salvage-specific tightening OVER validateMerge. Every substance-bearing merged line must byte-equal a line of the original (slice) or of the rendered edit — W*
+  - variable `known` — `known = new Set(String(original).split('\n'))`
+  - variable `line` — `line`
+  - variable `line` — `line`
+  - function `preflightRejectKind` — `function preflightRejectKind(lang, original)` — *Classify preflightGate's verdict for a file: 'allowed' (whole-file merge fine), 'size' (ONLY the byte ceiling fired — the region-scoped path may slice), or 'fixed-format' (column-sensitive language — *
+  - function `buildLineIndex` — `function buildLineIndex(originalLines)` — *Map each distinct line text of the file to its ascending 0-based line numbers.*
+  - variable `byText` — `byText = new Map()`
+  - variable `i` — `i = 0`
+  - variable `arr` — `arr = byText.get(originalLines[i])`
+  - function `deriveAnchorRegion` — `function deriveAnchorRegion(hunk, lineNumbersByText)` — *Locate one hunk's edit region from its VERIFIED CON anchors — the CON ops whose text byte-matches a real file line (the SAME membership renderLazyEdit filters by). Whitespace-only CONs are excluded as*
+  - variable `anchors` — `anchors = []`
+  - variable `op` — `op`
+  - variable `matches` — `matches = lineNumbersByText.get(op.text)`
+  - … and 78 more symbols
+- `scripts/fastapply-safety-gate.mjs` (176 symbols)
+  - variable `FIXED_FORMAT_LANGS` — `FIXED_FORMAT_LANGS = new Set(['cobol', 'cob', 'cbl', 'cpy', 'fortran', 'fortran77', 'f77', 'f', 'for', 'ftn'])`
+  - variable `DEFAULT_MAX_BYTES` — `DEFAULT_MAX_BYTES = Number(process.env.FASTAPPLY_MAX_BYTES) || 12000`
+  - function `preflightGate` — `export function preflightGate(`
+  - variable `L` — `L = String(lang || '').toLowerCase()`
+  - variable `bytes` — `bytes = Buffer.byteLength(String(original || ''), 'utf8')`
+  - function `detectIndent` — `export function detectIndent(text)`
+  - variable `lines` — `lines = String(text || '').split('\n').filter((l) => /^[\t ]+\S/.test(l))`
+  - arrow-function `<anonymous@3196>` — `(l) => /^[\t ]+\S/.test(l)`
+  - variable `tabs` — `tabs = 0`
+  - variable `spaces` — `spaces = 0`
+  - variable `widths` — `widths =`
+  - variable `l` — `l`
+  - variable `ws` — `ws = l.match(/^[\t ]*/)[0]`
+  - variable `usesTabs` — `usesTabs = tabs > 0 && tabs >= spaces`
+  - variable `width` — `width = (widths[2] || 0) >= (widths[4] || 0) ? 2 : 4`
+  - function `normalizeEditIndent` — `export function normalizeEditIndent(original, edit)` — *Re-indent the edit snippet to the ORIGINAL file's indent style before handing it to FastApply, so the model cannot paste spaces into a tab file (or vice-versa) — removing the whitespace-corruption cla*
+  - variable `oi` — `oi = detectIndent(original)`
+  - variable `ei` — `ei = detectIndent(edit)`
+  - arrow-function `<anonymous@4306>` — `(line) =>`
+  - variable `ws` — `ws = line.match(/^[\t ]*/)[0]`
+  - variable `rest` — `rest = line.slice(ws.length)`
+  - variable `depth` — `depth = ei.usesTabs ? (ws.match(/\t/g) || []).length : Math.round(ws.length / (ei.width || 1))`
+  - variable `newWs` — `newWs = oi.usesTabs ? '\t'.repeat(depth) : ' '.repeat(depth * (oi.width || 2))`
+  - variable `COMMON_KEYWORDS` — `COMMON_KEYWORDS = new Set(('return if else for while do switch case default break continue function func def fn ' +`
+  - function `identifiers` — `function identifiers(text)`
+  - variable `out` — `out = new Set()`
+  - variable `t` — `t`
+  - function `identifiersAll` — `function identifiersAll(text)`
+  - variable `out` — `out = new Set()`
+  - variable `t` — `t`
+  - function `calledOrAccessedIdentifiers` — `function calledOrAccessedIdentifiers(text)`
+  - variable `out` — `out = new Set()`
+  - variable `s` — `s = String(text || '')`
+  - variable `m` — `m`
+  - variable `m` — `m`
+  - function `echoGuard` — `export function echoGuard(`
+  - variable `m` — `m = String(merged || '').trim()`
+  - variable `e` — `e = String(edit || '').trim()`
+  - variable `o` — `o = String(original || '').trim()`
+  - function `faithfulnessGuard` — `export function faithfulnessGuard(`
+  - … and 136 more symbols
+
+### Existing-repo acceptance and obligations — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 44 · **Callable:** 15 · **Authored purpose:** 10
+- `scripts/existing-repo-acceptance.mjs` (23 symbols)
+  - variable `EXISTING_REPO_ACCEPTANCE_FLAG` — `EXISTING_REPO_ACCEPTANCE_FLAG = 'ARC_EXISTING_REPO_ACCEPTANCE'`
+  - variable `EXISTING_REPO_ACCEPTANCE_RUNNER_PREFIX` — `EXISTING_REPO_ACCEPTANCE_RUNNER_PREFIX = 'clide-existing-repo-acceptance#'`
+  - function `existingRepoAcceptanceEnabled` — `export function existingRepoAcceptanceEnabled(env = process.env)` — *Enabled iff the flag is exactly '1' (gate:'eq1'). Default OFF when unset. Pure.*
+  - variable `ATTESTED_REQUESTER_CHANNELS` — `ATTESTED_REQUESTER_CHANNELS = Object.freeze([`
+  - function `classifyCheckOutcome` — `export function classifyCheckOutcome(outcome)` — *Interpret ONE injected check outcome as RED / GREEN / INDETERMINATE, reusing the repro-oracle's own exit-code semantics (repro-oracle-injection.mjs:355,480). Pure, total, deterministic. Accepts any of*
+  - variable `k` — `k`
+  - function `exitCodeToState` — `function exitCodeToState(code)`
+  - function `stringToState` — `function stringToState(s)`
+  - variable `v` — `v = String(s).trim().toLowerCase()`
+  - function `evaluateFlip` — `export function evaluateFlip(` — *The pure AssertFlip verdict over an injected (base, patch) pair. Flag-agnostic (callers gate with existingRepoAcceptanceEnabled). A flip requires base provably RED (the fail-before proof) AND patch pr*
+  - variable `base` — `base = classifyCheckOutcome(baseOutcome)`
+  - variable `patch` — `patch = classifyCheckOutcome(patchOutcome)`
+  - variable `flipped` — `flipped = base === 'red' && patch === 'green'`
+  - variable `reason` — `reason`
+  - function `verifyTargetIndependence` — `export function verifyTargetIndependence(provenance)` — *Verify the acceptance TARGET is independently attested (repo independence law, fail-CLOSED). Pure. Only ever WITHHOLDS — it can never turn a non-flip into a crown. When `provenance` is null/undefined *
+  - variable `actual` — `actual = createHash('sha256').update(provenance.targetContent, 'utf8').digest('hex')`
+  - function `inertResult` — `function inertResult()` — *The inert sentinel returned when the flag is OFF — every field falsey, no computation performed.*
+  - function `evaluateExistingRepoAcceptance` — `export function evaluateExistingRepoAcceptance(` — *TOP-LEVEL existing-repo acceptance evaluation. Gated by ARC_EXISTING_REPO_ACCEPTANCE. OFF (default): returns the inert sentinel BEFORE any computation → byte-identical / inert on every input (never-wo*
+  - variable `flip` — `flip = evaluateFlip(`
+  - variable `independence` — `independence = verifyTargetIndependence(provenance)`
+  - variable `crownEligible` — `crownEligible = flip.flipped && independence.ok`
+  - variable `verdict` — `verdict = crownEligible ? 'crown-eligible' : 'withhold'`
+  - variable `reason` — `reason = crownEligible ? flip.reason : (!independence.ok ? independence.reason : flip.reason)`
+- `scripts/obligation-oracle.mjs` (21 symbols)
+  - variable `OBLIGATION_ORACLE_NAME` — `OBLIGATION_ORACLE_NAME = 'clide-obligation-oracle'`
+  - function `obligationCoverageComplete` — `export function obligationCoverageComplete(cov)` — *The single fail-closed "coverage complete" predicate every consumer imports so the done-rule can never drift: a coverage summary is complete ONLY when there is at least one runnable obligation, every *
+  - function `acceptanceFloorError` — `export function acceptanceFloorError(reason, detail)` — *Build an Error pre-stamped with `commandEvidence` so a throw on the passed path routes through the SAME per-candidate failure handling as the dependency gate (verifier-guided-beam-search.mjs:1176 read*
+  - variable `err` — `err = new Error(`obligation-oracle: $`
+  - function `acceptanceFloorVerdict` — `export function acceptanceFloorVerdict(` — *The SOUND, strictly-SUBTRACTIVE acceptance-floor verdict. Pure + isolated so it is unit-testable away from the 6k-line loop. Returns { accept:true } or { accept:false, reason, detail }. It can ONLY wi*
+  - variable `unmeasurable` — `unmeasurable = Array.isArray(coverage.unmeasurable) ? coverage.unmeasurable.length : 0`
+  - function `synthesizeObligationOracle` — `export async function synthesizeObligationOracle(` — *The manufactured gold-free GRANT. ONLY the MIGRATION/bulk-edit leg is hardened and live; it is the one acceptance path whose signal is INDEPENDENT of the weak model that wrote the patch — a HARNESS-au*
+  - variable `obligations` — `obligations = Array.isArray(taskSpec?.obligations) ? taskSpec.obligations : []`
+  - variable `<anonymous@9452>`
+  - variable `mig` — `mig = classifyMigrationObligations(obligations)`
+  - variable `baseline` — `baseline = measureBaselineCounts(mig.pairs, repoRoot)`
+  - variable `scannerPairs` — `scannerPairs = mig.pairs`
+  - variable `absent` — `absent = mig.pairs.filter((_, i) => (baseline[i]?.residualBefore || 0) === 0)`
+  - arrow-function `<anonymous@11193>` — `(_, i) => (baseline[i]?.residualBefore || 0) === 0`
+  - arrow-function `<anonymous@11346>` — `p => p.obligationId ?? '(unnamed)'`
+  - arrow-function `<anonymous@11435>` — `(p, i) => (`
+  - variable `repoSuite` — `repoSuite = []`
+  - variable `<anonymous@11766>`
+  - variable `scanFile` — `scanFile`
+  - variable `e` — `e`
+  - variable `scannerCommand` — `scannerCommand =`
+
+### Mutation/property/metamorphic probes — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 139 · **Callable:** 34 · **Authored purpose:** 10
+- `scripts/ast-metamorphic-oracle.mjs` (47 symbols)
+  - variable `AST_GREP` — `AST_GREP = process.env.AST_GREP_BIN || 'ast-grep'`
+  - variable `MUTATION_RULES` — `MUTATION_RULES =`
+  - variable `METAMORPHIC_RULES` — `METAMORPHIC_RULES =`
+  - function `langFromFile` — `export function langFromFile(file)`
+  - variable `ext` — `ext = path.extname(file).toLowerCase()`
+  - function `applyRewrite` — `function applyRewrite(fileContent, ext, lang, rule)`
+  - variable `dir` — `dir = mkdtempSync(path.join(tmpdir(), 'astm-'))`
+  - variable `f` — `f = path.join(dir, `c$`
+  - variable `out` — `out = readFileSync(f, 'utf8')`
+  - function `cpSyncStr` — `function cpSyncStr(dest, content)`
+  - function `generateAstMutants` — `export function generateAstMutants(filePath, langOverride = null)` — *Semantics-CHANGING mutants of the file (one per applicable rule).*
+  - variable `lang` — `lang = langOverride || langFromFile(filePath)`
+  - variable `content` — `content = readFileSync(filePath, 'utf8')`
+  - variable `ext` — `ext = path.extname(filePath) || (lang === 'python' ? '.py' : lang === 'go' ? '.go' : '.js')`
+  - variable `out` — `out = []`
+  - variable `rule` — `rule`
+  - variable `mutated` — `mutated = applyRewrite(content, ext, lang, rule)`
+  - function `generateMetamorphicVariants` — `export function generateMetamorphicVariants(filePath, langOverride = null)` — *Semantics-PRESERVING variants of the file.*
+  - variable `lang` — `lang = langOverride || langFromFile(filePath)`
+  - variable `content` — `content = readFileSync(filePath, 'utf8')`
+  - variable `ext` — `ext = path.extname(filePath) || (lang === 'python' ? '.py' : lang === 'go' ? '.go' : '.js')`
+  - variable `out` — `out = []`
+  - variable `rule` — `rule`
+  - variable `v` — `v = applyRewrite(content, ext, lang, rule)`
+  - function `assessSuite` — `export function assessSuite(` — *Assess a candidate's suite. runSuite(contentString)->boolean must return whether the suite PASSES for the given file content. Returns kill/robustness signals + a trust verdict.*
+  - variable `mutants` — `mutants = generateAstMutants(filePath, langOverride)`
+  - variable `variants` — `variants = generateMetamorphicVariants(filePath, langOverride)`
+  - variable `mVerdicts` — `mVerdicts = mutants.map((m) => (`
+  - arrow-function `<anonymous@5672>` — `(m) => (`
+  - variable `vVerdicts` — `vVerdicts = variants.map((v) => (`
+  - arrow-function `<anonymous@5745>` — `(v) => (`
+  - variable `scoredMutants` — `scoredMutants = mVerdicts.filter((`
+  - arrow-function `<anonymous@5826>` — `(`
+  - variable `scoredVariants` — `scoredVariants = vVerdicts.filter((`
+  - arrow-function `<anonymous@5910>` — `(`
+  - variable `killed` — `killed = scoredMutants.filter((`
+  - arrow-function `<anonymous@5990>` — `(`
+  - variable `survived` — `survived = scoredMutants.filter((`
+  - arrow-function `<anonymous@6092>` — `(`
+  - variable `robust` — `robust = scoredVariants.filter((`
+  - … and 7 more symbols
+- `scripts/mutation-oracle.mjs` (60 symbols)
+  - variable `COMMENT_LINE_RE` — `COMMENT_LINE_RE = /^\s*(\/\/|#|\*|--|;|%|<!--)/`
+  - function `codeRegionLength` — `function codeRegionLength(line)`
+  - variable `cands` — `cands = [line.indexOf(' //'), line.indexOf(' #'), line.indexOf(' --')].filter((i) => i >= 0)`
+  - arrow-function `<anonymous@2032>` — `(i) => i >= 0`
+  - variable `OPERATORS` — `OPERATORS = [`
+  - arrow-function `to` — `(m) => String(Number(m) + 1)`
+  - variable `VALUE_OPERATORS` — `VALUE_OPERATORS = [`
+  - arrow-function `to` — `(m) => `"$`
+  - arrow-function `to` — `(m) => `'$`
+  - function `generateMutants` — `export function generateMutants(fileContent, changedLines,` — *Generate single-point mutants of `fileContent`, mutating only lines in `changedLines` (1-indexed). Returns [{ content, label, line, snippet }]. Deterministic; capped at maxMutants (round-robin across *
+  - variable `operators` — `operators = valueMutants ? [...OPERATORS, ...VALUE_OPERATORS] : OPERATORS`
+  - variable `lines` — `lines = String(fileContent).split('\n')`
+  - variable `changed` — `changed = new Set((changedLines || []).filter((n) => n >= 1 && n <= lines.length))`
+  - arrow-function `<anonymous@10435>` — `(n) => n >= 1 && n <= lines.length`
+  - variable `perLine` — `perLine = new Map()`
+  - variable `lineNo` — `lineNo`
+  - arrow-function `<anonymous@10778>` — `(a, b) => a - b`
+  - variable `idx` — `idx = lineNo - 1`
+  - variable `original` — `original = lines[idx]`
+  - variable `codeLen` — `codeLen = commentTrim ? codeRegionLength(original) : original.length`
+  - variable `bucket` — `bucket = []`
+  - variable `op` — `op`
+  - variable `matches` — `matches = [...original.matchAll(op.find)]`
+  - variable `occ` — `occ = 0`
+  - variable `seen` — `seen = -1`
+  - variable `mutatedLine` — `mutatedLine = original.replace(op.find, (m) =>`
+  - arrow-function `<anonymous@11403>` — `(m) =>`
+  - variable `mutatedLines` — `mutatedLines = lines.slice()`
+  - variable `out` — `out = []`
+  - variable `seenContent` — `seenContent = new Set()`
+  - variable `added` — `added = true`
+  - variable `round` — `round = 0`
+  - variable `bucket` — `bucket`
+  - variable `m` — `m = bucket[round]`
+  - function `computeMutationScore` — `export async function computeMutationScore(fileContent, changedLines, runTestOnContent, opts =` — *Compute the mutation score for a passed candidate.*
+  - variable `mutants` — `mutants = generateMutants(fileContent, changedLines, opts)`
+  - variable `killed` — `killed = 0`
+  - variable `scorable` — `scorable = 0`
+  - variable `abstained` — `abstained = 0`
+  - variable `survivors` — `survivors = []`
+  - … and 20 more symbols
+- `scripts/property-metamorphic-oracle.mjs` (32 symbols)
+  - variable `HERE` — `HERE = path.dirname(fileURLToPath(import.meta.url))`
+  - variable `WORKER` — `WORKER = path.join(HERE, 'property-metamorphic-worker.mjs')`
+  - variable `GIT_ENV` — `GIT_ENV =`
+  - variable `JS_EXT` — `JS_EXT = new Set(['.js', '.mjs', '.cjs'])`
+  - function `langSupported` — `export function langSupported(filePath)`
+  - function `baseContentOf` — `export function baseContentOf(worktreePath, targetFile)` — *Pre-patch content of targetFile at HEAD, or null (new/untracked file — no base to diff).*
+  - function `runFuzzOn` — `function runFuzzOn(` — *Run the fuzz worker once against `content` written at `abs`; always restores `abs` after.*
+  - variable `res` — `res = spawnSync(process.execPath, [WORKER, abs, String(runsPerFn), String(seed), String(maxFunctions)],`
+  - variable `line` — `line = String(res.stdout || '').trim().split('\n').filter(Boolean).pop()`
+  - variable `parsed` — `parsed`
+  - function `assessPropertyMetamorphic` — `export function assessPropertyMetamorphic(` — *Assess a candidate file for property-based crash regressions. Returns { propertyScore, regressions: string[], behaviorDeltaCount, functionsCovered, newFileCrashRate, abstainReason }. propertyScore: 1.*
+  - variable `abs` — `abs = path.join(worktreePath, targetFile)`
+  - variable `newContent` — `newContent`
+  - variable `oldContent` — `oldContent = baseContentOf(worktreePath, targetFile)`
+  - variable `newRun` — `newRun = runFuzzOn(`
+  - variable `calls` — `calls = 0`
+  - variable `crashes` — `crashes = 0`
+  - variable `f` — `f`
+  - variable `r` — `r`
+  - variable `oldRun` — `oldRun = runFuzzOn(`
+  - variable `oldByName` — `oldByName = new Map(oldRun.functions.map((f) => [f.name, f]))`
+  - arrow-function `<anonymous@7757>` — `(f) => [f.name, f]`
+  - variable `regressions` — `regressions = []`
+  - variable `behaviorDeltaCount` — `behaviorDeltaCount = 0`
+  - variable `paired` — `paired = 0`
+  - variable `sharedFunctions` — `sharedFunctions = 0`
+  - variable `nf` — `nf`
+  - variable `of_` — `of_ = oldByName.get(nf.name)`
+  - variable `n` — `n = Math.min(of_.results.length, nf.results.length)`
+  - variable `i` — `i = 0`
+  - variable `o` — `o = of_.results[i]`
+  - variable `nR` — `nR = nf.results[i]`
+
+### Deep research specialist — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 73 · **Callable:** 26 · **Authored purpose:** 2
+- `scripts/deep-research-specialist.mjs` (73 symbols)
+  - variable `DEEP_RESEARCH_SPECIALIST_VERSION` — `DEEP_RESEARCH_SPECIALIST_VERSION = '2.0.0'`
+  - variable `RESEARCH_TRIGGERS` — `RESEARCH_TRIGGERS = Object.freeze(['upfront', 'break-glass', 'explicit', 'task-deemed-complex'])`
+  - class `DeepResearchSpecialistError` — `export class DeepResearchSpecialistError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'deepResearchSpecialist')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `resolveResearchTrigger` — `export function resolveResearchTrigger(`
+  - variable `normalized` — `normalized = normalizeResearchTrigger(researchTrigger)`
+  - function `validateDeepResearchInput` — `export function validateDeepResearchInput(input)`
+  - variable `resolved` — `resolved = plainObject(input, 'deepResearchSpecialist.input')`
+  - variable `triggerDecision` — `triggerDecision = resolveResearchTrigger(resolved)`
+  - function `defaultRoleOutputs` — `function defaultRoleOutputs(`
+  - variable `taskGoal` — `taskGoal = taskSpec?.goal || taskSpec?.summary || 'unspecified task'`
+  - variable `featureIntent` — `featureIntent = taskSpec?.featureIntent?.summary || null`
+  - variable `projectIntent` — `projectIntent = taskSpec?.projectIntent?.summary || null`
+  - function `runDeepResearchPipeline` — `export async function runDeepResearchPipeline(input, deps =`
+  - variable `validated` — `validated = validateDeepResearchInput(input)`
+  - variable `<anonymous@4460>`
+  - variable `normalizedTaskSpec` — `normalizedTaskSpec = taskSpecForDeepResearch(taskSpec,`
+  - variable `runV2` — `runV2 = deps.runResearchV2Pipeline || runResearchV2Pipeline`
+  - variable `pipeline` — `pipeline = await runV2(`
+  - variable `fanout` — `fanout = deps.fanoutQueries || defaultFanout`
+  - variable `crawl` — `crawl = deps.crawlPages || defaultCrawl`
+  - variable `validateFacts` — `validateFacts = deps.validateFacts || validateDeepResearchFacts`
+  - variable `invokeRole` — `invokeRole = deps.invokeRole || defaultInvokeRole`
+  - variable `roleTrace` — `roleTrace = []`
+  - variable `startedAt` — `startedAt = Date.now()`
+  - variable `maxWallMs` — `maxWallMs = budget.maxWallMs ?? 120_000`
+  - variable `maxFanOutQueries` — `maxFanOutQueries = budget.maxFanOutQueries ?? 12`
+  - variable `deadlineAt` — `deadlineAt = startedAt + maxWallMs`
+  - variable `wallBudgetExhausted` — `wallBudgetExhausted = false`
+  - variable `wallAbort` — `wallAbort = new AbortController()`
+  - arrow-function `remainingWallMs` — `() => Math.max(0, deadlineAt - Date.now())`
+  - variable `TIMED_OUT` — `TIMED_OUT = Symbol('deep-research-wall-timeout')`
+  - arrow-function `raceWall` — `async (work, onTimeout) =>`
+  - variable `budgetMs` — `budgetMs = remainingWallMs()`
+  - arrow-function `<anonymous@8326>` — `() =>`
+  - variable `timer` — `timer`
+  - … and 33 more symbols
+
+### Research V2 pipeline — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 560 · **Callable:** 146 · **Authored purpose:** 6
+- `scripts/deep-research/research-v2-pipeline.mjs` (560 symbols)
+  - function `extractHost` — `function extractHost(urlStr)`
+  - variable `RESEARCH_V2_PIPELINE_VERSION` — `RESEARCH_V2_PIPELINE_VERSION = '2.30.0'`
+  - variable `EVIDENCE_EXTRACT_MAX_CHARS` — `EVIDENCE_EXTRACT_MAX_CHARS = Number.parseInt(`
+  - variable `PLAN_WRITER_CONTEXT_MAX_CHARS` — `PLAN_WRITER_CONTEXT_MAX_CHARS = 6_000`
+  - variable `GAP_SEVERITY_RANK` — `GAP_SEVERITY_RANK = Object.freeze(`
+  - variable `API_DOCS_QUERY_RE` — `API_DOCS_QUERY_RE = /\b(?:api|apis|docs?|documentation|official\s+(?:docs?|reference)|reference|sdk|readme|changelog|release\s+notes?|version|migration|configuration|config)\b/i`
+  - function `normalizeGapLoopCategoryForPack` — `export function normalizeGapLoopCategoryForPack(category = 'pattern', text = '', pack = null)`
+  - variable `cat` — `cat = String(category || 'pattern')`
+  - function `buildCanonicalGapRoundQueries` — `export function buildCanonicalGapRoundQueries(queryLikes = [],` — *THE canonical gap-round query constructor — the single place query-likes (strings or {text, category, ...} objects) become hardened query objects. Both the live round AND the speculative prefetch must*
+  - arrow-function `<anonymous@9219>` — `(entry, index) =>`
+  - variable `isObject` — `isObject = entry !== null && typeof entry === 'object'`
+  - variable `text` — `text = String(isObject ? entry.text : entry)`
+  - variable `pack` — `pack = inferPackForText(text,`
+  - variable `rawText` — `rawText = skipLibrarySiteMap ? stripLibrarySiteOperators(text, pack) : text`
+  - variable `category` — `category = normalizeGapLoopCategoryForPack(`
+  - function `applyHonestPartialSynthesisLabel` — `export function applyHonestPartialSynthesisLabel(llmSynthesis)` — *Label truth (2026-07-04): runSynthesisAnalyst returns a deterministic fallback WITH non-empty sections when the model output is empty, so "sections exist" must never be relabeled 'partial-llm' — that *
+  - variable `llmBacked` — `llmBacked = llmSynthesis?.mode === 'model' || llmSynthesis?.mode === 'salvaged-model'`
+  - function `shouldRecordAnchorCompleteBlockSignal` — `export function shouldRecordAnchorCompleteBlockSignal(gateForComplete,`
+  - variable `anchorCompleteBlocked` — `anchorCompleteBlocked = anchorGateBlocksComplete(gateForComplete,`
+  - variable `minRoundOnlyBlock` — `minRoundOnlyBlock = anchorCompleteBlocked && round < minPackRounds && gateForComplete?.satisfied === true`
+  - function `tokenizePlanText` — `function tokenizePlanText(text = '')`
+  - arrow-function `<anonymous@11522>` — `token => token.length >= 3 || /\d/.test(token)`
+  - function `selectPlanWriterClaims` — `function selectPlanWriterClaims(claims = [],`
+  - variable `taskTokens` — `taskTokens = new Set(tokenizePlanText(taskText))`
+  - variable `synthesisClaimIds` — `synthesisClaimIds = new Set(`
+  - arrow-function `<anonymous@11809>` — `section => section.claimIds || []`
+  - arrow-function `score` — `(claim) =>`
+  - variable `text` — `text = String(claim.text || '')`
+  - variable `quote` — `quote = String(claim.quote || '')`
+  - variable `rank` — `rank = claim.tier === 'A' ? 12 : claim.tier === 'B' ? 8 : 0`
+  - variable `claimTokens` — `claimTokens = tokenizePlanText(`$`
+  - arrow-function `<anonymous@12156>` — `token => taskTokens.has(token)`
+  - arrow-function `<anonymous@12686>` — `(a, b) => score(b) - score(a)`
+  - function `buildCompactPlanWriterContext` — `export function buildCompactPlanWriterContext(`
+  - variable `taskText` — `taskText = canonicalResearchTaskText(taskSpec) || taskSpec.goal || ''`
+  - variable `allClaims` — `allClaims = bank.claims || []`
+  - variable `selectedClaims` — `selectedClaims = selectPlanWriterClaims(allClaims,`
+  - variable `openGaps` — `openGaps = (gapLedger.gaps || [])`
+  - arrow-function `<anonymous@13213>` — `g => g.status === 'open'`
+  - arrow-function `<anonymous@13249>` — `(a, b) => (GAP_SEVERITY_RANK[b.severity] ?? 0) - (GAP_SEVERITY_RANK[a.severity] ?? 0)`
+  - … and 520 more symbols
+
+### Gap ledger — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 142 · **Callable:** 54 · **Authored purpose:** 4
+- `scripts/deep-research/gap-ledger.mjs` (142 symbols)
+  - variable `GAP_LEDGER_VERSION` — `GAP_LEDGER_VERSION = '2.0.0'`
+  - variable `BLOCKING_SEVERITIES` — `BLOCKING_SEVERITIES = new Set(['critical', 'major'])`
+  - variable `CONTRADICTION_STALEMATE_MIN_ROUNDS` — `CONTRADICTION_STALEMATE_MIN_ROUNDS = 2`
+  - variable `GAP_KINDS` — `GAP_KINDS = new Set([`
+  - variable `SEVERITIES` — `SEVERITIES = new Set(['critical', 'major', 'minor'])`
+  - variable `GAP_STATUSES` — `GAP_STATUSES = new Set(['open', 'resolved', 'deferred', 'unsatisfiable'])`
+  - class `GapLedgerError` — `export class GapLedgerError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'gapLedger')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName,`
+  - variable `trimmed` — `trimmed = value.trim()`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `createGapLedger` — `export function createGapLedger(`
+  - function `validateGapEntry` — `export function validateGapEntry(entry, pathName = 'gapLedger.gap')`
+  - variable `resolved` — `resolved = plainObject(entry, pathName)`
+  - function `coerceGapLedgerSchema` — `export function coerceGapLedgerSchema(ledger)` — *Upgrade legacy checkpoint ledgers for digest/forensics without mutating source.*
+  - function `validateGapLedger` — `export function validateGapLedger(ledger)`
+  - variable `resolved` — `resolved = plainObject(ledger, 'gapLedger')`
+  - variable `gapIds` — `gapIds = new Set()`
+  - variable `<anonymous@4359>` — `[index, gap]`
+  - variable `validated` — `validated = validateGapEntry(gap, `gapLedger.gaps[$`
+  - variable `<anonymous@4632>` — `[index, gap]`
+  - function `normalizeGapDescription` — `function normalizeGapDescription(description = '')`
+  - function `gapDedupKey` — `export function gapDedupKey(gap =` — *Structural identity — prevents per-round gap ID churn for same contradict pair.*
+  - variable `nodes` — `nodes = (gap.relatedNodeIds || []).slice().sort().join(',')`
+  - variable `desc` — `desc = normalizeGapDescription(gap.description)`
+  - function `stableGapId` — `export function stableGapId(gap =`
+  - variable `hash` — `hash = createHash('sha256').update(gapDedupKey(gap)).digest('hex').slice(0, 10)`
+  - variable `prefix` — `prefix = String(gap.kind || 'gap').slice(0, 4)`
+  - function `findDuplicateGap` — `export function findDuplicateGap(ledger, gap)`
+  - variable `key` — `key = gapDedupKey(gap)`
+  - variable `all` — `all = [...(ledger.gaps || []), ...(ledger.resolved || [])]`
+  - arrow-function `<anonymous@5762>` — `g => gapDedupKey(g) === key`
+  - function `mergeGaps` — `export function mergeGaps(ledger, newGaps = [])`
+  - variable `existingIds` — `existingIds = new Set(ledger.gaps.map(g => g.gapId))`
+  - arrow-function `<anonymous@5926>` — `g => g.gapId`
+  - variable `deduped` — `deduped = 0`
+  - variable `<anonymous@5972>` — `[index, gap]`
+  - variable `validated` — `validated = validateGapEntry(gap, `gapLedger.merge[$`
+  - … and 102 more symbols
+
+### Evidence bank — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 101 · **Callable:** 41 · **Authored purpose:** 1
+- `scripts/deep-research/evidence-bank.mjs` (101 symbols)
+  - variable `EVIDENCE_BANK_VERSION` — `EVIDENCE_BANK_VERSION = '1.0.0'`
+  - variable `TIERS` — `TIERS = new Set(['A', 'B', 'C', 'D'])`
+  - variable `OUTLINE_STATUSES` — `OUTLINE_STATUSES = new Set(['draft', 'validated', 'gap'])`
+  - class `EvidenceBankError` — `export class EvidenceBankError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'evidenceBank')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName,`
+  - variable `trimmed` — `trimmed = value.trim()`
+  - function `isoTimestamp` — `function isoTimestamp(value, pathName)`
+  - variable `result` — `result = nonEmptyString(value, pathName)`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `normalizeClaimText` — `function normalizeClaimText(text)`
+  - function `tierRank` — `function tierRank(tier)`
+  - function `createEvidenceBank` — `export function createEvidenceBank(`
+  - function `resolveClaimUrl` — `export function resolveClaimUrl(bank, claim =`
+  - variable `src` — `src = bank.sources.find(s => s.sourceSha256 === claim.sourceSha256)`
+  - arrow-function `<anonymous@2155>` — `s => s.sourceSha256 === claim.sourceSha256`
+  - function `enrichClaimWithSourceUrl` — `export function enrichClaimWithSourceUrl(bank, claim =`
+  - variable `url` — `url = resolveClaimUrl(bank, claim)`
+  - function `validateEvidenceClaim` — `export function validateEvidenceClaim(claim, pathName = 'evidenceBank.claim')`
+  - variable `resolved` — `resolved = plainObject(claim, pathName)`
+  - function `validateOutlineSection` — `export function validateOutlineSection(section, pathName = 'evidenceBank.outline')`
+  - variable `resolved` — `resolved = plainObject(section, pathName)`
+  - function `validateEvidenceBank` — `export function validateEvidenceBank(bank)`
+  - variable `resolved` — `resolved = plainObject(bank, 'evidenceBank')`
+  - variable `claimIds` — `claimIds = new Set()`
+  - variable `<anonymous@4415>` — `[index, claim]`
+  - variable `validated` — `validated = validateEvidenceClaim(claim, `evidenceBank.claims[$`
+  - variable `<anonymous@4722>` — `[index, section]`
+  - variable `validated` — `validated = validateOutlineSection(section, `evidenceBank.outline[$`
+  - variable `claimId` — `claimId`
+  - function `registerSource` — `export function registerSource(bank, source)`
+  - variable `url` — `url = nonEmptyString(source.url, 'evidenceBank.source.url')`
+  - variable `sourceSha256` — `sourceSha256 = nonEmptyString(source.sourceSha256 || source.sha256, 'evidenceBank.source.sourceSha256')`
+  - variable `tier` — `tier = TIERS.has(source.tier) ? source.tier : 'C'`
+  - variable `fetchedAt` — `fetchedAt = source.fetchedAt ? isoTimestamp(source.fetchedAt, 'evidenceBank.source.fetchedAt') : new Date().toISOString()`
+  - variable `existing` — `existing = bank.sources.find(s => s.sourceSha256 === sourceSha256)`
+  - arrow-function `<anonymous@5598>` — `s => s.sourceSha256 === sourceSha256`
+  - variable `record` — `record =`
+  - … and 61 more symbols
+
+### Research dependency/contradiction graph — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 259 · **Callable:** 84 · **Authored purpose:** 8
+- `scripts/deep-research/dependency-graph.mjs` (259 symbols)
+  - variable `DEPENDENCY_GRAPH_VERSION` — `DEPENDENCY_GRAPH_VERSION = '1.3.0'`
+  - variable `NODE_KINDS` — `NODE_KINDS = new Set(['concept', 'dependency', 'risk', 'unknown', 'evidence', 'code-anchor'])`
+  - variable `EDGE_KINDS` — `EDGE_KINDS = new Set(['requires', 'contradicts', 'supports', 'implements'])`
+  - variable `NODE_STATUSES` — `NODE_STATUSES = new Set(['open', 'resolved', 'deferred'])`
+  - variable `TIERS` — `TIERS = new Set(['A', 'B', 'C', 'D'])`
+  - variable `FACT_CATEGORY_TO_KIND` — `FACT_CATEGORY_TO_KIND = Object.freeze(`
+  - class `DependencyGraphError` — `export class DependencyGraphError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'dependencyGraph')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plainObject` — `function plainObject(value, pathName)`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName,`
+  - variable `trimmed` — `trimmed = value.trim()`
+  - function `isoTimestamp` — `function isoTimestamp(value, pathName)`
+  - variable `result` — `result = nonEmptyString(value, pathName)`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `createEmptyGraph` — `export function createEmptyGraph(`
+  - variable `resolvedTaskId` — `resolvedTaskId = nonEmptyString(taskId, 'dependencyGraph.taskId')`
+  - variable `resolvedGraphId` — `resolvedGraphId = graphId`
+  - variable `resolvedCreatedAt` — `resolvedCreatedAt = createdAt`
+  - function `validateGraphNode` — `export function validateGraphNode(node, pathName = 'dependencyGraph.node')`
+  - variable `resolved` — `resolved = plainObject(node, pathName)`
+  - function `validateGraphEdge` — `export function validateGraphEdge(edge, pathName = 'dependencyGraph.edge')`
+  - variable `resolved` — `resolved = plainObject(edge, pathName)`
+  - variable `SUPPORTED_GRAPH_VERSIONS` — `SUPPORTED_GRAPH_VERSIONS = new Set(['1.0.0', DEPENDENCY_GRAPH_VERSION])`
+  - function `validateDependencyGraph` — `export function validateDependencyGraph(graph)`
+  - variable `resolved` — `resolved = plainObject(graph, 'dependencyGraph')`
+  - variable `nodeIds` — `nodeIds = new Set()`
+  - variable `<anonymous@5538>` — `[index, node]`
+  - variable `validated` — `validated = validateGraphNode(node, `dependencyGraph.nodes[$`
+  - variable `<anonymous@5836>` — `[index, edge]`
+  - variable `validated` — `validated = validateGraphEdge(edge, `dependencyGraph.edges[$`
+  - variable `cycle` — `cycle = detectCycle(resolved)`
+  - function `detectCycle` — `function detectCycle(graph)`
+  - variable `adjacency` — `adjacency = new Map()`
+  - variable `edge` — `edge`
+  - variable `visiting` — `visiting = new Set()`
+  - variable `visited` — `visited = new Set()`
+  - function `dfs` — `function dfs(nodeId)`
+  - variable `next` — `next`
+  - variable `found` — `found = dfs(next)`
+  - … and 219 more symbols
+
+### Research checkpoint/continuation — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 84 · **Callable:** 49 · **Authored purpose:** 3
+- `scripts/deep-research/research-checkpoint.mjs` (31 symbols)
+  - variable `RESEARCH_CHECKPOINT_VERSION` — `RESEARCH_CHECKPOINT_VERSION = '1.3.0'`
+  - variable `CHECKPOINT_TRACE_TAIL_LIMIT` — `CHECKPOINT_TRACE_TAIL_LIMIT = 200`
+  - function `boundTraceForCheckpoint` — `export function boundTraceForCheckpoint(trace = [])`
+  - variable `list` — `list = Array.isArray(trace) ? trace : []`
+  - variable `omitted` — `omitted = list.slice(0, list.length - CHECKPOINT_TRACE_TAIL_LIMIT)`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `researchCheckpointPath` — `export function researchCheckpointPath(baseDir, taskId)`
+  - variable `safe` — `safe = String(taskId).replace(/[^\w.-]+/g, '_')`
+  - function `buildScopeResumeSnapshot` — `export function buildScopeResumeSnapshot(`
+  - function `rebuildScopeFromCheckpoint` — `export function rebuildScopeFromCheckpoint(payload =` — *Rebuild scope-planner output from checkpoint — skips 4× perspective GPU calls on resume.*
+  - variable `resume` — `resume = payload.scopeResume ||`
+  - variable `scopePlan` — `scopePlan = resume.scopePlan || payload.scopePlan || null`
+  - function `rebuildScoutFromCheckpoint` — `export function rebuildScoutFromCheckpoint(payload =` — *Rebuild repo-scout snapshot from checkpoint — skips SCIP + repo-scout LLM on resume.*
+  - variable `scoutSnap` — `scoutSnap = payload.scopeResume?.scout ||`
+  - function `buildCheckpointPayload` — `export function buildCheckpointPayload(`
+  - variable `scopeResume` — `scopeResume = buildScopeResumeSnapshot(`
+  - variable `boundedTrace` — `boundedTrace = boundTraceForCheckpoint(trace)`
+  - function `validateCheckpointIntent` — `export function validateCheckpointIntent(checkpointPayload =` — *Reject resume when operator-frozen intent changed since checkpoint save.*
+  - variable `savedSha` — `savedSha = checkpointPayload.taskSpecSha256`
+  - variable `currentSha` — `currentSha = taskSpec.taskSpecSha256`
+  - function `saveResearchCheckpoint` — `export function saveResearchCheckpoint(baseDir, state)`
+  - variable `filePath` — `filePath = researchCheckpointPath(baseDir, state.taskId)`
+  - variable `payload` — `payload = buildCheckpointPayload(state)`
+  - variable `<anonymous@5666>`
+  - variable `SUPPORTED_CHECKPOINT_VERSIONS` — `SUPPORTED_CHECKPOINT_VERSIONS = new Set(['1.0.0', '1.2.0', RESEARCH_CHECKPOINT_VERSION])`
+  - function `loadResearchCheckpoint` — `export function loadResearchCheckpoint(filePath)`
+  - variable `payload` — `payload = JSON.parse(readFileSync(filePath, 'utf8'))`
+  - variable `<anonymous@6421>`
+  - variable `expected` — `expected = sha256Json(hashBody)`
+  - function `applyResearchCheckpoint` — `export function applyResearchCheckpoint(pipelineState, checkpoint)`
+  - variable `p` — `p = checkpoint.payload`
+- `scripts/deep-research/research-continuation-packet.mjs` (53 symbols)
+  - variable `RESEARCH_CONTINUATION_PACKET_VERSION` — `RESEARCH_CONTINUATION_PACKET_VERSION = '1.0.0'`
+  - variable `CONTINUATION_MODEL_SUMMARY_MAX_CHARS` — `CONTINUATION_MODEL_SUMMARY_MAX_CHARS = 4_000`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `sha256Text` — `function sha256Text(value = '')`
+  - function `compactOneLine` — `function compactOneLine(value = '', max = 240)`
+  - function `topClaims` — `function topClaims(bank =`
+  - arrow-function `<anonymous@1090>` — `claim => claim && (claim.tier === 'A' || claim.tier === 'B')`
+  - arrow-function `<anonymous@1180>` — `claim => (`
+  - function `sourceSet` — `function sourceSet(bank =`
+  - variable `urls` — `urls = new Set()`
+  - variable `source` — `source`
+  - variable `citation` — `citation`
+  - function `graphSummary` — `function graphSummary(graph =`
+  - variable `nodes` — `nodes = graph.nodes || []`
+  - variable `edges` — `edges = graph.edges || []`
+  - arrow-function `<anonymous@1951>` — `n => n.status === 'open'`
+  - arrow-function `<anonymous@1994>` — `n => (`
+  - arrow-function `<anonymous@2131>` — `e => e.kind === 'contradicts'`
+  - arrow-function `<anonymous@2179>` — `e => (`
+  - function `gapSummary` — `function gapSummary(gapLedger =`
+  - variable `gaps` — `gaps = gapLedger.gaps || []`
+  - arrow-function `<anonymous@2410>` — `g => g.status === 'open'`
+  - arrow-function `<anonymous@2474>` — `g => g.status === 'open' && (g.severity === 'critical' || g.severity === 'major')`
+  - arrow-function `<anonymous@2600>` — `g => g.status === 'open' || g.status === 'deferred'`
+  - arrow-function `<anonymous@2684>` — `g => (`
+  - function `decisionLedger` — `function decisionLedger(planWriter =`
+  - variable `decisions` — `decisions = Array.isArray(planWriter.decisionJustification)`
+  - arrow-function `<anonymous@3186>` — `d => (`
+  - arrow-function `<anonymous@3551>` — `a => compactOneLine(a, 220)`
+  - arrow-function `<anonymous@3663>` — `a => compactOneLine(a, 220)`
+  - arrow-function `<anonymous@3975>` — `i => compactOneLine(i, 260)`
+  - function `verificationSummary` — `function verificationSummary(`
+  - arrow-function `<anonymous@4744>` — `f => (`
+  - arrow-function `<anonymous@5339>` — `s => (`
+  - function `buildNextActions` — `function buildNextActions(`
+  - variable `actions` — `actions = []`
+  - arrow-function `<anonymous@6555>` — `g => g.status === 'open'`
+  - function `buildModelFacingSummary` — `function buildModelFacingSummary(packetCore)`
+  - variable `sections` — `sections = [`
+  - arrow-function `<anonymous@7513>` — `g => `$`
+  - … and 13 more symbols
+
+### Source, citation, FACT/CoVe/RARR checks — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 202 · **Callable:** 55 · **Authored purpose:** 8
+- `scripts/deep-research/research-citations.mjs` (55 symbols)
+  - variable `RESEARCH_CITATIONS_VERSION` — `RESEARCH_CITATIONS_VERSION = '1.1.1'`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `sha256Text` — `function sha256Text(value = '')`
+  - function `blockSourceSha256` — `function blockSourceSha256(block)`
+  - function `sourceUrlForClaim` — `function sourceUrlForClaim(bank, claim)`
+  - variable `source` — `source = (bank.sources || []).find(s => s.sourceSha256 === claim.sourceSha256)`
+  - arrow-function `<anonymous@646>` — `s => s.sourceSha256 === claim.sourceSha256`
+  - function `compactLine` — `function compactLine(value = '', max = 360)`
+  - function `buildEvidenceFirstExcerpt` — `function buildEvidenceFirstExcerpt(`
+  - variable `claimLines` — `claimLines = []`
+  - variable `claim` — `claim`
+  - variable `quote` — `quote = compactLine(claim.quote || '', 420)`
+  - variable `sourceExcerpt` — `sourceExcerpt = compactLine(block?.markdown || '', 1600)`
+  - function `claimTextDigests` — `function claimTextDigests(claims = [])`
+  - arrow-function `<anonymous@1475>` — `claim => (`
+  - function `mergeUniqueByClaimId` — `function mergeUniqueByClaimId(existing = [], next = [])`
+  - variable `rows` — `rows = new Map()`
+  - variable `row` — `row`
+  - variable `row` — `row`
+  - function `buildCitationsFromClaims` — `export function buildCitationsFromClaims(bank, blocks = [],` — *Build per-block citations with claimIds scoped to claims from that source only.*
+  - variable `blockByUrl` — `blockByUrl = new Map()`
+  - variable `blockBySha` — `blockBySha = new Map()`
+  - variable `block` — `block`
+  - variable `claimsBySourceKey` — `claimsBySourceKey = new Map()`
+  - variable `claim` — `claim`
+  - variable `url` — `url = sourceUrlForClaim(bank, claim)`
+  - variable `block` — `block = blockBySha.get(claim.sourceSha256) || (url && blockByUrl.get(url))`
+  - variable `key` — `key = claim.sourceSha256 || url || block?.url || block?.blockId || 'orphan'`
+  - variable `rows` — `rows = []`
+  - variable `seenUrls` — `seenUrls = new Set()`
+  - variable `<anonymous@2983>`
+  - variable `resolvedUrl` — `resolvedUrl = block?.url || url || 'repository://context'`
+  - variable `existing` — `existing = rows.find(r => r.url === resolvedUrl)`
+  - arrow-function `<anonymous@3139>` — `r => r.url === resolvedUrl`
+  - variable `claimIds` — `claimIds = claims.map(c => c.claimId)`
+  - arrow-function `<anonymous@3199>` — `c => c.claimId`
+  - variable `id` — `id`
+  - arrow-function `<anonymous@3553>` — `c => c.quote`
+  - arrow-function `<anonymous@3580>` — `c => (`
+  - arrow-function `<anonymous@3819>` — `c => c.text`
+  - … and 15 more symbols
+- `scripts/deep-research/source-validator.mjs` (147 symbols)
+  - variable `SOURCE_VALIDATOR_VERSION` — `SOURCE_VALIDATOR_VERSION = '1.7.0'`
+  - variable `GITHUB_NAV_MARKERS` — `GITHUB_NAV_MARKERS = [`
+  - function `detectNavShellContent` — `export function detectNavShellContent(markdown = '', url = '')` — *Detect GitHub global nav-shell HTML masquerading as repo content.*
+  - variable `text` — `text = String(markdown || '')`
+  - variable `normalized` — `normalized = normalizeText(cleanMarkdownContent(text))`
+  - variable `hits` — `hits = GITHUB_NAV_MARKERS.filter(re => re.test(normalized)).length`
+  - arrow-function `<anonymous@948>` — `re => re.test(normalized)`
+  - variable `lines` — `lines = text.split('\n').map(l => l.trim()).filter(Boolean)`
+  - arrow-function `<anonymous@1019>` — `l => l.trim()`
+  - variable `linkLines` — `linkLines = lines.filter(l => /^[-*]\s*\[/.test(l) || /copilot|actions|security|insights/i.test(l)).length`
+  - arrow-function `<anonymous@1083>` — `l => /^[-*]\s*\[/.test(l) || /copilot|actions|security|insights/i.test(l)`
+  - variable `linkHeavy` — `linkHeavy = lines.length > 8 && linkLines / lines.length > 0.45`
+  - variable `ghShell` — `ghShell = /github\.com/i.test(url) && (hits >= 2 || (hits >= 1 && linkHeavy))`
+  - variable `REPO_ROOT` — `REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')`
+  - variable `DEFAULT_DOMAIN_CONFIG_PATH` — `DEFAULT_DOMAIN_CONFIG_PATH = path.join(REPO_ROOT, 'config/research-tier-b-domains.json')`
+  - variable `SEO_HOST_RE` — `SEO_HOST_RE = /medium\.com|dev\.to|hackernoon\.com|towardsdatascience\.com|substack\.com|wordpress\.com|blogger\.com/i`
+  - variable `TIER_D_HOST_RE` — `TIER_D_HOST_RE = /amazon\.in|amazon\.com\/(?:dp|gp)|flipkart\.com|dictionary\.cambridge\.org|alibaba\.com|ebay\.com\/itm|walmart\.com\/ip\//i`
+  - variable `TIER_A_HOST_RE` — `TIER_A_HOST_RE = /arxiv\.org|github\.com|readthedocs\.io|docs\.|\.gov|acm\.org|ieee\.org|openreview\.net|openalex\.org|doi\.org|semanticscholar\.org|sciencedirect\.com|springer\.com|researchgate\.net|`
+  - variable `TIER_B_HOST_RE` — `TIER_B_HOST_RE = /stackoverflow\.com|npmjs\.com|pypi\.org|crates\.io|pkg\.go\.dev|developer\.mozilla\.org|kubernetes\.io|cncf\.io|docker\.com|quay\.io|learn\.microsoft\.com|docs\.microsoft\.com|develo`
+  - variable `MIN_EXTRACTABLE_BLOCK_CHARS` — `MIN_EXTRACTABLE_BLOCK_CHARS = 1200`
+  - variable `MIN_SUBSTANTIVE_SHORT_BLOCK_CHARS` — `MIN_SUBSTANTIVE_SHORT_BLOCK_CHARS = 80`
+  - variable `SUBSTANTIVE_SHORT_BLOCK_RE` — `SUBSTANTIVE_SHORT_BLOCK_RE = /\b(?:abstract|introduction|method|results?|benchmark|dataset|paper|official|api|schema|usage|example|function|class|module|version|release|security|advisory|rfc|standard|`
+  - variable `BLOCKED_OR_ERROR_CONTENT_RE` — `BLOCKED_OR_ERROR_CONTENT_RE = /\b(?:404:\s*page\s*not\s*found|page\s*not\s*found|access\s*denied|403\s*forbidden|forbidden\s*error|sign\s*in\s*to|log\s*in\s*to|javascript\s+is\s+disabled|enable\s+java`
+  - variable `BODY_EVIDENCE_RE` — `BODY_EVIDENCE_RE = /\b(?:abstract|introduction|methodology|methods?|results?|discussion|conclusion|we\s+(?:propose|present|introduce|show|evaluate|study)|this\s+paper\s+(?:proposes|introduces|presents`
+  - variable `REFERENCE_LIST_RE` — `REFERENCE_LIST_RE = /\b(?:references|related\s+(?:articles|papers|content|work)|recommended\s+(?:articles|papers)|show\s+more|cited\s+by|similar\s+(?:articles|papers)|published:\s*20\d`
+  - function `scoreSourceUrl` — `export function scoreSourceUrl(url = '')`
+  - variable `u` — `u = String(url).toLowerCase()`
+  - function `cleanMarkdownContent` — `export function cleanMarkdownContent(markdown)` — *Strips HTML comments, markdown images, and markdown link targets to avoid matching boilerplate text or target URLs.*
+  - variable `cleaned` — `cleaned = String(markdown)`
+  - function `normalizeText` — `export function normalizeText(text)` — *Normalizes punctuation, collapses spaced-out leetspeak letters, and standardizes whitespace for scanning.*
+  - variable `normalized` — `normalized = text.replace(/\p`
+  - variable `prev` — `prev`
+  - function `detectPromptInjection` — `export function detectPromptInjection(normalizedText)` — *Heuristically detects prompt injection while ignoring academic/technical discussion contexts.*
+  - variable `injectionPatterns` — `injectionPatterns = [`
+  - variable `benignIndicators` — `benignIndicators = /\b(?:research|paper|study|vulnerability|attack\s+vector|injection\s+(?:attack|vulnerability|defense|security)|prevent|detect|test|explain|article|security|tutorial|example|scenario`
+  - variable `pattern` — `pattern`
+  - variable `match` — `match = normalizedText.match(pattern)`
+  - variable `matchIndex` — `matchIndex = match.index`
+  - variable `matchLen` — `matchLen = match[0].length`
+  - variable `start` — `start = Math.max(0, matchIndex - 120)`
+  - … and 107 more symbols
+
+### 57 domain routing configurations — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 144 · **Callable:** 44 · **Authored purpose:** 2
+- `scripts/domain-source-registry.mjs` (144 symbols)
+  - variable `DOMAIN_SOURCE_REGISTRY_VERSION` — `DOMAIN_SOURCE_REGISTRY_VERSION = '1.0.0'`
+  - variable `PUBCHEM_BASE` — `PUBCHEM_BASE = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug'`
+  - variable `CLINICAL_TRIALS_BASE` — `CLINICAL_TRIALS_BASE = 'https://clinicaltrials.gov/api/query'`
+  - variable `OPENFDA_BASE` — `OPENFDA_BASE = 'https://api.fda.gov'`
+  - variable `SEC_EDGAR_BASE` — `SEC_EDGAR_BASE = 'https://efts.sec.gov/LATEST'`
+  - variable `RFC_BASE` — `RFC_BASE = 'https://www.rfc-editor.org/rfc'`
+  - variable `NPM_BASE` — `NPM_BASE = 'https://registry.npmjs.org'`
+  - variable `PYPI_BASE` — `PYPI_BASE = 'https://pypi.org/pypi'`
+  - variable `RUBYGEMS_BASE` — `RUBYGEMS_BASE = 'https://rubygems.org/api/v1'`
+  - variable `CRATES_BASE` — `CRATES_BASE = 'https://crates.io/api/v1'`
+  - variable `GITHUB_SEARCH_BASE` — `GITHUB_SEARCH_BASE = 'https://api.github.com/search'`
+  - variable `DOMAIN_SOURCES` — `DOMAIN_SOURCES = [`
+  - arrow-function `detect` — `q => /\b(pubchem|smiles|CAS\s*\d|compound|drug|molecule|molecular\s+structure|chemical\s+structure|chemical\s+formula|substance)\b/i.test(q)`
+  - arrow-function `search` — `async (`
+  - variable `ac` — `ac = new AbortController()`
+  - variable `timer` — `timer = setTimeout(() => ac.abort(), timeoutMs)`
+  - arrow-function `<anonymous@1073>` — `() => ac.abort()`
+  - variable `url` — `url = `$`
+  - variable `res` — `res = await fetch(url,`
+  - variable `cids` — `cids = (await res.text()).trim().split('\n').slice(0, maxResults)`
+  - variable `results` — `results = []`
+  - variable `cid` — `cid`
+  - variable `propUrl` — `propUrl = `$`
+  - variable `propRes` — `propRes = await fetch(propUrl,`
+  - variable `data` — `data = await propRes.json()`
+  - variable `props` — `props = data?.PropertyTable?.Properties?.[0]`
+  - arrow-function `detect` — `q => /(clinical trial|phase [1-4]|NCT\d+|efficacy|safety|randomized|placebo|patient.*study|trial.*treatment)/i.test(q)`
+  - arrow-function `search` — `async (`
+  - variable `ac` — `ac = new AbortController()`
+  - variable `timer` — `timer = setTimeout(() => ac.abort(), timeoutMs)`
+  - arrow-function `<anonymous@2798>` — `() => ac.abort()`
+  - variable `url` — `url = `$`
+  - variable `res` — `res = await fetch(url,`
+  - variable `data` — `data = await res.json()`
+  - variable `studies` — `studies = data?.FullStudiesResponse?.FullStudy || []`
+  - arrow-function `<anonymous@3269>` — `s =>`
+  - variable `study` — `study = s?.Study ||`
+  - variable `id` — `id = study?.ProtocolSection?.IdentificationModule?.NCTId?.NCTId?.[0] || ''`
+  - variable `title` — `title = study?.ProtocolSection?.IdentificationModule?.BriefTitle || ''`
+  - variable `conds` — `conds = study?.ProtocolSection?.ConditionsModule?.Condition?.join(', ') || ''`
+  - … and 104 more symbols
+
+### 3 executable domain packs — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 143 · **Callable:** 57 · **Authored purpose:** 3
+- `scripts/deep-research/domain-packs.mjs` (143 symbols)
+  - variable `DOMAIN_PACKS_VERSION` — `DOMAIN_PACKS_VERSION = '2.5.0'`
+  - variable `DOMAIN_PACKS` — `DOMAIN_PACKS = DOMAIN_PACK_REGISTRY`
+  - variable `IMPLEMENTATION_CONTEXT_RE` — `IMPLEMENTATION_CONTEXT_RE = /\b(implement|build|fix|refactor|deploy|npm\s*install|playable|tonight|ship|prototype|write\s*code|greenfield)\b/i`
+  - variable `GAME_AFFINITY_RE` — `GAME_AFFINITY_RE = /\b(game\s*dev(?:elopment)?|browser\s*game|playable|flappy|hill\s*climb|racing|arcade|matter\.?js|phaser|pixi\.?js|godot|unity|unreal|canvas|sprite|game\s*loop|game\s*physics|multip`
+  - variable `GOAL_POISON_RE` — `GOAL_POISON_RE = /\b(primary\s+objective|research:\s*|yo\s+make|allow\s*\(\)|must\s+prune|stress[\s-]?harness|e-002)\b/i`
+  - variable `PACK_DEMOTE_WHEN_GAME` — `PACK_DEMOTE_WHEN_GAME = new Set([`
+  - variable `IMPLEMENTATION_FIRST_CATEGORIES` — `IMPLEMENTATION_FIRST_CATEGORIES = new Set([`
+  - variable `CATEGORY_OPENALEX_DEFER_DEFAULT` — `CATEGORY_OPENALEX_DEFER_DEFAULT = Object.freeze(`
+  - function `isGoalPoisonPhrase` — `export function isGoalPoisonPhrase(text = '')`
+  - variable `raw` — `raw = String(text || '').trim()`
+  - function `stripInjectedTaskScaffold` — `export function stripInjectedTaskScaffold(text = '')`
+  - arrow-function `<anonymous@2426>` — `line => !/^\s*(global\s+alignment|autonomous\s+execution\s+directive)\s*:/i.test(line)`
+  - arrow-function `<anonymous@2526>` — `line => !/^\s*-\s*change\s+inside\s+[\w.-]+\s+repo\s*:/i.test(line)`
+  - arrow-function `<anonymous@2604>` — `line => line.replace(/^\s*(primary\s+objective|objective|research|task|goal)\s*:\s*/i, '').trim()`
+  - function `packIsImplementationFirst` — `export function packIsImplementationFirst(pack)`
+  - variable `category` — `category = getDomainPackCategory(pack.id)`
+  - function `packIsResearchHeavy` — `export function packIsResearchHeavy(pack)`
+  - variable `category` — `category = getDomainPackCategory(pack.id)`
+  - function `scoreDomainPacks` — `export function scoreDomainPacks(` — *Score all packs against task text; highest priority wins ties. The weighted-sum + homonym-demotion + priority-tiebreak-sort core is shared with `practice-packs.mjs` via `scoreWeightedPacks` (`weighted*
+  - variable `blob` — `blob = [`
+  - arrow-function `<anonymous@4119>` — `o => String(o.description || o.label || '')`
+  - variable `hasGameAffinity` — `hasGameAffinity = GAME_AFFINITY_RE.test(blob)`
+  - variable `hasImplementation` — `hasImplementation = IMPLEMENTATION_CONTEXT_RE.test(blob)`
+  - arrow-function `adjustScore` — `(pack, score) =>`
+  - function `detectDomainPack` — `export function detectDomainPack(ctx =`
+  - variable `ranked` — `ranked = scoreDomainPacks(ctx)`
+  - function `detectDomainPackDetailed` — `export function detectDomainPackDetailed(ctx =`
+  - variable `ranked` — `ranked = scoreDomainPacks(ctx)`
+  - arrow-function `<anonymous@5273>` — `r => (`
+  - function `getDomainPackById` — `export function getDomainPackById(id = '')`
+  - arrow-function `<anonymous@5460>` — `p => p.id === id`
+  - function `getDomainPackHints` — `export function getDomainPackHints(pack)`
+  - function `resolvePreferredHostsForTask` — `export function resolvePreferredHostsForTask(pack = null, taskGoal = '')`
+  - variable `vanillaHosts` — `vanillaHosts = ['developer.mozilla.org', 'vite.dev', 'vitest.dev', 'github.com']`
+  - arrow-function `<anonymous@6035>` — `host => !vanillaHosts.includes(host)`
+  - function `isVanillaBrowserGameTask` — `function isVanillaBrowserGameTask(pack = null, taskGoal = '')`
+  - function `isExplicitGameEngineTask` — `function isExplicitGameEngineTask(pack = null, taskGoal = '')`
+  - variable `GAME_ENGINE_TEMPLATE_RE` — `GAME_ENGINE_TEMPLATE_RE = /\b(matter\.?js|matter-js|phaser|pixi\.?js|godot|unity|unreal|physics\s+engine|rigid\s+body|brm\.io|liabru)\b/i`
+  - variable `VANILLA_GAME_TEMPLATE_RE` — `VANILLA_GAME_TEMPLATE_RE = /\b(canvas|canvasrenderingcontext2d|requestanimationframe|localstorage|web storage|vite|typescript|github pages|aabb|fixed timestep|flappy|crossy)\b/i`
+  - function `resolveQueryTemplatesForTask` — `export function resolveQueryTemplatesForTask(pack = null, taskGoal = '')`
+  - … and 103 more symbols
+
+### Prose/code/equation/proof/table/media bridge — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Black-hole scientific transfer — MISSING / LAUNCH BLOCKER
+- **Files:** 2 (2 with symbols) · **Symbols:** 189 · **Callable:** 64 · **Authored purpose:** 0
+- `scripts/black-hole-hidden-experiment-v1.mjs` (84 symbols)
+  - variable `BLACK_HOLE_HIDDEN_EXPERIMENT_V1` — `BLACK_HOLE_HIDDEN_EXPERIMENT_V1 = 'black-hole-hidden-experiment-v1'`
+  - variable `BLACK_HOLE_HIDDEN_CHECK_ID_V1` — `BLACK_HOLE_HIDDEN_CHECK_ID_V1 = 'black-hole-hidden-experiment'`
+  - variable `BLACK_HOLE_HIDDEN_EVIDENCE_ID_V1` — `BLACK_HOLE_HIDDEN_EVIDENCE_ID_V1 = 'black-hole-hidden-observation'`
+  - function `blackHoleCandidateSemanticProtocolV1` — `export function blackHoleCandidateSemanticProtocolV1()`
+  - variable `B_CRIT_COEFFICIENT` — `B_CRIT_COEFFICIENT = 3 * Math.sqrt(3)`
+  - variable `EXPERIMENT_WALL_MS` — `EXPERIMENT_WALL_MS = 60_000`
+  - variable `CANDIDATE_RUNNER_SOURCE` — `CANDIDATE_RUNNER_SOURCE = `#!/usr/bin/python3`
+  - function `sha256` — `function sha256(value)`
+  - function `rounded` — `function rounded(value)`
+  - function `requireDigest` — `function requireDigest(value, pathName)`
+  - function `requireText` — `function requireText(value, pathName)`
+  - function `compileBlackHolePythonStructureContractV1` — `export function compileBlackHolePythonStructureContractV1()`
+  - function `inspectBlackHoleCandidateV1` — `export function inspectBlackHoleCandidateV1(source)`
+  - function `compileBlackHoleExecutableObligationV1` — `export function compileBlackHoleExecutableObligationV1()`
+  - function `unitAfterAuthorship` — `function unitAfterAuthorship(candidateSha256, seed, label)`
+  - variable `digest` — `digest = sha256(`$`
+  - function `massesAfterAuthorship` — `function massesAfterAuthorship(candidateSha256, seed)`
+  - function `capturedInput` — `function capturedInput(M, fraction, phiMax)`
+  - function `oracleRayOutcome` — `function oracleRayOutcome(`
+  - variable `u` — `u = 1e-9`
+  - variable `w` — `w = 1 / b`
+  - variable `horizonU` — `horizonU = 1 / (2 * M)`
+  - variable `steps` — `steps = Math.floor(phiMax / dphi)`
+  - variable `step` — `step = 0`
+  - arrow-function `rhs` — `(atU, atW) => [atW, -atU + 3 * M * atU ** 2]`
+  - variable `<anonymous@8520>` — `[k1u, k1w] = rhs(u, w)`
+  - variable `<anonymous@8553>` — `[k2u, k2w] = rhs(u + 0.5 * dphi * k1u, w + 0.5 * dphi * k1w)`
+  - variable `<anonymous@8624>` — `[k3u, k3w] = rhs(u + 0.5 * dphi * k2u, w + 0.5 * dphi * k2w)`
+  - variable `<anonymous@8695>` — `[k4u, k4w] = rhs(u + dphi * k3u, w + dphi * k3w)`
+  - variable `nextU` — `nextU = u + (dphi / 6) * (k1u + 2 * k2u + 2 * k3u + k4u)`
+  - variable `nextW` — `nextW = w + (dphi / 6) * (k1w + 2 * k2w + 2 * k3w + k4w)`
+  - function `curvePairAfterAuthorship` — `function curvePairAfterAuthorship(`
+  - variable `ranges` — `ranges = [`
+  - variable `<anonymous@9369>` — `[lower, upper] = ranges[pairIndex]`
+  - variable `fraction` — `fraction = rounded(lower + (upper - lower) * unitAfterAuthorship(candidateSha256, seed, `curve-fraction-$`
+  - variable `dphiChoices` — `dphiChoices = [0.0004, 0.0005, 0.0008]`
+  - variable `dphi` — `dphi = dphiChoices[Math.floor(unitAfterAuthorship(candidateSha256, seed, `curve-step-$`
+  - variable `b` — `b = rounded(fraction * B_CRIT_COEFFICIENT * M)`
+  - variable `full` — `full = oracleRayOutcome(`
+  - variable `margin` — `margin = Math.max(0.2, full.eventPhi * 0.06)`
+  - … and 44 more symbols
+- `scripts/black-hole-semantic-protocol-v2.mjs` (105 symbols)
+  - variable `BLACK_HOLE_BOUNDED_RAY_RESULT_V2` — `BLACK_HOLE_BOUNDED_RAY_RESULT_V2 = 'black-hole-bounded-ray-result-v2'`
+  - variable `BLACK_HOLE_EFFECTIVE_POTENTIAL_REFERENCE_V2` — `BLACK_HOLE_EFFECTIVE_POTENTIAL_REFERENCE_V2 = 'black-hole-effective-potential-reference-v2'`
+  - variable `BLACK_HOLE_CROSS_ROUTE_WITNESS_V2` — `BLACK_HOLE_CROSS_ROUTE_WITNESS_V2 = 'black-hole-cross-route-witness-v2'`
+  - variable `BLACK_HOLE_INDEPENDENT_REFERENCE_EXECUTION_V2` — `BLACK_HOLE_INDEPENDENT_REFERENCE_EXECUTION_V2 = 'black-hole-independent-reference-execution-v2'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `EVENTS` — `EVENTS = Object.freeze(`
+  - variable `OUTCOMES` — `OUTCOMES = new Set(['captured', 'escaped', 'unresolved'])`
+  - variable `REFERENCE_RUNNER` — `REFERENCE_RUNNER = fileURLToPath(new URL('./black-hole-independent-reference-v2.py', import.meta.url))`
+  - variable `ALGEBRAIC_IMPLEMENTATION` — `ALGEBRAIC_IMPLEMENTATION = 'b-critical=3*sqrt(3)*M; interior partition by declared relative boundary width'`
+  - variable `INDEPENDENT_REFERENCE_METHOD_ID` — `INDEPENDENT_REFERENCE_METHOD_ID = 'scipy-dop853-radau-event-portfolio-v2'`
+  - variable `LIVE_REFERENCE_EXECUTIONS` — `LIVE_REFERENCE_EXECUTIONS = new WeakSet()`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `digest` — `function digest(value, pathName)`
+  - function `finite` — `function finite(value, pathName,`
+  - function `integer` — `function integer(value, pathName)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@4578>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `approximately` — `function approximately(left, right, relative = 1e-8, absolute = 1e-12)`
+  - function `parameterBindingSha256` — `function parameterBindingSha256(mass, impactParameter)`
+  - function `blackHoleCandidateSemanticProtocolV2` — `export function blackHoleCandidateSemanticProtocolV2()`
+  - function `compileBlackHoleReasoningTraceContractV2` — `export function compileBlackHoleReasoningTraceContractV2(`
+  - function `compileBlackHoleSemanticCompatibilityV2` — `export function compileBlackHoleSemanticCompatibilityV2(`
+  - function `compileBlackHoleBoundedRayContractV2` — `export function compileBlackHoleBoundedRayContractV2(`
+  - arrow-function `<anonymous@8379>` — `([eventId, event]) => (`
+  - function `normalizeParameters` — `function normalizeParameters(value)`
+  - variable `parameters` — `parameters =`
+  - function `normalizeBudget` — `function normalizeBudget(value)`
+  - function `normalizeTerminal` — `function normalizeTerminal(value, pathName, allowNull = false)`
+  - … and 65 more symbols
+
+## 07 · AUTHORING, CANDIDATE, WORKSPACE, AND EXPOSURE LINEAGE
+
+### GraphControl AuthorContext — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 59 · **Callable:** 28 · **Authored purpose:** 0
+- `scripts/graph-control-author-context-v1.mjs` (59 symbols)
+  - variable `GRAPH_CONTROL_AUTHOR_CONTEXT_V1` — `GRAPH_CONTROL_AUTHOR_CONTEXT_V1 = 'graph-control-author-context-v1'`
+  - variable `DIGEST_RE` — `DIGEST_RE = /^[a-f0-9]`
+  - variable `SOURCE_STATUS` — `SOURCE_STATUS = new Set([`
+  - variable `EXPECTED_AUTHORITY` — `EXPECTED_AUTHORITY = Object.freeze(`
+  - variable `BEHAVIOR_CONTRACT` — `BEHAVIOR_CONTRACT = Object.freeze([`
+  - function `plain` — `function plain(value, name)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `exactKeys` — `function exactKeys(value, allowed, name)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.includes(key))`
+  - arrow-function `<anonymous@2420>` — `key => !allowed.includes(key)`
+  - variable `missing` — `missing = allowed.filter(key => !(key in value))`
+  - arrow-function `<anonymous@2484>` — `key => !(key in value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@2981>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value,`
+  - variable `text` — `text = typeof value === 'string'`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `boundedString` — `function boundedString(value, name,`
+  - function `digest` — `function digest(value, name)`
+  - function `stringArray` — `function stringArray(value, name,`
+  - arrow-function `<anonymous@4498>` — `(item, index) => boundedString(item, `$`
+  - function `verifyAuthority` — `function verifyAuthority(value, name)`
+  - variable `<anonymous@4689>` — `[key, expected]`
+  - function `verifyControlDecision` — `function verifyControlDecision(value, name)`
+  - variable `result` — `result =`
+  - function `verifySourceBranch` — `function verifySourceBranch(value, index)`
+  - variable `status` — `status = boundedString(value.status, `GraphControlAdvisoryV1.branches[$`
+  - function `verifyContextBranch` — `function verifyContextBranch(value, index)`
+  - variable `status` — `status = boundedString(`
+  - function `verifySourceAdvisory` — `function verifySourceAdvisory(value, taskSpec)`
+  - variable `branches` — `branches = value.branches.map(verifySourceBranch)`
+  - arrow-function `<anonymous@11489>` — `branch => branch.branchId`
+  - variable `authority` — `authority = verifyAuthority(value.authority, 'GraphControlAdvisoryV1.authority')`
+  - variable `body` — `body =`
+  - function `contextBodyFromSource` — `function contextBodyFromSource(source)`
+  - arrow-function `<anonymous@13660>` — `branch => (`
+  - function `compileGraphControlAuthorContextV1` — `export function compileGraphControlAuthorContextV1(`
+  - variable `taskSpec` — `taskSpec = verifyTaskSpecV1(taskSpecInput)`
+  - … and 19 more symbols
+
+### Greenfield candidate author — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 194 · **Callable:** 60 · **Authored purpose:** 0
+- `scripts/greenfield-candidate-author-v1.mjs` (194 symbols)
+  - variable `GREENFIELD_CANDIDATE_AUTHOR_V1` — `GREENFIELD_CANDIDATE_AUTHOR_V1 = 'greenfield-candidate-author-v1'`
+  - variable `GREENFIELD_AUTHOR_RESPONSE_V1` — `GREENFIELD_AUTHOR_RESPONSE_V1 = 'greenfield-author-response-v1'`
+  - variable `GREENFIELD_AUTHOR_PROPOSAL_V1` — `GREENFIELD_AUTHOR_PROPOSAL_V1 = 'greenfield-author-proposal-v1'`
+  - variable `GREENFIELD_RESEARCH_CONTEXT_V1` — `GREENFIELD_RESEARCH_CONTEXT_V1 = 'greenfield-research-context-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `MAX_OBJECTIVE_BYTES` — `MAX_OBJECTIVE_BYTES = 24 * 1024`
+  - variable `MAX_PROMPT_BYTES` — `MAX_PROMPT_BYTES = 64 * 1024`
+  - variable `MAX_SUMMARY_BYTES` — `MAX_SUMMARY_BYTES = 4 * 1024`
+  - variable `MAX_PATH_BYTES` — `MAX_PATH_BYTES = 512`
+  - variable `MAX_FILE_BYTES` — `MAX_FILE_BYTES = 64 * 1024`
+  - variable `MAX_FILES` — `MAX_FILES = 32`
+  - variable `MAX_TOTAL_FILE_BYTES` — `MAX_TOTAL_FILE_BYTES = 256 * 1024`
+  - variable `MAX_LIST_ITEMS` — `MAX_LIST_ITEMS = 32`
+  - variable `MAX_LIST_ITEM_BYTES` — `MAX_LIST_ITEM_BYTES = 2 * 1024`
+  - variable `MAX_MODEL_RESPONSE_BYTES` — `MAX_MODEL_RESPONSE_BYTES = 512 * 1024`
+  - variable `MAX_TOKENS` — `MAX_TOKENS = 8192`
+  - variable `MAX_RESEARCH_APPROACH_BYTES` — `MAX_RESEARCH_APPROACH_BYTES = 16 * 1024`
+  - variable `MAX_RESEARCH_SOURCES` — `MAX_RESEARCH_SOURCES = 24`
+  - variable `FORBIDDEN_KEY_RE` — `FORBIDDEN_KEY_RE = /(?:hidden|private|evaluator|gold|expected[_-]?(?:answer|patch|output)|solver[_-]?recipe|reference[_-]?(?:implementation|answer)|mutation[_-]?corpus|arm[_-]?label|secret)/i`
+  - variable `FORBIDDEN_CONTEXT_TEXT_RE` — `FORBIDDEN_CONTEXT_TEXT_RE = /(?:private\s+evaluator|hidden\s+(?:test|evaluator|gold)|expected\s+patch|solver\s+recipe|reference\s+implementation|mutation\s+corpus|arm\s+label)/i`
+  - variable `FORBIDDEN_PATH_SEGMENTS` — `FORBIDDEN_PATH_SEGMENTS = new Set(['.git'])`
+  - class `GreenfieldCandidateAuthorV1Error` — `export class GreenfieldCandidateAuthorV1Error extends Error`
+  - constructor `constructor` — `constructor(message, code = 'GREENFIELD_CANDIDATE_AUTHOR_INVALID')`
+  - function `fail` — `function fail(message, code)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `assertNoAccessors` — `function assertNoAccessors(value, label)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - variable `descriptor` — `descriptor = descriptors[key]`
+  - function `assertPlain` — `function assertPlain(value, label)`
+  - arrow-function `<anonymous@3417>` — `key => typeof key !== 'string'`
+  - function `assertArray` — `function assertArray(value, label, maximum = MAX_LIST_ITEMS)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@3910>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@4029>` — `key => typeof key !== 'string' || !expected.has(key) || !Object.hasOwn(descriptors[key], 'value')`
+  - function `assertNoForbiddenKeys` — `function assertNoForbiddenKeys(value, label, seen = new WeakSet(), depth = 0)`
+  - variable `key` — `key`
+  - function `boundedString` — `function boundedString(value, label, maximumBytes,`
+  - … and 154 more symbols
+
+### Existing-repo patch author — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 926 · **Callable:** 200 · **Authored purpose:** 33
+- `scripts/governed-patch-generator.mjs` (926 symbols)
+  - variable `PATCH_GENERATION_VERSION` — `PATCH_GENERATION_VERSION = '1.0.0'`
+  - variable `DEFAULT_MAX_PROMPT_BYTES` — `DEFAULT_MAX_PROMPT_BYTES = 512 * 1024`
+  - variable `DEFAULT_MAX_OUTPUT_BYTES` — `DEFAULT_MAX_OUTPUT_BYTES = 1024 * 1024`
+  - variable `DEFAULT_TIMEOUT_MS` — `DEFAULT_TIMEOUT_MS = 60_000`
+  - variable `MCP_TOOL_CONTEXT_TIMEOUT_MS` — `MCP_TOOL_CONTEXT_TIMEOUT_MS = Math.floor(DEFAULT_TIMEOUT_MS / 4)`
+  - variable `MAX_SUMMARY_LENGTH` — `MAX_SUMMARY_LENGTH = 4_000`
+  - variable `COMMAND_OUTPUT_HEAD_LINES` — `COMMAND_OUTPUT_HEAD_LINES = 100`
+  - variable `COMMAND_OUTPUT_TAIL_LINES` — `COMMAND_OUTPUT_TAIL_LINES = 200`
+  - variable `MAX_CONTINUATIONS` — `MAX_CONTINUATIONS = 5`
+  - variable `LADDER_AGGREGATE_BUDGET_MULTIPLE` — `LADDER_AGGREGATE_BUDGET_MULTIPLE = 2`
+  - function `resolveUdiffLActive` — `export function resolveUdiffLActive(` — *FIX 1 — single source of truth for whether the udiff-l control-marker medium is ACTIVE for a diff-mode generation. The udiff-l wiring is threaded through FOUR sites (the prompt builder, the incomplete*
+  - function `udiffLActiveFromEnv` — `function udiffLActiveFromEnv(`
+  - function `resolveEditMedium` — `export function resolveEditMedium(` — *ARC_EDIT_DECISION_DERIVED (default OFF → byte-identical) — the ONE derived edit-medium decision that subsumes the three independently-computed "which output medium?" booleans the generation path scatt*
+  - variable `base` — `base = editMode === 'whole-file' ? 'whole-file' : 'diff'`
+  - variable `legacyFenced` — `legacyFenced = env.ARC_WHOLE_FILE_FENCED === '1'`
+  - variable `legacySearchReplace` — `legacySearchReplace = base === 'diff' && env.ARC_SEARCH_REPLACE === '1'`
+  - variable `legacyUdiffL` — `legacyUdiffL = udiffLActiveFromEnv(`
+  - variable `medium` — `medium = base === 'whole-file'`
+  - variable `udiffExplicitOn` — `udiffExplicitOn = env.ARC_UDIFF_L === '1'`
+  - variable `udiffExplicitOff` — `udiffExplicitOff = env.ARC_UDIFF_L === '0'`
+  - variable `srExplicit` — `srExplicit = env.ARC_SEARCH_REPLACE === '1'`
+  - variable `udiffImplicit` — `udiffImplicit = !udiffExplicitOff && provider === 'local' && hasOriginalContents === true`
+  - variable `medium` — `medium = udiffExplicitOn ? 'diff-udiffl'`
+  - variable `WORKED_EXAMPLE_PATCH_LEGACY` — `WORKED_EXAMPLE_PATCH_LEGACY = Object.freeze(`
+  - variable `WORKED_EXAMPLE_PATCH_ANTIECHO` — `WORKED_EXAMPLE_PATCH_ANTIECHO = Object.freeze(`
+  - function `workedExamplePatch` — `function workedExamplePatch(env = process.env)` — *Select the worked-example illustration for the current env. Gated so OFF (ARC_ANTI_ECHO_RETRY unset) is the legacy exemplar byte-for-byte AND the guard keys on the legacy sentinels — strict OFF-identi*
+  - function `renderWorkedExampleShapeLine` — `function renderWorkedExampleShapeLine(wep)` — *Render the diff-mode "Exact output shape:" instruction line from a worked-example constant (no drift).*
+  - function `isWorkedExampleEcho` — `function isWorkedExampleEcho(envelope)` — *FIX 3 — deterministic echo-guard. TRUE when the parsed envelope is the worked-example illustration being echoed back rather than a real answer: either its hunk body carries the sentinel context/-old/+*
+  - variable `wep` — `wep = workedExamplePatch()`
+  - variable `summaryEcho` — `summaryEcho = typeof envelope.summary === 'string'`
+  - variable `targets` — `targets = Array.isArray(envelope.targetFiles) ? envelope.targetFiles : []`
+  - variable `targetEcho` — `targetEcho = targets.length === 1 && targets[0] === wep.targetFile`
+  - variable `patch` — `patch = typeof envelope.patchContent === 'string' ? envelope.patchContent : ''`
+  - variable `lines` — `lines = patch.replace(/\r\n/g, '\n').split('\n')`
+  - variable `ctxLine` — `ctxLine = ` $`
+  - variable `delLine` — `delLine = `-$`
+  - variable `addLine` — `addLine = `+$`
+  - variable `i` — `i = 0`
+  - variable `OVERFLOW_REPRO_HEAD_LINES` — `OVERFLOW_REPRO_HEAD_LINES = 20`
+  - variable `OVERFLOW_REPRO_TAIL_LINES` — `OVERFLOW_REPRO_TAIL_LINES = 40`
+  - … and 886 more symbols
+
+### Runtime-signed candidate-author receipt — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Greenfield candidate packet V2 — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 79 · **Callable:** 27 · **Authored purpose:** 0
+- `scripts/greenfield-candidate-packet-v2.mjs` (79 symbols)
+  - variable `GREENFIELD_CANDIDATE_PACKET_V2` — `GREENFIELD_CANDIDATE_PACKET_V2 = 'greenfield-candidate-packet-v2'`
+  - variable `GREENFIELD_CANDIDATE_PACKET_SOURCE_V2` — `GREENFIELD_CANDIDATE_PACKET_SOURCE_V2 = 'greenfield-candidate-author-v2'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `PACKET_KEYS` — `PACKET_KEYS = Object.freeze([`
+  - class `GreenfieldCandidatePacketV2Error` — `export class GreenfieldCandidatePacketV2Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'GREENFIELD_CANDIDATE_PACKET_V2_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `allow` — `allow = new Set(allowed)`
+  - variable `need` — `need = new Set(required)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `digest` — `function digest(value, pathName)`
+  - function `id` — `function id(value, pathName)`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'value', depth = 0)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@3589>` — `(_, index) => String(index)`
+  - arrow-function `<anonymous@3672>` — `key => typeof key !== 'string' || !expected.has(key) || !Object.hasOwn(descriptors[key], 'value')`
+  - arrow-function `<anonymous@3914>` — `(_, index) => canonicalize(value[index], `$`
+  - arrow-function `<anonymous@4080>` — `key => [key, canonicalize(value[key], `$`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `taskSpecDigest` — `function taskSpecDigest(input, pathName = 'GreenfieldCandidatePacketV2.taskSpecSha256')`
+  - variable `explicit` — `explicit = input.taskSpecSha256`
+  - variable `nested` — `nested = input.taskSpec?.taskSpecSha256`
+  - function `normalizeParents` — `function normalizeParents(input)`
+  - variable `taskSpecSha256` — `taskSpecSha256 = taskSpecDigest(input)`
+  - variable `refinement` — `refinement`
+  - variable `error` — `error`
+  - function `normalizeResearchContext` — `function normalizeResearchContext(value, refinement)`
+  - variable `context` — `context`
+  - variable `error` — `error`
+  - … and 39 more symbols
+
+### Patch candidate packet V1 — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 152 · **Callable:** 43 · **Authored purpose:** 2
+- `scripts/patch-candidate-packet-v1.mjs` (152 symbols)
+  - variable `PATCH_CANDIDATE_PACKET_V1` — `PATCH_CANDIDATE_PACKET_V1 = 'patch-candidate-packet-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:@+-]`
+  - variable `TARGET_CONTROL_RE` — `TARGET_CONTROL_RE = /[\u0000-\u001f\u007f-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `PATCH_CONTROL_RE` — `PATCH_CONTROL_RE = /[\u0000-\u0008\u000b-\u001f\u007f-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `TARGET_RE` — `TARGET_RE = /^[A-Za-z0-9._@+-]+(?:\/[A-Za-z0-9._@+-]+)*$/u`
+  - variable `MAX_PATCH_BYTES` — `MAX_PATCH_BYTES = 4 * 1024 * 1024`
+  - variable `MAX_TARGET_FILES` — `MAX_TARGET_FILES = 256`
+  - variable `MAX_TARGET_CHARS` — `MAX_TARGET_CHARS = 512`
+  - variable `INPUT_KEYS` — `INPUT_KEYS = Object.freeze([`
+  - variable `REQUIRED_INPUT_KEYS` — `REQUIRED_INPUT_KEYS = Object.freeze([`
+  - variable `PACKET_KEYS` — `PACKET_KEYS = Object.freeze([`
+  - variable `INSPECTION_OPTION_KEYS` — `INSPECTION_OPTION_KEYS = Object.freeze([`
+  - variable `PATCH_CANDIDATE_PACKET_AUTHORITY_V1` — `PATCH_CANDIDATE_PACKET_AUTHORITY_V1 = Object.freeze(`
+  - class `PatchCandidatePacketV1Error` — `export class PatchCandidatePacketV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'PATCH_CANDIDATE_PACKET_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@2864>` — `(_, index) => String(index)`
+  - arrow-function `<anonymous@2947>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@3255>` — `key => key !== 'length'`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `keys` — `keys = ownDataKeys(value, pathName)`
+  - variable `allow` — `allow = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `forbiddenFieldName` — `function forbiddenFieldName(key)`
+  - variable `normalized` — `normalized = key.toLowerCase().replace(/[^a-z0-9]/gu, '')`
+  - arrow-function `<anonymous@4518>` — `token => normalized.includes(token)`
+  - function `assertNoForbiddenFieldNames` — `function assertNoForbiddenFieldNames(value, pathName,`
+  - variable `keys` — `keys = ownDataKeys(value, pathName)`
+  - variable `key` — `key`
+  - … and 112 more symbols
+
+### CandidateArtifact V1 — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 122 · **Callable:** 37 · **Authored purpose:** 0
+- `scripts/candidate-artifact-v1.mjs` (122 symbols)
+  - variable `CANDIDATE_ARTIFACT_V1_VERSION` — `CANDIDATE_ARTIFACT_V1_VERSION = '1.0.0'`
+  - variable `CANDIDATE_ARTIFACT_ID_PREFIX` — `CANDIDATE_ARTIFACT_ID_PREFIX = 'artifact-candidate-v1-'`
+  - variable `CANDIDATE_BYTES_MAX_BYTES` — `CANDIDATE_BYTES_MAX_BYTES = 4 * 1024 * 1024`
+  - variable `CANDIDATE_ARTIFACT_MAX_BYTES` — `CANDIDATE_ARTIFACT_MAX_BYTES = 8 * 1024 * 1024`
+  - variable `CANDIDATE_TARGET_FILE_MAX_COUNT` — `CANDIDATE_TARGET_FILE_MAX_COUNT = 256`
+  - variable `CANDIDATE_TARGET_FILE_MAX_CHARS` — `CANDIDATE_TARGET_FILE_MAX_CHARS = 512`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ARTIFACT_ID_RE` — `ARTIFACT_ID_RE = new RegExp(`^$`
+  - variable `TARGET_CONTROL_RE` — `TARGET_CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `CANDIDATE_TEXT_CONTROL_RE` — `CANDIDATE_TEXT_CONTROL_RE = /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `CANDIDATE_ID_RE` — `CANDIDATE_ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `INPUT_KEYS` — `INPUT_KEYS = Object.freeze([`
+  - variable `REQUIRED_INPUT_KEYS` — `REQUIRED_INPUT_KEYS = Object.freeze([`
+  - class `CandidateArtifactV1Error` — `export class CandidateArtifactV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'CANDIDATE_ARTIFACT_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@3181>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@3271>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@3612>` — `key => key !== 'length'`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `keys` — `keys = ownDataKeys(value, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'CandidateArtifactV1', depth = 0)`
+  - arrow-function `<anonymous@5087>` — `(_, index) => canonicalize(value[index], `$`
+  - variable `keys` — `keys = ownDataKeys(value, pathName).sort()`
+  - variable `result` — `result =`
+  - variable `key` — `key`
+  - … and 82 more symbols
+
+### Candidate exposure manifest — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 84 · **Callable:** 33 · **Authored purpose:** 1
+- `scripts/candidate-exposure-manifest-v1.mjs` (84 symbols)
+  - variable `CANDIDATE_EXPOSURE_MANIFEST_V1` — `CANDIDATE_EXPOSURE_MANIFEST_V1 = 'candidate-exposure-manifest-v1'`
+  - variable `CANDIDATE_EXPOSURE_ATTESTATION_V1` — `CANDIDATE_EXPOSURE_ATTESTATION_V1 = 'candidate-exposure-attestation-v1'`
+  - variable `CANDIDATE_EXPOSURE_REQUIRED_DENIALS_V1` — `CANDIDATE_EXPOSURE_REQUIRED_DENIALS_V1 = Object.freeze([`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `COMMITMENT_ARTIFACT_RE` — `COMMITMENT_ARTIFACT_RE = /^artifact-oracle-construction-commitment-([a-f0-9]`
+  - variable `RESOURCE_KINDS` — `RESOURCE_KINDS = new Set([`
+  - variable `PRIVATE_RESOURCE_KINDS` — `PRIVATE_RESOURCE_KINDS = new Set(CANDIDATE_EXPOSURE_REQUIRED_DENIALS_V1)`
+  - variable `ACCESS` — `ACCESS = new Set(['read-only', 'read-write', 'execute'])`
+  - variable `NETWORK_POLICIES` — `NETWORK_POLICIES = new Set(['none', 'brokered'])`
+  - variable `TOOL_MODES` — `TOOL_MODES = new Set(['none', 'brokered'])`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `enumeration` — `function enumeration(value, values, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3791>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `freezeDeep` — `function freezeDeep(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `normalizeAuthorInvocation` — `function normalizeAuthorInvocation(value)`
+  - variable `at` — `at = 'CandidateExposureManifestV1.authorInvocation'`
+  - variable `invocationSha256` — `invocationSha256 = digest(value.invocationSha256, `$`
+  - function `normalizeResources` — `function normalizeResources(value)`
+  - variable `resources` — `resources = value.map((resource, index) =>`
+  - arrow-function `<anonymous@6499>` — `(resource, index) =>`
+  - variable `at` — `at = `CandidateExposureManifestV1.resources[$`
+  - arrow-function `<anonymous@7154>` — `(left, right) => left.resourceId.localeCompare(right.resourceId)`
+  - arrow-function `<anonymous@7248>` — `resource => resource.resourceId`
+  - … and 44 more symbols
+
+### CandidateProposed event — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 2326 · **Callable:** 655 · **Authored purpose:** 27
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### CandidateWorkspaceRouter V1 — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 107 · **Callable:** 33 · **Authored purpose:** 0
+- `scripts/candidate-workspace-router-v1.mjs` (107 symbols)
+  - variable `CANDIDATE_WORKSPACE_ROUTER_V1` — `CANDIDATE_WORKSPACE_ROUTER_V1 = 'candidate-workspace-router-v1'`
+  - variable `CANDIDATE_WORKSPACE_ROUTER_INTEGRATION_V1` — `CANDIDATE_WORKSPACE_ROUTER_INTEGRATION_V1 = 'candidate-workspace-router-integration-v1'`
+  - variable `GREENFIELD_PACKET_V1` — `GREENFIELD_PACKET_V1 = 'greenfield-candidate-packet-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `GREENFIELD_V1_OPTION_KEYS` — `GREENFIELD_V1_OPTION_KEYS = Object.freeze([`
+  - variable `GREENFIELD_V2_OPTION_KEYS` — `GREENFIELD_V2_OPTION_KEYS = Object.freeze([`
+  - variable `PATCH_OPTION_KEYS` — `PATCH_OPTION_KEYS = Object.freeze([`
+  - class `CandidateWorkspaceRouterV1Error` — `export class CandidateWorkspaceRouterV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'CANDIDATE_WORKSPACE_ROUTER_V1_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `keys` — `keys = ownDataKeys(value, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `digest` — `function digest(value, pathName)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `sameStrings` — `function sameStrings(left, right)`
+  - arrow-function `<anonymous@4502>` — `(value, index) => value === right[index]`
+  - function `verifiedArtifact` — `function verifiedArtifact(candidateInput)`
+  - variable `input` — `input = candidateInput`
+  - variable `descriptor` — `descriptor = null`
+  - variable `artifact` — `artifact`
+  - variable `error` — `error`
+  - variable `expectedArtifactId` — `expectedArtifactId = candidateArtifactIdForDigest(artifact.candidateArtifactSha256)`
+  - variable `bytesArtifact` — `bytesArtifact`
+  - variable `error` — `error`
+  - function `parsedPacket` — `function parsedPacket(artifact)`
+  - variable `packet` — `packet`
+  - variable `error` — `error`
+  - function `dispatch` — `function dispatch(artifact)`
+  - variable `packet` — `packet = parsedPacket(artifact)`
+  - variable `source` — `source = artifact.packetProvenance.source`
+  - … and 67 more symbols
+
+### Greenfield workspace store — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 306 · **Callable:** 83 · **Authored purpose:** 0
+- `scripts/candidate-workspace-v1.mjs` (306 symbols)
+  - variable `CANDIDATE_WORKSPACE_V1_VERSION` — `CANDIDATE_WORKSPACE_V1_VERSION = '1.0.0'`
+  - variable `CANDIDATE_WORKSPACE_MANIFEST_V1` — `CANDIDATE_WORKSPACE_MANIFEST_V1 = 'candidate-workspace-manifest-v1'`
+  - variable `CANDIDATE_WORKSPACE_ID_PREFIX` — `CANDIDATE_WORKSPACE_ID_PREFIX = 'workspace-candidate-v1-'`
+  - variable `CANDIDATE_WORKSPACE_MAX_FILES` — `CANDIDATE_WORKSPACE_MAX_FILES = 32`
+  - variable `CANDIDATE_WORKSPACE_MAX_FILE_BYTES` — `CANDIDATE_WORKSPACE_MAX_FILE_BYTES = 64 * 1024`
+  - variable `CANDIDATE_WORKSPACE_MAX_TOTAL_FILE_BYTES` — `CANDIDATE_WORKSPACE_MAX_TOTAL_FILE_BYTES = 256 * 1024`
+  - variable `CANDIDATE_WORKSPACE_MAX_PATH_CHARS` — `CANDIDATE_WORKSPACE_MAX_PATH_CHARS = 512`
+  - variable `CANDIDATE_WORKSPACE_MAX_MANIFEST_BYTES` — `CANDIDATE_WORKSPACE_MAX_MANIFEST_BYTES = 512 * 1024`
+  - variable `PACKET_SCHEMA_VERSION_V1` — `PACKET_SCHEMA_VERSION_V1 = 'greenfield-candidate-packet-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `WORKSPACE_ID_RE` — `WORKSPACE_ID_RE = new RegExp(`^$`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `NONBLOCK` — `NONBLOCK = fsConstants.O_NONBLOCK || 0`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `PACKET_KEYS_V1` — `PACKET_KEYS_V1 = Object.freeze(['schemaVersion', 'capsuleSha256', 'researchContext', 'proposal'])`
+  - variable `PACKET_REQUIRED_KEYS_V1` — `PACKET_REQUIRED_KEYS_V1 = Object.freeze(['schemaVersion', 'capsuleSha256', 'proposal'])`
+  - variable `PROVENANCE_KEYS` — `PROVENANCE_KEYS = Object.freeze(['packetId', 'packetSha256', 'packetPath', 'source'])`
+  - variable `MANIFEST_KEYS` — `MANIFEST_KEYS = Object.freeze([`
+  - variable `MANIFEST_REQUIRED_KEYS` — `MANIFEST_REQUIRED_KEYS = Object.freeze(MANIFEST_KEYS.filter(key => ![`
+  - arrow-function `<anonymous@3075>` — `key => ![`
+  - variable `MANIFEST_BODY_KEYS` — `MANIFEST_BODY_KEYS = Object.freeze(MANIFEST_KEYS.filter(key => key !== 'manifestSha256'))`
+  - arrow-function `<anonymous@3258>` — `key => key !== 'manifestSha256'`
+  - variable `FILE_KEYS` — `FILE_KEYS = Object.freeze(['path', 'bytes', 'sha256'])`
+  - class `CandidateWorkspaceV1Error` — `export class CandidateWorkspaceV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'CANDIDATE_WORKSPACE_V1_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@4357>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@4480>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@4788>` — `key => key !== 'length'`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - … and 266 more symbols
+
+### Patch workspace store — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 362 · **Callable:** 95 · **Authored purpose:** 0
+- `scripts/patch-candidate-workspace-v1.mjs` (362 symbols)
+  - variable `PATCH_CANDIDATE_WORKSPACE_V1` — `PATCH_CANDIDATE_WORKSPACE_V1 = 'patch-candidate-workspace-v1'`
+  - variable `PATCH_CANDIDATE_WORKSPACE_MANIFEST_V1` — `PATCH_CANDIDATE_WORKSPACE_MANIFEST_V1 = 'patch-candidate-workspace-manifest-v1'`
+  - variable `PATCH_CANDIDATE_WORKSPACE_ID_PREFIX` — `PATCH_CANDIDATE_WORKSPACE_ID_PREFIX = 'workspace-patch-candidate-v1-'`
+  - variable `PATCH_CANDIDATE_WORKSPACE_RECEIPT_ID_PREFIX` — `PATCH_CANDIDATE_WORKSPACE_RECEIPT_ID_PREFIX = 'receipt-patch-candidate-v1-'`
+  - variable `PATCH_CANDIDATE_WORKSPACE_MAX_RECEIPT_BYTES` — `PATCH_CANDIDATE_WORKSPACE_MAX_RECEIPT_BYTES = 4 * 1024 * 1024`
+  - variable `PATCH_CANDIDATE_WORKSPACE_MAX_TRACKED_PATHS` — `PATCH_CANDIDATE_WORKSPACE_MAX_TRACKED_PATHS = 100_000`
+  - variable `PATCH_CANDIDATE_WORKSPACE_MAX_TRACKED_BYTES` — `PATCH_CANDIDATE_WORKSPACE_MAX_TRACKED_BYTES = 2 * 1024 * 1024 * 1024`
+  - variable `PATCH_CANDIDATE_WORKSPACE_MAX_INDEX_BYTES` — `PATCH_CANDIDATE_WORKSPACE_MAX_INDEX_BYTES = 256 * 1024 * 1024`
+  - variable `PATCH_CANDIDATE_WORKSPACE_AUTHORITY_V1` — `PATCH_CANDIDATE_WORKSPACE_AUTHORITY_V1 = Object.freeze(`
+  - variable `PATCH_CANDIDATE_WORKSPACE_IMMUTABILITY_LIMIT_V1` — `PATCH_CANDIDATE_WORKSPACE_IMMUTABILITY_LIMIT_V1 = Object.freeze(`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `GIT_OID_RE` — `GIT_OID_RE = /^[a-f0-9]`
+  - variable `PATH_CONTROL_RE` — `PATH_CONTROL_RE = /[\u0000-\u001f\u007f-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `WORKSPACE_ID_RE` — `WORKSPACE_ID_RE = new RegExp(`^$`
+  - variable `RECEIPT_ID_RE` — `RECEIPT_ID_RE = new RegExp(`^$`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `MANIFEST_KEYS` — `MANIFEST_KEYS = Object.freeze([`
+  - class `PatchCandidateWorkspaceV1Error` — `export class PatchCandidateWorkspaceV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'PATCH_CANDIDATE_WORKSPACE_V1_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@5028>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@5151>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@5459>` — `key => key !== 'length'`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `keys` — `keys = ownDataKeys(value, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'PatchCandidateWorkspaceV1', depth = 0)`
+  - arrow-function `<anonymous@6935>` — `(_, index) => canonicalize(value[index], `$`
+  - … and 322 more symbols
+
+### CandidateMaterialized event — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 2326 · **Callable:** 655 · **Authored purpose:** 27
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### Strict-current workspace verification — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 2326 · **Callable:** 655 · **Authored purpose:** 27
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+## 08 · ORACLE FOUNDRY, HIDDEN EVALUATION, VERIFIER, MUTATION, AND TRI-STATE
+
+### Oracle construction commitment — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 148 · **Callable:** 52 · **Authored purpose:** 0
+- `scripts/oracle-construction-commitment-store-v1.mjs` (56 symbols)
+  - variable `COMMITMENT_ARTIFACT_RE` — `COMMITMENT_ARTIFACT_RE = /^artifact-oracle-construction-commitment-([a-f0-9]`
+  - variable `OPENING_HANDLE_RE` — `OPENING_HANDLE_RE = /^oracle-construction-opening-([a-f0-9]`
+  - variable `REVEAL_HANDLE_RE` — `REVEAL_HANDLE_RE = /^oracle-construction-reveal-([a-f0-9]`
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@1194>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalBytes` — `function canonicalBytes(value)`
+  - function `fsyncDirectory` — `function fsyncDirectory(dir)`
+  - variable `fd` — `fd = openSync(dir, 'r')`
+  - function `secureDirectory` — `function secureDirectory(dir)`
+  - function `persistOnce` — `function persistOnce(dir, targetPath, bytes)`
+  - variable `temporary` — `temporary = `$`
+  - variable `fd` — `fd = openSync(temporary, 'wx', 0o600)`
+  - variable `error` — `error`
+  - function `loadCanonical` — `function loadCanonical(targetPath, label)`
+  - variable `bytes` — `bytes = readFileSync(targetPath, 'utf8')`
+  - variable `value` — `value`
+  - class `OracleConstructionCommitmentStoreV1` — `export class OracleConstructionCommitmentStoreV1`
+  - constructor `constructor` — `constructor(`
+  - method `commit` — `commit(manifest,`
+  - variable `pair` — `pair = createOracleConstructionCommitmentV1(`
+  - variable `commitmentArtifactId` — `commitmentArtifactId = `artifact-oracle-construction-commitment-$`
+  - variable `openingHandle` — `openingHandle = `oracle-construction-opening-$`
+  - variable `commitmentPath` — `commitmentPath = path.join(this.commitmentDir, `$`
+  - variable `openingPath` — `openingPath = path.join(this.openingDir, `$`
+  - variable `commitmentBytes` — `commitmentBytes = canonicalBytes(pair.commitment)`
+  - variable `openingBytes` — `openingBytes = canonicalBytes(pair.opening)`
+  - method `loadCommitment` — `loadCommitment(commitmentArtifactId)`
+  - variable `match` — `match = COMMITMENT_ARTIFACT_RE.exec(commitmentArtifactId)`
+  - variable `targetPath` — `targetPath = path.join(this.commitmentDir, `$`
+  - variable `loaded` — `loaded = loadCanonical(targetPath, 'Oracle construction commitment')`
+  - variable `commitment` — `commitment = verifyOracleConstructionCommitmentV1(loaded.value)`
+  - method `matchesManifest` — `matchesManifest(commitmentArtifactId, manifestInput)`
+  - variable `loadedCommitment` — `loadedCommitment = this.loadCommitment(commitmentArtifactId)`
+  - variable `manifest` — `manifest = compileOracleConstructionManifestV1(manifestInput)`
+  - variable `openingPath` — `openingPath = path.join(this.openingDir, `$`
+  - variable `opening` — `opening = loadCanonical(openingPath, 'Oracle construction opening').value`
+  - method `reveal` — `reveal(`
+  - variable `loadedCommitment` — `loadedCommitment = this.loadCommitment(commitmentArtifactId)`
+  - variable `match` — `match = OPENING_HANDLE_RE.exec(openingHandle)`
+  - … and 16 more symbols
+- `scripts/oracle-construction-commitment-v1.mjs` (92 symbols)
+  - variable `ORACLE_CONSTRUCTION_MANIFEST_V1` — `ORACLE_CONSTRUCTION_MANIFEST_V1 = 'oracle-construction-manifest-v1'`
+  - variable `ORACLE_CONSTRUCTION_COMMITMENT_V1` — `ORACLE_CONSTRUCTION_COMMITMENT_V1 = 'oracle-construction-commitment-v1'`
+  - variable `ORACLE_CONSTRUCTION_OPENING_V1` — `ORACLE_CONSTRUCTION_OPENING_V1 = 'oracle-construction-opening-v1'`
+  - variable `ORACLE_CONSTRUCTION_REVEAL_V1` — `ORACLE_CONSTRUCTION_REVEAL_V1 = 'oracle-construction-reveal-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `PARTITION_ROLES` — `PARTITION_ROLES = new Set(['construction', 'calibration', 'transfer'])`
+  - variable `COMMITMENT_DOMAIN` — `COMMITMENT_DOMAIN = Buffer.from('arc-oracle-construction-commitment-v1\0', 'utf8')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `integer` — `function integer(value, pathName)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3064>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `safeDigestEqual` — `function safeDigestEqual(left, right)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `normalizePartition` — `function normalizePartition(value, index)`
+  - variable `at` — `at = `OracleConstructionManifestV1.partitions[$`
+  - function `compileOracleConstructionManifestV1` — `export function compileOracleConstructionManifestV1(input =`
+  - variable `partitions` — `partitions = input.partitions.map(normalizePartition).sort((left, right) => left.role.localeCompare(right.role))`
+  - arrow-function `<anonymous@5894>` — `(left, right) => left.role.localeCompare(right.role)`
+  - arrow-function `<anonymous@5977>` — `partition => partition.partitionId`
+  - arrow-function `<anonymous@6155>` — `partition => partition.role`
+  - arrow-function `<anonymous@6371>` — `partition => partition.caseManifestSha256`
+  - variable `body` — `body = canonicalize(`
+  - variable `manifestSha256` — `manifestSha256 = sha256(ORACLE_CONSTRUCTION_MANIFEST_V1, body)`
+  - function `normalizeNonce` — `function normalizeNonce(value, pathName)`
+  - variable `bytes` — `bytes = Buffer.from(value)`
+  - … and 52 more symbols
+
+### Oracle portfolio adequacy — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 199 · **Callable:** 91 · **Authored purpose:** 0
+- `scripts/oracle-portfolio-adequacy-v1.mjs` (199 symbols)
+  - variable `ORACLE_PORTFOLIO_ADEQUACY_V1` — `ORACLE_PORTFOLIO_ADEQUACY_V1 = 'oracle-portfolio-adequacy-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `ARTIFACT_RE` — `ARTIFACT_RE = /^artifact-[A-Za-z0-9._:-]+-[a-f0-9]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `IDENTIFIABILITY` — `IDENTIFIABILITY = new Set([`
+  - variable `UNKNOWN_POLICIES` — `UNKNOWN_POLICIES = new Set(['explicit', 'not-applicable', 'collapsed', 'missing'])`
+  - variable `ROLES` — `ROLES = new Set(['positive-reference', 'negative-control'])`
+  - variable `PARTITIONS` — `PARTITIONS = new Set(['development', 'calibration', 'transfer'])`
+  - variable `VALIDITY` — `VALIDITY = new Set(['valid', 'invalid', 'unknown'])`
+  - variable `INEQUIVALENCE` — `INEQUIVALENCE = new Set(['established', 'equivalent', 'unknown', 'not-applicable'])`
+  - variable `WITNESS_LAYERS` — `WITNESS_LAYERS = new Set(['none', 'structural', 'semantic', 'causal', 'liveness', 'resource', 'security'])`
+  - variable `CONTROL_OUTCOMES` — `CONTROL_OUTCOMES = new Set([`
+  - variable `WITNESS_RESULTS` — `WITNESS_RESULTS = new Set(['support', 'contradict', 'unknown'])`
+  - variable `WITNESS_STRENGTHS` — `WITNESS_STRENGTHS = new Set(['necessary', 'sufficient', 'enclosure', 'kernel-checked', 'observational'])`
+  - variable `OUTCOME_FOR_LAYER` — `OUTCOME_FOR_LAYER = Object.freeze(`
+  - class `OraclePortfolioAdequacyV1Error` — `export class OraclePortfolioAdequacyV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message)`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `enumeration` — `function enumeration(value, allowed, pathName)`
+  - function `integer` — `function integer(value, pathName, min = 0, max = 1024)`
+  - function `uniqueIds` — `function uniqueIds(values, pathName,`
+  - variable `normalized` — `normalized = values.map((value, index) => id(value, `$`
+  - arrow-function `<anonymous@4443>` — `(value, index) => id(value, `$`
+  - function `artifactRefs` — `function artifactRefs(values, pathName)`
+  - variable `normalized` — `normalized = values.map((value, index) =>`
+  - arrow-function `<anonymous@4831>` — `(value, index) =>`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@5367>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - … and 159 more symbols
+
+### Oracle coverage tensor — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 151 · **Callable:** 76 · **Authored purpose:** 0
+- `scripts/oracle-coverage-tensor-v1.mjs` (151 symbols)
+  - variable `ORACLE_COVERAGE_TENSOR_V1` — `ORACLE_COVERAGE_TENSOR_V1 = 'oracle-coverage-tensor-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `OUTCOME_FOR_LAYER` — `OUTCOME_FOR_LAYER = Object.freeze(`
+  - variable `SUPPORT_STRENGTHS_BY_LAYER` — `SUPPORT_STRENGTHS_BY_LAYER = Object.freeze(`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `integer` — `function integer(value, pathName)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3420>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `connectedComponentCount` — `function connectedComponentCount(items, rootsFor)`
+  - variable `remaining` — `remaining = new Set(items.map((_, index) => index))`
+  - arrow-function `<anonymous@4058>` — `(_, index) => index`
+  - variable `count` — `count = 0`
+  - variable `seed` — `seed = remaining.values().next().value`
+  - variable `roots` — `roots = new Set(rootsFor(items[seed]))`
+  - variable `changed` — `changed = true`
+  - variable `candidate` — `candidate`
+  - variable `candidateRoots` — `candidateRoots = rootsFor(items[candidate])`
+  - arrow-function `<anonymous@4472>` — `root => roots.has(root)`
+  - variable `root` — `root`
+  - function `controlAccepted` — `function controlAccepted(control)`
+  - function `normalizeBinding` — `function normalizeBinding(value)`
+  - function `normalizeInvalidations` — `function normalizeInvalidations(value, obligation)`
+  - variable `regions` — `regions = new Set(obligation.regionIds)`
+  - variable `families` — `families = new Set(obligation.requiredFailureFamilies.map(family => family.familyId))`
+  - … and 111 more symbols
+
+### Oracle co-mutation projections — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 327 · **Callable:** 145 · **Authored purpose:** 0
+- `scripts/oracle-co-mutation-v1.mjs` (147 symbols)
+  - variable `ORACLE_FAULT_MODEL_REGISTRY_V1` — `ORACLE_FAULT_MODEL_REGISTRY_V1 = 'oracle-fault-model-registry-v1'`
+  - variable `ORACLE_CO_MUTATION_V1` — `ORACLE_CO_MUTATION_V1 = 'oracle-co-mutation-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `WITNESS_LAYERS` — `WITNESS_LAYERS = new Set(['structural', 'semantic', 'causal', 'liveness', 'resource', 'security'])`
+  - variable `TARGETS` — `TARGETS = new Set(['candidate', 'oracle'])`
+  - variable `PARTITIONS` — `PARTITIONS = new Set(['calibration', 'transfer'])`
+  - variable `VALIDITY` — `VALIDITY = new Set(['valid', 'invalid', 'unknown'])`
+  - variable `INEQUIVALENCE` — `INEQUIVALENCE = new Set(['established', 'equivalent', 'unknown'])`
+  - variable `OUTCOMES` — `OUTCOMES = new Set(['killed', 'survived', 'equivalent', 'invalid', 'timeout', 'harness-error', 'unknown'])`
+  - variable `BASE_OUTCOMES` — `BASE_OUTCOMES = new Set(['passed', 'failed', 'timeout', 'harness-error', 'unknown'])`
+  - variable `ORACLE_BASELINE_ROLES` — `ORACLE_BASELINE_ROLES = new Set(['oracle-template', 'binding-manifest', 'evaluator-implementation'])`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `uniqueIds` — `function uniqueIds(value, pathName,`
+  - variable `normalized` — `normalized = value.map((item, index) => id(item, `$`
+  - arrow-function `<anonymous@3512>` — `(item, index) => id(item, `$`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3874>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `normalizeMinimums` — `function normalizeMinimums(value, pathName)`
+  - function `normalizeFamily` — `function normalizeFamily(value, index)`
+  - variable `at` — `at = `OracleFaultModelRegistryV1.families[$`
+  - variable `requiredOracleBaselineRoles` — `requiredOracleBaselineRoles = uniqueIds(value.requiredOracleBaselineRoles, `$`
+  - variable `role` — `role`
+  - variable `minimums` — `minimums = normalizeMinimums(value.minimums, `$`
+  - … and 107 more symbols
+- `scripts/oracle-joint-co-mutation-v1.mjs` (180 symbols)
+  - variable `ORACLE_JOINT_FAULT_MODEL_REGISTRY_V1` — `ORACLE_JOINT_FAULT_MODEL_REGISTRY_V1 = 'oracle-joint-fault-model-registry-v1'`
+  - variable `ORACLE_JOINT_CO_MUTATION_V1` — `ORACLE_JOINT_CO_MUTATION_V1 = 'oracle-joint-co-mutation-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `WITNESS_LAYERS` — `WITNESS_LAYERS = new Set(['structural', 'semantic', 'causal', 'liveness', 'resource', 'security'])`
+  - variable `ORACLE_BASELINE_ROLES` — `ORACLE_BASELINE_ROLES = new Set(['oracle-template', 'binding-manifest', 'evaluator-implementation'])`
+  - variable `CONTROL_KINDS` — `CONTROL_KINDS = new Set(['fault-inducing', 'semantics-preserving'])`
+  - variable `PARTITIONS` — `PARTITIONS = new Set(['calibration', 'transfer'])`
+  - variable `VALIDITIES` — `VALIDITIES = new Set(['valid', 'invalid', 'unknown'])`
+  - variable `RELATIONS` — `RELATIONS = new Set(['inequivalent', 'equivalent', 'unknown'])`
+  - variable `EVALUATOR_DISPOSITIONS` — `EVALUATOR_DISPOSITIONS = new Set(['passed', 'failed', 'timeout', 'harness-error', 'unknown'])`
+  - variable `WITNESS_DISPOSITIONS` — `WITNESS_DISPOSITIONS = new Set([`
+  - variable `EXECUTION_SLOTS` — `EXECUTION_SLOTS = Object.freeze(['baseBase', 'candidateVariant', 'oracleVariant', 'doubleVariant'])`
+  - variable `REFUTATION_CODES` — `REFUTATION_CODES = new Set([`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `uniqueIds` — `function uniqueIds(value, pathName,`
+  - variable `output` — `output = value.map((item, index) => id(item, `$`
+  - arrow-function `<anonymous@4576>` — `(item, index) => id(item, `$`
+  - function `uniqueDigests` — `function uniqueDigests(value, pathName,`
+  - variable `output` — `output = value.map((item, index) => digest(item, `$`
+  - arrow-function `<anonymous@4962>` — `(item, index) => digest(item, `$`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@5316>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(domain, value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - … and 140 more symbols
+
+### Verifier template binding — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 51 · **Callable:** 28 · **Authored purpose:** 1
+- `scripts/verifier-template-binding-v1.mjs` (51 symbols)
+  - variable `VERIFIER_TEMPLATE_BINDING_V1` — `VERIFIER_TEMPLATE_BINDING_V1 = 'verifier-template-binding-v1'`
+  - variable `SHA_RE` — `SHA_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allow` — `allow = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName,`
+  - function `strings` — `function strings(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => id(item, `$`
+  - arrow-function `<anonymous@2087>` — `(item, index) => id(item, `$`
+  - function `targets` — `function targets(value, pathName)`
+  - variable `result` — `result = value.map((item, index) =>`
+  - arrow-function `<anonymous@2427>` — `(item, index) =>`
+  - arrow-function `<anonymous@2590>` — `part => !part || part === '.' || part === '..'`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@3069>` — `key => [key, canonicalize(value[key])]`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `resourceBounds` — `function resourceBounds(value, pathName,`
+  - variable `fields` — `fields = ['cpuMs', 'gpuMiB', 'wallMs', 'toolCalls', 'maxAttempts', 'maxOutputBytes']`
+  - variable `output` — `output =`
+  - variable `key` — `key`
+  - function `normalizeEvidence` — `function normalizeEvidence(value, index)`
+  - variable `at` — `at = `VerifierTemplateBindingV1.expectedEvidence[$`
+  - function `normalizeCheck` — `function normalizeCheck(value, index)`
+  - variable `at` — `at = `VerifierTemplateBindingV1.checks[$`
+  - arrow-function `<anonymous@6655>` — `item => typeof item !== 'string' || CONTROL_RE.test(item)`
+  - function `compileVerifierTemplateBindingV1` — `export function compileVerifierTemplateBindingV1(input =`
+  - variable `checks` — `checks = input.checks.map(normalizeCheck).sort((left, right) => left.checkId.localeCompare(right.checkId))`
+  - arrow-function `<anonymous@9240>` — `(left, right) => left.checkId.localeCompare(right.checkId)`
+  - variable `expectedEvidence` — `expectedEvidence = input.expectedEvidence.map(normalizeEvidence).sort((left, right) => left.evidenceId.localeCompare(right.evidenceId))`
+  - arrow-function `<anonymous@9378>` — `(left, right) => left.evidenceId.localeCompare(right.evidenceId)`
+  - arrow-function `<anonymous@9469>` — `item => item.checkId`
+  - … and 11 more symbols
+
+### VerifierCapsule V1 — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 240 · **Callable:** 72 · **Authored purpose:** 1
+- `scripts/verifier-capsule-v1.mjs` (240 symbols)
+  - variable `VERIFIER_CAPSULE_V1` — `VERIFIER_CAPSULE_V1 = 'verifier-capsule-v1'`
+  - variable `VERIFIER_CAPSULE_V1_VERSION` — `VERIFIER_CAPSULE_V1_VERSION = VERIFIER_CAPSULE_V1`
+  - variable `VERIFIER_CAPSULE_VERSION` — `VERIFIER_CAPSULE_VERSION = '1.0.0'`
+  - variable `VERIFIER_CAPSULE_V1_SCHEMA_VERSION` — `VERIFIER_CAPSULE_V1_SCHEMA_VERSION = VERIFIER_CAPSULE_V1`
+  - variable `VERIFIER_CAPSULE_ID_PREFIX` — `VERIFIER_CAPSULE_ID_PREFIX = 'artifact-verifier-capsule-v1-'`
+  - variable `VERIFIER_CAPSULE_MAX_CHECKS` — `VERIFIER_CAPSULE_MAX_CHECKS = 64`
+  - variable `VERIFIER_CAPSULE_MAX_EVIDENCE` — `VERIFIER_CAPSULE_MAX_EVIDENCE = 128`
+  - variable `VERIFIER_CAPSULE_MAX_REFUSAL_RULES` — `VERIFIER_CAPSULE_MAX_REFUSAL_RULES = 32`
+  - variable `VERIFIER_CAPSULE_MAX_TEXT` — `VERIFIER_CAPSULE_MAX_TEXT = 8 * 1024`
+  - variable `VERIFIER_CAPSULE_MAX_COMMAND` — `VERIFIER_CAPSULE_MAX_COMMAND = 4 * 1024`
+  - variable `VERIFIER_CAPSULE_MAX_ARGS` — `VERIFIER_CAPSULE_MAX_ARGS = 64`
+  - variable `VERIFIER_CAPSULE_MAX_TARGETS` — `VERIFIER_CAPSULE_MAX_TARGETS = 256`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `TARGET_CONTROL_RE` — `TARGET_CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `IDENTITY_KINDS` — `IDENTITY_KINDS = new Set(['human', 'model', 'agent', 'system', 'service', 'unknown'])`
+  - variable `CHECK_KINDS` — `CHECK_KINDS = new Set(['command', 'probe'])`
+  - variable `PLAN_ACTIONS` — `PLAN_ACTIONS = new Set(['refuse', 'record-unknown'])`
+  - variable `INPUT_KEYS` — `INPUT_KEYS = Object.freeze([`
+  - variable `OUTPUT_KEYS` — `OUTPUT_KEYS = Object.freeze([`
+  - variable `OUTPUT_REQUIRED_KEYS` — `OUTPUT_REQUIRED_KEYS = Object.freeze(OUTPUT_KEYS.filter(key => ![`
+  - arrow-function `<anonymous@2713>` — `key => ![`
+  - class `VerifierCapsuleV1Error` — `export class VerifierCapsuleV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_CAPSULE_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@3708>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@3831>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@4139>` — `key => key !== 'length'`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `keys` — `keys = ownDataKeys(value, pathName)`
+  - … and 200 more symbols
+
+### Verifier experiment and discrimination — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 197 · **Callable:** 75 · **Authored purpose:** 0
+- `scripts/verifier-discrimination-v1.mjs` (61 symbols)
+  - variable `VERIFIER_DISCRIMINATION_V1` — `VERIFIER_DISCRIMINATION_V1 = 'verifier-discrimination-v1'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `ROLES` — `ROLES = new Set(['positive-reference', 'negative-control'])`
+  - variable `EXPECTED` — `EXPECTED = new Set(['pass', 'reject'])`
+  - variable `OBSERVED` — `OBSERVED = new Set(['passed', 'failed', 'refused', 'unknown'])`
+  - variable `REJECTION_LAYERS` — `REJECTION_LAYERS = new Set(['none', 'structural', 'semantic', 'causal', 'runtime', 'resource', 'security', 'unknown'])`
+  - function `fail` — `function fail(pathName, message)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allow` — `allow = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `enumValue` — `function enumValue(value, allowed, pathName)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@2463>` — `key => [key, canonicalize(value[key])]`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `sha256` — `function sha256(value)`
+  - function `controlRecord` — `function controlRecord(value, index)`
+  - variable `at` — `at = `VerifierDiscriminationV1.controls[$`
+  - variable `role` — `role = enumValue(value.role, ROLES, `$`
+  - variable `expectedOutcome` — `expectedOutcome = enumValue(value.expectedOutcome, EXPECTED, `$`
+  - variable `expectedRejectionLayer` — `expectedRejectionLayer = enumValue(value.expectedRejectionLayer, REJECTION_LAYERS, `$`
+  - variable `observedWitnessLayer` — `observedWitnessLayer = enumValue(value.observedWitnessLayer, REJECTION_LAYERS, `$`
+  - variable `evidenceArtifactRefs` — `evidenceArtifactRefs = value.evidenceArtifactRefs.map((item, itemIndex) =>`
+  - arrow-function `<anonymous@4745>` — `(item, itemIndex) =>`
+  - function `compileVerifierDiscriminationV1` — `export function compileVerifierDiscriminationV1(input =`
+  - variable `requiredNegativeFamilies` — `requiredNegativeFamilies = input.requiredNegativeFamilies.map((value, index) => id(value, `VerifierDiscriminationV1.requiredNegativeFamilies[$`
+  - arrow-function `<anonymous@6359>` — `(value, index) => id(value, `VerifierDiscriminationV1.requiredNegativeFamilies[$`
+  - variable `controls` — `controls = input.controls.map(controlRecord).sort((left, right) => left.controlId.localeCompare(right.controlId))`
+  - arrow-function `<anonymous@6847>` — `(left, right) => left.controlId.localeCompare(right.controlId)`
+  - arrow-function `<anonymous@6938>` — `value => value.controlId`
+  - variable `positives` — `positives = controls.filter(value => value.role === 'positive-reference')`
+  - arrow-function `<anonymous@7103>` — `value => value.role === 'positive-reference'`
+  - variable `negatives` — `negatives = controls.filter(value => value.role === 'negative-control')`
+  - … and 21 more symbols
+- `scripts/verifier-experiment-v1.mjs` (136 symbols)
+  - variable `EXECUTABLE_EXPERIMENT_OBLIGATION_V1` — `EXECUTABLE_EXPERIMENT_OBLIGATION_V1 = 'executable-experiment-obligation-v1'`
+  - variable `VERIFIER_EXPERIMENT_V1` — `VERIFIER_EXPERIMENT_V1 = 'verifier-experiment-v1'`
+  - variable `CANDIDATE_JSON_PROTOCOL_V1` — `CANDIDATE_JSON_PROTOCOL_V1 = 'candidate-json-stdin-stdout-v1'`
+  - variable `EXPERIMENT_ADAPTER_ID_V1` — `EXPERIMENT_ADAPTER_ID_V1 = 'experiment.executable.v1'`
+  - variable `VERIFIER_EXPERIMENT_ARTIFACT_PREFIX` — `VERIFIER_EXPERIMENT_ARTIFACT_PREFIX = 'artifact-verifier-experiment-v1-'`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `UNSAFE_KEYS` — `UNSAFE_KEYS = new Set(['__proto__', 'constructor', 'prototype'])`
+  - variable `ASSERTION_KINDS` — `ASSERTION_KINDS = new Set(['metamorphic', 'exact-json', 'numeric-tolerance'])`
+  - variable `TRANSFORM_KINDS` — `TRANSFORM_KINDS = new Set(['negate-numbers', 'scale-numbers', 'reverse-array', 'permute-array'])`
+  - variable `RELATION_KINDS` — `RELATION_KINDS = new Set(['exact-equal', 'numeric-tolerance', 'same-transform'])`
+  - variable `MAX_JSON_DEPTH` — `MAX_JSON_DEPTH = 16`
+  - variable `MAX_JSON_NODES` — `MAX_JSON_NODES = 4096`
+  - variable `MAX_JSON_BYTES` — `MAX_JSON_BYTES = 64 * 1024`
+  - variable `MAX_CASES` — `MAX_CASES = 16`
+  - variable `MAX_TRANSFORMS` — `MAX_TRANSFORMS = 16`
+  - variable `MAX_ASSERTIONS` — `MAX_ASSERTIONS = 32`
+  - variable `MAX_CONTROLS` — `MAX_CONTROLS = 8`
+  - variable `MAX_RUNS` — `MAX_RUNS = 64`
+  - class `VerifierExperimentV1Error` — `export class VerifierExperimentV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_EXPERIMENT_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `finite` — `function finite(value, pathName,`
+  - function `enumValue` — `function enumValue(value, allowed, pathName)`
+  - function `uniqueEnums` — `function uniqueEnums(value, allowed, pathName)`
+  - variable `normalized` — `normalized = value.map((item, index) => enumValue(item, allowed, `$`
+  - arrow-function `<anonymous@3981>` — `(item, index) => enumValue(item, allowed, `$`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@4365>` — `key => [key, canonicalize(value[key])]`
+  - … and 96 more symbols
+
+### Admitted verifier execution store — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 161 · **Callable:** 48 · **Authored purpose:** 2
+- `scripts/admitted-verifier-execution-v1.mjs` (161 symbols)
+  - variable `ADMITTED_VERIFIER_EXECUTION_V1` — `ADMITTED_VERIFIER_EXECUTION_V1 = 'admitted-verifier-execution-v1'`
+  - variable `VERIFIER_EXECUTION_POLICY_V1` — `VERIFIER_EXECUTION_POLICY_V1 = 'verifier-execution-policy-v1'`
+  - variable `VERIFIER_EXECUTION_POLICY_V2` — `VERIFIER_EXECUTION_POLICY_V2 = 'verifier-execution-policy-v2'`
+  - variable `VERIFIER_EXECUTION_POLICY_V3` — `VERIFIER_EXECUTION_POLICY_V3 = 'verifier-execution-policy-v3'`
+  - variable `ADMITTED_VERIFIER_EXECUTION_RESERVATION_V1` — `ADMITTED_VERIFIER_EXECUTION_RESERVATION_V1 = 'admitted-verifier-execution-reservation-v1'`
+  - variable `ADMITTED_VERIFIER_PREPARED_RESULT_V1` — `ADMITTED_VERIFIER_PREPARED_RESULT_V1 = 'admitted-verifier-prepared-result-v1'`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `MAX_PROFILES` — `MAX_PROFILES = 64`
+  - variable `MAX_ARGS` — `MAX_ARGS = 64`
+  - variable `MAX_ARG_CHARS` — `MAX_ARG_CHARS = 4096`
+  - variable `MAX_PROCESSES` — `MAX_PROCESSES = 64`
+  - variable `MAX_RESERVATION_BYTES` — `MAX_RESERVATION_BYTES = 64 * 1024`
+  - variable `MAX_PREPARED_RESULT_BYTES` — `MAX_PREPARED_RESULT_BYTES = 256 * 1024`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - variable `RESERVATION_INPUT_KEYS` — `RESERVATION_INPUT_KEYS = Object.freeze([`
+  - variable `RESERVATION_KEYS` — `RESERVATION_KEYS = Object.freeze([`
+  - variable `PREPARED_INPUT_KEYS` — `PREPARED_INPUT_KEYS = Object.freeze([`
+  - variable `PREPARED_KEYS` — `PREPARED_KEYS = Object.freeze([`
+  - variable `RESULT_VERDICTS` — `RESULT_VERDICTS = new Set(['observed', 'passed', 'failed', 'unknown'])`
+  - variable `ATTESTATION_STATES` — `ATTESTATION_STATES = new Set(['attested', 'unattested', 'in-doubt'])`
+  - class `AdmittedVerifierExecutionV1Error` — `export class AdmittedVerifierExecutionV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'ADMITTED_VERIFIER_EXECUTION_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exactKeys` — `function exactKeys(value, allowed, required, pathName)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `id` — `function id(value, pathName)`
+  - function `digest` — `function digest(value, pathName,`
+  - function `boundedString` — `function boundedString(value, pathName)`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@5261>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `canonicalBytes` — `function canonicalBytes(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `freezeDeep` — `function freezeDeep(value, seen = new WeakSet())`
+  - … and 121 more symbols
+
+### Contained verifier executor — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 466 · **Callable:** 120 · **Authored purpose:** 4
+- `scripts/runtime-attested-verifier-v1.mjs` (152 symbols)
+  - variable `RUNTIME_ATTESTED_VERIFIER_V1` — `RUNTIME_ATTESTED_VERIFIER_V1 = 'runtime-attested-verifier-v1'`
+  - variable `SOURCE_PATH` — `SOURCE_PATH = fileURLToPath(import.meta.url)`
+  - variable `EXECUTOR_SOURCE_PATH` — `EXECUTOR_SOURCE_PATH = path.join(path.dirname(SOURCE_PATH), 'verifier-executor-v1.mjs')`
+  - variable `EXPERIMENT_SCHEMA_SOURCE_PATH` — `EXPERIMENT_SCHEMA_SOURCE_PATH = path.join(path.dirname(SOURCE_PATH), 'verifier-experiment-v1.mjs')`
+  - variable `EXPERIMENT_ADAPTER_SOURCE_PATH` — `EXPERIMENT_ADAPTER_SOURCE_PATH = path.join(path.dirname(SOURCE_PATH), 'verifier-experiment-adapter-v1.mjs')`
+  - variable `RUNNER_PROFILE_SOURCE_PATH` — `RUNNER_PROFILE_SOURCE_PATH = path.join(path.dirname(SOURCE_PATH), 'verifier-runner-profile-v1.mjs')`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `SAFE_ID_RE` — `SAFE_ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - class `RuntimeAttestedVerifierV1Error` — `export class RuntimeAttestedVerifierV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'RUNTIME_ATTESTED_VERIFIER_V1_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `safeId` — `function safeId(value, pathName)`
+  - function `digest` — `function digest(value, pathName,`
+  - function `timestamp` — `function timestamp(clock, pathName)`
+  - variable `raw` — `raw = clock()`
+  - variable `date` — `date = raw instanceof Date ? raw : new Date(raw)`
+  - function `exactObjectKeys` — `function exactObjectKeys(value, keys, pathName)`
+  - variable `actual` — `actual = Object.keys(value).sort()`
+  - variable `expected` — `expected = [...keys].sort()`
+  - arrow-function `<anonymous@3823>` — `(key, index) => key !== expected[index]`
+  - function `stableFileIdentity` — `async function stableFileIdentity(requestedPath, pathName)`
+  - variable `requested` — `requested`
+  - variable `resolved` — `resolved`
+  - variable `before` — `before`
+  - variable `error` — `error`
+  - variable `hash` — `hash = createHash('sha256')`
+  - variable `chunk` — `chunk`
+  - variable `error` — `error`
+  - variable `after` — `after = await stat(resolved)`
+  - function `bwrapIdentity` — `async function bwrapIdentity()`
+  - variable `candidate` — `candidate`
+  - variable `error` — `error`
+  - function `landlockIdentity` — `async function landlockIdentity(options)`
+  - variable `identity` — `identity = await stableFileIdentity(options.landlockHelper, 'runtimeAttestedVerifier.landlockHelper')`
+  - function `commandBinding` — `async function commandBinding(commandAllowlist = [])`
+  - variable `commands` — `commands = []`
+  - variable `<anonymous@6423>` — `[index, profile]`
+  - variable `executable` — `executable = await stableFileIdentity(profile.executable, `runtimeAttestedVerifier.commandAllowlist[$`
+  - function `runnerAuthorityBinding` — `async function runnerAuthorityBinding(options)`
+  - variable `profileIds` — `profileIds = options.runnerProfileIds.map((profileId, index) => (`
+  - … and 112 more symbols
+- `scripts/verifier-executor-v1.mjs` (314 symbols)
+  - variable `VERIFIER_EXECUTOR_V1` — `VERIFIER_EXECUTOR_V1 = 'verifier-executor-v1'`
+  - variable `VERIFIER_EXECUTOR_VERSION` — `VERIFIER_EXECUTOR_VERSION = '1.0.0'`
+  - variable `VERIFIER_EVIDENCE_PAYLOAD_V1` — `VERIFIER_EVIDENCE_PAYLOAD_V1 = 'verification-observation-evidence-v1'`
+  - variable `EXECUTOR_MAX_WALL_MS` — `EXECUTOR_MAX_WALL_MS = 120_000`
+  - variable `EXECUTOR_MAX_OUTPUT_BYTES` — `EXECUTOR_MAX_OUTPUT_BYTES = 32 * 1024`
+  - variable `EXECUTOR_MAX_CHECKS` — `EXECUTOR_MAX_CHECKS = 64`
+  - variable `EXECUTOR_MAX_EVIDENCE_PER_CHECK` — `EXECUTOR_MAX_EVIDENCE_PER_CHECK = 8`
+  - variable `EXECUTOR_MAX_TOTAL_EVIDENCE_BYTES` — `EXECUTOR_MAX_TOTAL_EVIDENCE_BYTES = 8 * 1024 * 1024`
+  - variable `EXECUTOR_MAX_PROCESSES` — `EXECUTOR_MAX_PROCESSES = 64`
+  - variable `EXECUTOR_MAX_CONCURRENT_PROCESSES` — `EXECUTOR_MAX_CONCURRENT_PROCESSES = 1`
+  - variable `EXECUTOR_KILL_GRACE_MS` — `EXECUTOR_KILL_GRACE_MS = 50`
+  - variable `VERIFIER_SANDBOX_ENV` — `VERIFIER_SANDBOX_ENV = Object.freeze(`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `SHELL_SYNTAX_RE` — `SHELL_SYNTAX_RE = /[;&|><$`()`
+  - variable `FORBIDDEN_INTERPRETER_ARG_RE` — `FORBIDDEN_INTERPRETER_ARG_RE = /^(?:-e|--eval(?:=.*)?|-p|--print(?:=.*)?|-r|--require(?:=.*)?|--loader(?:=.*)?|--import(?:=.*)?|-c|--command(?:=.*)?)$/u`
+  - variable `DENIED_EXECUTABLE_NAMES` — `DENIED_EXECUTABLE_NAMES = new Set([`
+  - variable `EMPTY_SHA256` — `EMPTY_SHA256 = createHash('sha256').update(Buffer.alloc(0)).digest('hex')`
+  - class `VerifierExecutorV1Error` — `export class VerifierExecutorV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_EXECUTOR_V1_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@4514>` — `(_, index) => String(index)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - arrow-function `<anonymous@4637>` — `key => typeof key !== 'string' || !expected.has(key)`
+  - variable `key` — `key`
+  - arrow-function `<anonymous@4931>` — `key => key !== 'length'`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `key` — `key`
+  - function `canonicalize` — `function canonicalize(value, pathName = 'VerifierExecutorV1', depth = 0, ancestors = new WeakSet())`
+  - arrow-function `<anonymous@6342>` — `(_, index) => canonicalize(value[index], `$`
+  - variable `result` — `result =`
+  - variable `key` — `key`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - … and 274 more symbols
+
+### VerifierResult artifact/event — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 374 · **Callable:** 116 · **Authored purpose:** 2
+- `scripts/verifier-result-artifact-store.mjs` (127 symbols)
+  - variable `VERIFIER_RESULT_ARTIFACT_STORE_V1` — `VERIFIER_RESULT_ARTIFACT_STORE_V1 = 'verifier-result-artifact-store-v1'`
+  - variable `VERIFIER_RESULT_ARTIFACT_DIRECTORY` — `VERIFIER_RESULT_ARTIFACT_DIRECTORY = 'verifier-results-v1'`
+  - variable `VERIFICATION_EVIDENCE_ARTIFACT_DIRECTORY` — `VERIFICATION_EVIDENCE_ARTIFACT_DIRECTORY = 'verification-evidence-v1'`
+  - variable `VERIFICATION_EVIDENCE_ARTIFACT_MAX_BYTES` — `VERIFICATION_EVIDENCE_ARTIFACT_MAX_BYTES = 64 * 1024 * 1024`
+  - variable `VERIFIER_RESULT_ARTIFACT_MAX_BYTES` — `VERIFIER_RESULT_ARTIFACT_MAX_BYTES = 64 * 1024 * 1024`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `NOFOLLOW` — `NOFOLLOW = fsConstants.O_NOFOLLOW || 0`
+  - class `VerifierResultArtifactStoreError` — `export class VerifierResultArtifactStoreError extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_RESULT_ARTIFACT_STORE_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `isObject` — `function isObject(value)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `sha256Bytes` — `function sha256Bytes(value)`
+  - function `bytesValue` — `function bytesValue(value, pathName)`
+  - function `expectedDigestOption` — `function expectedDigestOption(options, explicitKeys, objectKeys, digestKeys, pathName)`
+  - variable `values` — `values = []`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nestedDigest` — `function nestedDigest(value, digestKeys, pathName)`
+  - variable `nestedKey` — `nestedKey`
+  - variable `key` — `key`
+  - function `expectedIdOption` — `function expectedIdOption(options, explicitKeys, pathName)`
+  - variable `values` — `values = []`
+  - variable `key` — `key`
+  - function `normalizeTargetFiles` — `function normalizeTargetFiles(value, pathName)`
+  - variable `result` — `result = [...value]`
+  - arrow-function `<anonymous@4631>` — `item => typeof item !== 'string' || !item.trim()`
+  - function `requiredBaseDir` — `function requiredBaseDir(value)`
+  - function `normalizeExpectedBindings` — `function normalizeExpectedBindings(options =`
+  - variable `expectedVerifierCapsuleSha256` — `expectedVerifierCapsuleSha256 = expectedDigestOption(`
+  - variable `expectedCandidateWorkspaceManifestSha256` — `expectedCandidateWorkspaceManifestSha256 = expectedDigestOption(`
+  - variable `expectedTaskSpecSha256` — `expectedTaskSpecSha256 = expectedDigestOption(`
+  - variable `expectedGoalCapsuleSha256` — `expectedGoalCapsuleSha256 = expectedDigestOption(`
+  - variable `expectedGoalVerifierContractSha256` — `expectedGoalVerifierContractSha256 = expectedDigestOption(`
+  - variable `expectedCandidateArtifactSha256` — `expectedCandidateArtifactSha256 = expectedDigestOption(`
+  - variable `expectedCandidateSha256` — `expectedCandidateSha256 = expectedDigestOption(`
+  - variable `expectedVerifierCapsuleId` — `expectedVerifierCapsuleId = expectedIdOption(`
+  - variable `expectedCandidateWorkspaceId` — `expectedCandidateWorkspaceId = expectedIdOption(`
+  - variable `expectedTargetFiles` — `expectedTargetFiles = null`
+  - variable `targetValues` — `targetValues = ['expectedTargetFiles', 'targetFiles', 'expectedTargets', 'targets']`
+  - … and 87 more symbols
+- `scripts/verifier-result-v1.mjs` (247 symbols)
+  - variable `VERIFIER_RESULT_V1` — `VERIFIER_RESULT_V1 = 'verifier-result-v1'`
+  - variable `VERIFIER_RESULT_V1_VERSION` — `VERIFIER_RESULT_V1_VERSION = '1.0.0'`
+  - variable `VERIFIER_RESULT_SCHEMA_VERSION` — `VERIFIER_RESULT_SCHEMA_VERSION = VERIFIER_RESULT_V1`
+  - variable `VERIFIER_RESULT_ID_PREFIX` — `VERIFIER_RESULT_ID_PREFIX = 'artifact-verifier-result-v1-'`
+  - variable `VERIFICATION_OBSERVATION_RECEIPT_V1` — `VERIFICATION_OBSERVATION_RECEIPT_V1 = 'verification-observation-receipt-v1'`
+  - variable `VERIFICATION_EVIDENCE_ARTIFACT_V1` — `VERIFICATION_EVIDENCE_ARTIFACT_V1 = 'verification-evidence-artifact-v1'`
+  - variable `VERIFIER_RESULT_MAX_OBSERVATIONS` — `VERIFIER_RESULT_MAX_OBSERVATIONS = 64`
+  - variable `VERIFIER_RESULT_MAX_EVIDENCE_ARTIFACTS` — `VERIFIER_RESULT_MAX_EVIDENCE_ARTIFACTS = 256`
+  - variable `VERIFIER_RESULT_MAX_EVIDENCE_REFS_PER_OBSERVATION` — `VERIFIER_RESULT_MAX_EVIDENCE_REFS_PER_OBSERVATION = 128`
+  - variable `VERIFIER_RESULT_MAX_BYTES` — `VERIFIER_RESULT_MAX_BYTES = 64 * 1024 * 1024`
+  - variable `VERIFIER_RESULT_MAX_DURATION_MS` — `VERIFIER_RESULT_MAX_DURATION_MS = 24 * 60 * 60 * 1000`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `ID_RE` — `ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `ARTIFACT_ID_PREFIX` — `ARTIFACT_ID_PREFIX = 'artifact-verification-evidence-v1-'`
+  - variable `ARTIFACT_ID_RE` — `ARTIFACT_ID_RE = new RegExp(`^$`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `OBSERVATION_STATES` — `OBSERVATION_STATES = new Set(['observed', 'passed', 'failed', 'unknown'])`
+  - variable `RESULT_STATES` — `RESULT_STATES = OBSERVATION_STATES`
+  - variable `EXIT_STATES` — `EXIT_STATES = new Set(['exited', 'signaled', 'timeout', 'not-run', 'unknown'])`
+  - variable `IDENTITY_KINDS` — `IDENTITY_KINDS = new Set(['human', 'model', 'agent', 'system', 'service', 'unknown'])`
+  - variable `MEDIA_TYPE_RE` — `MEDIA_TYPE_RE = /^[A-Za-z0-9][A-Za-z0-9!#$&^_.+-]`
+  - variable `INPUT_KEYS` — `INPUT_KEYS = Object.freeze([`
+  - variable `OUTPUT_KEYS` — `OUTPUT_KEYS = Object.freeze([`
+  - variable `REQUIRED_OUTPUT_KEYS` — `REQUIRED_OUTPUT_KEYS = Object.freeze(`
+  - arrow-function `<anonymous@3867>` — `key => key !== 'runtimeInvocationReceipt'`
+  - variable `PROVENANCE_KEYS` — `PROVENANCE_KEYS = Object.freeze([`
+  - variable `RECEIPT_KEYS` — `RECEIPT_KEYS = Object.freeze([`
+  - variable `EXIT_KEYS` — `EXIT_KEYS = Object.freeze(['state', 'code', 'signal'])`
+  - variable `OBSERVATION_KEYS` — `OBSERVATION_KEYS = Object.freeze([`
+  - variable `EVIDENCE_REF_KEYS` — `EVIDENCE_REF_KEYS = Object.freeze(['evidenceId', 'artifactId', 'artifactSha256', 'sha256'])`
+  - variable `EVIDENCE_ARTIFACT_KEYS` — `EVIDENCE_ARTIFACT_KEYS = Object.freeze([`
+  - class `VerifierResultV1Error` — `export class VerifierResultV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'VERIFIER_RESULT_V1_INVALID')`
+  - function `fail` — `function fail(pathName, message, code)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - function `ownDataKeys` — `function ownDataKeys(value, pathName)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@5816>` — `(_, index) => String(index)`
+  - … and 207 more symbols
+
+### Runtime-attested sealed oracle batch — MISSING / LAUNCH BLOCKER
+- **Files:** 1 (1 with symbols) · **Symbols:** 191 · **Callable:** 61 · **Authored purpose:** 8
+- `scripts/runtime-attested-oracle-batch-v1.mjs` (191 symbols)
+  - variable `RUNTIME_ATTESTED_ORACLE_BATCH_V1` — `RUNTIME_ATTESTED_ORACLE_BATCH_V1 =`
+  - variable `ORACLE_JOINT_EXECUTION_PLAN_V1` — `ORACLE_JOINT_EXECUTION_PLAN_V1 =`
+  - variable `ORACLE_JOINT_EXECUTION_BINDING_V1` — `ORACLE_JOINT_EXECUTION_BINDING_V1 =`
+  - variable `ORACLE_JOINT_WITNESS_BINDING_V1` — `ORACLE_JOINT_WITNESS_BINDING_V1 =`
+  - variable `ORACLE_JOINT_RELATION_BINDING_V1` — `ORACLE_JOINT_RELATION_BINDING_V1 =`
+  - variable `SHA256_RE` — `SHA256_RE = /^[a-f0-9]`
+  - variable `SAFE_ID_RE` — `SAFE_ID_RE = /^[A-Za-z0-9][A-Za-z0-9._:-]`
+  - variable `CONTROL_RE` — `CONTROL_RE = /[\u0000-\u001f\u007f\u0080-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `SLOTS` — `SLOTS = new Set(['baseBase', 'candidateVariant', 'oracleVariant', 'doubleVariant'])`
+  - variable `RELATION_KINDS` — `RELATION_KINDS = new Set(['candidate', 'oracle'])`
+  - variable `MAX_EVALUATION_WINDOW_MS` — `MAX_EVALUATION_WINDOW_MS = 24 * 60 * 60 * 1000`
+  - class `RuntimeAttestedOracleBatchV1Error` — `export class RuntimeAttestedOracleBatchV1Error extends Error`
+  - constructor `constructor` — `constructor(pathName, message, code = 'RUNTIME_ATTESTED_ORACLE_BATCH_INVALID', cause = undefined)`
+  - function `fail` — `function fail(pathName, message, code, cause)`
+  - function `plain` — `function plain(value, pathName)`
+  - variable `prototype` — `prototype = Object.getPrototypeOf(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - variable `key` — `key`
+  - function `exact` — `function exact(value, keys, pathName)`
+  - variable `actual` — `actual = Object.keys(value)`
+  - arrow-function `<anonymous@3338>` — `key => !keys.includes(key)`
+  - arrow-function `<anonymous@3383>` — `key => !actual.includes(key)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `safeId` — `function safeId(value, pathName)`
+  - function `canonicalTimestamp` — `function canonicalTimestamp(value, pathName)`
+  - variable `milliseconds` — `milliseconds = Date.parse(value)`
+  - function `enumValue` — `function enumValue(value, allowed, pathName)`
+  - function `canonical` — `function canonical(value, pathName = 'canonical', depth = 0)`
+  - arrow-function `<anonymous@4887>` — `(item, index) => canonical(item, `$`
+  - variable `keys` — `keys = Object.keys(value).sort((left, right) =>`
+  - arrow-function `<anonymous@5038>` — `(left, right) =>`
+  - arrow-function `<anonymous@5136>` — `key => `$`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `descriptor` — `descriptor`
+  - function `canonicalBase64Bytes` — `function canonicalBase64Bytes(value, pathName)`
+  - variable `bytes` — `bytes = Buffer.from(value, 'base64')`
+  - function `oracleJointRuntimeBindingSha256V1` — `export function oracleJointRuntimeBindingSha256V1(`
+  - function `oracleJointEvaluatorEpochSha256V1` — `export function oracleJointEvaluatorEpochSha256V1(`
+  - function `oracleJointPreexecutionPlanSha256V1` — `export function oracleJointPreexecutionPlanSha256V1(plan)` — *Digest the complete pre-execution semantic plan without receipt identities. Receipt/proof digests are results of executing this plan and would make a direct report hash circular. Everything that deter*
+  - … and 151 more symbols
+
+### Private semantic evaluator store — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 259 · **Callable:** 88 · **Authored purpose:** 0
+- `scripts/private-semantic-evaluator-v1.mjs` (259 symbols)
+  - variable `SHA256` — `SHA256 = /^[a-f0-9]`
+  - variable `OPAQUE_ID` — `OPAQUE_ID = /^[A-Za-z0-9_-]`
+  - variable `KEY_ID` — `KEY_ID = /^[A-Za-z0-9][A-Za-z0-9._-]`
+  - variable `CONTROL` — `CONTROL = /[\u0000-\u001f\u007f-\u009f\u202a-\u202e\u2066-\u2069]/u`
+  - variable `FORBIDDEN` — `FORBIDDEN = new Set(['__proto__', 'constructor', 'prototype'])`
+  - variable `ARTIFACT` — `ARTIFACT = /^artifact-c8-([a-z][a-z0-9-]`
+  - variable `MAX_JSON_BYTES` — `MAX_JSON_BYTES = 1024 * 1024`
+  - variable `MAX_CANDIDATE_BYTES` — `MAX_CANDIDATE_BYTES = 262144`
+  - variable `MAX_VALIDITY_MS` — `MAX_VALIDITY_MS = 24 * 60 * 60 * 1000`
+  - variable `PLAN_PREFIX` — `PLAN_PREFIX = 'c8-private-semantic-plan-reference-v1\0'`
+  - variable `ATTESTATION_PREFIX` — `ATTESTATION_PREFIX = 'c8-private-semantic-attestation-v1\0'`
+  - variable `TEST_ONLY_IMPLEMENTATION_SHA256` — `TEST_ONLY_IMPLEMENTATION_SHA256 = createHash('sha256').update('c8-private-semantic-evaluator-test-only-engine-v1').digest('hex')`
+  - variable `OUTCOME_DIAGNOSTIC` — `OUTCOME_DIAGNOSTIC = Object.freeze(`
+  - variable `DB_NAME` — `DB_NAME = 'private-evaluator-v1.sqlite'`
+  - variable `ATTESTATION_FIELDS` — `ATTESTATION_FIELDS = ['admissionAuthoritySha256', 'attemptId', 'diagnosticClass', 'evaluatorImplementationSha256', 'evaluatorKeyId', 'evaluatorRevisionSha256', 'issuedAt', 'outcome', 'planEpoch', 'pla`
+  - variable `DIAGNOSTIC_SCOPE` — `DIAGNOSTIC_SCOPE = 'diagnostic-only; no-product-selection-authority'`
+  - variable `EXPECTED_TABLES` — `EXPECTED_TABLES = Object.freeze(`
+  - class `PrivateSemanticEvaluatorV1Error` — `export class PrivateSemanticEvaluatorV1Error extends Error`
+  - constructor `constructor` — `constructor(message, code = 'C8_PRIVATE_EVALUATOR_INVALID')`
+  - arrow-function `fail` — `(message, code) =>`
+  - arrow-function `sha256` — `(value) => createHash('sha256').update(value).digest('hex')`
+  - arrow-function `mac` — `(key, value) => createHmac('sha256', key).update(value).digest('hex')`
+  - arrow-function `opaqueId` — `() => randomBytes(32).toString('base64url')`
+  - arrow-function `compare` — `(a, b) => Buffer.compare(Buffer.from(a, 'utf8'), Buffer.from(b, 'utf8'))`
+  - function `canonical` — `function canonical(value, depth = 0)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `expected` — `expected = new Set(['length', ...Array.from(`
+  - arrow-function `<anonymous@4599>` — `(_, i) => String(i)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - arrow-function `<anonymous@4735>` — `(key) => typeof key !== 'string' || !expected.has(key)`
+  - arrow-function `<anonymous@4830>` — `(_, i) => descriptors[String(i)]`
+  - arrow-function `<anonymous@4870>` — `(item) => !item || !Object.hasOwn(item, 'value')`
+  - arrow-function `<anonymous@5046>` — `(_, i) => canonical(descriptors[String(i)].value, depth + 1)`
+  - variable `keys` — `keys = Reflect.ownKeys(value)`
+  - variable `descriptors` — `descriptors = Object.getOwnPropertyDescriptors(value)`
+  - arrow-function `<anonymous@5416>` — `(key) => typeof key !== 'string' || !key || FORBIDDEN.has(key)`
+  - arrow-function `<anonymous@5493>` — `(key) => !Object.hasOwn(descriptors[key], 'value')`
+  - arrow-function `<anonymous@5681>` — `(key) => `$`
+  - function `snapshot` — `function snapshot(value, label)`
+  - variable `text` — `text = canonical(value)`
+  - … and 219 more symbols
+
+### Candidate × oracle × fault matrix — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Supported / refuted / unresolved law — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Candidate-bound OracleEvaluationRecorded — MISSING / LAUNCH BLOCKER
+- **Files:** 1 (1 with symbols) · **Symbols:** 2326 · **Callable:** 655 · **Authored purpose:** 27
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### Black-hole independent numerical reference — MISSING / LAUNCH BLOCKER
+- **Files:** 1 (1 with symbols) · **Symbols:** 56 · **Callable:** 25 · **Authored purpose:** 0
+- `scripts/black-hole-verifier-calibration-v1.mjs` (56 symbols)
+  - variable `BLACK_HOLE_VERIFIER_CALIBRATION_V1` — `BLACK_HOLE_VERIFIER_CALIBRATION_V1 = 'black-hole-verifier-calibration-v1'`
+  - function `canonicalize` — `function canonicalize(value)`
+  - arrow-function `<anonymous@1211>` — `key => [key, canonicalize(value[key])]`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - function `sha256` — `function sha256(value)`
+  - function `deepFreeze` — `function deepFreeze(value, seen = new WeakSet())`
+  - variable `child` — `child`
+  - function `classifierPrefix` — `function classifierPrefix(referenceSource)`
+  - variable `marker` — `marker = '\ndef find_shadow_radius'`
+  - variable `index` — `index = referenceSource.indexOf(marker)`
+  - function `buildBlackHoleVerifierCalibrationPlanV1` — `export function buildBlackHoleVerifierCalibrationPlanV1(`
+  - variable `classifier` — `classifier = classifierPrefix(referenceSource)`
+  - variable `controls` — `controls = [`
+  - arrow-function `<anonymous@4980>` — `control => (`
+  - variable `adapter` — `adapter = verifierAdapterDescriptor('experiment.executable.v1')`
+  - variable `obligation` — `obligation = compileBlackHoleExecutableObligationV1()`
+  - variable `structure` — `structure = compileBlackHolePythonStructureContractV1()`
+  - variable `verifierIdentity` — `verifierIdentity =`
+  - variable `body` — `body =`
+  - function `evidencePayloads` — `function evidencePayloads(result)`
+  - arrow-function `<anonymous@6246>` — `item =>`
+  - function `failedAssertionIds` — `function failedAssertionIds(payloads)`
+  - arrow-function `<anonymous@6459>` — `payload => (`
+  - arrow-function `<anonymous@6525>` — `assertion => assertion.pass === false`
+  - arrow-function `<anonymous@6568>` — `assertion => assertion.assertionId`
+  - function `runtimeFailureObserved` — `function runtimeFailureObserved(payloads)`
+  - arrow-function `<anonymous@6681>` — `payload => (payload.runEvidence || []).some(item => (`
+  - arrow-function `<anonymous@6725>` — `item => (`
+  - function `calibrationExecutionReceipt` — `function calibrationExecutionReceipt(result, derived)`
+  - variable `execution` — `execution = result.execution ||`
+  - variable `payloads` — `payloads = (execution.evidencePayloads || []).map(item =>`
+  - arrow-function `<anonymous@7019>` — `item =>`
+  - variable `bytes` — `bytes = Buffer.isBuffer(item.bytes) ? item.bytes : Buffer.from(item.bytes || '')`
+  - variable `parsedPayload` — `parsedPayload = null`
+  - arrow-function `<anonymous@8253>` — `item => (`
+  - function `deriveBlackHoleCalibrationControlV1` — `export function deriveBlackHoleCalibrationControlV1(`
+  - variable `payloads` — `payloads = evidencePayloads(result)`
+  - variable `assertions` — `assertions = failedAssertionIds(payloads)`
+  - variable `observedOutcome` — `observedOutcome = 'unknown'`
+  - variable `observedWitnessLayer` — `observedWitnessLayer = 'unknown'`
+  - … and 16 more symbols
+
+## 09 · CANDIDATE-SPECIFIC EFFECT, RECONCILIATION, POST-VERIFY, AND COMPLETION
+
+### Candidate-specific effect admission — MISSING / LAUNCH BLOCKER
+- **Files:** 1 (1 with symbols) · **Symbols:** 38 · **Callable:** 15 · **Authored purpose:** 1
+- `scripts/product-task-terminal-bridge-v1.mjs` (38 symbols)
+  - function `digestText` — `function digestText(value)`
+  - function `unverified` — `function unverified(runtime, reason, extra =`
+  - function `targetFilesFromPatch` — `function targetFilesFromPatch(patchContent)`
+  - variable `targets` — `targets = []`
+  - variable `line` — `line`
+  - variable `match` — `match = line.match(/^diff --git a\/(.+) b\/(.+)$/)`
+  - variable `target` — `target = match[2]`
+  - function `taskSpecTargetFiles` — `function taskSpecTargetFiles(taskSpec)`
+  - arrow-function `<anonymous@1227>` — `item => typeof item === 'string' ? item : item?.path`
+  - arrow-function `<anonymous@1293>` — `item => typeof item === 'string' && item.trim()`
+  - function `validCandidate` — `function validCandidate(candidate, taskSpec)`
+  - variable `patchSha256` — `patchSha256 = digestText(candidate.patchContent)`
+  - function `recordedEventId` — `function recordedEventId(value, pathName)`
+  - variable `eventId` — `eventId = value?.event?.eventId`
+  - function `resolveRecordedCandidateLineageV1` — `export function resolveRecordedCandidateLineageV1(snapshot, recordedCandidate, candidate, taskSpec)`
+  - variable `patchSha256` — `patchSha256 = digestText(candidate.patchContent)`
+  - variable `proposedEventId` — `proposedEventId = recordedEventId(recordedCandidate, 'proposal')`
+  - variable `materializedEventId` — `materializedEventId = recordedEventId(recordedCandidate.materialized, 'materialization')`
+  - variable `evaluationEventId` — `evaluationEventId = recordedEventId(recordedCandidate.evaluation, 'evaluation')`
+  - variable `proposal` — `proposal = (snapshot.candidateProposals || []).find(item => item.eventId === proposedEventId)`
+  - arrow-function `<anonymous@3436>` — `item => item.eventId === proposedEventId`
+  - variable `materialized` — `materialized = (snapshot.candidateMaterializations || []).find(item => item.eventId === materializedEventId)`
+  - arrow-function `<anonymous@3549>` — `item => item.eventId === materializedEventId`
+  - variable `evaluation` — `evaluation = (snapshot.oracleEvaluations || []).find(item => item.eventId === evaluationEventId)`
+  - arrow-function `<anonymous@3656>` — `item => item.eventId === evaluationEventId`
+  - variable `field` — `field`
+  - variable `field` — `field`
+  - function `runAdmittedProductTaskTerminalV1` — `export async function runAdmittedProductTaskTerminalV1(` — *Promote one candidate proposal through the original admitted product task. Missing/forged proposal evidence is a non-terminal unverified result. Once execution begins, failures are recorded by Reliabl*
+  - variable `before` — `before = runtime.snapshot()`
+  - variable `candidateError` — `candidateError = validCandidate(candidate, taskSpec)`
+  - variable `lineage` — `lineage`
+  - variable `error` — `error`
+  - variable `completed` — `completed = [...(before.events || [])].reverse().find(event => event.type === 'TaskCompleted')`
+  - arrow-function `<anonymous@7737>` — `event => event.type === 'TaskCompleted'`
+  - variable `error` — `error`
+  - variable `targetFiles` — `targetFiles = (Array.isArray(candidate.targetFiles) ? candidate.targetFiles : [])`
+  - arrow-function `<anonymous@9264>` — `file => typeof file === 'string' && file.trim()`
+  - variable `declaredTargetFiles` — `declaredTargetFiles = targetFiles.length`
+
+### Effect reservation — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Governed patch/app effect — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### EffectObserved / EffectInDoubt — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### External effect reconciliation — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Post-effect candidate-bound verification — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### completeCandidate transaction — MISSING / LAUNCH BLOCKER
+- **Files:** 1 (1 with symbols) · **Symbols:** 2326 · **Callable:** 655 · **Authored purpose:** 27
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### TaskCompleted event — MISSING / LAUNCH BLOCKER
+- **Files:** 1 (1 with symbols) · **Symbols:** 1971 · **Callable:** 586 · **Authored purpose:** 2
+- `scripts/event-kernel.mjs` (1971 symbols)
+  - variable `LOCK_STALE_MS` — `LOCK_STALE_MS = 30_000`
+  - variable `LOCK_RETRY_BASE_MS` — `LOCK_RETRY_BASE_MS = 5`
+  - variable `LOCK_RETRY_MAX_MS` — `LOCK_RETRY_MAX_MS = 25`
+  - function `graphControlCycleRoleSpecs` — `function graphControlCycleRoleSpecs()`
+  - variable `APPEND_CACHES` — `APPEND_CACHES = new Map()`
+  - variable `VERIFIED_TASK_REPLAYS` — `VERIFIED_TASK_REPLAYS = new WeakMap()`
+  - variable `VERIFIED_TASK_REPLAY_CACHES` — `VERIFIED_TASK_REPLAY_CACHES = new WeakMap()`
+  - variable `LOCALLY_VALIDATED_APPEND_HASHES` — `LOCALLY_VALIDATED_APPEND_HASHES = new WeakMap()`
+  - variable `FRESH_TASK_RUNTIME_REPLAY_HEADS` — `FRESH_TASK_RUNTIME_REPLAY_HEADS = new WeakMap()`
+  - variable `EVENT_KERNEL_CANDIDATE_WORKSPACE_STATES` — `EVENT_KERNEL_CANDIDATE_WORKSPACE_STATES = new WeakMap()`
+  - variable `SEMANTIC_ADMISSION_EVENT_VERIFICATIONS` — `SEMANTIC_ADMISSION_EVENT_VERIFICATIONS = new WeakMap()`
+  - variable `EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES` — `EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES = new WeakMap()`
+  - variable `MAX_SEMANTIC_ADMISSION_EVENT_VERIFICATIONS` — `MAX_SEMANTIC_ADMISSION_EVENT_VERIFICATIONS = 256`
+  - variable `CAUSAL_COGNITION_SITUATION_SOURCE_V1` — `CAUSAL_COGNITION_SITUATION_SOURCE_V1 = 'task-runtime-causal-cognition-situation-source-v1'`
+  - variable `CAUSAL_COGNITION_SITUATION_SOURCE_V2` — `CAUSAL_COGNITION_SITUATION_SOURCE_V2 = 'task-runtime-causal-cognition-situation-source-v2'`
+  - variable `CAUSAL_COGNITION_OPENED_KIND_V1` — `CAUSAL_COGNITION_OPENED_KIND_V1 = 'causal-cognition-deliberation-opened'`
+  - variable `CAUSAL_COGNITION_PREPARED_V1` — `CAUSAL_COGNITION_PREPARED_V1 = 'causal-cognition-prepared-deliberation-v1'`
+  - variable `CAUSAL_COGNITION_PREPARED_V2` — `CAUSAL_COGNITION_PREPARED_V2 = 'causal-cognition-prepared-deliberation-v2'`
+  - variable `CAUSAL_COGNITION_PREPARED_KIND_V1` — `CAUSAL_COGNITION_PREPARED_KIND_V1 = 'causal-cognition-deliberation-prepared'`
+  - function `eventKernelTaskEpochArtifactStore` — `function eventKernelTaskEpochArtifactStore(kernel)`
+  - variable `store` — `store = EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES.get(kernel)`
+  - function `emptyAppendCacheState` — `function emptyAppendCacheState()`
+  - function `replayIntegrityRoots` — `function replayIntegrityRoots(kernel)`
+  - variable `roots` — `roots = [`
+  - arrow-function `<anonymous@18141>` — `root => path.resolve(root)`
+  - function `captureReplayIntegrityManifest` — `function captureReplayIntegrityManifest(kernel)`
+  - variable `entries` — `entries = []`
+  - arrow-function `visit` — `target =>`
+  - variable `stat` — `stat = lstatSync(target)`
+  - variable `relative` — `relative = path.relative(kernel.artifactBaseDir, target)`
+  - variable `name` — `name`
+  - variable `root` — `root`
+  - function `replayIntegrityManifestMatches` — `function replayIntegrityManifestMatches(manifest)`
+  - variable `entry` — `entry`
+  - variable `stat` — `stat = lstatSync(entry.path)`
+  - variable `kind` — `kind = stat.isSymbolicLink()`
+  - variable `childNames` — `childNames = readdirSync(entry.path).sort()`
+  - variable `digest` — `digest = createHash('sha256').update(readFileSync(entry.path)).digest('hex')`
+  - function `verifiedTaskReplayCache` — `function verifiedTaskReplayCache(kernel)`
+  - variable `cache` — `cache = VERIFIED_TASK_REPLAY_CACHES.get(kernel)`
+  - … and 1931 more symbols
+
+### Product terminal bridge — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 38 · **Callable:** 15 · **Authored purpose:** 1
+- `scripts/product-task-terminal-bridge-v1.mjs` (38 symbols)
+  - function `digestText` — `function digestText(value)`
+  - function `unverified` — `function unverified(runtime, reason, extra =`
+  - function `targetFilesFromPatch` — `function targetFilesFromPatch(patchContent)`
+  - variable `targets` — `targets = []`
+  - variable `line` — `line`
+  - variable `match` — `match = line.match(/^diff --git a\/(.+) b\/(.+)$/)`
+  - variable `target` — `target = match[2]`
+  - function `taskSpecTargetFiles` — `function taskSpecTargetFiles(taskSpec)`
+  - arrow-function `<anonymous@1227>` — `item => typeof item === 'string' ? item : item?.path`
+  - arrow-function `<anonymous@1293>` — `item => typeof item === 'string' && item.trim()`
+  - function `validCandidate` — `function validCandidate(candidate, taskSpec)`
+  - variable `patchSha256` — `patchSha256 = digestText(candidate.patchContent)`
+  - function `recordedEventId` — `function recordedEventId(value, pathName)`
+  - variable `eventId` — `eventId = value?.event?.eventId`
+  - function `resolveRecordedCandidateLineageV1` — `export function resolveRecordedCandidateLineageV1(snapshot, recordedCandidate, candidate, taskSpec)`
+  - variable `patchSha256` — `patchSha256 = digestText(candidate.patchContent)`
+  - variable `proposedEventId` — `proposedEventId = recordedEventId(recordedCandidate, 'proposal')`
+  - variable `materializedEventId` — `materializedEventId = recordedEventId(recordedCandidate.materialized, 'materialization')`
+  - variable `evaluationEventId` — `evaluationEventId = recordedEventId(recordedCandidate.evaluation, 'evaluation')`
+  - variable `proposal` — `proposal = (snapshot.candidateProposals || []).find(item => item.eventId === proposedEventId)`
+  - arrow-function `<anonymous@3436>` — `item => item.eventId === proposedEventId`
+  - variable `materialized` — `materialized = (snapshot.candidateMaterializations || []).find(item => item.eventId === materializedEventId)`
+  - arrow-function `<anonymous@3549>` — `item => item.eventId === materializedEventId`
+  - variable `evaluation` — `evaluation = (snapshot.oracleEvaluations || []).find(item => item.eventId === evaluationEventId)`
+  - arrow-function `<anonymous@3656>` — `item => item.eventId === evaluationEventId`
+  - variable `field` — `field`
+  - variable `field` — `field`
+  - function `runAdmittedProductTaskTerminalV1` — `export async function runAdmittedProductTaskTerminalV1(` — *Promote one candidate proposal through the original admitted product task. Missing/forged proposal evidence is a non-terminal unverified result. Once execution begins, failures are recorded by Reliabl*
+  - variable `before` — `before = runtime.snapshot()`
+  - variable `candidateError` — `candidateError = validCandidate(candidate, taskSpec)`
+  - variable `lineage` — `lineage`
+  - variable `error` — `error`
+  - variable `completed` — `completed = [...(before.events || [])].reverse().find(event => event.type === 'TaskCompleted')`
+  - arrow-function `<anonymous@7737>` — `event => event.type === 'TaskCompleted'`
+  - variable `error` — `error`
+  - variable `targetFiles` — `targetFiles = (Array.isArray(candidate.targetFiles) ? candidate.targetFiles : [])`
+  - arrow-function `<anonymous@9264>` — `file => typeof file === 'string' && file.trim()`
+  - variable `declaredTargetFiles` — `declaredTargetFiles = targetFiles.length`
+
+## 10 · EPISODIC MEMORY, CLAIM MEMORY, PROCEDURAL LEARNING, COMPETENCE, AND PLASTICITY
+
+### EventKernel episodic history — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 1971 · **Callable:** 586 · **Authored purpose:** 2
+- `scripts/event-kernel.mjs` (1971 symbols)
+  - variable `LOCK_STALE_MS` — `LOCK_STALE_MS = 30_000`
+  - variable `LOCK_RETRY_BASE_MS` — `LOCK_RETRY_BASE_MS = 5`
+  - variable `LOCK_RETRY_MAX_MS` — `LOCK_RETRY_MAX_MS = 25`
+  - function `graphControlCycleRoleSpecs` — `function graphControlCycleRoleSpecs()`
+  - variable `APPEND_CACHES` — `APPEND_CACHES = new Map()`
+  - variable `VERIFIED_TASK_REPLAYS` — `VERIFIED_TASK_REPLAYS = new WeakMap()`
+  - variable `VERIFIED_TASK_REPLAY_CACHES` — `VERIFIED_TASK_REPLAY_CACHES = new WeakMap()`
+  - variable `LOCALLY_VALIDATED_APPEND_HASHES` — `LOCALLY_VALIDATED_APPEND_HASHES = new WeakMap()`
+  - variable `FRESH_TASK_RUNTIME_REPLAY_HEADS` — `FRESH_TASK_RUNTIME_REPLAY_HEADS = new WeakMap()`
+  - variable `EVENT_KERNEL_CANDIDATE_WORKSPACE_STATES` — `EVENT_KERNEL_CANDIDATE_WORKSPACE_STATES = new WeakMap()`
+  - variable `SEMANTIC_ADMISSION_EVENT_VERIFICATIONS` — `SEMANTIC_ADMISSION_EVENT_VERIFICATIONS = new WeakMap()`
+  - variable `EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES` — `EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES = new WeakMap()`
+  - variable `MAX_SEMANTIC_ADMISSION_EVENT_VERIFICATIONS` — `MAX_SEMANTIC_ADMISSION_EVENT_VERIFICATIONS = 256`
+  - variable `CAUSAL_COGNITION_SITUATION_SOURCE_V1` — `CAUSAL_COGNITION_SITUATION_SOURCE_V1 = 'task-runtime-causal-cognition-situation-source-v1'`
+  - variable `CAUSAL_COGNITION_SITUATION_SOURCE_V2` — `CAUSAL_COGNITION_SITUATION_SOURCE_V2 = 'task-runtime-causal-cognition-situation-source-v2'`
+  - variable `CAUSAL_COGNITION_OPENED_KIND_V1` — `CAUSAL_COGNITION_OPENED_KIND_V1 = 'causal-cognition-deliberation-opened'`
+  - variable `CAUSAL_COGNITION_PREPARED_V1` — `CAUSAL_COGNITION_PREPARED_V1 = 'causal-cognition-prepared-deliberation-v1'`
+  - variable `CAUSAL_COGNITION_PREPARED_V2` — `CAUSAL_COGNITION_PREPARED_V2 = 'causal-cognition-prepared-deliberation-v2'`
+  - variable `CAUSAL_COGNITION_PREPARED_KIND_V1` — `CAUSAL_COGNITION_PREPARED_KIND_V1 = 'causal-cognition-deliberation-prepared'`
+  - function `eventKernelTaskEpochArtifactStore` — `function eventKernelTaskEpochArtifactStore(kernel)`
+  - variable `store` — `store = EVENT_KERNEL_TASK_EPOCH_ARTIFACT_STORES.get(kernel)`
+  - function `emptyAppendCacheState` — `function emptyAppendCacheState()`
+  - function `replayIntegrityRoots` — `function replayIntegrityRoots(kernel)`
+  - variable `roots` — `roots = [`
+  - arrow-function `<anonymous@18141>` — `root => path.resolve(root)`
+  - function `captureReplayIntegrityManifest` — `function captureReplayIntegrityManifest(kernel)`
+  - variable `entries` — `entries = []`
+  - arrow-function `visit` — `target =>`
+  - variable `stat` — `stat = lstatSync(target)`
+  - variable `relative` — `relative = path.relative(kernel.artifactBaseDir, target)`
+  - variable `name` — `name`
+  - variable `root` — `root`
+  - function `replayIntegrityManifestMatches` — `function replayIntegrityManifestMatches(manifest)`
+  - variable `entry` — `entry`
+  - variable `stat` — `stat = lstatSync(entry.path)`
+  - variable `kind` — `kind = stat.isSymbolicLink()`
+  - variable `childNames` — `childNames = readdirSync(entry.path).sort()`
+  - variable `digest` — `digest = createHash('sha256').update(readFileSync(entry.path)).digest('hex')`
+  - function `verifiedTaskReplayCache` — `function verifiedTaskReplayCache(kernel)`
+  - variable `cache` — `cache = VERIFIED_TASK_REPLAY_CACHES.get(kernel)`
+  - … and 1931 more symbols
+
+### Governed memory store — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 592 · **Callable:** 210 · **Authored purpose:** 29
+- `scripts/governed-memory.mjs` (592 symbols)
+  - variable `GOVERNED_MEMORY_VERSION` — `GOVERNED_MEMORY_VERSION = '2.0.0'`
+  - variable `LEGACY_GOVERNED_MEMORY_VERSION` — `LEGACY_GOVERNED_MEMORY_VERSION = '1.0.0'`
+  - variable `GOVERNED_MEMORY_DELETION_VERSION` — `GOVERNED_MEMORY_DELETION_VERSION = '2.0.0'`
+  - variable `GOVERNED_MEMORY_CANONICALIZE_EVENT_VERSION` — `GOVERNED_MEMORY_CANONICALIZE_EVENT_VERSION = '1.0.0'`
+  - variable `GOVERNED_MEMORY_VERIFICATION_EVENT_VERSION` — `GOVERNED_MEMORY_VERIFICATION_EVENT_VERSION = '1.0.0'`
+  - variable `SCOPES` — `SCOPES = new Set(['core', 'episodic', 'semantic', 'archival', 'operational', 'decision', 'general'])`
+  - variable `GENERAL_TURN_MEMORY_SCOPE` — `GENERAL_TURN_MEMORY_SCOPE = 'general'`
+  - variable `MEMORY_FORMS` — `MEMORY_FORMS = new Set(['source', 'summary', 'derived'])`
+  - variable `OWNER_TYPES` — `OWNER_TYPES = new Set(['user', 'agent', 'system', 'tool'])`
+  - variable `PROVENANCE_SOURCES` — `PROVENANCE_SOURCES = new Set(['user', 'agent', 'tool', 'evidence', 'system', 'import'])`
+  - variable `STATUSES` — `STATUSES = new Set(['active', 'superseded', 'quarantined'])`
+  - variable `CLASSIFICATIONS` — `CLASSIFICATIONS = new Set(DATA_CLASSIFICATIONS)`
+  - variable `DELETION_POLICIES` — `DELETION_POLICIES = new Set(['owner-or-operator', 'operator-only', 'expiry-only'])`
+  - variable `DELETION_CAUSES` — `DELETION_CAUSES = new Set(['owner', 'operator', 'expiry'])`
+  - variable `DELETION_BINDINGS` — `DELETION_BINDINGS = new Set(['record-sha256', 'legacy-unbound'])`
+  - variable `CANONICALIZE_SKIP_REASONS` — `CANONICALIZE_SKIP_REASONS = new Set([`
+  - variable `CLASSIFICATION_RANK` — `CLASSIFICATION_RANK = new Map(`
+  - arrow-function `<anonymous@9753>` — `(classification, index) => [classification, index]`
+  - variable `TTL_REQUIRED_SCOPES` — `TTL_REQUIRED_SCOPES = new Set(['episodic', 'semantic', 'operational', 'general'])`
+  - variable `PROVENANCE_WEIGHT` — `PROVENANCE_WEIGHT =`
+  - variable `RECALL_TRUSTED_PROVENANCE_SOURCES` — `RECALL_TRUSTED_PROVENANCE_SOURCES = new Set(['user', 'agent'])`
+  - function `isRecallTrustedOrigin` — `export function isRecallTrustedOrigin(record)` — *True iff a record's provenance is eligible to be recalled into generation (C4).*
+  - variable `RECALL_TRUST_TIERS` — `RECALL_TRUST_TIERS = Object.freeze(`
+  - function `recallTrustTier` — `export function recallTrustTier(record,`
+  - variable `source` — `source = record?.provenance?.source`
+  - variable `ids` — `ids = record?.provenance?.evidenceArtifactIds || []`
+  - variable `id` — `id`
+  - variable `artifact` — `artifact`
+  - function `isRecallEligible` — `export function isRecallEligible(record, options =` — *True iff a record may be recalled into generation under the three-tier rule.*
+  - class `GovernedMemoryError` — `export class GovernedMemoryError extends Error`
+  - constructor `constructor` — `constructor(message, path = 'memory')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `nonEmptyString` — `function nonEmptyString(value, pathName)`
+  - function `optionalString` — `function optionalString(value, pathName)`
+  - … and 552 more symbols
+
+### Agent advisory memory — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 121 · **Callable:** 44 · **Authored purpose:** 4
+- `scripts/agent-memory.mjs` (121 symbols)
+  - function `tokenize` — `function tokenize(text)`
+  - arrow-function `<anonymous@1442>` — `w => w.length > 2`
+  - function `bm25Score` — `function bm25Score(queryTokens, docTokens, k1 = 1.5, b = 0.75)`
+  - variable `docLen` — `docLen = docTokens.length`
+  - variable `avgDocLen` — `avgDocLen = docLen`
+  - variable `docFreq` — `docFreq =`
+  - variable `t` — `t`
+  - variable `score` — `score = 0`
+  - variable `qt` — `qt`
+  - variable `freq` — `freq = docFreq[qt] || 0`
+  - variable `idf` — `idf = Math.log(1 + (1 / (freq + 0.5)))`
+  - function `extractEntities` — `function extractEntities(text)`
+  - variable `entities` — `entities = []`
+  - variable `quoted` — `quoted = text.match(/"([^"]+)"/g)`
+  - arrow-function `<anonymous@2243>` — `q => q.slice(1, -1)`
+  - variable `identifiers` — `identifiers = text.match(/\b[A-Z][a-z]+[A-Z][A-Za-z]*\b/g)`
+  - variable `paths` — `paths = text.match(/\b[a-zA-Z0-9_-]+\.[a-zA-Z]`
+  - variable `keyTerms` — `keyTerms = text.match(/\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)*\b/g)`
+  - class `AgentMemory` — `class AgentMemory`
+  - constructor `constructor` — `constructor(`
+  - method `load` — `load()`
+  - variable `data` — `data = JSON.parse(readFileSync(this.entityFile, 'utf8'))`
+  - method `scheduleSave` — `scheduleSave()`
+  - arrow-function `<anonymous@3927>` — `() =>`
+  - arrow-function `<anonymous@3973>` — `fs =>`
+  - arrow-function `<anonymous@4064>` — `() =>`
+  - arrow-function `<anonymous@4178>` — `() =>`
+  - method `save` — `save()`
+  - method `flush` — `flush()` — *Flush memories to disk synchronously (for tests and shutdown).*
+  - method `_embedOrNull` — `async _embedOrNull(text, site)`
+  - variable `error` — `error`
+  - method `add` — `async add(content, metadata =`
+  - variable `memory` — `memory =`
+  - variable `entity` — `entity`
+  - variable `removed` — `removed = this.memories.shift()`
+  - variable `entity` — `entity`
+  - variable `refs` — `refs = this.entities.get(entity)`
+  - variable `filtered` — `filtered = refs.filter(id => id !== removed.id)`
+  - arrow-function `<anonymous@6986>` — `id => id !== removed.id`
+  - method `search` — `async search(query,`
+  - … and 81 more symbols
+
+### Project intent store — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 169 · **Callable:** 55 · **Authored purpose:** 3
+- `scripts/project-intent-store.mjs` (169 symbols)
+  - variable `PROJECT_INTENT_STORE_VERSION` — `PROJECT_INTENT_STORE_VERSION = '1.0.0'`
+  - variable `SAFE_SEGMENT_PATTERN` — `SAFE_SEGMENT_PATTERN = /^[A-Za-z0-9_.-]+$/`
+  - variable `MAX_FEATURE_RELATED_PATHS` — `MAX_FEATURE_RELATED_PATHS = 100`
+  - variable `PATH_INTENT_KINDS` — `PATH_INTENT_KINDS = new Set(['folder-intent', 'file-intent'])`
+  - variable `SHA256_PATTERN` — `SHA256_PATTERN = /^[a-f0-9]`
+  - variable `OPERATOR_RESOLUTIONS` — `OPERATOR_RESOLUTIONS = new Set(['timeout-default', 'human-answer', 'analyser-fork'])`
+  - variable `AMENDMENT_ID_PATTERN` — `AMENDMENT_ID_PATTERN = /^amend-\d`
+  - variable `AMENDMENT_FILE_PATTERN` — `AMENDMENT_FILE_PATTERN = /^amendment-(\d`
+  - class `ProjectIntentStoreError` — `export class ProjectIntentStoreError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'projectIntentStore')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `isPlainObject` — `function isPlainObject(value)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName)`
+  - function `optionalString` — `function optionalString(value, pathName)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `sha256Hex` — `function sha256Hex(value, pathName)`
+  - variable `result` — `result = string(value, pathName).toLowerCase()`
+  - function `safeSegment` — `function safeSegment(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - arrow-function `<anonymous@3333>` — `(item, index) => string(item, `$`
+  - function `readJsonFile` — `function readJsonFile(filePath)`
+  - function `writeJsonFile` — `function writeJsonFile(filePath, value)`
+  - function `resolveIntentPaths` — `function resolveIntentPaths(projectSlug, opts =`
+  - variable `slug` — `slug = ensureProject(projectSlug).slug`
+  - variable `projectRoot` — `projectRoot = opts.baseDir || getProjectDir(slug)`
+  - variable `intentRoot` — `intentRoot = path.join(projectRoot, 'intent')`
+  - function `relativeScopePath` — `function relativeScopePath(value, pathName)`
+  - variable `result` — `result = string(value, pathName).replace(/\\/g, '/').replace(/^\.\//, '').replace(/\/+$/, '')`
+  - variable `segments` — `segments = result.split('/')`
+  - variable `segment` — `segment`
+  - function `encodeScopePath` — `function encodeScopePath(relPath)`
+  - function `validateProjectIntent` — `function validateProjectIntent(record, pathName = 'projectIntentStore.projectIntent')`
+  - variable `projectSlug` — `projectSlug = safeSegment(record.projectSlug, `$`
+  - … and 129 more symbols
+
+### Semantic cache — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 28 · **Callable:** 9 · **Authored purpose:** 0
+- `scripts/semantic-cache.mjs` (28 symbols)
+  - variable `SIMILARITY_THRESHOLD` — `SIMILARITY_THRESHOLD = 0.92`
+  - class `SemanticCache` — `class SemanticCache`
+  - constructor `constructor` — `constructor(`
+  - variable `ensured` — `ensured = ensureProject(projectSlug || detectProject().slug)`
+  - method `_exactKey` — `_exactKey(prompt, model)`
+  - method `_embedOrNull` — `async _embedOrNull(text)`
+  - variable `error` — `error`
+  - method `load` — `load()`
+  - variable `data` — `data = JSON.parse(readFileSync(this.filePath, 'utf8'))`
+  - method `save` — `save()`
+  - variable `data` — `data =`
+  - method `get` — `async get(prompt, model)`
+  - variable `key` — `key = this._exactKey(prompt, model)`
+  - variable `entry` — `entry = this.exact.get(key)`
+  - variable `emb` — `emb = await this._embedOrNull(prompt)`
+  - variable `<anonymous@3690>` — `[cachedPrompt, cachedKey]`
+  - variable `cachedEmb` — `cachedEmb = JSON.parse(cachedPrompt)`
+  - variable `entry` — `entry = this.exact.get(cachedKey)`
+  - method `set` — `async set(prompt, model, response)`
+  - variable `key` — `key = this._exactKey(prompt, model)`
+  - variable `emb` — `emb = await this._embedOrNull(prompt)`
+  - method `hitRate` — `hitRate()`
+  - variable `total` — `total = this.hits + this.misses`
+  - method `stats` — `stats()`
+  - variable `cache` — `cache = new SemanticCache()`
+  - variable `emb1` — `emb1 = await embed('Write a function to sort an array')`
+  - variable `emb2` — `emb2 = await embed('Write a function to sort a list')`
+  - variable `emb3` — `emb3 = await embed('Create a database migration for users table')`
+
+### Research memory — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 93 · **Callable:** 31 · **Authored purpose:** 1
+- `scripts/deep-research/research-context-mount.mjs` (93 symbols)
+  - variable `RESEARCH_CONTEXT_MOUNT_VERSION` — `RESEARCH_CONTEXT_MOUNT_VERSION = '1.0.0'`
+  - variable `RESEARCH_CONTEXT_MODEL_ID` — `RESEARCH_CONTEXT_MODEL_ID = 'qwen3.5-9b'`
+  - variable `RESEARCH_CONTEXT_PARALLEL_DEFAULT` — `RESEARCH_CONTEXT_PARALLEL_DEFAULT = 3`
+  - variable `PACKET_SLOT_SHARE` — `PACKET_SLOT_SHARE = 0.8`
+  - variable `PACKET_CHARS_PER_TOKEN` — `PACKET_CHARS_PER_TOKEN = 3.8`
+  - function `deriveResearchContextBudgets` — `export function deriveResearchContextBudgets(` — *Derive every char budget from the per-slot token cap of the deployed model instead of asserting them independently (the old hardcoded 12,000-char packet was never derived from the 9B slot cap — pipeli*
+  - variable `slotTokenCap` — `slotTokenCap = resolveSlotTokenCap(`
+  - variable `packetTokenBudget` — `packetTokenBudget = Math.floor(slotTokenCap * PACKET_SLOT_SHARE)`
+  - variable `rolePromptMaxChars` — `rolePromptMaxChars = Math.floor(packetTokenBudget * PACKET_CHARS_PER_TOKEN)`
+  - arrow-function `share` — `fraction => Math.floor(rolePromptMaxChars * fraction)`
+  - variable `RESEARCH_CONTEXT_BUDGETS` — `RESEARCH_CONTEXT_BUDGETS = Object.freeze(deriveResearchContextBudgets())`
+  - function `sha256Json` — `function sha256Json(value)`
+  - function `sha256Text` — `function sha256Text(value)`
+  - function `readJsonRef` — `function readJsonRef(filePath, digestKey)`
+  - variable `raw` — `raw = readFileSync(filePath, 'utf8')`
+  - variable `parsed` — `parsed = JSON.parse(raw)`
+  - function `normalizeExplicitCodebaseRefs` — `function normalizeExplicitCodebaseRefs(refs =`
+  - variable `normalized` — `normalized =`
+  - variable `<anonymous@4169>` — `[key, value]`
+  - function `resolveCodebaseMapRefs` — `export function resolveCodebaseMapRefs(`
+  - variable `projectDir` — `projectDir = repoContext.projectDir || getProjectDir(projectSlug)`
+  - variable `refs` — `refs =`
+  - arrow-function `<anonymous@5915>` — `([, value]) => value`
+  - function `buildMountedContextSufficiency` — `export function buildMountedContextSufficiency(codebaseRefs =`
+  - variable `refs` — `refs = codebaseRefs && typeof codebaseRefs === 'object' ? codebaseRefs :`
+  - variable `refKeys` — `refKeys = Object.keys(refs)`
+  - variable `incompleteReasons` — `incompleteReasons = []`
+  - variable `contextMap` — `contextMap = refs.contextMap || null`
+  - variable `shardIndex` — `shardIndex = refs.codebaseShardIndex || null`
+  - variable `symbolCallGraph` — `symbolCallGraph = refs.symbolCallGraph || null`
+  - variable `memoryGraph` — `memoryGraph = refs.memoryGraph || null`
+  - variable `refreshStatus` — `refreshStatus = refs.contextRefreshStatus || null`
+  - function `queryResearchMemoryHints` — `export function queryResearchMemoryHints(memoryStore, query, requestContext =`
+  - variable `prior` — `prior = memoryStore.search(query,`
+  - variable `researchExemplars` — `researchExemplars = prior.usable`
+  - arrow-function `<anonymous@8441>` — `record => /research-exemplar|deep-research plan|query batch/i.test(record.content)`
+  - arrow-function `<anonymous@8537>` — `record => !/\ballow\s*\(\)|must prune expired|requires-unsatisfied/i.test(record.content)`
+  - arrow-function `<anonymous@8687>` — `record => (`
+  - variable `queryTemplates` — `queryTemplates = researchExemplars`
+  - arrow-function `<anonymous@8856>` — `ex =>`
+  - … and 53 more symbols
+
+### Vector memory store — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 110 · **Callable:** 39 · **Authored purpose:** 9
+- `scripts/memory-vector-index.mjs` (110 symbols)
+  - variable `VECTOR_INDEX_FILENAME` — `VECTOR_INDEX_FILENAME = 'memory-vector-index.jsonl'`
+  - variable `VECTOR_INDEX_LEDGER_FILENAME` — `VECTOR_INDEX_LEDGER_FILENAME = 'memory-vector-index.ledger.jsonl'`
+  - variable `VECTOR_INDEX_MANIFEST_FILENAME` — `VECTOR_INDEX_MANIFEST_FILENAME = 'memory-vector-index.manifest.json'`
+  - function `vectorIndexFilePath` — `export function vectorIndexFilePath(baseDir)`
+  - function `vectorIndexLedgerFilePath` — `export function vectorIndexLedgerFilePath(baseDir)`
+  - function `vectorIndexManifestFilePath` — `export function vectorIndexManifestFilePath(baseDir)`
+  - function `getEmbedderIdentity` — `export function getEmbedderIdentity()` — *The CURRENT embedder identity, declared (not probed live) from qwen3-embedding.mjs's own exported constants — EMBEDDING_MODEL is env-overridable (QWEN3_EMBEDDING_MODEL) so a model swap is picked up on*
+  - function `resolveEmbedderIdentity` — `export async function resolveEmbedderIdentity(` — *The DECLARED identity above, plus the OBSERVED one — the model the server says it is actually serving (probeServedModel; null when the server is unreachable or answers unexpectedly). The declared leg *
+  - variable `declared` — `declared = getEmbedderIdentity()`
+  - variable `servedModel` — `servedModel = await probe().catch(() => null)`
+  - arrow-function `<anonymous@5094>` — `() => null`
+  - function `textVectorKey` — `export function textVectorKey(text)` — *A namespaced index key for an arbitrary TEXT (as opposed to a record's content, which is keyed by its memoryId). Used for claimText / harvested claim lines — text that belongs to no single record's id*
+  - function `identityMatches` — `function identityMatches(entry, identity)`
+  - variable `LOCK_RETRY_DELAY_MS` — `LOCK_RETRY_DELAY_MS = 5`
+  - variable `LOCK_MAX_WAIT_MS` — `LOCK_MAX_WAIT_MS = 5000`
+  - variable `LOCK_STALE_MS` — `LOCK_STALE_MS = 30_000`
+  - function `lockFilePath` — `function lockFilePath(baseDir)`
+  - function `acquireLock` — `function acquireLock(baseDir)`
+  - variable `lock` — `lock = lockFilePath(baseDir)`
+  - variable `deadline` — `deadline = Date.now() + LOCK_MAX_WAIT_MS`
+  - variable `error` — `error`
+  - variable `age` — `age = Date.now() - statSync(lock).mtimeMs`
+  - variable `spinUntil` — `spinUntil = Date.now() + LOCK_RETRY_DELAY_MS`
+  - function `releaseLock` — `function releaseLock(fd, baseDir)`
+  - function `readVectorIndex` — `export function readVectorIndex(baseDir,` — *Read the sidecar index. Returns: vectors Map<memoryId, Float64Array> — VALID entries only (identity-matched; last line wins per memoryId, so a re-index of the same id supersedes cleanly). skippedLines*
+  - variable `filePath` — `filePath = vectorIndexFilePath(baseDir)`
+  - variable `vectors` — `vectors = new Map()`
+  - variable `skippedLines` — `skippedLines = []`
+  - variable `staleIdentityCount` — `staleIdentityCount = 0`
+  - variable `totalEntries` — `totalEntries = 0`
+  - variable `lines` — `lines = readFileSync(filePath, 'utf8').split('\n')`
+  - variable `i` — `i = 0`
+  - variable `line` — `line = lines[i]`
+  - variable `locator` — `locator = `$`
+  - variable `parsed` — `parsed`
+  - function `writeVectorEntries` — `export function writeVectorEntries(baseDir, entries)` — *Append pre-built entries (`{memoryId, vector, model, dimension, indexedAt}`) under the lock.*
+  - variable `fd` — `fd = acquireLock(baseDir)`
+  - variable `body` — `body = entries.map(entry => JSON.stringify(entry)).join('\n') + '\n'`
+  - arrow-function `<anonymous@10732>` — `entry => JSON.stringify(entry)`
+  - function `appendLedgerFailure` — `export function appendLedgerFailure(baseDir, memoryId, reason)` — *Best-effort ledger append — records WHY a record is missing from the index (law 5: "every fail-safe must say why it fired"). Deliberately swallows its OWN errors: this is called from inside an already*
+  - … and 70 more symbols
+
+### Letta archival memory — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 38 · **Callable:** 23 · **Authored purpose:** 6
+- `scripts/letta-kernel.mjs` (38 symbols)
+  - class `LettaKernel` — `export class LettaKernel` — *Agentic OS - Letta Kernel (Memory Manager) Acts as the OS memory manager for the agent context. Exposes page_in and page_out methods for moving context blocks between an SQLite "Archival Memory" DB an*
+  - constructor `constructor` — `constructor(options =`
+  - method `_acquireLock` — `_acquireLock()`
+  - variable `release` — `release`
+  - variable `prev` — `prev = this._lock`
+  - arrow-function `<anonymous@1160>` — `resolve =>`
+  - arrow-function `<anonymous@1217>` — `() => release`
+  - method `init` — `async init()`
+  - arrow-function `<anonymous@1330>` — `async () =>`
+  - variable `dir` — `dir = path.dirname(this.dbPath)`
+  - method `getCoreMemoryBytes` — `getCoreMemoryBytes()`
+  - arrow-function `<anonymous@2385>` — `(acc, b) => acc + Buffer.byteLength(b.content, 'utf8')`
+  - method `enforceLimits` — `async enforceLimits()`
+  - arrow-function `<anonymous@2779>` — `(a, b) => new Date(a.last_accessed || 0) - new Date(b.last_accessed || 0)`
+  - variable `lru` — `lru = this.coreMemory.shift()`
+  - method `_runWithRetry` — `async _runWithRetry(sql, params, maxRetries = 3)`
+  - variable `attempt` — `attempt = 1`
+  - variable `err` — `err`
+  - variable `delay` — `delay = Math.pow(2, attempt) * 10`
+  - arrow-function `<anonymous@3349>` — `r => setTimeout(r, delay)`
+  - method `page_out_silent` — `async page_out_silent(blockId, content)`
+  - method `page_in` — `async page_in(blockId)` — *Pages in a block from Archival Memory to Core Memory. If Core Memory is full, evicts the oldest block.*
+  - variable `release` — `release = await this._acquireLock()`
+  - variable `existing` — `existing = this.coreMemory.find(b => b.id === blockId)`
+  - arrow-function `<anonymous@4325>` — `b => b.id === blockId`
+  - variable `row` — `row = await this.db.get('SELECT * FROM archival_blocks WHERE id = ?', [blockId])`
+  - method `page_out` — `async page_out(blockId, content)` — *Pages out a block from Core Memory to Archival Memory. Removes it from the Core Memory array to free up space.*
+  - variable `release` — `release = await this._acquireLock()`
+  - arrow-function `<anonymous@5714>` — `b => b.id !== blockId`
+  - method `write_core` — `async write_core(blockId, content)` — *Writes a new block directly to core memory. Pages out the oldest block if core memory is full.*
+  - variable `release` — `release = await this._acquireLock()`
+  - variable `existingIndex` — `existingIndex = this.coreMemory.findIndex(b => b.id === blockId)`
+  - arrow-function `<anonymous@6136>` — `b => b.id === blockId`
+  - method `read_core` — `async read_core(blockId)` — *Read a block from Core Memory by ID.*
+  - variable `block` — `block = this.coreMemory.find(b => b.id === blockId)`
+  - arrow-function `<anonymous@6573>` — `b => b.id === blockId`
+  - method `get_core_context` — `get_core_context()` — *Returns all content currently in Core Memory, formatted for context injection.*
+  - arrow-function `<anonymous@6793>` — `b => `Block [$`
+
+### Recall, anchor, budget and signals — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 265 · **Callable:** 73 · **Authored purpose:** 36
+- `scripts/memory-intent-anchor.mjs` (142 symbols)
+  - variable `MEMORY_INTENT_ANCHOR_VERSION` — `MEMORY_INTENT_ANCHOR_VERSION = '1.1.0'`
+  - variable `ANCHOR_TIERS` — `ANCHOR_TIERS = Object.freeze(['repo', 'subsystem', 'intent', 'symbol'])`
+  - variable `ANCHOR_TAG_RE` — `ANCHOR_TAG_RE = /^anchor:(repo|subsystem|intent|symbol):(.+)$/`
+  - variable `ANCHOR_TIER_WEIGHT` — `ANCHOR_TIER_WEIGHT = Object.freeze(`
+  - variable `ANCHOR_FINGERPRINT_ALGO` — `ANCHOR_FINGERPRINT_ALGO = 'fp1'`
+  - variable `ANCHOR_FINGERPRINT_HEX_LEN` — `ANCHOR_FINGERPRINT_HEX_LEN = 16`
+  - variable `ANCHOR_FINGERPRINT_RE` — `ANCHOR_FINGERPRINT_RE = new RegExp(`^($`
+  - variable `ANCHOR_MAX_SYMBOL_TAGS` — `ANCHOR_MAX_SYMBOL_TAGS = 8`
+  - variable `INTENT_CLASS_VALUES` — `INTENT_CLASS_VALUES = Object.freeze(['bugfix', 'research', 'build'])`
+  - function `intentAnchorArmed` — `export function intentAnchorArmed(env = process.env)`
+  - function `anchorTag` — `export function anchorTag(tier, value, fingerprint)` — *`fingerprint` is OPTIONAL and only meaningful on the symbol tier. Passing a malformed fingerprint is not silently accepted (it would produce a tag that parses back with the fingerprint folded into the*
+  - function `parseAnchorTag` — `export function parseAnchorTag(tag)` — *Returns `{ tier, value }` for a v1.0.0 tag — byte-identical shape, NO `fingerprint` key — and `{ tier, value, fingerprint }` only when a strict `#fp1:<hex>` suffix is present. An absent fingerprint is*
+  - variable `m` — `m = ANCHOR_TAG_RE.exec(tag)`
+  - variable `tier` — `tier = m[1]`
+  - variable `raw` — `raw = m[2]`
+  - variable `hash` — `hash = raw.lastIndexOf('#')`
+  - variable `suffix` — `suffix = raw.slice(hash + 1)`
+  - function `symbolFingerprint` — `export function symbolFingerprint(content)` — *Deterministic content fingerprint (mex's `mh:64:...` shape, our algorithm id). Pure — no filesystem access, the caller supplies the bytes, so this is testable and hermetic. Returns null for absent con*
+  - variable `buf` — `buf = Buffer.isBuffer(content) ? content : Buffer.from(String(content), 'utf8')`
+  - function `classifyIntentClass` — `export function classifyIntentClass(goalText)` — *Deterministic goal-text -> intent-class classifier. Reuses intent-compiler's OWN exported regexes rather than inventing a parallel vocabulary (steal, don't rebuild — see file header). Returns null (ne*
+  - variable `text` — `text = String(goalText || '')`
+  - function `deriveFeatureId` — `export function deriveFeatureId(goal)` — *Deterministic goal -> subsystem slug, for when no intent compiler resolved a featureId (unseeded repo). MOVED VERBATIM out of chat-turn-runner.mjs (where it was module-private, so the frontier spine c*
+  - variable `words` — `words = String(goal || '')`
+  - arrow-function `<anonymous@12936>` — `w => w.length >= 4`
+  - variable `ABSOLUTE_ANCHOR_PATH_RE` — `ABSOLUTE_ANCHOR_PATH_RE = /^(?:\/|[A-Za-z]:[\\/])/`
+  - function `normalizeAnchorPath` — `export function normalizeAnchorPath(value, repoRoot = null)` — *Pure, NO-I/O path normalizer shared by both sides (never `path.resolve`, never `realpath` — a memory read must not touch the filesystem). Backslashes to slashes, collapse duplicate separators, strip `*
+  - variable `raw` — `raw = typeof value === 'string'`
+  - variable `s` — `s = raw.trim()`
+  - variable `root` — `root = repoRoot.trim().replace(/\\/g, '/').replace(/\/`
+  - function `isUncomparableAnchorPath` — `export function isUncomparableAnchorPath(normalized)` — *True when a normalized path is still absolute — i.e. it could not be compared against a repo-relative anchor tag. Exported so a caller can assert the fail-closed branch rather than infer it.*
+  - function `deriveAnchorFacets` — `export function deriveAnchorFacets(` — *Derive this turn's anchor facets. Every input is OPTIONAL; an absent input omits that tier and names why in `skipped` (law 5) — never a fabricated tier. `featureId` is taken as given (the caller alrea*
+  - variable `skipped` — `skipped = []`
+  - variable `repo` — `repo = (typeof projectSlug === 'string' && projectSlug.trim()) ? projectSlug.trim() : null`
+  - variable `subsystem` — `subsystem = (typeof featureId === 'string' && featureId.trim()) ? featureId.trim() : null`
+  - variable `intentClass` — `intentClass = classifyIntentClass(goal)`
+  - variable `normalized` — `normalized = []`
+  - variable `uncomparable` — `uncomparable = 0`
+  - variable `entry` — `entry`
+  - variable `norm` — `norm = normalizeAnchorPath(entry, repoRoot)`
+  - variable `symbols` — `symbols = [...new Set(normalized)]`
+  - … and 102 more symbols
+- `scripts/memory-recall-signals.mjs` (111 symbols)
+  - variable `RECALL_SIGNALS_VERSION` — `RECALL_SIGNALS_VERSION = 1`
+  - class `RecallSignalsError` — `export class RecallSignalsError extends Error` — *Thrown for every invariant violation in this module. Never caught internally.*
+  - constructor `constructor` — `constructor(message)`
+  - variable `ON` — `ON = '1'`
+  - function `recallSignalsArmed` — `export function recallSignalsArmed(env = process.env)` — *ARC_MEMORY_RECALL_SIGNALS — registry-only, gate 'eq1', DEFAULT OFF. Pure over `env` so tests and instruments inject a fake environment instead of mutating process.env (the lever-leak class Law 5b's co*
+  - variable `LANES` — `LANES = Object.freeze(`
+  - variable `LANE_ORDER` — `LANE_ORDER = Object.freeze(Object.keys(LANES))`
+  - function `laneRegistry` — `export function laneRegistry()` — *The registry itself, exported read-only so tests and receipts can cite the derivations.*
+  - function `laneRan` — `export function laneRan(score)` — *The lane RAN and produced `score`. `score` MUST be a finite number; 0 is legal and means "ran, scored nothing" — the exact case that must never read as null. A null/undefined/NaN/string score throws: *
+  - function `laneNotRun` — `export function laneNotRun(reason)` — *The lane DID NOT RUN. `reason` MUST be a non-empty string and is the whole point: Law 5 says every fail-safe must say why it fired. Conventional reasons (free-form, but keep them greppable): 'lever-of*
+  - function `describeValue` — `function describeValue(value)`
+  - function `assertObservation` — `function assertObservation(observation, where)`
+  - variable `<anonymous@16550>`
+  - function `assertSignalDiscipline` — `export function assertSignalDiscipline(doc, where = 'recallSignals')` — *Assert the null-vs-0 discipline across a whole document. Exported so callers, receipts and the test suite check the invariant with ONE implementation rather than re-deriving it (and drifting). Throws *
+  - variable `<anonymous@17912>` — `[lane, observation]`
+  - variable `hit` — `hit`
+  - variable `lane` — `lane`
+  - function `buildHitSignals` — `export function buildHitSignals(` — *Build ONE hit's signal struct. Every lane in LANE_ORDER must be present; an absent lane throws (a lane cannot go dark by omission) and an unknown lane throws (a typo'd lane cannot vanish into an ignor*
+  - variable `lane` — `lane`
+  - variable `out` — `out =`
+  - variable `lane` — `lane`
+  - function `buildQuerySignals` — `export function buildQuerySignals(` — *Build the QUERY-LEVEL lane declaration: for the query as a whole, did each lane run at all? This is the half their design does not have, and it is the half that makes an EMPTY recall diagnosable — wit*
+  - variable `out` — `out =`
+  - variable `lane` — `lane`
+  - function `intOrNull` — `function intOrNull(value)`
+  - function `clamp01` — `function clamp01(value)`
+  - function `normalizeLaneScores` — `export function normalizeLaneScores(hits)` — *Normalise every lane's raw score into [0,1] ACROSS THE GIVEN HIT SET. Relative lanes (bm25, dense, intentAnchor) divide by the maximum positive raw score present, because their absolute scale is corpu*
+  - variable `maxima` — `maxima = new Map()`
+  - variable `lane` — `lane`
+  - variable `max` — `max = 0`
+  - variable `hit` — `hit`
+  - variable `observation` — `observation = hit.lanes[lane]`
+  - variable `out` — `out = new Map()`
+  - variable `hit` — `hit`
+  - variable `inner` — `inner = new Map()`
+  - variable `lane` — `lane`
+  - variable `observation` — `observation = hit.lanes[lane]`
+  - variable `spec` — `spec = LANES[lane].normalize`
+  - variable `value` — `value`
+  - variable `span` — `span = spec.hi - spec.lo`
+  - … and 71 more symbols
+- `scripts/memory-retrieval-budget.mjs` (12 symbols)
+  - variable `DEFAULT_RETRIEVAL_BUDGET_TOKENS` — `DEFAULT_RETRIEVAL_BUDGET_TOKENS = 8000`
+  - function `budgetedTopN` — `export function budgetedTopN(orderedCandidates,` — *How many of `orderedCandidates` (already ranked by the CALLER — this function has no ranking opinion of its own) fit within `tokenBudget`, greedily in the given order. Returns the COUNT N such that `o*
+  - arrow-function `<anonymous@2764>` — `(candidate) => String(candidate?.content ?? '')`
+  - variable `list` — `list = Array.isArray(orderedCandidates) ? orderedCandidates : []`
+  - variable `remaining` — `remaining = Math.max(0, tokenBudget - Math.max(0, alreadyUsedTokens))`
+  - variable `used` — `used = 0`
+  - variable `count` — `count = 0`
+  - variable `candidate` — `candidate`
+  - variable `tokens` — `tokens = countTokensSync(textOf(candidate)).tokens`
+  - function `sumTokens` — `export function sumTokens(texts)` — *Sum of countTokensSync token counts for a list of texts — used by callers to compute `alreadyUsedTokens` from the OTHER memSpans sources sharing the same overall budget.*
+  - variable `total` — `total = 0`
+  - variable `text` — `text`
+
+### Harvest, surprise and utility events — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 201 · **Callable:** 62 · **Authored purpose:** 28
+- `scripts/memory-harvest-producer.mjs` (70 symbols)
+  - variable `RECALL_EVENTS_FILENAME` — `RECALL_EVENTS_FILENAME = 'memory-harvest-recall-events.jsonl'`
+  - function `claimHarvestArmed` — `export function claimHarvestArmed(env = process.env)` — *The lever. One gate for the whole loop (producer + the read side in governed-memory.mjs).*
+  - variable `HARVEST_ATTRIBUTION_DEFAULTS` — `HARVEST_ATTRIBUTION_DEFAULTS = Object.freeze(`
+  - function `attributionFloor` — `export function attributionFloor(env = process.env)`
+  - variable `n` — `n = Number(env.ARC_MEMORY_HARVEST_ATTRIBUTION_FLOOR)`
+  - function `medianCorpusMass` — `function medianCorpusMass(N, corpusDf)` — *Median IDF mass of the store's own vocabulary — the rarity axis's reference point.*
+  - variable `masses` — `masses = Object.values(corpusDf).map(df => recallIdf(N, df)).sort((a, b) => a - b)`
+  - arrow-function `<anonymous@8867>` — `df => recallIdf(N, df)`
+  - arrow-function `<anonymous@8896>` — `(a, b) => a - b`
+  - variable `mid` — `mid = masses.length >> 1`
+  - function `attributeLoadBearing` — `export function attributeLoadBearing(` — *Pure attribution decision. No I/O, no env, no store — exported for direct testing and for a future threshold sweep, exactly like utilityAdmission.*
+  - variable `list` — `list = Array.isArray(candidates) ? candidates : []`
+  - arrow-function `refuseAll` — `(reason, extra =`
+  - arrow-function `<anonymous@10101>` — `c => (`
+  - variable `N` — `N = Number(corpusStats?.N) || 0`
+  - variable `corpusDf` — `corpusDf = corpusStats?.corpusDf`
+  - variable `evidence` — `evidence = String(evidenceText || '')`
+  - variable `queryTokens` — `queryTokens = new Set(tokenizeForRecall(query))`
+  - variable `evidenceTokens` — `evidenceTokens = new Set(tokenizeForRecall(evidence))`
+  - arrow-function `massOf` — `token => recallIdf(N, corpusDf[token] || 0)`
+  - variable `evidenceNovelMass` — `evidenceNovelMass = 0`
+  - variable `token` — `token`
+  - variable `rarityBar` — `rarityBar = medianCorpusMass(N, corpusDf)`
+  - variable `carried` — `carried = new Map()`
+  - variable `unionMass` — `unionMass = 0`
+  - variable `candidate` — `candidate`
+  - variable `memoryId` — `memoryId = candidate?.memoryId`
+  - variable `tokens` — `tokens = new Set(Array.isArray(candidate.tokens) ? candidate.tokens : [])`
+  - variable `mass` — `mass = 0`
+  - variable `count` — `count = 0`
+  - variable `peak` — `peak = 0`
+  - variable `token` — `token`
+  - variable `m` — `m = massOf(token)`
+  - arrow-function `<anonymous@12109>` — `memoryId => (`
+  - variable `loadBearing` — `loadBearing = []`
+  - variable `rejected` — `rejected = []`
+  - variable `shares` — `shares =`
+  - variable `<anonymous@12458>` — `[memoryId,`
+  - variable `share` — `share = mass / unionMass`
+  - arrow-function `eventsPath` — `baseDir => path.join(baseDir, RECALL_EVENTS_FILENAME)`
+  - … and 30 more symbols
+- `scripts/memory-surprise-gate.mjs` (35 symbols)
+  - variable `SURPRISE_DEFAULTS` — `SURPRISE_DEFAULTS = Object.freeze(`
+  - variable `SURPRISE_SIGNAL_NAMES` — `SURPRISE_SIGNAL_NAMES = Object.freeze([`
+  - function `surpriseWriteArmed` — `export function surpriseWriteArmed(env = process.env)` — *Armed check — `eq1`, matching every other lever in this family.*
+  - function `surpriseOptions` — `export function surpriseOptions(env = process.env)` — *Tunables. `num` companion; a malformed value falls back to the default. Values outside [0, 1] are refused rather than clamped — a threshold above 1 would suppress EVERY write (no mean of values in [0,*
+  - variable `raw` — `raw = Number(env.ARC_MEMORY_SURPRISE_MIN)`
+  - variable `minError` — `minError = Number.isFinite(raw) && raw >= 0 && raw <= 1 ? raw : SURPRISE_DEFAULTS.minError`
+  - function `normalizePathish` — `function normalizePathish(value)`
+  - function `localizerRankError` — `export function localizerRankError(rankedCandidates, actualTargets)` — *Signal 1. `rankedCandidates` is the localizer's relevance-ranked file list; `actualTargets` are the files the accepted patch actually touched. Uses the BEST (lowest) rank across the actual targets — a*
+  - variable `targets` — `targets = (Array.isArray(actualTargets) ? actualTargets : []).map(normalizePathish).filter(Boolean)`
+  - variable `ranked` — `ranked = rankedCandidates.map(normalizePathish)`
+  - variable `best` — `best = Infinity`
+  - variable `target` — `target`
+  - variable `index` — `index = ranked.indexOf(target)`
+  - function `attemptsError` — `export function attemptsError(acceptedAttempt)` — *Signal 3. n = 1-based index of the accepted candidate; the harness predicts n = 1.*
+  - variable `n` — `n = Number(acceptedAttempt)`
+  - function `unfiredTestsError` — `export function unfiredTestsError(expectedTests, firedTests)` — *Signal 4. Fraction of expected-relevant tests that never fired. Empty expected set ⇒ ABSENT.*
+  - variable `expected` — `expected = [...new Set((Array.isArray(expectedTests) ? expectedTests : []).map(normalizePathish).filter(Boolean))]`
+  - variable `fired` — `fired = new Set((Array.isArray(firedTests) ? firedTests : []).map(normalizePathish).filter(Boolean))`
+  - variable `missing` — `missing = expected.filter(test => !fired.has(test)).length`
+  - arrow-function `<anonymous@7561>` — `test => !fired.has(test)`
+  - function `computeSurpriseSignals` — `export function computeSurpriseSignals(` — *Compute every present signal and the aggregate prediction error. Returns { signals: {name: number}, present: string[], absent: string[], error: number|null }. `error` is null iff NO signal was present*
+  - variable `signals` — `signals =`
+  - variable `localizer` — `localizer = localizerRankError(rankedCandidates, actualTargets)`
+  - variable `attempts` — `attempts = attemptsError(acceptedAttempt)`
+  - variable `tests` — `tests = unfiredTestsError(expectedTests, firedTests)`
+  - variable `present` — `present = SURPRISE_SIGNAL_NAMES.filter(name => name in signals)`
+  - arrow-function `<anonymous@8760>` — `name => name in signals`
+  - variable `absent` — `absent = SURPRISE_SIGNAL_NAMES.filter(name => !(name in signals))`
+  - arrow-function `<anonymous@8831>` — `name => !(name in signals)`
+  - variable `error` — `error = present.length === 0`
+  - arrow-function `<anonymous@8936>` — `(sum, name) => sum + signals[name]`
+  - function `surpriseAdmission` — `export function surpriseAdmission(input =` — *THE ADMISSION DECISION. Returns { write: boolean, reason: string, error: number|null, present: string[], signals, minError }. `reason` is always populated — a skipped write must say WHY it was skipped*
+  - variable `opts` — `opts = options || surpriseOptions(env)`
+  - variable `evaluated` — `evaluated = computeSurpriseSignals(input)`
+  - variable `base` — `base =`
+- `scripts/memory-utility-events.mjs` (96 symbols)
+  - variable `MEMORY_UTILITY_EVENT_VERSION` — `MEMORY_UTILITY_EVENT_VERSION = '1.0.0'`
+  - variable `MEMORY_UTILITY_EVENTS_FILENAME` — `MEMORY_UTILITY_EVENTS_FILENAME = 'memory-utility-events.jsonl'`
+  - variable `MEMORY_UTILITY_EVENT_FIELDS` — `MEMORY_UTILITY_EVENT_FIELDS = [`
+  - variable `UTILITY_ACTED_REASONS` — `UTILITY_ACTED_REASONS = Object.freeze(`
+  - variable `ACTED_REASON_SET` — `ACTED_REASON_SET = new Set(Object.values(UTILITY_ACTED_REASONS))`
+  - variable `POSITIVE_REASONS` — `POSITIVE_REASONS = new Set([UTILITY_ACTED_REASONS.FILE_EDIT, UTILITY_ACTED_REASONS.COMMAND_RUN])`
+  - variable `UTILITY_TURN_OUTCOMES` — `UTILITY_TURN_OUTCOMES = Object.freeze(['passed', 'failed', 'aborted', 'unknown'])`
+  - variable `TURN_OUTCOME_SET` — `TURN_OUTCOME_SET = new Set(UTILITY_TURN_OUTCOMES)`
+  - variable `UTILITY_VERDICTS` — `UTILITY_VERDICTS = Object.freeze(`
+  - variable `UTILITY_INDETERMINATE_REASONS` — `UTILITY_INDETERMINATE_REASONS = Object.freeze(`
+  - variable `UTILITY_WEIGHT_DEFAULTS` — `UTILITY_WEIGHT_DEFAULTS = Object.freeze(`
+  - variable `MIN_PATH_SUFFIX_SEGMENTS` — `MIN_PATH_SUFFIX_SEGMENTS = 2`
+  - variable `MIN_COMMAND_TOKENS` — `MIN_COMMAND_TOKENS = 2`
+  - variable `TRUST_AXIS_SPAN_RATIO` — `TRUST_AXIS_SPAN_RATIO = 2`
+  - function `isMemoryUtilitySignalArmed` — `export function isMemoryUtilitySignalArmed()` — *Mirrors the EXACT comparison registered in armed-config.mjs. Read live (never cached at import) so a test can arm and disarm within one process — the same convention the store's own isMemoryVectorInde*
+  - class `MemoryUtilityEventError` — `export class MemoryUtilityEventError extends Error`
+  - constructor `constructor` — `constructor(field, message)`
+  - function `fail` — `function fail(field, message)`
+  - function `nonEmptyString` — `function nonEmptyString(value, field)`
+  - function `timestamp` — `function timestamp(value, field)`
+  - function `strictKeys` — `function strictKeys(value, allowed, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `validateUtilityEvent` — `export function validateUtilityEvent(event, pathName = 'utilityEvent')`
+  - function `normalizePath` — `function normalizePath(value)` — *Repo-relative normalization. Windows separators, './' prefixes, duplicated slashes.*
+  - function `identifyingPathSuffixes` — `export function identifyingPathSuffixes(observedPath)` — *Every suffix of an observed path that can identify it: the full path, plus each suffix of at least MIN_PATH_SUFFIX_SEGMENTS segments. See the header derivation for why a bare basename is excluded (unl*
+  - variable `normalized` — `normalized = normalizePath(observedPath)`
+  - variable `segments` — `segments = normalized.split('/').filter(Boolean)`
+  - variable `out` — `out = new Set([segments.join('/')])`
+  - variable `start` — `start = 1`
+  - variable `PATH_CONTINUATION` — `PATH_CONTINUATION = /[A-Za-z0-9_./\\-]/`
+  - function `containsDelimited` — `function containsDelimited(haystack, needle)`
+  - variable `from` — `from = 0`
+  - variable `at` — `at = haystack.indexOf(needle, from)`
+  - variable `before` — `before = at === 0 ? '' : haystack[at - 1]`
+  - variable `afterIndex` — `afterIndex = at + needle.length`
+  - variable `after` — `after = afterIndex >= haystack.length ? '' : haystack[afterIndex]`
+  - function `normalizeCommand` — `function normalizeCommand(value)` — *Collapse whitespace runs so `npm run test` and `npm run test` compare equal.*
+  - function `memoryReferenceText` — `export function memoryReferenceText(record)` — *The searchable text of a record — every field a writer can put a path or a command into. Deliberately does NOT include provenance/notes: those are harness-authored and would credit a memory for text i*
+  - … and 56 more symbols
+
+### Reconsolidation, contradiction and supersession — LIVE / PARTIAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 36 · **Callable:** 9 · **Authored purpose:** 5
+- `scripts/memory-reconsolidation.mjs` (36 symbols)
+  - variable `TRUST_EVENTS_FILENAME` — `TRUST_EVENTS_FILENAME = 'memory-trust-events.jsonl'`
+  - variable `TRUST_EVENTS_VERSION` — `TRUST_EVENTS_VERSION = 1`
+  - variable `RECONSOLIDATION_DEFAULTS` — `RECONSOLIDATION_DEFAULTS = Object.freeze(`
+  - function `reconsolidationArmed` — `export function reconsolidationArmed(env = process.env)` — *Armed check — `eq1`, exactly like every other lever in this family.*
+  - function `reconsolidationOptions` — `export function reconsolidationOptions(env = process.env)` — *Tunables. A `num` companion is INERT unless its owning eq1 flag is armed (registry contract), and a malformed / non-positive value falls back to the default rather than disabling the prior — α ≤ 0 wou*
+  - variable `raw` — `raw = Number(env.ARC_MEMORY_RECONSOLIDATION_PRIOR)`
+  - variable `priorStrength` — `priorStrength = Number.isFinite(raw) && raw > 0 ? raw : RECONSOLIDATION_DEFAULTS.priorStrength`
+  - arrow-function `round6` — `value => Number(value.toFixed(6))`
+  - function `reconsolidatedTrust` — `export function reconsolidatedTrust(baseTrust, stats,` — *The formula. `stats` may be null/absent — that is the zero-evidence case and returns baseTrust EXACTLY (identity), never a guess.*
+  - variable `t0` — `t0 = Number.isFinite(baseTrust) ? Math.min(1, Math.max(0, baseTrust)) : 0`
+  - variable `s` — `s = Number.isFinite(stats?.successes) ? Math.max(0, stats.successes) : 0`
+  - variable `f` — `f = Number.isFinite(stats?.failures) ? Math.max(0, stats.failures) : 0`
+  - variable `alpha` — `alpha = priorStrength > 0 ? priorStrength : RECONSOLIDATION_DEFAULTS.priorStrength`
+  - arrow-function `trustEventsPath` — `baseDir => path.join(baseDir, TRUST_EVENTS_FILENAME)`
+  - function `reconsolidate` — `export function reconsolidate(` — *THE RECONSOLIDATION PASS. Folds the recall-event log, computes each record's posterior trust, and appends ONE supersedure event per record whose trust actually MOVED. `records` supplies the priors: ea*
+  - arrow-function `<anonymous@7100>` — `() => new Date()`
+  - variable `result` — `result =`
+  - variable `options` — `options = reconsolidationOptions(env)`
+  - variable `fold` — `fold = foldRecallOutcomes(baseDir)`
+  - variable `priors` — `priors = new Map()`
+  - variable `record` — `record`
+  - variable `current` — `current = loadReconsolidatedTrust(baseDir)`
+  - variable `at` — `at = now().toISOString()`
+  - variable `lines` — `lines = []`
+  - variable `<anonymous@7875>` — `[memoryId, stats]`
+  - arrow-function `<anonymous@7928>` — `([a], [b]) => (a < b ? -1 : a > b ? 1 : 0)`
+  - variable `priorTrust` — `priorTrust = priors.get(memoryId)`
+  - variable `trust` — `trust = reconsolidatedTrust(priorTrust, stats, options)`
+  - variable `live` — `live = current.has(memoryId) ? current.get(memoryId) : round6(priorTrust)`
+  - variable `event` — `event =`
+  - function `loadReconsolidatedTrust` — `export function loadReconsolidatedTrust(baseDir)` — *READ SIDE — fold the append-only trust events into Map<memoryId, trust>, LAST WRITER WINS (a later supersedure event supersedes an earlier one; that is what "append-only supersedure" means). Torn line*
+  - variable `out` — `out = new Map()`
+  - variable `file` — `file = trustEventsPath(baseDir)`
+  - variable `raw` — `raw`
+  - variable `line` — `line`
+  - variable `event` — `event`
+
+### Cross-task/repo scope promotion — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (1 with symbols) · **Symbols:** 85 · **Callable:** 25 · **Authored purpose:** 5
+- `scripts/memory-scope-promotion.mjs` (85 symbols)
+  - variable `SCOPE_PROMOTION_VERSION` — `SCOPE_PROMOTION_VERSION = '1.0.0'`
+  - variable `PROMOTION_DEFAULTS` — `PROMOTION_DEFAULTS = Object.freeze(`
+  - variable `PROMOTION_REFUSALS` — `PROMOTION_REFUSALS = Object.freeze(`
+  - variable `CORRELATION_KINDS` — `CORRELATION_KINDS = Object.freeze(`
+  - variable `PATH_SHAPE` — `PATH_SHAPE = /(^|\s)(\/[A-Za-z0-9._-]+(\/[A-Za-z0-9._-]+)+|[A-Za-z0-9._-]+\/[A-Za-z0-9._-]+\.[A-Za-z0-9]`
+  - variable `TRACE_SHAPE` — `TRACE_SHAPE = /(\bat\s+[\w$.<>]+\s*\(|Traceback \(most recent call last\)|File "[^"]+", line \d+|:\d+:\d+\b)/`
+  - variable `SYNTAX_CHARS` — `SYNTAX_CHARS = /[`
+  - function `classifyClaimContent` — `export function classifyClaimContent(claim, options = PROMOTION_DEFAULTS)` — *Classify a candidate claim as pattern-level or not. Structural, universal, vocabulary-free. Returns { ok, violations: [{code, detail}] } — never throws, so callers get reasons not stack traces.*
+  - variable `violations` — `violations = []`
+  - variable `text` — `text = claim.trim()`
+  - variable `lines` — `lines = text.split('\n').filter(line => line.trim().length > 0)`
+  - arrow-function `<anonymous@8365>` — `line => line.trim().length > 0`
+  - variable `pathHits` — `pathHits = (text.match(PATH_SHAPE) || []).length`
+  - variable `syntaxHits` — `syntaxHits = (text.match(SYNTAX_CHARS) || []).length`
+  - variable `density` — `density = syntaxHits / text.length`
+  - variable `tokens` — `tokens = tokenizeForRecall(text)`
+  - variable `distinct` — `distinct = new Set(tokens)`
+  - function `jaccard` — `export function jaccard(aTokens, bTokens)`
+  - variable `a` — `a = new Set(aTokens)`
+  - variable `b` — `b = new Set(bTokens)`
+  - variable `inter` — `inter = 0`
+  - variable `token` — `token`
+  - variable `union` — `union = a.size + b.size - inter`
+  - function `idSet` — `function idSet(value)`
+  - arrow-function `<anonymous@10287>` — `item => typeof item === 'string' && item.trim().length > 0`
+  - function `intersects` — `function intersects(a, b)`
+  - variable `item` — `item`
+  - function `correlationBetween` — `export function correlationBetween(left, right, options = PROMOTION_DEFAULTS)` — *Why (if at all) two normalized instances are correlated. Returns an array of CORRELATION_KINDS; empty means independent. Pure, order-independent, and symmetric by construction.*
+  - variable `kinds` — `kinds = []`
+  - function `maximumIndependentSet` — `export function maximumIndependentSet(adjacency)` — *Exact maximum independent set over the correlation graph, deterministic tie-break by index. `adjacency` is an array of Sets of neighbour indices. Returns a sorted array of indices. Deterministic branc*
+  - variable `n` — `n = adjacency.length`
+  - variable `alive` — `alive = new Set(Array.from(`
+  - arrow-function `<anonymous@12113>` — `(unused, index) => index`
+  - arrow-function `better` — `(a, b) =>`
+  - variable `i` — `i = 0`
+  - arrow-function `solve` — `remaining =>`
+  - variable `pivot` — `pivot = -1`
+  - variable `pivotDegree` — `pivotDegree = -1`
+  - variable `vertex` — `vertex`
+  - arrow-function `<anonymous@12517>` — `(x, y) => x - y`
+  - … and 45 more symbols
+
+### Sleep clock and consolidation — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 169 · **Callable:** 79 · **Authored purpose:** 31
+- `scripts/memory-consolidation-scheduler.mjs` (138 symbols)
+  - variable `CONSOLIDATION_SCHEDULER_VERSION` — `CONSOLIDATION_SCHEDULER_VERSION = '0.1.0'`
+  - variable `ON` — `ON = '1'`
+  - variable `CONSOLIDATION_LEDGER_TASK_ID` — `CONSOLIDATION_LEDGER_TASK_ID = 'memory-consolidation'`
+  - function `consolidationEnabled` — `export function consolidationEnabled(env = process.env)` — *Umbrella: nothing in this module does anything unless this is armed.*
+  - function `consolidationUseDriven` — `export function consolidationUseDriven(env = process.env)` — *(a) the PRIMARY use-driven path — post-solved-turn micro-batch.*
+  - function `consolidationIdle` — `export function consolidationIdle(env = process.env)` — *(b) the idle loop.*
+  - function `consolidationIdleMs` — `export function consolidationIdleMs(env = process.env)` — *Idle threshold. Consumed only when the idle lever is armed. `Number(env) || D` means an explicit '0' or NaN falls back to the code default — the registry stamps the raw value, so treat effective 0 as *
+  - function `consolidationBatchSize` — `export function consolidationBatchSize(env = process.env)` — *Micro-batch / idle-drain size cap — the "seconds-scale unit" bound.*
+  - function `consolidationUnitBudgetMs` — `export function consolidationUnitBudgetMs(env = process.env)` — *Per-unit wall-clock cap. Keeps a unit seconds-scale so preemption loses little.*
+  - function `staleKey` — `function staleKey(candidate)`
+  - variable `raw` — `raw = candidate?.lastValidatedAt`
+  - variable `parsed` — `parsed = Date.parse(raw)`
+  - function `orderConsolidationQueue` — `export function orderConsolidationQueue(candidates = [])`
+  - arrow-function `<anonymous@7322>` — `(a, b) =>`
+  - variable `ka` — `ka = staleKey(a)`
+  - variable `kb` — `kb = staleKey(b)`
+  - variable `ia` — `ia = String(a?.memoryId ?? '')`
+  - variable `ib` — `ib = String(b?.memoryId ?? '')`
+  - function `lengthPrefixed` — `function lengthPrefixed(...fields)` — *Unit id — a pure function of (drain kind, memoryId, lastValidatedAt-key). The SAME candidate in the SAME state yields the SAME unitId across processes, which is what makes "done = a unit-finished entr*
+  - arrow-function `<anonymous@8589>` — `field => `$`
+  - function `consolidationUnitId` — `export function consolidationUnitId(candidate, kind = 'idle')`
+  - variable `key` — `key = staleKey(candidate)`
+  - variable `keyText` — `keyText = Number.isFinite(key) ? String(key) : 'never'`
+  - variable `TURN_OUTCOMES` — `TURN_OUTCOMES = Object.freeze(['solved', 'failed', 'unknown'])`
+  - variable `UNIT_VERDICTS` — `UNIT_VERDICTS = Object.freeze(['confirmed', 'refuted', 'unverifiable'])`
+  - function `outcomeSign` — `export function outcomeSign(outcome)`
+  - function `verdictFactor` — `export function verdictFactor(verdict)`
+  - function `consolidationWeight` — `export function consolidationWeight(outcome, verdict)`
+  - variable `sign` — `sign = outcomeSign(outcome)`
+  - variable `factor` — `factor = verdictFactor(verdict)`
+  - variable `product` — `product = sign * factor`
+  - function `foldTrustEvents` — `export function foldTrustEvents(events = [])` — *Fold trust events into a bounded, monotone adjustment. adjustment = (support - refute) / (support + refute + 1) ∈ (-1, +1) The +1 is Laplace/Krichevsky–Trofimov add-one smoothing, not a tuned threshol*
+  - variable `support` — `support = 0`
+  - variable `refute` — `refute = 0`
+  - variable `abstain` — `abstain = 0`
+  - variable `event` — `event`
+  - variable `weight` — `weight = Number(event?.weight)`
+  - variable `adjustment` — `adjustment = (support - refute) / (support + refute + 1)`
+  - function `consolidatedTrust` — `export function consolidatedTrust(baseTrust, adjustment)` — *Apply the fold to a base trust score. NEVER-WORSE-SHAPED: the result stays in [0, 1], is monotone in `adjustment`, and equals `baseTrust` exactly when adjustment is 0 (i.e. with no events, or only abs*
+  - variable `base` — `base = Number.isFinite(baseTrust) ? Math.min(1, Math.max(0, baseTrust)) : 0`
+  - … and 98 more symbols
+- `scripts/sleep-clock.mjs` (31 symbols)
+  - variable `SLEEP_CLOCK_VERSION` — `SLEEP_CLOCK_VERSION = '0.1.0'`
+  - variable `DEFAULT_WATCHDOG_MS` — `DEFAULT_WATCHDOG_MS = 500`
+  - function `realGovernorProbes` — `export function realGovernorProbes(` — *Compose the REAL production governor probe set (every leaf touches actual OS state) from a small set of daemon-supplied inputs. Kept separate from the class below so a test can build a SleepClock with*
+  - arrow-function `<anonymous@4271>` — `() => readUserIdleMsFromSentinel(idleSentinelPath)`
+  - class `SleepClock` — `export class SleepClock`
+  - constructor `constructor` — `constructor(`
+  - method `_emit` — `_emit(entry)`
+  - method `governorGate` — `governorGate()` — *The current five-gate evaluation, with no side effects. Safe to call at any time.*
+  - method `tick` — `async tick()` — *ONE watchdog check. If the governor refuses and a unit is in flight, abort it (within its own unit budget — the scheduler's AbortController race, unmodified) and report the NAMED gate that fired. If t*
+  - variable `gate` — `gate = this.governorGate()`
+  - variable `preempted` — `preempted = this.scheduler.noteUserTurnStart()`
+  - variable `entry` — `entry =`
+  - variable `result` — `result = await this.scheduler.tick()`
+  - method `start` — `start(` — *Arm the wall-clock watchdog. unref'd: it can never hold the daemon process open.*
+  - variable `period` — `period = Number(intervalMs) || DEFAULT_WATCHDOG_MS`
+  - arrow-function `<anonymous@8140>` — `() =>`
+  - arrow-function `<anonymous@8172>` — `() =>`
+  - method `stop` — `stop()`
+  - method `noteTurnStart` — `noteTurnStart()` — *Thin passthrough — keeps daemon call sites to one line each at the real turn boundaries.*
+  - method `noteTurnEnd` — `noteTurnEnd()`
+  - method `health` — `health()`
+  - function `buildSleepClockForDaemon` — `export function buildSleepClockForDaemon(` — *THE DAEMON WIRING SEAM. Construct a fully-real SleepClock for ArcDaemon — or construct NOTHING at all. BYTE-IDENTICAL-OFF: when `ARC_MEMORY_CONSOLIDATION_IDLE` is not armed (the umbrella `ARC_MEMORY_C*
+  - arrow-function `<anonymous@10300>` — `() => Date.now()`
+  - variable `store` — `store = new GovernedMemoryStore(`
+  - variable `scheduler` — `scheduler = new ConsolidationScheduler(`
+  - arrow-function `listCandidates` — `() => store.readRecords().map(record => (`
+  - arrow-function `<anonymous@10986>` — `record => (`
+  - arrow-function `loadMemory` — `(memoryId) => store.readRecords().find(record => record.memoryId === memoryId) || null`
+  - arrow-function `<anonymous@11139>` — `record => record.memoryId === memoryId`
+  - arrow-function `gpuIdle` — `() => hasActiveTurns() === false`
+  - arrow-function `readInferenceInFlight` — `() => hasActiveTurns() === true`
+
+### Mechanism-level procedural memory — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Reversible plasticity governor — MISSING / LAUNCH BLOCKER
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Repository/runtime self-model — LIVE / DEFAULT
+- **Files:** 1 (1 with symbols) · **Symbols:** 181 · **Callable:** 60 · **Authored purpose:** 2
+- `scripts/reconstruction-self-model.mjs` (181 symbols)
+  - variable `HERE` — `HERE = dirname(fileURLToPath(import.meta.url))`
+  - variable `DEFAULT_ROOT` — `DEFAULT_ROOT = resolve(HERE, '..')`
+  - variable `SELF_MODEL_SCHEMA_VERSION` — `SELF_MODEL_SCHEMA_VERSION = '1.1.0'`
+  - variable `DEFAULT_OUTPUT` — `DEFAULT_OUTPUT = join(`
+  - arrow-function `sha256` — `(value) => createHash('sha256').update(value).digest('hex')`
+  - function `shellDisplay` — `export function shellDisplay(command, args = [])`
+  - arrow-function `quote` — `(value) =>`
+  - variable `text` — `text = String(value)`
+  - function `runProbe` — `export function runProbe(` — *Execute one bounded read-only probe. Raw output is represented by hashes in the final receipt; parsed data is kept only long enough to build summaries.*
+  - variable `startedAt` — `startedAt = Date.now()`
+  - variable `result` — `result = spawnSync(command, args,`
+  - variable `stdout` — `stdout = result.stdout ?? ''`
+  - variable `stderr` — `stderr = result.stderr ?? ''`
+  - variable `exitCode` — `exitCode = Number.isInteger(result.status) ? result.status : null`
+  - variable `executionOk` — `executionOk = allowedExitCodes.includes(exitCode) && !result.error`
+  - variable `data` — `data = null`
+  - variable `parseError` — `parseError = null`
+  - variable `error` — `error`
+  - variable `ok` — `ok = executionOk && (!parseJson || parseError === null)`
+  - function `probeEvidence` — `export function probeEvidence(probe)`
+  - variable `<anonymous@3158>`
+  - function `blockedDependentProbe` — `function blockedDependentProbe(`
+  - function `summarizeTruth` — `export function summarizeTruth(value =`
+  - function `summarizeModuleCensus` — `export function summarizeModuleCensus(value =`
+  - variable `unresolved` — `unresolved = value.unresolvedDynamicImports`
+  - variable `unresolvedCount` — `unresolvedCount = Array.isArray(unresolved)`
+  - function `summarizeContextStatus` — `export function summarizeContextStatus(value =`
+  - function `summarizeMemoryReceipt` — `export function summarizeMemoryReceipt(value =`
+  - variable `receipt` — `receipt = value.receipt ?? value`
+  - variable `stores` — `stores = Array.isArray(receipt.stores) ? receipt.stores : []`
+  - arrow-function `countMap` — `(field) => Object.fromEntries(`
+  - arrow-function `<anonymous@6158>` — `(store) => [store.storeName, store.counts?.[field] ?? null]`
+  - arrow-function `edgeCount` — `(field) => Array.isArray(receipt[field]) ? receipt[field].length : null`
+  - arrow-function `<anonymous@6523>` — `(store) => (`
+  - arrow-function `<anonymous@7116>` — `(sum, value) => sum + Number(value || 0)`
+  - function `summarizeCanonStatus` — `export function summarizeCanonStatus(value =`
+  - function `parseWorktreePorcelain` — `export function parseWorktreePorcelain(text = '')`
+  - arrow-function `<anonymous@7733>` — `(block) => block.trim()`
+  - arrow-function `<anonymous@7788>` — `(block) =>`
+  - variable `fields` — `fields =`
+  - … and 141 more symbols
+
+## 11 · CLIDE PROJECTION, OBSERVABILITY, SECURITY, OPERATIONS, ONBOARDING, AND RELEASE
+
+### Verified read-only TaskRuntime snapshot — LIVE / DEFAULT
+- **Files:** 2 (2 with symbols) · **Symbols:** 3312 · **Callable:** 992 · **Authored purpose:** 99
+- `scripts/arc-daemon.mjs` (986 symbols)
+  - variable `BROWSER_FRAME_MIN_INTERVAL_MS` — `BROWSER_FRAME_MIN_INTERVAL_MS = 80`
+  - function `pendingProductScopeDecision` — `function pendingProductScopeDecision(taskSpec)`
+  - variable `decision` — `decision = (Array.isArray(taskSpec?.decisions) ? taskSpec.decisions : [])`
+  - arrow-function `<anonymous@6921>` — `item => item?.category === 'product' && item?.resolution === 'ask-human'`
+  - variable `question` — `question = (Array.isArray(taskSpec?.pendingOperatorQuestions)`
+  - arrow-function `<anonymous@7149>` — `item => (`
+  - function `pendingTaskSpecWithScopeQuestion` — `function pendingTaskSpecWithScopeQuestion(taskSpec, scopeQuestion)`
+  - variable `pending` — `pending = structuredClone(taskSpec)`
+  - variable `original` — `original = Array.isArray(pending.pendingOperatorQuestions)`
+  - arrow-function `<anonymous@7689>` — `question => question.questionId !== scopeQuestion.questionId`
+  - function `scopeIntentInvariantObservation` — `function scopeIntentInvariantObservation(taskSpec)`
+  - variable `taskFacts` — `taskFacts = Array.isArray(taskSpec?.facts) ? taskSpec.facts : []`
+  - variable `explicitObjectives` — `explicitObjectives = taskFacts`
+  - arrow-function `<anonymous@8130>` — `fact => (`
+  - arrow-function `<anonymous@8383>` — `fact => fact.statement`
+  - variable `requiredDeliverableKinds` — `requiredDeliverableKinds = (Array.isArray(taskSpec?.semanticContract?.deliverables)`
+  - arrow-function `<anonymous@8566>` — `deliverable => (`
+  - arrow-function `<anonymous@8728>` — `deliverable => deliverable.kind`
+  - variable `requiredConstraintStatements` — `requiredConstraintStatements = taskFacts`
+  - arrow-function `<anonymous@8822>` — `fact => (`
+  - arrow-function `<anonymous@9023>` — `fact => fact.statement`
+  - variable `prohibitedActions` — `prohibitedActions = Array.isArray(taskSpec?.intentFields?.forbiddenActions?.value)`
+  - arrow-function `<anonymous@9203>` — `statement => typeof statement === 'string' && statement.trim()`
+  - variable `authoritativeObjectives` — `authoritativeObjectives = [...new Set([`
+  - arrow-function `<anonymous@9853>` — `statement => typeof statement === 'string' && statement.trim()`
+  - variable `sourceTaskDraftBinding` — `sourceTaskDraftBinding = JSON.stringify(`
+  - variable `projection` — `projection =`
+  - variable `statement` — `statement = JSON.stringify(projection)`
+  - function `scopeDecisionDescriptor` — `function scopeDecisionDescriptor(pendingDecision)`
+  - variable `decision` — `decision = pendingDecision?.decision ||`
+  - variable `rawAxisId` — `rawAxisId = typeof decision.auditCheckId === 'string' && decision.auditCheckId.trim()`
+  - variable `axisId` — `axisId = String(rawAxisId || 'scope')`
+  - variable `affectedByAxis` — `affectedByAxis =`
+  - variable `whyLoadBearingByAxis` — `whyLoadBearingByAxis =`
+  - function `invokeRuntimeAttestedScopeSpecialist` — `async function invokeRuntimeAttestedScopeSpecialist(`
+  - variable `decisionDescriptor` — `decisionDescriptor = scopeDecisionDescriptor(pendingDecision)`
+  - variable `axisId` — `axisId = decisionDescriptor.axisId`
+  - variable `intentInvariantObservation` — `intentInvariantObservation = scopeIntentInvariantObservation(taskSpec)`
+  - variable `mergedObservations` — `mergedObservations = [`
+  - arrow-function `<anonymous@13621>` — `observation => (`
+  - … and 946 more symbols
+- `scripts/task-runtime.mjs` (2326 symbols)
+  - variable `DEFAULT_LEASE_TTL_MS` — `DEFAULT_LEASE_TTL_MS = Number(process.env.ARC_LEASE_TTL_MS) || 30_000`
+  - variable `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_PREFLIGHT_LEASE_RESERVE_MS = 60_000`
+  - variable `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS` — `DYNAMIC_BRANCH_FINALIZATION_LEASE_RESERVE_MS = 30_000`
+  - variable `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS` — `PRODUCT_CANDIDATE_AUTHORING_LEASE_TTL_MS = 180_000`
+  - function `requiredString` — `function requiredString(value, name)`
+  - function `candidateAuthorResponseUtf8` — `function candidateAuthorResponseUtf8(value)`
+  - function `candidateAuthorInvocationIdentityV1` — `function candidateAuthorInvocationIdentityV1()`
+  - function `strictObject` — `function strictObject(value, allowedKeys, requiredKeys, name)`
+  - variable `allowed` — `allowed = new Set(allowedKeys)`
+  - variable `unknown` — `unknown = Object.keys(value).filter(key => !allowed.has(key))`
+  - arrow-function `<anonymous@18672>` — `key => !allowed.has(key)`
+  - variable `missing` — `missing = requiredKeys.filter(key => !Object.hasOwn(value, key))`
+  - arrow-function `<anonymous@18831>` — `key => !Object.hasOwn(value, key)`
+  - function `normalizeEffectAdapter` — `function normalizeEffectAdapter(tool, candidate)`
+  - variable `name` — `name = requiredString(tool, 'effect handler tool')`
+  - function `normalizeDynamicBranchAdapter` — `function normalizeDynamicBranchAdapter(adapterId, candidate)`
+  - variable `name` — `name = requiredString(adapterId, 'dynamic branch adapter id')`
+  - function `normalizeCausalCognitionExchange` — `function normalizeCausalCognitionExchange(candidate)`
+  - variable `keys` — `keys = Object.keys(candidate).sort()`
+  - variable `legacyFixture` — `legacyFixture = keys.length === 1 && keys[0] === 'deliberate'`
+  - variable `v2` — `v2 = keys.length === 2`
+  - variable `provenanceClass` — `provenanceClass = legacyFixture ? 'deterministic-fixture' : candidate.provenanceClass`
+  - function `verifyPreparedCausalCognitionForExchange` — `function verifyPreparedCausalCognitionForExchange(`
+  - function `verifyPreparedCausalCognitionForEvent` — `function verifyPreparedCausalCognitionForEvent(`
+  - variable `isV2` — `isV2 = value?.schemaVersion === 'prepared-causal-cognition-v2'`
+  - variable `expectedProvenanceClass` — `expectedProvenanceClass = event.payload.payload.predictedUse`
+  - function `causalCognitionPreparedArtifactKind` — `function causalCognitionPreparedArtifactKind(value)`
+  - function `transitionPayloadShape` — `function transitionPayloadShape(record)`
+  - arrow-function `<anonymous@24814>` — `key => record[key] !== undefined`
+  - arrow-function `<anonymous@24859>` — `key => [key, structuredClone(record[key])]`
+  - function `stableEffectId` — `function stableEffectId(taskId, idempotencyKey)`
+  - variable `digest` — `digest = createHash('sha256')`
+  - function `sameStringSet` — `function sameStringSet(left, right)`
+  - variable `sortedLeft` — `sortedLeft = [...left].sort()`
+  - variable `sortedRight` — `sortedRight = [...right].sort()`
+  - arrow-function `<anonymous@25382>` — `(value, index) => value === sortedRight[index]`
+  - function `sameGraphControlBranches` — `function sameGraphControlBranches(left, right)`
+  - variable `byId` — `byId = new Map(right.map(item => [item.branchId, item]))`
+  - arrow-function `<anonymous@25623>` — `item => [item.branchId, item]`
+  - arrow-function `<anonymous@25705>` — `item =>`
+  - … and 2286 more symbols
+
+### CLIDE wire protocol — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 102 · **Callable:** 80 · **Authored purpose:** 0
+- `apps/arc-tui/src/workspace/daemon.rs` (35 symbols)
+  - type `Socket` — `type Socket = WebSocket<MaybeTlsStream<TcpStream>>;`
+  - function `daemon_port` — `pub fn daemon_port() -> u16`
+  - function `daemon_url` — `pub fn daemon_url(port: u16) -> String`
+  - function `operator_capability_path` — `fn operator_capability_path(port: u16) -> Option<PathBuf>`
+  - function `read_operator_capability` — `fn read_operator_capability(port: u16) -> Option<String>`
+  - function `daemon_request` — `fn daemon_request(port: u16, operator_capability: Option<&str>) -> Option<ClientRequestBuilder>`
+  - enum `DaemonEvent` — `pub enum DaemonEvent`
+  - enum `DaemonCommand` — `pub enum DaemonCommand`
+  - struct `DaemonHandle` — `pub struct DaemonHandle`
+  - function `send_frame` — `pub fn send_frame(&self, frame: ClientFrame)`
+  - function `retry` — `pub fn retry(&self)`
+  - function `shutdown` — `pub fn shutdown(&self)`
+  - function `spawn_client` — `pub fn spawn_client(port: u16, repo_dir: String) -> DaemonHandle`
+  - function `worker` — `fn worker(`
+  - enum `RepoBinding` — `enum RepoBinding`
+  - function `check_repo_binding` — `fn check_repo_binding(expected_repo_dir: &str, daemon_repo_path: Option<&str>) -> RepoBinding`
+  - function `canonical_string` — `fn canonical_string(path: &str) -> String`
+  - function `read_hello` — `fn read_hello(ws: &mut Socket) -> Option<ServerFrame>`
+  - enum `SessionEnd` — `enum SessionEnd`
+  - function `undecodable_frame_kind` — `pub fn undecodable_frame_kind(text: &str) -> String`
+  - function `session` — `fn session(`
+  - function `connect_with_spawn` — `fn connect_with_spawn(port: u16, repo_dir: &str) -> Option<Socket>`
+  - function `try_connect` — `fn try_connect(port: u16) -> Option<Socket>`
+  - function `spawn_daemon_process` — `fn spawn_daemon_process(repo_dir: &str) -> bool`
+  - function `set_read_timeout` — `fn set_read_timeout(ws: &Socket)`
+  - module `tests` — `mod tests`
+  - function `daemon_url_matches_contract_endpoint` — `fn daemon_url_matches_contract_endpoint()`
+  - function `default_port_is_8787` — `fn default_port_is_8787()`
+  - function `websocket_upgrade_carries_capability_in_authorization_header` — `fn websocket_upgrade_carries_capability_in_authorization_header()`
+  - function `operator_bearer_never_enters_json_client_frames` — `fn operator_bearer_never_enters_json_client_frames()`
+  - function `check_repo_binding_matches_identical_paths` — `fn check_repo_binding_matches_identical_paths()`
+  - function `check_repo_binding_flags_different_paths_as_mismatch` — `fn check_repo_binding_flags_different_paths_as_mismatch()`
+  - function `check_repo_binding_none_is_unverifiable_never_a_silent_match` — `fn check_repo_binding_none_is_unverifiable_never_a_silent_match()`
+  - function `check_repo_binding_matches_real_directories_via_canonicalize` — `fn check_repo_binding_matches_real_directories_via_canonicalize()`
+  - function `canonical_string_falls_back_to_raw_on_nonexistent_path` — `fn canonical_string_falls_back_to_raw_on_nonexistent_path()`
+- `apps/arc-tui/src/workspace/protocol.rs` (67 symbols)
+  - struct `ChatSummary` — `pub struct ChatSummary`
+  - enum `Role` — `pub enum Role`
+  - struct `ChatEvent` — `pub struct ChatEvent`
+  - struct `ChatSearchHit` — `pub struct ChatSearchHit`
+  - struct `Note` — `pub struct Note`
+  - struct `SymbolHit` — `pub struct SymbolHit`
+  - struct `CheckpointInfo` — `pub struct CheckpointInfo`
+  - struct `Todo` — `pub struct Todo`
+  - struct `QuestionOption` — `pub struct QuestionOption`
+  - struct `OperatorQuestion` — `pub struct OperatorQuestion`
+  - struct `QuestionAnswer` — `pub struct QuestionAnswer`
+  - struct `RunTimelineEntry` — `pub struct RunTimelineEntry`
+  - enum `ServerFrame` — `pub enum ServerFrame`
+  - enum `ClientFrame` — `pub enum ClientFrame`
+  - function `subscribe_all` — `pub fn subscribe_all() -> Self`
+  - module `tests` — `mod tests`
+  - function `hello_frame_deserializes` — `fn hello_frame_deserializes()`
+  - function `hello_frame_with_repo_path_deserializes` — `fn hello_frame_with_repo_path_deserializes()`
+  - function `hello_frame_negotiates_operator_authority_per_connection` — `fn hello_frame_negotiates_operator_authority_per_connection()`
+  - function `status_frame_keeps_raw_payload` — `fn status_frame_keeps_raw_payload()`
+  - function `chats_frame_deserializes` — `fn chats_frame_deserializes()`
+  - function `chat_event_frame_deserializes` — `fn chat_event_frame_deserializes()`
+  - function `chat_event_roles_cover_contract` — `fn chat_event_roles_cover_contract()`
+  - function `notes_frame_deserializes` — `fn notes_frame_deserializes()`
+  - function `todos_frame_deserializes` — `fn todos_frame_deserializes()`
+  - function `usage_frame_deserializes` — `fn usage_frame_deserializes()`
+  - function `error_frame_deserializes` — `fn error_frame_deserializes()`
+  - function `assert_serializes_to` — `fn assert_serializes_to(frame: &ClientFrame, expected: &str)`
+  - function `subscribe_serializes_to_contract_json` — `fn subscribe_serializes_to_contract_json()`
+  - function `chat_create_serializes_to_contract_json` — `fn chat_create_serializes_to_contract_json()`
+  - function `chat_send_serializes_to_contract_json` — `fn chat_send_serializes_to_contract_json()`
+  - function `chat_send_with_mode_serializes_to_contract_json` — `fn chat_send_with_mode_serializes_to_contract_json()`
+  - function `chat_send_submission_id_is_additive_and_camel_case` — `fn chat_send_submission_id_is_additive_and_camel_case()`
+  - function `chat_send_with_attachments_serializes_to_contract_json` — `fn chat_send_with_attachments_serializes_to_contract_json()`
+  - function `chat_send_requester_acceptance_omitted_when_none_is_byte_identical` — `fn chat_send_requester_acceptance_omitted_when_none_is_byte_identical()`
+  - function `chat_send_with_requester_acceptance_serializes_the_field` — `fn chat_send_with_requester_acceptance_serializes_the_field()`
+  - function `chat_send_goal_full_auto_omitted_when_none_is_byte_identical` — `fn chat_send_goal_full_auto_omitted_when_none_is_byte_identical()`
+  - function `chat_send_with_goal_full_auto_serializes_the_field` — `fn chat_send_with_goal_full_auto_serializes_the_field()`
+  - function `operator_question_frame_deserializes` — `fn operator_question_frame_deserializes()`
+  - function `operator_question_with_timeout_deserializes` — `fn operator_question_with_timeout_deserializes()`
+  - … and 27 more symbols
+
+### CLIDE workspace state/input/selection — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 511 · **Callable:** 458 · **Authored purpose:** 0
+- `apps/arc-tui/src/workspace/input.rs` (157 symbols)
+  - function `handle_key` — `pub fn handle_key(state: &mut WorkspaceState, key: KeyEvent) -> Vec<Action>`
+  - function `toggle_bottom` — `fn toggle_bottom(state: &mut WorkspaceState, actions: &mut Vec<Action>)`
+  - function `handle_checkpoint_picker_key` — `fn handle_checkpoint_picker_key(`
+  - function `retry_if_offline` — `fn retry_if_offline(state: &mut WorkspaceState, actions: &mut Vec<Action>)`
+  - function `toggle_mode_dropdown` — `fn toggle_mode_dropdown(state: &mut WorkspaceState)`
+  - function `select_search_mode` — `fn select_search_mode(state: &mut WorkspaceState, mode: SearchMode, actions: &mut Vec<Action>)`
+  - function `mode_row_len` — `pub(crate) fn mode_row_len(row: usize) -> usize`
+  - function `commit_mode_cursor` — `pub(crate) fn commit_mode_cursor(state: &mut WorkspaceState, actions: &mut Vec<Action>)`
+  - function `focus_mode_row` — `fn focus_mode_row(state: &mut WorkspaceState, row: usize)`
+  - function `handle_mode_dropdown_key` — `fn handle_mode_dropdown_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `open_settings` — `pub(crate) fn open_settings(state: &mut WorkspaceState, actions: &mut Vec<Action>)`
+  - function `handle_settings_key` — `fn handle_settings_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `handle_cloud_key_entry_key` — `fn handle_cloud_key_entry_key(state: &mut WorkspaceState, key: KeyEvent)`
+  - function `import_env_cloud_keys` — `fn import_env_cloud_keys(state: &mut WorkspaceState)`
+  - function `cycle_theme` — `fn cycle_theme(state: &mut WorkspaceState, forward: bool, actions: &mut Vec<Action>)`
+  - function `cycle_sandbox` — `fn cycle_sandbox(state: &mut WorkspaceState, forward: bool, actions: &mut Vec<Action>)`
+  - function `commit_name_edit` — `fn commit_name_edit(state: &mut WorkspaceState, name: String, actions: &mut Vec<Action>)`
+  - function `activate_settings_section` — `fn activate_settings_section(state: &mut WorkspaceState, index: usize, actions: &mut Vec<Action>)`
+  - function `apply_settings_action` — `fn apply_settings_action(`
+  - function `resize` — `fn resize(state: &mut WorkspaceState, code: KeyCode, actions: &mut Vec<Action>)`
+  - function `request_chat_search` — `fn request_chat_search(state: &WorkspaceState, actions: &mut Vec<Action>)`
+  - function `handle_top_bar_key` — `fn handle_top_bar_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `handle_confirm_key` — `fn handle_confirm_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `accept_confirm` — `pub(crate) fn accept_confirm(state: &mut WorkspaceState, actions: &mut Vec<Action>)`
+  - function `chat_menu_items` — `fn chat_menu_items(state: &WorkspaceState, chat_id: &str) -> Vec<MenuItem>`
+  - function `folder_bulk_menu` — `fn folder_bulk_menu(folder: Option<String>) -> Vec<MenuItem>`
+  - function `run_menu_action` — `fn run_menu_action(state: &mut WorkspaceState, action: MenuAction, actions: &mut Vec<Action>)`
+  - function `handle_mouse_right_down` — `pub(crate) fn handle_mouse_right_down(`
+  - function `confirm_delete_chat` — `fn confirm_delete_chat(state: &mut WorkspaceState, chat_id: &str)`
+  - function `confirm_delete_chats` — `fn confirm_delete_chats(state: &mut WorkspaceState, scope: &BulkScope, ids: Vec<String>)`
+  - function `handle_left_key` — `fn handle_left_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `activate_left_item` — `pub(crate) fn activate_left_item(`
+  - function `handle_center_key` — `fn handle_center_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `palette_select` — `fn palette_select(`
+  - function `run_slash` — `fn run_slash(state: &mut WorkspaceState, action: SlashAction, actions: &mut Vec<Action>)`
+  - function `handle_paste` — `pub fn handle_paste(state: &mut WorkspaceState, text: String) -> Vec<Action>`
+  - function `handle_right_key` — `fn handle_right_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `handle_bottom_key` — `fn handle_bottom_key(state: &mut WorkspaceState, key: KeyEvent, actions: &mut Vec<Action>)`
+  - function `register_left_click` — `fn register_left_click(state: &mut WorkspaceState, col: u16, row: u16) -> bool`
+  - function `handle_mouse_down` — `pub fn handle_mouse_down(state: &mut WorkspaceState, col: u16, row: u16) -> Vec<Action>`
+  - … and 117 more symbols
+- `apps/arc-tui/src/workspace/selection.rs` (4 symbols)
+  - enum `SelectableZone` — `pub enum SelectableZone`
+  - function `is_selectable` — `pub fn is_selectable(zone: SelectableZone) -> bool`
+  - module `tests` — `mod tests`
+  - function `all_three_selectable_zones_allow_drag_select` — `fn all_three_selectable_zones_allow_drag_select()`
+- `apps/arc-tui/src/workspace/state.rs` (350 symbols)
+  - enum `FocusZone` — `pub enum FocusZone`
+  - enum `Pane` — `pub enum Pane`
+  - function `index` — `pub fn index(self) -> usize`
+  - function `from_index` — `pub fn from_index(i: usize) -> Pane`
+  - enum `PermissionMode` — `pub enum PermissionMode`
+  - function `all` — `pub fn all() -> [PermissionMode; 5]`
+  - function `label` — `pub fn label(&self) -> &'static str`
+  - function `id` — `pub fn id(&self) -> &'static str`
+  - function `from_id` — `pub fn from_id(s: &str) -> Self`
+  - function `next` — `pub fn next(self) -> Self`
+  - function `index` — `pub fn index(&self) -> usize`
+  - function `glyph` — `pub fn glyph(&self) -> &'static str`
+  - function `hint` — `pub fn hint(&self) -> &'static str`
+  - enum `SearchMode` — `pub enum SearchMode`
+  - function `all` — `pub fn all() -> [SearchMode; 3]`
+  - function `label` — `pub fn label(&self) -> &'static str`
+  - function `id` — `pub fn id(&self) -> &'static str`
+  - function `from_id` — `pub fn from_id(id: &str) -> Self`
+  - function `index` — `pub fn index(&self) -> usize`
+  - function `next` — `pub fn next(self) -> Self`
+  - function `prev` — `pub fn prev(self) -> Self`
+  - function `hint` — `pub fn hint(&self) -> &'static str`
+  - function `glyph` — `pub fn glyph(&self) -> &'static str`
+  - enum `RightTab` — `pub enum RightTab`
+  - function `all` — `pub fn all() -> [RightTab; 7]`
+  - function `label` — `pub fn label(&self) -> &'static str`
+  - function `short_label` — `pub fn short_label(&self) -> &'static str`
+  - function `compact_label` — `pub fn compact_label(&self) -> &'static str`
+  - function `id` — `pub fn id(&self) -> &'static str`
+  - function `from_id` — `pub fn from_id(id: &str) -> Self`
+  - function `index` — `pub fn index(&self) -> usize`
+  - function `next` — `pub fn next(self) -> Self`
+  - function `prev` — `pub fn prev(self) -> Self`
+  - enum `DaemonState` — `pub enum DaemonState`
+  - function `can_retry` — `pub fn can_retry(&self) -> bool`
+  - enum `RightInput` — `pub enum RightInput`
+  - enum `NotesScope` — `pub enum NotesScope`
+  - enum `TodoView` — `pub enum TodoView`
+  - function `label` — `pub fn label(&self) -> &'static str`
+  - function `next` — `pub fn next(self) -> Self`
+  - … and 310 more symbols
+
+### CLIDE render/layout/panes/markdown/diff — LIVE / PARTIAL
+- **Files:** 4 (4 with symbols) · **Symbols:** 186 · **Callable:** 168 · **Authored purpose:** 0
+- `apps/arc-tui/src/workspace/layout.rs` (25 symbols)
+  - struct `LayoutConfig` — `pub struct LayoutConfig`
+  - function `default_permission` — `fn default_permission() -> String`
+  - function `default_true` — `fn default_true() -> bool`
+  - function `default_search_mode` — `fn default_search_mode() -> String`
+  - function `default_right_tab` — `fn default_right_tab() -> String`
+  - function `default` — `fn default() -> Self`
+  - function `config_path` — `pub fn config_path() -> Option<PathBuf>`
+  - function `load` — `pub fn load() -> Self`
+  - function `save` — `pub fn save(&self) -> bool`
+  - struct `Zones` — `pub struct Zones`
+  - function `compute_zones` — `pub fn compute_zones(area: Rect, cfg: &LayoutConfig) -> Zones`
+  - module `tests` — `mod tests`
+  - function `zones_tile_the_full_width_at_80x24` — `fn zones_tile_the_full_width_at_80x24()`
+  - function `side_panels_never_render_below_their_own_minimum_width` — `fn side_panels_never_render_below_their_own_minimum_width()`
+  - function `collapsed_panels_disappear_but_dividers_remain` — `fn collapsed_panels_disappear_but_dividers_remain()`
+  - function `bottom_panel_takes_configured_height` — `fn bottom_panel_takes_configured_height()`
+  - function `tiny_area_never_panics` — `fn tiny_area_never_panics()`
+  - function `layout_config_roundtrips_through_json` — `fn layout_config_roundtrips_through_json()`
+  - function `layout_config_without_search_mode_defaults_to_auto` — `fn layout_config_without_search_mode_defaults_to_auto()`
+  - function `bottom_band_spans_center_width` — `fn bottom_band_spans_center_width()`
+  - function `panels_keep_full_height_when_terminal_visible` — `fn panels_keep_full_height_when_terminal_visible()`
+  - function `terminal_spans_center_when_both_panels_collapsed` — `fn terminal_spans_center_when_both_panels_collapsed()`
+  - function `help_bar_reserves_one_row_at_the_bottom` — `fn help_bar_reserves_one_row_at_the_bottom()`
+  - function `help_bar_hidden_by_default_is_none` — `fn help_bar_hidden_by_default_is_none()`
+  - function `legacy_config_without_new_fields_defaults_cleanly` — `fn legacy_config_without_new_fields_defaults_cleanly()`
+- `apps/arc-tui/src/workspace/markdown.rs` (24 symbols)
+  - function `render_content` — `pub fn render_content(content: &str, palette: &ThemePalette) -> Vec<Line<'static>>`
+  - function `looks_like_diff` — `fn looks_like_diff(lang: &str, body: &[String]) -> bool`
+  - function `flush_fence` — `fn flush_fence(out: &mut Vec<Line<'static>>, lang: &str, body: &[String], palette: &ThemePalette)`
+  - function `render_diff_line` — `fn render_diff_line(l: &str, palette: &ThemePalette) -> Line<'static>`
+  - function `render_markdown_line` — `fn render_markdown_line(raw: &str, palette: &ThemePalette) -> Line<'static>`
+  - function `render_inline` — `fn render_inline(text: &str, palette: &ThemePalette) -> Vec<Span<'static>>`
+  - function `emphasis_spans` — `fn emphasis_spans(chunk: &str, base: Style, out: &mut Vec<Span<'static>>)`
+  - function `wrap_lines` — `pub fn wrap_lines(lines: Vec<Line<'static>>, width: u16) -> Vec<Line<'static>>`
+  - function `wrap_line` — `pub fn wrap_line(line: &Line<'static>, width: usize) -> Vec<Line<'static>>`
+  - function `split_wide` — `fn split_wide(word: &str, first: usize, width: usize) -> Vec<String>`
+  - module `tests` — `mod tests`
+  - function `line_text` — `fn line_text(line: &Line) -> String`
+  - function `diff_fence_renders_plus_minus_gutters` — `fn diff_fence_renders_plus_minus_gutters()`
+  - function `headers_bullets_and_inline_code_render` — `fn headers_bullets_and_inline_code_render()`
+  - function `plain_code_block_gets_a_left_bar` — `fn plain_code_block_gets_a_left_bar()`
+  - function `wrap_preserves_words_indent_and_width` — `fn wrap_preserves_words_indent_and_width()`
+  - function `wrap_hard_splits_an_overlong_word` — `fn wrap_hard_splits_an_overlong_word()`
+  - function `wrap_lines_leaves_short_lines_untouched` — `fn wrap_lines_leaves_short_lines_untouched()`
+  - module `emphasis_tests` — `mod emphasis_tests`
+  - function `spans` — `fn spans(text: &str) -> Vec<(String, Modifier)>`
+  - function `flat` — `fn flat(text: &str) -> String`
+  - function `bold_italic_and_strike_are_styled_and_markers_removed` — `fn bold_italic_and_strike_are_styled_and_markers_removed()`
+  - function `a_lone_marker_renders_as_itself_and_never_eats_the_line` — `fn a_lone_marker_renders_as_itself_and_never_eats_the_line()`
+  - function `markup_inside_a_code_span_stays_verbatim` — `fn markup_inside_a_code_span_stays_verbatim()`
+- `apps/arc-tui/src/workspace/panes.rs` (51 symbols)
+  - type `PaneId` — `pub type PaneId = u32;`
+  - enum `PaneContent` — `pub enum PaneContent`
+  - enum `SplitOrientation` — `pub enum SplitOrientation`
+  - function `alternate` — `pub fn alternate(self) -> Self`
+  - function `direction` — `pub fn direction(self) -> Direction`
+  - struct `Pane` — `pub struct Pane`
+  - function `new` — `pub fn new(id: PaneId, content: PaneContent) -> Self`
+  - enum `PaneNode` — `pub enum PaneNode`
+  - function `leaf_count` — `pub fn leaf_count(&self) -> usize`
+  - function `leaves` — `pub fn leaves(&self) -> Vec<(&Pane,)>`
+  - function `walk` — `fn walk<'a>(node: &'a PaneNode, out: &mut Vec<(&'a Pane,)>)`
+  - function `find_leaf` — `pub fn find_leaf(&self, id: PaneId) -> Option<&Pane>`
+  - function `find_leaf_mut` — `pub fn find_leaf_mut(&mut self, id: PaneId) -> Option<&mut Pane>`
+  - function `replace_leaf_with_split` — `fn replace_leaf_with_split(`
+  - function `rects` — `pub fn rects(&self, area: Rect) -> Vec<(PaneId, Rect)>`
+  - function `compute` — `fn compute(&self, area: Rect, out: &mut Vec<(PaneId, Rect)>)`
+  - function `edge_at` — `pub fn edge_at(&self, area: Rect, x: u16, y: u16, tolerance: u16) -> Option<Grip>`
+  - function `resize` — `pub fn resize(&mut self, pane_id: PaneId, delta: f32) -> bool`
+  - function `cycle_orientation` — `pub fn cycle_orientation(&mut self, pane_id: PaneId) -> bool`
+  - function `split_area` — `pub fn split_area(area: Rect, orientation: SplitOrientation, ratio: f32) -> (Rect, Rect)`
+  - enum `SplitError` — `pub enum SplitError`
+  - struct `PaneTree` — `pub struct PaneTree`
+  - function `single_chat` — `pub fn single_chat() -> Self`
+  - function `root` — `pub fn root(&self) -> &PaneNode`
+  - function `root_mut` — `pub fn root_mut(&mut self) -> &mut PaneNode`
+  - function `count` — `pub fn count(&self) -> usize`
+  - function `split` — `pub fn split(&mut self, target_id: PaneId) -> Result<PaneId, SplitError>`
+  - function `set_content` — `pub fn set_content(&mut self, id: PaneId, content: PaneContent) -> bool`
+  - function `find` — `pub fn find(&self, id: PaneId) -> Option<&Pane>`
+  - function `panes` — `pub fn panes(&self, area: Rect) -> Vec<(PaneId, Rect)>`
+  - function `grip_at` — `pub fn grip_at(&self, area: Rect, x: u16, y: u16, tolerance: u16) -> Option<Grip>`
+  - function `resize` — `pub fn resize(&mut self, pane_id: PaneId, delta: f32) -> bool`
+  - function `cycle_orientation` — `pub fn cycle_orientation(&mut self, pane_id: PaneId) -> bool`
+  - struct `Grip` — `pub struct Grip`
+  - enum `SnapEdge` — `pub enum SnapEdge`
+  - enum `SnapHalf` — `pub enum SnapHalf`
+  - function `snap_half` — `pub fn snap_half(target: Rect, x: u16, y: u16) -> SnapHalf`
+  - module `tests` — `mod tests`
+  - function `area` — `fn area() -> Rect`
+  - function `single_chat_has_one_pane` — `fn single_chat_has_one_pane()`
+  - … and 11 more symbols
+- `apps/arc-tui/src/workspace/render.rs` (86 symbols)
+  - function `render_workspace` — `pub fn render_workspace(frame: &mut Frame, state: &mut WorkspaceState, palette: &ThemePalette)`
+  - function `render_drag_label` — `fn render_drag_label(`
+  - function `render_context_menu` — `fn render_context_menu(`
+  - function `render_toast` — `fn render_toast(`
+  - function `render_hint_bar` — `fn render_hint_bar(`
+  - enum `ZoneBgRole` — `enum ZoneBgRole`
+  - function `paint_zone_bg` — `fn paint_zone_bg(frame: &mut Frame, rect: Rect, role: ZoneBgRole, palette: &ThemePalette)`
+  - function `rgb_of` — `fn rgb_of(c: ratatui::style::Color) -> Option<(u8, u8, u8)>`
+  - function `indexed_rgb` — `fn indexed_rgb(i: u8) -> (u8, u8, u8)`
+  - function `approx_rgb` — `fn approx_rgb(c: ratatui::style::Color, palette: &ThemePalette, is_bg: bool) -> (u8, u8, u8)`
+  - function `blend_toward` — `fn blend_toward(`
+  - function `dim_backdrop` — `fn dim_backdrop(frame: &mut Frame, area: Rect, palette: &ThemePalette, t: f32)`
+  - function `centered_anim` — `fn centered_anim(area: Rect, w: u16, h: u16, p: f32) -> Rect`
+  - function `selection_row_span` — `fn selection_row_span(`
+  - function `paint_selection` — `fn paint_selection(frame: &mut Frame, area: Rect, sel: Selection, palette: &ThemePalette)`
+  - function `extract_selection_text` — `pub fn extract_selection_text(buf: &ratatui::buffer::Buffer, sel: Selection) -> String`
+  - function `render_confirm_dialog` — `fn render_confirm_dialog(`
+  - function `render_checkpoint_picker` — `fn render_checkpoint_picker(`
+  - function `focus_style` — `fn focus_style(focused: bool, palette: &ThemePalette) -> Style`
+  - function `render_tab_shell` — `fn render_tab_shell(frame: &mut Frame, area: Rect, palette: &ThemePalette, title: &str) -> Rect`
+  - function `render_scrollbar` — `pub(super) fn render_scrollbar(`
+  - function `render_top_bar` — `fn render_top_bar(`
+  - function `engine_status_compact` — `fn engine_status_compact(state: &WorkspaceState, _palette: &ThemePalette) -> String`
+  - function `render_connect_phone_dialog` — `fn render_connect_phone_dialog(frame: &mut Frame, area: Rect, palette: &ThemePalette, ov: f32)`
+  - function `render_tab_placeholder` — `fn render_tab_placeholder(`
+  - function `render_review` — `fn render_review(`
+  - function `render_project_graph` — `fn render_project_graph(`
+  - function `impact_stale_note` — `fn impact_stale_note(workspace_root: &std::path::Path, target_rel: Option<&str>) -> Option<String>`
+  - function `render_agent_graph` — `fn render_agent_graph(`
+  - function `render_run_timeline` — `fn render_run_timeline(`
+  - function `render_comparison_receipt` — `fn render_comparison_receipt(`
+  - function `render_comparison_arm_lines` — `fn render_comparison_arm_lines(`
+  - function `comparison_arm_status` — `fn comparison_arm_status(status: ArmStatus) -> &'static str`
+  - function `comparison_relation_text` — `fn comparison_relation_text(relation: ComparisonRelation) -> &'static str`
+  - function `render_run_timeline_body` — `fn render_run_timeline_body(`
+  - function `render_task_runtime_projection` — `fn render_task_runtime_projection(`
+  - function `short_projection_digest` — `fn short_projection_digest(value: &str) -> &str`
+  - function `fit_dimension` — `fn fit_dimension(preferred: u16, minimum: u16, available: u16) -> u16`
+  - function `render_run_timeline_rows` — `fn render_run_timeline_rows(`
+  - function `render_run_timeline_row` — `fn render_run_timeline_row(row: &RunTimelineEntry, palette: &ThemePalette) -> Line<'static>`
+  - … and 46 more symbols
+
+### Terminal/backend/clipboard/thumbnail — LIVE / PARTIAL
+- **Files:** 4 (4 with symbols) · **Symbols:** 118 · **Callable:** 75 · **Authored purpose:** 0
+- `apps/arc-tui/src/core/backend.rs` (69 symbols)
+  - struct `ProbeFinding` — `pub struct ProbeFinding`
+  - enum `FindingStatus` — `pub enum FindingStatus`
+  - struct `SystemReport` — `pub struct SystemReport`
+  - struct `GpuInfo` — `pub struct GpuInfo`
+  - enum `ProbeMsg` — `pub enum ProbeMsg`
+  - function `find_install_dir` — `pub fn find_install_dir() -> Option<std::path::PathBuf>`
+  - function `call_orchestrator` — `pub fn call_orchestrator(cmd: &str, args: &[&str]) -> bool`
+  - function `start_system_probe` — `pub fn start_system_probe(tx: mpsc::Sender<crate::core::BackendResult>)`
+  - function `needs_onboarding` — `pub fn needs_onboarding() -> bool`
+  - struct `ProviderEntry` — `pub struct ProviderEntry`
+  - struct `ModelEntry` — `pub struct ModelEntry`
+  - struct `FreeTierInfo` — `pub struct FreeTierInfo`
+  - function `get_providers` — `pub fn get_providers() -> Vec<ProviderEntry>`
+  - struct `DomainEntry` — `pub struct DomainEntry`
+  - struct `TierInfo` — `pub struct TierInfo`
+  - struct `GpuHardwareInfo` — `pub struct GpuHardwareInfo`
+  - struct `CpuInfo` — `pub struct CpuInfo`
+  - struct `RamInfo` — `pub struct RamInfo`
+  - struct `HardwareProfile` — `pub struct HardwareProfile`
+  - struct `ModelRecommendation` — `pub struct ModelRecommendation`
+  - struct `ModelSetupSummary` — `pub struct ModelSetupSummary`
+  - struct `ModelSetupData` — `pub struct ModelSetupData`
+  - function `get_domains` — `pub fn get_domains() -> Vec<DomainEntry>`
+  - function `get_hardware_profile` — `pub fn get_hardware_profile() -> Option<HardwareProfile>`
+  - function `get_model_recommendations` — `pub fn get_model_recommendations(domains: &[String], comfort: &str) -> Option<ModelSetupData>`
+  - function `comfort_str` — `pub fn comfort_str(cursor: usize) -> &'static str`
+  - function `selected_model_ids` — `pub fn selected_model_ids(setup: &ModelSetupData, toggled_optional: &[String]) -> Vec<String>`
+  - function `start_setup_progress` — `pub fn start_setup_progress(tx: mpsc::Sender<BackendResult>)`
+  - struct `PluginEntry` — `pub struct PluginEntry`
+  - struct `PluginCatalog` — `pub struct PluginCatalog`
+  - function `get_plugins` — `pub fn get_plugins() -> Option<PluginCatalog>`
+  - struct `KeySummary` — `pub struct KeySummary`
+  - struct `CloudKeySummaryRow` — `pub struct CloudKeySummaryRow`
+  - function `get_cloud_key_summary` — `pub fn get_cloud_key_summary() -> Vec<CloudKeySummaryRow>`
+  - function `get_key_summaries` — `pub fn get_key_summaries() -> Vec<KeySummary>`
+  - struct `ApiKeyAddOutcome` — `pub struct ApiKeyAddOutcome`
+  - function `add_and_test_api_key` — `pub fn add_and_test_api_key(provider_id: &str, api_key: &str) -> ApiKeyAddOutcome`
+  - function `import_env_keys` — `pub fn import_env_keys() -> usize`
+  - enum `BackendResult` — `pub enum BackendResult`
+  - struct `ActiveModel` — `pub struct ActiveModel`
+  - … and 29 more symbols
+- `apps/arc-tui/src/core/clipboard.rs` (25 symbols)
+  - struct `Clipboard` — `pub struct Clipboard`
+  - enum `ClipTool` — `enum ClipTool`
+  - enum `ClipTarget` — `pub enum ClipTarget`
+  - function `xclip_args_for` — `fn xclip_args_for(target: ClipTarget) -> [&'static str; 3]`
+  - function `wl_copy_args_for` — `fn wl_copy_args_for(target: ClipTarget) -> Vec<&'static str>`
+  - function `new` — `pub fn new() -> Self`
+  - function `has_backend` — `pub fn has_backend(&self) -> bool`
+  - function `copy` — `pub fn copy(&mut self, text: &str) -> bool`
+  - function `copy_primary` — `pub fn copy_primary(&mut self, text: &str) -> bool`
+  - function `copy_to` — `pub fn copy_to(&mut self, target: ClipTarget, text: &str) -> bool`
+  - function `paste` — `pub fn paste(&mut self) -> Option<String>`
+  - function `paste_image` — `pub fn paste_image(&mut self) -> Option<(usize, usize, Vec<u8>)>`
+  - function `default` — `fn default() -> Self`
+  - function `detect_tool` — `fn detect_tool() -> Option<ClipTool>`
+  - function `has_binary` — `fn has_binary(name: &str) -> bool`
+  - function `pipe_in` — `fn pipe_in(cmd: &str, args: &[&str], input: &[u8]) -> bool`
+  - function `capture` — `fn capture(cmd: &str, args: &[&str]) -> Option<String>`
+  - function `capture_bytes` — `fn capture_bytes(cmd: &str, args: &[&str]) -> Option<Vec<u8>>`
+  - function `osc52_copy` — `fn osc52_copy(text: &str) -> bool`
+  - function `base64_encode` — `fn base64_encode(input: &[u8]) -> String`
+  - module `tests` — `mod tests`
+  - function `base64_matches_known_vectors` — `fn base64_matches_known_vectors()`
+  - function `xclip_args_differ_for_primary_vs_clipboard` — `fn xclip_args_differ_for_primary_vs_clipboard()`
+  - function `wl_copy_args_add_primary_flag` — `fn wl_copy_args_add_primary_flag()`
+  - function `clip_target_round_trips` — `fn clip_target_round_trips()`
+- `apps/arc-tui/src/core/terminal.rs` (10 symbols)
+  - type `Frame` — `pub type Frame<'a> = ratatui::Frame<'a>;`
+  - struct `TerminalApp` — `pub struct TerminalApp`
+  - function `new` — `pub fn new() -> io::Result<Self>`
+  - function `should_quit` — `pub fn should_quit(&self) -> bool`
+  - function `drop` — `fn drop(&mut self)`
+  - function `restore_terminal` — `pub fn restore_terminal()`
+  - function `install_panic_hook` — `pub fn install_panic_hook()`
+  - enum `AppEvent` — `pub enum AppEvent`
+  - function `poll_event` — `pub fn poll_event(timeout_ms: u64) -> Option<AppEvent>`
+  - function `hit_test` — `pub fn hit_test(col: u16, row: u16, rect: ratatui::layout::Rect) -> bool`
+- `apps/arc-tui/src/core/thumbnail.rs` (14 symbols)
+  - function `render_thumbnail` — `pub fn render_thumbnail(img: &RgbaImage, max_cols: u16, max_rows: u16) -> Vec<Line<'static>>`
+  - function `load_rgba` — `pub fn load_rgba(path: &std::path::Path) -> Option<RgbaImage>`
+  - function `decode_image_base64` — `pub fn decode_image_base64(data: &str) -> Option<RgbaImage>`
+  - function `base64_decode` — `fn base64_decode(input: &str) -> Option<Vec<u8>>`
+  - function `val` — `fn val(c: u8) -> Option<u32>`
+  - module `tests` — `mod tests`
+  - function `solid` — `fn solid(w: u32, h: u32, color: [u8; 4]) -> RgbaImage`
+  - function `solid_image_renders_uniform_halfblock_cells` — `fn solid_image_renders_uniform_halfblock_cells()`
+  - function `thumbnail_fits_within_the_cell_budget_and_preserves_aspect` — `fn thumbnail_fits_within_the_cell_budget_and_preserves_aspect()`
+  - function `top_and_bottom_pixels_map_to_fg_and_bg` — `fn top_and_bottom_pixels_map_to_fg_and_bg()`
+  - function `degenerate_inputs_return_empty` — `fn degenerate_inputs_return_empty()`
+  - function `base64_decode_matches_known_vectors` — `fn base64_decode_matches_known_vectors()`
+  - function `decode_image_base64_round_trips_a_jpeg_frame` — `fn decode_image_base64_round_trips_a_jpeg_frame()`
+  - function `base64_encode` — `fn base64_encode(bytes: &[u8]) -> String`
+
+### Onboarding and file browser — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 83 · **Callable:** 72 · **Authored purpose:** 0
+- `apps/arc-tui/src/onboarding/file_browser.rs` (30 symbols)
+  - struct `FileBrowser` — `pub struct FileBrowser`
+  - struct `DirEntry` — `pub struct DirEntry`
+  - function `new` — `pub fn new(start_dir: Option<PathBuf>) -> Self`
+  - function `with_root` — `pub fn with_root(root: PathBuf) -> Self`
+  - function `at_root` — `fn at_root(&self) -> bool`
+  - function `refresh` — `pub fn refresh(&mut self)`
+  - function `start_filter` — `pub fn start_filter(&mut self)`
+  - function `filter_push` — `pub fn filter_push(&mut self, c: char)`
+  - function `filter_backspace` — `pub fn filter_backspace(&mut self)`
+  - function `stop_filter` — `pub fn stop_filter(&mut self)`
+  - function `clear_filter` — `pub fn clear_filter(&mut self)`
+  - function `move_down` — `pub fn move_down(&mut self)`
+  - function `move_up` — `pub fn move_up(&mut self)`
+  - function `up` — `pub fn up(&mut self)`
+  - function `enter_selected` — `pub fn enter_selected(&mut self) -> bool`
+  - function `click_entry` — `pub fn click_entry(&mut self, index: usize) -> ClickAction`
+  - function `select_current_dir` — `pub fn select_current_dir(&mut self) -> bool`
+  - function `deselect` — `pub fn deselect(&mut self)`
+  - function `toggle_hidden` — `pub fn toggle_hidden(&mut self)`
+  - function `start_create_dir` — `pub fn start_create_dir(&mut self)`
+  - function `cancel_create_dir` — `pub fn cancel_create_dir(&mut self)`
+  - function `confirm_create_dir` — `pub fn confirm_create_dir(&mut self) -> bool`
+  - function `selected_path` — `pub fn selected_path(&self) -> Option<&PathBuf>`
+  - function `entry_rect_at` — `pub fn entry_rect_at(&self, index: usize, list_area: Rect) -> Option<Rect>`
+  - function `click_at` — `pub fn click_at(&mut self, row: u16, list_area: Rect) -> ClickAction`
+  - enum `ClickAction` — `pub enum ClickAction`
+  - struct `FileBrowserLayout` — `pub struct FileBrowserLayout`
+  - function `render_file_browser` — `pub fn render_file_browser(`
+  - function `render_file_browser_opts` — `pub fn render_file_browser_opts(`
+  - function `render_create_dir` — `fn render_create_dir(`
+- `apps/arc-tui/src/onboarding/screens.rs` (53 symbols)
+  - function `card_frame` — `fn card_frame(`
+  - function `floating_surface` — `fn floating_surface(`
+  - struct `BackendData` — `pub struct BackendData<'a>`
+  - enum `OnboardingStep` — `pub enum OnboardingStep`
+  - function `all` — `pub fn all() -> &'static [OnboardingStep]`
+  - function `title` — `pub fn title(&self) -> &'static str`
+  - function `index` — `pub fn index(&self) -> usize`
+  - function `next` — `pub fn next(&self) -> Option<Self>`
+  - function `prev` — `pub fn prev(&self) -> Option<Self>`
+  - struct `AnimationState` — `pub struct AnimationState`
+  - function `new` — `pub fn new() -> Self`
+  - function `reset` — `pub fn reset(&mut self)`
+  - function `elapsed_ms` — `pub fn elapsed_ms(&self) -> u64`
+  - function `tick` — `pub fn tick(&mut self, dt: Duration)`
+  - function `is_faded_in` — `pub fn is_faded_in(&self) -> bool`
+  - function `spinner_char` — `pub fn spinner_char(&self) -> &'static str`
+  - function `pulse_intensity` — `pub fn pulse_intensity(&self) -> f32`
+  - function `default` — `fn default() -> Self`
+  - function `center_rect` — `pub fn center_rect(area: Rect, width_pct: u16, height_pct: u16) -> Rect`
+  - function `centered_box` — `pub fn centered_box(area: Rect, width: u16, height: u16) -> Rect`
+  - function `render_welcome_content` — `fn render_welcome_content(`
+  - function `render_progress_bar` — `pub fn render_progress_bar(`
+  - enum `StepHit` — `pub enum StepHit`
+  - struct `StepState` — `pub struct StepState`
+  - function `new` — `pub fn new() -> Self`
+  - function `can_advance` — `pub fn can_advance(`
+  - enum `ProgressLineKind` — `pub enum ProgressLineKind`
+  - function `parse_progress_line` — `pub fn parse_progress_line(line: &str) -> (&'static str, ProgressLineKind, &str)`
+  - function `render_step_content` — `pub fn render_step_content(`
+  - function `render_sandbox_config` — `fn render_sandbox_config(`
+  - function `render_project_detect` — `fn render_project_detect(`
+  - function `render_domain_select` — `fn render_domain_select(`
+  - function `render_model_setup` — `fn render_model_setup(`
+  - function `provider_key_counts` — `pub fn provider_key_counts<'a>(`
+  - function `provider_key_summary_text` — `pub fn provider_key_summary_text(total: usize, by_status: &[(String, usize)]) -> String`
+  - function `cloud_row_summary_text` — `pub fn cloud_row_summary_text(row: &CloudKeySummaryRow) -> String`
+  - function `provider_key_stats` — `pub fn provider_key_stats(provider_id: &str, data: &BackendData) -> (usize, usize, String)`
+  - function `render_cloud_affordance` — `fn render_cloud_affordance(`
+  - function `render_cloud_key_panel` — `fn render_cloud_key_panel(`
+  - function `fit_pill` — `fn fit_pill(fit_status: &str, fit_color: &str, palette: &ThemePalette) -> Vec<Span<'static>>`
+  - … and 13 more symbols
+
+### Run observability and telemetry — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 152 · **Callable:** 66 · **Authored purpose:** 17
+- `scripts/observability-governance.mjs` (99 symbols)
+  - variable `OBSERVABILITY_GOVERNANCE_VERSION` — `OBSERVABILITY_GOVERNANCE_VERSION = '1.0.0'`
+  - variable `ACTION_CATEGORIES` — `ACTION_CATEGORIES = new Set([`
+  - variable `DATA_CLASSIFICATIONS` — `DATA_CLASSIFICATIONS = new Set(['public', 'internal', 'confidential', 'secret'])`
+  - variable `METRIC_TYPES` — `METRIC_TYPES = new Set(['counter', 'gauge', 'histogram'])`
+  - variable `LABEL_CARDINALITY` — `LABEL_CARDINALITY = new Set(['low', 'bounded'])`
+  - variable `ALERT_CLASSES` — `ALERT_CLASSES = new Set([`
+  - variable `INCIDENT_CLASSES` — `INCIDENT_CLASSES = new Set([`
+  - variable `REQUIRED_PLAYBOOK_CLASSES` — `REQUIRED_PLAYBOOK_CLASSES = new Set([`
+  - variable `SEVERITIES` — `SEVERITIES = new Set(['p1', 'p2', 'p3', 'p4'])`
+  - variable `SLO_TYPES` — `SLO_TYPES = new Set(['availability', 'latency', 'correctness', 'budget'])`
+  - class `ObservabilityGovernanceError` — `export class ObservabilityGovernanceError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'observabilityGovernance')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => string(item, `$`
+  - arrow-function `<anonymous@2676>` — `(item, index) => string(item, `$`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `finiteNumber` — `function finiteNumber(value, pathName,`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `uniqueBy` — `function uniqueBy(values, key, pathName)`
+  - variable `seen` — `seen = new Set()`
+  - variable `<anonymous@3802>` — `[index, value]`
+  - variable `id` — `id = value[key]`
+  - function `setFrom` — `function setFrom(values, key)`
+  - arrow-function `<anonymous@4029>` — `value => value[key]`
+  - function `requireKnown` — `function requireKnown(id, known, pathName, kind)`
+  - function `validateAction` — `function validateAction(action, index)`
+  - variable `pathName` — `pathName = `observability.actions[$`
+  - function `validateEventStream` — `function validateEventStream(stream, index, actionIds)`
+  - variable `pathName` — `pathName = `observability.eventStreams[$`
+  - variable `fields` — `fields = stringArray(stream.requiredFields, `$`
+  - … and 59 more symbols
+- `scripts/run-observability.mjs` (30 symbols)
+  - variable `RUN_OBSERVABILITY_VERSION` — `RUN_OBSERVABILITY_VERSION = '1.0.0'`
+  - variable `RUN_OBSERVABILITY_COMPONENT` — `RUN_OBSERVABILITY_COMPONENT = 'run-observability'`
+  - variable `RUN_PHASES` — `RUN_PHASES = Object.freeze(`
+  - function `observabilityEnabled` — `export function observabilityEnabled(env = process.env)` — *Kill switch. DEFAULT-ON (this layer is proven read-only). Only an explicit falsey value ('0' / 'false' / 'off' / 'no', case-insensitive) disables it, so an unset or empty env var keeps the timeline fl*
+  - variable `v` — `v = env?.ARC_RUN_OBSERVABILITY`
+  - variable `s` — `s = String(v).trim().toLowerCase()`
+  - function `emitRunEvent` — `export function emitRunEvent(event =` — *The single emit primitive. Appends one run-observability event to the shared telemetry bus (global trace + per-run trace when outputDir is given + ring buffer). NEVER throws; the return value is advis*
+  - variable `<anonymous@4335>`
+  - function `observeTurnStart` — `export function observeTurnStart(` — *Turn dispatched — the top of a live coding turn.*
+  - function `observeTurnPhase` — `export function observeTurnPhase(` — *A named coordinator phase transitioned (running / completed).*
+  - function `observeTurnComplete` — `export function observeTurnComplete(` — *The turn settled — carries the outcome the TUI shows: status, whether a patch surfaced, and the crown/solve verdict. `hasPatch` is a boolean (never the diff bytes) so the timeline never duplicates pat*
+  - function `observeWhyStalled` — `export function observeWhyStalled(` — *Why the turn (or a phase) did NOT advance — the trust-critical "stall" line.*
+  - function `observeCrown` — `export function observeCrown(` — *A crown / acceptance verdict was reached (solved or best-so-far).*
+  - function `observeMultihourPhaseStart` — `export function observeMultihourPhaseStart(` — *One multi-hour plan phase started.*
+  - function `observeMultihourPhaseEnd` — `export function observeMultihourPhaseEnd(` — *One multi-hour plan phase ended — accepted (advanced) or not, with why.*
+  - function `observeMultihourComplete` — `export function observeMultihourComplete(` — *The whole multi-hour loop settled.*
+  - function `renderRunTimeline` — `export function renderRunTimeline(events)` — *PURE. Projects a list of raw telemetry records (from the ring buffer or a trace read) into a compact, render-ready run timeline. Keeps only run-observability events, preserves order, and never mutates*
+  - variable `out` — `out = []`
+  - variable `e` — `e`
+  - function `renderRunTimelineText` — `export function renderRunTimelineText(events)` — *PURE. Formats a rendered timeline (or raw events) into plain lines for a text/TUI fallback. Never throws.*
+  - variable `rows` — `rows = Array.isArray(events) && events[0] && 'component' in events[0]`
+  - arrow-function `<anonymous@11084>` — `(r) =>`
+  - variable `ts` — `ts = typeof r.ts === 'string' ? r.ts : ''`
+  - variable `phase` — `phase = typeof r.phase === 'string' ? r.phase : 'unknown'`
+  - variable `msg` — `msg = typeof r.message === 'string' ? r.message : ''`
+  - function `getRunTimeline` — `export function getRunTimeline(` — *Pull-based reader for the TUI. Returns the rendered run timeline from the in-process ring buffer, optionally filtered to one correlation key (chatId at the daemon level, or an explicit correlationId).*
+  - variable `raw` — `raw = getRecentTelemetryEvents(Number.isInteger(n) && n > 0 ? n : 200)`
+  - variable `rows` — `rows = renderRunTimeline(raw)`
+  - variable `survivors` — `survivors = raw.filter((e) =>`
+  - arrow-function `<anonymous@12359>` — `(e) =>`
+- `scripts/telemetry-bus.mjs` (23 symbols)
+  - variable `TELEMETRY_BUS_VERSION` — `TELEMETRY_BUS_VERSION = '1.0.0'`
+  - variable `GLOBAL_TELEMETRY_DIR` — `GLOBAL_TELEMETRY_DIR = path.join(homedir(), '.agentic-os-tmp', 'telemetry')`
+  - variable `GLOBAL_TRACE_PATH` — `GLOBAL_TRACE_PATH = path.join(GLOBAL_TELEMETRY_DIR, 'global-trace.jsonl')`
+  - variable `LEVELS` — `LEVELS = new Set(['debug', 'info', 'warn', 'error'])`
+  - variable `RING_BUFFER_MAX` — `RING_BUFFER_MAX = 500`
+  - variable `ringBuffer` — `ringBuffer = []`
+  - variable `ensuredDirs` — `ensuredDirs = new Set()`
+  - function `ensureDirOnce` — `function ensureDirOnce(dir)`
+  - function `safeStringify` — `function safeStringify(obj)`
+  - function `emitTelemetryEvent` — `export function emitTelemetryEvent(event, outputDir = null)` — *Append one JSONL telemetry event to the global rolling trace and, if outputDir is supplied, to a per-run trace file too. Always updates the in-memory ring buffer. NEVER throws.*
+  - variable `globalWritten` — `globalWritten = false`
+  - variable `runWritten` — `runWritten = false`
+  - variable `record` — `record`
+  - variable `level` — `level = LEVELS.has(event?.level) ? event.level : 'info'`
+  - variable `line` — `line = safeStringify(record)`
+  - variable `runDir` — `runDir = path.join(outputDir, 'telemetry')`
+  - variable `datePart` — `datePart = record.timestamp.slice(0, 10)`
+  - variable `runPath` — `runPath = path.join(runDir, `$`
+  - function `getRecentTelemetryEvents` — `export function getRecentTelemetryEvents(n = RING_BUFFER_MAX)` — *Returns a shallow copy of the last N events held in the in-memory ring buffer (most recent last). Never throws.*
+  - variable `count` — `count = Number.isInteger(n) && n > 0 ? n : RING_BUFFER_MAX`
+  - function `clearTelemetryRingBuffer` — `export function clearTelemetryRingBuffer()` — *Clears the in-memory ring buffer. Test/utility helper. Never throws.*
+  - function `getGlobalTracePath` — `export function getGlobalTracePath()` — *Exposed for tests and for the sentinel to know where the global trace lives.*
+  - function `getGlobalTelemetryDir` — `export function getGlobalTelemetryDir()`
+
+### Daemon/context/model watchdogs — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 78 · **Callable:** 23 · **Authored purpose:** 4
+- `scripts/context-watchdog.mjs` (31 symbols)
+  - class `ContextWatchdog` — `export class ContextWatchdog` — *ContextWatchdog — Context overflow protection with sibling agent handoff. Uses real LettaKernel (SQLite) and AgentMemory (JSON+embeddings) instead of fictional APIs.*
+  - constructor `constructor` — `constructor(lettaKernel, agentMemory, contextLimit = 24000, projectSlug = 'default')`
+  - method `init` — `async init()`
+  - method `checkAndHandoff` — `async checkAndHandoff(agentState, currentTokens)` — *Checks if context is near limit. If so, archives parent and spawns sibling.*
+  - variable `tokenRatio` — `tokenRatio = currentTokens / this.contextLimit`
+  - method `spawnSiblingAndArchive` — `async spawnSiblingAndArchive(parentAgent, currentTokens)`
+  - variable `parentId` — `parentId = parentAgent.id || 'parent'`
+  - variable `history` — `history = parentAgent.conversationHistory || []`
+  - variable `historyText` — `historyText = history.map(m => `$`
+  - arrow-function `<anonymous@1756>` — `m => `$`
+  - variable `summary` — `summary = historyText.slice(-4000)`
+  - variable `memoryPointers` — `memoryPointers = []`
+  - variable `recentMemories` — `recentMemories = this.memory.memories.slice(-20)`
+  - variable `mem` — `mem`
+  - variable `childAgents` — `childAgents = parentAgent.childAgents || []`
+  - variable `childAgentSnapshot` — `childAgentSnapshot = childAgents.map(child => (`
+  - arrow-function `<anonymous@2578>` — `child => (`
+  - variable `checkpointId` — `checkpointId = `checkpoint-$`
+  - variable `checkpoint` — `checkpoint =`
+  - arrow-function `<anonymous@3100>` — `c => c.id`
+  - variable `siblingId` — `siblingId = `sibling-$`
+  - variable `siblingState` — `siblingState =`
+  - method `resumeSibling` — `async resumeSibling(siblingId)` — *Resume a sibling agent from its checkpoint.*
+  - variable `siblingData` — `siblingData = await this.letta.page_in(siblingId)`
+  - variable `siblingState` — `siblingState = JSON.parse(siblingData)`
+  - variable `memId` — `memId`
+  - variable `mem` — `mem = this.memory.memories.find(m => m.id === memId)`
+  - arrow-function `<anonymous@4572>` — `m => m.id === memId`
+  - method `bootstrap` — `async bootstrap(agentId)` — *Session bootstrap: load previous state on startup.*
+  - variable `stateData` — `stateData = await this.letta.page_in(agentId)`
+  - variable `state` — `state = JSON.parse(stateData)`
+- `scripts/watchdog-process.mjs` (47 symbols)
+  - variable `execAsync` — `execAsync = util.promisify(exec)`
+  - class `VitalityScoreEngine` — `export class VitalityScoreEngine`
+  - constructor `constructor` — `constructor()`
+  - method `getScore` — `async getScore(pid)`
+  - variable `<anonymous@513>`
+  - variable `lines` — `lines = stdout.trim().split('\n')`
+  - variable `<anonymous@663>` — `[cpu, stat] = lines[1].trim().split(/\s+/)`
+  - variable `cpuNum` — `cpuNum = parseFloat(cpu)`
+  - variable `e` — `e`
+  - class `WatchdogProcess` — `export class WatchdogProcess`
+  - constructor `constructor` — `constructor(options =`
+  - method `log` — `log(message)`
+  - method `execute_long_task` — `async execute_long_task(command, timeout, resource)`
+  - variable `proc` — `proc = exec(command)`
+  - method `checkAndKillHangingSandboxes` — `async checkAndKillHangingSandboxes()`
+  - variable `<anonymous@2283>`
+  - variable `lines` — `lines = []`
+  - variable `pid` — `pid`
+  - variable `<anonymous@2613>`
+  - variable `psLines` — `psLines = psOut.trim().split('\n')`
+  - variable `e` — `e`
+  - variable `seenPids` — `seenPids = new Set()`
+  - variable `line` — `line`
+  - variable `<anonymous@3136>` — `[pidStr, etime] = line.trim().split(/\s+/)`
+  - variable `pid` — `pid = parseInt(pidStr, 10)`
+  - variable `elapsedMs` — `elapsedMs = this.parseElapsedTime(etime)`
+  - variable `currentTimeout` — `currentTimeout = this.sandboxTimeoutMs`
+  - variable `vitality` — `vitality = await this.vitalityEngine.getScore(pid)`
+  - variable `<anonymous@4077>`
+  - variable `containerId` — `containerId = (cid || '').trim()`
+  - variable `killError` — `killError`
+  - variable `err` — `err`
+  - method `messageOrchestrator` — `messageOrchestrator(pid, action)`
+  - method `parseElapsedTime` — `parseElapsedTime(etime)`
+  - variable `days` — `days = 0`
+  - variable `timeStr` — `timeStr = etime`
+  - variable `parts` — `parts = timeStr.split('-')`
+  - variable `timeParts` — `timeParts = timeStr.split(':').map(n => parseInt(n, 10))`
+  - arrow-function `<anonymous@5401>` — `n => parseInt(n, 10)`
+  - variable `hours` — `hours = 0`
+  - … and 7 more symbols
+
+### Storage, retention and lifecycle — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 212 · **Callable:** 66 · **Authored purpose:** 0
+- `scripts/data-retention-policy.mjs` (71 symbols)
+  - variable `DATA_RETENTION_POLICY_VERSION` — `DATA_RETENTION_POLICY_VERSION = '1.0.0'`
+  - variable `DISPOSITIONS` — `DISPOSITIONS = new Set(['keep', 'summarize', 'redact', 'archive', 'delete', 'export', 'purge'])`
+  - variable `CLASSIFICATIONS` — `CLASSIFICATIONS = new Set(['public', 'internal', 'confidential', 'restricted'])`
+  - variable `DATA_CATEGORIES` — `DATA_CATEGORIES = new Set([`
+  - variable `TRANSIENT_CATEGORIES` — `TRANSIENT_CATEGORIES = new Set(['runtime-cache', 'checkpoint', 'handoff', 'trace', 'generated-index'])`
+  - variable `SECRET_CATEGORIES` — `SECRET_CATEGORIES = new Set(['secret-local'])`
+  - variable `AUDIT_CATEGORIES` — `AUDIT_CATEGORIES = new Set(['audit-evidence'])`
+  - variable `LOCAL_PRESERVE_CATEGORIES` — `LOCAL_PRESERVE_CATEGORIES = new Set(['local-model-artifact', 'benchmark-artifact'])`
+  - variable `REQUESTER_TYPES` — `REQUESTER_TYPES = new Set(['user', 'operator', 'system'])`
+  - class `DataRetentionPolicyError` — `export class DataRetentionPolicyError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'dataRetentionPolicy')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName)`
+  - function `optionalString` — `function optionalString(value, pathName)`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `integerOrNull` — `function integerOrNull(value, pathName,`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => string(item, `$`
+  - arrow-function `<anonymous@3072>` — `(item, index) => string(item, `$`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `validateRetentionRule` — `function validateRetentionRule(rule, index, reasons)`
+  - variable `pathName` — `pathName = `dataRetentionPolicy.retentionRules[$`
+  - variable `category` — `category = oneOf(rule.category, DATA_CATEGORIES, `$`
+  - variable `disposition` — `disposition = oneOf(rule.disposition, DISPOSITIONS, `$`
+  - variable `retentionDays` — `retentionDays = integerOrNull(rule.retentionDays, `$`
+  - variable `evidenceRequired` — `evidenceRequired = boolean(rule.evidenceRequired, `$`
+  - variable `secretRevocable` — `secretRevocable = boolean(rule.secretRevocable, `$`
+  - variable `separatelyManagedSecret` — `separatelyManagedSecret = boolean(rule.separatelyManagedSecret, `$`
+  - function `validateExportFlow` — `function validateExportFlow(flow, index, ruleByCategory, reasons)`
+  - variable `pathName` — `pathName = `dataRetentionPolicy.exportFlows[$`
+  - variable `categories` — `categories = stringArray(flow.categories, `$`
+  - variable `category` — `category`
+  - variable `rule` — `rule = ruleByCategory.get(category)`
+  - … and 31 more symbols
+- `scripts/lifecycle-retirement-policy.mjs` (88 symbols)
+  - variable `LIFECYCLE_RETIREMENT_POLICY_VERSION` — `LIFECYCLE_RETIREMENT_POLICY_VERSION = '1.0.0'`
+  - variable `SUBSYSTEM_STATUSES` — `SUBSYSTEM_STATUSES = new Set([`
+  - variable `COMPLEXITY_COSTS` — `COMPLEXITY_COSTS = new Set(['low', 'medium', 'high'])`
+  - variable `MIGRATION_STATUSES` — `MIGRATION_STATUSES = new Set(['planned', 'verified', 'completed'])`
+  - variable `DECISION_STATUSES` — `DECISION_STATUSES = new Set(['proposed', 'accepted', 'rejected', 'superseded'])`
+  - variable `RETIREMENT_STATUSES` — `RETIREMENT_STATUSES = new Set(['retirement-candidate', 'deprecated', 'retired'])`
+  - variable `NON_DEFAULT_STATUSES` — `NON_DEFAULT_STATUSES = new Set(['deprecated', 'retired'])`
+  - variable `DAY_MS` — `DAY_MS = 24 * 60 * 60 * 1000`
+  - class `LifecycleRetirementPolicyError` — `export class LifecycleRetirementPolicyError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'lifecycleRetirementPolicy')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName)`
+  - function `optionalString` — `function optionalString(value, pathName)`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `semver` — `function semver(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - variable `result` — `result = value.map((item, index) => string(item, `$`
+  - arrow-function `<anonymous@3113>` — `(item, index) => string(item, `$`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `validateUnique` — `function validateUnique(values, key, pathName)`
+  - variable `seen` — `seen = new Set()`
+  - variable `<anonymous@3521>` — `[index, value]`
+  - function `validateUniqueMigrationSources` — `function validateUniqueMigrationSources(plans)`
+  - variable `seen` — `seen = new Set()`
+  - variable `<anonymous@3764>` — `[index, plan]`
+  - variable `key` — `key = `$`
+  - function `validateSubsystem` — `function validateSubsystem(subsystem, index, reasons)`
+  - variable `pathName` — `pathName = `lifecycleRetirementPolicy.subsystems[$`
+  - variable `subsystemId` — `subsystemId = string(subsystem.subsystemId, `$`
+  - variable `status` — `status = oneOf(subsystem.status, SUBSYSTEM_STATUSES, `$`
+  - variable `defaultEnabled` — `defaultEnabled = boolean(subsystem.defaultEnabled, `$`
+  - … and 48 more symbols
+- `scripts/storage-manager.mjs` (53 symbols)
+  - variable `SAFE_EXTENSIONS` — `SAFE_EXTENSIONS = new Set([`
+  - variable `NEVER_DELETE_PATTERNS` — `NEVER_DELETE_PATTERNS = [`
+  - class `StorageManager` — `export class StorageManager`
+  - constructor `constructor` — `constructor(projectSlug)`
+  - variable `ensured` — `ensured = ensureProject(this.projectSlug)`
+  - method `read` — `read(key)`
+  - method `getDiskUsage` — `getDiskUsage(dir)`
+  - variable `out` — `out = execSync(`du -sm "$`
+  - method `isSafeToDelete` — `isSafeToDelete(filePath)`
+  - variable `normalized` — `normalized = filePath.replace(/\\/g, '/')`
+  - variable `pattern` — `pattern`
+  - variable `ext` — `ext = path.extname(filePath).toLowerCase()`
+  - method `scanDirectory` — `scanDirectory(dir, results = [])`
+  - variable `entries` — `entries = readdirSync(dir,`
+  - variable `entry` — `entry`
+  - variable `fullPath` — `fullPath = path.join(dir, entry.name)`
+  - variable `stat` — `stat = statSync(fullPath)`
+  - method `cleanup` — `cleanup()`
+  - variable `beforeMB` — `beforeMB = this.getDiskUsage(this.projDir)`
+  - variable `freedBytes` — `freedBytes = 0`
+  - variable `deletedFiles` — `deletedFiles = 0`
+  - variable `deletedList` — `deletedList = []`
+  - variable `keptList` — `keptList = []`
+  - variable `subdirs` — `subdirs = ['cache', 'checkpoints', 'handoffs', 'traces', 'audit', 'memory', 'rag-index']`
+  - variable `subdir` — `subdir`
+  - variable `dir` — `dir = path.join(this.projDir, subdir)`
+  - variable `files` — `files = this.scanDirectory(dir)`
+  - variable `file` — `file`
+  - variable `shouldDelete` — `shouldDelete = false`
+  - variable `reason` — `reason = ''`
+  - variable `checkpoints` — `checkpoints = files`
+  - arrow-function `<anonymous@4791>` — `f => f.path.includes('checkpoint') || f.path.endsWith('.json')`
+  - arrow-function `<anonymous@4873>` — `(a, b) => b.mtime - a.mtime`
+  - variable `maxCp` — `maxCp = this.config.checkpoint?.maxCheckpoints || 20`
+  - variable `e` — `e`
+  - variable `afterMB` — `afterMB = this.getDiskUsage(this.projDir)`
+  - variable `result` — `result =`
+  - variable `logPath` — `logPath = path.join(this.projDir, 'audit', 'storage-cleanup.jsonl')`
+  - method `checkQuota` — `checkQuota()`
+  - variable `usageMB` — `usageMB = this.getDiskUsage(this.projDir)`
+  - … and 13 more symbols
+
+### Hardware/model recommender and installer — LIVE / PARTIAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 320 · **Callable:** 87 · **Authored purpose:** 11
+- `scripts/local-models.mjs` (119 symbols)
+  - variable `localPaths` — `localPaths = getGlobalPaths()`
+  - variable `binDir` — `binDir = path.join(localPaths.local, 'bin')`
+  - variable `modelsDir` — `modelsDir = localPaths.models`
+  - variable `llamaServer` — `llamaServer = path.join(binDir, 'llama-server')`
+  - variable `llamaCli` — `llamaCli = path.join(binDir, 'llama-cli')`
+  - variable `MODEL_DEFAULTS` — `MODEL_DEFAULTS =`
+  - variable `DRAFT_MODEL` — `DRAFT_MODEL =`
+  - function `env` — `function env()`
+  - function `localModelRuntimeEnv` — `export function localModelRuntimeEnv()`
+  - function `humanSize` — `function humanSize(bytes)`
+  - variable `units` — `units = ['B', 'KiB', 'MiB', 'GiB', 'TiB']`
+  - variable `size` — `size = bytes`
+  - variable `index` — `index = 0`
+  - function `fileSha256` — `function fileSha256(filePath)`
+  - function `inspectLocalPath` — `export function inspectLocalPath(filePath,`
+  - variable `result` — `result =`
+  - variable `linkStat` — `linkStat`
+  - variable `error` — `error`
+  - variable `error` — `error`
+  - variable `targetStat` — `targetStat = statSync(result.resolvedPath)`
+  - variable `descriptor` — `descriptor = openSync(result.resolvedPath, 'r')`
+  - variable `magic` — `magic = Buffer.alloc(4)`
+  - variable `bytesRead` — `bytesRead = readSync(descriptor, magic, 0, magic.length, 0)`
+  - function `discoverGgufFiles` — `function discoverGgufFiles(directory)`
+  - variable `discovered` — `discovered = []`
+  - arrow-function `walk` — `current =>`
+  - variable `entries` — `entries = readdirSync(current,`
+  - arrow-function `<anonymous@4981>` — `(left, right) => left.name.localeCompare(right.name, 'en')`
+  - variable `entry` — `entry`
+  - variable `candidate` — `candidate = path.join(current, entry.name)`
+  - function `modelStatus` — `function modelStatus()`
+  - variable `registeredFiles` — `registeredFiles = new Set(Object.values(MODEL_DEFAULTS).map(model => model.file))`
+  - arrow-function `<anonymous@5487>` — `model => model.file`
+  - variable `registered` — `registered = Object.entries(MODEL_DEFAULTS).map(([name, model]) =>`
+  - arrow-function `<anonymous@5565>` — `([name, model]) =>`
+  - variable `inspection` — `inspection = inspectLocalPath(model.file,`
+  - variable `unregistered` — `unregistered = discoverGgufFiles(modelsDir)`
+  - arrow-function `<anonymous@6057>` — `file => !registeredFiles.has(file)`
+  - arrow-function `<anonymous@6102>` — `file =>`
+  - variable `inspection` — `inspection = inspectLocalPath(file,`
+  - … and 79 more symbols
+- `scripts/onboarding/model-installer.mjs` (201 symbols)
+  - variable `execAsync` — `execAsync = promisify(execCb)`
+  - variable `MODEL_INSTALLER_VERSION` — `MODEL_INSTALLER_VERSION = '1.0.0'`
+  - variable `MODELS_DIR` — `MODELS_DIR = getGlobalPaths().models`
+  - variable `OLLAMA_MODEL_ALIASES` — `OLLAMA_MODEL_ALIASES =`
+  - variable `_ollamaModelMap` — `_ollamaModelMap = null`
+  - function `buildOllamaModelMap` — `async function buildOllamaModelMap()`
+  - variable `<anonymous@2851>`
+  - variable `models` — `models`
+  - arrow-function `<anonymous@3136>` — `line =>`
+  - variable `parts` — `parts = line.trim().split(/\s+/)`
+  - variable `m` — `m`
+  - variable `<anonymous@3326>`
+  - variable `arch` — `arch = showOut.match(/architecture\s+(\S+)/)?.[1] || ''`
+  - variable `params` — `params = parseFloat(showOut.match(/parameters\s+([\d.]+)B/)?.[1] || '0')`
+  - variable `quant` — `quant = showOut.match(/quantization\s+(\S+)/)?.[1]?.toLowerCase() || ''`
+  - variable `key` — `key = `$`
+  - variable `keyNoQuant` — `keyNoQuant = `$`
+  - function `findExistingOllamaModel` — `async function findExistingOllamaModel(modelId, quant)` — *Check if a model equivalent already exists in Ollama, even under a different name. Strategy: check `contrare/{modelId}:{quant}` directly first (our naming convention). Fall back to architecture + para*
+  - variable `model` — `model = getModel(modelId)`
+  - variable `<anonymous@4623>`
+  - variable `lines` — `lines = listOut.trim().split('\n').slice(1)`
+  - variable `contrarePattern` — `contrarePattern = new RegExp(`^contrare/$`
+  - variable `line` — `line`
+  - variable `match` — `match = line.trim().match(contrarePattern)`
+  - variable `aliases` — `aliases = Object.entries(OLLAMA_MODEL_ALIASES)`
+  - arrow-function `<anonymous@5146>` — `([, id]) => id === modelId`
+  - arrow-function `<anonymous@5183>` — `([name]) => name`
+  - variable `alias` — `alias`
+  - variable `<anonymous@5255>`
+  - variable `map` — `map = await buildOllamaModelMap()`
+  - variable `archMap` — `archMap =`
+  - variable `arch` — `arch = archMap[model.baseModelFamily] || model.baseModelFamily`
+  - variable `params` — `params = model.paramCountB`
+  - variable `quantNormalized` — `quantNormalized = (quant || '').toLowerCase().replace(/\./g, '_')`
+  - variable `exactKey` — `exactKey = `$`
+  - variable `looseKey` — `looseKey = `$`
+  - variable `knownMismatches` — `knownMismatches =`
+  - variable `mismatch` — `mismatch = knownMismatches[modelId]`
+  - variable `p` — `p`
+  - variable `k` — `k = `$`
+  - … and 161 more symbols
+
+### Model/daemon service launch — LIVE / PARTIAL
+- **Files:** 2 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Token/GPU/time/money budgets — LIVE / PARTIAL
+- **Files:** 3 (3 with symbols) · **Symbols:** 83 · **Callable:** 26 · **Authored purpose:** 7
+- `scripts/model-pricing.mjs` (28 symbols)
+  - function `localContextWindow` — `function localContextWindow(modelId, fallback)` — *Agentic OS — Model Pricing & Capability Registry Single source of truth for model names, pricing, capabilities, and tier classifications. Every other script that needs cost estimates or model metadata*
+  - variable `MODEL_REGISTRY` — `MODEL_REGISTRY =`
+  - variable `MODEL_ALIASES` — `MODEL_ALIASES =`
+  - function `resolveModel` — `export function resolveModel(model)` — *Resolve a model name, handling aliases.*
+  - function `getModelSpec` — `export function getModelSpec(model)` — *Get the spec for a model, with alias resolution. Falls back to a conservative default if unknown.*
+  - variable `resolved` — `resolved = resolveModel(model)`
+  - function `costForTokens` — `export function costForTokens(model, inputTokens, outputTokens)` — *Calculate cost in USD for a given number of tokens.*
+  - variable `spec` — `spec = getModelSpec(model)`
+  - function `modelsForProvider` — `export function modelsForProvider(provider)` — *Get all models for a given provider.*
+  - arrow-function `<anonymous@7516>` — `([, spec]) => spec.provider === provider`
+  - arrow-function `<anonymous@7567>` — `([name]) => name`
+  - function `cheapestModelForQuality` — `export function cheapestModelForQuality(minQuality, opts =` — *Get the cheapest model that meets a minimum quality threshold.*
+  - variable `exclude` — `exclude = new Set(opts.exclude || [])`
+  - variable `candidates` — `candidates = Object.entries(MODEL_REGISTRY)`
+  - arrow-function `<anonymous@8067>` — `([name, spec]) => spec.quality >= minQuality && !exclude.has(name)`
+  - arrow-function `<anonymous@8145>` — `(a, b) => (a[1].input + a[1].output) - (b[1].input + b[1].output)`
+  - variable `prov` — `prov`
+  - variable `match` — `match = candidates.find(([, s]) => s.provider === prov)`
+  - arrow-function `<anonymous@8334>` — `([, s]) => s.provider === prov`
+  - variable `TASK_TIERS` — `TASK_TIERS =`
+  - variable `action` — `action = process.argv[2]`
+  - variable `cost` — `cost = costForTokens('gpt-5.5-mini', 1_000_000, 0)`
+  - variable `cost2` — `cost2 = costForTokens('deepseek-r1', 0, 1_000_000)`
+  - variable `cost3` — `cost3 = costForTokens('qwen3.5-9b', 1_000_000, 1_000_000)`
+  - variable `cheap` — `cheap = cheapestModelForQuality(0.75)`
+  - variable `<anonymous@10379>` — `[name, spec]`
+  - variable `inCost` — `inCost = spec.input === 0 ? 'FREE' : `$$`
+  - variable `outCost` — `outCost = spec.output === 0 ? 'FREE' : `$$`
+- `scripts/research-budget.mjs` (17 symbols)
+  - variable `RESEARCH_BUDGET_VERSION` — `RESEARCH_BUDGET_VERSION = '1.2.0'`
+  - variable `WALL_BUDGET_DISABLED` — `WALL_BUDGET_DISABLED = 0`
+  - function `isWallBudgetDisabled` — `export function isWallBudgetDisabled(wallMs)`
+  - variable `RESEARCH_BUDGET_PROFILES` — `RESEARCH_BUDGET_PROFILES = Object.freeze(`
+  - function `readEnvInt` — `function readEnvInt(name, fallback)`
+  - variable `raw` — `raw = process.env[name]`
+  - variable `parsed` — `parsed = Number.parseInt(raw, 10)`
+  - function `readEnvWallMs` — `function readEnvWallMs(name, fallback)`
+  - variable `raw` — `raw = process.env[name]`
+  - variable `lower` — `lower = String(raw).trim().toLowerCase()`
+  - variable `parsed` — `parsed = Number.parseInt(raw, 10)`
+  - function `resolveResearchBudget` — `export function resolveResearchBudget(overrides =`
+  - variable `resolvedMode` — `resolvedMode = overrides.mode || mode`
+  - variable `profile` — `profile = RESEARCH_BUDGET_PROFILES[resolvedMode] || RESEARCH_BUDGET_PROFILES.sufficiency`
+  - variable `budget` — `budget =`
+  - function `syncGapLedgerBudget` — `export function syncGapLedgerBudget(gapLedger, resolvedBudget =` — *Apply resolved budget to gap-ledger iteration caps (wall + rounds).*
+  - function `explainCrawlCapMismatch` — `export function explainCrawlCapMismatch()`
+- `scripts/token-enforcer.mjs` (38 symbols)
+  - class `TokenEnforcer` — `export class TokenEnforcer`
+  - constructor `constructor` — `constructor(projectSlug, sessionId = null)`
+  - variable `opts` — `opts = projectSlug`
+  - variable `ensured` — `ensured = ensureProject(this.projectSlug)`
+  - method `truncate` — `truncate(text, maxTokens)`
+  - variable `limit` — `limit = maxTokens || this.maxTokens`
+  - variable `words` — `words = text.split(/\s+/)`
+  - method `record` — `record(model, inputTokens, outputTokens, step = 'unknown')`
+  - variable `cost` — `cost = costForTokens(model, inputTokens, outputTokens)`
+  - variable `entry` — `entry =`
+  - method `getTodaySpend` — `getTodaySpend()`
+  - variable `today` — `today = new Date().toISOString().slice(0, 10)`
+  - variable `total` — `total = 0`
+  - variable `lines` — `lines = readFileSync(this.ledgerPath, 'utf8').trim().split('\n').filter(Boolean)`
+  - variable `line` — `line`
+  - variable `entry` — `entry = JSON.parse(line)`
+  - method `getSessionSpend` — `getSessionSpend()`
+  - variable `total` — `total = 0`
+  - variable `lines` — `lines = readFileSync(this.ledgerPath, 'utf8').trim().split('\n').filter(Boolean)`
+  - variable `line` — `line`
+  - variable `entry` — `entry = JSON.parse(line)`
+  - method `check` — `check(requestCost = 0)`
+  - variable `dailySpend` — `dailySpend = this.getTodaySpend()`
+  - variable `sessionSpend` — `sessionSpend = this.getSessionSpend()`
+  - variable `dailyBudget` — `dailyBudget = this.config.tokenBudget?.daily || 3.50`
+  - variable `sessionBudget` — `sessionBudget = this.config.tokenBudget?.session || 1.00`
+  - variable `projectedDaily` — `projectedDaily = dailySpend + requestCost`
+  - variable `projectedSession` — `projectedSession = sessionSpend + requestCost`
+  - variable `warnings` — `warnings = []`
+  - variable `violations` — `violations = []`
+  - variable `fallbackModel` — `fallbackModel = null`
+  - method `enforce` — `enforce(requestCost = 0)`
+  - variable `result` — `result = this.check(requestCost)`
+  - arrow-function `<anonymous@5647>` — `v => console.error(`  ❌ $`
+  - arrow-function `<anonymous@5934>` — `w => console.warn(`  ⚠️  $`
+  - variable `action` — `action = process.argv[2]`
+  - variable `project` — `project = process.argv[3] || detectProject().slug`
+  - variable `enforcer` — `enforcer = new TokenEnforcer(project)`
+
+### Failure ecology and chaos campaigns — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 2 (2 with symbols) · **Symbols:** 733 · **Callable:** 203 · **Authored purpose:** 3
+- `scripts/full-system-stress-harness.mjs` (514 symbols)
+  - variable `STRESS_HARNESS_VERSION` — `STRESS_HARNESS_VERSION = '1.4.6'`
+  - variable `SUPPORTED_HARD_STRESS_TASK_IDS` — `SUPPORTED_HARD_STRESS_TASK_IDS = SYNTHETIC_HARD_STRESS_TASK_IDS`
+  - variable `ALL_STRESS_TASK_IDS` — `ALL_STRESS_TASK_IDS = Object.freeze([`
+  - variable `SCRIPT_DIR` — `SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url))`
+  - variable `PHASE_REASONING_PROFILES` — `PHASE_REASONING_PROFILES = Object.freeze(`
+  - function `wrapInvokeWithPhaseProfile` — `function wrapInvokeWithPhaseProfile(baseInvoke, profile)`
+  - arrow-function `<anonymous@7262>` — `async (request, signal) => baseInvoke(`
+  - function `collectStressKnownFiles` — `function collectStressKnownFiles(worktreePath, stressProfile)`
+  - variable `candidates` — `candidates = [`
+  - arrow-function `<anonymous@7677>` — `relative => (`
+  - function `buildStressPlannerGuidance` — `function buildStressPlannerGuidance(stressProfile)`
+  - variable `lines` — `lines = [`
+  - function `wrapInvokeWithSlotBudget` — `function wrapInvokeWithSlotBudget(baseInvoke, slotPromptBudget)`
+  - arrow-function `<anonymous@8537>` — `async (request, signal) => baseInvoke(`
+  - function `recordPatchFailureMemory` — `function recordPatchFailureMemory(memoryStore,`
+  - variable `memoryId` — `memoryId = `memory-fail-$`
+  - class `StressHarnessError` — `export class StressHarnessError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'stressHarness')`
+  - function `sha256Of` — `function sha256Of(value)`
+  - function `sha256Bytes` — `function sha256Bytes(value)`
+  - function `writeRetainedStressHarnessAbortResult` — `export function writeRetainedStressHarnessAbortResult(`
+  - variable `root` — `root = path.resolve(retainedArtifactRoot)`
+  - variable `durationMs` — `durationMs = Math.max(0, Date.now() - startedMs)`
+  - variable `abortReason` — `abortReason = String(error?.message || error || 'stress harness aborted')`
+  - variable `result` — `result =`
+  - variable `reportPayload` — `reportPayload =`
+  - variable `reportSha256` — `reportSha256 = sha256Of(reportPayload)`
+  - variable `reportPath` — `reportPath = path.join(root, 'stress-harness-result.json')`
+  - variable `retainedResult` — `retainedResult =`
+  - function `getStressHarnessImplementationIdentity` — `export function getStressHarnessImplementationIdentity()`
+  - variable `authorityFiles` — `authorityFiles = [`
+  - arrow-function `<anonymous@12602>` — `file =>`
+  - variable `absolute` — `absolute = path.join(SCRIPT_DIR, file)`
+  - variable `content` — `content = readFileSync(absolute)`
+  - function `hashDirectory` — `function hashDirectory(root)`
+  - variable `hash` — `hash = createHash('sha256')`
+  - arrow-function `visit` — `current =>`
+  - variable `entry` — `entry`
+  - arrow-function `<anonymous@13026>` — `(left, right) => left.name.localeCompare(right.name, 'en')`
+  - variable `absolute` — `absolute = path.join(current, entry.name)`
+  - … and 474 more symbols
+- `scripts/hard-stress-campaign.mjs` (219 symbols)
+  - variable `HARD_STRESS_CAMPAIGN_VERSION` — `HARD_STRESS_CAMPAIGN_VERSION = '1.0.0'`
+  - variable `SPEC_KIND` — `SPEC_KIND = 'local-model-hard-stress-campaign-spec'`
+  - variable `REPORT_KIND` — `REPORT_KIND = 'local-model-hard-stress-campaign-report'`
+  - variable `MODULE_PATH` — `MODULE_PATH = fileURLToPath(import.meta.url)`
+  - variable `SUPPORTED_IDS` — `SUPPORTED_IDS = new Set(ALL_STRESS_TASK_IDS)`
+  - variable `NINE_B_ROUTE` — `NINE_B_ROUTE = Object.freeze(`
+  - function `buildNineBRoutes` — `function buildNineBRoutes(taskIds)`
+  - arrow-function `<anonymous@1759>` — `id => [id, NINE_B_ROUTE]`
+  - variable `MODEL_ROUTING_PRESETS` — `MODEL_ROUTING_PRESETS = Object.freeze(`
+  - function `loadCampaignRepCheckpoint` — `export function loadCampaignRepCheckpoint(root)`
+  - variable `checkpointPath` — `checkpointPath = path.join(path.resolve(root), 'campaign-rep-checkpoint.json')`
+  - function `saveCampaignRepCheckpoint` — `export function saveCampaignRepCheckpoint(root, runs)`
+  - variable `checkpointPath` — `checkpointPath = path.join(path.resolve(root), 'campaign-rep-checkpoint.json')`
+  - function `isCampaignRunTerminal` — `export function isCampaignRunTerminal(record)`
+  - variable `state` — `state = resolveStressHarnessResumeState(record)`
+  - function `shouldRetryStressHarnessResult` — `export function shouldRetryStressHarnessResult(result,`
+  - variable `state` — `state = resolveStressHarnessResumeState(result)`
+  - function `isInfraStressRunFailure` — `export function isInfraStressRunFailure(`
+  - variable `message` — `message = String(`
+  - class `HardStressCampaignError` — `export class HardStressCampaignError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'hardStressCampaign')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `string` — `function string(value, pathName)`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `optionalPort` — `function optionalPort(value, pathName)`
+  - function `digest` — `function digest(value, pathName)`
+  - function `canonicalJson` — `function canonicalJson(value)`
+  - arrow-function `<anonymous@5454>` — `key => (`
+  - function `sha256` — `function sha256(value)`
+  - function `hashJson` — `function hashJson(value)`
+  - function `hashFile` — `function hashFile(filePath)`
+  - function `safeError` — `function safeError(value)`
+  - function `campaignRunnerIdentity` — `function campaignRunnerIdentity()`
+  - variable `content` — `content = readFileSync(MODULE_PATH)`
+  - function `sourceIdentity` — `function sourceIdentity()`
+  - function `validateTaskIds` — `function validateTaskIds(value, pathName = 'campaignSpec.taskIds')`
+  - variable `ids` — `ids = value.map((id, index) => string(id, `$`
+  - … and 179 more symbols
+
+### Answer-free Grand Challenge factory — EXISTS / DARK OR NON-PROMOTIONAL
+- **Files:** 1 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Packaging, signed release and rollback — MISSING / LAUNCH BLOCKER
+- **Files:** 1 (1 with symbols) · **Symbols:** 117 · **Callable:** 44 · **Authored purpose:** 0
+- `scripts/packaging-reproducibility.mjs` (117 symbols)
+  - variable `PACKAGING_REPRODUCIBILITY_VERSION` — `PACKAGING_REPRODUCIBILITY_VERSION = '1.0.0'`
+  - variable `SCRIPTS_DIR` — `SCRIPTS_DIR = path.resolve(path.dirname(new URL(import.meta.url).pathname))`
+  - variable `CHECKOUT_ROOT` — `CHECKOUT_ROOT = path.dirname(SCRIPTS_DIR)`
+  - variable `SOURCE_KINDS` — `SOURCE_KINDS = new Set([`
+  - variable `ARTIFACT_CATEGORIES` — `ARTIFACT_CATEGORIES = new Set([`
+  - variable `ARTIFACT_ACTIONS` — `ARTIFACT_ACTIONS = new Set([`
+  - variable `REQUIRED_SOURCE_PATHS` — `REQUIRED_SOURCE_PATHS = Object.freeze([`
+  - variable `STARTUP_SCRIPTS` — `STARTUP_SCRIPTS = Object.freeze([`
+  - variable `ARTIFACT_POLICY_DEFINITIONS` — `ARTIFACT_POLICY_DEFINITIONS = Object.freeze([`
+  - variable `GENERATED_TRACKED_PATTERNS` — `GENERATED_TRACKED_PATTERNS = Object.freeze([`
+  - class `PackagingReproducibilityError` — `export class PackagingReproducibilityError extends Error`
+  - constructor `constructor` — `constructor(message, pathName = 'packagingReproducibility')`
+  - function `fail` — `function fail(pathName, message)`
+  - function `object` — `function object(value, pathName)`
+  - function `strictKeys` — `function strictKeys(value, allowed, required, pathName)`
+  - variable `allowedSet` — `allowedSet = new Set(allowed)`
+  - variable `key` — `key`
+  - variable `key` — `key`
+  - function `string` — `function string(value, pathName)`
+  - function `boolean` — `function boolean(value, pathName)`
+  - function `integer` — `function integer(value, pathName,`
+  - function `timestamp` — `function timestamp(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `sha256` — `function sha256(value, pathName)`
+  - variable `result` — `result = string(value, pathName)`
+  - function `stringArray` — `function stringArray(value, pathName,`
+  - arrow-function `<anonymous@8785>` — `(item, index) => string(item, `$`
+  - function `oneOf` — `function oneOf(value, choices, pathName)`
+  - function `validateDependencyAttestation` — `function validateDependencyAttestation(attestation, reasons)`
+  - variable `packageManager` — `packageManager = string(`
+  - variable `nodeEngine` — `nodeEngine = string(attestation.nodeEngine, 'packagingReproducibility.dependencyAttestation.nodeEngine')`
+  - variable `missingIntegrityEntries` — `missingIntegrityEntries = stringArray(`
+  - variable `dependencyMismatches` — `dependencyMismatches = stringArray(`
+  - function `validateSourceManifest` — `function validateSourceManifest(entries, reasons)`
+  - variable `seen` — `seen = new Set()`
+  - variable `<anonymous@12467>` — `[index, entry]`
+  - variable `pathName` — `pathName = `packagingReproducibility.sourceManifest[$`
+  - variable `entryPath` — `entryPath = string(entry.path, `$`
+  - function `validateSourceInventory` — `function validateSourceInventory(inventory, reasons)`
+  - variable `missing` — `missing = stringArray(inventory.missingRequiredPaths, 'packagingReproducibility.sourceInventory.missingRequiredPaths')`
+  - … and 77 more symbols
+
+## 12 · EXTERNAL OSS AND SERVICES — ADAPTERS OR PATTERNS, NEVER PEER AUTHORITY
+
+### LangGraph / Temporal / n8n — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### OpenKB — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Langfuse — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### iii — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### Vector databases — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### FalkorDB / graph databases — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 1 (1 with symbols) · **Symbols:** 25 · **Callable:** 7 · **Authored purpose:** 2
+- `scripts/falkordb-engine.mjs` (25 symbols)
+  - class `FalkorDBEngine` — `class FalkorDBEngine`
+  - constructor `constructor` — `constructor(url = 'redis://localhost:6379', options =`
+  - method `connect` — `async connect(graphName = 'agentic_os_context')`
+  - arrow-function `<anonymous@475>` — `(err) => console.error('FalkorDB Client Error', err)`
+  - method `query` — `async query(queryStr, params =`
+  - method `ingestScipData` — `async ingestScipData(scipData)` — *Parse SCIP relationships (DEFINES, REFERENCES) and push them into FalkorDB This replaces the old raw Tree-sitter AST nodes ingestion.*
+  - variable `doc` — `doc`
+  - variable `occ` — `occ`
+  - variable `role` — `role = occ.symbolRoles === 1 ? 'DEFINES' : 'REFERENCES'`
+  - variable `now` — `now = Date.now()`
+  - variable `sym` — `sym`
+  - variable `rel` — `rel`
+  - variable `now` — `now = Date.now()`
+  - method `garbageCollect` — `async garbageCollect(options =` — *Garbage collect stale edges and orphaned nodes. - Removes edges older than this.edgeTTLMs (default 24h) - Removes orphaned Document and Symbol nodes with no edges - Idempotent and safe to call concurr*
+  - variable `ttlMs` — `ttlMs = options.ttlMs || this.edgeTTLMs`
+  - variable `cutoff` — `cutoff = Date.now() - ttlMs`
+  - variable `edgeResult` — `edgeResult = await this.query(``
+  - variable `deletedEdges` — `deletedEdges = edgeResult?.data?.[0]?.[0] || 0`
+  - variable `orphanDocResult` — `orphanDocResult = await this.query(``
+  - variable `deletedDocs` — `deletedDocs = orphanDocResult?.data?.[0]?.[0] || 0`
+  - variable `orphanSymResult` — `orphanSymResult = await this.query(``
+  - variable `deletedSyms` — `deletedSyms = orphanSymResult?.data?.[0]?.[0] || 0`
+  - variable `deletedNodes` — `deletedNodes = deletedDocs + deletedSyms`
+  - method `disconnect` — `async disconnect()`
+  - variable `falkorEngine` — `falkorEngine = new FalkorDBEngine()`
+
+### Model providers and local runtimes — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
+
+### MCP/connectors/browser/office ecosystem — OPTIONAL EXTERNAL / PATTERN ONLY
+- **Files:** 0 (0 with symbols) · **Symbols:** 0 · **Callable:** 0 · **Authored purpose:** 0
