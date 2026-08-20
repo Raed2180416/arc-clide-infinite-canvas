@@ -91,6 +91,31 @@ The complete release and continuation boundary is recorded in
 [`ATLAS-RELEASE-READINESS-2026-08-20.md`](./ATLAS-RELEASE-READINESS-2026-08-20.md).
 Read that before using this Atlas as authority for a new engineering task.
 
+## Public GitHub Pages edition
+
+The public Pages edition is deliberately **not** the local Atlas server and
+does not publish a snapshot. It is a small, static historical reference made
+from the reviewed component map, compact symbol digests, and orientation
+documents. It has no dependency on a private server or the local Agentic OS
+checkout.
+
+Build it into an empty deployment directory:
+
+```bash
+npm run build:pages -- --out /path/outside/the/source-checkout
+```
+
+The builder rejects machine-local file locators and token-like GitHub
+credentials, emits a digest-bound `public-site-manifest.json`, and labels the
+result `historical-static-reference`. The published files intentionally exclude
+the mutable source checkout, local snapshot blobs, SQLite navigation index,
+transcript pages, and any product/effect/completion claim.
+
+Publish the resulting directory to the repository's `gh-pages` branch only
+after the deterministic suite and this build both pass. The public page is an
+orientation and continuation surface; the local `current` verifier remains the
+only route for a current Atlas claim.
+
 ## Important limits
 
 - The Atlas is a read-only projection, not intent, truth, effect, or completion

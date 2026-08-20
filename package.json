@@ -9,6 +9,7 @@
     "test:node": "node --test tests/*.test.mjs",
     "test:web": "vitest run",
     "build:web": "vite build",
+    "build:pages": "node bin/build-public-pages.mjs",
     "dev": "vite",
     "atlas": "node bin/atlas.mjs"
   },

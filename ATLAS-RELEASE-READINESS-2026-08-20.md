@@ -121,6 +121,23 @@ To ship a browsable production Atlas, choose and document one artifact route:
 Do not add the current `snapshots/` directory to normal Git just to make the
 tree look complete.
 
+## Public GitHub Pages boundary
+
+The public Pages release is a separate, narrower artifact from both the source
+project and any local snapshot. Its deterministic builder is
+`bin/build-public-pages.mjs`. It publishes only a static, sanitised historical
+reference: the component map, compact symbol digests, and selected orientation
+documents. It rejects local file locators and GitHub-token-shaped values before
+writing a digest-bound public manifest.
+
+That makes the Page useful for discovery without implying that its historical
+records describe the current mutable Agentic OS checkout. It deliberately does
+not publish source blobs, the local SQLite navigation index, transcript pages,
+machine-local paths, or any product/effect/completion authority. A successful
+Pages deployment proves that the public static artifact is reachable; it does
+not discharge the current-snapshot, semantic-explanation, or product gaps
+described above.
+
 These checks establish a self-consistent local release boundary. They do not
 turn a writable local filesystem into an independent authenticity authority;
 the signed-manifest artifact route remains necessary if hostile-writer
